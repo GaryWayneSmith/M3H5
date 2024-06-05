@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M3H5Lib.Api", "M3H5Lib.Api\M3H5Lib.Api.csproj", "{C2E46BCB-5958-4F41-8ED0-C4073FB345CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M3H5Lib", "M3H5Lib\M3H5Lib.csproj", "{6BF94B31-8C1A-4B72-BD39-353265C32B93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{373E17F0-B384-431A-BD36-D3A8398486A0}"
+	ProjectSection(SolutionItems) = preProject
+		appconfig.json = appconfig.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2E46BCB-5958-4F41-8ED0-C4073FB345CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E46BCB-5958-4F41-8ED0-C4073FB345CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E46BCB-5958-4F41-8ED0-C4073FB345CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E46BCB-5958-4F41-8ED0-C4073FB345CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF94B31-8C1A-4B72-BD39-353265C32B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF94B31-8C1A-4B72-BD39-353265C32B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF94B31-8C1A-4B72-BD39-353265C32B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF94B31-8C1A-4B72-BD39-353265C32B93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAC99821-06FC-4EFD-98AD-2BE04D8A5B96}
+	EndGlobalSection
+EndGlobal

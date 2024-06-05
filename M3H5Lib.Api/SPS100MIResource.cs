@@ -1,0 +1,157 @@
+/// **********************************************************************
+/// Created by: Gary Smith
+/// Updated: 20240309-1226
+/// **********************************************************************
+using M3H5Lib.Api.SPS100MI;
+using M3H5Lib.Extensions;
+using M3H5Lib.Models;
+using ExtensibleHttp.Payload;
+using ExtensibleHttp;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace M3H5Lib.Api
+{
+
+	/// <summary>
+	/// Name: SPS100MI
+	/// Component Name: SupplyChainPlannerVersions
+	/// Description: SCP versions interface
+	/// Version Release: 12.0
+	///</summary>
+	public partial class SPS100MIResource : M3BaseResourceEndpoint
+	{
+		public SPS100MIResource(ApiClient apiClient)
+			: base(apiClient)
+		{
+			ProgramName = "SPS100MI";
+			payloadFactory = new PayloadFactory();
+		}
+
+		/// <summary>
+		/// Name Select
+		/// Description Select SCP Versions per Company
+		/// Version Release: 12.0
+		/// </summary>
+		/// <param name="m3_FCON">From Company (Required)</param>
+		/// <param name="m3_TCON">To Company (Required)</param>
+		/// <param name="m3_FSCV">From SCP Version (Required)</param>
+		/// <param name="m3_TSCV">To SCP Version (Required)</param>
+		/// <param name="maxRecords">Maximum number of records to return</param>
+		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
+		/// <param name="trimResults">Trim result data (default true)</param>
+		/// <param name="outputColumns">List of columns to return, null or empty for all columns</param>
+		/// <param name="cancellationToken"></param>
+		/// <returns>M3Response<SelectResponse></returns>
+		/// <exception cref="M3Exception<SelectResponse>"></exception>
+		public async Task<M3Response<SelectResponse>> Select(
+			int m3_FCON, 
+			int m3_TCON, 
+			string m3_FSCV, 
+			string m3_TSCV, 
+			int? maxRecords = null, 
+			bool? includeMetadata = null, 
+			bool? trimResults = null, 
+			IEnumerable<string> outputColumns = null, 
+			bool? throwExceptionWithoutSuccess = null, 
+			CancellationToken cancellationToken = default)
+		{
+			await new ContextRemover();
+			M3Request request = new M3Request(M3Config)
+			{
+				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/Select",
+			};
+
+			// Validate mandatory parameters
+			if (string.IsNullOrWhiteSpace(m3_FSCV))
+				throw new ArgumentNullException("m3_FSCV");
+			if (string.IsNullOrWhiteSpace(m3_TSCV))
+				throw new ArgumentNullException("m3_TSCV");
+
+			// Set mandatory parameters
+			request
+				.WithQueryParameter("FCON", m3_FCON.ToString())
+				.WithQueryParameter("TCON", m3_TCON.ToString())
+				.WithQueryParameter("FSCV", m3_FSCV.Trim())
+				.WithQueryParameter("TSCV", m3_TSCV.Trim());
+
+			// Execute the request
+			var result = await Execute<SelectResponse>(
+				request: request,
+				maxRecords: maxRecords,
+				includeMetadata: includeMetadata,
+				trimResults: trimResults,
+				outputColumns: outputColumns,
+				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
+				cancellationToken: cancellationToken);
+
+			// Return the response object in it's entirety
+			return result;
+		}
+
+		/// <summary>
+		/// Name SelectYOP
+		/// Description Select YOP Versions per Company
+		/// Version Release: 12.4
+		/// </summary>
+		/// <param name="m3_FCON">From Company (Required)</param>
+		/// <param name="m3_TCON">To Company (Required)</param>
+		/// <param name="m3_FSCV">From YOP Version (Required)</param>
+		/// <param name="m3_TSCV">To YOP Version (Required)</param>
+		/// <param name="maxRecords">Maximum number of records to return</param>
+		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
+		/// <param name="trimResults">Trim result data (default true)</param>
+		/// <param name="outputColumns">List of columns to return, null or empty for all columns</param>
+		/// <param name="cancellationToken"></param>
+		/// <returns>M3Response<SelectYOPResponse></returns>
+		/// <exception cref="M3Exception<SelectYOPResponse>"></exception>
+		public async Task<M3Response<SelectYOPResponse>> SelectYOP(
+			int m3_FCON, 
+			int m3_TCON, 
+			string m3_FSCV, 
+			string m3_TSCV, 
+			int? maxRecords = null, 
+			bool? includeMetadata = null, 
+			bool? trimResults = null, 
+			IEnumerable<string> outputColumns = null, 
+			bool? throwExceptionWithoutSuccess = null, 
+			CancellationToken cancellationToken = default)
+		{
+			await new ContextRemover();
+			M3Request request = new M3Request(M3Config)
+			{
+				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/SelectYOP",
+			};
+
+			// Validate mandatory parameters
+			if (string.IsNullOrWhiteSpace(m3_FSCV))
+				throw new ArgumentNullException("m3_FSCV");
+			if (string.IsNullOrWhiteSpace(m3_TSCV))
+				throw new ArgumentNullException("m3_TSCV");
+
+			// Set mandatory parameters
+			request
+				.WithQueryParameter("FCON", m3_FCON.ToString())
+				.WithQueryParameter("TCON", m3_TCON.ToString())
+				.WithQueryParameter("FSCV", m3_FSCV.Trim())
+				.WithQueryParameter("TSCV", m3_TSCV.Trim());
+
+			// Execute the request
+			var result = await Execute<SelectYOPResponse>(
+				request: request,
+				maxRecords: maxRecords,
+				includeMetadata: includeMetadata,
+				trimResults: trimResults,
+				outputColumns: outputColumns,
+				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
+				cancellationToken: cancellationToken);
+
+			// Return the response object in it's entirety
+			return result;
+		}
+	}
+}
+// EOF

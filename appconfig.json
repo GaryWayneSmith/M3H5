@@ -1,0 +1,12 @@
+{
+	"m3config": {
+		"BasePath": "/m3api-rest/execute",
+		"Company": 1,
+		"Authorization": "Basic xxxxxxxx",
+		"Debug": false,
+		"BaseUri": "https://FQDN_OR_IP:PORT/",
+		"UserAgent": "M3H5Lib",
+		"ApiFormat": "Json",
+		"RequestTimeoutMs": 100000
+	}
+}
