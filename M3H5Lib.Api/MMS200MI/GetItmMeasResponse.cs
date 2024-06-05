@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("UN number")]
-		public int? M3_UNNN => GetNullableInt("UNNN");
+		public int? M3UNNN => GetNullableInt("UNNN");
 
 		/// <summary>
 		/// Description: UN pack code
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("UN pack code")]
-		public string M3_UNPA => GetString("UNPA");
+		public string M3UNPA => GetString("UNPA");
 
 		/// <summary>
 		/// Description: Danger class 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Danger class 1")]
-		public string M3_HAC1 => GetString("HAC1");
+		public string M3HAC1 => GetString("HAC1");
 
 		/// <summary>
 		/// Description: Danger class 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Danger class 2")]
-		public string M3_HAC2 => GetString("HAC2");
+		public string M3HAC2 => GetString("HAC2");
 
 		/// <summary>
 		/// Description: Danger class 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Danger class 3")]
-		public string M3_HAC3 => GetString("HAC3");
+		public string M3HAC3 => GetString("HAC3");
 
 		/// <summary>
 		/// Description: Measurement 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement 1")]
-		public string M3_DIM1 => GetString("DIM1");
+		public string M3DIM1 => GetString("DIM1");
 
 		/// <summary>
 		/// Description: Description 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 1")]
-		public string M3_VAR1 => GetString("VAR1");
+		public string M3VAR1 => GetString("VAR1");
 
 		/// <summary>
 		/// Description: Measurement 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement 2")]
-		public string M3_DIM2 => GetString("DIM2");
+		public string M3DIM2 => GetString("DIM2");
 
 		/// <summary>
 		/// Description: Description 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 2")]
-		public string M3_VAR2 => GetString("VAR2");
+		public string M3VAR2 => GetString("VAR2");
 
 		/// <summary>
 		/// Description: Measurement 3
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement 3")]
-		public string M3_DIM3 => GetString("DIM3");
+		public string M3DIM3 => GetString("DIM3");
 
 		/// <summary>
 		/// Description: Description 3
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 3")]
-		public string M3_VAR3 => GetString("VAR3");
+		public string M3VAR3 => GetString("VAR3");
 
 		/// <summary>
 		/// Description: Specification 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 1")]
-		public string M3_SPE1 => GetString("SPE1");
+		public string M3SPE1 => GetString("SPE1");
 
 		/// <summary>
 		/// Description: Specification 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 2")]
-		public string M3_SPE2 => GetString("SPE2");
+		public string M3SPE2 => GetString("SPE2");
 
 		/// <summary>
 		/// Description: Specification 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 3")]
-		public string M3_SPE3 => GetString("SPE3");
+		public string M3SPE3 => GetString("SPE3");
 
 		/// <summary>
 		/// Description: Specification 4
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 4")]
-		public string M3_SPE4 => GetString("SPE4");
+		public string M3SPE4 => GetString("SPE4");
 
 		/// <summary>
 		/// Description: Specification 5
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 5")]
-		public string M3_SPE5 => GetString("SPE5");
+		public string M3SPE5 => GetString("SPE5");
 
 		/// <summary>
 		/// Description: Lot restricted release
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot restricted release")]
-		public string M3_CETY => GetString("CETY");
+		public string M3CETY => GetString("CETY");
 
 		/// <summary>
 		/// Description: Storage requirements
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Storage requirements")]
-		public string M3_STCN => GetString("STCN");
+		public string M3STCN => GetString("STCN");
 
 		/// <summary>
 		/// Description: Storage packaging
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Storage packaging")]
-		public string M3_SPAC => GetString("SPAC");
+		public string M3SPAC => GetString("SPAC");
 
 		/// <summary>
 		/// Description: Transportation packaging
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation packaging")]
-		public string M3_TRPA => GetString("TRPA");
+		public string M3TRPA => GetString("TRPA");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Single manufacturer
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Single manufacturer")]
-		public int? M3_SMFI => GetNullableInt("SMFI");
+		public int? M3SMFI => GetNullableInt("SMFI");
 
 		/// <summary>
 		/// Description: Bulk item
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bulk item")]
-		public int? M3_TANK => GetNullableInt("TANK");
+		public int? M3TANK => GetNullableInt("TANK");
 
 		/// <summary>
 		/// Description: Change date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

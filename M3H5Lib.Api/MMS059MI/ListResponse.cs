@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply model")]
-		public string M3_SPLM => GetString("SPLM");
+		public string M3SPLM => GetString("SPLM");
 
 		/// <summary>
 		/// Description: Priority
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PREX => GetString("PREX");
+		public string M3PREX => GetString("PREX");
 
 		/// <summary>
 		/// Description: Alternative
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternative")]
-		public int? M3_SPLA => GetNullableInt("SPLA");
+		public int? M3SPLA => GetNullableInt("SPLA");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: From date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Multiple selection
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiple selection")]
-		public int? M3_MSEL => GetNullableInt("MSEL");
+		public int? M3MSEL => GetNullableInt("MSEL");
 
 		/// <summary>
 		/// Description: Quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_QQTY => GetNullableDecimal("QQTY");
+		public decimal? M3QQTY => GetNullableDecimal("QQTY");
 
 		/// <summary>
 		/// Description: Supply source
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply source")]
-		public int? M3_SRCC => GetNullableInt("SRCC");
+		public int? M3SRCC => GetNullableInt("SRCC");
 
 		/// <summary>
 		/// Description: From warehouse
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From warehouse")]
-		public string M3_FWHL => GetString("FWHL");
+		public string M3FWHL => GetString("FWHL");
 
 		/// <summary>
 		/// Description: To warehouse
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To warehouse")]
-		public string M3_TWHL => GetString("TWHL");
+		public string M3TWHL => GetString("TWHL");
 
 		/// <summary>
 		/// Description: Order type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_TRTP => GetString("TRTP");
+		public string M3TRTP => GetString("TRTP");
 
 		/// <summary>
 		/// Description: Distribution chain
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution chain")]
-		public string M3_DSCH => GetString("DSCH");
+		public string M3DSCH => GetString("DSCH");
 
 		/// <summary>
 		/// Description: Order type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Supplier
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Item number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Replace item
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replace item")]
-		public int? M3_AFL6 => GetNullableInt("AFL6");
+		public int? M3AFL6 => GetNullableInt("AFL6");
 
 		/// <summary>
 		/// Description: Line type
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public string M3_LTYP => GetString("LTYP");
+		public string M3LTYP => GetString("LTYP");
 
 		/// <summary>
 		/// Description: Automatic option
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic option")]
-		public int? M3_AOPT => GetNullableInt("AOPT");
+		public int? M3AOPT => GetNullableInt("AOPT");
 
 		/// <summary>
 		/// Description: Backorder
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Backorder")]
-		public int? M3_BCKO => GetNullableInt("BCKO");
+		public int? M3BCKO => GetNullableInt("BCKO");
 
 		/// <summary>
 		/// Description: Partial delivery
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partial delivery")]
-		public int? M3_PADL => GetNullableInt("PADL");
+		public int? M3PADL => GetNullableInt("PADL");
 
 		/// <summary>
 		/// Description: Split on alternative
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split on alternative")]
-		public int? M3_SPLP => GetNullableInt("SPLP");
+		public int? M3SPLP => GetNullableInt("SPLP");
 
 		/// <summary>
 		/// Description: Selected alternative
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected alternative")]
-		public int? M3_PALT => GetNullableInt("PALT");
+		public int? M3PALT => GetNullableInt("PALT");
 
 		/// <summary>
 		/// Description: Available-to-promise calculation
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Available-to-promise calculation")]
-		public int? M3_ATPC => GetNullableInt("ATPC");
+		public int? M3ATPC => GetNullableInt("ATPC");
 
 		/// <summary>
 		/// Description: Capacity-to-promise check
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity-to-promise check")]
-		public int? M3_CTPC => GetNullableInt("CTPC");
+		public int? M3CTPC => GetNullableInt("CTPC");
 
 		/// <summary>
 		/// Description: Material-to-promise check
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material-to-promise check")]
-		public int? M3_MTPC => GetNullableInt("MTPC");
+		public int? M3MTPC => GetNullableInt("MTPC");
 
 		/// <summary>
 		/// Description: Transportation-to-promise check
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation-to-promise check")]
-		public int? M3_TTPC => GetNullableInt("TTPC");
+		public int? M3TTPC => GetNullableInt("TTPC");
 
 		/// <summary>
 		/// Description: ATP level
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ATP level")]
-		public string M3_ATLE => GetString("ATLE");
+		public string M3ATLE => GetString("ATLE");
 
 		/// <summary>
 		/// Description: Entry date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS059MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

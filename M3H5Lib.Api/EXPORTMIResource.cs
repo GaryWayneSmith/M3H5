@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.EXPORTMI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description List table fields
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FILE">Table (Required)</param>
+		/// <param name="m3FILE">Table (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFieldsResponse></returns>
 		/// <exception cref="M3Exception<LstFieldsResponse>"></exception>
 		public async Task<M3Response<LstFieldsResponse>> LstFields(
-			string m3_FILE, 
+			string m3FILE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstFieldsResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,9 +89,9 @@ namespace M3H5Lib.Api
 		/// Description Select
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_QERY">Query statement (Required)</param>
-		/// <param name="m3_SEPC">Separator character</param>
-		/// <param name="m3_HDRS">Include headers, 1 or 0 or blank</param>
+		/// <param name="m3QERY">Query statement (Required)</param>
+		/// <param name="m3SEPC">Separator character</param>
+		/// <param name="m3HDRS">Include headers, 1 or 0 or blank</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -97,9 +100,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectResponse></returns>
 		/// <exception cref="M3Exception<SelectResponse>"></exception>
 		public async Task<M3Response<SelectResponse>> Select(
-			string m3_QERY, 
-			string m3_SEPC = null, 
-			int? m3_HDRS = null, 
+			string m3QERY, 
+			string m3SEPC = null, 
+			int? m3HDRS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -114,18 +117,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QERY))
-				throw new ArgumentNullException("m3_QERY");
+			if (string.IsNullOrWhiteSpace(m3QERY))
+				throw new ArgumentNullException(nameof(m3QERY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QERY", m3_QERY.Trim());
+				.WithQueryParameter("QERY", m3QERY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SEPC))
-				request.WithQueryParameter("SEPC", m3_SEPC.Trim());
-			if (m3_HDRS.HasValue)
-				request.WithQueryParameter("HDRS", m3_HDRS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3SEPC))
+				request.WithQueryParameter("SEPC", m3SEPC.Trim());
+			if (m3HDRS.HasValue)
+				request.WithQueryParameter("HDRS", m3HDRS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelectResponse>(
@@ -135,7 +138,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -146,9 +150,9 @@ namespace M3H5Lib.Api
 		/// Description Select with reply string fully blank padded
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_QERY">Query statement (Required)</param>
-		/// <param name="m3_SEPC">Separator character</param>
-		/// <param name="m3_HDRS">Include headers, 1 or 0 or blank</param>
+		/// <param name="m3QERY">Query statement (Required)</param>
+		/// <param name="m3SEPC">Separator character</param>
+		/// <param name="m3HDRS">Include headers, 1 or 0 or blank</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -157,9 +161,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectPadResponse></returns>
 		/// <exception cref="M3Exception<SelectPadResponse>"></exception>
 		public async Task<M3Response<SelectPadResponse>> SelectPad(
-			string m3_QERY, 
-			string m3_SEPC = null, 
-			int? m3_HDRS = null, 
+			string m3QERY, 
+			string m3SEPC = null, 
+			int? m3HDRS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -174,18 +178,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QERY))
-				throw new ArgumentNullException("m3_QERY");
+			if (string.IsNullOrWhiteSpace(m3QERY))
+				throw new ArgumentNullException(nameof(m3QERY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QERY", m3_QERY.Trim());
+				.WithQueryParameter("QERY", m3QERY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SEPC))
-				request.WithQueryParameter("SEPC", m3_SEPC.Trim());
-			if (m3_HDRS.HasValue)
-				request.WithQueryParameter("HDRS", m3_HDRS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3SEPC))
+				request.WithQueryParameter("SEPC", m3SEPC.Trim());
+			if (m3HDRS.HasValue)
+				request.WithQueryParameter("HDRS", m3HDRS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelectPadResponse>(
@@ -195,7 +199,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public string M3_AALF => GetString("AALF");
+		public string M3AALF => GetString("AALF");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public decimal? M3_ANUF => GetNullableDecimal("ANUF");
+		public decimal? M3ANUF => GetNullableDecimal("ANUF");
 
 		/// <summary>
 		/// Description: To attribute value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To attribute value")]
-		public decimal? M3_ANUT => GetNullableDecimal("ANUT");
+		public decimal? M3ANUT => GetNullableDecimal("ANUT");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public decimal? M3_TGNM => GetNullableDecimal("TGNM");
+		public decimal? M3TGNM => GetNullableDecimal("TGNM");
 
 		/// <summary>
 		/// Description: Numeric range multiple
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric range multiple")]
-		public decimal? M3_NRMU => GetNullableDecimal("NRMU");
+		public decimal? M3NRMU => GetNullableDecimal("NRMU");
 
 		/// <summary>
 		/// Description: Default value
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default value")]
-		public int? M3_DEFV => GetNullableInt("DEFV");
+		public int? M3DEFV => GetNullableInt("DEFV");
 
 		/// <summary>
 		/// Description: Option description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option description")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Default code
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default code")]
-		public int? M3_DFCD => GetNullableInt("DFCD");
+		public int? M3DFCD => GetNullableInt("DFCD");
 
 		/// <summary>
 		/// Description: Sales price
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_SAPR => GetString("SAPR");
+		public string M3SAPR => GetString("SAPR");
 
 		/// <summary>
 		/// Description: Cost price
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public string M3_UCOS => GetString("UCOS");
+		public string M3UCOS => GetString("UCOS");
 
 		/// <summary>
 		/// Description: Valid value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid value")]
-		public int? M3_VALI => GetNullableInt("VALI");
+		public int? M3VALI => GetNullableInt("VALI");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Sales price
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_LOSP => GetString("LOSP");
+		public string M3LOSP => GetString("LOSP");
 
 		/// <summary>
 		/// Description: Currency
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_LODC => GetNullableInt("LODC");
+		public int? M3LODC => GetNullableInt("LODC");
 
 		/// <summary>
 		/// Description: Sales price
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_SPLP => GetString("SPLP");
+		public string M3SPLP => GetString("SPLP");
 
 		/// <summary>
 		/// Description: Text identity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

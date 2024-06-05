@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MWS330MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,23 +38,23 @@ namespace M3H5Lib.Api
 		/// Description Add manual reservation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RESP">Responsible</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_VTDT">Valid to</param>
-		/// <param name="m3_DWDT">Requested delivery date</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_AOCA">Acquistion order category</param>
-		/// <param name="m3_ARDN">Acquisition order number</param>
-		/// <param name="m3_ARDL">Acquisition order line</param>
-		/// <param name="m3_ARDX">Line suffix</param>
-		/// <param name="m3_XRES">Reserve</param>
-		/// <param name="m3_TXP1">Text line  1</param>
-		/// <param name="m3_TXP2">Text line  2</param>
-		/// <param name="m3_TXP3">Text line  3</param>
-		/// <param name="m3_TXP4">Text line  4</param>
-		/// <param name="m3_TXP5">Text line  5</param>
+		/// <param name="m3RESP">Responsible</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3VTDT">Valid to</param>
+		/// <param name="m3DWDT">Requested delivery date</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3AOCA">Acquistion order category</param>
+		/// <param name="m3ARDN">Acquisition order number</param>
+		/// <param name="m3ARDL">Acquisition order line</param>
+		/// <param name="m3ARDX">Line suffix</param>
+		/// <param name="m3XRES">Reserve</param>
+		/// <param name="m3TXP1">Text line  1</param>
+		/// <param name="m3TXP2">Text line  2</param>
+		/// <param name="m3TXP3">Text line  3</param>
+		/// <param name="m3TXP4">Text line  4</param>
+		/// <param name="m3TXP5">Text line  5</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -61,23 +63,23 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddReservationResponse></returns>
 		/// <exception cref="M3Exception<AddReservationResponse>"></exception>
 		public async Task<M3Response<AddReservationResponse>> AddReservation(
-			string m3_RESP = null, 
-			string m3_CUNO = null, 
-			DateTime? m3_VTDT = null, 
-			DateTime? m3_DWDT = null, 
-			string m3_WHLO = null, 
-			string m3_ITNO = null, 
-			string m3_BANO = null, 
-			string m3_AOCA = null, 
-			string m3_ARDN = null, 
-			int? m3_ARDL = null, 
-			int? m3_ARDX = null, 
-			int? m3_XRES = null, 
-			string m3_TXP1 = null, 
-			string m3_TXP2 = null, 
-			string m3_TXP3 = null, 
-			string m3_TXP4 = null, 
-			string m3_TXP5 = null, 
+			string m3RESP = null, 
+			string m3CUNO = null, 
+			DateTime? m3VTDT = null, 
+			DateTime? m3DWDT = null, 
+			string m3WHLO = null, 
+			string m3ITNO = null, 
+			string m3BANO = null, 
+			string m3AOCA = null, 
+			string m3ARDN = null, 
+			int? m3ARDL = null, 
+			int? m3ARDX = null, 
+			int? m3XRES = null, 
+			string m3TXP1 = null, 
+			string m3TXP2 = null, 
+			string m3TXP3 = null, 
+			string m3TXP4 = null, 
+			string m3TXP5 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -92,40 +94,40 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RESP))
-				request.WithQueryParameter("RESP", m3_RESP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_VTDT.HasValue)
-				request.WithQueryParameter("VTDT", m3_VTDT.Value.ToM3String());
-			if (m3_DWDT.HasValue)
-				request.WithQueryParameter("DWDT", m3_DWDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AOCA))
-				request.WithQueryParameter("AOCA", m3_AOCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARDN))
-				request.WithQueryParameter("ARDN", m3_ARDN.Trim());
-			if (m3_ARDL.HasValue)
-				request.WithQueryParameter("ARDL", m3_ARDL.Value.ToString());
-			if (m3_ARDX.HasValue)
-				request.WithQueryParameter("ARDX", m3_ARDX.Value.ToString());
-			if (m3_XRES.HasValue)
-				request.WithQueryParameter("XRES", m3_XRES.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TXP1))
-				request.WithQueryParameter("TXP1", m3_TXP1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TXP2))
-				request.WithQueryParameter("TXP2", m3_TXP2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TXP3))
-				request.WithQueryParameter("TXP3", m3_TXP3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TXP4))
-				request.WithQueryParameter("TXP4", m3_TXP4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TXP5))
-				request.WithQueryParameter("TXP5", m3_TXP5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RESP))
+				request.WithQueryParameter("RESP", m3RESP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3VTDT.HasValue)
+				request.WithQueryParameter("VTDT", m3VTDT.Value.ToM3String());
+			if (m3DWDT.HasValue)
+				request.WithQueryParameter("DWDT", m3DWDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AOCA))
+				request.WithQueryParameter("AOCA", m3AOCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARDN))
+				request.WithQueryParameter("ARDN", m3ARDN.Trim());
+			if (m3ARDL.HasValue)
+				request.WithQueryParameter("ARDL", m3ARDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ARDX.HasValue)
+				request.WithQueryParameter("ARDX", m3ARDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3XRES.HasValue)
+				request.WithQueryParameter("XRES", m3XRES.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TXP1))
+				request.WithQueryParameter("TXP1", m3TXP1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TXP2))
+				request.WithQueryParameter("TXP2", m3TXP2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TXP3))
+				request.WithQueryParameter("TXP3", m3TXP3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TXP4))
+				request.WithQueryParameter("TXP4", m3TXP4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TXP5))
+				request.WithQueryParameter("TXP5", m3TXP5.Trim());
 
 			// Execute the request
 			var result = await Execute<AddReservationResponse>(
@@ -135,7 +137,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -146,11 +149,11 @@ namespace M3H5Lib.Api
 		/// Description Change reservation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RENB">Reservation number</param>
-		/// <param name="m3_SQNB">Sequence number</param>
-		/// <param name="m3_PRI2">Priority</param>
-		/// <param name="m3_PRDT">Priority date</param>
-		/// <param name="m3_VTDT">Valid to</param>
+		/// <param name="m3RENB">Reservation number</param>
+		/// <param name="m3SQNB">Sequence number</param>
+		/// <param name="m3PRI2">Priority</param>
+		/// <param name="m3PRDT">Priority date</param>
+		/// <param name="m3VTDT">Valid to</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -159,11 +162,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgReservation(
-			string m3_RENB = null, 
-			int? m3_SQNB = null, 
-			int? m3_PRI2 = null, 
-			DateTime? m3_PRDT = null, 
-			DateTime? m3_VTDT = null, 
+			string m3RENB = null, 
+			int? m3SQNB = null, 
+			int? m3PRI2 = null, 
+			DateTime? m3PRDT = null, 
+			DateTime? m3VTDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -178,16 +181,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RENB))
-				request.WithQueryParameter("RENB", m3_RENB.Trim());
-			if (m3_SQNB.HasValue)
-				request.WithQueryParameter("SQNB", m3_SQNB.Value.ToString());
-			if (m3_PRI2.HasValue)
-				request.WithQueryParameter("PRI2", m3_PRI2.Value.ToString());
-			if (m3_PRDT.HasValue)
-				request.WithQueryParameter("PRDT", m3_PRDT.Value.ToM3String());
-			if (m3_VTDT.HasValue)
-				request.WithQueryParameter("VTDT", m3_VTDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3RENB))
+				request.WithQueryParameter("RENB", m3RENB.Trim());
+			if (m3SQNB.HasValue)
+				request.WithQueryParameter("SQNB", m3SQNB.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PRI2.HasValue)
+				request.WithQueryParameter("PRI2", m3PRI2.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PRDT.HasValue)
+				request.WithQueryParameter("PRDT", m3PRDT.Value.ToM3String());
+			if (m3VTDT.HasValue)
+				request.WithQueryParameter("VTDT", m3VTDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -197,7 +200,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -208,8 +212,8 @@ namespace M3H5Lib.Api
 		/// Description Delete reservation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RENB">Reservation number</param>
-		/// <param name="m3_SQNB">Sequence number</param>
+		/// <param name="m3RENB">Reservation number</param>
+		/// <param name="m3SQNB">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -218,8 +222,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltReservation(
-			string m3_RENB = null, 
-			int? m3_SQNB = null, 
+			string m3RENB = null, 
+			int? m3SQNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -234,10 +238,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RENB))
-				request.WithQueryParameter("RENB", m3_RENB.Trim());
-			if (m3_SQNB.HasValue)
-				request.WithQueryParameter("SQNB", m3_SQNB.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3RENB))
+				request.WithQueryParameter("RENB", m3RENB.Trim());
+			if (m3SQNB.HasValue)
+				request.WithQueryParameter("SQNB", m3SQNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -247,7 +251,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -258,8 +263,8 @@ namespace M3H5Lib.Api
 		/// Description Get reservation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RENB">Reservation number</param>
-		/// <param name="m3_SQNB">Sequence number</param>
+		/// <param name="m3RENB">Reservation number</param>
+		/// <param name="m3SQNB">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -268,8 +273,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetReservationResponse></returns>
 		/// <exception cref="M3Exception<GetReservationResponse>"></exception>
 		public async Task<M3Response<GetReservationResponse>> GetReservation(
-			string m3_RENB = null, 
-			int? m3_SQNB = null, 
+			string m3RENB = null, 
+			int? m3SQNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -284,10 +289,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RENB))
-				request.WithQueryParameter("RENB", m3_RENB.Trim());
-			if (m3_SQNB.HasValue)
-				request.WithQueryParameter("SQNB", m3_SQNB.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3RENB))
+				request.WithQueryParameter("RENB", m3RENB.Trim());
+			if (m3SQNB.HasValue)
+				request.WithQueryParameter("SQNB", m3SQNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetReservationResponse>(
@@ -297,7 +302,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -308,12 +314,12 @@ namespace M3H5Lib.Api
 		/// Description List reservations
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_AOCA">Acquistion order category</param>
-		/// <param name="m3_ARDN">Acquisition order number</param>
-		/// <param name="m3_ARDL">Acquisition order line</param>
-		/// <param name="m3_ARDX">Line suffix</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3AOCA">Acquistion order category</param>
+		/// <param name="m3ARDN">Acquisition order number</param>
+		/// <param name="m3ARDL">Acquisition order line</param>
+		/// <param name="m3ARDX">Line suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -322,12 +328,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstReservationResponse></returns>
 		/// <exception cref="M3Exception<LstReservationResponse>"></exception>
 		public async Task<M3Response<LstReservationResponse>> LstReservation(
-			string m3_ITNO = null, 
-			string m3_BANO = null, 
-			string m3_AOCA = null, 
-			string m3_ARDN = null, 
-			int? m3_ARDL = null, 
-			int? m3_ARDX = null, 
+			string m3ITNO = null, 
+			string m3BANO = null, 
+			string m3AOCA = null, 
+			string m3ARDN = null, 
+			int? m3ARDL = null, 
+			int? m3ARDX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -342,18 +348,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AOCA))
-				request.WithQueryParameter("AOCA", m3_AOCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARDN))
-				request.WithQueryParameter("ARDN", m3_ARDN.Trim());
-			if (m3_ARDL.HasValue)
-				request.WithQueryParameter("ARDL", m3_ARDL.Value.ToString());
-			if (m3_ARDX.HasValue)
-				request.WithQueryParameter("ARDX", m3_ARDX.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AOCA))
+				request.WithQueryParameter("AOCA", m3AOCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARDN))
+				request.WithQueryParameter("ARDN", m3ARDN.Trim());
+			if (m3ARDL.HasValue)
+				request.WithQueryParameter("ARDL", m3ARDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ARDX.HasValue)
+				request.WithQueryParameter("ARDX", m3ARDX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstReservationResponse>(
@@ -363,7 +369,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -374,8 +381,8 @@ namespace M3H5Lib.Api
 		/// Description Prioritized reservation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RENB">Reservation number</param>
-		/// <param name="m3_SQNB">Sequence number</param>
+		/// <param name="m3RENB">Reservation number</param>
+		/// <param name="m3SQNB">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -384,8 +391,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> PrioReserve(
-			string m3_RENB = null, 
-			int? m3_SQNB = null, 
+			string m3RENB = null, 
+			int? m3SQNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -400,10 +407,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RENB))
-				request.WithQueryParameter("RENB", m3_RENB.Trim());
-			if (m3_SQNB.HasValue)
-				request.WithQueryParameter("SQNB", m3_SQNB.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3RENB))
+				request.WithQueryParameter("RENB", m3RENB.Trim());
+			if (m3SQNB.HasValue)
+				request.WithQueryParameter("SQNB", m3SQNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -413,7 +420,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -424,8 +432,8 @@ namespace M3H5Lib.Api
 		/// Description Reserve
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RENB">Reservation number</param>
-		/// <param name="m3_SQNB">Sequence number</param>
+		/// <param name="m3RENB">Reservation number</param>
+		/// <param name="m3SQNB">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -434,8 +442,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Reserve(
-			string m3_RENB = null, 
-			int? m3_SQNB = null, 
+			string m3RENB = null, 
+			int? m3SQNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -450,10 +458,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RENB))
-				request.WithQueryParameter("RENB", m3_RENB.Trim());
-			if (m3_SQNB.HasValue)
-				request.WithQueryParameter("SQNB", m3_SQNB.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3RENB))
+				request.WithQueryParameter("RENB", m3RENB.Trim());
+			if (m3SQNB.HasValue)
+				request.WithQueryParameter("SQNB", m3SQNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -463,7 +471,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -474,8 +483,8 @@ namespace M3H5Lib.Api
 		/// Description Un-reserve
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RENB">Reservation number</param>
-		/// <param name="m3_SQNB">Sequence number</param>
+		/// <param name="m3RENB">Reservation number</param>
+		/// <param name="m3SQNB">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -484,8 +493,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UnReserve(
-			string m3_RENB = null, 
-			int? m3_SQNB = null, 
+			string m3RENB = null, 
+			int? m3SQNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -500,10 +509,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RENB))
-				request.WithQueryParameter("RENB", m3_RENB.Trim());
-			if (m3_SQNB.HasValue)
-				request.WithQueryParameter("SQNB", m3_SQNB.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3RENB))
+				request.WithQueryParameter("RENB", m3RENB.Trim());
+			if (m3SQNB.HasValue)
+				request.WithQueryParameter("SQNB", m3SQNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -513,7 +522,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

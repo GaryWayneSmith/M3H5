@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SPS100MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Select SCP Versions per Company
 		/// Version Release: 12.0
 		/// </summary>
-		/// <param name="m3_FCON">From Company (Required)</param>
-		/// <param name="m3_TCON">To Company (Required)</param>
-		/// <param name="m3_FSCV">From SCP Version (Required)</param>
-		/// <param name="m3_TSCV">To SCP Version (Required)</param>
+		/// <param name="m3FCON">From Company (Required)</param>
+		/// <param name="m3TCON">To Company (Required)</param>
+		/// <param name="m3FSCV">From SCP Version (Required)</param>
+		/// <param name="m3TSCV">To SCP Version (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectResponse></returns>
 		/// <exception cref="M3Exception<SelectResponse>"></exception>
 		public async Task<M3Response<SelectResponse>> Select(
-			int m3_FCON, 
-			int m3_TCON, 
-			string m3_FSCV, 
-			string m3_TSCV, 
+			int m3FCON, 
+			int m3TCON, 
+			string m3FSCV, 
+			string m3TSCV, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,17 +68,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FSCV))
-				throw new ArgumentNullException("m3_FSCV");
-			if (string.IsNullOrWhiteSpace(m3_TSCV))
-				throw new ArgumentNullException("m3_TSCV");
+			if (string.IsNullOrWhiteSpace(m3FSCV))
+				throw new ArgumentNullException(nameof(m3FSCV));
+			if (string.IsNullOrWhiteSpace(m3TSCV))
+				throw new ArgumentNullException(nameof(m3TSCV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FCON", m3_FCON.ToString())
-				.WithQueryParameter("TCON", m3_TCON.ToString())
-				.WithQueryParameter("FSCV", m3_FSCV.Trim())
-				.WithQueryParameter("TSCV", m3_TSCV.Trim());
+				.WithQueryParameter("FCON", m3FCON.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TCON", m3TCON.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FSCV", m3FSCV.Trim())
+				.WithQueryParameter("TSCV", m3TSCV.Trim());
 
 			// Execute the request
 			var result = await Execute<SelectResponse>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -97,10 +100,10 @@ namespace M3H5Lib.Api
 		/// Description Select YOP Versions per Company
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_FCON">From Company (Required)</param>
-		/// <param name="m3_TCON">To Company (Required)</param>
-		/// <param name="m3_FSCV">From YOP Version (Required)</param>
-		/// <param name="m3_TSCV">To YOP Version (Required)</param>
+		/// <param name="m3FCON">From Company (Required)</param>
+		/// <param name="m3TCON">To Company (Required)</param>
+		/// <param name="m3FSCV">From YOP Version (Required)</param>
+		/// <param name="m3TSCV">To YOP Version (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -109,10 +112,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectYOPResponse></returns>
 		/// <exception cref="M3Exception<SelectYOPResponse>"></exception>
 		public async Task<M3Response<SelectYOPResponse>> SelectYOP(
-			int m3_FCON, 
-			int m3_TCON, 
-			string m3_FSCV, 
-			string m3_TSCV, 
+			int m3FCON, 
+			int m3TCON, 
+			string m3FSCV, 
+			string m3TSCV, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -127,17 +130,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FSCV))
-				throw new ArgumentNullException("m3_FSCV");
-			if (string.IsNullOrWhiteSpace(m3_TSCV))
-				throw new ArgumentNullException("m3_TSCV");
+			if (string.IsNullOrWhiteSpace(m3FSCV))
+				throw new ArgumentNullException(nameof(m3FSCV));
+			if (string.IsNullOrWhiteSpace(m3TSCV))
+				throw new ArgumentNullException(nameof(m3TSCV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FCON", m3_FCON.ToString())
-				.WithQueryParameter("TCON", m3_TCON.ToString())
-				.WithQueryParameter("FSCV", m3_FSCV.Trim())
-				.WithQueryParameter("TSCV", m3_TSCV.Trim());
+				.WithQueryParameter("FCON", m3FCON.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TCON", m3TCON.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FSCV", m3FSCV.Trim())
+				.WithQueryParameter("TSCV", m3TSCV.Trim());
 
 			// Execute the request
 			var result = await Execute<SelectYOPResponse>(
@@ -147,7 +150,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

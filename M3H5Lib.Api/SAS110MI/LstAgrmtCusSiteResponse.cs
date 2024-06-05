@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Customer site
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Payer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Validity type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validity type")]
-		public string M3_VLCD => GetString("VLCD");
+		public string M3VLCD => GetString("VLCD");
 
 		/// <summary>
 		/// Description: Valid from
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VADF => GetNullableDateTime("VADF");
+		public DateTime? M3VADF => GetNullableDateTime("VADF");
 
 		/// <summary>
 		/// Description: Valid to
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_VADT => GetNullableDateTime("VADT");
+		public DateTime? M3VADT => GetNullableDateTime("VADT");
 
 		/// <summary>
 		/// Description: Start date - invoicing range
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date - invoicing range")]
-		public DateTime? M3_IIDF => GetNullableDateTime("IIDF");
+		public DateTime? M3IIDF => GetNullableDateTime("IIDF");
 
 		/// <summary>
 		/// Description: End date - invoicing range
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End date - invoicing range")]
-		public DateTime? M3_IIDT => GetNullableDateTime("IIDT");
+		public DateTime? M3IIDT => GetNullableDateTime("IIDT");
 
 		/// <summary>
 		/// Description: Invoicing method
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing method")]
-		public string M3_INVM => GetString("INVM");
+		public string M3INVM => GetString("INVM");
 
 		/// <summary>
 		/// Description: Project number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Project element
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SAS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 	}
 }
 // EOF

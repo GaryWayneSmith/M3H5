@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Work order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Operation number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Material status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material status")]
-		public string M3_WMST => GetString("WMST");
+		public string M3WMST => GetString("WMST");
 
 		/// <summary>
 		/// Description: Subcontract control
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract control")]
-		public int? M3_STGS => GetNullableInt("STGS");
+		public int? M3STGS => GetNullableInt("STGS");
 
 		/// <summary>
 		/// Description: Component number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component number")]
-		public string M3_MTNO => GetString("MTNO");
+		public string M3MTNO => GetString("MTNO");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FMT1 => GetString("FMT1");
+		public string M3FMT1 => GetString("FMT1");
 
 		/// <summary>
 		/// Description: Technical reference
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technical reference")]
-		public string M3_FMT2 => GetString("FMT2");
+		public string M3FMT2 => GetString("FMT2");
 
 		/// <summary>
 		/// Description: Quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_CNQT => GetNullableDecimal("CNQT");
+		public decimal? M3CNQT => GetNullableDecimal("CNQT");
 
 		/// <summary>
 		/// Description: Manual completion flag
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual completion flag")]
-		public int? M3_REND => GetNullableInt("REND");
+		public int? M3REND => GetNullableInt("REND");
 
 		/// <summary>
 		/// Description: Component price
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component price")]
-		public decimal? M3_MPRC => GetNullableDecimal("MPRC");
+		public decimal? M3MPRC => GetNullableDecimal("MPRC");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: To location
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To location")]
-		public string M3_TWSL => GetString("TWSL");
+		public string M3TWSL => GetString("TWSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Issue method
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue method")]
-		public int? M3_SPMT => GetNullableInt("SPMT");
+		public int? M3SPMT => GetNullableInt("SPMT");
 
 		/// <summary>
 		/// Description: Task element number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Task element number")]
-		public int? M3_ACTS => GetNullableInt("ACTS");
+		public int? M3ACTS => GetNullableInt("ACTS");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Alias category
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias category")]
-		public int? M3_ALWT => GetNullableInt("ALWT");
+		public int? M3ALWT => GetNullableInt("ALWT");
 
 		/// <summary>
 		/// Description: Alias qualifier
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias qualifier")]
-		public string M3_ALWQ => GetString("ALWQ");
+		public string M3ALWQ => GetString("ALWQ");
 
 		/// <summary>
 		/// Description: Alias number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: Replaced item number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replaced item number")]
-		public string M3_REPI => GetString("REPI");
+		public string M3REPI => GetString("REPI");
 
 		/// <summary>
 		/// Description: Error code 1
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error code 1")]
-		public string M3_FCLA => GetString("FCLA");
+		public string M3FCLA => GetString("FCLA");
 
 		/// <summary>
 		/// Description: Critical material
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Critical material")]
-		public int? M3_CRTM => GetNullableInt("CRTM");
+		public int? M3CRTM => GetNullableInt("CRTM");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public string M3_CFI2 => GetString("CFI2");
+		public string M3CFI2 => GetString("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: User-defined field 6 - item
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 6 - item")]
-		public string M3_CFI6 => GetString("CFI6");
+		public string M3CFI6 => GetString("CFI6");
 
 		/// <summary>
 		/// Description: User-defined field 7 - item
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 7 - item")]
-		public string M3_CFI7 => GetString("CFI7");
+		public string M3CFI7 => GetString("CFI7");
 
 		/// <summary>
 		/// Description: User-defined field 8 - item
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 8 - item")]
-		public string M3_CFI8 => GetString("CFI8");
+		public string M3CFI8 => GetString("CFI8");
 
 		/// <summary>
 		/// Description: Weight unit
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weight unit")]
-		public string M3_WEUN => GetString("WEUN");
+		public string M3WEUN => GetString("WEUN");
 
 		/// <summary>
 		/// Description: Volume unit
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume unit")]
-		public string M3_VOUN => GetString("VOUN");
+		public string M3VOUN => GetString("VOUN");
 
 		/// <summary>
 		/// Description: Free cap unit
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free cap unit")]
-		public string M3_FEUN => GetString("FEUN");
+		public string M3FEUN => GetString("FEUN");
 
 		/// <summary>
 		/// Description: Length unit
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length unit")]
-		public string M3_LEUN => GetString("LEUN");
+		public string M3LEUN => GetString("LEUN");
 	}
 }
 // EOF

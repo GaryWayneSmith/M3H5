@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Connected project element")]
-		public string M3_CONE => GetString("CONE");
+		public string M3CONE => GetString("CONE");
 
 		/// <summary>
 		/// Description: Controlling project element
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Controlling project element")]
-		public string M3_COTE => GetString("COTE");
+		public string M3COTE => GetString("COTE");
 
 		/// <summary>
 		/// Description: Project element
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Connection type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Connection type")]
-		public string M3_WTCO => GetString("WTCO");
+		public string M3WTCO => GetString("WTCO");
 
 		/// <summary>
 		/// Description: Time slack
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time slack")]
-		public int? M3_TMSL => GetNullableInt("TMSL");
+		public int? M3TMSL => GetNullableInt("TMSL");
 
 		/// <summary>
 		/// Description: Status - project element
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - project element")]
-		public string M3_ELST => GetString("ELST");
+		public string M3ELST => GetString("ELST");
 	}
 }
 // EOF

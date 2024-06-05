@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Agreement proposal number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement proposal number")]
-		public long? M3_DDAN => GetNullableLong("DDAN");
+		public long? M3DDAN => GetNullableLong("DDAN");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKI2 => GetString("BKI2");
+		public string M3BKI2 => GetString("BKI2");
 
 		/// <summary>
 		/// Description: Agreement indicator
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement indicator")]
-		public string M3_AGIN => GetString("AGIN");
+		public string M3AGIN => GetString("AGIN");
 
 		/// <summary>
 		/// Description: Bank number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank number")]
-		public string M3_BKNO => GetString("BKNO");
+		public string M3BKNO => GetString("BKNO");
 
 		/// <summary>
 		/// Description: Bank account field 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 1")]
-		public string M3_BAF1 => GetString("BAF1");
+		public string M3BAF1 => GetString("BAF1");
 
 		/// <summary>
 		/// Description: Bank account field 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 2")]
-		public string M3_BAF2 => GetString("BAF2");
+		public string M3BAF2 => GetString("BAF2");
 
 		/// <summary>
 		/// Description: Bank account field 3
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 3")]
-		public string M3_BAF3 => GetString("BAF3");
+		public string M3BAF3 => GetString("BAF3");
 
 		/// <summary>
 		/// Description: Bank account field 4
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 4")]
-		public string M3_BAF4 => GetString("BAF4");
+		public string M3BAF4 => GetString("BAF4");
 
 		/// <summary>
 		/// Description: Bank account field 5
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 5")]
-		public string M3_BAF5 => GetString("BAF5");
+		public string M3BAF5 => GetString("BAF5");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 1")]
-		public int? M3_BIL1 => GetNullableInt("BIL1");
+		public int? M3BIL1 => GetNullableInt("BIL1");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 2")]
-		public int? M3_BIL2 => GetNullableInt("BIL2");
+		public int? M3BIL2 => GetNullableInt("BIL2");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 3")]
-		public int? M3_BIL3 => GetNullableInt("BIL3");
+		public int? M3BIL3 => GetNullableInt("BIL3");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 4
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 4")]
-		public int? M3_BIL4 => GetNullableInt("BIL4");
+		public int? M3BIL4 => GetNullableInt("BIL4");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 5
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 5")]
-		public int? M3_BIL5 => GetNullableInt("BIL5");
+		public int? M3BIL5 => GetNullableInt("BIL5");
 
 		/// <summary>
 		/// Description: Numeric field 1 position
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 1 position")]
-		public int? M3_NUM1 => GetNullableInt("NUM1");
+		public int? M3NUM1 => GetNullableInt("NUM1");
 
 		/// <summary>
 		/// Description: Numeric field 1 position
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 1 position")]
-		public int? M3_NUM2 => GetNullableInt("NUM2");
+		public int? M3NUM2 => GetNullableInt("NUM2");
 
 		/// <summary>
 		/// Description: Numeric field 1 position
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 1 position")]
-		public int? M3_NUM3 => GetNullableInt("NUM3");
+		public int? M3NUM3 => GetNullableInt("NUM3");
 
 		/// <summary>
 		/// Description: Numeric field 1 position
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 1 position")]
-		public int? M3_NUM4 => GetNullableInt("NUM4");
+		public int? M3NUM4 => GetNullableInt("NUM4");
 
 		/// <summary>
 		/// Description: Numeric field 1 position
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 1 position")]
-		public int? M3_NUM5 => GetNullableInt("NUM5");
+		public int? M3NUM5 => GetNullableInt("NUM5");
 
 		/// <summary>
 		/// Description: Company
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 	}
 }
 // EOF

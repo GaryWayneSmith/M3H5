@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS022MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Add Item Search Group
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_GLVL">Searchgrplevel (Required)</param>
-		/// <param name="m3_SGP0">Itemsearchgroup (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3GLVL">Searchgrplevel (Required)</param>
+		/// <param name="m3SGP0">Itemsearchgroup (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddItmSearchGrp(
-			int m3_GLVL, 
-			string m3_SGP0, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
+			int m3GLVL, 
+			string m3SGP0, 
+			string m3TX40, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,20 +68,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SGP0))
-				throw new ArgumentNullException("m3_SGP0");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3SGP0))
+				throw new ArgumentNullException(nameof(m3SGP0));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GLVL", m3_GLVL.ToString())
-				.WithQueryParameter("SGP0", m3_SGP0.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("GLVL", m3GLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SGP0", m3SGP0.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -89,7 +91,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -100,8 +103,8 @@ namespace M3H5Lib.Api
 		/// Description Delete Item Search Group
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_GLVL">Searchgrplevel (Required)</param>
-		/// <param name="m3_SGP0">Itemsearchgroup (Required)</param>
+		/// <param name="m3GLVL">Searchgrplevel (Required)</param>
+		/// <param name="m3SGP0">Itemsearchgroup (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -110,8 +113,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelItmSearchGrp(
-			int m3_GLVL, 
-			string m3_SGP0, 
+			int m3GLVL, 
+			string m3SGP0, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -126,13 +129,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SGP0))
-				throw new ArgumentNullException("m3_SGP0");
+			if (string.IsNullOrWhiteSpace(m3SGP0))
+				throw new ArgumentNullException(nameof(m3SGP0));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GLVL", m3_GLVL.ToString())
-				.WithQueryParameter("SGP0", m3_SGP0.Trim());
+				.WithQueryParameter("GLVL", m3GLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SGP0", m3SGP0.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -142,7 +145,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -153,8 +157,8 @@ namespace M3H5Lib.Api
 		/// Description Get Item Search Group
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_GLVL">Searchgrplevel (Required)</param>
-		/// <param name="m3_SGP0">Itemsearchgroup (Required)</param>
+		/// <param name="m3GLVL">Searchgrplevel (Required)</param>
+		/// <param name="m3SGP0">Itemsearchgroup (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -163,8 +167,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetItmSearchGrpResponse></returns>
 		/// <exception cref="M3Exception<GetItmSearchGrpResponse>"></exception>
 		public async Task<M3Response<GetItmSearchGrpResponse>> GetItmSearchGrp(
-			int m3_GLVL, 
-			string m3_SGP0, 
+			int m3GLVL, 
+			string m3SGP0, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -179,13 +183,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SGP0))
-				throw new ArgumentNullException("m3_SGP0");
+			if (string.IsNullOrWhiteSpace(m3SGP0))
+				throw new ArgumentNullException(nameof(m3SGP0));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GLVL", m3_GLVL.ToString())
-				.WithQueryParameter("SGP0", m3_SGP0.Trim());
+				.WithQueryParameter("GLVL", m3GLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SGP0", m3SGP0.Trim());
 
 			// Execute the request
 			var result = await Execute<GetItmSearchGrpResponse>(
@@ -195,7 +199,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -235,7 +240,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -246,8 +252,8 @@ namespace M3H5Lib.Api
 		/// Description List Item Search Group
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_GLVL">Searchgrplevel</param>
-		/// <param name="m3_SGP0">Itemsearchgroup</param>
+		/// <param name="m3GLVL">Searchgrplevel</param>
+		/// <param name="m3SGP0">Itemsearchgroup</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -256,8 +262,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstItmSearchGrpResponse></returns>
 		/// <exception cref="M3Exception<LstItmSearchGrpResponse>"></exception>
 		public async Task<M3Response<LstItmSearchGrpResponse>> LstItmSearchGrp(
-			int? m3_GLVL = null, 
-			string m3_SGP0 = null, 
+			int? m3GLVL = null, 
+			string m3SGP0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -272,10 +278,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_GLVL.HasValue)
-				request.WithQueryParameter("GLVL", m3_GLVL.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SGP0))
-				request.WithQueryParameter("SGP0", m3_SGP0.Trim());
+			if (m3GLVL.HasValue)
+				request.WithQueryParameter("GLVL", m3GLVL.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SGP0))
+				request.WithQueryParameter("SGP0", m3SGP0.Trim());
 
 			// Execute the request
 			var result = await Execute<LstItmSearchGrpResponse>(
@@ -285,7 +291,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -296,10 +303,10 @@ namespace M3H5Lib.Api
 		/// Description Updates Item Search Group
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_GLVL">Searchgrplevel (Required)</param>
-		/// <param name="m3_SGP0">Itemsearchgroup (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3GLVL">Searchgrplevel (Required)</param>
+		/// <param name="m3SGP0">Itemsearchgroup (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -308,10 +315,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdItmSearchGrp(
-			int m3_GLVL, 
-			string m3_SGP0, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			int m3GLVL, 
+			string m3SGP0, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -326,19 +333,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SGP0))
-				throw new ArgumentNullException("m3_SGP0");
+			if (string.IsNullOrWhiteSpace(m3SGP0))
+				throw new ArgumentNullException(nameof(m3SGP0));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GLVL", m3_GLVL.ToString())
-				.WithQueryParameter("SGP0", m3_SGP0.Trim());
+				.WithQueryParameter("GLVL", m3GLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SGP0", m3SGP0.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -348,7 +355,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

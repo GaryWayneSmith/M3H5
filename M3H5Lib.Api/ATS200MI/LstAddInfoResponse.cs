@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ATS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ATS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Supply chain level
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ATS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply chain level")]
-		public int? M3_SCLE => GetNullableInt("SCLE");
+		public int? M3SCLE => GetNullableInt("SCLE");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ATS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 	}
 }
 // EOF

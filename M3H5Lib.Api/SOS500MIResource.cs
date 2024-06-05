@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SOS500MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Get fixed price assignment
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_JOBN">Service order job number (Required)</param>
-		/// <param name="m3_JBSX">Assignment suffix (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3JOBN">Service order job number (Required)</param>
+		/// <param name="m3JBSX">Assignment suffix (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetFixedPrAssigResponse></returns>
 		/// <exception cref="M3Exception<GetFixedPrAssigResponse>"></exception>
 		public async Task<M3Response<GetFixedPrAssigResponse>> GetFixedPrAssig(
-			string m3_ORNO, 
-			int m3_JOBN, 
-			int m3_JBSX, 
-			int? m3_CONO = null, 
+			string m3ORNO, 
+			int m3JOBN, 
+			int m3JBSX, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,18 +68,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim())
-				.WithQueryParameter("JOBN", m3_JOBN.ToString())
-				.WithQueryParameter("JBSX", m3_JBSX.ToString());
+				.WithQueryParameter("ORNO", m3ORNO.Trim())
+				.WithQueryParameter("JOBN", m3JOBN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JBSX", m3JBSX.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetFixedPrAssigResponse>(
@@ -87,7 +89,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -98,10 +101,10 @@ namespace M3H5Lib.Api
 		/// Description List assignment per service ordert text
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_JOBN">Service order job number</param>
-		/// <param name="m3_JBSX">Assignment suffix</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3JOBN">Service order job number</param>
+		/// <param name="m3JBSX">Assignment suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -110,10 +113,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAssignSOTextResponse></returns>
 		/// <exception cref="M3Exception<LstAssignSOTextResponse>"></exception>
 		public async Task<M3Response<LstAssignSOTextResponse>> LstAssignSOText(
-			int? m3_CONO = null, 
-			string m3_ORNO = null, 
-			int? m3_JOBN = null, 
-			int? m3_JBSX = null, 
+			int? m3CONO = null, 
+			string m3ORNO = null, 
+			int? m3JOBN = null, 
+			int? m3JBSX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -128,14 +131,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_JOBN.HasValue)
-				request.WithQueryParameter("JOBN", m3_JOBN.Value.ToString());
-			if (m3_JBSX.HasValue)
-				request.WithQueryParameter("JBSX", m3_JBSX.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3JOBN.HasValue)
+				request.WithQueryParameter("JOBN", m3JOBN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JBSX.HasValue)
+				request.WithQueryParameter("JBSX", m3JBSX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAssignSOTextResponse>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,10 +160,10 @@ namespace M3H5Lib.Api
 		/// Description List assignment per service order
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_JOBN">Service order job number</param>
-		/// <param name="m3_JBSX">Assignment suffix</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3JOBN">Service order job number</param>
+		/// <param name="m3JBSX">Assignment suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -168,10 +172,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAssignmPerSOResponse></returns>
 		/// <exception cref="M3Exception<LstAssignmPerSOResponse>"></exception>
 		public async Task<M3Response<LstAssignmPerSOResponse>> LstAssignmPerSO(
-			string m3_ORNO, 
-			int? m3_CONO = null, 
-			int? m3_JOBN = null, 
-			int? m3_JBSX = null, 
+			string m3ORNO, 
+			int? m3CONO = null, 
+			int? m3JOBN = null, 
+			int? m3JBSX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -186,20 +190,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim());
+				.WithQueryParameter("ORNO", m3ORNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_JOBN.HasValue)
-				request.WithQueryParameter("JOBN", m3_JOBN.Value.ToString());
-			if (m3_JBSX.HasValue)
-				request.WithQueryParameter("JBSX", m3_JBSX.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JOBN.HasValue)
+				request.WithQueryParameter("JOBN", m3JOBN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JBSX.HasValue)
+				request.WithQueryParameter("JBSX", m3JBSX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAssignmPerSOResponse>(
@@ -209,7 +213,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -220,10 +225,10 @@ namespace M3H5Lib.Api
 		/// Description List fixed price assignment
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_JOBN">Service order job number</param>
-		/// <param name="m3_JBSX">Assignment suffix</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3JOBN">Service order job number</param>
+		/// <param name="m3JBSX">Assignment suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -232,10 +237,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFixedPrAssigResponse></returns>
 		/// <exception cref="M3Exception<LstFixedPrAssigResponse>"></exception>
 		public async Task<M3Response<LstFixedPrAssigResponse>> LstFixedPrAssig(
-			string m3_ORNO, 
-			int? m3_CONO = null, 
-			int? m3_JOBN = null, 
-			int? m3_JBSX = null, 
+			string m3ORNO, 
+			int? m3CONO = null, 
+			int? m3JOBN = null, 
+			int? m3JBSX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -250,20 +255,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim());
+				.WithQueryParameter("ORNO", m3ORNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_JOBN.HasValue)
-				request.WithQueryParameter("JOBN", m3_JOBN.Value.ToString());
-			if (m3_JBSX.HasValue)
-				request.WithQueryParameter("JBSX", m3_JBSX.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JOBN.HasValue)
+				request.WithQueryParameter("JOBN", m3JOBN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JBSX.HasValue)
+				request.WithQueryParameter("JBSX", m3JBSX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstFixedPrAssigResponse>(
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Message type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message type")]
-		public string M3_E065 => GetString("E065");
+		public string M3E065 => GetString("E065");
 
 		/// <summary>
 		/// Description: Customer number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Interface item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface item number")]
-		public string M3_IFIN => GetString("IFIN");
+		public string M3IFIN => GetString("IFIN");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Alias number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: From date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Name
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Description 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 1")]
-		public string M3_TEDS => GetString("TEDS");
+		public string M3TEDS => GetString("TEDS");
 
 		/// <summary>
 		/// Description: Responsible
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD3 => GetString("USD3");
+		public string M3USD3 => GetString("USD3");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD4 => GetString("USD4");
+		public string M3USD4 => GetString("USD4");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD5 => GetString("USD5");
+		public string M3USD5 => GetString("USD5");
 
 		/// <summary>
 		/// Description: Status
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAI => GetString("STAI");
+		public string M3STAI => GetString("STAI");
 
 		/// <summary>
 		/// Description: Exist in BE
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exist in BE")]
-		public int? M3_EXBE => GetNullableInt("EXBE");
+		public int? M3EXBE => GetNullableInt("EXBE");
 
 		/// <summary>
 		/// Description: Text identity
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MHS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

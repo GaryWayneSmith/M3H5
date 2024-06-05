@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Infor Drillback View ID")]
-		public string M3_IDVI => GetString("IDVI");
+		public string M3IDVI => GetString("IDVI");
 
 		/// <summary>
 		/// Description: User
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Manually created
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually created")]
-		public int? M3_MCRT => GetNullableInt("MCRT");
+		public int? M3MCRT => GetNullableInt("MCRT");
 
 		/// <summary>
 		/// Description: Browse program
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Browse program")]
-		public string M3_BPG1 => GetString("BPG1");
+		public string M3BPG1 => GetString("BPG1");
 
 		/// <summary>
 		/// Description: Opening panel
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Opening panel")]
-		public string M3_SPIC => GetString("SPIC");
+		public string M3SPIC => GetString("SPIC");
 
 		/// <summary>
 		/// Description: Option
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_RELO => GetString("RELO");
+		public string M3RELO => GetString("RELO");
 
 		/// <summary>
 		/// Description: Mashup
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mashup")]
-		public string M3_MASH => GetString("MASH");
+		public string M3MASH => GetString("MASH");
 
 		/// <summary>
 		/// Description: Application
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application")]
-		public string M3_MAON => GetString("MAON");
+		public string M3MAON => GetString("MAON");
 
 		/// <summary>
 		/// Description: Default values
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default values")]
-		public string M3_MDEV => GetString("MDEV");
+		public string M3MDEV => GetString("MDEV");
 
 		/// <summary>
 		/// Description: Browse program
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Browse program")]
-		public string M3_BPG2 => GetString("BPG2");
+		public string M3BPG2 => GetString("BPG2");
 
 		/// <summary>
 		/// Description: Opening panel
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Opening panel")]
-		public string M3_SPI3 => GetString("SPI3");
+		public string M3SPI3 => GetString("SPI3");
 
 		/// <summary>
 		/// Description: Option
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_REL2 => GetString("REL2");
+		public string M3REL2 => GetString("REL2");
 
 		/// <summary>
 		/// Description: Mashup
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mashup")]
-		public string M3_MAS2 => GetString("MAS2");
+		public string M3MAS2 => GetString("MAS2");
 
 		/// <summary>
 		/// Description: Application
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application")]
-		public string M3_MAO2 => GetString("MAO2");
+		public string M3MAO2 => GetString("MAO2");
 
 		/// <summary>
 		/// Description: Default values
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default values")]
-		public string M3_MDE2 => GetString("MDE2");
+		public string M3MDE2 => GetString("MDE2");
 
 		/// <summary>
 		/// Description: Browse program
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Browse program")]
-		public string M3_BPG3 => GetString("BPG3");
+		public string M3BPG3 => GetString("BPG3");
 
 		/// <summary>
 		/// Description: Opening panel
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Opening panel")]
-		public string M3_SPI4 => GetString("SPI4");
+		public string M3SPI4 => GetString("SPI4");
 
 		/// <summary>
 		/// Description: Option
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_REL3 => GetString("REL3");
+		public string M3REL3 => GetString("REL3");
 
 		/// <summary>
 		/// Description: Mashup
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mashup")]
-		public string M3_MAS3 => GetString("MAS3");
+		public string M3MAS3 => GetString("MAS3");
 
 		/// <summary>
 		/// Description: Application
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application")]
-		public string M3_MAO3 => GetString("MAO3");
+		public string M3MAO3 => GetString("MAO3");
 
 		/// <summary>
 		/// Description: Default values
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MNS036MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default values")]
-		public string M3_MDE3 => GetString("MDE3");
+		public string M3MDE3 => GetString("MDE3");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTID => GetString("FTID");
+		public string M3FTID => GetString("FTID");
 
 		/// <summary>
 		/// Description: Text
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FTTX => GetString("FTTX");
+		public string M3FTTX => GetString("FTTX");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQNU => GetNullableInt("SQNU");
+		public int? M3SQNU => GetNullableInt("SQNU");
 
 		/// <summary>
 		/// Description: Option
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPTN => GetString("OPTN");
+		public string M3OPTN => GetString("OPTN");
 
 		/// <summary>
 		/// Description: Text
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_OPTX => GetString("OPTX");
+		public string M3OPTX => GetString("OPTX");
 
 		/// <summary>
 		/// Description: RGB-code red
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("RGB-code red")]
-		public int? M3_RGBR => GetNullableInt("RGBR");
+		public int? M3RGBR => GetNullableInt("RGBR");
 
 		/// <summary>
 		/// Description: RGB-code green
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("RGB-code green")]
-		public int? M3_RGBG => GetNullableInt("RGBG");
+		public int? M3RGBG => GetNullableInt("RGBG");
 
 		/// <summary>
 		/// Description: RGB-code blue
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("RGB-code blue")]
-		public int? M3_RGBB => GetNullableInt("RGBB");
+		public int? M3RGBB => GetNullableInt("RGBB");
 
 		/// <summary>
 		/// Description: Material category
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material category")]
-		public string M3_MTCT => GetString("MTCT");
+		public string M3MTCT => GetString("MTCT");
 
 		/// <summary>
 		/// Description: GUI picture
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("GUI picture")]
-		public string M3_PINO => GetString("PINO");
+		public string M3PINO => GetString("PINO");
 
 		/// <summary>
 		/// Description: Print option information
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print option information")]
-		public int? M3_PRII => GetNullableInt("PRII");
+		public int? M3PRII => GetNullableInt("PRII");
 
 		/// <summary>
 		/// Description: Print separator
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print separator")]
-		public string M3_PSEP => GetString("PSEP");
+		public string M3PSEP => GetString("PSEP");
 
 		/// <summary>
 		/// Description: Print separator prefix
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print separator prefix")]
-		public string M3_PSPR => GetString("PSPR");
+		public string M3PSPR => GetString("PSPR");
 
 		/// <summary>
 		/// Description: Print feature information
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print feature information")]
-		public int? M3_PRFI => GetNullableInt("PRFI");
+		public int? M3PRFI => GetNullableInt("PRFI");
 
 		/// <summary>
 		/// Description: Print on new line
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print on new line")]
-		public int? M3_PRNL => GetNullableInt("PRNL");
+		public int? M3PRNL => GetNullableInt("PRNL");
 
 		/// <summary>
 		/// Description: Print separator suffix
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS056MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print separator suffix")]
-		public string M3_PSES => GetString("PSES");
+		public string M3PSES => GetString("PSES");
 	}
 }
 // EOF

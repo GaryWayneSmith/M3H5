@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("INTRASTAT generating")]
-		public int? M3_INYN => GetNullableInt("INYN");
+		public int? M3INYN => GetNullableInt("INYN");
 
 		/// <summary>
 		/// Description: INTRASTAT generation for other countries
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("INTRASTAT generation for other countries")]
-		public int? M3_INYO => GetNullableInt("INYO");
+		public int? M3INYO => GetNullableInt("INYO");
 
 		/// <summary>
 		/// Description: EU exemption text 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EU exemption text 1")]
-		public string M3_ECE1 => GetString("ECE1");
+		public string M3ECE1 => GetString("ECE1");
 
 		/// <summary>
 		/// Description: EU exemption text 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EU exemption text 2")]
-		public string M3_ECE2 => GetString("ECE2");
+		public string M3ECE2 => GetString("ECE2");
 
 		/// <summary>
 		/// Description: Business type - trade statistics (TST)
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business type - trade statistics (TST)")]
-		public string M3_VRCD => GetString("VRCD");
+		public string M3VRCD => GetString("VRCD");
 
 		/// <summary>
 		/// Description: Sender location
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sender location")]
-		public string M3_PSND => GetString("PSND");
+		public string M3PSND => GetString("PSND");
 
 		/// <summary>
 		/// Description: Receiver location
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiver location")]
-		public string M3_PRCV => GetString("PRCV");
+		public string M3PRCV => GetString("PRCV");
 
 		/// <summary>
 		/// Description: Receiving material number - INTRASTAT
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving material number - INTRASTAT")]
-		public string M3_MNRI => GetString("MNRI");
+		public string M3MNRI => GetString("MNRI");
 
 		/// <summary>
 		/// Description: Sending material number - INTRASTAT
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sending material number - INTRASTAT")]
-		public string M3_MNSI => GetString("MNSI");
+		public string M3MNSI => GetString("MNSI");
 
 		/// <summary>
 		/// Description: Receiving material number - EXTRASTAT
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving material number - EXTRASTAT")]
-		public string M3_MNRE => GetString("MNRE");
+		public string M3MNRE => GetString("MNRE");
 
 		/// <summary>
 		/// Description: Sending material number - EXTRASTAT
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sending material number - EXTRASTAT")]
-		public string M3_MNSE => GetString("MNSE");
+		public string M3MNSE => GetString("MNSE");
 
 		/// <summary>
 		/// Description: INTRASTAT level
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("INTRASTAT level")]
-		public string M3_INLV => GetString("INLV");
+		public string M3INLV => GetString("INLV");
 
 		/// <summary>
 		/// Description: Business type for import - DO
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business type for import - DO")]
-		public string M3_VRC1 => GetString("VRC1");
+		public string M3VRC1 => GetString("VRC1");
 
 		/// <summary>
 		/// Description: Labor code - import DO
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor code - import DO")]
-		public string M3_ECL1 => GetString("ECL1");
+		public string M3ECL1 => GetString("ECL1");
 
 		/// <summary>
 		/// Description: Business type for export - DO
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business type for export - DO")]
-		public string M3_VRC2 => GetString("VRC2");
+		public string M3VRC2 => GetString("VRC2");
 
 		/// <summary>
 		/// Description: Labor code export - DO
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor code export - DO")]
-		public string M3_ECL2 => GetString("ECL2");
+		public string M3ECL2 => GetString("ECL2");
 
 		/// <summary>
 		/// Description: Triangular trade value
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Triangular trade value")]
-		public string M3_CUVL => GetString("CUVL");
+		public string M3CUVL => GetString("CUVL");
 
 		/// <summary>
 		/// Description: Business type for customer return
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business type for customer return")]
-		public string M3_VRC0 => GetString("VRC0");
+		public string M3VRC0 => GetString("VRC0");
 
 		/// <summary>
 		/// Description: Labor code customer return
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor code customer return")]
-		public string M3_ECL0 => GetString("ECL0");
+		public string M3ECL0 => GetString("ECL0");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: 10 MUC divisions in the same country
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("10 MUC divisions in the same country")]
-		public string M3_TR10 => GetString("TR10");
+		public string M3TR10 => GetString("TR10");
 
 		/// <summary>
 		/// Description: 20 MUC selling division = customer
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("20 MUC selling division = customer")]
-		public string M3_TR20 => GetString("TR20");
+		public string M3TR20 => GetString("TR20");
 
 		/// <summary>
 		/// Description: 30 MUC divs and customer in 3 countries
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("30 MUC divs and customer in 3 countries")]
-		public string M3_TR30 => GetString("TR30");
+		public string M3TR30 => GetString("TR30");
 
 		/// <summary>
 		/// Description: 40 MUC warehouse = customer
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("40 MUC warehouse = customer")]
-		public string M3_TR40 => GetString("TR40");
+		public string M3TR40 => GetString("TR40");
 
 		/// <summary>
 		/// Description: 50 MUC not used
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("50 MUC not used")]
-		public string M3_TR50 => GetString("TR50");
+		public string M3TR50 => GetString("TR50");
 
 		/// <summary>
 		/// Description: Bank format
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank format")]
-		public string M3_BNKF => GetString("BNKF");
+		public string M3BNKF => GetString("BNKF");
 	}
 }
 // EOF

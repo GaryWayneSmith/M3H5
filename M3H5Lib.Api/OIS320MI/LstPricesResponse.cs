@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest quantity limit - basic U/M")]
-		public decimal? M3_QTLB => GetNullableDecimal("QTLB");
+		public decimal? M3QTLB => GetNullableDecimal("QTLB");
 
 		/// <summary>
 		/// Description: Scale unit of measure
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scale unit of measure")]
-		public string M3_SGGU => GetString("SGGU");
+		public string M3SGGU => GetString("SGGU");
 
 		/// <summary>
 		/// Description: Sales price
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Discount
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount")]
-		public int? M3_DIPC => GetNullableInt("DIPC");
+		public int? M3DIPC => GetNullableInt("DIPC");
 
 		/// <summary>
 		/// Description: Net price
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price")]
-		public decimal? M3_NETP => GetNullableDecimal("NETP");
+		public decimal? M3NETP => GetNullableDecimal("NETP");
 
 		/// <summary>
 		/// Description: Currency
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Sales price unit of measure
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price unit of measure")]
-		public string M3_SPUN => GetString("SPUN");
+		public string M3SPUN => GetString("SPUN");
 
 		/// <summary>
 		/// Description: Price origin
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price origin")]
-		public string M3_PRMO => GetString("PRMO");
+		public string M3PRMO => GetString("PRMO");
 
 		/// <summary>
 		/// Description: Blanket agreement number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blanket agreement number")]
-		public string M3_AGNO => GetString("AGNO");
+		public string M3AGNO => GetString("AGNO");
 
 		/// <summary>
 		/// Description: Price list
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Promotion
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_PIDE => GetString("PIDE");
+		public string M3PIDE => GetString("PIDE");
 
 		/// <summary>
 		/// Description: Core charge item number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Core charge item number")]
-		public string M3_CCI1 => GetString("CCI1");
+		public string M3CCI1 => GetString("CCI1");
 
 		/// <summary>
 		/// Description: Sales price - core charge
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price - core charge")]
-		public decimal? M3_CCSA => GetNullableDecimal("CCSA");
+		public decimal? M3CCSA => GetNullableDecimal("CCSA");
 	}
 }
 // EOF

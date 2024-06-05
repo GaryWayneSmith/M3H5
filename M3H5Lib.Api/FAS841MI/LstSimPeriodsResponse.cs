@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value type")]
-		public int? M3_VATP => GetNullableInt("VATP");
+		public int? M3VATP => GetNullableInt("VATP");
 
 		/// <summary>
 		/// Description: Value period
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value period")]
-		public int? M3_VPER => GetNullableInt("VPER");
+		public int? M3VPER => GetNullableInt("VPER");
 
 		/// <summary>
 		/// Description: Depreciation plan simulation difference
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation plan simulation difference")]
-		public int? M3_DPSB => GetNullableInt("DPSB");
+		public int? M3DPSB => GetNullableInt("DPSB");
 
 		/// <summary>
 		/// Description: Simulated depreciation amount
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Simulated depreciation amount")]
-		public decimal? M3_DPSA => GetNullableDecimal("DPSA");
+		public decimal? M3DPSA => GetNullableDecimal("DPSA");
 
 		/// <summary>
 		/// Description: Simulated depreciation amount currency
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Simulated depreciation amount currency")]
-		public decimal? M3_DPSC => GetNullableDecimal("DPSC");
+		public decimal? M3DPSC => GetNullableDecimal("DPSC");
 
 		/// <summary>
 		/// Description: Simulated remaining value
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Simulated remaining value")]
-		public decimal? M3_DPSR => GetNullableDecimal("DPSR");
+		public decimal? M3DPSR => GetNullableDecimal("DPSR");
 
 		/// <summary>
 		/// Description: Fixed asset value currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset value currency")]
-		public decimal? M3_FAVA => GetNullableDecimal("FAVA");
+		public decimal? M3FAVA => GetNullableDecimal("FAVA");
 
 		/// <summary>
 		/// Description: Fixed asset value currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset value currency")]
-		public decimal? M3_FAVC => GetNullableDecimal("FAVC");
+		public decimal? M3FAVC => GetNullableDecimal("FAVC");
 
 		/// <summary>
 		/// Description: Remaining value
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining value")]
-		public decimal? M3_FAVR => GetNullableDecimal("FAVR");
+		public decimal? M3FAVR => GetNullableDecimal("FAVR");
 
 		/// <summary>
 		/// Description: Entry date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Change date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.FAS841MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

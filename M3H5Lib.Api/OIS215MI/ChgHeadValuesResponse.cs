@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment number")]
-		public int? M3_PMNB => GetNullableInt("PMNB");
+		public int? M3PMNB => GetNullableInt("PMNB");
 
 		/// <summary>
 		/// Description: Cash desk
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash desk")]
-		public string M3_CSHD => GetString("CSHD");
+		public string M3CSHD => GetString("CSHD");
 
 		/// <summary>
 		/// Description: Cash desk name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash desk name")]
-		public string M3_CDNM => GetString("CDNM");
+		public string M3CDNM => GetString("CDNM");
 
 		/// <summary>
 		/// Description: Division
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Facility name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility name")]
-		public string M3_FACN => GetString("FACN");
+		public string M3FACN => GetString("FACN");
 
 		/// <summary>
 		/// Description: Currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Currency name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Payment method - accounts receivable
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment method - accounts receivable")]
-		public string M3_PYCD => GetString("PYCD");
+		public string M3PYCD => GetString("PYCD");
 
 		/// <summary>
 		/// Description: Payment method name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment method name")]
-		public string M3_PYNM => GetString("PYNM");
+		public string M3PYNM => GetString("PYNM");
 
 		/// <summary>
 		/// Description: Payment date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment date")]
-		public DateTime? M3_PYDT => GetNullableDateTime("PYDT");
+		public DateTime? M3PYDT => GetNullableDateTime("PYDT");
 
 		/// <summary>
 		/// Description: Payer
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 	}
 }
 // EOF

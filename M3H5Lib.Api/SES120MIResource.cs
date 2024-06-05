@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SES120MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Is specific table set up and has deleted records
 		/// Version Release: 14.2
 		/// </summary>
-		/// <param name="m3_FILE">Table (Required)</param>
+		/// <param name="m3FILE">Table (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<HasDeletedResponse></returns>
 		/// <exception cref="M3Exception<HasDeletedResponse>"></exception>
 		public async Task<M3Response<HasDeletedResponse>> HasDeleted(
-			string m3_FILE, 
+			string m3FILE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<HasDeletedResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,7 +89,7 @@ namespace M3H5Lib.Api
 		/// Description Returns a list of audited fields for a specific table
 		/// Version Release: 14.1
 		/// </summary>
-		/// <param name="m3_FILE">Table (Required)</param>
+		/// <param name="m3FILE">Table (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -95,7 +98,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAuditFieldsResponse></returns>
 		/// <exception cref="M3Exception<LstAuditFieldsResponse>"></exception>
 		public async Task<M3Response<LstAuditFieldsResponse>> LstAuditFields(
-			string m3_FILE, 
+			string m3FILE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -110,12 +113,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAuditFieldsResponse>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -136,8 +140,8 @@ namespace M3H5Lib.Api
 		/// Description List deleted records for table
 		/// Version Release: 14.1
 		/// </summary>
-		/// <param name="m3_FILE">Table (Required)</param>
-		/// <param name="m3_LMTS">Timestamp (Required)</param>
+		/// <param name="m3FILE">Table (Required)</param>
+		/// <param name="m3LMTS">Timestamp (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -146,8 +150,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDeletedResponse></returns>
 		/// <exception cref="M3Exception<LstDeletedResponse>"></exception>
 		public async Task<M3Response<LstDeletedResponse>> LstDeleted(
-			string m3_FILE, 
-			decimal m3_LMTS, 
+			string m3FILE, 
+			decimal m3LMTS, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -162,13 +166,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim())
-				.WithQueryParameter("LMTS", m3_LMTS.ToString());
+				.WithQueryParameter("FILE", m3FILE.Trim())
+				.WithQueryParameter("LMTS", m3LMTS.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstDeletedResponse>(
@@ -178,7 +182,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -189,7 +194,7 @@ namespace M3H5Lib.Api
 		/// Description Returns main index field info
 		/// Version Release: 14.1
 		/// </summary>
-		/// <param name="m3_FILE">Table (Required)</param>
+		/// <param name="m3FILE">Table (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -198,7 +203,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFieldInfoResponse></returns>
 		/// <exception cref="M3Exception<LstFieldInfoResponse>"></exception>
 		public async Task<M3Response<LstFieldInfoResponse>> LstFieldInfo(
-			string m3_FILE, 
+			string m3FILE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -213,12 +218,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstFieldInfoResponse>(
@@ -228,7 +233,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

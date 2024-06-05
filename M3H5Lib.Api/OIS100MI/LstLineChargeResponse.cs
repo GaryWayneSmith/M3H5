@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Order line number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Charge
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public string M3_CRID => GetString("CRID");
+		public string M3CRID => GetString("CRID");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_CRD0 => GetString("CRD0");
+		public string M3CRD0 => GetString("CRD0");
 
 		/// <summary>
 		/// Description: Amount
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount")]
-		public decimal? M3_PBAM => GetNullableDecimal("PBAM");
+		public decimal? M3PBAM => GetNullableDecimal("PBAM");
 
 		/// <summary>
 		/// Description: Currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 	}
 }
 // EOF

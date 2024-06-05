@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: From date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: Additional days
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional days")]
-		public int? M3_DAYS => GetNullableInt("DAYS");
+		public int? M3DAYS => GetNullableInt("DAYS");
 
 		/// <summary>
 		/// Description: Adjusted date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adjusted date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 	}
 }
 // EOF

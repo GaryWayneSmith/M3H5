@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Table
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Primary key 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 1")]
-		public string M3_PK01 => GetString("PK01");
+		public string M3PK01 => GetString("PK01");
 
 		/// <summary>
 		/// Description: Primary key 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 2")]
-		public string M3_PK02 => GetString("PK02");
+		public string M3PK02 => GetString("PK02");
 
 		/// <summary>
 		/// Description: Primary key 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 3")]
-		public string M3_PK03 => GetString("PK03");
+		public string M3PK03 => GetString("PK03");
 
 		/// <summary>
 		/// Description: Primary key 4
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 4")]
-		public string M3_PK04 => GetString("PK04");
+		public string M3PK04 => GetString("PK04");
 
 		/// <summary>
 		/// Description: Primary key 5
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 5")]
-		public string M3_PK05 => GetString("PK05");
+		public string M3PK05 => GetString("PK05");
 
 		/// <summary>
 		/// Description: Primary key 6
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 6")]
-		public string M3_PK06 => GetString("PK06");
+		public string M3PK06 => GetString("PK06");
 
 		/// <summary>
 		/// Description: Primary key 7
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 7")]
-		public string M3_PK07 => GetString("PK07");
+		public string M3PK07 => GetString("PK07");
 
 		/// <summary>
 		/// Description: Primary key 8
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 8")]
-		public string M3_PK08 => GetString("PK08");
+		public string M3PK08 => GetString("PK08");
 
 		/// <summary>
 		/// Description: Primary key 9
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 9")]
-		public string M3_PK09 => GetString("PK09");
+		public string M3PK09 => GetString("PK09");
 
 		/// <summary>
 		/// Description: Primary key 10
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 10")]
-		public string M3_PK10 => GetString("PK10");
+		public string M3PK10 => GetString("PK10");
 
 		/// <summary>
 		/// Description: Primary key 11
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 11")]
-		public string M3_PK11 => GetString("PK11");
+		public string M3PK11 => GetString("PK11");
 
 		/// <summary>
 		/// Description: Primary key 12
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 12")]
-		public string M3_PK12 => GetString("PK12");
+		public string M3PK12 => GetString("PK12");
 
 		/// <summary>
 		/// Description: Primary key 13
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 13")]
-		public string M3_PK13 => GetString("PK13");
+		public string M3PK13 => GetString("PK13");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SQNR => GetNullableInt("SQNR");
+		public int? M3SQNR => GetNullableInt("SQNR");
 
 		/// <summary>
 		/// Description: Parameter value
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parameter value")]
-		public string M3_PARM => GetString("PARM");
+		public string M3PARM => GetString("PARM");
 
 		/// <summary>
 		/// Description: Search tag
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search tag")]
-		public int? M3_SETG => GetNullableInt("SETG");
+		public int? M3SETG => GetNullableInt("SETG");
 
 		/// <summary>
 		/// Description: Responsible
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Text identity
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CMS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

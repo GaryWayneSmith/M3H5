@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Time zone
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 
 		/// <summary>
 		/// Description: Year
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Hemisphere
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hemisphere")]
-		public int? M3_HEMI => GetNullableInt("HEMI");
+		public int? M3HEMI => GetNullableInt("HEMI");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public int? M3_TGMT => GetNullableInt("TGMT");
+		public int? M3TGMT => GetNullableInt("TGMT");
 
 		/// <summary>
 		/// Description: Daylight savings time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Daylight savings time")]
-		public int? M3_DLST => GetNullableInt("DLST");
+		public int? M3DLST => GetNullableInt("DLST");
 
 		/// <summary>
 		/// Description: Valid from
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VFDT => GetNullableDateTime("VFDT");
+		public DateTime? M3VFDT => GetNullableDateTime("VFDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_VTDT => GetNullableDateTime("VTDT");
+		public DateTime? M3VTDT => GetNullableDateTime("VTDT");
 
 		/// <summary>
 		/// Description: Adjustment
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adjustment")]
-		public int? M3_DSAD => GetNullableInt("DSAD");
+		public int? M3DSAD => GetNullableInt("DSAD");
 	}
 }
 // EOF

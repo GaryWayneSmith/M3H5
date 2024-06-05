@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deliveryterms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Language
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Termstext
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Termstext")]
-		public string M3_TEL1 => GetString("TEL1");
+		public string M3TEL1 => GetString("TEL1");
 
 		/// <summary>
 		/// Description: Termstext
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Termstext")]
-		public string M3_TEL2 => GetString("TEL2");
+		public string M3TEL2 => GetString("TEL2");
 
 		/// <summary>
 		/// Description: Recipientpays
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipientpays")]
-		public int? M3_RCPY => GetNullableInt("RCPY");
+		public int? M3RCPY => GetNullableInt("RCPY");
 
 		/// <summary>
 		/// Description: Goodsresponsibility
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goodsresponsibility")]
-		public int? M3_DELT => GetNullableInt("DELT");
+		public int? M3DELT => GetNullableInt("DELT");
 
 		/// <summary>
 		/// Description: Adjustmentfactorconsignee
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adjustmentfactorconsignee")]
-		public int? M3_ADJR => GetNullableInt("ADJR");
+		public int? M3ADJR => GetNullableInt("ADJR");
 
 		/// <summary>
 		/// Description: Adjustmentfactorconsignor
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adjustmentfactorconsignor")]
-		public int? M3_ADJS => GetNullableInt("ADJS");
+		public int? M3ADJS => GetNullableInt("ADJS");
 
 		/// <summary>
 		/// Description: Deliveryterms-INTRASTAT
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deliveryterms-INTRASTAT")]
-		public string M3_ECDT => GetString("ECDT");
+		public string M3ECDT => GetString("ECDT");
 
 		/// <summary>
 		/// Description: Delivery terms - Extrastat (Extra)
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms - Extrastat (Extra)")]
-		public string M3_EXTD => GetString("EXTD");
+		public string M3EXTD => GetString("EXTD");
 
 		/// <summary>
 		/// Description: Tax point
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax point")]
-		public int? M3_TXPO => GetNullableInt("TXPO");
+		public int? M3TXPO => GetNullableInt("TXPO");
 
 		/// <summary>
 		/// Description: Freight cost control
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight cost control")]
-		public int? M3_FRCK => GetNullableInt("FRCK");
+		public int? M3FRCK => GetNullableInt("FRCK");
 
 		/// <summary>
 		/// Description: Fiscal representative rule
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS065MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fiscal representative rule")]
-		public int? M3_FRRU => GetNullableInt("FRRU");
+		public int? M3FRRU => GetNullableInt("FRRU");
 	}
 }
 // EOF

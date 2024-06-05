@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Style number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style number")]
-		public string M3_STYN => GetString("STYN");
+		public string M3STYN => GetString("STYN");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQFZ => GetNullableInt("SQFZ");
+		public int? M3SQFZ => GetNullableInt("SQFZ");
 
 		/// <summary>
 		/// Description: Feature
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTIZ => GetString("FTIZ");
+		public string M3FTIZ => GetString("FTIZ");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQNZ => GetNullableInt("SQNZ");
+		public int? M3SQNZ => GetNullableInt("SQNZ");
 
 		/// <summary>
 		/// Description: Option
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPTZ => GetString("OPTZ");
+		public string M3OPTZ => GetString("OPTZ");
 
 		/// <summary>
 		/// Description: Name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TZ15 => GetString("TZ15");
+		public string M3TZ15 => GetString("TZ15");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQFX => GetNullableInt("SQFX");
+		public int? M3SQFX => GetNullableInt("SQFX");
 
 		/// <summary>
 		/// Description: Feature
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTIX => GetString("FTIX");
+		public string M3FTIX => GetString("FTIX");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQNX => GetNullableInt("SQNX");
+		public int? M3SQNX => GetNullableInt("SQNX");
 
 		/// <summary>
 		/// Description: Option
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPTX => GetString("OPTX");
+		public string M3OPTX => GetString("OPTX");
 
 		/// <summary>
 		/// Description: Name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQFY => GetNullableInt("SQFY");
+		public int? M3SQFY => GetNullableInt("SQFY");
 
 		/// <summary>
 		/// Description: Feature
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTIY => GetString("FTIY");
+		public string M3FTIY => GetString("FTIY");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQNY => GetNullableInt("SQNY");
+		public int? M3SQNY => GetNullableInt("SQNY");
 
 		/// <summary>
 		/// Description: Option
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPTY => GetString("OPTY");
+		public string M3OPTY => GetString("OPTY");
 
 		/// <summary>
 		/// Description: Name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TY15 => GetString("TY15");
+		public string M3TY15 => GetString("TY15");
 
 		/// <summary>
 		/// Description: Season control
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Season control")]
-		public int? M3_SECH => GetNullableInt("SECH");
+		public int? M3SECH => GetNullableInt("SECH");
 
 		/// <summary>
 		/// Description: Entry date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Phantom ID
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Phantom ID")]
-		public string M3_PHID => GetString("PHID");
+		public string M3PHID => GetString("PHID");
 
 		/// <summary>
 		/// Description: Color
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Color")]
-		public string M3_COLO => GetString("COLO");
+		public string M3COLO => GetString("COLO");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SFCO => GetNullableInt("SFCO");
+		public int? M3SFCO => GetNullableInt("SFCO");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQCO => GetNullableInt("SQCO");
+		public int? M3SQCO => GetNullableInt("SQCO");
 
 		/// <summary>
 		/// Description: Axis for color
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Axis for color")]
-		public string M3_AXCO => GetString("AXCO");
+		public string M3AXCO => GetString("AXCO");
 
 		/// <summary>
 		/// Description: Size
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Size")]
-		public string M3_SIZE => GetString("SIZE");
+		public string M3SIZE => GetString("SIZE");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SFSI => GetNullableInt("SFSI");
+		public int? M3SFSI => GetNullableInt("SFSI");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQSI => GetNullableInt("SQSI");
+		public int? M3SQSI => GetNullableInt("SQSI");
 
 		/// <summary>
 		/// Description: Axis for size
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Axis for size")]
-		public string M3_AXSI => GetString("AXSI");
+		public string M3AXSI => GetString("AXSI");
 
 		/// <summary>
 		/// Description: Characteristics
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Characteristics")]
-		public string M3_CHCS => GetString("CHCS");
+		public string M3CHCS => GetString("CHCS");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQCH => GetNullableInt("SQCH");
+		public int? M3SQCH => GetNullableInt("SQCH");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SFCH => GetNullableInt("SFCH");
+		public int? M3SFCH => GetNullableInt("SFCH");
 
 		/// <summary>
 		/// Description: Axis for characteristics
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Axis for characteristics")]
-		public string M3_AXCH => GetString("AXCH");
+		public string M3AXCH => GetString("AXCH");
 
 		/// <summary>
 		/// Description: Kit indicator
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kit indicator")]
-		public int? M3_KITI => GetNullableInt("KITI");
+		public int? M3KITI => GetNullableInt("KITI");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Customer table extension
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer table extension")]
-		public string M3_CUEX => GetString("CUEX");
+		public string M3CUEX => GetString("CUEX");
 	}
 }
 // EOF

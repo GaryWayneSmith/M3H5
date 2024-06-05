@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: UN number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("UN number")]
-		public int? M3_UNNN => GetNullableInt("UNNN");
+		public int? M3UNNN => GetNullableInt("UNNN");
 
 		/// <summary>
 		/// Description: NA number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("NA number")]
-		public string M3_NNNN => GetString("NNNN");
+		public string M3NNNN => GetString("NNNN");
 
 		/// <summary>
 		/// Description: CAS number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CAS number")]
-		public string M3_CASN => GetString("CASN");
+		public string M3CASN => GetString("CASN");
 
 		/// <summary>
 		/// Description: EU number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EU number")]
-		public string M3_ECNM => GetString("ECNM");
+		public string M3ECNM => GetString("ECNM");
 
 		/// <summary>
 		/// Description: EINECS number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EINECS number")]
-		public string M3_EINM => GetString("EINM");
+		public string M3EINM => GetString("EINM");
 
 		/// <summary>
 		/// Description: Atomic number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Atomic number")]
-		public string M3_ATOM => GetString("ATOM");
+		public string M3ATOM => GetString("ATOM");
 
 		/// <summary>
 		/// Description: CEA number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CEA number")]
-		public string M3_CEAN => GetString("CEAN");
+		public string M3CEAN => GetString("CEAN");
 
 		/// <summary>
 		/// Description: NAICS code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("NAICS code")]
-		public int? M3_NAIC => GetNullableInt("NAIC");
+		public int? M3NAIC => GetNullableInt("NAIC");
 
 		/// <summary>
 		/// Description: Item equipment profile
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item equipment profile")]
-		public string M3_ITEQ => GetString("ITEQ");
+		public string M3ITEQ => GetString("ITEQ");
 
 		/// <summary>
 		/// Description: Freight commodity code
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight commodity code")]
-		public string M3_CMMC => GetString("CMMC");
+		public string M3CMMC => GetString("CMMC");
 
 		/// <summary>
 		/// Description: Hazardous material
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hazardous material")]
-		public int? M3_HAZM => GetNullableInt("HAZM");
+		public int? M3HAZM => GetNullableInt("HAZM");
 
 		/// <summary>
 		/// Description: Commodity class
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commodity class")]
-		public string M3_CMCL => GetString("CMCL");
+		public string M3CMCL => GetString("CMCL");
 	}
 }
 // EOF

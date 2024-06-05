@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Receiving number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving number")]
-		public long? M3_REPN => GetNullableLong("REPN");
+		public long? M3REPN => GetNullableLong("REPN");
 
 		/// <summary>
 		/// Description: Line number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_RELI => GetNullableInt("RELI");
+		public int? M3RELI => GetNullableInt("RELI");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Status - customer order return
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - customer order return")]
-		public string M3_REST => GetString("REST");
+		public string M3REST => GetString("REST");
 
 		/// <summary>
 		/// Description: Item number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Location
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Inspection officer
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection officer")]
-		public string M3_RPA5 => GetString("RPA5");
+		public string M3RPA5 => GetString("RPA5");
 
 		/// <summary>
 		/// Description: Return date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return date")]
-		public DateTime? M3_EPDT => GetNullableDateTime("EPDT");
+		public DateTime? M3EPDT => GetNullableDateTime("EPDT");
 
 		/// <summary>
 		/// Description: Advised quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Advised quantity")]
-		public decimal? M3_REQ0 => GetNullableDecimal("REQ0");
+		public decimal? M3REQ0 => GetNullableDecimal("REQ0");
 
 		/// <summary>
 		/// Description: Returned quantity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Returned quantity")]
-		public decimal? M3_REQ1 => GetNullableDecimal("REQ1");
+		public decimal? M3REQ1 => GetNullableDecimal("REQ1");
 
 		/// <summary>
 		/// Description: Inspection quantity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection quantity")]
-		public decimal? M3_REQ2 => GetNullableDecimal("REQ2");
+		public decimal? M3REQ2 => GetNullableDecimal("REQ2");
 
 		/// <summary>
 		/// Description: Approved quantity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved quantity")]
-		public decimal? M3_REQ3 => GetNullableDecimal("REQ3");
+		public decimal? M3REQ3 => GetNullableDecimal("REQ3");
 
 		/// <summary>
 		/// Description: Returned to supplier
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Returned to supplier")]
-		public decimal? M3_REQ4 => GetNullableDecimal("REQ4");
+		public decimal? M3REQ4 => GetNullableDecimal("REQ4");
 
 		/// <summary>
 		/// Description: Returned to customer
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Returned to customer")]
-		public decimal? M3_REQ5 => GetNullableDecimal("REQ5");
+		public decimal? M3REQ5 => GetNullableDecimal("REQ5");
 
 		/// <summary>
 		/// Description: Rejected quantity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rejected quantity")]
-		public decimal? M3_REQ6 => GetNullableDecimal("REQ6");
+		public decimal? M3REQ6 => GetNullableDecimal("REQ6");
 
 		/// <summary>
 		/// Description: Credited quantity
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credited quantity")]
-		public decimal? M3_REQ7 => GetNullableDecimal("REQ7");
+		public decimal? M3REQ7 => GetNullableDecimal("REQ7");
 
 		/// <summary>
 		/// Description: Repairable quantity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Repairable quantity")]
-		public decimal? M3_REQ8 => GetNullableDecimal("REQ8");
+		public decimal? M3REQ8 => GetNullableDecimal("REQ8");
 
 		/// <summary>
 		/// Description: Sales price
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Cost price
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public decimal? M3_UCOS => GetNullableDecimal("UCOS");
+		public decimal? M3UCOS => GetNullableDecimal("UCOS");
 
 		/// <summary>
 		/// Description: Transaction reason
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction reason")]
-		public string M3_RSCD => GetString("RSCD");
+		public string M3RSCD => GetString("RSCD");
 
 		/// <summary>
 		/// Description: Status - credit
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - credit")]
-		public int? M3_CRES => GetNullableInt("CRES");
+		public int? M3CRES => GetNullableInt("CRES");
 
 		/// <summary>
 		/// Description: Inventory accounting
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting")]
-		public int? M3_STCD => GetNullableInt("STCD");
+		public int? M3STCD => GetNullableInt("STCD");
 
 		/// <summary>
 		/// Description: Division
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Catch weight
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight")]
-		public decimal? M3_CAWE => GetNullableDecimal("CAWE");
+		public decimal? M3CAWE => GetNullableDecimal("CAWE");
 
 		/// <summary>
 		/// Description: Catch weight for credit
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight for credit")]
-		public decimal? M3_CAW2 => GetNullableDecimal("CAW2");
+		public decimal? M3CAW2 => GetNullableDecimal("CAW2");
 
 		/// <summary>
 		/// Description: Lot reference 1
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 1")]
-		public string M3_BREF => GetString("BREF");
+		public string M3BREF => GetString("BREF");
 
 		/// <summary>
 		/// Description: Lot reference 2
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 2")]
-		public string M3_BRE2 => GetString("BRE2");
+		public string M3BRE2 => GetString("BRE2");
 
 		/// <summary>
 		/// Description: Product text
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product text")]
-		public string M3_PRTX => GetString("PRTX");
+		public string M3PRTX => GetString("PRTX");
 
 		/// <summary>
 		/// Description: Text identity
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_POTX => GetNullableDecimal("POTX");
+		public decimal? M3POTX => GetNullableDecimal("POTX");
 
 		/// <summary>
 		/// Description: Text identity
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Line type
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public string M3_LTYP => GetString("LTYP");
+		public string M3LTYP => GetString("LTYP");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Internal transfer price
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal transfer price")]
-		public decimal? M3_INPR => GetNullableDecimal("INPR");
+		public decimal? M3INPR => GetNullableDecimal("INPR");
 
 		/// <summary>
 		/// Description: Internal transfer currency
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal transfer currency")]
-		public string M3_CUCT => GetString("CUCT");
+		public string M3CUCT => GetString("CUCT");
 
 		/// <summary>
 		/// Description: Product number highest level
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number highest level")]
-		public string M3_PRHL => GetString("PRHL");
+		public string M3PRHL => GetString("PRHL");
 
 		/// <summary>
 		/// Description: Serial number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Material price method
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material price method")]
-		public int? M3_APBA => GetNullableInt("APBA");
+		public int? M3APBA => GetNullableInt("APBA");
 
 		/// <summary>
 		/// Description: Configuration position
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration position")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: Granted warranty type
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Granted warranty type")]
-		public string M3_GWTP => GetString("GWTP");
+		public string M3GWTP => GetString("GWTP");
 
 		/// <summary>
 		/// Description: Warranty type
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty type")]
-		public string M3_WATP => GetString("WATP");
+		public string M3WATP => GetString("WATP");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNS => GetString("CTNS");
+		public string M3CTNS => GetString("CTNS");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Tax exemption contract number
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax exemption contract number")]
-		public string M3_TECN => GetString("TECN");
+		public string M3TECN => GetString("TECN");
 
 		/// <summary>
 		/// Description: Industry Application
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Industry Application")]
-		public string M3_INAP => GetString("INAP");
+		public string M3INAP => GetString("INAP");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Local currency
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Sales price in local currency
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price in local currency")]
-		public decimal? M3_CUPR => GetNullableDecimal("CUPR");
+		public decimal? M3CUPR => GetNullableDecimal("CUPR");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 	}
 }
 // EOF

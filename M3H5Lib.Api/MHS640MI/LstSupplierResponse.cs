@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Partner
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier type")]
-		public int? M3_SUTY => GetNullableInt("SUTY");
+		public int? M3SUTY => GetNullableInt("SUTY");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Search key
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search key")]
-		public string M3_ALSU => GetString("ALSU");
+		public string M3ALSU => GetString("ALSU");
 
 		/// <summary>
 		/// Description: Status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Organization number 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 1")]
-		public string M3_CORG => GetString("CORG");
+		public string M3CORG => GetString("CORG");
 
 		/// <summary>
 		/// Description: Organization number 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 2")]
-		public string M3_COR2 => GetString("COR2");
+		public string M3COR2 => GetString("COR2");
 
 		/// <summary>
 		/// Description: Language
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Telephone number 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 2")]
-		public string M3_PHN2 => GetString("PHN2");
+		public string M3PHN2 => GetString("PHN2");
 
 		/// <summary>
 		/// Description: Telex number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telex number")]
-		public string M3_TLNO => GetString("TLNO");
+		public string M3TLNO => GetString("TLNO");
 
 		/// <summary>
 		/// Description: Facsimile transmission nu
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission nu")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Country
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Area/state
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/state")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Date format
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date format")]
-		public string M3_DTFM => GetString("DTFM");
+		public string M3DTFM => GetString("DTFM");
 
 		/// <summary>
 		/// Description: Date editing
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date editing")]
-		public string M3_EDIT => GetString("EDIT");
+		public string M3EDIT => GetString("EDIT");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Supplier number within gr
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number within gr")]
-		public string M3_SUCO => GetString("SUCO");
+		public string M3SUCO => GetString("SUCO");
 
 		/// <summary>
 		/// Description: Supplier alternate identi
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier alternate identi")]
-		public string M3_SUAL => GetString("SUAL");
+		public string M3SUAL => GetString("SUAL");
 
 		/// <summary>
 		/// Description: Supplier computer communi
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier computer communi")]
-		public string M3_SUCM => GetString("SUCM");
+		public string M3SUCM => GetString("SUCM");
 
 		/// <summary>
 		/// Description: Media profile
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Media profile")]
-		public string M3_MEPF => GetString("MEPF");
+		public string M3MEPF => GetString("MEPF");
 
 		/// <summary>
 		/// Description: Transmission lead time -
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transmission lead time -")]
-		public int? M3_PODA => GetNullableInt("PODA");
+		public int? M3PODA => GetNullableInt("PODA");
 
 		/// <summary>
 		/// Description: User-defined field 1 - it
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - it")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - it
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - it")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - it
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - it")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - it
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - it")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - it
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - it")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: Harbor or airport
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harbor or airport")]
-		public string M3_HAFE => GetString("HAFE");
+		public string M3HAFE => GetString("HAFE");
 
 		/// <summary>
 		/// Description: Alternate lang for option
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate lang for option")]
-		public string M3_DESV => GetString("DESV");
+		public string M3DESV => GetString("DESV");
 
 		/// <summary>
 		/// Description: Text identity
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Command
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Command")]
-		public string M3_CMND => GetString("CMND");
+		public string M3CMND => GetString("CMND");
 
 		/// <summary>
 		/// Description: Download
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Download")]
-		public int? M3_DOWN => GetNullableInt("DOWN");
+		public int? M3DOWN => GetNullableInt("DOWN");
 
 		/// <summary>
 		/// Description: Entry date
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Rail station
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MHS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rail station")]
-		public string M3_RASN => GetString("RASN");
+		public string M3RASN => GetString("RASN");
 	}
 }
 // EOF

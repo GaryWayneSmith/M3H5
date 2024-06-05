@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS560MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Get Customer Settings
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSettingsResponse></returns>
 		/// <exception cref="M3Exception<GetSettingsResponse>"></exception>
 		public async Task<M3Response<GetSettingsResponse>> GetSettings(
-			string m3_CUNO, 
+			string m3CUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSettingsResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// Description List Delivery Methods
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_MODL">Delivery method</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3MODL">Delivery method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDelMethodResponse></returns>
 		/// <exception cref="M3Exception<LstDelMethodResponse>"></exception>
 		public async Task<M3Response<LstDelMethodResponse>> LstDelMethod(
-			string m3_CUNO, 
-			string m3_MODL = null, 
+			string m3CUNO, 
+			string m3MODL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -112,16 +115,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODL))
-				request.WithQueryParameter("MODL", m3_MODL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MODL))
+				request.WithQueryParameter("MODL", m3MODL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDelMethodResponse>(
@@ -131,7 +134,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -142,8 +146,8 @@ namespace M3H5Lib.Api
 		/// Description List Delivery Terms
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_TEDL">Delivery terms</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3TEDL">Delivery terms</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -152,8 +156,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDelTermResponse></returns>
 		/// <exception cref="M3Exception<LstDelTermResponse>"></exception>
 		public async Task<M3Response<LstDelTermResponse>> LstDelTerm(
-			string m3_CUNO, 
-			string m3_TEDL = null, 
+			string m3CUNO, 
+			string m3TEDL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -168,16 +172,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TEDL))
-				request.WithQueryParameter("TEDL", m3_TEDL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEDL))
+				request.WithQueryParameter("TEDL", m3TEDL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDelTermResponse>(
@@ -187,7 +191,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -198,8 +203,8 @@ namespace M3H5Lib.Api
 		/// Description List Facility
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_FACI">Facility</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3FACI">Facility</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -208,8 +213,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFacResponse></returns>
 		/// <exception cref="M3Exception<LstFacResponse>"></exception>
 		public async Task<M3Response<LstFacResponse>> LstFac(
-			string m3_CUNO, 
-			string m3_FACI = null, 
+			string m3CUNO, 
+			string m3FACI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -224,16 +229,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstFacResponse>(
@@ -243,7 +248,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -254,8 +260,8 @@ namespace M3H5Lib.Api
 		/// Description List Payment Types/Terms
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_PYCD">Payment method</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3PYCD">Payment method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -264,8 +270,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPayTypeResponse></returns>
 		/// <exception cref="M3Exception<LstPayTypeResponse>"></exception>
 		public async Task<M3Response<LstPayTypeResponse>> LstPayType(
-			string m3_CUNO, 
-			string m3_PYCD = null, 
+			string m3CUNO, 
+			string m3PYCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -280,16 +286,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PYCD))
-				request.WithQueryParameter("PYCD", m3_PYCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYCD))
+				request.WithQueryParameter("PYCD", m3PYCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPayTypeResponse>(
@@ -299,7 +305,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

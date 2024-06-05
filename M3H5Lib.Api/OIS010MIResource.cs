@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS010MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get field information
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORTP">Customer order type (Required)</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3ORTP">Customer order type (Required)</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetFieldInfoResponse></returns>
 		/// <exception cref="M3Exception<GetFieldInfoResponse>"></exception>
 		public async Task<M3Response<GetFieldInfoResponse>> GetFieldInfo(
-			string m3_ORTP, 
-			string m3_FLDI = null, 
+			string m3ORTP, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,16 +64,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORTP))
-				throw new ArgumentNullException("m3_ORTP");
+			if (string.IsNullOrWhiteSpace(m3ORTP))
+				throw new ArgumentNullException(nameof(m3ORTP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORTP", m3_ORTP.Trim());
+				.WithQueryParameter("ORTP", m3ORTP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetFieldInfoResponse>(
@@ -81,7 +83,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -92,10 +95,10 @@ namespace M3H5Lib.Api
 		/// Description List order type connected charges
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_ORTP">Customer order type</param>
-		/// <param name="m3_CRID">Charge</param>
-		/// <param name="m3_CRTY">Internal charge</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3ORTP">Customer order type</param>
+		/// <param name="m3CRID">Charge</param>
+		/// <param name="m3CRTY">Internal charge</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -104,10 +107,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOrdTypeChrgResponse></returns>
 		/// <exception cref="M3Exception<LstOrdTypeChrgResponse>"></exception>
 		public async Task<M3Response<LstOrdTypeChrgResponse>> LstOrdTypeChrg(
-			int? m3_CONO = null, 
-			string m3_ORTP = null, 
-			string m3_CRID = null, 
-			int? m3_CRTY = null, 
+			int? m3CONO = null, 
+			string m3ORTP = null, 
+			string m3CRID = null, 
+			int? m3CRTY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,14 +125,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
-			if (m3_CRTY.HasValue)
-				request.WithQueryParameter("CRTY", m3_CRTY.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
+			if (m3CRTY.HasValue)
+				request.WithQueryParameter("CRTY", m3CRTY.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstOrdTypeChrgResponse>(
@@ -139,7 +142,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -150,10 +154,10 @@ namespace M3H5Lib.Api
 		/// Description List order type
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_ORTP">Customer order type</param>
-		/// <param name="m3_ORTK">Customer order category</param>
-		/// <param name="m3_WODP">List authorized order types</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3ORTP">Customer order type</param>
+		/// <param name="m3ORTK">Customer order category</param>
+		/// <param name="m3WODP">List authorized order types</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -162,10 +166,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOrderTypesResponse></returns>
 		/// <exception cref="M3Exception<LstOrderTypesResponse>"></exception>
 		public async Task<M3Response<LstOrderTypesResponse>> LstOrderTypes(
-			int? m3_CONO = null, 
-			string m3_ORTP = null, 
-			string m3_ORTK = null, 
-			int? m3_WODP = null, 
+			int? m3CONO = null, 
+			string m3ORTP = null, 
+			string m3ORTK = null, 
+			int? m3WODP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -180,14 +184,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTK))
-				request.WithQueryParameter("ORTK", m3_ORTK.Trim());
-			if (m3_WODP.HasValue)
-				request.WithQueryParameter("WODP", m3_WODP.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTK))
+				request.WithQueryParameter("ORTK", m3ORTK.Trim());
+			if (m3WODP.HasValue)
+				request.WithQueryParameter("WODP", m3WODP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstOrderTypesResponse>(
@@ -197,7 +201,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

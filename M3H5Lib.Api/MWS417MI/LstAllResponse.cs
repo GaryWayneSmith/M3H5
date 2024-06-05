@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Shipment
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment")]
-		public int? M3_CONN => GetNullableInt("CONN");
+		public int? M3CONN => GetNullableInt("CONN");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Freight accessorial ID
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight accessorial ID")]
-		public string M3_FAID => GetString("FAID");
+		public string M3FAID => GetString("FAID");
 
 		/// <summary>
 		/// Description: Freight accessorial level
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight accessorial level")]
-		public int? M3_FALV => GetNullableInt("FALV");
+		public int? M3FALV => GetNullableInt("FALV");
 
 		/// <summary>
 		/// Description: Freight accessorials unit of measure
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight accessorials unit of measure")]
-		public string M3_FAUN => GetString("FAUN");
+		public string M3FAUN => GetString("FAUN");
 
 		/// <summary>
 		/// Description: Freight accessorial quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight accessorial quantity")]
-		public decimal? M3_FQTY => GetNullableDecimal("FQTY");
+		public decimal? M3FQTY => GetNullableDecimal("FQTY");
 
 		/// <summary>
 		/// Description: Accessorial origin
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accessorial origin")]
-		public int? M3_ACOG => GetNullableInt("ACOG");
+		public int? M3ACOG => GetNullableInt("ACOG");
 
 		/// <summary>
 		/// Description: Accessorial status
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accessorial status")]
-		public string M3_ACSU => GetString("ACSU");
+		public string M3ACSU => GetString("ACSU");
 
 		/// <summary>
 		/// Description: Process code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Process code")]
-		public int? M3_ACPS => GetNullableInt("ACPS");
+		public int? M3ACPS => GetNullableInt("ACPS");
 
 		/// <summary>
 		/// Description: Original delivery number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original delivery number")]
-		public decimal? M3_OLIX => GetNullableDecimal("OLIX");
+		public decimal? M3OLIX => GetNullableDecimal("OLIX");
 
 		/// <summary>
 		/// Description: Text identity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS417MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

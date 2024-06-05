@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS630MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Get Account ID
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AITP">Accounting dimension (Required)</param>
-		/// <param name="m3_AITM">Accounting identity (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3AITP">Accounting dimension (Required)</param>
+		/// <param name="m3AITM">Accounting identity (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAccountIDResponse></returns>
 		/// <exception cref="M3Exception<GetAccountIDResponse>"></exception>
 		public async Task<M3Response<GetAccountIDResponse>> GetAccountID(
-			int m3_AITP, 
-			string m3_AITM, 
-			string m3_DIVI = null, 
+			int m3AITP, 
+			string m3AITM, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,17 +66,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AITM))
-				throw new ArgumentNullException("m3_AITM");
+			if (string.IsNullOrWhiteSpace(m3AITM))
+				throw new ArgumentNullException(nameof(m3AITM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AITP", m3_AITP.ToString())
-				.WithQueryParameter("AITM", m3_AITM.Trim());
+				.WithQueryParameter("AITP", m3AITP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("AITM", m3AITM.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAccountIDResponse>(
@@ -84,7 +86,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -95,10 +98,10 @@ namespace M3H5Lib.Api
 		/// Description Get Account ID Language
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AITP">Accounting dimension (Required)</param>
-		/// <param name="m3_AITM">Accounting identity (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3AITP">Accounting dimension (Required)</param>
+		/// <param name="m3AITM">Accounting identity (Required)</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,10 +110,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAccountIDLngResponse></returns>
 		/// <exception cref="M3Exception<GetAccountIDLngResponse>"></exception>
 		public async Task<M3Response<GetAccountIDLngResponse>> GetAccountIDLng(
-			int m3_AITP, 
-			string m3_AITM, 
-			string m3_DIVI = null, 
-			string m3_LNCD = null, 
+			int m3AITP, 
+			string m3AITM, 
+			string m3DIVI = null, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -125,19 +128,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AITM))
-				throw new ArgumentNullException("m3_AITM");
+			if (string.IsNullOrWhiteSpace(m3AITM))
+				throw new ArgumentNullException(nameof(m3AITM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AITP", m3_AITP.ToString())
-				.WithQueryParameter("AITM", m3_AITM.Trim());
+				.WithQueryParameter("AITP", m3AITP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("AITM", m3AITM.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAccountIDLngResponse>(
@@ -147,7 +150,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -158,10 +162,10 @@ namespace M3H5Lib.Api
 		/// Description List Account ID
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AITP">Accounting dimension (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_AITM">Accounting identity</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3AITP">Accounting dimension (Required)</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3AITM">Accounting identity</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -170,10 +174,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAccountIDResponse></returns>
 		/// <exception cref="M3Exception<LstAccountIDResponse>"></exception>
 		public async Task<M3Response<LstAccountIDResponse>> LstAccountID(
-			int m3_AITP, 
-			string m3_DIVI = null, 
-			string m3_AITM = null, 
-			string m3_LNCD = null, 
+			int m3AITP, 
+			string m3DIVI = null, 
+			string m3AITM = null, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -191,15 +195,15 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AITP", m3_AITP.ToString());
+				.WithQueryParameter("AITP", m3AITP.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AITM))
-				request.WithQueryParameter("AITM", m3_AITM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AITM))
+				request.WithQueryParameter("AITM", m3AITM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAccountIDResponse>(
@@ -209,7 +213,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -220,10 +225,10 @@ namespace M3H5Lib.Api
 		/// Description List Account ID Language
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AITP">Accounting dimension (Required)</param>
-		/// <param name="m3_AITM">Accounting identity (Required)</param>
-		/// <param name="m3_LNCD">Language (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3AITP">Accounting dimension (Required)</param>
+		/// <param name="m3AITM">Accounting identity (Required)</param>
+		/// <param name="m3LNCD">Language (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -232,10 +237,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAccountIDLngResponse></returns>
 		/// <exception cref="M3Exception<LstAccountIDLngResponse>"></exception>
 		public async Task<M3Response<LstAccountIDLngResponse>> LstAccountIDLng(
-			int m3_AITP, 
-			string m3_AITM, 
-			string m3_LNCD, 
-			string m3_DIVI = null, 
+			int m3AITP, 
+			string m3AITM, 
+			string m3LNCD, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -250,20 +255,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AITM))
-				throw new ArgumentNullException("m3_AITM");
-			if (string.IsNullOrWhiteSpace(m3_LNCD))
-				throw new ArgumentNullException("m3_LNCD");
+			if (string.IsNullOrWhiteSpace(m3AITM))
+				throw new ArgumentNullException(nameof(m3AITM));
+			if (string.IsNullOrWhiteSpace(m3LNCD))
+				throw new ArgumentNullException(nameof(m3LNCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AITP", m3_AITP.ToString())
-				.WithQueryParameter("AITM", m3_AITM.Trim())
-				.WithQueryParameter("LNCD", m3_LNCD.Trim());
+				.WithQueryParameter("AITP", m3AITP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("AITM", m3AITM.Trim())
+				.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAccountIDLngResponse>(
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Payer agreement
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer agreement")]
-		public string M3_PYAG => GetString("PYAG");
+		public string M3PYAG => GetString("PYAG");
 
 		/// <summary>
 		/// Description: Labor
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor")]
-		public decimal? M3_TIAM => GetNullableDecimal("TIAM");
+		public decimal? M3TIAM => GetNullableDecimal("TIAM");
 
 		/// <summary>
 		/// Description: Material
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material")]
-		public decimal? M3_MAA1 => GetNullableDecimal("MAA1");
+		public decimal? M3MAA1 => GetNullableDecimal("MAA1");
 
 		/// <summary>
 		/// Description: Subcontract
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract")]
-		public decimal? M3_SUAM => GetNullableDecimal("SUAM");
+		public decimal? M3SUAM => GetNullableDecimal("SUAM");
 
 		/// <summary>
 		/// Description: Miscellaneous
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous")]
-		public decimal? M3_MIA1 => GetNullableDecimal("MIA1");
+		public decimal? M3MIA1 => GetNullableDecimal("MIA1");
 
 		/// <summary>
 		/// Description: Loan
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loan")]
-		public decimal? M3_LOA3 => GetNullableDecimal("LOA3");
+		public decimal? M3LOA3 => GetNullableDecimal("LOA3");
 
 		/// <summary>
 		/// Description: Labor %
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor %")]
-		public int? M3_TIP1 => GetNullableInt("TIP1");
+		public int? M3TIP1 => GetNullableInt("TIP1");
 
 		/// <summary>
 		/// Description: Material %
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material %")]
-		public int? M3_MAP1 => GetNullableInt("MAP1");
+		public int? M3MAP1 => GetNullableInt("MAP1");
 
 		/// <summary>
 		/// Description: Subcontract %
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract %")]
-		public int? M3_SUP1 => GetNullableInt("SUP1");
+		public int? M3SUP1 => GetNullableInt("SUP1");
 
 		/// <summary>
 		/// Description: Miscellaneous %
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous %")]
-		public int? M3_MIP1 => GetNullableInt("MIP1");
+		public int? M3MIP1 => GetNullableInt("MIP1");
 
 		/// <summary>
 		/// Description: Loan percent
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loan percent")]
-		public int? M3_LOP1 => GetNullableInt("LOP1");
+		public int? M3LOP1 => GetNullableInt("LOP1");
 
 		/// <summary>
 		/// Description: Service bill of material
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service bill of material")]
-		public int? M3_ASBO => GetNullableInt("ASBO");
+		public int? M3ASBO => GetNullableInt("ASBO");
 
 		/// <summary>
 		/// Description: Claim warranty
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim warranty")]
-		public int? M3_ACWA => GetNullableInt("ACWA");
+		public int? M3ACWA => GetNullableInt("ACWA");
 
 		/// <summary>
 		/// Description: Product service BoM
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product service BoM")]
-		public string M3_WPRN => GetString("WPRN");
+		public string M3WPRN => GetString("WPRN");
 
 		/// <summary>
 		/// Description: Structure type service bill of material
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type service bill of material")]
-		public string M3_WSTR => GetString("WSTR");
+		public string M3WSTR => GetString("WSTR");
 
 		/// <summary>
 		/// Description: Service bill of material
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service bill of material")]
-		public string M3_WSUF => GetString("WSUF");
+		public string M3WSUF => GetString("WSUF");
 
 		/// <summary>
 		/// Description: Year
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Highest status
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status")]
-		public string M3_AOST => GetString("AOST");
+		public string M3AOST => GetString("AOST");
 
 		/// <summary>
 		/// Description: VAT code
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Tax applicable
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax applicable")]
-		public int? M3_TXAP => GetNullableInt("TXAP");
+		public int? M3TXAP => GetNullableInt("TXAP");
 
 		/// <summary>
 		/// Description: Text identity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Previous invoice year
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous invoice year")]
-		public int? M3_PREY => GetNullableInt("PREY");
+		public int? M3PREY => GetNullableInt("PREY");
 
 		/// <summary>
 		/// Description: Labor Warranty split
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor Warranty split")]
-		public decimal? M3_TIA7 => GetNullableDecimal("TIA7");
+		public decimal? M3TIA7 => GetNullableDecimal("TIA7");
 
 		/// <summary>
 		/// Description: Material Warranty split
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material Warranty split")]
-		public decimal? M3_MAA7 => GetNullableDecimal("MAA7");
+		public decimal? M3MAA7 => GetNullableDecimal("MAA7");
 
 		/// <summary>
 		/// Description: Subcontract Warranty split
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract Warranty split")]
-		public decimal? M3_SUA7 => GetNullableDecimal("SUA7");
+		public decimal? M3SUA7 => GetNullableDecimal("SUA7");
 
 		/// <summary>
 		/// Description: Misc amount
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Misc amount")]
-		public decimal? M3_MIA7 => GetNullableDecimal("MIA7");
+		public decimal? M3MIA7 => GetNullableDecimal("MIA7");
 
 		/// <summary>
 		/// Description: Loan amount
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loan amount")]
-		public string M3_LOA7 => GetString("LOA7");
+		public string M3LOA7 => GetString("LOA7");
 
 		/// <summary>
 		/// Description: Labor discount
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor discount")]
-		public int? M3_TIP7 => GetNullableInt("TIP7");
+		public int? M3TIP7 => GetNullableInt("TIP7");
 
 		/// <summary>
 		/// Description: Material discount
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material discount")]
-		public int? M3_MAP7 => GetNullableInt("MAP7");
+		public int? M3MAP7 => GetNullableInt("MAP7");
 
 		/// <summary>
 		/// Description: Misc discount
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Misc discount")]
-		public int? M3_MIP7 => GetNullableInt("MIP7");
+		public int? M3MIP7 => GetNullableInt("MIP7");
 
 		/// <summary>
 		/// Description: Loan discount
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loan discount")]
-		public int? M3_LPO7 => GetNullableInt("LPO7");
+		public int? M3LPO7 => GetNullableInt("LPO7");
 
 		/// <summary>
 		/// Description: Fixed amount
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed amount")]
-		public int? M3_APAC => GetNullableInt("APAC");
+		public int? M3APAC => GetNullableInt("APAC");
 
 		/// <summary>
 		/// Description: Payment class
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment class")]
-		public int? M3_PYCL => GetNullableInt("PYCL");
+		public int? M3PYCL => GetNullableInt("PYCL");
 
 		/// <summary>
 		/// Description: Agreement Claim
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement Claim")]
-		public string M3_CLAG => GetString("CLAG");
+		public string M3CLAG => GetString("CLAG");
 
 		/// <summary>
 		/// Description: Claim
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim")]
-		public string M3_CLNO => GetString("CLNO");
+		public string M3CLNO => GetString("CLNO");
 
 		/// <summary>
 		/// Description: Invoice prefix
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Extended invoice number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended invoice number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Previous invoice prefix
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous invoice prefix")]
-		public string M3_PINP => GetString("PINP");
+		public string M3PINP => GetString("PINP");
 
 		/// <summary>
 		/// Description: Previous extended invoice number
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous extended invoice number")]
-		public string M3_PXIN => GetString("PXIN");
+		public string M3PXIN => GetString("PXIN");
 
 		/// <summary>
 		/// Description: Labor split %
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor split %")]
-		public int? M3_TIP3 => GetNullableInt("TIP3");
+		public int? M3TIP3 => GetNullableInt("TIP3");
 
 		/// <summary>
 		/// Description: Material split %
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material split %")]
-		public int? M3_MAP3 => GetNullableInt("MAP3");
+		public int? M3MAP3 => GetNullableInt("MAP3");
 
 		/// <summary>
 		/// Description: Subcontract split %
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract split %")]
-		public int? M3_SUP3 => GetNullableInt("SUP3");
+		public int? M3SUP3 => GetNullableInt("SUP3");
 
 		/// <summary>
 		/// Description: New field description
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New field description")]
-		public int? M3_MIP3 => GetNullableInt("MIP3");
+		public int? M3MIP3 => GetNullableInt("MIP3");
 
 		/// <summary>
 		/// Description: Loan split %
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loan split %")]
-		public int? M3_LOP3 => GetNullableInt("LOP3");
+		public int? M3LOP3 => GetNullableInt("LOP3");
 
 		/// <summary>
 		/// Description: Service price method
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price method")]
-		public int? M3_SRVP => GetNullableInt("SRVP");
+		public int? M3SRVP => GetNullableInt("SRVP");
 
 		/// <summary>
 		/// Description: Split origin
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.COS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split origin")]
-		public int? M3_ORSP => GetNullableInt("ORSP");
+		public int? M3ORSP => GetNullableInt("ORSP");
 	}
 }
 // EOF

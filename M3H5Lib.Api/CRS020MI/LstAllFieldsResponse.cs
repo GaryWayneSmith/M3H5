@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Field
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Field type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field type")]
-		public string M3_FLTY => GetString("FLTY");
+		public string M3FLTY => GetString("FLTY");
 
 		/// <summary>
 		/// Description: Message ID
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Field length
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field length")]
-		public int? M3_FLDL => GetNullableInt("FLDL");
+		public int? M3FLDL => GetNullableInt("FLDL");
 
 		/// <summary>
 		/// Description: Number of decimals
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimals")]
-		public string M3_FNDC => GetString("FNDC");
+		public string M3FNDC => GetString("FNDC");
 
 		/// <summary>
 		/// Description: Edit code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Edit code")]
-		public string M3_ECDE => GetString("ECDE");
+		public string M3ECDE => GetString("ECDE");
 
 		/// <summary>
 		/// Description: Small field
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Small field")]
-		public int? M3_SMFL => GetNullableInt("SMFL");
+		public int? M3SMFL => GetNullableInt("SMFL");
 
 		/// <summary>
 		/// Description: Description
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Table
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Description
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TXC0 => GetString("TXC0");
+		public string M3TXC0 => GetString("TXC0");
 
 		/// <summary>
 		/// Description: Field help ID
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field help ID")]
-		public string M3_FHID => GetString("FHID");
+		public string M3FHID => GetString("FHID");
 
 		/// <summary>
 		/// Description: Field information code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field information code")]
-		public string M3_FDCA => GetString("FDCA");
+		public string M3FDCA => GetString("FDCA");
 
 		/// <summary>
 		/// Description: Debit / credit code used
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debit / credit code used")]
-		public int? M3_DCNY => GetNullableInt("DCNY");
+		public int? M3DCNY => GetNullableInt("DCNY");
 
 		/// <summary>
 		/// Description: Information browser category
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information browser category")]
-		public string M3_IBCA => GetString("IBCA");
+		public string M3IBCA => GetString("IBCA");
 
 		/// <summary>
 		/// Description: Edit field used
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Edit field used")]
-		public string M3_EDUS => GetString("EDUS");
+		public string M3EDUS => GetString("EDUS");
 
 		/// <summary>
 		/// Description: Default aggregation display rule
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default aggregation display rule")]
-		public int? M3_DEAD => GetNullableInt("DEAD");
+		public int? M3DEAD => GetNullableInt("DEAD");
 
 		/// <summary>
 		/// Description: Default subtotal rule
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default subtotal rule")]
-		public int? M3_DESU => GetNullableInt("DESU");
+		public int? M3DESU => GetNullableInt("DESU");
 
 		/// <summary>
 		/// Description: Default date format
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default date format")]
-		public string M3_DEDF => GetString("DEDF");
+		public string M3DEDF => GetString("DEDF");
 
 		/// <summary>
 		/// Description: Default decimal format
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default decimal format")]
-		public string M3_DEDC => GetString("DEDC");
+		public string M3DEDC => GetString("DEDC");
 
 		/// <summary>
 		/// Description: Field heading
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field heading")]
-		public string M3_FLDH => GetString("FLDH");
+		public string M3FLDH => GetString("FLDH");
 
 		/// <summary>
 		/// Description: Drop down box
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drop down box")]
-		public int? M3_DDBX => GetNullableInt("DDBX");
+		public int? M3DDBX => GetNullableInt("DDBX");
 	}
 }
 // EOF

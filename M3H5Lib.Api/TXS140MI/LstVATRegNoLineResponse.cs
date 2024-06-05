@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_YVRN => GetString("YVRN");
+		public string M3YVRN => GetString("YVRN");
 
 		/// <summary>
 		/// Description: Customer/supplier code
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer/supplier code")]
-		public int? M3_CVOP => GetNullableInt("CVOP");
+		public int? M3CVOP => GetNullableInt("CVOP");
 
 		/// <summary>
 		/// Description: Customer/supplier
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer/supplier")]
-		public string M3_CUSP => GetString("CUSP");
+		public string M3CUSP => GetString("CUSP");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA1 => GetNullableDecimal("ACA1");
+		public decimal? M3ACA1 => GetNullableDecimal("ACA1");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA2 => GetNullableDecimal("ACA2");
+		public decimal? M3ACA2 => GetNullableDecimal("ACA2");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA3 => GetNullableDecimal("ACA3");
+		public decimal? M3ACA3 => GetNullableDecimal("ACA3");
 
 		/// <summary>
 		/// Description: Number of invoices
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of invoices")]
-		public int? M3_ACQ1 => GetNullableInt("ACQ1");
+		public int? M3ACQ1 => GetNullableInt("ACQ1");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA4 => GetNullableDecimal("ACA4");
+		public decimal? M3ACA4 => GetNullableDecimal("ACA4");
 
 		/// <summary>
 		/// Description: Number of credit invoices
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of credit invoices")]
-		public int? M3_ACQ2 => GetNullableInt("ACQ2");
+		public int? M3ACQ2 => GetNullableInt("ACQ2");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA5 => GetNullableDecimal("ACA5");
+		public decimal? M3ACA5 => GetNullableDecimal("ACA5");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA6 => GetNullableDecimal("ACA6");
+		public decimal? M3ACA6 => GetNullableDecimal("ACA6");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA7 => GetNullableDecimal("ACA7");
+		public decimal? M3ACA7 => GetNullableDecimal("ACA7");
 
 		/// <summary>
 		/// Description: Number of invoices
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of invoices")]
-		public int? M3_ACQ3 => GetNullableInt("ACQ3");
+		public int? M3ACQ3 => GetNullableInt("ACQ3");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACA8 => GetNullableDecimal("ACA8");
+		public decimal? M3ACA8 => GetNullableDecimal("ACA8");
 
 		/// <summary>
 		/// Description: Number of credit invoices
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of credit invoices")]
-		public int? M3_ACQ4 => GetNullableInt("ACQ4");
+		public int? M3ACQ4 => GetNullableInt("ACQ4");
 	}
 }
 // EOF

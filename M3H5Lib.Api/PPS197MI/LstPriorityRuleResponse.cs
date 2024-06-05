@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS197MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Rule
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS197MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rule")]
-		public string M3_RULE => GetString("RULE");
+		public string M3RULE => GetString("RULE");
 
 		/// <summary>
 		/// Description: Value alpha-numerical
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS197MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value alpha-numerical")]
-		public string M3_VALA => GetString("VALA");
+		public string M3VALA => GetString("VALA");
 
 		/// <summary>
 		/// Description: AND operator
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS197MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AND operator")]
-		public int? M3_ANDO => GetNullableInt("ANDO");
+		public int? M3ANDO => GetNullableInt("ANDO");
 
 		/// <summary>
 		/// Description: Priority
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS197MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PPRN => GetNullableInt("PPRN");
+		public int? M3PPRN => GetNullableInt("PPRN");
 
 		/// <summary>
 		/// Description: Text identity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS197MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

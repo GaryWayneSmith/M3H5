@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PMS120MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Get manufacturing order type
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORTY">Order type (Required)</param>
+		/// <param name="m3ORTY">Order type (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetOrderTypeResponse></returns>
 		/// <exception cref="M3Exception<GetOrderTypeResponse>"></exception>
 		public async Task<M3Response<GetOrderTypeResponse>> GetOrderType(
-			string m3_ORTY, 
+			string m3ORTY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORTY))
-				throw new ArgumentNullException("m3_ORTY");
+			if (string.IsNullOrWhiteSpace(m3ORTY))
+				throw new ArgumentNullException(nameof(m3ORTY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORTY", m3_ORTY.Trim());
+				.WithQueryParameter("ORTY", m3ORTY.Trim());
 
 			// Execute the request
 			var result = await Execute<GetOrderTypeResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,7 +89,7 @@ namespace M3H5Lib.Api
 		/// Description List manufacturing order type
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORTY">Order type</param>
+		/// <param name="m3ORTY">Order type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -95,7 +98,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOrderTypeResponse></returns>
 		/// <exception cref="M3Exception<LstOrderTypeResponse>"></exception>
 		public async Task<M3Response<LstOrderTypeResponse>> LstOrderType(
-			string m3_ORTY = null, 
+			string m3ORTY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -110,8 +113,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORTY))
-				request.WithQueryParameter("ORTY", m3_ORTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTY))
+				request.WithQueryParameter("ORTY", m3ORTY.Trim());
 
 			// Execute the request
 			var result = await Execute<LstOrderTypeResponse>(
@@ -121,7 +124,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

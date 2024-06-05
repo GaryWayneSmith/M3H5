@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SHS010MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Delete external job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_JSEI">Job scheduler external id</param>
-		/// <param name="m3_BJNO">Job number</param>
+		/// <param name="m3JSEI">Job scheduler external id</param>
+		/// <param name="m3BJNO">Job number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltExternalJob(
-			string m3_JSEI = null, 
-			string m3_BJNO = null, 
+			string m3JSEI = null, 
+			string m3BJNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_JSEI))
-				request.WithQueryParameter("JSEI", m3_JSEI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3JSEI))
+				request.WithQueryParameter("JSEI", m3JSEI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,10 +89,10 @@ namespace M3H5Lib.Api
 		/// Description Execute external job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_JSEI">Job scheduler external id (Required)</param>
-		/// <param name="m3_RAGI">Run again</param>
-		/// <param name="m3_SGDT">Schedule date</param>
-		/// <param name="m3_SGTM">Schedule time</param>
+		/// <param name="m3JSEI">Job scheduler external id (Required)</param>
+		/// <param name="m3RAGI">Run again</param>
+		/// <param name="m3SGDT">Schedule date</param>
+		/// <param name="m3SGTM">Schedule time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -98,10 +101,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ExecuteJobResponse></returns>
 		/// <exception cref="M3Exception<ExecuteJobResponse>"></exception>
 		public async Task<M3Response<ExecuteJobResponse>> ExecuteJob(
-			string m3_JSEI, 
-			int? m3_RAGI = null, 
-			DateTime? m3_SGDT = null, 
-			int? m3_SGTM = null, 
+			string m3JSEI, 
+			int? m3RAGI = null, 
+			DateTime? m3SGDT = null, 
+			int? m3SGTM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -116,20 +119,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_JSEI))
-				throw new ArgumentNullException("m3_JSEI");
+			if (string.IsNullOrWhiteSpace(m3JSEI))
+				throw new ArgumentNullException(nameof(m3JSEI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("JSEI", m3_JSEI.Trim());
+				.WithQueryParameter("JSEI", m3JSEI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RAGI.HasValue)
-				request.WithQueryParameter("RAGI", m3_RAGI.Value.ToString());
-			if (m3_SGDT.HasValue)
-				request.WithQueryParameter("SGDT", m3_SGDT.Value.ToM3String());
-			if (m3_SGTM.HasValue)
-				request.WithQueryParameter("SGTM", m3_SGTM.Value.ToString());
+			if (m3RAGI.HasValue)
+				request.WithQueryParameter("RAGI", m3RAGI.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SGDT.HasValue)
+				request.WithQueryParameter("SGDT", m3SGDT.Value.ToM3String());
+			if (m3SGTM.HasValue)
+				request.WithQueryParameter("SGTM", m3SGTM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ExecuteJobResponse>(
@@ -139,7 +142,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -150,8 +154,8 @@ namespace M3H5Lib.Api
 		/// Description Get external job information
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_JSEI">Job scheduler external id</param>
-		/// <param name="m3_BJNO">Job number</param>
+		/// <param name="m3JSEI">Job scheduler external id</param>
+		/// <param name="m3BJNO">Job number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -160,8 +164,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetExternalJobResponse></returns>
 		/// <exception cref="M3Exception<GetExternalJobResponse>"></exception>
 		public async Task<M3Response<GetExternalJobResponse>> GetExternalJob(
-			string m3_JSEI = null, 
-			string m3_BJNO = null, 
+			string m3JSEI = null, 
+			string m3BJNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -176,10 +180,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_JSEI))
-				request.WithQueryParameter("JSEI", m3_JSEI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3JSEI))
+				request.WithQueryParameter("JSEI", m3JSEI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetExternalJobResponse>(
@@ -189,7 +193,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -200,8 +205,8 @@ namespace M3H5Lib.Api
 		/// Description List External Jobs
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PGNM">Program name</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3PGNM">Program name</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -210,8 +215,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstExtJobsResponse></returns>
 		/// <exception cref="M3Exception<LstExtJobsResponse>"></exception>
 		public async Task<M3Response<LstExtJobsResponse>> LstExtJobs(
-			string m3_PGNM = null, 
-			string m3_USID = null, 
+			string m3PGNM = null, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,10 +231,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PGNM))
-				request.WithQueryParameter("PGNM", m3_PGNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGNM))
+				request.WithQueryParameter("PGNM", m3PGNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstExtJobsResponse>(
@@ -239,7 +244,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

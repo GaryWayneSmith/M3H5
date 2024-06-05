@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS103MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,23 +38,23 @@ namespace M3H5Lib.Api
 		/// Description Add Additional Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_RTYP">Record type (Required)</param>
-		/// <param name="m3_AGRS">Contract item (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CHRG">Charge</param>
-		/// <param name="m3_ITDS">Name</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_COQT">Material usage</param>
-		/// <param name="m3_CIQT">Material usage</param>
-		/// <param name="m3_UNMS">Basic unit of measure</param>
-		/// <param name="m3_ORQT">Ordered quantity - basic U/M</param>
-		/// <param name="m3_FVDT">Valid from</param>
-		/// <param name="m3_LVDT">Valid to</param>
-		/// <param name="m3_ADPW">Days per week</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3RTYP">Record type (Required)</param>
+		/// <param name="m3AGRS">Contract item (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CHRG">Charge</param>
+		/// <param name="m3ITDS">Name</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3COQT">Material usage</param>
+		/// <param name="m3CIQT">Material usage</param>
+		/// <param name="m3UNMS">Basic unit of measure</param>
+		/// <param name="m3ORQT">Ordered quantity - basic U/M</param>
+		/// <param name="m3FVDT">Valid from</param>
+		/// <param name="m3LVDT">Valid to</param>
+		/// <param name="m3ADPW">Days per week</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -61,23 +63,23 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAddChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			string m3_RTYP, 
-			string m3_AGRS, 
-			int? m3_CONO = null, 
-			decimal? m3_CHRG = null, 
-			string m3_ITDS = null, 
-			string m3_PYNO = null, 
-			decimal? m3_COQT = null, 
-			decimal? m3_CIQT = null, 
-			string m3_UNMS = null, 
-			decimal? m3_ORQT = null, 
-			DateTime? m3_FVDT = null, 
-			DateTime? m3_LVDT = null, 
-			int? m3_ADPW = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			string m3RTYP, 
+			string m3AGRS, 
+			int? m3CONO = null, 
+			decimal? m3CHRG = null, 
+			string m3ITDS = null, 
+			string m3PYNO = null, 
+			decimal? m3COQT = null, 
+			decimal? m3CIQT = null, 
+			string m3UNMS = null, 
+			decimal? m3ORQT = null, 
+			DateTime? m3FVDT = null, 
+			DateTime? m3LVDT = null, 
+			int? m3ADPW = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -92,45 +94,45 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_RTYP))
-				throw new ArgumentNullException("m3_RTYP");
-			if (string.IsNullOrWhiteSpace(m3_AGRS))
-				throw new ArgumentNullException("m3_AGRS");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3RTYP))
+				throw new ArgumentNullException(nameof(m3RTYP));
+			if (string.IsNullOrWhiteSpace(m3AGRS))
+				throw new ArgumentNullException(nameof(m3AGRS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("RTYP", m3_RTYP.Trim())
-				.WithQueryParameter("AGRS", m3_AGRS.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("RTYP", m3RTYP.Trim())
+				.WithQueryParameter("AGRS", m3AGRS.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_CHRG.HasValue)
-				request.WithQueryParameter("CHRG", m3_CHRG.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITDS))
-				request.WithQueryParameter("ITDS", m3_ITDS.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (m3_COQT.HasValue)
-				request.WithQueryParameter("COQT", m3_COQT.Value.ToString());
-			if (m3_CIQT.HasValue)
-				request.WithQueryParameter("CIQT", m3_CIQT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_UNMS))
-				request.WithQueryParameter("UNMS", m3_UNMS.Trim());
-			if (m3_ORQT.HasValue)
-				request.WithQueryParameter("ORQT", m3_ORQT.Value.ToString());
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
-			if (m3_LVDT.HasValue)
-				request.WithQueryParameter("LVDT", m3_LVDT.Value.ToM3String());
-			if (m3_ADPW.HasValue)
-				request.WithQueryParameter("ADPW", m3_ADPW.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CHRG.HasValue)
+				request.WithQueryParameter("CHRG", m3CHRG.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITDS))
+				request.WithQueryParameter("ITDS", m3ITDS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (m3COQT.HasValue)
+				request.WithQueryParameter("COQT", m3COQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CIQT.HasValue)
+				request.WithQueryParameter("CIQT", m3CIQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3UNMS))
+				request.WithQueryParameter("UNMS", m3UNMS.Trim());
+			if (m3ORQT.HasValue)
+				request.WithQueryParameter("ORQT", m3ORQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
+			if (m3LVDT.HasValue)
+				request.WithQueryParameter("LVDT", m3LVDT.Value.ToM3String());
+			if (m3ADPW.HasValue)
+				request.WithQueryParameter("ADPW", m3ADPW.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -140,7 +142,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -151,21 +154,21 @@ namespace M3H5Lib.Api
 		/// Description Change Additional Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CHRG">Charge</param>
-		/// <param name="m3_ITDS">Name</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_COQT">Material usage</param>
-		/// <param name="m3_CIQT">Material usage</param>
-		/// <param name="m3_UNMS">Basic unit of measure</param>
-		/// <param name="m3_ORQT">Ordered quantity - basic U/M</param>
-		/// <param name="m3_FVDT">Valid from</param>
-		/// <param name="m3_LVDT">Valid to</param>
-		/// <param name="m3_ADPW">Days per week</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CHRG">Charge</param>
+		/// <param name="m3ITDS">Name</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3COQT">Material usage</param>
+		/// <param name="m3CIQT">Material usage</param>
+		/// <param name="m3UNMS">Basic unit of measure</param>
+		/// <param name="m3ORQT">Ordered quantity - basic U/M</param>
+		/// <param name="m3FVDT">Valid from</param>
+		/// <param name="m3LVDT">Valid to</param>
+		/// <param name="m3ADPW">Days per week</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -174,21 +177,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgAddChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			int? m3_CONO = null, 
-			decimal? m3_CHRG = null, 
-			string m3_ITDS = null, 
-			string m3_PYNO = null, 
-			decimal? m3_COQT = null, 
-			decimal? m3_CIQT = null, 
-			string m3_UNMS = null, 
-			decimal? m3_ORQT = null, 
-			DateTime? m3_FVDT = null, 
-			DateTime? m3_LVDT = null, 
-			int? m3_ADPW = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			int? m3CONO = null, 
+			decimal? m3CHRG = null, 
+			string m3ITDS = null, 
+			string m3PYNO = null, 
+			decimal? m3COQT = null, 
+			decimal? m3CIQT = null, 
+			string m3UNMS = null, 
+			decimal? m3ORQT = null, 
+			DateTime? m3FVDT = null, 
+			DateTime? m3LVDT = null, 
+			int? m3ADPW = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -203,39 +206,39 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_CHRG.HasValue)
-				request.WithQueryParameter("CHRG", m3_CHRG.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITDS))
-				request.WithQueryParameter("ITDS", m3_ITDS.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (m3_COQT.HasValue)
-				request.WithQueryParameter("COQT", m3_COQT.Value.ToString());
-			if (m3_CIQT.HasValue)
-				request.WithQueryParameter("CIQT", m3_CIQT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_UNMS))
-				request.WithQueryParameter("UNMS", m3_UNMS.Trim());
-			if (m3_ORQT.HasValue)
-				request.WithQueryParameter("ORQT", m3_ORQT.Value.ToString());
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
-			if (m3_LVDT.HasValue)
-				request.WithQueryParameter("LVDT", m3_LVDT.Value.ToM3String());
-			if (m3_ADPW.HasValue)
-				request.WithQueryParameter("ADPW", m3_ADPW.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CHRG.HasValue)
+				request.WithQueryParameter("CHRG", m3CHRG.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITDS))
+				request.WithQueryParameter("ITDS", m3ITDS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (m3COQT.HasValue)
+				request.WithQueryParameter("COQT", m3COQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CIQT.HasValue)
+				request.WithQueryParameter("CIQT", m3CIQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3UNMS))
+				request.WithQueryParameter("UNMS", m3UNMS.Trim());
+			if (m3ORQT.HasValue)
+				request.WithQueryParameter("ORQT", m3ORQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
+			if (m3LVDT.HasValue)
+				request.WithQueryParameter("LVDT", m3LVDT.Value.ToM3String());
+			if (m3ADPW.HasValue)
+				request.WithQueryParameter("ADPW", m3ADPW.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -245,7 +248,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -256,11 +260,11 @@ namespace M3H5Lib.Api
 		/// Description Delete Additional Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -269,11 +273,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelAddChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			int? m3_CONO = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -288,19 +292,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -310,7 +314,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -321,11 +326,11 @@ namespace M3H5Lib.Api
 		/// Description Get Additional Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -334,11 +339,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAddChrgResponse></returns>
 		/// <exception cref="M3Exception<GetAddChrgResponse>"></exception>
 		public async Task<M3Response<GetAddChrgResponse>> GetAddChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			int? m3_CONO = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -353,19 +358,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetAddChrgResponse>(
@@ -375,7 +380,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -386,11 +392,11 @@ namespace M3H5Lib.Api
 		/// Description List Additional Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -399,11 +405,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAddChrgResponse></returns>
 		/// <exception cref="M3Exception<LstAddChrgResponse>"></exception>
 		public async Task<M3Response<LstAddChrgResponse>> LstAddChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			int? m3_CONO = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -418,19 +424,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAddChrgResponse>(
@@ -440,7 +446,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

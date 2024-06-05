@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Included in package number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in package number")]
-		public string M3_PAII => GetString("PAII");
+		public string M3PAII => GetString("PAII");
 
 		/// <summary>
 		/// Description: Packaging
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Package level
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package level")]
-		public int? M3_PACO => GetNullableInt("PACO");
+		public int? M3PACO => GetNullableInt("PACO");
 
 		/// <summary>
 		/// Description: Packaging code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging code")]
-		public string M3_GRTP => GetString("GRTP");
+		public string M3GRTP => GetString("GRTP");
 
 		/// <summary>
 		/// Description: Remark
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_DLRM => GetString("DLRM");
+		public string M3DLRM => GetString("DLRM");
 
 		/// <summary>
 		/// Description: Goods mark Odette standard
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods mark Odette standard")]
-		public string M3_DLMO => GetString("DLMO");
+		public string M3DLMO => GetString("DLMO");
 
 		/// <summary>
 		/// Description: Net weight
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Volume
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Packaging length
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging length")]
-		public int? M3_PACL => GetNullableInt("PACL");
+		public int? M3PACL => GetNullableInt("PACL");
 
 		/// <summary>
 		/// Description: Packaging width
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging width")]
-		public int? M3_PACW => GetNullableInt("PACW");
+		public int? M3PACW => GetNullableInt("PACW");
 
 		/// <summary>
 		/// Description: Packaging height
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging height")]
-		public int? M3_PACH => GetNullableInt("PACH");
+		public int? M3PACH => GetNullableInt("PACH");
 
 		/// <summary>
 		/// Description: Content description
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Content description")]
-		public int? M3_PCON => GetNullableInt("PCON");
+		public int? M3PCON => GetNullableInt("PCON");
 
 		/// <summary>
 		/// Description: Kanban Card Number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kanban Card Number")]
-		public string M3_RSKN => GetString("RSKN");
+		public string M3RSKN => GetString("RSKN");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public string M3_LODO => GetString("LODO");
+		public string M3LODO => GetString("LODO");
 	}
 }
 // EOF

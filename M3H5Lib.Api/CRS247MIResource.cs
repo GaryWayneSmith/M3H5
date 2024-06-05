@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS247MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Add Function Area
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_STNC">Standard numbering system (Required)</param>
-		/// <param name="m3_FLVL">Numbering level (Required)</param>
-		/// <param name="m3_FUNC">Function area (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3STNC">Standard numbering system (Required)</param>
+		/// <param name="m3FLVL">Numbering level (Required)</param>
+		/// <param name="m3FUNC">Function area (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddFunctionArea(
-			string m3_STNC, 
-			int m3_FLVL, 
-			string m3_FUNC, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
-			string m3_STAT = null, 
-			decimal? m3_TXID = null, 
+			string m3STNC, 
+			int m3FLVL, 
+			string m3FUNC, 
+			string m3TX40, 
+			string m3TX15 = null, 
+			string m3STAT = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,27 +74,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STNC))
-				throw new ArgumentNullException("m3_STNC");
-			if (string.IsNullOrWhiteSpace(m3_FUNC))
-				throw new ArgumentNullException("m3_FUNC");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3STNC))
+				throw new ArgumentNullException(nameof(m3STNC));
+			if (string.IsNullOrWhiteSpace(m3FUNC))
+				throw new ArgumentNullException(nameof(m3FUNC));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STNC", m3_STNC.Trim())
-				.WithQueryParameter("FLVL", m3_FLVL.ToString())
-				.WithQueryParameter("FUNC", m3_FUNC.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("STNC", m3STNC.Trim())
+				.WithQueryParameter("FLVL", m3FLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FUNC", m3FUNC.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -102,7 +104,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -113,9 +116,9 @@ namespace M3H5Lib.Api
 		/// Description Delete Function Area
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_STNC">Standard numbering system (Required)</param>
-		/// <param name="m3_FLVL">Numbering level (Required)</param>
-		/// <param name="m3_FUNC">Function area (Required)</param>
+		/// <param name="m3STNC">Standard numbering system (Required)</param>
+		/// <param name="m3FLVL">Numbering level (Required)</param>
+		/// <param name="m3FUNC">Function area (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -124,9 +127,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelFunctionArea(
-			string m3_STNC, 
-			int m3_FLVL, 
-			string m3_FUNC, 
+			string m3STNC, 
+			int m3FLVL, 
+			string m3FUNC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -141,16 +144,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STNC))
-				throw new ArgumentNullException("m3_STNC");
-			if (string.IsNullOrWhiteSpace(m3_FUNC))
-				throw new ArgumentNullException("m3_FUNC");
+			if (string.IsNullOrWhiteSpace(m3STNC))
+				throw new ArgumentNullException(nameof(m3STNC));
+			if (string.IsNullOrWhiteSpace(m3FUNC))
+				throw new ArgumentNullException(nameof(m3FUNC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STNC", m3_STNC.Trim())
-				.WithQueryParameter("FLVL", m3_FLVL.ToString())
-				.WithQueryParameter("FUNC", m3_FUNC.Trim());
+				.WithQueryParameter("STNC", m3STNC.Trim())
+				.WithQueryParameter("FLVL", m3FLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FUNC", m3FUNC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -160,7 +163,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -171,9 +175,9 @@ namespace M3H5Lib.Api
 		/// Description GetFunctionArea
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_STNC">Standard numbering system (Required)</param>
-		/// <param name="m3_FLVL">Numbering level (Required)</param>
-		/// <param name="m3_FUNC">Function area (Required)</param>
+		/// <param name="m3STNC">Standard numbering system (Required)</param>
+		/// <param name="m3FLVL">Numbering level (Required)</param>
+		/// <param name="m3FUNC">Function area (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -182,9 +186,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetFunctionAreaResponse></returns>
 		/// <exception cref="M3Exception<GetFunctionAreaResponse>"></exception>
 		public async Task<M3Response<GetFunctionAreaResponse>> GetFunctionArea(
-			string m3_STNC, 
-			int m3_FLVL, 
-			string m3_FUNC, 
+			string m3STNC, 
+			int m3FLVL, 
+			string m3FUNC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -199,16 +203,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STNC))
-				throw new ArgumentNullException("m3_STNC");
-			if (string.IsNullOrWhiteSpace(m3_FUNC))
-				throw new ArgumentNullException("m3_FUNC");
+			if (string.IsNullOrWhiteSpace(m3STNC))
+				throw new ArgumentNullException(nameof(m3STNC));
+			if (string.IsNullOrWhiteSpace(m3FUNC))
+				throw new ArgumentNullException(nameof(m3FUNC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STNC", m3_STNC.Trim())
-				.WithQueryParameter("FLVL", m3_FLVL.ToString())
-				.WithQueryParameter("FUNC", m3_FUNC.Trim());
+				.WithQueryParameter("STNC", m3STNC.Trim())
+				.WithQueryParameter("FLVL", m3FLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FUNC", m3FUNC.Trim());
 
 			// Execute the request
 			var result = await Execute<GetFunctionAreaResponse>(
@@ -218,7 +222,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -229,9 +234,9 @@ namespace M3H5Lib.Api
 		/// Description List Function Area
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_STNC">Standard numbering system (Required)</param>
-		/// <param name="m3_FLVL">Numbering level</param>
-		/// <param name="m3_FUNC">Function area</param>
+		/// <param name="m3STNC">Standard numbering system (Required)</param>
+		/// <param name="m3FLVL">Numbering level</param>
+		/// <param name="m3FUNC">Function area</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -240,9 +245,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFunctionAreaResponse></returns>
 		/// <exception cref="M3Exception<LstFunctionAreaResponse>"></exception>
 		public async Task<M3Response<LstFunctionAreaResponse>> LstFunctionArea(
-			string m3_STNC, 
-			int? m3_FLVL = null, 
-			string m3_FUNC = null, 
+			string m3STNC, 
+			int? m3FLVL = null, 
+			string m3FUNC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -257,18 +262,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STNC))
-				throw new ArgumentNullException("m3_STNC");
+			if (string.IsNullOrWhiteSpace(m3STNC))
+				throw new ArgumentNullException(nameof(m3STNC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STNC", m3_STNC.Trim());
+				.WithQueryParameter("STNC", m3STNC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FLVL.HasValue)
-				request.WithQueryParameter("FLVL", m3_FLVL.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FUNC))
-				request.WithQueryParameter("FUNC", m3_FUNC.Trim());
+			if (m3FLVL.HasValue)
+				request.WithQueryParameter("FLVL", m3FLVL.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FUNC))
+				request.WithQueryParameter("FUNC", m3FUNC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstFunctionAreaResponse>(
@@ -278,7 +283,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -289,13 +295,13 @@ namespace M3H5Lib.Api
 		/// Description Update Function Area
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_STNC">Standard numbering system (Required)</param>
-		/// <param name="m3_FLVL">Numbering level (Required)</param>
-		/// <param name="m3_FUNC">Function area (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3STNC">Standard numbering system (Required)</param>
+		/// <param name="m3FLVL">Numbering level (Required)</param>
+		/// <param name="m3FUNC">Function area (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -304,13 +310,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdFunctionArea(
-			string m3_STNC, 
-			int m3_FLVL, 
-			string m3_FUNC, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
-			string m3_STAT = null, 
-			decimal? m3_TXID = null, 
+			string m3STNC, 
+			int m3FLVL, 
+			string m3FUNC, 
+			string m3TX40, 
+			string m3TX15 = null, 
+			string m3STAT = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -325,27 +331,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STNC))
-				throw new ArgumentNullException("m3_STNC");
-			if (string.IsNullOrWhiteSpace(m3_FUNC))
-				throw new ArgumentNullException("m3_FUNC");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3STNC))
+				throw new ArgumentNullException(nameof(m3STNC));
+			if (string.IsNullOrWhiteSpace(m3FUNC))
+				throw new ArgumentNullException(nameof(m3FUNC));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STNC", m3_STNC.Trim())
-				.WithQueryParameter("FLVL", m3_FLVL.ToString())
-				.WithQueryParameter("FUNC", m3_FUNC.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("STNC", m3STNC.Trim())
+				.WithQueryParameter("FLVL", m3FLVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FUNC", m3FUNC.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -355,7 +361,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

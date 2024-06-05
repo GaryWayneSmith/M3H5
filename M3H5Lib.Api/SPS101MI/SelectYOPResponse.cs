@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: SCP Version
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SCP Version")]
-		public string M3_SCVE => GetString("SCVE");
+		public string M3SCVE => GetString("SCVE");
 
 		/// <summary>
 		/// Description: Version Category
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version Category")]
-		public string M3_VCAT => GetString("VCAT");
+		public string M3VCAT => GetString("VCAT");
 
 		/// <summary>
 		/// Description: Transfer Category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer Category")]
-		public string M3_SCTR => GetString("SCTR");
+		public string M3SCTR => GetString("SCTR");
 
 		/// <summary>
 		/// Description: From Date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From Date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: Node
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Node")]
-		public string M3_NDID => GetString("NDID");
+		public string M3NDID => GetString("NDID");
 
 		/// <summary>
 		/// Description: Node Category
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Node Category")]
-		public int? M3_NDCA => GetNullableInt("NDCA");
+		public int? M3NDCA => GetNullableInt("NDCA");
 
 		/// <summary>
 		/// Description: To Node
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To Node")]
-		public string M3_TNOD => GetString("TNOD");
+		public string M3TNOD => GetString("TNOD");
 
 		/// <summary>
 		/// Description: To Node Category
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To Node Category")]
-		public int? M3_TNCA => GetNullableInt("TNCA");
+		public int? M3TNCA => GetNullableInt("TNCA");
 
 		/// <summary>
 		/// Description: SCP Item Group
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SCP Item Group")]
-		public string M3_SCPG => GetString("SCPG");
+		public string M3SCPG => GetString("SCPG");
 
 		/// <summary>
 		/// Description: Supply Chain Key
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply Chain Key")]
-		public string M3_SCKE => GetString("SCKE");
+		public string M3SCKE => GetString("SCKE");
 
 		/// <summary>
 		/// Description: SCP Transfer Category Data
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SPS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SCP Transfer Category Data")]
-		public string M3_SCDA => GetString("SCDA");
+		public string M3SCDA => GetString("SCDA");
 	}
 }
 // EOF

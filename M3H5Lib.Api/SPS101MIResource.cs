@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SPS101MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Build selection to populate MSCTRA
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_APIP">APS - policy (Required)</param>
-		/// <param name="m3_FWHL">From warehouse</param>
-		/// <param name="m3_TWHL">To warehouse</param>
-		/// <param name="m3_WHGR">Warehouse group</param>
-		/// <param name="m3_SSTF">Start date</param>
-		/// <param name="m3_CRTM">Critical material</param>
+		/// <param name="m3APIP">APS - policy (Required)</param>
+		/// <param name="m3FWHL">From warehouse</param>
+		/// <param name="m3TWHL">To warehouse</param>
+		/// <param name="m3WHGR">Warehouse group</param>
+		/// <param name="m3SSTF">Start date</param>
+		/// <param name="m3CRTM">Critical material</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> BuildSelection(
-			string m3_APIP, 
-			string m3_FWHL = null, 
-			string m3_TWHL = null, 
-			string m3_WHGR = null, 
-			DateTime? m3_SSTF = null, 
-			int? m3_CRTM = null, 
+			string m3APIP, 
+			string m3FWHL = null, 
+			string m3TWHL = null, 
+			string m3WHGR = null, 
+			DateTime? m3SSTF = null, 
+			int? m3CRTM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,24 +72,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_APIP))
-				throw new ArgumentNullException("m3_APIP");
+			if (string.IsNullOrWhiteSpace(m3APIP))
+				throw new ArgumentNullException(nameof(m3APIP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("APIP", m3_APIP.Trim());
+				.WithQueryParameter("APIP", m3APIP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FWHL))
-				request.WithQueryParameter("FWHL", m3_FWHL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TWHL))
-				request.WithQueryParameter("TWHL", m3_TWHL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHGR))
-				request.WithQueryParameter("WHGR", m3_WHGR.Trim());
-			if (m3_SSTF.HasValue)
-				request.WithQueryParameter("SSTF", m3_SSTF.Value.ToM3String());
-			if (m3_CRTM.HasValue)
-				request.WithQueryParameter("CRTM", m3_CRTM.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3FWHL))
+				request.WithQueryParameter("FWHL", m3FWHL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TWHL))
+				request.WithQueryParameter("TWHL", m3TWHL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHGR))
+				request.WithQueryParameter("WHGR", m3WHGR.Trim());
+			if (m3SSTF.HasValue)
+				request.WithQueryParameter("SSTF", m3SSTF.Value.ToM3String());
+			if (m3CRTM.HasValue)
+				request.WithQueryParameter("CRTM", m3CRTM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -97,7 +99,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -108,10 +111,10 @@ namespace M3H5Lib.Api
 		/// Description Delete Manufactuting Order Proposals
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SCVE">SCP Version (Required)</param>
-		/// <param name="m3_VCAT">Version category (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SCVE">SCP Version (Required)</param>
+		/// <param name="m3VCAT">Version category (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -120,10 +123,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DeleteMOP(
-			string m3_DIVI, 
-			string m3_SCVE, 
-			string m3_VCAT, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			string m3SCVE, 
+			string m3VCAT, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -138,22 +141,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_VCAT))
-				throw new ArgumentNullException("m3_VCAT");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3VCAT))
+				throw new ArgumentNullException(nameof(m3VCAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("VCAT", m3_VCAT.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("VCAT", m3VCAT.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -163,7 +166,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -174,10 +178,10 @@ namespace M3H5Lib.Api
 		/// Description Delete Purchase Order Proposals
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SCVE">SCP Version (Required)</param>
-		/// <param name="m3_VCAT">Version category (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SCVE">SCP Version (Required)</param>
+		/// <param name="m3VCAT">Version category (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -186,10 +190,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DeletePOP(
-			string m3_DIVI, 
-			string m3_SCVE, 
-			string m3_VCAT, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			string m3SCVE, 
+			string m3VCAT, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -204,22 +208,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_VCAT))
-				throw new ArgumentNullException("m3_VCAT");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3VCAT))
+				throw new ArgumentNullException(nameof(m3VCAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("VCAT", m3_VCAT.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("VCAT", m3VCAT.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -229,7 +233,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -240,7 +245,7 @@ namespace M3H5Lib.Api
 		/// Description Disaggregate and implement inventory
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP version</param>
+		/// <param name="m3SCVE">SCP version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -249,7 +254,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<DisAndImpINVResponse></returns>
 		/// <exception cref="M3Exception<DisAndImpINVResponse>"></exception>
 		public async Task<M3Response<DisAndImpINVResponse>> DisAndImpINV(
-			string m3_SCVE = null, 
+			string m3SCVE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -264,8 +269,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SCVE))
-				request.WithQueryParameter("SCVE", m3_SCVE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SCVE))
+				request.WithQueryParameter("SCVE", m3SCVE.Trim());
 
 			// Execute the request
 			var result = await Execute<DisAndImpINVResponse>(
@@ -275,7 +280,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -286,7 +292,7 @@ namespace M3H5Lib.Api
 		/// Description Disaggregate and implement MDS
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP version</param>
+		/// <param name="m3SCVE">SCP version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -295,7 +301,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<DisAndImpMDSResponse></returns>
 		/// <exception cref="M3Exception<DisAndImpMDSResponse>"></exception>
 		public async Task<M3Response<DisAndImpMDSResponse>> DisAndImpMDS(
-			string m3_SCVE = null, 
+			string m3SCVE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -310,8 +316,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SCVE))
-				request.WithQueryParameter("SCVE", m3_SCVE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SCVE))
+				request.WithQueryParameter("SCVE", m3SCVE.Trim());
 
 			// Execute the request
 			var result = await Execute<DisAndImpMDSResponse>(
@@ -321,7 +327,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -332,7 +339,7 @@ namespace M3H5Lib.Api
 		/// Description Disaggregate and implement sourcing rules
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP version</param>
+		/// <param name="m3SCVE">SCP version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -341,7 +348,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<DisAndImpSORResponse></returns>
 		/// <exception cref="M3Exception<DisAndImpSORResponse>"></exception>
 		public async Task<M3Response<DisAndImpSORResponse>> DisAndImpSOR(
-			string m3_SCVE = null, 
+			string m3SCVE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -356,8 +363,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SCVE))
-				request.WithQueryParameter("SCVE", m3_SCVE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SCVE))
+				request.WithQueryParameter("SCVE", m3SCVE.Trim());
 
 			// Execute the request
 			var result = await Execute<DisAndImpSORResponse>(
@@ -367,7 +374,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -378,9 +386,9 @@ namespace M3H5Lib.Api
 		/// Description Select
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP Version (Required)</param>
-		/// <param name="m3_SCTR">Transfer Category (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3SCVE">SCP Version (Required)</param>
+		/// <param name="m3SCTR">Transfer Category (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -389,9 +397,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectResponse></returns>
 		/// <exception cref="M3Exception<SelectResponse>"></exception>
 		public async Task<M3Response<SelectResponse>> Select(
-			string m3_SCVE, 
-			string m3_SCTR, 
-			int? m3_CONO = null, 
+			string m3SCVE, 
+			string m3SCTR, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -406,19 +414,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_SCTR))
-				throw new ArgumentNullException("m3_SCTR");
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3SCTR))
+				throw new ArgumentNullException(nameof(m3SCTR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("SCTR", m3_SCTR.Trim());
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("SCTR", m3SCTR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelectResponse>(
@@ -428,7 +436,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -439,9 +448,9 @@ namespace M3H5Lib.Api
 		/// Description SelectYOP
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP Version (Required)</param>
-		/// <param name="m3_SCTR">Transfer Category (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3SCVE">SCP Version (Required)</param>
+		/// <param name="m3SCTR">Transfer Category (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -450,9 +459,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectYOPResponse></returns>
 		/// <exception cref="M3Exception<SelectYOPResponse>"></exception>
 		public async Task<M3Response<SelectYOPResponse>> SelectYOP(
-			string m3_SCVE, 
-			string m3_SCTR, 
-			int? m3_CONO = null, 
+			string m3SCVE, 
+			string m3SCTR, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -467,19 +476,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_SCTR))
-				throw new ArgumentNullException("m3_SCTR");
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3SCTR))
+				throw new ArgumentNullException(nameof(m3SCTR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("SCTR", m3_SCTR.Trim());
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("SCTR", m3SCTR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelectYOPResponse>(
@@ -489,7 +498,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -500,17 +510,17 @@ namespace M3H5Lib.Api
 		/// Description Add planning proposal to MSCTRA
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SCVE">SCP version (Required)</param>
-		/// <param name="m3_VCAT">Category (Required)</param>
-		/// <param name="m3_SCTR">Transfer category (Required)</param>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Itemnumber (Required)</param>
-		/// <param name="m3_PLDT">Planning date (Required)</param>
-		/// <param name="m3_PPQT">Planned quantity (Required)</param>
-		/// <param name="m3_PSTS">Status (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_TWHL">To warehouse</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SCVE">SCP version (Required)</param>
+		/// <param name="m3VCAT">Category (Required)</param>
+		/// <param name="m3SCTR">Transfer category (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Itemnumber (Required)</param>
+		/// <param name="m3PLDT">Planning date (Required)</param>
+		/// <param name="m3PPQT">Planned quantity (Required)</param>
+		/// <param name="m3PSTS">Status (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3TWHL">To warehouse</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -519,17 +529,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndDOP(
-			string m3_DIVI, 
-			string m3_SCVE, 
-			string m3_VCAT, 
-			string m3_SCTR, 
-			string m3_WHLO, 
-			string m3_ITNO, 
-			DateTime m3_PLDT, 
-			decimal m3_PPQT, 
-			string m3_PSTS, 
-			int? m3_CONO = null, 
-			string m3_TWHL = null, 
+			string m3DIVI, 
+			string m3SCVE, 
+			string m3VCAT, 
+			string m3SCTR, 
+			string m3WHLO, 
+			string m3ITNO, 
+			DateTime m3PLDT, 
+			decimal m3PPQT, 
+			string m3PSTS, 
+			int? m3CONO = null, 
+			string m3TWHL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -544,38 +554,38 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_VCAT))
-				throw new ArgumentNullException("m3_VCAT");
-			if (string.IsNullOrWhiteSpace(m3_SCTR))
-				throw new ArgumentNullException("m3_SCTR");
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_PSTS))
-				throw new ArgumentNullException("m3_PSTS");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3VCAT))
+				throw new ArgumentNullException(nameof(m3VCAT));
+			if (string.IsNullOrWhiteSpace(m3SCTR))
+				throw new ArgumentNullException(nameof(m3SCTR));
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3PSTS))
+				throw new ArgumentNullException(nameof(m3PSTS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("VCAT", m3_VCAT.Trim())
-				.WithQueryParameter("SCTR", m3_SCTR.Trim())
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("PLDT", m3_PLDT.ToM3String())
-				.WithQueryParameter("PPQT", m3_PPQT.ToString())
-				.WithQueryParameter("PSTS", m3_PSTS.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("VCAT", m3VCAT.Trim())
+				.WithQueryParameter("SCTR", m3SCTR.Trim())
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("PLDT", m3PLDT.ToM3String())
+				.WithQueryParameter("PPQT", m3PPQT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PSTS", m3PSTS.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TWHL))
-				request.WithQueryParameter("TWHL", m3_TWHL.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TWHL))
+				request.WithQueryParameter("TWHL", m3TWHL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -585,7 +595,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -596,14 +607,14 @@ namespace M3H5Lib.Api
 		/// Description Add Invenvtory Build-Up without answer
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP Version (Required)</param>
-		/// <param name="m3_FRDT">From date (Required)</param>
-		/// <param name="m3_NDID">From Node (Required)</param>
-		/// <param name="m3_NDCA">From Node Category (Required)</param>
-		/// <param name="m3_SCPG">SCP item group (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_CESS">Calculated extra safety stock</param>
+		/// <param name="m3SCVE">SCP Version (Required)</param>
+		/// <param name="m3FRDT">From date (Required)</param>
+		/// <param name="m3NDID">From Node (Required)</param>
+		/// <param name="m3NDCA">From Node Category (Required)</param>
+		/// <param name="m3SCPG">SCP item group (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3CESS">Calculated extra safety stock</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -612,14 +623,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndInventory(
-			string m3_SCVE, 
-			DateTime m3_FRDT, 
-			string m3_NDID, 
-			int m3_NDCA, 
-			string m3_SCPG, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			decimal? m3_CESS = null, 
+			string m3SCVE, 
+			DateTime m3FRDT, 
+			string m3NDID, 
+			int m3NDCA, 
+			string m3SCPG, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			decimal? m3CESS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -634,28 +645,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_NDID))
-				throw new ArgumentNullException("m3_NDID");
-			if (string.IsNullOrWhiteSpace(m3_SCPG))
-				throw new ArgumentNullException("m3_SCPG");
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3NDID))
+				throw new ArgumentNullException(nameof(m3NDID));
+			if (string.IsNullOrWhiteSpace(m3SCPG))
+				throw new ArgumentNullException(nameof(m3SCPG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("FRDT", m3_FRDT.ToM3String())
-				.WithQueryParameter("NDID", m3_NDID.Trim())
-				.WithQueryParameter("NDCA", m3_NDCA.ToString())
-				.WithQueryParameter("SCPG", m3_SCPG.Trim());
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("FRDT", m3FRDT.ToM3String())
+				.WithQueryParameter("NDID", m3NDID.Trim())
+				.WithQueryParameter("NDCA", m3NDCA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SCPG", m3SCPG.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_CESS.HasValue)
-				request.WithQueryParameter("CESS", m3_CESS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3CESS.HasValue)
+				request.WithQueryParameter("CESS", m3CESS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -665,7 +676,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -676,19 +688,19 @@ namespace M3H5Lib.Api
 		/// Description Export planned MO from YOP
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Divsion (Required)</param>
-		/// <param name="m3_SCVE">SCP version (Required)</param>
-		/// <param name="m3_VCAT">Category (Required)</param>
-		/// <param name="m3_SCTR">Transfer category (Required)</param>
-		/// <param name="m3_FACI">Facilty (Required)</param>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Itemnumber (Required)</param>
-		/// <param name="m3_PLDT">Planning date (Required)</param>
-		/// <param name="m3_PPQT">Planned quantity (Required)</param>
-		/// <param name="m3_PSTS">Status (Required)</param>
-		/// <param name="m3_SIMD">Simulation (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_AOID">Alternative routing</param>
+		/// <param name="m3DIVI">Divsion (Required)</param>
+		/// <param name="m3SCVE">SCP version (Required)</param>
+		/// <param name="m3VCAT">Category (Required)</param>
+		/// <param name="m3SCTR">Transfer category (Required)</param>
+		/// <param name="m3FACI">Facilty (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Itemnumber (Required)</param>
+		/// <param name="m3PLDT">Planning date (Required)</param>
+		/// <param name="m3PPQT">Planned quantity (Required)</param>
+		/// <param name="m3PSTS">Status (Required)</param>
+		/// <param name="m3SIMD">Simulation (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3AOID">Alternative routing</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -697,19 +709,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndMOP(
-			string m3_DIVI, 
-			string m3_SCVE, 
-			string m3_VCAT, 
-			string m3_SCTR, 
-			string m3_FACI, 
-			string m3_WHLO, 
-			string m3_ITNO, 
-			DateTime m3_PLDT, 
-			decimal m3_PPQT, 
-			string m3_PSTS, 
-			int m3_SIMD, 
-			int? m3_CONO = null, 
-			string m3_AOID = null, 
+			string m3DIVI, 
+			string m3SCVE, 
+			string m3VCAT, 
+			string m3SCTR, 
+			string m3FACI, 
+			string m3WHLO, 
+			string m3ITNO, 
+			DateTime m3PLDT, 
+			decimal m3PPQT, 
+			string m3PSTS, 
+			int m3SIMD, 
+			int? m3CONO = null, 
+			string m3AOID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -724,42 +736,42 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_VCAT))
-				throw new ArgumentNullException("m3_VCAT");
-			if (string.IsNullOrWhiteSpace(m3_SCTR))
-				throw new ArgumentNullException("m3_SCTR");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_PSTS))
-				throw new ArgumentNullException("m3_PSTS");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3VCAT))
+				throw new ArgumentNullException(nameof(m3VCAT));
+			if (string.IsNullOrWhiteSpace(m3SCTR))
+				throw new ArgumentNullException(nameof(m3SCTR));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3PSTS))
+				throw new ArgumentNullException(nameof(m3PSTS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("VCAT", m3_VCAT.Trim())
-				.WithQueryParameter("SCTR", m3_SCTR.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("PLDT", m3_PLDT.ToM3String())
-				.WithQueryParameter("PPQT", m3_PPQT.ToString())
-				.WithQueryParameter("PSTS", m3_PSTS.Trim())
-				.WithQueryParameter("SIMD", m3_SIMD.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("VCAT", m3VCAT.Trim())
+				.WithQueryParameter("SCTR", m3SCTR.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("PLDT", m3PLDT.ToM3String())
+				.WithQueryParameter("PPQT", m3PPQT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PSTS", m3PSTS.Trim())
+				.WithQueryParameter("SIMD", m3SIMD.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_AOID))
-				request.WithQueryParameter("AOID", m3_AOID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3AOID))
+				request.WithQueryParameter("AOID", m3AOID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -769,7 +781,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -780,14 +793,14 @@ namespace M3H5Lib.Api
 		/// Description Add Updated Demands without answer
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP Version (Required)</param>
-		/// <param name="m3_FRDT">From date (Required)</param>
-		/// <param name="m3_NDID">From Node (Required)</param>
-		/// <param name="m3_NDCA">From Node Category (Required)</param>
-		/// <param name="m3_SCPG">SCP item group (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_DEMA">Demand</param>
+		/// <param name="m3SCVE">SCP Version (Required)</param>
+		/// <param name="m3FRDT">From date (Required)</param>
+		/// <param name="m3NDID">From Node (Required)</param>
+		/// <param name="m3NDCA">From Node Category (Required)</param>
+		/// <param name="m3SCPG">SCP item group (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3DEMA">Demand</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -796,14 +809,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndMds(
-			string m3_SCVE, 
-			DateTime m3_FRDT, 
-			string m3_NDID, 
-			int m3_NDCA, 
-			string m3_SCPG, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			decimal? m3_DEMA = null, 
+			string m3SCVE, 
+			DateTime m3FRDT, 
+			string m3NDID, 
+			int m3NDCA, 
+			string m3SCPG, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			decimal? m3DEMA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -818,28 +831,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_NDID))
-				throw new ArgumentNullException("m3_NDID");
-			if (string.IsNullOrWhiteSpace(m3_SCPG))
-				throw new ArgumentNullException("m3_SCPG");
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3NDID))
+				throw new ArgumentNullException(nameof(m3NDID));
+			if (string.IsNullOrWhiteSpace(m3SCPG))
+				throw new ArgumentNullException(nameof(m3SCPG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("FRDT", m3_FRDT.ToM3String())
-				.WithQueryParameter("NDID", m3_NDID.Trim())
-				.WithQueryParameter("NDCA", m3_NDCA.ToString())
-				.WithQueryParameter("SCPG", m3_SCPG.Trim());
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("FRDT", m3FRDT.ToM3String())
+				.WithQueryParameter("NDID", m3NDID.Trim())
+				.WithQueryParameter("NDCA", m3NDCA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SCPG", m3SCPG.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_DEMA.HasValue)
-				request.WithQueryParameter("DEMA", m3_DEMA.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3DEMA.HasValue)
+				request.WithQueryParameter("DEMA", m3DEMA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -849,7 +862,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -860,17 +874,17 @@ namespace M3H5Lib.Api
 		/// Description Export planned MO from YOP
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SCVE">SCP version (Required)</param>
-		/// <param name="m3_VCAT">Category (Required)</param>
-		/// <param name="m3_SCTR">Transfer category (Required)</param>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Itemnumber (Required)</param>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
-		/// <param name="m3_PLDT">Planning date (Required)</param>
-		/// <param name="m3_PPQT">Planned quantity (Required)</param>
-		/// <param name="m3_PSTS">Status (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SCVE">SCP version (Required)</param>
+		/// <param name="m3VCAT">Category (Required)</param>
+		/// <param name="m3SCTR">Transfer category (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Itemnumber (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
+		/// <param name="m3PLDT">Planning date (Required)</param>
+		/// <param name="m3PPQT">Planned quantity (Required)</param>
+		/// <param name="m3PSTS">Status (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -879,17 +893,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndPOP(
-			string m3_DIVI, 
-			string m3_SCVE, 
-			string m3_VCAT, 
-			string m3_SCTR, 
-			string m3_WHLO, 
-			string m3_ITNO, 
-			string m3_SUNO, 
-			DateTime m3_PLDT, 
-			decimal m3_PPQT, 
-			string m3_PSTS, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			string m3SCVE, 
+			string m3VCAT, 
+			string m3SCTR, 
+			string m3WHLO, 
+			string m3ITNO, 
+			string m3SUNO, 
+			DateTime m3PLDT, 
+			decimal m3PPQT, 
+			string m3PSTS, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -904,39 +918,39 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_VCAT))
-				throw new ArgumentNullException("m3_VCAT");
-			if (string.IsNullOrWhiteSpace(m3_SCTR))
-				throw new ArgumentNullException("m3_SCTR");
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
-			if (string.IsNullOrWhiteSpace(m3_PSTS))
-				throw new ArgumentNullException("m3_PSTS");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3VCAT))
+				throw new ArgumentNullException(nameof(m3VCAT));
+			if (string.IsNullOrWhiteSpace(m3SCTR))
+				throw new ArgumentNullException(nameof(m3SCTR));
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
+			if (string.IsNullOrWhiteSpace(m3PSTS))
+				throw new ArgumentNullException(nameof(m3PSTS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("VCAT", m3_VCAT.Trim())
-				.WithQueryParameter("SCTR", m3_SCTR.Trim())
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("PLDT", m3_PLDT.ToM3String())
-				.WithQueryParameter("PPQT", m3_PPQT.ToString())
-				.WithQueryParameter("PSTS", m3_PSTS.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("VCAT", m3VCAT.Trim())
+				.WithQueryParameter("SCTR", m3SCTR.Trim())
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("PLDT", m3PLDT.ToM3String())
+				.WithQueryParameter("PPQT", m3PPQT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PSTS", m3PSTS.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -946,7 +960,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -957,17 +972,17 @@ namespace M3H5Lib.Api
 		/// Description Add Sourcing Rules without answer
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SCVE">SCP Version (Required)</param>
-		/// <param name="m3_FRDT">From date (Required)</param>
-		/// <param name="m3_NDID">From Node (Required)</param>
-		/// <param name="m3_NDCA">From Node Category (Required)</param>
-		/// <param name="m3_TNOD">To Node (Required)</param>
-		/// <param name="m3_TNCA">To Node Category (Required)</param>
-		/// <param name="m3_SCPG">SCP Group (Required)</param>
-		/// <param name="m3_PRSH">Precentage Share (Required)</param>
-		/// <param name="m3_PUIT">Acquisition code (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3SCVE">SCP Version (Required)</param>
+		/// <param name="m3FRDT">From date (Required)</param>
+		/// <param name="m3NDID">From Node (Required)</param>
+		/// <param name="m3NDCA">From Node Category (Required)</param>
+		/// <param name="m3TNOD">To Node (Required)</param>
+		/// <param name="m3TNCA">To Node Category (Required)</param>
+		/// <param name="m3SCPG">SCP Group (Required)</param>
+		/// <param name="m3PRSH">Precentage Share (Required)</param>
+		/// <param name="m3PUIT">Acquisition code (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -976,17 +991,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndRules(
-			string m3_SCVE, 
-			DateTime m3_FRDT, 
-			string m3_NDID, 
-			int m3_NDCA, 
-			string m3_TNOD, 
-			int m3_TNCA, 
-			string m3_SCPG, 
-			int m3_PRSH, 
-			int m3_PUIT, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
+			string m3SCVE, 
+			DateTime m3FRDT, 
+			string m3NDID, 
+			int m3NDCA, 
+			string m3TNOD, 
+			int m3TNCA, 
+			string m3SCPG, 
+			int m3PRSH, 
+			int m3PUIT, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1001,32 +1016,32 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_NDID))
-				throw new ArgumentNullException("m3_NDID");
-			if (string.IsNullOrWhiteSpace(m3_TNOD))
-				throw new ArgumentNullException("m3_TNOD");
-			if (string.IsNullOrWhiteSpace(m3_SCPG))
-				throw new ArgumentNullException("m3_SCPG");
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3NDID))
+				throw new ArgumentNullException(nameof(m3NDID));
+			if (string.IsNullOrWhiteSpace(m3TNOD))
+				throw new ArgumentNullException(nameof(m3TNOD));
+			if (string.IsNullOrWhiteSpace(m3SCPG))
+				throw new ArgumentNullException(nameof(m3SCPG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("FRDT", m3_FRDT.ToM3String())
-				.WithQueryParameter("NDID", m3_NDID.Trim())
-				.WithQueryParameter("NDCA", m3_NDCA.ToString())
-				.WithQueryParameter("TNOD", m3_TNOD.Trim())
-				.WithQueryParameter("TNCA", m3_TNCA.ToString())
-				.WithQueryParameter("SCPG", m3_SCPG.Trim())
-				.WithQueryParameter("PRSH", m3_PRSH.ToString())
-				.WithQueryParameter("PUIT", m3_PUIT.ToString());
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("FRDT", m3FRDT.ToM3String())
+				.WithQueryParameter("NDID", m3NDID.Trim())
+				.WithQueryParameter("NDCA", m3NDCA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TNOD", m3TNOD.Trim())
+				.WithQueryParameter("TNCA", m3TNCA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SCPG", m3SCPG.Trim())
+				.WithQueryParameter("PRSH", m3PRSH.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PUIT", m3PUIT.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1036,7 +1051,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1047,10 +1063,10 @@ namespace M3H5Lib.Api
 		/// Description Export planned MO from YOP
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SCVE">SCP version (Required)</param>
-		/// <param name="m3_VCAT">Category (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SCVE">SCP version (Required)</param>
+		/// <param name="m3VCAT">Category (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1059,10 +1075,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> TriggerUpdatJob(
-			string m3_DIVI, 
-			string m3_SCVE, 
-			string m3_VCAT, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			string m3SCVE, 
+			string m3VCAT, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1077,22 +1093,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SCVE))
-				throw new ArgumentNullException("m3_SCVE");
-			if (string.IsNullOrWhiteSpace(m3_VCAT))
-				throw new ArgumentNullException("m3_VCAT");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SCVE))
+				throw new ArgumentNullException(nameof(m3SCVE));
+			if (string.IsNullOrWhiteSpace(m3VCAT))
+				throw new ArgumentNullException(nameof(m3VCAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SCVE", m3_SCVE.Trim())
-				.WithQueryParameter("VCAT", m3_VCAT.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SCVE", m3SCVE.Trim())
+				.WithQueryParameter("VCAT", m3VCAT.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1102,7 +1118,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

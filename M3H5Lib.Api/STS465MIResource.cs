@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS465MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add alias
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_POPN">Alias number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_ORQT">Ordered quantity - basic U/M (Required)</param>
-		/// <param name="m3_LTYP">Line type (Required)</param>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_INCQ">Include quantity</param>
+		/// <param name="m3POPN">Alias number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3ORQT">Ordered quantity - basic U/M (Required)</param>
+		/// <param name="m3LTYP">Line type (Required)</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3INCQ">Include quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAlias(
-			string m3_POPN, 
-			string m3_ITNO, 
-			decimal m3_ORQT, 
-			string m3_LTYP, 
-			int? m3_SEQN = null, 
-			int? m3_INCQ = null, 
+			string m3POPN, 
+			string m3ITNO, 
+			decimal m3ORQT, 
+			string m3LTYP, 
+			int? m3SEQN = null, 
+			int? m3INCQ = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,25 +72,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_POPN))
-				throw new ArgumentNullException("m3_POPN");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_LTYP))
-				throw new ArgumentNullException("m3_LTYP");
+			if (string.IsNullOrWhiteSpace(m3POPN))
+				throw new ArgumentNullException(nameof(m3POPN));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3LTYP))
+				throw new ArgumentNullException(nameof(m3LTYP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("POPN", m3_POPN.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("ORQT", m3_ORQT.ToString())
-				.WithQueryParameter("LTYP", m3_LTYP.Trim());
+				.WithQueryParameter("POPN", m3POPN.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("ORQT", m3ORQT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("LTYP", m3LTYP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (m3_INCQ.HasValue)
-				request.WithQueryParameter("INCQ", m3_INCQ.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3INCQ.HasValue)
+				request.WithQueryParameter("INCQ", m3INCQ.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -98,7 +100,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -109,9 +112,9 @@ namespace M3H5Lib.Api
 		/// Description Dlt alias
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_POPN">Alias number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3POPN">Alias number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -120,9 +123,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltAlias(
-			string m3_POPN, 
-			string m3_ITNO, 
-			int? m3_SEQN = null, 
+			string m3POPN, 
+			string m3ITNO, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -137,19 +140,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_POPN))
-				throw new ArgumentNullException("m3_POPN");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3POPN))
+				throw new ArgumentNullException(nameof(m3POPN));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("POPN", m3_POPN.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("POPN", m3POPN.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -159,7 +162,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -170,9 +174,9 @@ namespace M3H5Lib.Api
 		/// Description GetAlias
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_POPN">Alias number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3POPN">Alias number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -181,9 +185,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAliasResponse></returns>
 		/// <exception cref="M3Exception<GetAliasResponse>"></exception>
 		public async Task<M3Response<GetAliasResponse>> GetAlias(
-			string m3_POPN, 
-			string m3_ITNO, 
-			int? m3_SEQN = null, 
+			string m3POPN, 
+			string m3ITNO, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -198,19 +202,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_POPN))
-				throw new ArgumentNullException("m3_POPN");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3POPN))
+				throw new ArgumentNullException(nameof(m3POPN));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("POPN", m3_POPN.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("POPN", m3POPN.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetAliasResponse>(
@@ -220,7 +224,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -231,7 +236,7 @@ namespace M3H5Lib.Api
 		/// Description List alias
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_POPN">Alias number</param>
+		/// <param name="m3POPN">Alias number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -240,7 +245,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAliasResponse></returns>
 		/// <exception cref="M3Exception<LstAliasResponse>"></exception>
 		public async Task<M3Response<LstAliasResponse>> LstAlias(
-			string m3_POPN = null, 
+			string m3POPN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -255,8 +260,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_POPN))
-				request.WithQueryParameter("POPN", m3_POPN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POPN))
+				request.WithQueryParameter("POPN", m3POPN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAliasResponse>(
@@ -266,7 +271,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -277,12 +283,12 @@ namespace M3H5Lib.Api
 		/// Description Update alias
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_POPN">Alias number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_ORQT">Ordered quantity - basic U/M</param>
-		/// <param name="m3_LTYP">Line type</param>
-		/// <param name="m3_INCQ">Include quantity</param>
+		/// <param name="m3POPN">Alias number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3ORQT">Ordered quantity - basic U/M</param>
+		/// <param name="m3LTYP">Line type</param>
+		/// <param name="m3INCQ">Include quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -291,12 +297,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAlias(
-			string m3_POPN, 
-			string m3_ITNO, 
-			int? m3_SEQN = null, 
-			decimal? m3_ORQT = null, 
-			string m3_LTYP = null, 
-			int? m3_INCQ = null, 
+			string m3POPN, 
+			string m3ITNO, 
+			int? m3SEQN = null, 
+			decimal? m3ORQT = null, 
+			string m3LTYP = null, 
+			int? m3INCQ = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -311,25 +317,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_POPN))
-				throw new ArgumentNullException("m3_POPN");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3POPN))
+				throw new ArgumentNullException(nameof(m3POPN));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("POPN", m3_POPN.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("POPN", m3POPN.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (m3_ORQT.HasValue)
-				request.WithQueryParameter("ORQT", m3_ORQT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_LTYP))
-				request.WithQueryParameter("LTYP", m3_LTYP.Trim());
-			if (m3_INCQ.HasValue)
-				request.WithQueryParameter("INCQ", m3_INCQ.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ORQT.HasValue)
+				request.WithQueryParameter("ORQT", m3ORQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3LTYP))
+				request.WithQueryParameter("LTYP", m3LTYP.Trim());
+			if (m3INCQ.HasValue)
+				request.WithQueryParameter("INCQ", m3INCQ.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -339,7 +345,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS070MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Add dely method
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_LNCD">Language (Required)</param>
-		/// <param name="m3_TEL1">Termstext (Required)</param>
-		/// <param name="m3_VRDL">Transport method - trade stat (TST) (Required)</param>
-		/// <param name="m3_MODL">Deliverymethod</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TEL2">Termstext</param>
-		/// <param name="m3_COTT">Container used</param>
+		/// <param name="m3LNCD">Language (Required)</param>
+		/// <param name="m3TEL1">Termstext (Required)</param>
+		/// <param name="m3VRDL">Transport method - trade stat (TST) (Required)</param>
+		/// <param name="m3MODL">Deliverymethod</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TEL2">Termstext</param>
+		/// <param name="m3COTT">Container used</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddDelyMethod(
-			string m3_LNCD, 
-			string m3_TEL1, 
-			int m3_VRDL, 
-			string m3_MODL = null, 
-			string m3_TX15 = null, 
-			string m3_TEL2 = null, 
-			int? m3_COTT = null, 
+			string m3LNCD, 
+			string m3TEL1, 
+			int m3VRDL, 
+			string m3MODL = null, 
+			string m3TX15 = null, 
+			string m3TEL2 = null, 
+			int? m3COTT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,26 +74,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LNCD))
-				throw new ArgumentNullException("m3_LNCD");
-			if (string.IsNullOrWhiteSpace(m3_TEL1))
-				throw new ArgumentNullException("m3_TEL1");
+			if (string.IsNullOrWhiteSpace(m3LNCD))
+				throw new ArgumentNullException(nameof(m3LNCD));
+			if (string.IsNullOrWhiteSpace(m3TEL1))
+				throw new ArgumentNullException(nameof(m3TEL1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LNCD", m3_LNCD.Trim())
-				.WithQueryParameter("TEL1", m3_TEL1.Trim())
-				.WithQueryParameter("VRDL", m3_VRDL.ToString());
+				.WithQueryParameter("LNCD", m3LNCD.Trim())
+				.WithQueryParameter("TEL1", m3TEL1.Trim())
+				.WithQueryParameter("VRDL", m3VRDL.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODL))
-				request.WithQueryParameter("MODL", m3_MODL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEL2))
-				request.WithQueryParameter("TEL2", m3_TEL2.Trim());
-			if (m3_COTT.HasValue)
-				request.WithQueryParameter("COTT", m3_COTT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MODL))
+				request.WithQueryParameter("MODL", m3MODL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEL2))
+				request.WithQueryParameter("TEL2", m3TEL2.Trim());
+			if (m3COTT.HasValue)
+				request.WithQueryParameter("COTT", m3COTT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -101,7 +103,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -112,8 +115,8 @@ namespace M3H5Lib.Api
 		/// Description Del dely method
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_LNCD">Language (Required)</param>
-		/// <param name="m3_MODL">Deliverymethod</param>
+		/// <param name="m3LNCD">Language (Required)</param>
+		/// <param name="m3MODL">Deliverymethod</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -122,8 +125,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelDelyMethod(
-			string m3_LNCD, 
-			string m3_MODL = null, 
+			string m3LNCD, 
+			string m3MODL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -138,16 +141,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LNCD))
-				throw new ArgumentNullException("m3_LNCD");
+			if (string.IsNullOrWhiteSpace(m3LNCD))
+				throw new ArgumentNullException(nameof(m3LNCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LNCD", m3_LNCD.Trim());
+				.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODL))
-				request.WithQueryParameter("MODL", m3_MODL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MODL))
+				request.WithQueryParameter("MODL", m3MODL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -157,7 +160,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -168,8 +172,8 @@ namespace M3H5Lib.Api
 		/// Description Get dely method
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_LNCD">Language (Required)</param>
-		/// <param name="m3_MODL">Deliverymethod</param>
+		/// <param name="m3LNCD">Language (Required)</param>
+		/// <param name="m3MODL">Deliverymethod</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -178,8 +182,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDelyMethodResponse></returns>
 		/// <exception cref="M3Exception<GetDelyMethodResponse>"></exception>
 		public async Task<M3Response<GetDelyMethodResponse>> GetDelyMethod(
-			string m3_LNCD, 
-			string m3_MODL = null, 
+			string m3LNCD, 
+			string m3MODL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -194,16 +198,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LNCD))
-				throw new ArgumentNullException("m3_LNCD");
+			if (string.IsNullOrWhiteSpace(m3LNCD))
+				throw new ArgumentNullException(nameof(m3LNCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LNCD", m3_LNCD.Trim());
+				.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODL))
-				request.WithQueryParameter("MODL", m3_MODL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MODL))
+				request.WithQueryParameter("MODL", m3MODL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetDelyMethodResponse>(
@@ -213,7 +217,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -224,7 +229,7 @@ namespace M3H5Lib.Api
 		/// Description Lst dely method
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MODL">Deliverymethod</param>
+		/// <param name="m3MODL">Deliverymethod</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -233,7 +238,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDelyMethodResponse></returns>
 		/// <exception cref="M3Exception<LstDelyMethodResponse>"></exception>
 		public async Task<M3Response<LstDelyMethodResponse>> LstDelyMethod(
-			string m3_MODL = null, 
+			string m3MODL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -248,8 +253,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODL))
-				request.WithQueryParameter("MODL", m3_MODL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MODL))
+				request.WithQueryParameter("MODL", m3MODL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDelyMethodResponse>(
@@ -259,7 +264,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -270,13 +276,13 @@ namespace M3H5Lib.Api
 		/// Description Upd dely method
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_LNCD">Language (Required)</param>
-		/// <param name="m3_MODL">Deliverymethod</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TEL1">Termstext</param>
-		/// <param name="m3_TEL2">Termstext</param>
-		/// <param name="m3_VRDL">Transport method - trade stat (TST)</param>
-		/// <param name="m3_COTT">Container used</param>
+		/// <param name="m3LNCD">Language (Required)</param>
+		/// <param name="m3MODL">Deliverymethod</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TEL1">Termstext</param>
+		/// <param name="m3TEL2">Termstext</param>
+		/// <param name="m3VRDL">Transport method - trade stat (TST)</param>
+		/// <param name="m3COTT">Container used</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -285,13 +291,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdDelyMethod(
-			string m3_LNCD, 
-			string m3_MODL = null, 
-			string m3_TX15 = null, 
-			string m3_TEL1 = null, 
-			string m3_TEL2 = null, 
-			int? m3_VRDL = null, 
-			int? m3_COTT = null, 
+			string m3LNCD, 
+			string m3MODL = null, 
+			string m3TX15 = null, 
+			string m3TEL1 = null, 
+			string m3TEL2 = null, 
+			int? m3VRDL = null, 
+			int? m3COTT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -306,26 +312,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LNCD))
-				throw new ArgumentNullException("m3_LNCD");
+			if (string.IsNullOrWhiteSpace(m3LNCD))
+				throw new ArgumentNullException(nameof(m3LNCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LNCD", m3_LNCD.Trim());
+				.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODL))
-				request.WithQueryParameter("MODL", m3_MODL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEL1))
-				request.WithQueryParameter("TEL1", m3_TEL1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEL2))
-				request.WithQueryParameter("TEL2", m3_TEL2.Trim());
-			if (m3_VRDL.HasValue)
-				request.WithQueryParameter("VRDL", m3_VRDL.Value.ToString());
-			if (m3_COTT.HasValue)
-				request.WithQueryParameter("COTT", m3_COTT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MODL))
+				request.WithQueryParameter("MODL", m3MODL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEL1))
+				request.WithQueryParameter("TEL1", m3TEL1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEL2))
+				request.WithQueryParameter("TEL2", m3TEL2.Trim());
+			if (m3VRDL.HasValue)
+				request.WithQueryParameter("VRDL", m3VRDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3COTT.HasValue)
+				request.WithQueryParameter("COTT", m3COTT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -335,7 +341,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

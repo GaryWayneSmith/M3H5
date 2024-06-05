@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Service date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service date")]
-		public DateTime? M3_SVDT => GetNullableDateTime("SVDT");
+		public DateTime? M3SVDT => GetNullableDateTime("SVDT");
 
 		/// <summary>
 		/// Description: Service time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service time")]
-		public int? M3_SVTS => GetNullableInt("SVTS");
+		public int? M3SVTS => GetNullableInt("SVTS");
 
 		/// <summary>
 		/// Description: Facility
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work order number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Status - manufacturing order
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - manufacturing order")]
-		public string M3_WHST => GetString("WHST");
+		public string M3WHST => GetString("WHST");
 
 		/// <summary>
 		/// Description: Order type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Equipment number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment number")]
-		public string M3_EQNO => GetString("EQNO");
+		public string M3EQNO => GetString("EQNO");
 
 		/// <summary>
 		/// Description: Planned order
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned order")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Subnumber - planned order
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - planned order")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Subnumber - planned order
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - planned order")]
-		public int? M3_PLP2 => GetNullableInt("PLP2");
+		public int? M3PLP2 => GetNullableInt("PLP2");
 
 		/// <summary>
 		/// Description: Service level
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service level")]
-		public int? M3_ZSET => GetNullableInt("ZSET");
+		public int? M3ZSET => GetNullableInt("ZSET");
 
 		/// <summary>
 		/// Description: Meter value 1
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 1")]
-		public decimal? M3_MVA1 => GetNullableDecimal("MVA1");
+		public decimal? M3MVA1 => GetNullableDecimal("MVA1");
 
 		/// <summary>
 		/// Description: Meter value 2
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 2")]
-		public decimal? M3_MVA2 => GetNullableDecimal("MVA2");
+		public decimal? M3MVA2 => GetNullableDecimal("MVA2");
 
 		/// <summary>
 		/// Description: Meter value 3
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 3")]
-		public decimal? M3_MVA3 => GetNullableDecimal("MVA3");
+		public decimal? M3MVA3 => GetNullableDecimal("MVA3");
 
 		/// <summary>
 		/// Description: Meter value 4
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 4")]
-		public decimal? M3_MVA4 => GetNullableDecimal("MVA4");
+		public decimal? M3MVA4 => GetNullableDecimal("MVA4");
 
 		/// <summary>
 		/// Description: Selected meter
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected meter")]
-		public int? M3_METE => GetNullableInt("METE");
+		public int? M3METE => GetNullableInt("METE");
 
 		/// <summary>
 		/// Description: Actual meter value 1
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter value 1")]
-		public decimal? M3_MVB1 => GetNullableDecimal("MVB1");
+		public decimal? M3MVB1 => GetNullableDecimal("MVB1");
 
 		/// <summary>
 		/// Description: Actual meter value 2
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter value 2")]
-		public decimal? M3_MVB2 => GetNullableDecimal("MVB2");
+		public decimal? M3MVB2 => GetNullableDecimal("MVB2");
 
 		/// <summary>
 		/// Description: Actual meter value 3
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter value 3")]
-		public decimal? M3_MVB3 => GetNullableDecimal("MVB3");
+		public decimal? M3MVB3 => GetNullableDecimal("MVB3");
 
 		/// <summary>
 		/// Description: Actual meter value 4
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter value 4")]
-		public decimal? M3_MVB4 => GetNullableDecimal("MVB4");
+		public decimal? M3MVB4 => GetNullableDecimal("MVB4");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Meter 2
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 2")]
-		public string M3_MES2 => GetString("MES2");
+		public string M3MES2 => GetString("MES2");
 
 		/// <summary>
 		/// Description: Meter 3
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 3")]
-		public string M3_MES3 => GetString("MES3");
+		public string M3MES3 => GetString("MES3");
 
 		/// <summary>
 		/// Description: Meter 4
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 4")]
-		public string M3_MES4 => GetString("MES4");
+		public string M3MES4 => GetString("MES4");
 
 		/// <summary>
 		/// Description: Service group
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service group")]
-		public string M3_SRGP => GetString("SRGP");
+		public string M3SRGP => GetString("SRGP");
 
 		/// <summary>
 		/// Description: User-defined field 1 - item
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: Text identity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MOS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

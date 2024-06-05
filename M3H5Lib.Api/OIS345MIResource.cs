@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS345MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -65,7 +67,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -76,36 +79,36 @@ namespace M3H5Lib.Api
 		/// Description LstPriceMargin
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_ORTP">Customer order type</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_POPN">Alias number</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ORQA">Ordered quantity - alternate U/M</param>
-		/// <param name="m3_ALUN">Alternate U/M</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_SPS1">Selected price simulation field 1</param>
-		/// <param name="m3_FIE1">Margin simulation field 1</param>
-		/// <param name="m3_SPS2">Selected price simulation field 2</param>
-		/// <param name="m3_FIE2">Margin simulation field 2</param>
-		/// <param name="m3_SPS3">Selected price simulation field 3</param>
-		/// <param name="m3_FIE3">Margin simulation field 3</param>
-		/// <param name="m3_SPS4">Selected price simulation field 4</param>
-		/// <param name="m3_FIE4">Margin simulation field 4</param>
-		/// <param name="m3_SPS5">Selected price simulation field 5</param>
-		/// <param name="m3_FIE5">Margin simulation field 5</param>
-		/// <param name="m3_SPS6">Selected price simulation field 6</param>
-		/// <param name="m3_FIE6">Margin simulation field 6</param>
-		/// <param name="m3_PRDT">Price date</param>
-		/// <param name="m3_CUC1">Extra currency</param>
-		/// <param name="m3_PIDE">Promotion</param>
-		/// <param name="m3_AGNO">Blanket agreement number</param>
-		/// <param name="m3_BAGC">Customer - blanket agreement</param>
-		/// <param name="m3_BAGD">Start date - blanket agreement</param>
-		/// <param name="m3_CHCT">Superior business chain</param>
-		/// <param name="m3_CFIN">Configuration number</param>
-		/// <param name="m3_ATNR">Attribute number</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3ORTP">Customer order type</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3POPN">Alias number</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ORQA">Ordered quantity - alternate U/M</param>
+		/// <param name="m3ALUN">Alternate U/M</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3SPS1">Selected price simulation field 1</param>
+		/// <param name="m3FIE1">Margin simulation field 1</param>
+		/// <param name="m3SPS2">Selected price simulation field 2</param>
+		/// <param name="m3FIE2">Margin simulation field 2</param>
+		/// <param name="m3SPS3">Selected price simulation field 3</param>
+		/// <param name="m3FIE3">Margin simulation field 3</param>
+		/// <param name="m3SPS4">Selected price simulation field 4</param>
+		/// <param name="m3FIE4">Margin simulation field 4</param>
+		/// <param name="m3SPS5">Selected price simulation field 5</param>
+		/// <param name="m3FIE5">Margin simulation field 5</param>
+		/// <param name="m3SPS6">Selected price simulation field 6</param>
+		/// <param name="m3FIE6">Margin simulation field 6</param>
+		/// <param name="m3PRDT">Price date</param>
+		/// <param name="m3CUC1">Extra currency</param>
+		/// <param name="m3PIDE">Promotion</param>
+		/// <param name="m3AGNO">Blanket agreement number</param>
+		/// <param name="m3BAGC">Customer - blanket agreement</param>
+		/// <param name="m3BAGD">Start date - blanket agreement</param>
+		/// <param name="m3CHCT">Superior business chain</param>
+		/// <param name="m3CFIN">Configuration number</param>
+		/// <param name="m3ATNR">Attribute number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -114,36 +117,36 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPriceMarginResponse></returns>
 		/// <exception cref="M3Exception<LstPriceMarginResponse>"></exception>
 		public async Task<M3Response<LstPriceMarginResponse>> LstPriceMargin(
-			string m3_CUNO, 
-			string m3_ORTP = null, 
-			string m3_FACI = null, 
-			string m3_WHLO = null, 
-			string m3_POPN = null, 
-			string m3_ITNO = null, 
-			decimal? m3_ORQA = null, 
-			string m3_ALUN = null, 
-			string m3_CUCD = null, 
-			string m3_SPS1 = null, 
-			string m3_FIE1 = null, 
-			string m3_SPS2 = null, 
-			string m3_FIE2 = null, 
-			string m3_SPS3 = null, 
-			string m3_FIE3 = null, 
-			string m3_SPS4 = null, 
-			string m3_FIE4 = null, 
-			string m3_SPS5 = null, 
-			string m3_FIE5 = null, 
-			string m3_SPS6 = null, 
-			string m3_FIE6 = null, 
-			DateTime? m3_PRDT = null, 
-			string m3_CUC1 = null, 
-			string m3_PIDE = null, 
-			string m3_AGNO = null, 
-			string m3_BAGC = null, 
-			DateTime? m3_BAGD = null, 
-			string m3_CHCT = null, 
-			long? m3_CFIN = null, 
-			decimal? m3_ATNR = null, 
+			string m3CUNO, 
+			string m3ORTP = null, 
+			string m3FACI = null, 
+			string m3WHLO = null, 
+			string m3POPN = null, 
+			string m3ITNO = null, 
+			decimal? m3ORQA = null, 
+			string m3ALUN = null, 
+			string m3CUCD = null, 
+			string m3SPS1 = null, 
+			string m3FIE1 = null, 
+			string m3SPS2 = null, 
+			string m3FIE2 = null, 
+			string m3SPS3 = null, 
+			string m3FIE3 = null, 
+			string m3SPS4 = null, 
+			string m3FIE4 = null, 
+			string m3SPS5 = null, 
+			string m3FIE5 = null, 
+			string m3SPS6 = null, 
+			string m3FIE6 = null, 
+			DateTime? m3PRDT = null, 
+			string m3CUC1 = null, 
+			string m3PIDE = null, 
+			string m3AGNO = null, 
+			string m3BAGC = null, 
+			DateTime? m3BAGD = null, 
+			string m3CHCT = null, 
+			long? m3CFIN = null, 
+			decimal? m3ATNR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -158,72 +161,72 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POPN))
-				request.WithQueryParameter("POPN", m3_POPN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (m3_ORQA.HasValue)
-				request.WithQueryParameter("ORQA", m3_ORQA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ALUN))
-				request.WithQueryParameter("ALUN", m3_ALUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPS1))
-				request.WithQueryParameter("SPS1", m3_SPS1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FIE1))
-				request.WithQueryParameter("FIE1", m3_FIE1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPS2))
-				request.WithQueryParameter("SPS2", m3_SPS2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FIE2))
-				request.WithQueryParameter("FIE2", m3_FIE2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPS3))
-				request.WithQueryParameter("SPS3", m3_SPS3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FIE3))
-				request.WithQueryParameter("FIE3", m3_FIE3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPS4))
-				request.WithQueryParameter("SPS4", m3_SPS4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FIE4))
-				request.WithQueryParameter("FIE4", m3_FIE4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPS5))
-				request.WithQueryParameter("SPS5", m3_SPS5.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FIE5))
-				request.WithQueryParameter("FIE5", m3_FIE5.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPS6))
-				request.WithQueryParameter("SPS6", m3_SPS6.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FIE6))
-				request.WithQueryParameter("FIE6", m3_FIE6.Trim());
-			if (m3_PRDT.HasValue)
-				request.WithQueryParameter("PRDT", m3_PRDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_CUC1))
-				request.WithQueryParameter("CUC1", m3_CUC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PIDE))
-				request.WithQueryParameter("PIDE", m3_PIDE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AGNO))
-				request.WithQueryParameter("AGNO", m3_AGNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BAGC))
-				request.WithQueryParameter("BAGC", m3_BAGC.Trim());
-			if (m3_BAGD.HasValue)
-				request.WithQueryParameter("BAGD", m3_BAGD.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_CHCT))
-				request.WithQueryParameter("CHCT", m3_CHCT.Trim());
-			if (m3_CFIN.HasValue)
-				request.WithQueryParameter("CFIN", m3_CFIN.Value.ToString());
-			if (m3_ATNR.HasValue)
-				request.WithQueryParameter("ATNR", m3_ATNR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POPN))
+				request.WithQueryParameter("POPN", m3POPN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (m3ORQA.HasValue)
+				request.WithQueryParameter("ORQA", m3ORQA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ALUN))
+				request.WithQueryParameter("ALUN", m3ALUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPS1))
+				request.WithQueryParameter("SPS1", m3SPS1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FIE1))
+				request.WithQueryParameter("FIE1", m3FIE1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPS2))
+				request.WithQueryParameter("SPS2", m3SPS2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FIE2))
+				request.WithQueryParameter("FIE2", m3FIE2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPS3))
+				request.WithQueryParameter("SPS3", m3SPS3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FIE3))
+				request.WithQueryParameter("FIE3", m3FIE3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPS4))
+				request.WithQueryParameter("SPS4", m3SPS4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FIE4))
+				request.WithQueryParameter("FIE4", m3FIE4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPS5))
+				request.WithQueryParameter("SPS5", m3SPS5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FIE5))
+				request.WithQueryParameter("FIE5", m3FIE5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPS6))
+				request.WithQueryParameter("SPS6", m3SPS6.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FIE6))
+				request.WithQueryParameter("FIE6", m3FIE6.Trim());
+			if (m3PRDT.HasValue)
+				request.WithQueryParameter("PRDT", m3PRDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3CUC1))
+				request.WithQueryParameter("CUC1", m3CUC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PIDE))
+				request.WithQueryParameter("PIDE", m3PIDE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGNO))
+				request.WithQueryParameter("AGNO", m3AGNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BAGC))
+				request.WithQueryParameter("BAGC", m3BAGC.Trim());
+			if (m3BAGD.HasValue)
+				request.WithQueryParameter("BAGD", m3BAGD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3CHCT))
+				request.WithQueryParameter("CHCT", m3CHCT.Trim());
+			if (m3CFIN.HasValue)
+				request.WithQueryParameter("CFIN", m3CFIN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ATNR.HasValue)
+				request.WithQueryParameter("ATNR", m3ATNR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPriceMarginResponse>(
@@ -233,7 +236,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

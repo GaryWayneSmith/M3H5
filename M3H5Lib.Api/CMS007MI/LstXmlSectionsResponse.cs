@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Printer file")]
-		public string M3_PRTF => GetString("PRTF");
+		public string M3PRTF => GetString("PRTF");
 
 		/// <summary>
 		/// Description: XML structure
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("XML structure")]
-		public string M3_RPLY => GetString("RPLY");
+		public string M3RPLY => GetString("RPLY");
 
 		/// <summary>
 		/// Description: XML section
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("XML section")]
-		public int? M3_RPBK => GetNullableInt("RPBK");
+		public int? M3RPBK => GetNullableInt("RPBK");
 
 		/// <summary>
 		/// Description: Section status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Section status")]
-		public string M3_XMBS => GetString("XMBS");
+		public string M3XMBS => GetString("XMBS");
 
 		/// <summary>
 		/// Description: Element name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element name")]
-		public string M3_ELNM => GetString("ELNM");
+		public string M3ELNM => GetString("ELNM");
 
 		/// <summary>
 		/// Description: Section type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Section type")]
-		public string M3_STYE => GetString("STYE");
+		public string M3STYE => GetString("STYE");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SNNO => GetNullableInt("SNNO");
+		public int? M3SNNO => GetNullableInt("SNNO");
 
 		/// <summary>
 		/// Description: Section level
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Section level")]
-		public int? M3_BLLE => GetNullableInt("BLLE");
+		public int? M3BLLE => GetNullableInt("BLLE");
 
 		/// <summary>
 		/// Description: Empty element
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Empty element")]
-		public int? M3_EMEL => GetNullableInt("EMEL");
+		public int? M3EMEL => GetNullableInt("EMEL");
 
 		/// <summary>
 		/// Description: Section attribute
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Section attribute")]
-		public int? M3_SATR => GetNullableInt("SATR");
+		public int? M3SATR => GetNullableInt("SATR");
 
 		/// <summary>
 		/// Description: Group by element name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group by element name")]
-		public string M3_GRBY => GetString("GRBY");
+		public string M3GRBY => GetString("GRBY");
 
 		/// <summary>
 		/// Description: Subgroup by element name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS007MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subgroup by element name")]
-		public string M3_FGBY => GetString("FGBY");
+		public string M3FGBY => GetString("FGBY");
 	}
 }
 // EOF

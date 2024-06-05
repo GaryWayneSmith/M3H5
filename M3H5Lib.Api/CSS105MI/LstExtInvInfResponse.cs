@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_ALI1 => GetNullableInt("ALI1");
+		public int? M3ALI1 => GetNullableInt("ALI1");
 
 		/// <summary>
 		/// Description: Year
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IDAT => GetNullableDateTime("IDAT");
+		public DateTime? M3IDAT => GetNullableDateTime("IDAT");
 
 		/// <summary>
 		/// Description: Facility
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Customer
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Item number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Invoiced quantity - basic U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity - basic U/M")]
-		public decimal? M3_IVQT => GetNullableDecimal("IVQT");
+		public decimal? M3IVQT => GetNullableDecimal("IVQT");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Product number highest level
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number highest level")]
-		public string M3_PRHL => GetString("PRHL");
+		public string M3PRHL => GetString("PRHL");
 
 		/// <summary>
 		/// Description: Serial number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Order type
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Customer supplier reference
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer supplier reference")]
-		public string M3_CSRE => GetString("CSRE");
+		public string M3CSRE => GetString("CSRE");
 
 		/// <summary>
 		/// Description: External status
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External status")]
-		public string M3_EIST => GetString("EIST");
+		public string M3EIST => GetString("EIST");
 
 		/// <summary>
 		/// Description: Credit indicator
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit indicator")]
-		public string M3_EICI => GetString("EICI");
+		public string M3EICI => GetString("EICI");
 
 		/// <summary>
 		/// Description: External reference
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External reference")]
-		public string M3_EREF => GetString("EREF");
+		public string M3EREF => GetString("EREF");
 
 		/// <summary>
 		/// Description: Item authorized
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item authorized")]
-		public string M3_IATH => GetString("IATH");
+		public string M3IATH => GetString("IATH");
 
 		/// <summary>
 		/// Description: Authorization level
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authorization level")]
-		public string M3_ATHL => GetString("ATHL");
+		public string M3ATHL => GetString("ATHL");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD3 => GetString("USD3");
+		public string M3USD3 => GetString("USD3");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD4 => GetString("USD4");
+		public string M3USD4 => GetString("USD4");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CSS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD5 => GetString("USD5");
+		public string M3USD5 => GetString("USD5");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Shipment
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment")]
-		public int? M3_CONN => GetNullableInt("CONN");
+		public int? M3CONN => GetNullableInt("CONN");
 
 		/// <summary>
 		/// Description: Direction
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Final delivery method
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Final delivery method")]
-		public string M3_MODF => GetString("MODF");
+		public string M3MODF => GetString("MODF");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Final delivery terms
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Final delivery terms")]
-		public string M3_TEDF => GetString("TEDF");
+		public string M3TEDF => GetString("TEDF");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Order number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Route
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route")]
-		public string M3_ROUT => GetString("ROUT");
+		public string M3ROUT => GetString("ROUT");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Stock zone
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock zone")]
-		public string M3_SLTP => GetString("SLTP");
+		public string M3SLTP => GetString("SLTP");
 
 		/// <summary>
 		/// Description: Location
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Disconnected package
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Disconnected package")]
-		public int? M3_DIPA => GetNullableInt("DIPA");
+		public int? M3DIPA => GetNullableInt("DIPA");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Delivery status
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery status")]
-		public string M3_PGRS => GetString("PGRS");
+		public string M3PGRS => GetString("PGRS");
 
 		/// <summary>
 		/// Description: Package number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: Package level
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package level")]
-		public int? M3_PACO => GetNullableInt("PACO");
+		public int? M3PACO => GetNullableInt("PACO");
 
 		/// <summary>
 		/// Description: Included in package number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in package number")]
-		public string M3_PAII => GetString("PAII");
+		public string M3PAII => GetString("PAII");
 
 		/// <summary>
 		/// Description: Sort value
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sort value")]
-		public string M3_SORT => GetString("SORT");
+		public string M3SORT => GetString("SORT");
 
 		/// <summary>
 		/// Description: Customer number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Address number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Bulk package
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bulk package")]
-		public int? M3_PACU => GetNullableInt("PACU");
+		public int? M3PACU => GetNullableInt("PACU");
 
 		/// <summary>
 		/// Description: Packaging code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging code")]
-		public string M3_GRTP => GetString("GRTP");
+		public string M3GRTP => GetString("GRTP");
 
 		/// <summary>
 		/// Description: Packaging
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Remark
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_DLRM => GetString("DLRM");
+		public string M3DLRM => GetString("DLRM");
 
 		/// <summary>
 		/// Description: Goods mark Odette standard
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods mark Odette standard")]
-		public string M3_DLMO => GetString("DLMO");
+		public string M3DLMO => GetString("DLMO");
 
 		/// <summary>
 		/// Description: External tracking number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External tracking number")]
-		public string M3_ETRN => GetString("ETRN");
+		public string M3ETRN => GetString("ETRN");
 
 		/// <summary>
 		/// Description: Actual gross weight
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual gross weight")]
-		public decimal? M3_GWTM => GetNullableDecimal("GWTM");
+		public decimal? M3GWTM => GetNullableDecimal("GWTM");
 
 		/// <summary>
 		/// Description: Actual volume
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual volume")]
-		public decimal? M3_VLMM => GetNullableDecimal("VLMM");
+		public decimal? M3VLMM => GetNullableDecimal("VLMM");
 
 		/// <summary>
 		/// Description: Actual quantity in free unit
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual quantity in free unit")]
-		public decimal? M3_FRCM => GetNullableDecimal("FRCM");
+		public decimal? M3FRCM => GetNullableDecimal("FRCM");
 
 		/// <summary>
 		/// Description: Packaging length
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging length")]
-		public int? M3_PACL => GetNullableInt("PACL");
+		public int? M3PACL => GetNullableInt("PACL");
 
 		/// <summary>
 		/// Description: Packaging width
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging width")]
-		public int? M3_PACW => GetNullableInt("PACW");
+		public int? M3PACW => GetNullableInt("PACW");
 
 		/// <summary>
 		/// Description: Packaging height
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging height")]
-		public int? M3_PACH => GetNullableInt("PACH");
+		public int? M3PACH => GetNullableInt("PACH");
 
 		/// <summary>
 		/// Description: Place sequence number for unloading
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place sequence number for unloading")]
-		public int? M3_DESQ => GetNullableInt("DESQ");
+		public int? M3DESQ => GetNullableInt("DESQ");
 
 		/// <summary>
 		/// Description: Place sequence number for unloading
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place sequence number for unloading")]
-		public int? M3_MULS => GetNullableInt("MULS");
+		public int? M3MULS => GetNullableInt("MULS");
 
 		/// <summary>
 		/// Description: Load building
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Load building")]
-		public int? M3_LOBL => GetNullableInt("LOBL");
+		public int? M3LOBL => GetNullableInt("LOBL");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public string M3_LODO => GetString("LODO");
+		public string M3LODO => GetString("LODO");
 	}
 }
 // EOF

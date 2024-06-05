@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Work order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Cost type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost type")]
-		public string M3_AMTY => GetString("AMTY");
+		public string M3AMTY => GetString("AMTY");
 
 		/// <summary>
 		/// Description: Task element number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Task element number")]
-		public int? M3_ACTS => GetNullableInt("ACTS");
+		public int? M3ACTS => GetNullableInt("ACTS");
 
 		/// <summary>
 		/// Description: Quantity - basic U/M
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Sales price
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_ASP1 => GetNullableDecimal("ASP1");
+		public decimal? M3ASP1 => GetNullableDecimal("ASP1");
 
 		/// <summary>
 		/// Description: WIP debit
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("WIP debit")]
-		public decimal? M3_AWCO => GetNullableDecimal("AWCO");
+		public decimal? M3AWCO => GetNullableDecimal("AWCO");
 
 		/// <summary>
 		/// Description: Description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_ACDS => GetString("ACDS");
+		public string M3ACDS => GetString("ACDS");
 
 		/// <summary>
 		/// Description: Text line 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 1")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 2")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Status
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 	}
 }
 // EOF

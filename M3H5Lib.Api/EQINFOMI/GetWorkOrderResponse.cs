@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Work order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Priority
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Order type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Origin
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin")]
-		public int? M3_GETP => GetNullableInt("GETP");
+		public int? M3GETP => GetNullableInt("GETP");
 
 		/// <summary>
 		/// Description: Status - WO
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - WO")]
-		public string M3_WHST => GetString("WHST");
+		public string M3WHST => GetString("WHST");
 
 		/// <summary>
 		/// Description: Highest operation status - order
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest operation status - order")]
-		public string M3_WHHS => GetString("WHHS");
+		public string M3WHHS => GetString("WHHS");
 
 		/// <summary>
 		/// Description: Material status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material status")]
-		public string M3_WMST => GetString("WMST");
+		public string M3WMST => GetString("WMST");
 
 		/// <summary>
 		/// Description: Lot number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Equipment number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment number")]
-		public string M3_EQNO => GetString("EQNO");
+		public string M3EQNO => GetString("EQNO");
 
 		/// <summary>
 		/// Description: Text line 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 1")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 2")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Original start date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original start date")]
-		public DateTime? M3_FSTD => GetNullableDateTime("FSTD");
+		public DateTime? M3FSTD => GetNullableDateTime("FSTD");
 
 		/// <summary>
 		/// Description: Original start time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original start time")]
-		public int? M3_FSTT => GetNullableInt("FSTT");
+		public int? M3FSTT => GetNullableInt("FSTT");
 
 		/// <summary>
 		/// Description: Original finish date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original finish date")]
-		public DateTime? M3_FFID => GetNullableDateTime("FFID");
+		public DateTime? M3FFID => GetNullableDateTime("FFID");
 
 		/// <summary>
 		/// Description: Original finish time
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original finish time")]
-		public int? M3_FFIT => GetNullableInt("FFIT");
+		public int? M3FFIT => GetNullableInt("FFIT");
 
 		/// <summary>
 		/// Description: Number of times replanned
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of times replanned")]
-		public int? M3_NURP => GetNullableInt("NURP");
+		public int? M3NURP => GetNullableInt("NURP");
 
 		/// <summary>
 		/// Description: Start date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Finish date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Actual start date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start date")]
-		public DateTime? M3_RSDT => GetNullableDateTime("RSDT");
+		public DateTime? M3RSDT => GetNullableDateTime("RSDT");
 
 		/// <summary>
 		/// Description: Actual start time
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start time")]
-		public int? M3_RSTI => GetNullableInt("RSTI");
+		public int? M3RSTI => GetNullableInt("RSTI");
 
 		/// <summary>
 		/// Description: Actual finish date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual finish date")]
-		public DateTime? M3_REFD => GetNullableDateTime("REFD");
+		public DateTime? M3REFD => GetNullableDateTime("REFD");
 
 		/// <summary>
 		/// Description: Actual finish time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual finish time")]
-		public int? M3_RFTI => GetNullableInt("RFTI");
+		public int? M3RFTI => GetNullableInt("RFTI");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Costing performed
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing performed")]
-		public int? M3_PCDO => GetNullableInt("PCDO");
+		public int? M3PCDO => GetNullableInt("PCDO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Project number
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Start time
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public int? M3_MSTI => GetNullableInt("MSTI");
+		public int? M3MSTI => GetNullableInt("MSTI");
 
 		/// <summary>
 		/// Description: Finish time
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish time")]
-		public int? M3_MFTI => GetNullableInt("MFTI");
+		public int? M3MFTI => GetNullableInt("MFTI");
 
 		/// <summary>
 		/// Description: Next item number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next item number")]
-		public string M3_NHAI => GetString("NHAI");
+		public string M3NHAI => GetString("NHAI");
 
 		/// <summary>
 		/// Description: Next serial number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next serial number")]
-		public string M3_NHSN => GetString("NHSN");
+		public string M3NHSN => GetString("NHSN");
 
 		/// <summary>
 		/// Description: Configuration position
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration position")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: Technical allocation
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technical allocation")]
-		public int? M3_TEAL => GetNullableInt("TEAL");
+		public int? M3TEAL => GetNullableInt("TEAL");
 
 		/// <summary>
 		/// Description: Transaction reason
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction reason")]
-		public string M3_RSCD => GetString("RSCD");
+		public string M3RSCD => GetString("RSCD");
 
 		/// <summary>
 		/// Description: New item number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New item number")]
-		public string M3_NITN => GetString("NITN");
+		public string M3NITN => GetString("NITN");
 
 		/// <summary>
 		/// Description: New lot number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New lot number")]
-		public string M3_NBAN => GetString("NBAN");
+		public string M3NBAN => GetString("NBAN");
 
 		/// <summary>
 		/// Description: Highest item
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest item")]
-		public string M3_HIIT => GetString("HIIT");
+		public string M3HIIT => GetString("HIIT");
 
 		/// <summary>
 		/// Description: Serial number highest level
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number highest level")]
-		public string M3_HISN => GetString("HISN");
+		public string M3HISN => GetString("HISN");
 
 		/// <summary>
 		/// Description: Installed item
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Installed item")]
-		public string M3_IITO => GetString("IITO");
+		public string M3IITO => GetString("IITO");
 
 		/// <summary>
 		/// Description: Installed serial number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Installed serial number")]
-		public string M3_IIBA => GetString("IIBA");
+		public string M3IIBA => GetString("IIBA");
 
 		/// <summary>
 		/// Description: Event type
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event type")]
-		public string M3_EVTY => GetString("EVTY");
+		public string M3EVTY => GetString("EVTY");
 
 		/// <summary>
 		/// Description: Shutdown
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shutdown")]
-		public int? M3_NSTP => GetNullableInt("NSTP");
+		public int? M3NSTP => GetNullableInt("NSTP");
 
 		/// <summary>
 		/// Description: User-defined field 1 - item
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: Engineering order number
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Engineering order number")]
-		public string M3_AECN => GetString("AECN");
+		public string M3AECN => GetString("AECN");
 
 		/// <summary>
 		/// Description: Registration number/site
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number/site")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 
 		/// <summary>
 		/// Description: Sequence
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence")]
-		public int? M3_SEQC => GetNullableInt("SEQC");
+		public int? M3SEQC => GetNullableInt("SEQC");
 
 		/// <summary>
 		/// Description: Hold MO status
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hold MO status")]
-		public string M3_MOHS => GetString("MOHS");
+		public string M3MOHS => GetString("MOHS");
 
 		/// <summary>
 		/// Description: Revision number
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_REVN => GetString("REVN");
+		public string M3REVN => GetString("REVN");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Requested start date
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested start date")]
-		public DateTime? M3_RRSD => GetNullableDateTime("RRSD");
+		public DateTime? M3RRSD => GetNullableDateTime("RRSD");
 
 		/// <summary>
 		/// Description: Requested start time
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested start time")]
-		public int? M3_RRST => GetNullableInt("RRST");
+		public int? M3RRST => GetNullableInt("RRST");
 
 		/// <summary>
 		/// Description: Requested finish date
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested finish date")]
-		public DateTime? M3_RRFD => GetNullableDateTime("RRFD");
+		public DateTime? M3RRFD => GetNullableDateTime("RRFD");
 
 		/// <summary>
 		/// Description: Requested finish time
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested finish time")]
-		public int? M3_RRFT => GetNullableInt("RRFT");
+		public int? M3RRFT => GetNullableInt("RRFT");
 
 		/// <summary>
 		/// Description: Estimated downtime
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated downtime")]
-		public int? M3_EDWT => GetNullableInt("EDWT");
+		public int? M3EDWT => GetNullableInt("EDWT");
 
 		/// <summary>
 		/// Description: Scheduling logic
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scheduling logic")]
-		public int? M3_SCHL => GetNullableInt("SCHL");
+		public int? M3SCHL => GetNullableInt("SCHL");
 
 		/// <summary>
 		/// Description: Approved by
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved by")]
-		public string M3_APRB => GetString("APRB");
+		public string M3APRB => GetString("APRB");
 
 		/// <summary>
 		/// Description: Employee number
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Text identity
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

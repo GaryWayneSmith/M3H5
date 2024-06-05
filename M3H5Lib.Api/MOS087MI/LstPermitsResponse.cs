@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Work order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Task element number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Task element number")]
-		public int? M3_ACTS => GetNullableInt("ACTS");
+		public int? M3ACTS => GetNullableInt("ACTS");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Isolation point
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Isolation point")]
-		public string M3_IPOI => GetString("IPOI");
+		public string M3IPOI => GetString("IPOI");
 
 		/// <summary>
 		/// Description: Lock identity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lock identity")]
-		public string M3_LOCK => GetString("LOCK");
+		public string M3LOCK => GetString("LOCK");
 
 		/// <summary>
 		/// Description: Name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Status
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS087MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 	}
 }
 // EOF

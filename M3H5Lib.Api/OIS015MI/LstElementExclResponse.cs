@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Element - sales price costing
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element - sales price costing")]
-		public string M3_SCEL => GetString("SCEL");
+		public string M3SCEL => GetString("SCEL");
 
 		/// <summary>
 		/// Description: Field
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJC => GetString("OBJC");
+		public string M3OBJC => GetString("OBJC");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Valid from
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 	}
 }
 // EOF

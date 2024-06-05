@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS180MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Get Amount in Words
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_NUMI">Amount in Numerals (Required)</param>
-		/// <param name="m3_LNCD">Language</param>
-		/// <param name="m3_CNVM">Printout of amounts</param>
-		/// <param name="m3_PMNE">Negative value permitted</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3NUMI">Amount in Numerals (Required)</param>
+		/// <param name="m3LNCD">Language</param>
+		/// <param name="m3CNVM">Printout of amounts</param>
+		/// <param name="m3PMNE">Negative value permitted</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAmtInWordsResponse></returns>
 		/// <exception cref="M3Exception<GetAmtInWordsResponse>"></exception>
 		public async Task<M3Response<GetAmtInWordsResponse>> GetAmtInWords(
-			string m3_CUCD, 
-			decimal m3_NUMI, 
-			string m3_LNCD = null, 
-			int? m3_CNVM = null, 
-			int? m3_PMNE = null, 
+			string m3CUCD, 
+			decimal m3NUMI, 
+			string m3LNCD = null, 
+			int? m3CNVM = null, 
+			int? m3PMNE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,21 +70,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("NUMI", m3_NUMI.ToString());
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("NUMI", m3NUMI.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
-			if (m3_CNVM.HasValue)
-				request.WithQueryParameter("CNVM", m3_CNVM.Value.ToString());
-			if (m3_PMNE.HasValue)
-				request.WithQueryParameter("PMNE", m3_PMNE.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
+			if (m3CNVM.HasValue)
+				request.WithQueryParameter("CNVM", m3CNVM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PMNE.HasValue)
+				request.WithQueryParameter("PMNE", m3PMNE.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetAmtInWordsResponse>(
@@ -92,7 +94,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -103,8 +106,8 @@ namespace M3H5Lib.Api
 		/// Description Get Currency per Language
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -113,8 +116,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCurrPerLngResponse></returns>
 		/// <exception cref="M3Exception<GetCurrPerLngResponse>"></exception>
 		public async Task<M3Response<GetCurrPerLngResponse>> GetCurrPerLng(
-			string m3_CUCD, 
-			string m3_LNCD = null, 
+			string m3CUCD, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -129,16 +132,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCD", m3_CUCD.Trim());
+				.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCurrPerLngResponse>(
@@ -148,7 +151,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

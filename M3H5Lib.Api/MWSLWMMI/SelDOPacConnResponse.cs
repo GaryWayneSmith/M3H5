@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Direction
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: Package number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: Delivery status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery status")]
-		public string M3_PGRS => GetString("PGRS");
+		public string M3PGRS => GetString("PGRS");
 
 		/// <summary>
 		/// Description: External tracking number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External tracking number")]
-		public string M3_ETRN => GetString("ETRN");
+		public string M3ETRN => GetString("ETRN");
 
 		/// <summary>
 		/// Description: Transaction date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction date")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: Package level
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package level")]
-		public int? M3_PACO => GetNullableInt("PACO");
+		public int? M3PACO => GetNullableInt("PACO");
 
 		/// <summary>
 		/// Description: Included in package number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in package number")]
-		public string M3_PAII => GetString("PAII");
+		public string M3PAII => GetString("PAII");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Outer package number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Outer package number")]
-		public string M3_OPAN => GetString("OPAN");
+		public string M3OPAN => GetString("OPAN");
 
 		/// <summary>
 		/// Description: Packaging
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Sort value
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sort value")]
-		public string M3_SORT => GetString("SORT");
+		public string M3SORT => GetString("SORT");
 
 		/// <summary>
 		/// Description: Actual net weight
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual net weight")]
-		public decimal? M3_NTWM => GetNullableDecimal("NTWM");
+		public decimal? M3NTWM => GetNullableDecimal("NTWM");
 
 		/// <summary>
 		/// Description: Actual gross weight
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual gross weight")]
-		public decimal? M3_GWTM => GetNullableDecimal("GWTM");
+		public decimal? M3GWTM => GetNullableDecimal("GWTM");
 
 		/// <summary>
 		/// Description: Actual volume
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual volume")]
-		public decimal? M3_VLMM => GetNullableDecimal("VLMM");
+		public decimal? M3VLMM => GetNullableDecimal("VLMM");
 
 		/// <summary>
 		/// Description: Actual quantity in free unit
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual quantity in free unit")]
-		public decimal? M3_FRCM => GetNullableDecimal("FRCM");
+		public decimal? M3FRCM => GetNullableDecimal("FRCM");
 
 		/// <summary>
 		/// Description: Package status
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package status")]
-		public string M3_PACS => GetString("PACS");
+		public string M3PACS => GetString("PACS");
 	}
 }
 // EOF

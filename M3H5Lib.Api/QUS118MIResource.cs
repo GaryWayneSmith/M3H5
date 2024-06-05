@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QUS118MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,17 +38,17 @@ namespace M3H5Lib.Api
 		/// Description Add Miscellaneous Costs
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QADD">Additions (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_RESP">Responsible</param>
-		/// <param name="m3_CRID">Charge</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ITDS">Name</param>
-		/// <param name="m3_DERE">Default record</param>
-		/// <param name="m3_EXCL">Excluded</param>
+		/// <param name="m3QADD">Additions (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3RESP">Responsible</param>
+		/// <param name="m3CRID">Charge</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ITDS">Name</param>
+		/// <param name="m3DERE">Default record</param>
+		/// <param name="m3EXCL">Excluded</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -55,17 +57,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddMiscellaneou(
-			string m3_QADD, 
-			string m3_TX40, 
-			string m3_PRNO = null, 
-			string m3_TX15 = null, 
-			string m3_STAT = null, 
-			string m3_RESP = null, 
-			string m3_CRID = null, 
-			string m3_ITNO = null, 
-			string m3_ITDS = null, 
-			int? m3_DERE = null, 
-			int? m3_EXCL = null, 
+			string m3QADD, 
+			string m3TX40, 
+			string m3PRNO = null, 
+			string m3TX15 = null, 
+			string m3STAT = null, 
+			string m3RESP = null, 
+			string m3CRID = null, 
+			string m3ITNO = null, 
+			string m3ITDS = null, 
+			int? m3DERE = null, 
+			int? m3EXCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -80,35 +82,35 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QADD))
-				throw new ArgumentNullException("m3_QADD");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3QADD))
+				throw new ArgumentNullException(nameof(m3QADD));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QADD", m3_QADD.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("QADD", m3QADD.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RESP))
-				request.WithQueryParameter("RESP", m3_RESP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITDS))
-				request.WithQueryParameter("ITDS", m3_ITDS.Trim());
-			if (m3_DERE.HasValue)
-				request.WithQueryParameter("DERE", m3_DERE.Value.ToString());
-			if (m3_EXCL.HasValue)
-				request.WithQueryParameter("EXCL", m3_EXCL.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RESP))
+				request.WithQueryParameter("RESP", m3RESP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITDS))
+				request.WithQueryParameter("ITDS", m3ITDS.Trim());
+			if (m3DERE.HasValue)
+				request.WithQueryParameter("DERE", m3DERE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3EXCL.HasValue)
+				request.WithQueryParameter("EXCL", m3EXCL.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -118,7 +120,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -129,17 +132,17 @@ namespace M3H5Lib.Api
 		/// Description ChangeMiscellaneous Costs
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QADD">Additions (Required)</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_RESP">Responsible</param>
-		/// <param name="m3_CRID">Charge</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ITDS">Name</param>
-		/// <param name="m3_DERE">Default record</param>
-		/// <param name="m3_EXCL">Excluded</param>
+		/// <param name="m3QADD">Additions (Required)</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3RESP">Responsible</param>
+		/// <param name="m3CRID">Charge</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ITDS">Name</param>
+		/// <param name="m3DERE">Default record</param>
+		/// <param name="m3EXCL">Excluded</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -148,17 +151,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgMiscellaneou(
-			string m3_QADD, 
-			string m3_PRNO = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_STAT = null, 
-			string m3_RESP = null, 
-			string m3_CRID = null, 
-			string m3_ITNO = null, 
-			string m3_ITDS = null, 
-			int? m3_DERE = null, 
-			int? m3_EXCL = null, 
+			string m3QADD, 
+			string m3PRNO = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3STAT = null, 
+			string m3RESP = null, 
+			string m3CRID = null, 
+			string m3ITNO = null, 
+			string m3ITDS = null, 
+			int? m3DERE = null, 
+			int? m3EXCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -173,34 +176,34 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QADD))
-				throw new ArgumentNullException("m3_QADD");
+			if (string.IsNullOrWhiteSpace(m3QADD))
+				throw new ArgumentNullException(nameof(m3QADD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QADD", m3_QADD.Trim());
+				.WithQueryParameter("QADD", m3QADD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RESP))
-				request.WithQueryParameter("RESP", m3_RESP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITDS))
-				request.WithQueryParameter("ITDS", m3_ITDS.Trim());
-			if (m3_DERE.HasValue)
-				request.WithQueryParameter("DERE", m3_DERE.Value.ToString());
-			if (m3_EXCL.HasValue)
-				request.WithQueryParameter("EXCL", m3_EXCL.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RESP))
+				request.WithQueryParameter("RESP", m3RESP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITDS))
+				request.WithQueryParameter("ITDS", m3ITDS.Trim());
+			if (m3DERE.HasValue)
+				request.WithQueryParameter("DERE", m3DERE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3EXCL.HasValue)
+				request.WithQueryParameter("EXCL", m3EXCL.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -210,7 +213,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -221,8 +225,8 @@ namespace M3H5Lib.Api
 		/// Description Deletet Miscellaneous Costs
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_QADD">Additions</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3QADD">Additions</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -231,8 +235,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltMiscellaneou(
-			string m3_PRNO = null, 
-			string m3_QADD = null, 
+			string m3PRNO = null, 
+			string m3QADD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -247,10 +251,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_QADD))
-				request.WithQueryParameter("QADD", m3_QADD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QADD))
+				request.WithQueryParameter("QADD", m3QADD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -260,7 +264,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -271,8 +276,8 @@ namespace M3H5Lib.Api
 		/// Description Get Miscellaneous Costs
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QADD">Additions (Required)</param>
-		/// <param name="m3_PRNO">Product number</param>
+		/// <param name="m3QADD">Additions (Required)</param>
+		/// <param name="m3PRNO">Product number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -281,8 +286,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetMiscellaneouResponse></returns>
 		/// <exception cref="M3Exception<GetMiscellaneouResponse>"></exception>
 		public async Task<M3Response<GetMiscellaneouResponse>> GetMiscellaneou(
-			string m3_QADD, 
-			string m3_PRNO = null, 
+			string m3QADD, 
+			string m3PRNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -297,16 +302,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QADD))
-				throw new ArgumentNullException("m3_QADD");
+			if (string.IsNullOrWhiteSpace(m3QADD))
+				throw new ArgumentNullException(nameof(m3QADD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QADD", m3_QADD.Trim());
+				.WithQueryParameter("QADD", m3QADD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetMiscellaneouResponse>(
@@ -316,7 +321,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -327,8 +333,8 @@ namespace M3H5Lib.Api
 		/// Description List Miscellaneous Costs
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_QADD">Additions</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3QADD">Additions</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -337,8 +343,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstMiscellaneouResponse></returns>
 		/// <exception cref="M3Exception<LstMiscellaneouResponse>"></exception>
 		public async Task<M3Response<LstMiscellaneouResponse>> LstMiscellaneou(
-			string m3_PRNO = null, 
-			string m3_QADD = null, 
+			string m3PRNO = null, 
+			string m3QADD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -353,10 +359,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_QADD))
-				request.WithQueryParameter("QADD", m3_QADD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QADD))
+				request.WithQueryParameter("QADD", m3QADD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstMiscellaneouResponse>(
@@ -366,7 +372,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

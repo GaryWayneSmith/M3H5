@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Purchase order category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order category")]
-		public string M3_POTC => GetString("POTC");
+		public string M3POTC => GetString("POTC");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Panel sequence
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel sequence")]
-		public string M3_PSEQ => GetString("PSEQ");
+		public string M3PSEQ => GetString("PSEQ");
 
 		/// <summary>
 		/// Description: Panel sequence
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel sequence")]
-		public string M3_PSQ1 => GetString("PSQ1");
+		public string M3PSQ1 => GetString("PSQ1");
 
 		/// <summary>
 		/// Description: 020 Number series - PO
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("020 Number series - PO")]
-		public string M3_P020 => GetString("P020");
+		public string M3P020 => GetString("P020");
 
 		/// <summary>
 		/// Description: 021 Number series - goods receiving doc
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("021 Number series - goods receiving doc")]
-		public string M3_P021 => GetString("P021");
+		public string M3P021 => GetString("P021");
 
 		/// <summary>
 		/// Description: 022 Number series - claims
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("022 Number series - claims")]
-		public string M3_P022 => GetString("P022");
+		public string M3P022 => GetString("P022");
 
 		/// <summary>
 		/// Description: 030 Document variant - PO
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("030 Document variant - PO")]
-		public string M3_P030 => GetString("P030");
+		public string M3P030 => GetString("P030");
 
 		/// <summary>
 		/// Description: 040 Goods receiving method
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("040 Goods receiving method")]
-		public string M3_P040 => GetString("P040");
+		public string M3P040 => GetString("P040");
 
 		/// <summary>
 		/// Description: 050 Media Profile - PO
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("050 Media Profile - PO")]
-		public string M3_P050 => GetString("P050");
+		public string M3P050 => GetString("P050");
 
 		/// <summary>
 		/// Description: 060 Reference order category
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("060 Reference order category")]
-		public int? M3_P060 => GetNullableInt("P060");
+		public int? M3P060 => GetNullableInt("P060");
 
 		/// <summary>
 		/// Description: 070 Authority check
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("070 Authority check")]
-		public int? M3_P070 => GetNullableInt("P070");
+		public int? M3P070 => GetNullableInt("P070");
 
 		/// <summary>
 		/// Description: 110 Mandatory item/supplier record
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("110 Mandatory item/supplier record")]
-		public int? M3_P110 => GetNullableInt("P110");
+		public int? M3P110 => GetNullableInt("P110");
 
 		/// <summary>
 		/// Description: 120 Printout method - item name
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("120 Printout method - item name")]
-		public int? M3_P120 => GetNullableInt("P120");
+		public int? M3P120 => GetNullableInt("P120");
 
 		/// <summary>
 		/// Description: 121 Printout method - item description
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("121 Printout method - item description")]
-		public int? M3_P121 => GetNullableInt("P121");
+		public int? M3P121 => GetNullableInt("P121");
 
 		/// <summary>
 		/// Description: 130 Print PO lines
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("130 Print PO lines")]
-		public int? M3_P130 => GetNullableInt("P130");
+		public int? M3P130 => GetNullableInt("P130");
 
 		/// <summary>
 		/// Description: 140 PO split on reference person
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("140 PO split on reference person")]
-		public int? M3_P140 => GetNullableInt("P140");
+		public int? M3P140 => GetNullableInt("P140");
 
 		/// <summary>
 		/// Description: 150 Update material plan
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("150 Update material plan")]
-		public int? M3_P150 => GetNullableInt("P150");
+		public int? M3P150 => GetNullableInt("P150");
 
 		/// <summary>
 		/// Description: 160 Multiple agreements per PO
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("160 Multiple agreements per PO")]
-		public int? M3_P160 => GetNullableInt("P160");
+		public int? M3P160 => GetNullableInt("P160");
 
 		/// <summary>
 		/// Description: 161 Agreement check - PO entry
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("161 Agreement check - PO entry")]
-		public int? M3_P161 => GetNullableInt("P161");
+		public int? M3P161 => GetNullableInt("P161");
 
 		/// <summary>
 		/// Description: 170 PO deletion method - PO
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("170 PO deletion method - PO")]
-		public int? M3_P170 => GetNullableInt("P170");
+		public int? M3P170 => GetNullableInt("P170");
 
 		/// <summary>
 		/// Description: 175 Initial provisioning order
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("175 Initial provisioning order")]
-		public int? M3_P175 => GetNullableInt("P175");
+		public int? M3P175 => GetNullableInt("P175");
 
 		/// <summary>
 		/// Description: Update pre-allocation when qty chg
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update pre-allocation when qty chg")]
-		public int? M3_PTQC => GetNullableInt("PTQC");
+		public int? M3PTQC => GetNullableInt("PTQC");
 
 		/// <summary>
 		/// Description: 180 Project number check
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("180 Project number check")]
-		public int? M3_P180 => GetNullableInt("P180");
+		public int? M3P180 => GetNullableInt("P180");
 
 		/// <summary>
 		/// Description: 190 PO type check
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("190 PO type check")]
-		public int? M3_P190 => GetNullableInt("P190");
+		public int? M3P190 => GetNullableInt("P190");
 
 		/// <summary>
 		/// Description: 200 Should PO proposal get a warning if
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("200 Should PO proposal get a warning if")]
-		public int? M3_P200 => GetNullableInt("P200");
+		public int? M3P200 => GetNullableInt("P200");
 
 		/// <summary>
 		/// Description: 210 Maximum number of PO lines
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("210 Maximum number of PO lines")]
-		public int? M3_P210 => GetNullableInt("P210");
+		public int? M3P210 => GetNullableInt("P210");
 
 		/// <summary>
 		/// Description: 220 Update item file with purchase price
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("220 Update item file with purchase price")]
-		public int? M3_P220 => GetNullableInt("P220");
+		public int? M3P220 => GetNullableInt("P220");
 
 		/// <summary>
 		/// Description: 225 Retrieve price from last invoice
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("225 Retrieve price from last invoice")]
-		public int? M3_P225 => GetNullableInt("P225");
+		public int? M3P225 => GetNullableInt("P225");
 
 		/// <summary>
 		/// Description: 230 Pricing rule - phantom items
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("230 Pricing rule - phantom items")]
-		public int? M3_P230 => GetNullableInt("P230");
+		public int? M3P230 => GetNullableInt("P230");
 
 		/// <summary>
 		/// Description: 240 Price text
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("240 Price text")]
-		public int? M3_P240 => GetNullableInt("P240");
+		public int? M3P240 => GetNullableInt("P240");
 
 		/// <summary>
 		/// Description: 250 PO to agent
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("250 PO to agent")]
-		public int? M3_P250 => GetNullableInt("P250");
+		public int? M3P250 => GetNullableInt("P250");
 
 		/// <summary>
 		/// Description: 260 Revision check
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("260 Revision check")]
-		public int? M3_P260 => GetNullableInt("P260");
+		public int? M3P260 => GetNullableInt("P260");
 
 		/// <summary>
 		/// Description: 280 Purch costing calc on each line
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("280 Purch costing calc on each line")]
-		public int? M3_P280 => GetNullableInt("P280");
+		public int? M3P280 => GetNullableInt("P280");
 
 		/// <summary>
 		/// Description: 290 Usage of recipient field on PO line
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("290 Usage of recipient field on PO line")]
-		public int? M3_P290 => GetNullableInt("P290");
+		public int? M3P290 => GetNullableInt("P290");
 
 		/// <summary>
 		/// Description: 320 Representative price
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("320 Representative price")]
-		public int? M3_P320 => GetNullableInt("P320");
+		public int? M3P320 => GetNullableInt("P320");
 
 		/// <summary>
 		/// Description: 330 Check maximum service charge limit
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("330 Check maximum service charge limit")]
-		public int? M3_P330 => GetNullableInt("P330");
+		public int? M3P330 => GetNullableInt("P330");
 
 		/// <summary>
 		/// Description: 340 Multiple warehouses per PO
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("340 Multiple warehouses per PO")]
-		public int? M3_P340 => GetNullableInt("P340");
+		public int? M3P340 => GetNullableInt("P340");
 
 		/// <summary>
 		/// Description: 341 Multiple delivery addresses per PO
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("341 Multiple delivery addresses per PO")]
-		public int? M3_P341 => GetNullableInt("P341");
+		public int? M3P341 => GetNullableInt("P341");
 
 		/// <summary>
 		/// Description: 350 Consolidation fence - PO
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("350 Consolidation fence - PO")]
-		public int? M3_P350 => GetNullableInt("P350");
+		public int? M3P350 => GetNullableInt("P350");
 
 		/// <summary>
 		/// Description: 360 PO status -confirmed- after printing
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("360 PO status -confirmed- after printing")]
-		public int? M3_P360 => GetNullableInt("P360");
+		public int? M3P360 => GetNullableInt("P360");
 
 		/// <summary>
 		/// Description: 370 Warning - dely date within lead time
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("370 Warning - dely date within lead time")]
-		public int? M3_P370 => GetNullableInt("P370");
+		public int? M3P370 => GetNullableInt("P370");
 
 		/// <summary>
 		/// Description: 380 Inventory management
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("380 Inventory management")]
-		public int? M3_P380 => GetNullableInt("P380");
+		public int? M3P380 => GetNullableInt("P380");
 
 		/// <summary>
 		/// Description: 381 Default order type for repair order
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("381 Default order type for repair order")]
-		public string M3_P381 => GetString("P381");
+		public string M3P381 => GetString("P381");
 
 		/// <summary>
 		/// Description: 390 EU labor code
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("390 EU labor code")]
-		public string M3_P390 => GetString("P390");
+		public string M3P390 => GetString("P390");
 
 		/// <summary>
 		/// Description: 400 EU origin code trade transaction
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("400 EU origin code trade transaction")]
-		public string M3_P400 => GetString("P400");
+		public string M3P400 => GetString("P400");
 
 		/// <summary>
 		/// Description: 510 Stop if excess delivery
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("510 Stop if excess delivery")]
-		public int? M3_P510 => GetNullableInt("P510");
+		public int? M3P510 => GetNullableInt("P510");
 
 		/// <summary>
 		/// Description: 520 get buyer from agreement
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("520 get buyer from agreement")]
-		public int? M3_P520 => GetNullableInt("P520");
+		public int? M3P520 => GetNullableInt("P520");
 
 		/// <summary>
 		/// Description: 530 PO transaction - order confirmation
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("530 PO transaction - order confirmation")]
-		public int? M3_P530 => GetNullableInt("P530");
+		public int? M3P530 => GetNullableInt("P530");
 
 		/// <summary>
 		/// Description: 531 PO transaction - shipment advice
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("531 PO transaction - shipment advice")]
-		public int? M3_P531 => GetNullableInt("P531");
+		public int? M3P531 => GetNullableInt("P531");
 
 		/// <summary>
 		/// Description: 532 PO transaction - transport notificat
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("532 PO transaction - transport notificat")]
-		public int? M3_P532 => GetNullableInt("P532");
+		public int? M3P532 => GetNullableInt("P532");
 
 		/// <summary>
 		/// Description: 540 Completion flag open - goods receipt
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("540 Completion flag open - goods receipt")]
-		public int? M3_P540 => GetNullableInt("P540");
+		public int? M3P540 => GetNullableInt("P540");
 
 		/// <summary>
 		/// Description: Packaging action
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging action")]
-		public int? M3_PCKA => GetNullableInt("PCKA");
+		public int? M3PCKA => GetNullableInt("PCKA");
 
 		/// <summary>
 		/// Description: 610 Invoice reporting
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("610 Invoice reporting")]
-		public int? M3_P610 => GetNullableInt("P610");
+		public int? M3P610 => GetNullableInt("P610");
 
 		/// <summary>
 		/// Description: 620 Auto display accounting string
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("620 Auto display accounting string")]
-		public int? M3_P620 => GetNullableInt("P620");
+		public int? M3P620 => GetNullableInt("P620");
 
 		/// <summary>
 		/// Description: 630 Invoicing permitted
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("630 Invoicing permitted")]
-		public int? M3_P630 => GetNullableInt("P630");
+		public int? M3P630 => GetNullableInt("P630");
 
 		/// <summary>
 		/// Description: 640 Manual update of due date
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("640 Manual update of due date")]
-		public int? M3_P640 => GetNullableInt("P640");
+		public int? M3P640 => GetNullableInt("P640");
 
 		/// <summary>
 		/// Description: 650 Partial payment permitted
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("650 Partial payment permitted")]
-		public int? M3_P650 => GetNullableInt("P650");
+		public int? M3P650 => GetNullableInt("P650");
 
 		/// <summary>
 		/// Description: 710 Automatic printout of PO documents.
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("710 Automatic printout of PO documents.")]
-		public int? M3_P710 => GetNullableInt("P710");
+		public int? M3P710 => GetNullableInt("P710");
 
 		/// <summary>
 		/// Description: 720 Supplier performance affected
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("720 Supplier performance affected")]
-		public int? M3_P720 => GetNullableInt("P720");
+		public int? M3P720 => GetNullableInt("P720");
 
 		/// <summary>
 		/// Description: 730 Automatic delivery note generation
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("730 Automatic delivery note generation")]
-		public int? M3_P730 => GetNullableInt("P730");
+		public int? M3P730 => GetNullableInt("P730");
 
 		/// <summary>
 		/// Description: 740 Vendor statistics update
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("740 Vendor statistics update")]
-		public int? M3_P740 => GetNullableInt("P740");
+		public int? M3P740 => GetNullableInt("P740");
 
 		/// <summary>
 		/// Description: Consolidation group
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consolidation group")]
-		public string M3_CGRP => GetString("CGRP");
+		public string M3CGRP => GetString("CGRP");
 
 		/// <summary>
 		/// Description: Season control
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Season control")]
-		public int? M3_SEAG => GetNullableInt("SEAG");
+		public int? M3SEAG => GetNullableInt("SEAG");
 
 		/// <summary>
 		/// Description: Frozen requsted delivery date
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.PPS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frozen requsted delivery date")]
-		public int? M3_P770 => GetNullableInt("P770");
+		public int? M3P770 => GetNullableInt("P770");
 	}
 }
 // EOF

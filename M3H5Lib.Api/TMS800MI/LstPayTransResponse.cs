@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Employee number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: From date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_TDAF => GetNullableDateTime("TDAF");
+		public DateTime? M3TDAF => GetNullableDateTime("TDAF");
 
 		/// <summary>
 		/// Description: To date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: From clock
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From clock")]
-		public int? M3_TCLF => GetNullableInt("TCLF");
+		public int? M3TCLF => GetNullableInt("TCLF");
 
 		/// <summary>
 		/// Description: To clock
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To clock")]
-		public int? M3_TCLT => GetNullableInt("TCLT");
+		public int? M3TCLT => GetNullableInt("TCLT");
 
 		/// <summary>
 		/// Description: Pay element
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pay element")]
-		public int? M3_KIWG => GetNullableInt("KIWG");
+		public int? M3KIWG => GetNullableInt("KIWG");
 
 		/// <summary>
 		/// Description: Calculated time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated time")]
-		public decimal? M3_CTME => GetNullableDecimal("CTME");
+		public decimal? M3CTME => GetNullableDecimal("CTME");
 
 		/// <summary>
 		/// Description: Total amount
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total amount")]
-		public decimal? M3_TODL => GetNullableDecimal("TODL");
+		public decimal? M3TODL => GetNullableDecimal("TODL");
 
 		/// <summary>
 		/// Description: Accounting dimension 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 1")]
-		public string M3_AIT1 => GetString("AIT1");
+		public string M3AIT1 => GetString("AIT1");
 
 		/// <summary>
 		/// Description: Accounting dimension 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 2")]
-		public string M3_AIT2 => GetString("AIT2");
+		public string M3AIT2 => GetString("AIT2");
 
 		/// <summary>
 		/// Description: Accounting dimension 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 3")]
-		public string M3_AIT3 => GetString("AIT3");
+		public string M3AIT3 => GetString("AIT3");
 
 		/// <summary>
 		/// Description: Accounting dimension 4
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 4")]
-		public string M3_AIT4 => GetString("AIT4");
+		public string M3AIT4 => GetString("AIT4");
 
 		/// <summary>
 		/// Description: Accounting dimension 5
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 5")]
-		public string M3_AIT5 => GetString("AIT5");
+		public string M3AIT5 => GetString("AIT5");
 
 		/// <summary>
 		/// Description: Accounting dimension 6
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 6")]
-		public string M3_AIT6 => GetString("AIT6");
+		public string M3AIT6 => GetString("AIT6");
 
 		/// <summary>
 		/// Description: Accounting dimension 7
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 7")]
-		public string M3_AIT7 => GetString("AIT7");
+		public string M3AIT7 => GetString("AIT7");
 
 		/// <summary>
 		/// Description: Facility
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work center
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Product number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Yield quantity
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yield quantity")]
-		public decimal? M3_BAQT => GetNullableDecimal("BAQT");
+		public decimal? M3BAQT => GetNullableDecimal("BAQT");
 
 		/// <summary>
 		/// Description: Manfactured quantity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manfactured quantity")]
-		public decimal? M3_MAQA => GetNullableDecimal("MAQA");
+		public decimal? M3MAQA => GetNullableDecimal("MAQA");
 
 		/// <summary>
 		/// Description: Scrap quantity alternative unit
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scrap quantity alternative unit")]
-		public decimal? M3_SCQA => GetNullableDecimal("SCQA");
+		public decimal? M3SCQA => GetNullableDecimal("SCQA");
 
 		/// <summary>
 		/// Description: Used labor setup time
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used labor setup time")]
-		public decimal? M3_UMAT => GetNullableDecimal("UMAT");
+		public decimal? M3UMAT => GetNullableDecimal("UMAT");
 
 		/// <summary>
 		/// Description: Used labor setup time
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used labor setup time")]
-		public decimal? M3_UMAS => GetNullableDecimal("UMAS");
+		public decimal? M3UMAS => GetNullableDecimal("UMAS");
 
 		/// <summary>
 		/// Description: Unit price
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit price")]
-		public decimal? M3_PIPR => GetNullableDecimal("PIPR");
+		public decimal? M3PIPR => GetNullableDecimal("PIPR");
 
 		/// <summary>
 		/// Description: Price and time quantity
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price and time quantity")]
-		public int? M3_CTCD => GetNullableInt("CTCD");
+		public int? M3CTCD => GetNullableInt("CTCD");
 
 		/// <summary>
 		/// Description: Setup price
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup price")]
-		public decimal? M3_SEPR => GetNullableDecimal("SEPR");
+		public decimal? M3SEPR => GetNullableDecimal("SEPR");
 
 		/// <summary>
 		/// Description: Time rate
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time rate")]
-		public decimal? M3_WAFA => GetNullableDecimal("WAFA");
+		public decimal? M3WAFA => GetNullableDecimal("WAFA");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Production lot number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Production lot number")]
-		public long? M3_PLNO => GetNullableLong("PLNO");
+		public long? M3PLNO => GetNullableLong("PLNO");
 
 		/// <summary>
 		/// Description: Payroll period
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payroll period")]
-		public int? M3_PEWA => GetNullableInt("PEWA");
+		public int? M3PEWA => GetNullableInt("PEWA");
 
 		/// <summary>
 		/// Description: Reporting date
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting date")]
-		public DateTime? M3_RPDT => GetNullableDateTime("RPDT");
+		public DateTime? M3RPDT => GetNullableDateTime("RPDT");
 
 		/// <summary>
 		/// Description: Program name
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Transaction type payroll
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type payroll")]
-		public int? M3_ETCD => GetNullableInt("ETCD");
+		public int? M3ETCD => GetNullableInt("ETCD");
 
 		/// <summary>
 		/// Description: Job number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JNU => GetNullableInt("JNU");
+		public int? M3JNU => GetNullableInt("JNU");
 
 		/// <summary>
 		/// Description: Job date
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public int? M3_PRD => GetNullableInt("PRD");
+		public int? M3PRD => GetNullableInt("PRD");
 
 		/// <summary>
 		/// Description: Job time
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_PRT => GetNullableInt("PRT");
+		public int? M3PRT => GetNullableInt("PRT");
 
 		/// <summary>
 		/// Description: Time of dispatch
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time of dispatch")]
-		public int? M3_PRT1 => GetNullableInt("PRT1");
+		public int? M3PRT1 => GetNullableInt("PRT1");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Entry date
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

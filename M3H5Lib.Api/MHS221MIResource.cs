@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MHS221MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add Interface Style/Season
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
-		/// <param name="m3_SEA1">Season (Required)</param>
-		/// <param name="m3_PRNA">Classification per season</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
+		/// <param name="m3SEA1">Season (Required)</param>
+		/// <param name="m3PRNA">Classification per season</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddStySea(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_IFIN, 
-			string m3_SEA1, 
-			string m3_PRNA = null, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3IFIN, 
+			string m3SEA1, 
+			string m3PRNA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,25 +70,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
-			if (string.IsNullOrWhiteSpace(m3_SEA1))
-				throw new ArgumentNullException("m3_SEA1");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
+			if (string.IsNullOrWhiteSpace(m3SEA1))
+				throw new ArgumentNullException(nameof(m3SEA1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim())
-				.WithQueryParameter("SEA1", m3_SEA1.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim())
+				.WithQueryParameter("SEA1", m3SEA1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNA))
-				request.WithQueryParameter("PRNA", m3_PRNA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNA))
+				request.WithQueryParameter("PRNA", m3PRNA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -96,7 +98,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -107,10 +110,10 @@ namespace M3H5Lib.Api
 		/// Description Delete interface StySea
 		/// Version Release: 12.5
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
-		/// <param name="m3_SEA1">Season (Required)</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
+		/// <param name="m3SEA1">Season (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -119,10 +122,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelStySea(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_IFIN, 
-			string m3_SEA1, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3IFIN, 
+			string m3SEA1, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -137,21 +140,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
-			if (string.IsNullOrWhiteSpace(m3_SEA1))
-				throw new ArgumentNullException("m3_SEA1");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
+			if (string.IsNullOrWhiteSpace(m3SEA1))
+				throw new ArgumentNullException(nameof(m3SEA1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim())
-				.WithQueryParameter("SEA1", m3_SEA1.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim())
+				.WithQueryParameter("SEA1", m3SEA1.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -161,7 +164,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -172,10 +176,10 @@ namespace M3H5Lib.Api
 		/// Description List interface StySea
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_E0PA">Partner</param>
-		/// <param name="m3_E065">Message type</param>
-		/// <param name="m3_IFIN">Interface item number</param>
-		/// <param name="m3_SEA1">Season</param>
+		/// <param name="m3E0PA">Partner</param>
+		/// <param name="m3E065">Message type</param>
+		/// <param name="m3IFIN">Interface item number</param>
+		/// <param name="m3SEA1">Season</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -184,10 +188,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstStySeaResponse></returns>
 		/// <exception cref="M3Exception<LstStySeaResponse>"></exception>
 		public async Task<M3Response<LstStySeaResponse>> LstStySea(
-			string m3_E0PA = null, 
-			string m3_E065 = null, 
-			string m3_IFIN = null, 
-			string m3_SEA1 = null, 
+			string m3E0PA = null, 
+			string m3E065 = null, 
+			string m3IFIN = null, 
+			string m3SEA1 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -202,14 +206,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_E0PA))
-				request.WithQueryParameter("E0PA", m3_E0PA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_E065))
-				request.WithQueryParameter("E065", m3_E065.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_IFIN))
-				request.WithQueryParameter("IFIN", m3_IFIN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SEA1))
-				request.WithQueryParameter("SEA1", m3_SEA1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3E0PA))
+				request.WithQueryParameter("E0PA", m3E0PA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3E065))
+				request.WithQueryParameter("E065", m3E065.Trim());
+			if (!string.IsNullOrWhiteSpace(m3IFIN))
+				request.WithQueryParameter("IFIN", m3IFIN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SEA1))
+				request.WithQueryParameter("SEA1", m3SEA1.Trim());
 
 			// Execute the request
 			var result = await Execute<LstStySeaResponse>(
@@ -219,7 +223,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

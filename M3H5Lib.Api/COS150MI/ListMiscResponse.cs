@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Work order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Cost type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost type")]
-		public string M3_AMTY => GetString("AMTY");
+		public string M3AMTY => GetString("AMTY");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_CNQT => GetNullableDecimal("CNQT");
+		public decimal? M3CNQT => GetNullableDecimal("CNQT");
 
 		/// <summary>
 		/// Description: Sales price
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: WIP debit miscellaneous
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("WIP debit miscellaneous")]
-		public decimal? M3_ADC3 => GetNullableDecimal("ADC3");
+		public decimal? M3ADC3 => GetNullableDecimal("ADC3");
 
 		/// <summary>
 		/// Description: Description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Material status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material status")]
-		public string M3_WMST => GetString("WMST");
+		public string M3WMST => GetString("WMST");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: User
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_TRNO => GetNullableInt("TRNO");
+		public int? M3TRNO => GetNullableInt("TRNO");
 
 		/// <summary>
 		/// Description: Remark
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Entry date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Agreement currency
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement currency")]
-		public string M3_AACU => GetString("AACU");
+		public string M3AACU => GetString("AACU");
 
 		/// <summary>
 		/// Description: Interface order number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface order number")]
-		public string M3_IORN => GetString("IORN");
+		public string M3IORN => GetString("IORN");
 
 		/// <summary>
 		/// Description: Interface order line
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface order line")]
-		public int? M3_IORL => GetNullableInt("IORL");
+		public int? M3IORL => GetNullableInt("IORL");
 	}
 }
 // EOF

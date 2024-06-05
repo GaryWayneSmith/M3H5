@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Equipment number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment number")]
-		public string M3_EQNO => GetString("EQNO");
+		public string M3EQNO => GetString("EQNO");
 
 		/// <summary>
 		/// Description: Equipment description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment description")]
-		public string M3_ALII => GetString("ALII");
+		public string M3ALII => GetString("ALII");
 
 		/// <summary>
 		/// Description: Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Asset tag
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Asset tag")]
-		public string M3_RFIA => GetString("RFIA");
+		public string M3RFIA => GetString("RFIA");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line number")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: purchase order  line subnumber
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("purchase order  line subnumber")]
-		public int? M3_PNLS => GetNullableInt("PNLS");
+		public int? M3PNLS => GetNullableInt("PNLS");
 	}
 }
 // EOF

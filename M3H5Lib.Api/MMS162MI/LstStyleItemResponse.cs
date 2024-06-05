@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Style number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style number")]
-		public string M3_STYN => GetString("STYN");
+		public string M3STYN => GetString("STYN");
 
 		/// <summary>
 		/// Description: Feature for X
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature for X")]
-		public string M3_FTIX => GetString("FTIX");
+		public string M3FTIX => GetString("FTIX");
 
 		/// <summary>
 		/// Description: Sorting for feature
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting for feature")]
-		public int? M3_SQFX => GetNullableInt("SQFX");
+		public int? M3SQFX => GetNullableInt("SQFX");
 
 		/// <summary>
 		/// Description: Option for feature X
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option for feature X")]
-		public string M3_OPTX => GetString("OPTX");
+		public string M3OPTX => GetString("OPTX");
 
 		/// <summary>
 		/// Description: Sorting for option
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting for option")]
-		public int? M3_SQNX => GetNullableInt("SQNX");
+		public int? M3SQNX => GetNullableInt("SQNX");
 
 		/// <summary>
 		/// Description: Name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Feature for Y
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature for Y")]
-		public string M3_FTIY => GetString("FTIY");
+		public string M3FTIY => GetString("FTIY");
 
 		/// <summary>
 		/// Description: Sorting for feature
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting for feature")]
-		public int? M3_SQFY => GetNullableInt("SQFY");
+		public int? M3SQFY => GetNullableInt("SQFY");
 
 		/// <summary>
 		/// Description: Option for feature Y
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option for feature Y")]
-		public string M3_OPTY => GetString("OPTY");
+		public string M3OPTY => GetString("OPTY");
 
 		/// <summary>
 		/// Description: Sorting for option
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting for option")]
-		public int? M3_SQNY => GetNullableInt("SQNY");
+		public int? M3SQNY => GetNullableInt("SQNY");
 
 		/// <summary>
 		/// Description: Name for Y-option
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name for Y-option")]
-		public string M3_TY15 => GetString("TY15");
+		public string M3TY15 => GetString("TY15");
 
 		/// <summary>
 		/// Description: Feature for Z
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature for Z")]
-		public string M3_FTIZ => GetString("FTIZ");
+		public string M3FTIZ => GetString("FTIZ");
 
 		/// <summary>
 		/// Description: Sorting for feature
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting for feature")]
-		public int? M3_SQFZ => GetNullableInt("SQFZ");
+		public int? M3SQFZ => GetNullableInt("SQFZ");
 
 		/// <summary>
 		/// Description: Option for feature Z
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option for feature Z")]
-		public string M3_OPTZ => GetString("OPTZ");
+		public string M3OPTZ => GetString("OPTZ");
 
 		/// <summary>
 		/// Description: Sorting for option
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting for option")]
-		public int? M3_SQNZ => GetNullableInt("SQNZ");
+		public int? M3SQNZ => GetNullableInt("SQNZ");
 
 		/// <summary>
 		/// Description: Name for Z-option
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name for Z-option")]
-		public string M3_TZ15 => GetString("TZ15");
+		public string M3TZ15 => GetString("TZ15");
 
 		/// <summary>
 		/// Description: Configuration code
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration code")]
-		public int? M3_CHCD => GetNullableInt("CHCD");
+		public int? M3CHCD => GetNullableInt("CHCD");
 	}
 }
 // EOF

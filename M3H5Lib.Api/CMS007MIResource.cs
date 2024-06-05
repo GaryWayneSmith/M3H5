@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS007MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add custom XML section
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RPLY">XML structure (Required)</param>
-		/// <param name="m3_RPBK">XML section (Required)</param>
-		/// <param name="m3_RPBA">Base XML section</param>
-		/// <param name="m3_FILE">Table</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RPLY">XML structure (Required)</param>
+		/// <param name="m3RPBK">XML section (Required)</param>
+		/// <param name="m3RPBA">Base XML section</param>
+		/// <param name="m3FILE">Table</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCustSection(
-			string m3_PRTF, 
-			string m3_RPLY, 
-			int m3_RPBK, 
-			int? m3_RPBA = null, 
-			string m3_FILE = null, 
+			string m3PRTF, 
+			string m3RPLY, 
+			int m3RPBK, 
+			int? m3RPBA = null, 
+			string m3FILE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,22 +70,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RPLY))
-				throw new ArgumentNullException("m3_RPLY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RPLY))
+				throw new ArgumentNullException(nameof(m3RPLY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RPLY", m3_RPLY.Trim())
-				.WithQueryParameter("RPBK", m3_RPBK.ToString());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RPLY", m3RPLY.Trim())
+				.WithQueryParameter("RPBK", m3RPBK.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RPBA.HasValue)
-				request.WithQueryParameter("RPBA", m3_RPBA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
+			if (m3RPBA.HasValue)
+				request.WithQueryParameter("RPBA", m3RPBA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -93,7 +95,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -104,10 +107,10 @@ namespace M3H5Lib.Api
 		/// Description Change section status.
 		/// Version Release: 5ea2
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RPLY">XML structure (Required)</param>
-		/// <param name="m3_RPBK">XML section (Required)</param>
-		/// <param name="m3_XMBS">Section status (Required)</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RPLY">XML structure (Required)</param>
+		/// <param name="m3RPBK">XML section (Required)</param>
+		/// <param name="m3XMBS">Section status (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -116,10 +119,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChangeStatus(
-			string m3_PRTF, 
-			string m3_RPLY, 
-			int m3_RPBK, 
-			string m3_XMBS, 
+			string m3PRTF, 
+			string m3RPLY, 
+			int m3RPBK, 
+			string m3XMBS, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -134,19 +137,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RPLY))
-				throw new ArgumentNullException("m3_RPLY");
-			if (string.IsNullOrWhiteSpace(m3_XMBS))
-				throw new ArgumentNullException("m3_XMBS");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RPLY))
+				throw new ArgumentNullException(nameof(m3RPLY));
+			if (string.IsNullOrWhiteSpace(m3XMBS))
+				throw new ArgumentNullException(nameof(m3XMBS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RPLY", m3_RPLY.Trim())
-				.WithQueryParameter("RPBK", m3_RPBK.ToString())
-				.WithQueryParameter("XMBS", m3_XMBS.Trim());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RPLY", m3RPLY.Trim())
+				.WithQueryParameter("RPBK", m3RPBK.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("XMBS", m3XMBS.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -156,7 +159,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -167,9 +171,9 @@ namespace M3H5Lib.Api
 		/// Description Delete all fields for the section, even standard fields.
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RPLY">XML structure (Required)</param>
-		/// <param name="m3_RPBK">XML section (Required)</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RPLY">XML structure (Required)</param>
+		/// <param name="m3RPBK">XML section (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -178,9 +182,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DeleteAllFields(
-			string m3_PRTF, 
-			string m3_RPLY, 
-			int m3_RPBK, 
+			string m3PRTF, 
+			string m3RPLY, 
+			int m3RPBK, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -195,16 +199,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RPLY))
-				throw new ArgumentNullException("m3_RPLY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RPLY))
+				throw new ArgumentNullException(nameof(m3RPLY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RPLY", m3_RPLY.Trim())
-				.WithQueryParameter("RPBK", m3_RPBK.ToString());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RPLY", m3RPLY.Trim())
+				.WithQueryParameter("RPBK", m3RPBK.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -214,7 +218,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -225,9 +230,9 @@ namespace M3H5Lib.Api
 		/// Description Delete XML section
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RPLY">XML structure (Required)</param>
-		/// <param name="m3_RPBK">XML section (Required)</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RPLY">XML structure (Required)</param>
+		/// <param name="m3RPBK">XML section (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -236,9 +241,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltXmlSection(
-			string m3_PRTF, 
-			string m3_RPLY, 
-			int m3_RPBK, 
+			string m3PRTF, 
+			string m3RPLY, 
+			int m3RPBK, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -253,16 +258,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RPLY))
-				throw new ArgumentNullException("m3_RPLY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RPLY))
+				throw new ArgumentNullException(nameof(m3RPLY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RPLY", m3_RPLY.Trim())
-				.WithQueryParameter("RPBK", m3_RPBK.ToString());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RPLY", m3RPLY.Trim())
+				.WithQueryParameter("RPBK", m3RPBK.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -272,7 +277,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -283,9 +289,9 @@ namespace M3H5Lib.Api
 		/// Description Get data for a XML section
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RPLY">XML structure (Required)</param>
-		/// <param name="m3_RPBK">XML section (Required)</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RPLY">XML structure (Required)</param>
+		/// <param name="m3RPBK">XML section (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -294,9 +300,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetXmlSectionResponse></returns>
 		/// <exception cref="M3Exception<GetXmlSectionResponse>"></exception>
 		public async Task<M3Response<GetXmlSectionResponse>> GetXmlSection(
-			string m3_PRTF, 
-			string m3_RPLY, 
-			int m3_RPBK, 
+			string m3PRTF, 
+			string m3RPLY, 
+			int m3RPBK, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -311,16 +317,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RPLY))
-				throw new ArgumentNullException("m3_RPLY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RPLY))
+				throw new ArgumentNullException(nameof(m3RPLY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RPLY", m3_RPLY.Trim())
-				.WithQueryParameter("RPBK", m3_RPBK.ToString());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RPLY", m3RPLY.Trim())
+				.WithQueryParameter("RPBK", m3RPBK.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetXmlSectionResponse>(
@@ -330,7 +336,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -341,9 +348,9 @@ namespace M3H5Lib.Api
 		/// Description List data for XML sections
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file</param>
-		/// <param name="m3_RPLY">XML structure</param>
-		/// <param name="m3_RPBK">XML section</param>
+		/// <param name="m3PRTF">Printer file</param>
+		/// <param name="m3RPLY">XML structure</param>
+		/// <param name="m3RPBK">XML section</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -352,9 +359,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstXmlSectionsResponse></returns>
 		/// <exception cref="M3Exception<LstXmlSectionsResponse>"></exception>
 		public async Task<M3Response<LstXmlSectionsResponse>> LstXmlSections(
-			string m3_PRTF = null, 
-			string m3_RPLY = null, 
-			int? m3_RPBK = null, 
+			string m3PRTF = null, 
+			string m3RPLY = null, 
+			int? m3RPBK = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -369,12 +376,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRTF))
-				request.WithQueryParameter("PRTF", m3_PRTF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RPLY))
-				request.WithQueryParameter("RPLY", m3_RPLY.Trim());
-			if (m3_RPBK.HasValue)
-				request.WithQueryParameter("RPBK", m3_RPBK.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRTF))
+				request.WithQueryParameter("PRTF", m3PRTF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RPLY))
+				request.WithQueryParameter("RPLY", m3RPLY.Trim());
+			if (m3RPBK.HasValue)
+				request.WithQueryParameter("RPBK", m3RPBK.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstXmlSectionsResponse>(
@@ -384,7 +391,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -395,16 +403,16 @@ namespace M3H5Lib.Api
 		/// Description Update Xml section
 		/// Version Release: 5ea2
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RPLY">XML structure (Required)</param>
-		/// <param name="m3_RPBK">XML section (Required)</param>
-		/// <param name="m3_XMBS">Section status</param>
-		/// <param name="m3_ELNM">Element name</param>
-		/// <param name="m3_EMEL">Empty element</param>
-		/// <param name="m3_SATR">Section attribute</param>
-		/// <param name="m3_GRBY">Group by element name</param>
-		/// <param name="m3_FGBY">Subgroup by element name</param>
-		/// <param name="m3_BLLE">Section level</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RPLY">XML structure (Required)</param>
+		/// <param name="m3RPBK">XML section (Required)</param>
+		/// <param name="m3XMBS">Section status</param>
+		/// <param name="m3ELNM">Element name</param>
+		/// <param name="m3EMEL">Empty element</param>
+		/// <param name="m3SATR">Section attribute</param>
+		/// <param name="m3GRBY">Group by element name</param>
+		/// <param name="m3FGBY">Subgroup by element name</param>
+		/// <param name="m3BLLE">Section level</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -413,16 +421,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdXmlSection(
-			string m3_PRTF, 
-			string m3_RPLY, 
-			int m3_RPBK, 
-			string m3_XMBS = null, 
-			string m3_ELNM = null, 
-			int? m3_EMEL = null, 
-			int? m3_SATR = null, 
-			string m3_GRBY = null, 
-			string m3_FGBY = null, 
-			int? m3_BLLE = null, 
+			string m3PRTF, 
+			string m3RPLY, 
+			int m3RPBK, 
+			string m3XMBS = null, 
+			string m3ELNM = null, 
+			int? m3EMEL = null, 
+			int? m3SATR = null, 
+			string m3GRBY = null, 
+			string m3FGBY = null, 
+			int? m3BLLE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -437,32 +445,32 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RPLY))
-				throw new ArgumentNullException("m3_RPLY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RPLY))
+				throw new ArgumentNullException(nameof(m3RPLY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RPLY", m3_RPLY.Trim())
-				.WithQueryParameter("RPBK", m3_RPBK.ToString());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RPLY", m3RPLY.Trim())
+				.WithQueryParameter("RPBK", m3RPBK.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_XMBS))
-				request.WithQueryParameter("XMBS", m3_XMBS.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ELNM))
-				request.WithQueryParameter("ELNM", m3_ELNM.Trim());
-			if (m3_EMEL.HasValue)
-				request.WithQueryParameter("EMEL", m3_EMEL.Value.ToString());
-			if (m3_SATR.HasValue)
-				request.WithQueryParameter("SATR", m3_SATR.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_GRBY))
-				request.WithQueryParameter("GRBY", m3_GRBY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FGBY))
-				request.WithQueryParameter("FGBY", m3_FGBY.Trim());
-			if (m3_BLLE.HasValue)
-				request.WithQueryParameter("BLLE", m3_BLLE.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3XMBS))
+				request.WithQueryParameter("XMBS", m3XMBS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELNM))
+				request.WithQueryParameter("ELNM", m3ELNM.Trim());
+			if (m3EMEL.HasValue)
+				request.WithQueryParameter("EMEL", m3EMEL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SATR.HasValue)
+				request.WithQueryParameter("SATR", m3SATR.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3GRBY))
+				request.WithQueryParameter("GRBY", m3GRBY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FGBY))
+				request.WithQueryParameter("FGBY", m3FGBY.Trim());
+			if (m3BLLE.HasValue)
+				request.WithQueryParameter("BLLE", m3BLLE.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -472,7 +480,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

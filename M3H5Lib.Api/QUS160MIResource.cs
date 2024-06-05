@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QUS160MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Add Target Margin
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_CUCL">Customer group</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TAMA">Target margin</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3CUCL">Customer group</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TAMA">Target margin</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddTargetMarginResponse></returns>
 		/// <exception cref="M3Exception<AddTargetMarginResponse>"></exception>
 		public async Task<M3Response<AddTargetMarginResponse>> AddTargetMargin(
-			string m3_PRNO = null, 
-			string m3_ITCL = null, 
-			string m3_CUNO = null, 
-			string m3_CUCL = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			int? m3_TAMA = null, 
+			string m3PRNO = null, 
+			string m3ITCL = null, 
+			string m3CUNO = null, 
+			string m3CUCL = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			int? m3TAMA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,20 +74,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCL))
-				request.WithQueryParameter("CUCL", m3_CUCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_TAMA.HasValue)
-				request.WithQueryParameter("TAMA", m3_TAMA.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCL))
+				request.WithQueryParameter("CUCL", m3CUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3TAMA.HasValue)
+				request.WithQueryParameter("TAMA", m3TAMA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<AddTargetMarginResponse>(
@@ -95,7 +97,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -106,13 +109,13 @@ namespace M3H5Lib.Api
 		/// Description Chg Target Margin
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_CUCL">Customer group</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TAMA">Target margin</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3CUCL">Customer group</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TAMA">Target margin</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -121,13 +124,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgTargetMargin(
-			string m3_PRNO = null, 
-			string m3_ITCL = null, 
-			string m3_CUNO = null, 
-			string m3_CUCL = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			int? m3_TAMA = null, 
+			string m3PRNO = null, 
+			string m3ITCL = null, 
+			string m3CUNO = null, 
+			string m3CUCL = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			int? m3TAMA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -142,20 +145,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCL))
-				request.WithQueryParameter("CUCL", m3_CUCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_TAMA.HasValue)
-				request.WithQueryParameter("TAMA", m3_TAMA.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCL))
+				request.WithQueryParameter("CUCL", m3CUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3TAMA.HasValue)
+				request.WithQueryParameter("TAMA", m3TAMA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -165,7 +168,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -176,10 +180,10 @@ namespace M3H5Lib.Api
 		/// Description Delete Target Margin
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_CUCL">Customer group</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3CUCL">Customer group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -188,10 +192,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltTargetMargin(
-			string m3_PRNO = null, 
-			string m3_ITCL = null, 
-			string m3_CUNO = null, 
-			string m3_CUCL = null, 
+			string m3PRNO = null, 
+			string m3ITCL = null, 
+			string m3CUNO = null, 
+			string m3CUCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -206,14 +210,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCL))
-				request.WithQueryParameter("CUCL", m3_CUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCL))
+				request.WithQueryParameter("CUCL", m3CUCL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -223,7 +227,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -234,10 +239,10 @@ namespace M3H5Lib.Api
 		/// Description Get Target Margin
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_CUCL">Customer group</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3CUCL">Customer group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -246,10 +251,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTargetMarginResponse></returns>
 		/// <exception cref="M3Exception<GetTargetMarginResponse>"></exception>
 		public async Task<M3Response<GetTargetMarginResponse>> GetTargetMargin(
-			string m3_PRNO = null, 
-			string m3_ITCL = null, 
-			string m3_CUNO = null, 
-			string m3_CUCL = null, 
+			string m3PRNO = null, 
+			string m3ITCL = null, 
+			string m3CUNO = null, 
+			string m3CUCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -264,14 +269,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCL))
-				request.WithQueryParameter("CUCL", m3_CUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCL))
+				request.WithQueryParameter("CUCL", m3CUCL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetTargetMarginResponse>(
@@ -281,7 +286,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -292,10 +298,10 @@ namespace M3H5Lib.Api
 		/// Description List Target Margin
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_CUCL">Customer group</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3CUCL">Customer group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -304,10 +310,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTargetMarginResponse></returns>
 		/// <exception cref="M3Exception<LstTargetMarginResponse>"></exception>
 		public async Task<M3Response<LstTargetMarginResponse>> LstTargetMargin(
-			string m3_PRNO = null, 
-			string m3_ITCL = null, 
-			string m3_CUNO = null, 
-			string m3_CUCL = null, 
+			string m3PRNO = null, 
+			string m3ITCL = null, 
+			string m3CUNO = null, 
+			string m3CUCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -322,14 +328,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCL))
-				request.WithQueryParameter("CUCL", m3_CUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCL))
+				request.WithQueryParameter("CUCL", m3CUCL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTargetMarginResponse>(
@@ -339,7 +345,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

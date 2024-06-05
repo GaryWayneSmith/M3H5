@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Order category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORTK => GetString("ORTK");
+		public string M3ORTK => GetString("ORTK");
 
 		/// <summary>
 		/// Description: Next manual function
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next manual function")]
-		public string M3_NEXT => GetString("NEXT");
+		public string M3NEXT => GetString("NEXT");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Field selections 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field selections 1")]
-		public string M3_FLDS => GetString("FLDS");
+		public string M3FLDS => GetString("FLDS");
 
 		/// <summary>
 		/// Description: Field selections 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field selections 2")]
-		public string M3_FLD2 => GetString("FLD2");
+		public string M3FLD2 => GetString("FLD2");
 	}
 }
 // EOF

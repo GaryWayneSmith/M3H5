@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence Number")]
-		public int? M3_NUM2 => GetNullableInt("NUM2");
+		public int? M3NUM2 => GetNullableInt("NUM2");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Route
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route")]
-		public string M3_ROUT => GetString("ROUT");
+		public string M3ROUT => GetString("ROUT");
 
 		/// <summary>
 		/// Description: Route departure
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route departure")]
-		public int? M3_RODN => GetNullableInt("RODN");
+		public int? M3RODN => GetNullableInt("RODN");
 
 		/// <summary>
 		/// Description: Planning date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Planning time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning time")]
-		public int? M3_PLHM => GetNullableInt("PLHM");
+		public int? M3PLHM => GetNullableInt("PLHM");
 
 		/// <summary>
 		/// Description: Departure date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure date")]
-		public DateTime? M3_DSDT => GetNullableDateTime("DSDT");
+		public DateTime? M3DSDT => GetNullableDateTime("DSDT");
 
 		/// <summary>
 		/// Description: Departure time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure time")]
-		public int? M3_DSHM => GetNullableInt("DSHM");
+		public int? M3DSHM => GetNullableInt("DSHM");
 
 		/// <summary>
 		/// Description: Confirmed delivery date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery date")]
-		public DateTime? M3_CODT => GetNullableDateTime("CODT");
+		public DateTime? M3CODT => GetNullableDateTime("CODT");
 
 		/// <summary>
 		/// Description: Confirmed delivery time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery time")]
-		public int? M3_COHM => GetNullableInt("COHM");
+		public int? M3COHM => GetNullableInt("COHM");
 	}
 }
 // EOF

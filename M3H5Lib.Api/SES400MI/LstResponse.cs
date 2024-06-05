@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function")]
-		public string M3_FNID => GetString("FNID");
+		public string M3FNID => GetString("FNID");
 
 		/// <summary>
 		/// Description: Role
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Role")]
-		public string M3_ROLL => GetString("ROLL");
+		public string M3ROLL => GetString("ROLL");
 
 		/// <summary>
 		/// Description: Company
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Option 1 permitted
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 1 permitted")]
-		public string M3_AL01 => GetString("AL01");
+		public string M3AL01 => GetString("AL01");
 
 		/// <summary>
 		/// Description: Option 2 permitted
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 2 permitted")]
-		public int? M3_AL02 => GetNullableInt("AL02");
+		public int? M3AL02 => GetNullableInt("AL02");
 
 		/// <summary>
 		/// Description: Option 3 permitted
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 3 permitted")]
-		public int? M3_AL03 => GetNullableInt("AL03");
+		public int? M3AL03 => GetNullableInt("AL03");
 
 		/// <summary>
 		/// Description: Option 4 permitted
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 4 permitted")]
-		public int? M3_AL04 => GetNullableInt("AL04");
+		public int? M3AL04 => GetNullableInt("AL04");
 
 		/// <summary>
 		/// Description: Option 5 permitted
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 5 permitted")]
-		public int? M3_AL05 => GetNullableInt("AL05");
+		public int? M3AL05 => GetNullableInt("AL05");
 
 		/// <summary>
 		/// Description: Option 6 permitted
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 6 permitted")]
-		public int? M3_AL06 => GetNullableInt("AL06");
+		public int? M3AL06 => GetNullableInt("AL06");
 
 		/// <summary>
 		/// Description: Option 7 permitted
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 7 permitted")]
-		public int? M3_AL07 => GetNullableInt("AL07");
+		public int? M3AL07 => GetNullableInt("AL07");
 
 		/// <summary>
 		/// Description: Option 8 permitted
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 8 permitted")]
-		public int? M3_AL08 => GetNullableInt("AL08");
+		public int? M3AL08 => GetNullableInt("AL08");
 
 		/// <summary>
 		/// Description: Option 9 permitted
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 9 permitted")]
-		public int? M3_AL09 => GetNullableInt("AL09");
+		public int? M3AL09 => GetNullableInt("AL09");
 
 		/// <summary>
 		/// Description: Option 10 permitted
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 10 permitted")]
-		public int? M3_OK10 => GetNullableInt("OK10");
+		public int? M3OK10 => GetNullableInt("OK10");
 
 		/// <summary>
 		/// Description: Option 11 permitted
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 11 permitted")]
-		public int? M3_OK11 => GetNullableInt("OK11");
+		public int? M3OK11 => GetNullableInt("OK11");
 
 		/// <summary>
 		/// Description: Option 12 permitted
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 12 permitted")]
-		public int? M3_OK12 => GetNullableInt("OK12");
+		public int? M3OK12 => GetNullableInt("OK12");
 
 		/// <summary>
 		/// Description: Option 13 permitted
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 13 permitted")]
-		public int? M3_OK13 => GetNullableInt("OK13");
+		public int? M3OK13 => GetNullableInt("OK13");
 
 		/// <summary>
 		/// Description: Option 14 permitted
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 14 permitted")]
-		public int? M3_OK14 => GetNullableInt("OK14");
+		public int? M3OK14 => GetNullableInt("OK14");
 
 		/// <summary>
 		/// Description: Option 15 permitted
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 15 permitted")]
-		public int? M3_OK15 => GetNullableInt("OK15");
+		public int? M3OK15 => GetNullableInt("OK15");
 
 		/// <summary>
 		/// Description: Option 16 permitted
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 16 permitted")]
-		public int? M3_OK16 => GetNullableInt("OK16");
+		public int? M3OK16 => GetNullableInt("OK16");
 
 		/// <summary>
 		/// Description: Option 17 permitted
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 17 permitted")]
-		public int? M3_OK17 => GetNullableInt("OK17");
+		public int? M3OK17 => GetNullableInt("OK17");
 
 		/// <summary>
 		/// Description: Option 18 permitted
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 18 permitted")]
-		public int? M3_OK18 => GetNullableInt("OK18");
+		public int? M3OK18 => GetNullableInt("OK18");
 
 		/// <summary>
 		/// Description: Option 19 permitted
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 19 permitted")]
-		public int? M3_OK19 => GetNullableInt("OK19");
+		public int? M3OK19 => GetNullableInt("OK19");
 
 		/// <summary>
 		/// Description: Option 20 permitted
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 20 permitted")]
-		public int? M3_OK20 => GetNullableInt("OK20");
+		public int? M3OK20 => GetNullableInt("OK20");
 
 		/// <summary>
 		/// Description: Option 21 permitted
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 21 permitted")]
-		public int? M3_OK21 => GetNullableInt("OK21");
+		public int? M3OK21 => GetNullableInt("OK21");
 
 		/// <summary>
 		/// Description: Option 22 permitted
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 22 permitted")]
-		public int? M3_OK22 => GetNullableInt("OK22");
+		public int? M3OK22 => GetNullableInt("OK22");
 
 		/// <summary>
 		/// Description: Option 23 permitted
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 23 permitted")]
-		public int? M3_OK23 => GetNullableInt("OK23");
+		public int? M3OK23 => GetNullableInt("OK23");
 
 		/// <summary>
 		/// Description: Option 24 permitted
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 24 permitted")]
-		public int? M3_OK24 => GetNullableInt("OK24");
+		public int? M3OK24 => GetNullableInt("OK24");
 
 		/// <summary>
 		/// Description: Option 25 permitted
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 25 permitted")]
-		public int? M3_OK25 => GetNullableInt("OK25");
+		public int? M3OK25 => GetNullableInt("OK25");
 
 		/// <summary>
 		/// Description: Option 26 permitted
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 26 permitted")]
-		public int? M3_OK26 => GetNullableInt("OK26");
+		public int? M3OK26 => GetNullableInt("OK26");
 
 		/// <summary>
 		/// Description: Option 27 permitted
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 27 permitted")]
-		public int? M3_OK27 => GetNullableInt("OK27");
+		public int? M3OK27 => GetNullableInt("OK27");
 
 		/// <summary>
 		/// Description: Option 28 permitted
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 28 permitted")]
-		public int? M3_OK28 => GetNullableInt("OK28");
+		public int? M3OK28 => GetNullableInt("OK28");
 
 		/// <summary>
 		/// Description: Option 29 permitted
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 29 permitted")]
-		public int? M3_OK29 => GetNullableInt("OK29");
+		public int? M3OK29 => GetNullableInt("OK29");
 
 		/// <summary>
 		/// Description: Option 30 permitted
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 30 permitted")]
-		public int? M3_OK30 => GetNullableInt("OK30");
+		public int? M3OK30 => GetNullableInt("OK30");
 
 		/// <summary>
 		/// Description: Option 31 permitted
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 31 permitted")]
-		public int? M3_OK31 => GetNullableInt("OK31");
+		public int? M3OK31 => GetNullableInt("OK31");
 
 		/// <summary>
 		/// Description: Option 32 permitted
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 32 permitted")]
-		public int? M3_OK32 => GetNullableInt("OK32");
+		public int? M3OK32 => GetNullableInt("OK32");
 
 		/// <summary>
 		/// Description: Option 33 permitted
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 33 permitted")]
-		public int? M3_OK33 => GetNullableInt("OK33");
+		public int? M3OK33 => GetNullableInt("OK33");
 
 		/// <summary>
 		/// Description: Option 34 permitted
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 34 permitted")]
-		public int? M3_OK34 => GetNullableInt("OK34");
+		public int? M3OK34 => GetNullableInt("OK34");
 
 		/// <summary>
 		/// Description: Option 35 permitted
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 35 permitted")]
-		public int? M3_OK35 => GetNullableInt("OK35");
+		public int? M3OK35 => GetNullableInt("OK35");
 
 		/// <summary>
 		/// Description: Option 36 permitted
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 36 permitted")]
-		public int? M3_OK36 => GetNullableInt("OK36");
+		public int? M3OK36 => GetNullableInt("OK36");
 
 		/// <summary>
 		/// Description: Option 37 permitted
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 37 permitted")]
-		public int? M3_OK37 => GetNullableInt("OK37");
+		public int? M3OK37 => GetNullableInt("OK37");
 
 		/// <summary>
 		/// Description: Option 38 permitted
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 38 permitted")]
-		public int? M3_OK38 => GetNullableInt("OK38");
+		public int? M3OK38 => GetNullableInt("OK38");
 
 		/// <summary>
 		/// Description: Option 39 permitted
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 39 permitted")]
-		public int? M3_OK39 => GetNullableInt("OK39");
+		public int? M3OK39 => GetNullableInt("OK39");
 
 		/// <summary>
 		/// Description: Option 40 permitted
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 40 permitted")]
-		public int? M3_OK40 => GetNullableInt("OK40");
+		public int? M3OK40 => GetNullableInt("OK40");
 
 		/// <summary>
 		/// Description: Option 41 permitted
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 41 permitted")]
-		public int? M3_OK41 => GetNullableInt("OK41");
+		public int? M3OK41 => GetNullableInt("OK41");
 
 		/// <summary>
 		/// Description: Option 42 permitted
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 42 permitted")]
-		public int? M3_OK42 => GetNullableInt("OK42");
+		public int? M3OK42 => GetNullableInt("OK42");
 
 		/// <summary>
 		/// Description: Option 43 permitted
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 43 permitted")]
-		public int? M3_OK43 => GetNullableInt("OK43");
+		public int? M3OK43 => GetNullableInt("OK43");
 
 		/// <summary>
 		/// Description: Option 44 permitted
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 44 permitted")]
-		public int? M3_OK44 => GetNullableInt("OK44");
+		public int? M3OK44 => GetNullableInt("OK44");
 
 		/// <summary>
 		/// Description: Option 45 permitted
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 45 permitted")]
-		public int? M3_OK45 => GetNullableInt("OK45");
+		public int? M3OK45 => GetNullableInt("OK45");
 
 		/// <summary>
 		/// Description: Option 46 permitted
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 46 permitted")]
-		public int? M3_OK46 => GetNullableInt("OK46");
+		public int? M3OK46 => GetNullableInt("OK46");
 
 		/// <summary>
 		/// Description: Option 47 permitted
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 47 permitted")]
-		public int? M3_OK47 => GetNullableInt("OK47");
+		public int? M3OK47 => GetNullableInt("OK47");
 
 		/// <summary>
 		/// Description: Option 48 permitted
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 48 permitted")]
-		public int? M3_OK48 => GetNullableInt("OK48");
+		public int? M3OK48 => GetNullableInt("OK48");
 
 		/// <summary>
 		/// Description: Option 49 permitted
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 49 permitted")]
-		public int? M3_OK49 => GetNullableInt("OK49");
+		public int? M3OK49 => GetNullableInt("OK49");
 
 		/// <summary>
 		/// Description: Option 50 permitted
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 50 permitted")]
-		public int? M3_OK50 => GetNullableInt("OK50");
+		public int? M3OK50 => GetNullableInt("OK50");
 
 		/// <summary>
 		/// Description: Option 51 permitted
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 51 permitted")]
-		public int? M3_OK51 => GetNullableInt("OK51");
+		public int? M3OK51 => GetNullableInt("OK51");
 
 		/// <summary>
 		/// Description: Option 52 permitted
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 52 permitted")]
-		public int? M3_OK52 => GetNullableInt("OK52");
+		public int? M3OK52 => GetNullableInt("OK52");
 
 		/// <summary>
 		/// Description: Option 53 permitted
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 53 permitted")]
-		public int? M3_OK53 => GetNullableInt("OK53");
+		public int? M3OK53 => GetNullableInt("OK53");
 
 		/// <summary>
 		/// Description: Option 54 permitted
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 54 permitted")]
-		public int? M3_OK54 => GetNullableInt("OK54");
+		public int? M3OK54 => GetNullableInt("OK54");
 
 		/// <summary>
 		/// Description: Option 55 permitted
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 55 permitted")]
-		public int? M3_OK55 => GetNullableInt("OK55");
+		public int? M3OK55 => GetNullableInt("OK55");
 
 		/// <summary>
 		/// Description: Option 56 permitted
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 56 permitted")]
-		public int? M3_OK56 => GetNullableInt("OK56");
+		public int? M3OK56 => GetNullableInt("OK56");
 
 		/// <summary>
 		/// Description: Option 57 permitted
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 57 permitted")]
-		public int? M3_OK57 => GetNullableInt("OK57");
+		public int? M3OK57 => GetNullableInt("OK57");
 
 		/// <summary>
 		/// Description: Option 58 permitted
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 58 permitted")]
-		public int? M3_OK58 => GetNullableInt("OK58");
+		public int? M3OK58 => GetNullableInt("OK58");
 
 		/// <summary>
 		/// Description: Option 59 permitted
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 59 permitted")]
-		public int? M3_OK59 => GetNullableInt("OK59");
+		public int? M3OK59 => GetNullableInt("OK59");
 
 		/// <summary>
 		/// Description: Option 60 permitted
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 60 permitted")]
-		public int? M3_OK60 => GetNullableInt("OK60");
+		public int? M3OK60 => GetNullableInt("OK60");
 
 		/// <summary>
 		/// Description: Option 61 permitted
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 61 permitted")]
-		public int? M3_OK61 => GetNullableInt("OK61");
+		public int? M3OK61 => GetNullableInt("OK61");
 
 		/// <summary>
 		/// Description: Option 62 permitted
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 62 permitted")]
-		public int? M3_OK62 => GetNullableInt("OK62");
+		public int? M3OK62 => GetNullableInt("OK62");
 
 		/// <summary>
 		/// Description: Option 63 permitted
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 63 permitted")]
-		public int? M3_OK63 => GetNullableInt("OK63");
+		public int? M3OK63 => GetNullableInt("OK63");
 
 		/// <summary>
 		/// Description: Option 64 permitted
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 64 permitted")]
-		public int? M3_OK64 => GetNullableInt("OK64");
+		public int? M3OK64 => GetNullableInt("OK64");
 
 		/// <summary>
 		/// Description: Option 65 permitted
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 65 permitted")]
-		public int? M3_OK65 => GetNullableInt("OK65");
+		public int? M3OK65 => GetNullableInt("OK65");
 
 		/// <summary>
 		/// Description: Option 66 permitted
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 66 permitted")]
-		public int? M3_OK66 => GetNullableInt("OK66");
+		public int? M3OK66 => GetNullableInt("OK66");
 
 		/// <summary>
 		/// Description: Option 67 permitted
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 67 permitted")]
-		public int? M3_OK67 => GetNullableInt("OK67");
+		public int? M3OK67 => GetNullableInt("OK67");
 
 		/// <summary>
 		/// Description: Option 68 permitted
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 68 permitted")]
-		public int? M3_OK68 => GetNullableInt("OK68");
+		public int? M3OK68 => GetNullableInt("OK68");
 
 		/// <summary>
 		/// Description: Option 69 permitted
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 69 permitted")]
-		public int? M3_OK69 => GetNullableInt("OK69");
+		public int? M3OK69 => GetNullableInt("OK69");
 
 		/// <summary>
 		/// Description: Option 70 permitted
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 70 permitted")]
-		public int? M3_OK70 => GetNullableInt("OK70");
+		public int? M3OK70 => GetNullableInt("OK70");
 
 		/// <summary>
 		/// Description: Option 71 permitted
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 71 permitted")]
-		public int? M3_OK71 => GetNullableInt("OK71");
+		public int? M3OK71 => GetNullableInt("OK71");
 
 		/// <summary>
 		/// Description: Option 72 permitted
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 72 permitted")]
-		public int? M3_OK72 => GetNullableInt("OK72");
+		public int? M3OK72 => GetNullableInt("OK72");
 
 		/// <summary>
 		/// Description: Option 73 permitted
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 73 permitted")]
-		public int? M3_OK73 => GetNullableInt("OK73");
+		public int? M3OK73 => GetNullableInt("OK73");
 
 		/// <summary>
 		/// Description: Option 74 permitted
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 74 permitted")]
-		public int? M3_OK74 => GetNullableInt("OK74");
+		public int? M3OK74 => GetNullableInt("OK74");
 
 		/// <summary>
 		/// Description: Option 75 permitted
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 75 permitted")]
-		public int? M3_OK75 => GetNullableInt("OK75");
+		public int? M3OK75 => GetNullableInt("OK75");
 
 		/// <summary>
 		/// Description: Option 76 permitted
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 76 permitted")]
-		public int? M3_OK76 => GetNullableInt("OK76");
+		public int? M3OK76 => GetNullableInt("OK76");
 
 		/// <summary>
 		/// Description: Option 77 permitted
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 77 permitted")]
-		public int? M3_OK77 => GetNullableInt("OK77");
+		public int? M3OK77 => GetNullableInt("OK77");
 
 		/// <summary>
 		/// Description: Option 78 permitted
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 78 permitted")]
-		public int? M3_OK78 => GetNullableInt("OK78");
+		public int? M3OK78 => GetNullableInt("OK78");
 
 		/// <summary>
 		/// Description: Option 79 permitted
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 79 permitted")]
-		public int? M3_OK79 => GetNullableInt("OK79");
+		public int? M3OK79 => GetNullableInt("OK79");
 
 		/// <summary>
 		/// Description: Option 80 permitted
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 80 permitted")]
-		public int? M3_OK80 => GetNullableInt("OK80");
+		public int? M3OK80 => GetNullableInt("OK80");
 
 		/// <summary>
 		/// Description: Option 81 permitted
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 81 permitted")]
-		public int? M3_OK81 => GetNullableInt("OK81");
+		public int? M3OK81 => GetNullableInt("OK81");
 
 		/// <summary>
 		/// Description: Option 82 permitted
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 82 permitted")]
-		public int? M3_OK82 => GetNullableInt("OK82");
+		public int? M3OK82 => GetNullableInt("OK82");
 
 		/// <summary>
 		/// Description: Option 83 permitted
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 83 permitted")]
-		public int? M3_OK83 => GetNullableInt("OK83");
+		public int? M3OK83 => GetNullableInt("OK83");
 
 		/// <summary>
 		/// Description: Option 84 permitted
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 84 permitted")]
-		public int? M3_OK84 => GetNullableInt("OK84");
+		public int? M3OK84 => GetNullableInt("OK84");
 
 		/// <summary>
 		/// Description: Option 85 permitted
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 85 permitted")]
-		public int? M3_OK85 => GetNullableInt("OK85");
+		public int? M3OK85 => GetNullableInt("OK85");
 
 		/// <summary>
 		/// Description: Option 86 permitted
@@ -1024,7 +1024,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 86 permitted")]
-		public int? M3_OK86 => GetNullableInt("OK86");
+		public int? M3OK86 => GetNullableInt("OK86");
 
 		/// <summary>
 		/// Description: Option 87 permitted
@@ -1035,7 +1035,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 87 permitted")]
-		public int? M3_OK87 => GetNullableInt("OK87");
+		public int? M3OK87 => GetNullableInt("OK87");
 
 		/// <summary>
 		/// Description: Option 88 permitted
@@ -1046,7 +1046,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 88 permitted")]
-		public int? M3_OK88 => GetNullableInt("OK88");
+		public int? M3OK88 => GetNullableInt("OK88");
 
 		/// <summary>
 		/// Description: Option 89 permitted
@@ -1057,7 +1057,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 89 permitted")]
-		public int? M3_OK89 => GetNullableInt("OK89");
+		public int? M3OK89 => GetNullableInt("OK89");
 
 		/// <summary>
 		/// Description: Option 90 permitted
@@ -1068,7 +1068,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 90 permitted")]
-		public int? M3_OK90 => GetNullableInt("OK90");
+		public int? M3OK90 => GetNullableInt("OK90");
 
 		/// <summary>
 		/// Description: Option 91 permitted
@@ -1079,7 +1079,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 91 permitted")]
-		public int? M3_OK91 => GetNullableInt("OK91");
+		public int? M3OK91 => GetNullableInt("OK91");
 
 		/// <summary>
 		/// Description: Option 92 permitted
@@ -1090,7 +1090,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 92 permitted")]
-		public int? M3_OK92 => GetNullableInt("OK92");
+		public int? M3OK92 => GetNullableInt("OK92");
 
 		/// <summary>
 		/// Description: Option 93 permitted
@@ -1101,7 +1101,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 93 permitted")]
-		public int? M3_OK93 => GetNullableInt("OK93");
+		public int? M3OK93 => GetNullableInt("OK93");
 
 		/// <summary>
 		/// Description: Option 94 permitted
@@ -1112,7 +1112,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 94 permitted")]
-		public int? M3_OK94 => GetNullableInt("OK94");
+		public int? M3OK94 => GetNullableInt("OK94");
 
 		/// <summary>
 		/// Description: Option 95 permitted
@@ -1123,7 +1123,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 95 permitted")]
-		public int? M3_OK95 => GetNullableInt("OK95");
+		public int? M3OK95 => GetNullableInt("OK95");
 
 		/// <summary>
 		/// Description: Option 96 permitted
@@ -1134,7 +1134,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 96 permitted")]
-		public int? M3_OK96 => GetNullableInt("OK96");
+		public int? M3OK96 => GetNullableInt("OK96");
 
 		/// <summary>
 		/// Description: Option 97 permitted
@@ -1145,7 +1145,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 97 permitted")]
-		public int? M3_OK97 => GetNullableInt("OK97");
+		public int? M3OK97 => GetNullableInt("OK97");
 
 		/// <summary>
 		/// Description: Option 98 permitted
@@ -1156,7 +1156,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 98 permitted")]
-		public int? M3_OK98 => GetNullableInt("OK98");
+		public int? M3OK98 => GetNullableInt("OK98");
 
 		/// <summary>
 		/// Description: Option 99 permitted
@@ -1167,7 +1167,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option 99 permitted")]
-		public int? M3_OK99 => GetNullableInt("OK99");
+		public int? M3OK99 => GetNullableInt("OK99");
 
 		/// <summary>
 		/// Description: Function key F1 permitted
@@ -1178,7 +1178,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F1 permitted")]
-		public int? M3_KK01 => GetNullableInt("KK01");
+		public int? M3KK01 => GetNullableInt("KK01");
 
 		/// <summary>
 		/// Description: Function key F2 permitted
@@ -1189,7 +1189,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F2 permitted")]
-		public int? M3_KK02 => GetNullableInt("KK02");
+		public int? M3KK02 => GetNullableInt("KK02");
 
 		/// <summary>
 		/// Description: Function key F3 permitted
@@ -1200,7 +1200,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F3 permitted")]
-		public int? M3_KK03 => GetNullableInt("KK03");
+		public int? M3KK03 => GetNullableInt("KK03");
 
 		/// <summary>
 		/// Description: Function key F4 permitted
@@ -1211,7 +1211,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F4 permitted")]
-		public int? M3_KK04 => GetNullableInt("KK04");
+		public int? M3KK04 => GetNullableInt("KK04");
 
 		/// <summary>
 		/// Description: Function key F5 permitted
@@ -1222,7 +1222,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F5 permitted")]
-		public int? M3_KK05 => GetNullableInt("KK05");
+		public int? M3KK05 => GetNullableInt("KK05");
 
 		/// <summary>
 		/// Description: Function key F6 permitted
@@ -1233,7 +1233,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F6 permitted")]
-		public int? M3_KK06 => GetNullableInt("KK06");
+		public int? M3KK06 => GetNullableInt("KK06");
 
 		/// <summary>
 		/// Description: Function key F7 permitted
@@ -1244,7 +1244,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F7 permitted")]
-		public int? M3_KK07 => GetNullableInt("KK07");
+		public int? M3KK07 => GetNullableInt("KK07");
 
 		/// <summary>
 		/// Description: Function key F8 permitted
@@ -1255,7 +1255,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F8 permitted")]
-		public int? M3_KK08 => GetNullableInt("KK08");
+		public int? M3KK08 => GetNullableInt("KK08");
 
 		/// <summary>
 		/// Description: Function key F9 permitted
@@ -1266,7 +1266,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F9 permitted")]
-		public int? M3_KK09 => GetNullableInt("KK09");
+		public int? M3KK09 => GetNullableInt("KK09");
 
 		/// <summary>
 		/// Description: Function key F10 permitted
@@ -1277,7 +1277,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F10 permitted")]
-		public int? M3_KK10 => GetNullableInt("KK10");
+		public int? M3KK10 => GetNullableInt("KK10");
 
 		/// <summary>
 		/// Description: Function key F11 permitted
@@ -1288,7 +1288,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F11 permitted")]
-		public int? M3_KK11 => GetNullableInt("KK11");
+		public int? M3KK11 => GetNullableInt("KK11");
 
 		/// <summary>
 		/// Description: Function key F12 permitted
@@ -1299,7 +1299,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F12 permitted")]
-		public int? M3_KK12 => GetNullableInt("KK12");
+		public int? M3KK12 => GetNullableInt("KK12");
 
 		/// <summary>
 		/// Description: Function key F13 permitted
@@ -1310,7 +1310,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F13 permitted")]
-		public int? M3_KK13 => GetNullableInt("KK13");
+		public int? M3KK13 => GetNullableInt("KK13");
 
 		/// <summary>
 		/// Description: Function key F14 permitted
@@ -1321,7 +1321,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F14 permitted")]
-		public int? M3_KK14 => GetNullableInt("KK14");
+		public int? M3KK14 => GetNullableInt("KK14");
 
 		/// <summary>
 		/// Description: Function key F15 permitted
@@ -1332,7 +1332,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F15 permitted")]
-		public int? M3_KK15 => GetNullableInt("KK15");
+		public int? M3KK15 => GetNullableInt("KK15");
 
 		/// <summary>
 		/// Description: Function key F16 permitted
@@ -1343,7 +1343,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F16 permitted")]
-		public int? M3_KK16 => GetNullableInt("KK16");
+		public int? M3KK16 => GetNullableInt("KK16");
 
 		/// <summary>
 		/// Description: Function key F17 permitted
@@ -1354,7 +1354,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F17 permitted")]
-		public int? M3_KK17 => GetNullableInt("KK17");
+		public int? M3KK17 => GetNullableInt("KK17");
 
 		/// <summary>
 		/// Description: Function key F18 permitted
@@ -1365,7 +1365,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F18 permitted")]
-		public int? M3_KK18 => GetNullableInt("KK18");
+		public int? M3KK18 => GetNullableInt("KK18");
 
 		/// <summary>
 		/// Description: Function key F19 permitted
@@ -1376,7 +1376,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F19 permitted")]
-		public int? M3_KK19 => GetNullableInt("KK19");
+		public int? M3KK19 => GetNullableInt("KK19");
 
 		/// <summary>
 		/// Description: Function key F20 permitted
@@ -1387,7 +1387,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F20 permitted")]
-		public int? M3_KK20 => GetNullableInt("KK20");
+		public int? M3KK20 => GetNullableInt("KK20");
 
 		/// <summary>
 		/// Description: Function key F21 permitted
@@ -1398,7 +1398,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F21 permitted")]
-		public int? M3_KK21 => GetNullableInt("KK21");
+		public int? M3KK21 => GetNullableInt("KK21");
 
 		/// <summary>
 		/// Description: Function key F22 permitted
@@ -1409,7 +1409,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F22 permitted")]
-		public int? M3_KK22 => GetNullableInt("KK22");
+		public int? M3KK22 => GetNullableInt("KK22");
 
 		/// <summary>
 		/// Description: Function key F23 permitted
@@ -1420,7 +1420,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F23 permitted")]
-		public int? M3_KK23 => GetNullableInt("KK23");
+		public int? M3KK23 => GetNullableInt("KK23");
 
 		/// <summary>
 		/// Description: Function key F24 permitted
@@ -1431,7 +1431,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function key F24 permitted")]
-		public int? M3_KK24 => GetNullableInt("KK24");
+		public int? M3KK24 => GetNullableInt("KK24");
 
 		/// <summary>
 		/// Description: Text identity
@@ -1442,7 +1442,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

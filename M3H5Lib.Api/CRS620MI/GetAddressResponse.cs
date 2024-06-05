@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Supplier
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Address type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address type")]
-		public int? M3_ADTE => GetNullableInt("ADTE");
+		public int? M3ADTE => GetNullableInt("ADTE");
 
 		/// <summary>
 		/// Description: Address number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Start date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Printout code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Printout code")]
-		public int? M3_PRIA => GetNullableInt("PRIA");
+		public int? M3PRIA => GetNullableInt("PRIA");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Country
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Country name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country name")]
-		public string M3_CSNM => GetString("CSNM");
+		public string M3CSNM => GetString("CSNM");
 
 		/// <summary>
 		/// Description: Postal code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Via address
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via address")]
-		public string M3_ADVI => GetString("ADVI");
+		public string M3ADVI => GetString("ADVI");
 
 		/// <summary>
 		/// Description: Place
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place")]
-		public string M3_EDES => GetString("EDES");
+		public string M3EDES => GetString("EDES");
 
 		/// <summary>
 		/// Description: Geographical code
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographical code")]
-		public int? M3_GEOC => GetNullableInt("GEOC");
+		public int? M3GEOC => GetNullableInt("GEOC");
 
 		/// <summary>
 		/// Description: Tax code customer/address
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code customer/address")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: State
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: City
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Planning node
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning node")]
-		public string M3_PNOD => GetString("PNOD");
+		public string M3PNOD => GetString("PNOD");
 
 		/// <summary>
 		/// Description: Text identity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Geographic cod X
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod X")]
-		public decimal? M3_GEOX => GetNullableDecimal("GEOX");
+		public decimal? M3GEOX => GetNullableDecimal("GEOX");
 
 		/// <summary>
 		/// Description: Geographic code Y
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic code Y")]
-		public decimal? M3_GEOY => GetNullableDecimal("GEOY");
+		public decimal? M3GEOY => GetNullableDecimal("GEOY");
 
 		/// <summary>
 		/// Description: Geographic cod Z
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod Z")]
-		public decimal? M3_GEOZ => GetNullableDecimal("GEOZ");
+		public decimal? M3GEOZ => GetNullableDecimal("GEOZ");
 
 		/// <summary>
 		/// Description: County ID
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 
 		/// <summary>
 		/// Description: Supplier´s address reference
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier´s address reference")]
-		public string M3_SADR => GetString("SADR");
+		public string M3SADR => GetString("SADR");
 	}
 }
 // EOF

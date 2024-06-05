@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_FACN => GetString("FACN");
+		public string M3FACN => GetString("FACN");
 
 		/// <summary>
 		/// Description: Costing component
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing component")]
-		public string M3_CCOM => GetString("CCOM");
+		public string M3CCOM => GetString("CCOM");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Text
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXT3 => GetString("TXT3");
+		public string M3TXT3 => GetString("TXT3");
 
 		/// <summary>
 		/// Description: Costing type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing type")]
-		public string M3_PCTP => GetString("PCTP");
+		public string M3PCTP => GetString("PCTP");
 
 		/// <summary>
 		/// Description: Connection
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Connection")]
-		public string M3_COTY => GetString("COTY");
+		public string M3COTY => GetString("COTY");
 
 		/// <summary>
 		/// Description: From date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: Material overhead
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PCS115MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material overhead")]
-		public string M3_MOPE => GetString("MOPE");
+		public string M3MOPE => GetString("MOPE");
 	}
 }
 // EOF

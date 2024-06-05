@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Travel type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Travel type")]
-		public string M3_TVCD => GetString("TVCD");
+		public string M3TVCD => GetString("TVCD");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Exp trvl allow.
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exp trvl allow.")]
-		public string M3_IDTE => GetString("IDTE");
+		public string M3IDTE => GetString("IDTE");
 
 		/// <summary>
 		/// Description: Exp travel time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exp travel time")]
-		public string M3_IDTT => GetString("IDTT");
+		public string M3IDTT => GetString("IDTT");
 
 		/// <summary>
 		/// Description: Exp zone debit.
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exp zone debit.")]
-		public string M3_IDZO => GetString("IDZO");
+		public string M3IDZO => GetString("IDZO");
 
 		/// <summary>
 		/// Description: Zone debit
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Zone debit")]
-		public int? M3_IVZO => GetNullableInt("IVZO");
+		public int? M3IVZO => GetNullableInt("IVZO");
 
 		/// <summary>
 		/// Description: Change date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

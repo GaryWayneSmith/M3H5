@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Productnumber
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Productnumber")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Operation element number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation element number")]
-		public int? M3_ACTS => GetNullableInt("ACTS");
+		public int? M3ACTS => GetNullableInt("ACTS");
 
 		/// <summary>
 		/// Description: InspectionID
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("InspectionID")]
-		public string M3_INSI => GetString("INSI");
+		public string M3INSI => GetString("INSI");
 
 		/// <summary>
 		/// Description: LineNumber
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("LineNumber")]
-		public int? M3_SPOS => GetNullableInt("SPOS");
+		public int? M3SPOS => GetNullableInt("SPOS");
 
 		/// <summary>
 		/// Description: SerialNumber
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SerialNumber")]
-		public int? M3_LNNR => GetNullableInt("LNNR");
+		public int? M3LNNR => GetNullableInt("LNNR");
 
 		/// <summary>
 		/// Description: Expected value
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expected value")]
-		public string M3_EVAL => GetString("EVAL");
+		public string M3EVAL => GetString("EVAL");
 
 		/// <summary>
 		/// Description: ReportedValue
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ReportedValue")]
-		public string M3_RVAL => GetString("RVAL");
+		public string M3RVAL => GetString("RVAL");
 
 		/// <summary>
 		/// Description: ReportingDate
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ReportingDate")]
-		public DateTime? M3_RPDT => GetNullableDateTime("RPDT");
+		public DateTime? M3RPDT => GetNullableDateTime("RPDT");
 
 		/// <summary>
 		/// Description: ResonsibleReporting
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ResonsibleReporting")]
-		public string M3_RPRE => GetString("RPRE");
+		public string M3RPRE => GetString("RPRE");
 
 		/// <summary>
 		/// Description: TransactionDate YMD8
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TransactionDate YMD8")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: TransactionTime HHMMSS
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TransactionTime HHMMSS")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: ReportedUnitOfMeasure
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ReportedUnitOfMeasure")]
-		public string M3_RUOM => GetString("RUOM");
+		public string M3RUOM => GetString("RUOM");
 
 		/// <summary>
 		/// Description: InspectionDescription
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("InspectionDescription")]
-		public string M3_IITX => GetString("IITX");
+		public string M3IITX => GetString("IITX");
 
 		/// <summary>
 		/// Description: Equipment
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment")]
-		public string M3_EQNO => GetString("EQNO");
+		public string M3EQNO => GetString("EQNO");
 
 		/// <summary>
 		/// Description: EquipmentDescription
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EquipmentDescription")]
-		public string M3_ALII => GetString("ALII");
+		public string M3ALII => GetString("ALII");
 
 		/// <summary>
 		/// Description: ConfigPosition
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ConfigPosition")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: ConfigPositionDescription
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ConfigPositionDescription")]
-		public string M3_CFTX => GetString("CFTX");
+		public string M3CFTX => GetString("CFTX");
 
 		/// <summary>
 		/// Description: OperatorFromRange
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperatorFromRange")]
-		public string M3_OPE1 => GetString("OPE1");
+		public string M3OPE1 => GetString("OPE1");
 
 		/// <summary>
 		/// Description: FromRange
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FromRange")]
-		public string M3_RBFR => GetString("RBFR");
+		public string M3RBFR => GetString("RBFR");
 
 		/// <summary>
 		/// Description: OperatorToRange
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperatorToRange")]
-		public string M3_OPE2 => GetString("OPE2");
+		public string M3OPE2 => GetString("OPE2");
 
 		/// <summary>
 		/// Description: ToRange
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ToRange")]
-		public string M3_RBTO => GetString("RBTO");
+		public string M3RBTO => GetString("RBTO");
 
 		/// <summary>
 		/// Description: OperatorFromExternalLimit
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperatorFromExternalLimit")]
-		public string M3_OPE3 => GetString("OPE3");
+		public string M3OPE3 => GetString("OPE3");
 
 		/// <summary>
 		/// Description: FromExternalLimit
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FromExternalLimit")]
-		public string M3_EAFR => GetString("EAFR");
+		public string M3EAFR => GetString("EAFR");
 
 		/// <summary>
 		/// Description: OperatorToExternalLimit
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperatorToExternalLimit")]
-		public string M3_OPE4 => GetString("OPE4");
+		public string M3OPE4 => GetString("OPE4");
 
 		/// <summary>
 		/// Description: ToExternalLimit
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ToExternalLimit")]
-		public string M3_EATO => GetString("EATO");
+		public string M3EATO => GetString("EATO");
 
 		/// <summary>
 		/// Description: OperatorFromAlarmLimit
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperatorFromAlarmLimit")]
-		public string M3_OPE5 => GetString("OPE5");
+		public string M3OPE5 => GetString("OPE5");
 
 		/// <summary>
 		/// Description: AlarmFromLimit
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AlarmFromLimit")]
-		public string M3_AAFR => GetString("AAFR");
+		public string M3AAFR => GetString("AAFR");
 
 		/// <summary>
 		/// Description: OperatorToAlarmLimit
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperatorToAlarmLimit")]
-		public string M3_OPE6 => GetString("OPE6");
+		public string M3OPE6 => GetString("OPE6");
 
 		/// <summary>
 		/// Description: AlarmToLimit
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AlarmToLimit")]
-		public string M3_AATO => GetString("AATO");
+		public string M3AATO => GetString("AATO");
 
 		/// <summary>
 		/// Description: OperatorTrendLimit
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperatorTrendLimit")]
-		public string M3_OPE7 => GetString("OPE7");
+		public string M3OPE7 => GetString("OPE7");
 
 		/// <summary>
 		/// Description: TrendLimit
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TrendLimit")]
-		public string M3_AATR => GetString("AATR");
+		public string M3AATR => GetString("AATR");
 
 		/// <summary>
 		/// Description: Item number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Order type
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Start date
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Start time
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public int? M3_MSTI => GetNullableInt("MSTI");
+		public int? M3MSTI => GetNullableInt("MSTI");
 
 		/// <summary>
 		/// Description: Finish date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Finish time
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish time")]
-		public int? M3_MFTI => GetNullableInt("MFTI");
+		public int? M3MFTI => GetNullableInt("MFTI");
 
 		/// <summary>
 		/// Description: Remark
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: OperationElementDescription
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OperationElementDescription")]
-		public string M3_ACDS => GetString("ACDS");
+		public string M3ACDS => GetString("ACDS");
 
 		/// <summary>
 		/// Description: Operation description
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Text Identity
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text Identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Result identity
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MOS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result identity")]
-		public string M3_RSIY => GetString("RSIY");
+		public string M3RSIY => GetString("RSIY");
 	}
 }
 // EOF

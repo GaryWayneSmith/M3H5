@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Receiving number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving number")]
-		public long? M3_REPN => GetNullableLong("REPN");
+		public long? M3REPN => GetNullableLong("REPN");
 
 		/// <summary>
 		/// Description: Customer number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Payer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 
 		/// <summary>
 		/// Description: Return date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return date")]
-		public DateTime? M3_EPDT => GetNullableDateTime("EPDT");
+		public DateTime? M3EPDT => GetNullableDateTime("EPDT");
 
 		/// <summary>
 		/// Description: Return responsible
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return responsible")]
-		public string M3_RERE => GetString("RERE");
+		public string M3RERE => GetString("RERE");
 
 		/// <summary>
 		/// Description: Lowest status - customer order return
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - customer order return")]
-		public string M3_RESL => GetString("RESL");
+		public string M3RESL => GetString("RESL");
 
 		/// <summary>
 		/// Description: Highest status - customer order return
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - customer order return")]
-		public string M3_RESH => GetString("RESH");
+		public string M3RESH => GetString("RESH");
 
 		/// <summary>
 		/// Description: Lowest status - credit
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - credit")]
-		public int? M3_CRSB => GetNullableInt("CRSB");
+		public int? M3CRSB => GetNullableInt("CRSB");
 
 		/// <summary>
 		/// Description: Highest status - credit
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - credit")]
-		public int? M3_CRSH => GetNullableInt("CRSH");
+		public int? M3CRSH => GetNullableInt("CRSH");
 
 		/// <summary>
 		/// Description: Transaction reason
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction reason")]
-		public string M3_RSCD => GetString("RSCD");
+		public string M3RSCD => GetString("RSCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Customer order type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Division
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Last printout date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last printout date")]
-		public DateTime? M3_DODT => GetNullableDateTime("DODT");
+		public DateTime? M3DODT => GetNullableDateTime("DODT");
 
 		/// <summary>
 		/// Description: Reference number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference number")]
-		public string M3_NREF => GetString("NREF");
+		public string M3NREF => GetString("NREF");
 
 		/// <summary>
 		/// Description: 3rd party provider
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("3rd party provider")]
-		public string M3_3RDP => GetString("3RDP");
+		public string M33RDP => GetString("3RDP");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Year
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Division
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_IDIV => GetString("IDIV");
+		public string M3IDIV => GetString("IDIV");
 
 		/// <summary>
 		/// Description: Invoice Prefix
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 	}
 }
 // EOF

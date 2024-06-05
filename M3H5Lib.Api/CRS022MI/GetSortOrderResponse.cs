@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Inquiry type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inquiry type")]
-		public int? M3_QTTP => GetNullableInt("QTTP");
+		public int? M3QTTP => GetNullableInt("QTTP");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Table
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Sorting option
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting option")]
-		public string M3_SOPT => GetString("SOPT");
+		public string M3SOPT => GetString("SOPT");
 
 		/// <summary>
 		/// Description: Number of filters
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of filters")]
-		public int? M3_NFTR => GetNullableInt("NFTR");
+		public int? M3NFTR => GetNullableInt("NFTR");
 
 		/// <summary>
 		/// Description: View
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAV1 => GetString("PAV1");
+		public string M3PAV1 => GetString("PAV1");
 
 		/// <summary>
 		/// Description: View
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAV2 => GetString("PAV2");
+		public string M3PAV2 => GetString("PAV2");
 
 		/// <summary>
 		/// Description: View
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAV3 => GetString("PAV3");
+		public string M3PAV3 => GetString("PAV3");
 
 		/// <summary>
 		/// Description: View
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAV4 => GetString("PAV4");
+		public string M3PAV4 => GetString("PAV4");
 
 		/// <summary>
 		/// Description: View
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAV5 => GetString("PAV5");
+		public string M3PAV5 => GetString("PAV5");
 
 		/// <summary>
 		/// Description: View
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAV6 => GetString("PAV6");
+		public string M3PAV6 => GetString("PAV6");
 
 		/// <summary>
 		/// Description: Panel sequence
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel sequence")]
-		public string M3_PSEQ => GetString("PSEQ");
+		public string M3PSEQ => GetString("PSEQ");
 
 		/// <summary>
 		/// Description: Selection table
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection table")]
-		public string M3_TABL => GetString("TABL");
+		public string M3TABL => GetString("TABL");
 
 		/// <summary>
 		/// Description: Aggregation
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Aggregation")]
-		public int? M3_AGGR => GetNullableInt("AGGR");
+		public int? M3AGGR => GetNullableInt("AGGR");
 
 		/// <summary>
 		/// Description: Key value
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_OBK1 => GetString("OBK1");
+		public string M3OBK1 => GetString("OBK1");
 
 		/// <summary>
 		/// Description: Key value
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_OBK2 => GetString("OBK2");
+		public string M3OBK2 => GetString("OBK2");
 
 		/// <summary>
 		/// Description: Key value
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_OBK3 => GetString("OBK3");
+		public string M3OBK3 => GetString("OBK3");
 
 		/// <summary>
 		/// Description: Key value
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_OBK4 => GetString("OBK4");
+		public string M3OBK4 => GetString("OBK4");
 
 		/// <summary>
 		/// Description: Key value
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_OBK5 => GetString("OBK5");
+		public string M3OBK5 => GetString("OBK5");
 
 		/// <summary>
 		/// Description: Key value
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_OBK6 => GetString("OBK6");
+		public string M3OBK6 => GetString("OBK6");
 
 		/// <summary>
 		/// Description: Key value
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_OBK7 => GetString("OBK7");
+		public string M3OBK7 => GetString("OBK7");
 
 		/// <summary>
 		/// Description: Text identity
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Change date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Sorting order zoom
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order zoom")]
-		public int? M3_SOZ1 => GetNullableInt("SOZ1");
+		public int? M3SOZ1 => GetNullableInt("SOZ1");
 
 		/// <summary>
 		/// Description: Sorting order zoom
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order zoom")]
-		public int? M3_SOZ2 => GetNullableInt("SOZ2");
+		public int? M3SOZ2 => GetNullableInt("SOZ2");
 
 		/// <summary>
 		/// Description: Sorting order zoom
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order zoom")]
-		public int? M3_SOZ3 => GetNullableInt("SOZ3");
+		public int? M3SOZ3 => GetNullableInt("SOZ3");
 
 		/// <summary>
 		/// Description: Sorting order zoom
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order zoom")]
-		public int? M3_SOZ4 => GetNullableInt("SOZ4");
+		public int? M3SOZ4 => GetNullableInt("SOZ4");
 
 		/// <summary>
 		/// Description: Sorting order zoom
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order zoom")]
-		public int? M3_SOZ5 => GetNullableInt("SOZ5");
+		public int? M3SOZ5 => GetNullableInt("SOZ5");
 
 		/// <summary>
 		/// Description: Sorting order zoom
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order zoom")]
-		public int? M3_SOZ6 => GetNullableInt("SOZ6");
+		public int? M3SOZ6 => GetNullableInt("SOZ6");
 
 		/// <summary>
 		/// Description: Responsible
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Panel sequence
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel sequence")]
-		public string M3_USEQ => GetString("USEQ");
+		public string M3USEQ => GetString("USEQ");
 
 		/// <summary>
 		/// Description: User panel version
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User panel version")]
-		public string M3_UPV1 => GetString("UPV1");
+		public string M3UPV1 => GetString("UPV1");
 
 		/// <summary>
 		/// Description: User panel version
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User panel version")]
-		public string M3_UPV2 => GetString("UPV2");
+		public string M3UPV2 => GetString("UPV2");
 
 		/// <summary>
 		/// Description: User panel version
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User panel version")]
-		public string M3_UPV3 => GetString("UPV3");
+		public string M3UPV3 => GetString("UPV3");
 
 		/// <summary>
 		/// Description: User panel version
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User panel version")]
-		public string M3_UPV4 => GetString("UPV4");
+		public string M3UPV4 => GetString("UPV4");
 
 		/// <summary>
 		/// Description: User panel version
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User panel version")]
-		public string M3_UPV5 => GetString("UPV5");
+		public string M3UPV5 => GetString("UPV5");
 
 		/// <summary>
 		/// Description: User panel version
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User panel version")]
-		public string M3_UPV6 => GetString("UPV6");
+		public string M3UPV6 => GetString("UPV6");
 
 		/// <summary>
 		/// Description: Information browser category
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information browser category")]
-		public string M3_IBCA => GetString("IBCA");
+		public string M3IBCA => GetString("IBCA");
 	}
 }
 // EOF

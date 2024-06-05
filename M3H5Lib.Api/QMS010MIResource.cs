@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QMS010MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add a Sampling Plan
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_SAPL">Sampling plan (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_GENF">ID generation</param>
-		/// <param name="m3_STNM">Starting number</param>
-		/// <param name="m3_SMAC">Sample action</param>
-		/// <param name="m3_NBEX">Number of copies</param>
-		/// <param name="m3_ACTF">Active</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3SAPL">Sampling plan (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3GENF">ID generation</param>
+		/// <param name="m3STNM">Starting number</param>
+		/// <param name="m3SMAC">Sample action</param>
+		/// <param name="m3NBEX">Number of copies</param>
+		/// <param name="m3ACTF">Active</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSamplingPlan(
-			string m3_SAPL, 
-			string m3_TX40, 
-			int? m3_GENF = null, 
-			int? m3_STNM = null, 
-			int? m3_SMAC = null, 
-			int? m3_NBEX = null, 
-			int? m3_ACTF = null, 
-			decimal? m3_TXID = null, 
+			string m3SAPL, 
+			string m3TX40, 
+			int? m3GENF = null, 
+			int? m3STNM = null, 
+			int? m3SMAC = null, 
+			int? m3NBEX = null, 
+			int? m3ACTF = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,29 +76,29 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SAPL))
-				throw new ArgumentNullException("m3_SAPL");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3SAPL))
+				throw new ArgumentNullException(nameof(m3SAPL));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SAPL", m3_SAPL.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("SAPL", m3SAPL.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_GENF.HasValue)
-				request.WithQueryParameter("GENF", m3_GENF.Value.ToString());
-			if (m3_STNM.HasValue)
-				request.WithQueryParameter("STNM", m3_STNM.Value.ToString());
-			if (m3_SMAC.HasValue)
-				request.WithQueryParameter("SMAC", m3_SMAC.Value.ToString());
-			if (m3_NBEX.HasValue)
-				request.WithQueryParameter("NBEX", m3_NBEX.Value.ToString());
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (m3GENF.HasValue)
+				request.WithQueryParameter("GENF", m3GENF.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3STNM.HasValue)
+				request.WithQueryParameter("STNM", m3STNM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SMAC.HasValue)
+				request.WithQueryParameter("SMAC", m3SMAC.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3NBEX.HasValue)
+				request.WithQueryParameter("NBEX", m3NBEX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -106,7 +108,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -117,7 +120,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a Sampling Plan
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_SAPL">Sampling plan (Required)</param>
+		/// <param name="m3SAPL">Sampling plan (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -126,7 +129,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltSamplingPlan(
-			string m3_SAPL, 
+			string m3SAPL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -141,12 +144,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SAPL))
-				throw new ArgumentNullException("m3_SAPL");
+			if (string.IsNullOrWhiteSpace(m3SAPL))
+				throw new ArgumentNullException(nameof(m3SAPL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SAPL", m3_SAPL.Trim());
+				.WithQueryParameter("SAPL", m3SAPL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -156,7 +159,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -167,7 +171,7 @@ namespace M3H5Lib.Api
 		/// Description Get a Sampling Plan
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_SAPL">Sampling plan (Required)</param>
+		/// <param name="m3SAPL">Sampling plan (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -176,7 +180,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSamplingPlanResponse></returns>
 		/// <exception cref="M3Exception<GetSamplingPlanResponse>"></exception>
 		public async Task<M3Response<GetSamplingPlanResponse>> GetSamplingPlan(
-			string m3_SAPL, 
+			string m3SAPL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -191,12 +195,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SAPL))
-				throw new ArgumentNullException("m3_SAPL");
+			if (string.IsNullOrWhiteSpace(m3SAPL))
+				throw new ArgumentNullException(nameof(m3SAPL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SAPL", m3_SAPL.Trim());
+				.WithQueryParameter("SAPL", m3SAPL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSamplingPlanResponse>(
@@ -206,7 +210,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -217,7 +222,7 @@ namespace M3H5Lib.Api
 		/// Description List the Sampling Plan
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_SAPL">Sampling plan (Required)</param>
+		/// <param name="m3SAPL">Sampling plan (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -226,7 +231,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSamplingPlanResponse></returns>
 		/// <exception cref="M3Exception<LstSamplingPlanResponse>"></exception>
 		public async Task<M3Response<LstSamplingPlanResponse>> LstSamplingPlan(
-			string m3_SAPL, 
+			string m3SAPL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -241,12 +246,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SAPL))
-				throw new ArgumentNullException("m3_SAPL");
+			if (string.IsNullOrWhiteSpace(m3SAPL))
+				throw new ArgumentNullException(nameof(m3SAPL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SAPL", m3_SAPL.Trim());
+				.WithQueryParameter("SAPL", m3SAPL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSamplingPlanResponse>(
@@ -256,7 +261,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -267,14 +273,14 @@ namespace M3H5Lib.Api
 		/// Description Update a Sampling Plan
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_SAPL">Sampling plan (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_GENF">ID generation</param>
-		/// <param name="m3_STNM">Starting number</param>
-		/// <param name="m3_SMAC">Sample action</param>
-		/// <param name="m3_NBEX">Number of copies</param>
-		/// <param name="m3_ACTF">Active</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3SAPL">Sampling plan (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3GENF">ID generation</param>
+		/// <param name="m3STNM">Starting number</param>
+		/// <param name="m3SMAC">Sample action</param>
+		/// <param name="m3NBEX">Number of copies</param>
+		/// <param name="m3ACTF">Active</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -283,14 +289,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSamplingPlan(
-			string m3_SAPL, 
-			string m3_TX40, 
-			int? m3_GENF = null, 
-			int? m3_STNM = null, 
-			int? m3_SMAC = null, 
-			int? m3_NBEX = null, 
-			int? m3_ACTF = null, 
-			decimal? m3_TXID = null, 
+			string m3SAPL, 
+			string m3TX40, 
+			int? m3GENF = null, 
+			int? m3STNM = null, 
+			int? m3SMAC = null, 
+			int? m3NBEX = null, 
+			int? m3ACTF = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -305,29 +311,29 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SAPL))
-				throw new ArgumentNullException("m3_SAPL");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3SAPL))
+				throw new ArgumentNullException(nameof(m3SAPL));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SAPL", m3_SAPL.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("SAPL", m3SAPL.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_GENF.HasValue)
-				request.WithQueryParameter("GENF", m3_GENF.Value.ToString());
-			if (m3_STNM.HasValue)
-				request.WithQueryParameter("STNM", m3_STNM.Value.ToString());
-			if (m3_SMAC.HasValue)
-				request.WithQueryParameter("SMAC", m3_SMAC.Value.ToString());
-			if (m3_NBEX.HasValue)
-				request.WithQueryParameter("NBEX", m3_NBEX.Value.ToString());
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (m3GENF.HasValue)
+				request.WithQueryParameter("GENF", m3GENF.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3STNM.HasValue)
+				request.WithQueryParameter("STNM", m3STNM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SMAC.HasValue)
+				request.WithQueryParameter("SMAC", m3SMAC.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3NBEX.HasValue)
+				request.WithQueryParameter("NBEX", m3NBEX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -337,7 +343,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: UN number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("UN number")]
-		public int? M3_UNNN => GetNullableInt("UNNN");
+		public int? M3UNNN => GetNullableInt("UNNN");
 
 		/// <summary>
 		/// Description: NA number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("NA number")]
-		public string M3_NNNN => GetString("NNNN");
+		public string M3NNNN => GetString("NNNN");
 
 		/// <summary>
 		/// Description: CAS number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CAS number")]
-		public string M3_CASN => GetString("CASN");
+		public string M3CASN => GetString("CASN");
 
 		/// <summary>
 		/// Description: EU number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EU number")]
-		public string M3_ECNM => GetString("ECNM");
+		public string M3ECNM => GetString("ECNM");
 
 		/// <summary>
 		/// Description: EINECS number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EINECS number")]
-		public string M3_EINM => GetString("EINM");
+		public string M3EINM => GetString("EINM");
 
 		/// <summary>
 		/// Description: Atomic number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Atomic number")]
-		public string M3_ATOM => GetString("ATOM");
+		public string M3ATOM => GetString("ATOM");
 
 		/// <summary>
 		/// Description: CEA number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CEA number")]
-		public string M3_CEAN => GetString("CEAN");
+		public string M3CEAN => GetString("CEAN");
 
 		/// <summary>
 		/// Description: NAICS code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("NAICS code")]
-		public int? M3_NAIC => GetNullableInt("NAIC");
+		public int? M3NAIC => GetNullableInt("NAIC");
 
 		/// <summary>
 		/// Description: Item equipment profile
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item equipment profile")]
-		public string M3_ITEQ => GetString("ITEQ");
+		public string M3ITEQ => GetString("ITEQ");
 
 		/// <summary>
 		/// Description: Freight commodity code
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight commodity code")]
-		public string M3_CMMC => GetString("CMMC");
+		public string M3CMMC => GetString("CMMC");
 
 		/// <summary>
 		/// Description: Commodity class
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commodity class")]
-		public string M3_CMCL => GetString("CMCL");
+		public string M3CMCL => GetString("CMCL");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A001 => GetString("A001");
+		public string M3A001 => GetString("A001");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A002 => GetString("A002");
+		public string M3A002 => GetString("A002");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A003 => GetString("A003");
+		public string M3A003 => GetString("A003");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A004 => GetString("A004");
+		public string M3A004 => GetString("A004");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A005 => GetString("A005");
+		public string M3A005 => GetString("A005");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A006 => GetString("A006");
+		public string M3A006 => GetString("A006");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A007 => GetString("A007");
+		public string M3A007 => GetString("A007");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A008 => GetString("A008");
+		public string M3A008 => GetString("A008");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A009 => GetString("A009");
+		public string M3A009 => GetString("A009");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A010 => GetString("A010");
+		public string M3A010 => GetString("A010");
 
 		/// <summary>
 		/// Description: Alpha field 1 positions
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 1 positions")]
-		public string M3_A021 => GetString("A021");
+		public string M3A021 => GetString("A021");
 
 		/// <summary>
 		/// Description: Alpha field 1 positions
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 1 positions")]
-		public string M3_A022 => GetString("A022");
+		public string M3A022 => GetString("A022");
 
 		/// <summary>
 		/// Description: Alpha field 1 positions
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 1 positions")]
-		public string M3_A023 => GetString("A023");
+		public string M3A023 => GetString("A023");
 
 		/// <summary>
 		/// Description: Alpha field 1 positions
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 1 positions")]
-		public string M3_A024 => GetString("A024");
+		public string M3A024 => GetString("A024");
 
 		/// <summary>
 		/// Description: Alpha field 1 positions
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 1 positions")]
-		public string M3_A025 => GetString("A025");
+		public string M3A025 => GetString("A025");
 
 		/// <summary>
 		/// Description: Alpha field 5 positions
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 5 positions")]
-		public string M3_A026 => GetString("A026");
+		public string M3A026 => GetString("A026");
 
 		/// <summary>
 		/// Description: Alpha field 5 positions
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 5 positions")]
-		public string M3_A027 => GetString("A027");
+		public string M3A027 => GetString("A027");
 
 		/// <summary>
 		/// Description: Alpha field 5 positions
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 5 positions")]
-		public string M3_A028 => GetString("A028");
+		public string M3A028 => GetString("A028");
 
 		/// <summary>
 		/// Description: Alpha field 5 positions
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 5 positions")]
-		public string M3_A029 => GetString("A029");
+		public string M3A029 => GetString("A029");
 
 		/// <summary>
 		/// Description: Alpha field 5 positions
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 5 positions")]
-		public string M3_A030 => GetString("A030");
+		public string M3A030 => GetString("A030");
 
 		/// <summary>
 		/// Description: Alpha field 10 positions
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 10 positions")]
-		public string M3_A031 => GetString("A031");
+		public string M3A031 => GetString("A031");
 
 		/// <summary>
 		/// Description: Alpha field 10 positions
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 10 positions")]
-		public string M3_A032 => GetString("A032");
+		public string M3A032 => GetString("A032");
 
 		/// <summary>
 		/// Description: Alpha field 10 positions
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 10 positions")]
-		public string M3_A033 => GetString("A033");
+		public string M3A033 => GetString("A033");
 
 		/// <summary>
 		/// Description: Alpha field 10 positions
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 10 positions")]
-		public string M3_A034 => GetString("A034");
+		public string M3A034 => GetString("A034");
 
 		/// <summary>
 		/// Description: Alpha field 10 positions
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 10 positions")]
-		public string M3_A035 => GetString("A035");
+		public string M3A035 => GetString("A035");
 
 		/// <summary>
 		/// Description: Alpha field 15 positions
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 15 positions")]
-		public string M3_A036 => GetString("A036");
+		public string M3A036 => GetString("A036");
 
 		/// <summary>
 		/// Description: Alpha field 15 positions
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 15 positions")]
-		public string M3_A037 => GetString("A037");
+		public string M3A037 => GetString("A037");
 
 		/// <summary>
 		/// Description: Alpha field 15 positions
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 15 positions")]
-		public string M3_A038 => GetString("A038");
+		public string M3A038 => GetString("A038");
 
 		/// <summary>
 		/// Description: Alpha field 15 positions
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 15 positions")]
-		public string M3_A039 => GetString("A039");
+		public string M3A039 => GetString("A039");
 
 		/// <summary>
 		/// Description: Alpha field 15 positions
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 15 positions")]
-		public string M3_A040 => GetString("A040");
+		public string M3A040 => GetString("A040");
 
 		/// <summary>
 		/// Description: Hazardous material
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hazardous material")]
-		public int? M3_HAZM => GetNullableInt("HAZM");
+		public int? M3HAZM => GetNullableInt("HAZM");
 
 		/// <summary>
 		/// Description: Text identity
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Change date
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MWS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

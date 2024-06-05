@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Shipment package number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment package number")]
-		public string M3_SPNO => GetString("SPNO");
+		public string M3SPNO => GetString("SPNO");
 
 		/// <summary>
 		/// Description: Shipment
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment")]
-		public int? M3_CONN => GetNullableInt("CONN");
+		public int? M3CONN => GetNullableInt("CONN");
 
 		/// <summary>
 		/// Description: Via address
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via address")]
-		public string M3_ADVI => GetString("ADVI");
+		public string M3ADVI => GetString("ADVI");
 
 		/// <summary>
 		/// Description: Packaging
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Package status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package status")]
-		public string M3_SPSS => GetString("SPSS");
+		public string M3SPSS => GetString("SPSS");
 
 		/// <summary>
 		/// Description: Lowest Pick status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest Pick status")]
-		public string M3_PISL => GetString("PISL");
+		public string M3PISL => GetString("PISL");
 
 		/// <summary>
 		/// Description: Highest Pick status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest Pick status")]
-		public string M3_PISH => GetString("PISH");
+		public string M3PISH => GetString("PISH");
 
 		/// <summary>
 		/// Description: Lowest Pack status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest Pack status")]
-		public string M3_PSTL => GetString("PSTL");
+		public string M3PSTL => GetString("PSTL");
 
 		/// <summary>
 		/// Description: Higest Pack status
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Higest Pack status")]
-		public string M3_PSTH => GetString("PSTH");
+		public string M3PSTH => GetString("PSTH");
 
 		/// <summary>
 		/// Description: Actual gross weight
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual gross weight")]
-		public decimal? M3_GWTM => GetNullableDecimal("GWTM");
+		public decimal? M3GWTM => GetNullableDecimal("GWTM");
 
 		/// <summary>
 		/// Description: Actual net weight
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual net weight")]
-		public decimal? M3_NTWM => GetNullableDecimal("NTWM");
+		public decimal? M3NTWM => GetNullableDecimal("NTWM");
 
 		/// <summary>
 		/// Description: Actual quantity in free unit
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual quantity in free unit")]
-		public decimal? M3_FRCM => GetNullableDecimal("FRCM");
+		public decimal? M3FRCM => GetNullableDecimal("FRCM");
 
 		/// <summary>
 		/// Description: Actual volume
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual volume")]
-		public decimal? M3_VLMM => GetNullableDecimal("VLMM");
+		public decimal? M3VLMM => GetNullableDecimal("VLMM");
 
 		/// <summary>
 		/// Description: Packaging length
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging length")]
-		public int? M3_PACL => GetNullableInt("PACL");
+		public int? M3PACL => GetNullableInt("PACL");
 
 		/// <summary>
 		/// Description: Packaging width
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging width")]
-		public int? M3_PACW => GetNullableInt("PACW");
+		public int? M3PACW => GetNullableInt("PACW");
 
 		/// <summary>
 		/// Description: Packaging height
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging height")]
-		public int? M3_PACH => GetNullableInt("PACH");
+		public int? M3PACH => GetNullableInt("PACH");
 
 		/// <summary>
 		/// Description: Packaging weight
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging weight")]
-		public decimal? M3_TARW => GetNullableDecimal("TARW");
+		public decimal? M3TARW => GetNullableDecimal("TARW");
 
 		/// <summary>
 		/// Description: SEAL number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SEAL number")]
-		public string M3_SEAL => GetString("SEAL");
+		public string M3SEAL => GetString("SEAL");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: External tracking number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External tracking number")]
-		public string M3_ETRN => GetString("ETRN");
+		public string M3ETRN => GetString("ETRN");
 
 		/// <summary>
 		/// Description: Package alias 1
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package alias 1")]
-		public string M3_PAN1 => GetString("PAN1");
+		public string M3PAN1 => GetString("PAN1");
 
 		/// <summary>
 		/// Description: Package alias 2
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package alias 2")]
-		public string M3_PAN2 => GetString("PAN2");
+		public string M3PAN2 => GetString("PAN2");
 
 		/// <summary>
 		/// Description: Package alias 3
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package alias 3")]
-		public string M3_PAN3 => GetString("PAN3");
+		public string M3PAN3 => GetString("PAN3");
 
 		/// <summary>
 		/// Description: Remark
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_DLRM => GetString("DLRM");
+		public string M3DLRM => GetString("DLRM");
 
 		/// <summary>
 		/// Description: Goods mark Odette standard
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods mark Odette standard")]
-		public string M3_DLMO => GetString("DLMO");
+		public string M3DLMO => GetString("DLMO");
 
 		/// <summary>
 		/// Description: Text identity
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Location
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.DRS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Panel
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel")]
-		public string M3_PIC1 => GetString("PIC1");
+		public string M3PIC1 => GetString("PIC1");
 
 		/// <summary>
 		/// Description: Inquiry type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inquiry type")]
-		public int? M3_QTTP => GetNullableInt("QTTP");
+		public int? M3QTTP => GetNullableInt("QTTP");
 
 		/// <summary>
 		/// Description: Column number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column number")]
-		public int? M3_COID => GetNullableInt("COID");
+		public int? M3COID => GetNullableInt("COID");
 
 		/// <summary>
 		/// Description: Key field
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEYF => GetString("KEYF");
+		public string M3KEYF => GetString("KEYF");
 	}
 }
 // EOF

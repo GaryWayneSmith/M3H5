@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AAGT => GetString("AAGT");
+		public string M3AAGT => GetString("AAGT");
 
 		/// <summary>
 		/// Description: Customer number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Payer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Statistical customer
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistical customer")]
-		public string M3_ACS1 => GetString("ACS1");
+		public string M3ACS1 => GetString("ACS1");
 
 		/// <summary>
 		/// Description: Statistical agreement
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistical agreement")]
-		public string M3_AAGS => GetString("AAGS");
+		public string M3AAGS => GetString("AAGS");
 
 		/// <summary>
 		/// Description: Project
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project")]
-		public string M3_APRS => GetString("APRS");
+		public string M3APRS => GetString("APRS");
 
 		/// <summary>
 		/// Description: Project element
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Start date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: To date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 
 		/// <summary>
 		/// Description: Responsible
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: External reference
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External reference")]
-		public string M3_AREF => GetString("AREF");
+		public string M3AREF => GetString("AREF");
 
 		/// <summary>
 		/// Description: Material price method
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material price method")]
-		public int? M3_APBA => GetNullableInt("APBA");
+		public int? M3APBA => GetNullableInt("APBA");
 
 		/// <summary>
 		/// Description: Material handling charge method
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material handling charge method")]
-		public int? M3_AHCM => GetNullableInt("AHCM");
+		public int? M3AHCM => GetNullableInt("AHCM");
 
 		/// <summary>
 		/// Description: General handling charge
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("General handling charge")]
-		public int? M3_AMHA => GetNullableInt("AMHA");
+		public int? M3AMHA => GetNullableInt("AMHA");
 
 		/// <summary>
 		/// Description: Maximum handling charge per order
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum handling charge per order")]
-		public decimal? M3_AMHT => GetNullableDecimal("AMHT");
+		public decimal? M3AMHT => GetNullableDecimal("AMHT");
 
 		/// <summary>
 		/// Description: Maximum handling charge per transaction
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum handling charge per transaction")]
-		public decimal? M3_AMHL => GetNullableDecimal("AMHL");
+		public decimal? M3AMHL => GetNullableDecimal("AMHL");
 
 		/// <summary>
 		/// Description: Maximum handling charge per item
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum handling charge per item")]
-		public decimal? M3_AMHI => GetNullableDecimal("AMHI");
+		public decimal? M3AMHI => GetNullableDecimal("AMHI");
 
 		/// <summary>
 		/// Description: Material currency
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material currency")]
-		public string M3_AMCU => GetString("AMCU");
+		public string M3AMCU => GetString("AMCU");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Agreement currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement currency")]
-		public string M3_AACU => GetString("AACU");
+		public string M3AACU => GetString("AACU");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRT1 => GetNullableInt("CRT1");
+		public int? M3CRT1 => GetNullableInt("CRT1");
 
 		/// <summary>
 		/// Description: Agreement cancellation - days notice
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement cancellation - days notice")]
-		public int? M3_ACDY => GetNullableInt("ACDY");
+		public int? M3ACDY => GetNullableInt("ACDY");
 
 		/// <summary>
 		/// Description: Check scope of agreement - object
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check scope of agreement - object")]
-		public int? M3_ACT9 => GetNullableInt("ACT9");
+		public int? M3ACT9 => GetNullableInt("ACT9");
 
 		/// <summary>
 		/// Description: Check scope of agreement - model indiv
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check scope of agreement - model indiv")]
-		public int? M3_ACRG => GetNullableInt("ACRG");
+		public int? M3ACRG => GetNullableInt("ACRG");
 
 		/// <summary>
 		/// Description: Serial number administration
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number administration")]
-		public int? M3_ACSE => GetNullableInt("ACSE");
+		public int? M3ACSE => GetNullableInt("ACSE");
 
 		/// <summary>
 		/// Description: Modification
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Modification")]
-		public int? M3_AMOD => GetNullableInt("AMOD");
+		public int? M3AMOD => GetNullableInt("AMOD");
 
 		/// <summary>
 		/// Description: Maintenance program
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maintenance program")]
-		public string M3_MPGM => GetString("MPGM");
+		public string M3MPGM => GetString("MPGM");
 
 		/// <summary>
 		/// Description: Order type
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_AOTY => GetString("AOTY");
+		public string M3AOTY => GetString("AOTY");
 
 		/// <summary>
 		/// Description: Service price list
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price list")]
-		public string M3_SPRL => GetString("SPRL");
+		public string M3SPRL => GetString("SPRL");
 
 		/// <summary>
 		/// Description: Monitoring list
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monitoring list")]
-		public string M3_AMON => GetString("AMON");
+		public string M3AMON => GetString("AMON");
 
 		/// <summary>
 		/// Description: Language
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Packaging terms
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging terms")]
-		public string M3_TEPA => GetString("TEPA");
+		public string M3TEPA => GetString("TEPA");
 
 		/// <summary>
 		/// Description: Freight terms
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight terms")]
-		public string M3_TEAF => GetString("TEAF");
+		public string M3TEAF => GetString("TEAF");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: User-defined field 1 - item
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: Price list
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Price list 2
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 2")]
-		public string M3_PRR2 => GetString("PRR2");
+		public string M3PRR2 => GetString("PRR2");
 
 		/// <summary>
 		/// Description: Price list 3
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 3")]
-		public string M3_PRR3 => GetString("PRR3");
+		public string M3PRR3 => GetString("PRR3");
 
 		/// <summary>
 		/// Description: Price list 4
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 4")]
-		public string M3_PRR4 => GetString("PRR4");
+		public string M3PRR4 => GetString("PRR4");
 
 		/// <summary>
 		/// Description: Price list 5
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 5")]
-		public string M3_PRR5 => GetString("PRR5");
+		public string M3PRR5 => GetString("PRR5");
 
 		/// <summary>
 		/// Description: Operation plan version
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation plan version")]
-		public string M3_OPVR => GetString("OPVR");
+		public string M3OPVR => GetString("OPVR");
 
 		/// <summary>
 		/// Description: Operation plan version actual
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation plan version actual")]
-		public string M3_OPVC => GetString("OPVC");
+		public string M3OPVC => GetString("OPVC");
 
 		/// <summary>
 		/// Description: Operation plan version divergence
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation plan version divergence")]
-		public string M3_OPVD => GetString("OPVD");
+		public string M3OPVD => GetString("OPVD");
 
 		/// <summary>
 		/// Description: Maximum handling charge per order
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum handling charge per order")]
-		public decimal? M3_ASHT => GetNullableDecimal("ASHT");
+		public decimal? M3ASHT => GetNullableDecimal("ASHT");
 
 		/// <summary>
 		/// Description: Maximum handling charge per transaction
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum handling charge per transaction")]
-		public decimal? M3_ASHL => GetNullableDecimal("ASHL");
+		public decimal? M3ASHL => GetNullableDecimal("ASHL");
 
 		/// <summary>
 		/// Description: Maximum handling charge per item
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum handling charge per item")]
-		public decimal? M3_ASHI => GetNullableDecimal("ASHI");
+		public decimal? M3ASHI => GetNullableDecimal("ASHI");
 	}
 }
 // EOF

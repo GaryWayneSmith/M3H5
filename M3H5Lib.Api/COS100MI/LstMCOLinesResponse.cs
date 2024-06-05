@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Service
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_APD1 => GetNullableDateTime("APD1");
+		public DateTime? M3APD1 => GetNullableDateTime("APD1");
 
 		/// <summary>
 		/// Description: Planned delivery time
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery time")]
-		public int? M3_APTA => GetNullableInt("APTA");
+		public int? M3APTA => GetNullableInt("APTA");
 
 		/// <summary>
 		/// Description: Planned receipt date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned receipt date")]
-		public DateTime? M3_AAP1 => GetNullableDateTime("AAP1");
+		public DateTime? M3AAP1 => GetNullableDateTime("AAP1");
 
 		/// <summary>
 		/// Description: Planned receipt time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned receipt time")]
-		public int? M3_APTI => GetNullableInt("APTI");
+		public int? M3APTI => GetNullableInt("APTI");
 
 		/// <summary>
 		/// Description: Actual delivery date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual delivery date")]
-		public DateTime? M3_AACD => GetNullableDateTime("AACD");
+		public DateTime? M3AACD => GetNullableDateTime("AACD");
 
 		/// <summary>
 		/// Description: Actual delivery time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual delivery time")]
-		public int? M3_ADTM => GetNullableInt("ADTM");
+		public int? M3ADTM => GetNullableInt("ADTM");
 
 		/// <summary>
 		/// Description: Actual receipt date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual receipt date")]
-		public DateTime? M3_AADT => GetNullableDateTime("AADT");
+		public DateTime? M3AADT => GetNullableDateTime("AADT");
 
 		/// <summary>
 		/// Description: Actual receipt time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual receipt time")]
-		public int? M3_AAT1 => GetNullableInt("AAT1");
+		public int? M3AAT1 => GetNullableInt("AAT1");
 
 		/// <summary>
 		/// Description: Actual start date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start date")]
-		public DateTime? M3_RSDT => GetNullableDateTime("RSDT");
+		public DateTime? M3RSDT => GetNullableDateTime("RSDT");
 
 		/// <summary>
 		/// Description: Actual start time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start time")]
-		public int? M3_RSTI => GetNullableInt("RSTI");
+		public int? M3RSTI => GetNullableInt("RSTI");
 
 		/// <summary>
 		/// Description: Supplier
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_ALI1 => GetNullableInt("ALI1");
+		public int? M3ALI1 => GetNullableInt("ALI1");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Item number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Payer
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: WIP debit
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("WIP debit")]
-		public decimal? M3_AWCO => GetNullableDecimal("AWCO");
+		public decimal? M3AWCO => GetNullableDecimal("AWCO");
 
 		/// <summary>
 		/// Description: Sales price
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_ASP1 => GetNullableDecimal("ASP1");
+		public decimal? M3ASP1 => GetNullableDecimal("ASP1");
 
 		/// <summary>
 		/// Description: Original quantity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original quantity")]
-		public decimal? M3_AOQT => GetNullableDecimal("AOQT");
+		public decimal? M3AOQT => GetNullableDecimal("AOQT");
 
 		/// <summary>
 		/// Description: Miscellaneous cost types
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous cost types")]
-		public string M3_AMTY => GetString("AMTY");
+		public string M3AMTY => GetString("AMTY");
 
 		/// <summary>
 		/// Description: Error code 1
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error code 1")]
-		public string M3_FCLA => GetString("FCLA");
+		public string M3FCLA => GetString("FCLA");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 	}
 }
 // EOF

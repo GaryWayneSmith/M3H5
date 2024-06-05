@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Message type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message type")]
-		public string M3_E065 => GetString("E065");
+		public string M3E065 => GetString("E065");
 
 		/// <summary>
 		/// Description: Interface item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface item number")]
-		public string M3_IFIN => GetString("IFIN");
+		public string M3IFIN => GetString("IFIN");
 
 		/// <summary>
 		/// Description: External message number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External message number")]
-		public string M3_PMSN => GetString("PMSN");
+		public string M3PMSN => GetString("PMSN");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAI => GetString("STAI");
+		public string M3STAI => GetString("STAI");
 
 		/// <summary>
 		/// Description: Lowest status child table
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status child table")]
-		public string M3_STOT => GetString("STOT");
+		public string M3STOT => GetString("STOT");
 
 		/// <summary>
 		/// Description: Exist in BE
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exist in BE")]
-		public int? M3_EXBE => GetNullableInt("EXBE");
+		public int? M3EXBE => GetNullableInt("EXBE");
 
 		/// <summary>
 		/// Description: Message ID
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Message
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message")]
-		public string M3_MSGD => GetString("MSGD");
+		public string M3MSGD => GetString("MSGD");
 
 		/// <summary>
 		/// Description: Item number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Description 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 2")]
-		public string M3_FUDS => GetString("FUDS");
+		public string M3FUDS => GetString("FUDS");
 
 		/// <summary>
 		/// Description: Drawing number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing number")]
-		public string M3_DWNO => GetString("DWNO");
+		public string M3DWNO => GetString("DWNO");
 
 		/// <summary>
 		/// Description: Status
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Item type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item type")]
-		public string M3_ITTY => GetString("ITTY");
+		public string M3ITTY => GetString("ITTY");
 
 		/// <summary>
 		/// Description: Item group
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGR => GetString("ITGR");
+		public string M3ITGR => GetString("ITGR");
 
 		/// <summary>
 		/// Description: Product group
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product group")]
-		public string M3_ITCL => GetString("ITCL");
+		public string M3ITCL => GetString("ITCL");
 
 		/// <summary>
 		/// Description: Business area
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business area")]
-		public string M3_BUAR => GetString("BUAR");
+		public string M3BUAR => GetString("BUAR");
 
 		/// <summary>
 		/// Description: Inventory accounting
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting")]
-		public int? M3_STCD => GetNullableInt("STCD");
+		public int? M3STCD => GetNullableInt("STCD");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Responsible
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Make/buy code
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Make/buy code")]
-		public int? M3_MABU => GetNullableInt("MABU");
+		public int? M3MABU => GetNullableInt("MABU");
 
 		/// <summary>
 		/// Description: Procurement group
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Procurement group")]
-		public string M3_PRGP => GetString("PRGP");
+		public string M3PRGP => GetString("PRGP");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Lot control method
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot control method")]
-		public int? M3_INDI => GetNullableInt("INDI");
+		public int? M3INDI => GetNullableInt("INDI");
 
 		/// <summary>
 		/// Description: Lot numbering method
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot numbering method")]
-		public int? M3_BACD => GetNullableInt("BACD");
+		public int? M3BACD => GetNullableInt("BACD");
 
 		/// <summary>
 		/// Description: Alternate U/M in use
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M in use")]
-		public int? M3_ALUC => GetNullableInt("ALUC");
+		public int? M3ALUC => GetNullableInt("ALUC");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Expiration date method
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expiration date method")]
-		public int? M3_EXPD => GetNullableInt("EXPD");
+		public int? M3EXPD => GetNullableInt("EXPD");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Net weight
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Volume
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Active or catch weight item
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active or catch weight item")]
-		public int? M3_ACTI => GetNullableInt("ACTI");
+		public int? M3ACTI => GetNullableInt("ACTI");
 
 		/// <summary>
 		/// Description: Environment group
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Environment group")]
-		public string M3_EVGR => GetString("EVGR");
+		public string M3EVGR => GetString("EVGR");
 
 		/// <summary>
 		/// Description: Sales item
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales item")]
-		public int? M3_SALE => GetNullableInt("SALE");
+		public int? M3SALE => GetNullableInt("SALE");
 
 		/// <summary>
 		/// Description: VAT code - purchase
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code - purchase")]
-		public int? M3_VTCP => GetNullableInt("VTCP");
+		public int? M3VTCP => GetNullableInt("VTCP");
 
 		/// <summary>
 		/// Description: VAT code - sales
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code - sales")]
-		public int? M3_VTCS => GetNullableInt("VTCS");
+		public int? M3VTCS => GetNullableInt("VTCS");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Purchase price quantity
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price quantity")]
-		public int? M3_PUCD => GetNullableInt("PUCD");
+		public int? M3PUCD => GetNullableInt("PUCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Sales price
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Currency - sales price
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency - sales price")]
-		public string M3_CUCS => GetString("CUCS");
+		public string M3CUCS => GetString("CUCS");
 
 		/// <summary>
 		/// Description: Warehouse table
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse table")]
-		public string M3_WHTA => GetString("WHTA");
+		public string M3WHTA => GetString("WHTA");
 
 		/// <summary>
 		/// Description: Discount group - item
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount group - item")]
-		public string M3_DIGI => GetString("DIGI");
+		public string M3DIGI => GetString("DIGI");
 
 		/// <summary>
 		/// Description: Season control
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Season control")]
-		public int? M3_SECH => GetNullableInt("SECH");
+		public int? M3SECH => GetNullableInt("SECH");
 
 		/// <summary>
 		/// Description: User-defined field 1 - item
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD3 => GetString("USD3");
+		public string M3USD3 => GetString("USD3");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD4 => GetString("USD4");
+		public string M3USD4 => GetString("USD4");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD5 => GetString("USD5");
+		public string M3USD5 => GetString("USD5");
 
 		/// <summary>
 		/// Description: Configuration code
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration code")]
-		public int? M3_CHCD => GetNullableInt("CHCD");
+		public int? M3CHCD => GetNullableInt("CHCD");
 
 		/// <summary>
 		/// Description: Fixed or dynamic sales price U/M
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed or dynamic sales price U/M")]
-		public int? M3_SPUC => GetNullableInt("SPUC");
+		public int? M3SPUC => GetNullableInt("SPUC");
 
 		/// <summary>
 		/// Description: Text identity
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Change log exists
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change log exists")]
-		public int? M3_CHLG => GetNullableInt("CHLG");
+		public int? M3CHLG => GetNullableInt("CHLG");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Revision number
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Specification 1
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 1")]
-		public string M3_SPE1 => GetString("SPE1");
+		public string M3SPE1 => GetString("SPE1");
 
 		/// <summary>
 		/// Description: Specification 2
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 2")]
-		public string M3_SPE2 => GetString("SPE2");
+		public string M3SPE2 => GetString("SPE2");
 
 		/// <summary>
 		/// Description: Specification 3
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 3")]
-		public string M3_SPE3 => GetString("SPE3");
+		public string M3SPE3 => GetString("SPE3");
 
 		/// <summary>
 		/// Description: Specification 4
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 4")]
-		public string M3_SPE4 => GetString("SPE4");
+		public string M3SPE4 => GetString("SPE4");
 
 		/// <summary>
 		/// Description: Specification 5
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 5")]
-		public string M3_SPE5 => GetString("SPE5");
+		public string M3SPE5 => GetString("SPE5");
 
 		/// <summary>
 		/// Description: Returnable / non returnable indicator
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Returnable / non returnable indicator")]
-		public int? M3_RNRI => GetNullableInt("RNRI");
+		public int? M3RNRI => GetNullableInt("RNRI");
 
 		/// <summary>
 		/// Description: Suppliers ABC code
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliers ABC code")]
-		public string M3_SAFC => GetString("SAFC");
+		public string M3SAFC => GetString("SAFC");
 
 		/// <summary>
 		/// Description: Returnable message
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Returnable message")]
-		public int? M3_RMSG => GetNullableInt("RMSG");
+		public int? M3RMSG => GetNullableInt("RMSG");
 
 		/// <summary>
 		/// Description: Attribute managed
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute managed")]
-		public int? M3_ATMN => GetNullableInt("ATMN");
+		public int? M3ATMN => GetNullableInt("ATMN");
 
 		/// <summary>
 		/// Description: Attribute model
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute model")]
-		public string M3_ATMO => GetString("ATMO");
+		public string M3ATMO => GetString("ATMO");
 
 		/// <summary>
 		/// Description: Included in territorial roll-up
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in territorial roll-up")]
-		public int? M3_ITRU => GetNullableInt("ITRU");
+		public int? M3ITRU => GetNullableInt("ITRU");
 
 		/// <summary>
 		/// Description: Next shop action type
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next shop action type")]
-		public string M3_NESA => GetString("NESA");
+		public string M3NESA => GetString("NESA");
 
 		/// <summary>
 		/// Description: Next service
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next service")]
-		public string M3_NSUF => GetString("NSUF");
+		public string M3NSUF => GetString("NSUF");
 
 		/// <summary>
 		/// Description: Order type
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Tank
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tank")]
-		public int? M3_TANK => GetNullableInt("TANK");
+		public int? M3TANK => GetNullableInt("TANK");
 
 		/// <summary>
 		/// Description: Specific gravity
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specific gravity")]
-		public decimal? M3_SPGV => GetNullableDecimal("SPGV");
+		public decimal? M3SPGV => GetNullableDecimal("SPGV");
 
 		/// <summary>
 		/// Description: Ruleset ID
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ruleset ID")]
-		public string M3_RUID => GetString("RUID");
+		public string M3RUID => GetString("RUID");
 
 		/// <summary>
 		/// Description: Product line
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product line")]
-		public string M3_PDLN => GetString("PDLN");
+		public string M3PDLN => GetString("PDLN");
 
 		/// <summary>
 		/// Description: Composition group
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Composition group")]
-		public string M3_CPGR => GetString("CPGR");
+		public string M3CPGR => GetString("CPGR");
 
 		/// <summary>
 		/// Description: Sublot method
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sublot method")]
-		public int? M3_SUME => GetNullableInt("SUME");
+		public int? M3SUME => GetNullableInt("SUME");
 
 		/// <summary>
 		/// Description: Location-based catch weight
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location-based catch weight")]
-		public int? M3_CAWP => GetNullableInt("CAWP");
+		public int? M3CAWP => GetNullableInt("CAWP");
 
 		/// <summary>
 		/// Description: Sublot policy
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.MHS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sublot policy")]
-		public string M3_SUMP => GetString("SUMP");
+		public string M3SUMP => GetString("SUMP");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned order")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Subnumber - planned order
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - planned order")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Subnumber - order proposal
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - order proposal")]
-		public int? M3_PLP2 => GetNullableInt("PLP2");
+		public int? M3PLP2 => GetNullableInt("PLP2");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Reference order operation
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS105MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order operation")]
-		public int? M3_RORO => GetNullableInt("RORO");
+		public int? M3RORO => GetNullableInt("RORO");
 	}
 }
 // EOF

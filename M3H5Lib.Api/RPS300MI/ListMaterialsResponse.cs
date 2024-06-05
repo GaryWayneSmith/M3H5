@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Macro order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Macro order number")]
-		public string M3_MONO => GetString("MONO");
+		public string M3MONO => GetString("MONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Macro order qualifier
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Macro order qualifier")]
-		public string M3_MOQF => GetString("MOQF");
+		public string M3MOQF => GetString("MOQF");
 
 		/// <summary>
 		/// Description: Macro order value
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Macro order value")]
-		public string M3_MOQV => GetString("MOQV");
+		public string M3MOQV => GetString("MOQV");
 
 		/// <summary>
 		/// Description: Bucket end date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bucket end date")]
-		public DateTime? M3_EDBU => GetNullableDateTime("EDBU");
+		public DateTime? M3EDBU => GetNullableDateTime("EDBU");
 
 		/// <summary>
 		/// Description: Bucket start date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bucket start date")]
-		public DateTime? M3_SDBU => GetNullableDateTime("SDBU");
+		public DateTime? M3SDBU => GetNullableDateTime("SDBU");
 
 		/// <summary>
 		/// Description: Reserved quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reserved quantity")]
-		public decimal? M3_REQT => GetNullableDecimal("REQT");
+		public decimal? M3REQT => GetNullableDecimal("REQT");
 
 		/// <summary>
 		/// Description: Unit of measurement
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measurement")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Allocated quantity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Material sequence number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material sequence number")]
-		public int? M3_SEMA => GetNullableInt("SEMA");
+		public int? M3SEMA => GetNullableInt("SEMA");
 
 		/// <summary>
 		/// Description: Operation sequence number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation sequence number")]
-		public int? M3_SEOP => GetNullableInt("SEOP");
+		public int? M3SEOP => GetNullableInt("SEOP");
 
 		/// <summary>
 		/// Description: Reservation date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reservation date")]
-		public DateTime? M3_RDAT => GetNullableDateTime("RDAT");
+		public DateTime? M3RDAT => GetNullableDateTime("RDAT");
 
 		/// <summary>
 		/// Description: Attribute value alpha 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value alpha 1")]
-		public string M3_AVA1 => GetString("AVA1");
+		public string M3AVA1 => GetString("AVA1");
 
 		/// <summary>
 		/// Description: Attribute value alpha 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value alpha 2")]
-		public string M3_AVA2 => GetString("AVA2");
+		public string M3AVA2 => GetString("AVA2");
 
 		/// <summary>
 		/// Description: Attribute value alpha 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value alpha 3")]
-		public string M3_AVA3 => GetString("AVA3");
+		public string M3AVA3 => GetString("AVA3");
 
 		/// <summary>
 		/// Description: Attribute value alpha 4
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value alpha 4")]
-		public string M3_AVA4 => GetString("AVA4");
+		public string M3AVA4 => GetString("AVA4");
 
 		/// <summary>
 		/// Description: Attribute value alpha 5
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value alpha 5")]
-		public string M3_AVA5 => GetString("AVA5");
+		public string M3AVA5 => GetString("AVA5");
 
 		/// <summary>
 		/// Description: Attrubite value numeric 1
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attrubite value numeric 1")]
-		public decimal? M3_AVN1 => GetNullableDecimal("AVN1");
+		public decimal? M3AVN1 => GetNullableDecimal("AVN1");
 
 		/// <summary>
 		/// Description: Attrubite value numeric 2
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attrubite value numeric 2")]
-		public decimal? M3_AVN2 => GetNullableDecimal("AVN2");
+		public decimal? M3AVN2 => GetNullableDecimal("AVN2");
 
 		/// <summary>
 		/// Description: Attrubite value numeric 3
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attrubite value numeric 3")]
-		public decimal? M3_AVN3 => GetNullableDecimal("AVN3");
+		public decimal? M3AVN3 => GetNullableDecimal("AVN3");
 
 		/// <summary>
 		/// Description: Attrubite value numeric 4
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attrubite value numeric 4")]
-		public decimal? M3_AVN4 => GetNullableDecimal("AVN4");
+		public decimal? M3AVN4 => GetNullableDecimal("AVN4");
 
 		/// <summary>
 		/// Description: Attrubite value numeric 5
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attrubite value numeric 5")]
-		public decimal? M3_AVN5 => GetNullableDecimal("AVN5");
+		public decimal? M3AVN5 => GetNullableDecimal("AVN5");
 
 		/// <summary>
 		/// Description: Safety time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Safety time")]
-		public int? M3_SATD => GetNullableInt("SATD");
+		public int? M3SATD => GetNullableInt("SATD");
 
 		/// <summary>
 		/// Description: Entry date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Time hours & minutes
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time hours & minutes")]
-		public int? M3_TIHM => GetNullableInt("TIHM");
+		public int? M3TIHM => GetNullableInt("TIHM");
 
 		/// <summary>
 		/// Description: Shipping buffer in production days
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipping buffer in production days")]
-		public int? M3_SHBP => GetNullableInt("SHBP");
+		public int? M3SHBP => GetNullableInt("SHBP");
 
 		/// <summary>
 		/// Description: Facility
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 	}
 }
 // EOF

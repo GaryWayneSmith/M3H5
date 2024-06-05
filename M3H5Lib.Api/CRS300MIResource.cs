@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS300MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get ship-via address
 		/// Version Release: 14.1
 		/// </summary>
-		/// <param name="m3_ADVI">Ship-via address (Required)</param>
-		/// <param name="m3_STDT">Start date</param>
+		/// <param name="m3ADVI">Ship-via address (Required)</param>
+		/// <param name="m3STDT">Start date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetShipViaResponse></returns>
 		/// <exception cref="M3Exception<GetShipViaResponse>"></exception>
 		public async Task<M3Response<GetShipViaResponse>> GetShipVia(
-			string m3_ADVI, 
-			DateTime? m3_STDT = null, 
+			string m3ADVI, 
+			DateTime? m3STDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,16 +64,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ADVI))
-				throw new ArgumentNullException("m3_ADVI");
+			if (string.IsNullOrWhiteSpace(m3ADVI))
+				throw new ArgumentNullException(nameof(m3ADVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ADVI", m3_ADVI.Trim());
+				.WithQueryParameter("ADVI", m3ADVI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<GetShipViaResponse>(
@@ -81,7 +83,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -92,8 +95,8 @@ namespace M3H5Lib.Api
 		/// Description List ship-via address
 		/// Version Release: 14.1
 		/// </summary>
-		/// <param name="m3_ADVI">Ship-via address</param>
-		/// <param name="m3_STDT">Start date</param>
+		/// <param name="m3ADVI">Ship-via address</param>
+		/// <param name="m3STDT">Start date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -102,8 +105,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstShipViaResponse></returns>
 		/// <exception cref="M3Exception<LstShipViaResponse>"></exception>
 		public async Task<M3Response<LstShipViaResponse>> LstShipVia(
-			string m3_ADVI = null, 
-			DateTime? m3_STDT = null, 
+			string m3ADVI = null, 
+			DateTime? m3STDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -118,10 +121,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADVI))
-				request.WithQueryParameter("ADVI", m3_ADVI.Trim());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ADVI))
+				request.WithQueryParameter("ADVI", m3ADVI.Trim());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstShipViaResponse>(
@@ -131,7 +134,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

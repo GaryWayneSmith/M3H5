@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.TXS905MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Approve
 		/// Version Release: 6400
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_PTIN">Preliminary tax invoice number (Required)</param>
-		/// <param name="m3_PTIY">Preliminary tax invoice year (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3PTIN">Preliminary tax invoice number (Required)</param>
+		/// <param name="m3PTIY">Preliminary tax invoice year (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Approve(
-			string m3_DIVI, 
-			string m3_BSCD, 
-			decimal m3_PTIN, 
-			int m3_PTIY, 
+			string m3DIVI, 
+			string m3BSCD, 
+			decimal m3PTIN, 
+			int m3PTIY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,17 +68,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("PTIN", m3_PTIN.ToString())
-				.WithQueryParameter("PTIY", m3_PTIY.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("PTIN", m3PTIN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PTIY", m3PTIY.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -97,10 +100,10 @@ namespace M3H5Lib.Api
 		/// Description Confirm
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_TXIV">Tax invoice number (Required)</param>
-		/// <param name="m3_TXIY">Tax invoice year (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3TXIV">Tax invoice number (Required)</param>
+		/// <param name="m3TXIY">Tax invoice year (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -109,10 +112,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Confirm(
-			string m3_DIVI, 
-			string m3_BSCD, 
-			string m3_TXIV, 
-			int m3_TXIY, 
+			string m3DIVI, 
+			string m3BSCD, 
+			string m3TXIV, 
+			int m3TXIY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -127,19 +130,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
-			if (string.IsNullOrWhiteSpace(m3_TXIV))
-				throw new ArgumentNullException("m3_TXIV");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
+			if (string.IsNullOrWhiteSpace(m3TXIV))
+				throw new ArgumentNullException(nameof(m3TXIV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("TXIV", m3_TXIV.Trim())
-				.WithQueryParameter("TXIY", m3_TXIY.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("TXIV", m3TXIV.Trim())
+				.WithQueryParameter("TXIY", m3TXIY.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -149,7 +152,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -160,10 +164,10 @@ namespace M3H5Lib.Api
 		/// Description Gets data for a Invoice - Online Invoicing
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_TXIV">Tax invoice number (Required)</param>
-		/// <param name="m3_TXIY">Tax invoice year (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3TXIV">Tax invoice number (Required)</param>
+		/// <param name="m3TXIY">Tax invoice year (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -172,10 +176,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDefTaxInvResponse></returns>
 		/// <exception cref="M3Exception<GetDefTaxInvResponse>"></exception>
 		public async Task<M3Response<GetDefTaxInvResponse>> GetDefTaxInv(
-			string m3_DIVI, 
-			string m3_BSCD, 
-			string m3_TXIV, 
-			int m3_TXIY, 
+			string m3DIVI, 
+			string m3BSCD, 
+			string m3TXIV, 
+			int m3TXIY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -190,19 +194,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
-			if (string.IsNullOrWhiteSpace(m3_TXIV))
-				throw new ArgumentNullException("m3_TXIV");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
+			if (string.IsNullOrWhiteSpace(m3TXIV))
+				throw new ArgumentNullException(nameof(m3TXIV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("TXIV", m3_TXIV.Trim())
-				.WithQueryParameter("TXIY", m3_TXIY.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("TXIV", m3TXIV.Trim())
+				.WithQueryParameter("TXIY", m3TXIY.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetDefTaxInvResponse>(
@@ -212,7 +216,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -223,10 +228,10 @@ namespace M3H5Lib.Api
 		/// Description Gets data for a Invoice - Online Invoicing
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_PTIN">Preliminary tax invoice number (Required)</param>
-		/// <param name="m3_PTIY">Preliminary tax invoice year (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3PTIN">Preliminary tax invoice number (Required)</param>
+		/// <param name="m3PTIY">Preliminary tax invoice year (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -235,10 +240,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPrelTaxInvResponse></returns>
 		/// <exception cref="M3Exception<GetPrelTaxInvResponse>"></exception>
 		public async Task<M3Response<GetPrelTaxInvResponse>> GetPrelTaxInv(
-			string m3_DIVI, 
-			string m3_BSCD, 
-			decimal m3_PTIN, 
-			int m3_PTIY, 
+			string m3DIVI, 
+			string m3BSCD, 
+			decimal m3PTIN, 
+			int m3PTIY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -253,17 +258,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("PTIN", m3_PTIN.ToString())
-				.WithQueryParameter("PTIY", m3_PTIY.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("PTIN", m3PTIN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PTIY", m3PTIY.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetPrelTaxInvResponse>(
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -284,10 +290,10 @@ namespace M3H5Lib.Api
 		/// Description Gets data for a Invoice - Online Invoicing
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_TXIV">Tax invoice number</param>
-		/// <param name="m3_TXIY">Tax invoice year</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3TXIV">Tax invoice number</param>
+		/// <param name="m3TXIY">Tax invoice year</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -296,10 +302,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDefTaxInvResponse></returns>
 		/// <exception cref="M3Exception<LstDefTaxInvResponse>"></exception>
 		public async Task<M3Response<LstDefTaxInvResponse>> LstDefTaxInv(
-			string m3_DIVI, 
-			string m3_BSCD, 
-			string m3_TXIV = null, 
-			int? m3_TXIY = null, 
+			string m3DIVI, 
+			string m3BSCD, 
+			string m3TXIV = null, 
+			int? m3TXIY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -314,21 +320,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TXIV))
-				request.WithQueryParameter("TXIV", m3_TXIV.Trim());
-			if (m3_TXIY.HasValue)
-				request.WithQueryParameter("TXIY", m3_TXIY.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TXIV))
+				request.WithQueryParameter("TXIV", m3TXIV.Trim());
+			if (m3TXIY.HasValue)
+				request.WithQueryParameter("TXIY", m3TXIY.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstDefTaxInvResponse>(
@@ -338,7 +344,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -349,10 +356,10 @@ namespace M3H5Lib.Api
 		/// Description Gets data for a Invoice - Online Invoicing
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_PTIN">Preliminary tax invoice number</param>
-		/// <param name="m3_PTIY">Preliminary tax invoice year</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3PTIN">Preliminary tax invoice number</param>
+		/// <param name="m3PTIY">Preliminary tax invoice year</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -361,10 +368,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPrelTaxInvResponse></returns>
 		/// <exception cref="M3Exception<LstPrelTaxInvResponse>"></exception>
 		public async Task<M3Response<LstPrelTaxInvResponse>> LstPrelTaxInv(
-			string m3_DIVI, 
-			string m3_BSCD, 
-			decimal? m3_PTIN = null, 
-			int? m3_PTIY = null, 
+			string m3DIVI, 
+			string m3BSCD, 
+			decimal? m3PTIN = null, 
+			int? m3PTIY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -379,21 +386,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PTIN.HasValue)
-				request.WithQueryParameter("PTIN", m3_PTIN.Value.ToString());
-			if (m3_PTIY.HasValue)
-				request.WithQueryParameter("PTIY", m3_PTIY.Value.ToString());
+			if (m3PTIN.HasValue)
+				request.WithQueryParameter("PTIN", m3PTIN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PTIY.HasValue)
+				request.WithQueryParameter("PTIY", m3PTIY.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPrelTaxInvResponse>(
@@ -403,7 +410,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -414,10 +422,10 @@ namespace M3H5Lib.Api
 		/// Description Send
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_PTIN">Preliminary tax invoice number (Required)</param>
-		/// <param name="m3_PTIY">Preliminary tax invoice year (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3PTIN">Preliminary tax invoice number (Required)</param>
+		/// <param name="m3PTIY">Preliminary tax invoice year (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -426,10 +434,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Send(
-			string m3_DIVI, 
-			string m3_BSCD, 
-			decimal m3_PTIN, 
-			int m3_PTIY, 
+			string m3DIVI, 
+			string m3BSCD, 
+			decimal m3PTIN, 
+			int m3PTIY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -444,17 +452,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("PTIN", m3_PTIN.ToString())
-				.WithQueryParameter("PTIY", m3_PTIY.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("PTIN", m3PTIN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PTIY", m3PTIY.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -464,7 +472,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Agreement customer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement customer")]
-		public string M3_AGCN => GetString("AGCN");
+		public string M3AGCN => GetString("AGCN");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ACNM => GetString("ACNM");
+		public string M3ACNM => GetString("ACNM");
 
 		/// <summary>
 		/// Description: Customer site
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_AYRF => GetString("AYRF");
+		public string M3AYRF => GetString("AYRF");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_APHN => GetString("APHN");
+		public string M3APHN => GetString("APHN");
 
 		/// <summary>
 		/// Description: Customers order number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Agreement order type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order type")]
-		public string M3_AOTP => GetString("AOTP");
+		public string M3AOTP => GetString("AOTP");
 
 		/// <summary>
 		/// Description: Termination date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Termination date")]
-		public DateTime? M3_TEDA => GetNullableDateTime("TEDA");
+		public DateTime? M3TEDA => GetNullableDateTime("TEDA");
 
 		/// <summary>
 		/// Description: Termination time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Termination time")]
-		public int? M3_TETM => GetNullableInt("TETM");
+		public int? M3TETM => GetNullableInt("TETM");
 
 		/// <summary>
 		/// Description: Line charge model
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line charge model")]
-		public string M3_CHSY => GetString("CHSY");
+		public string M3CHSY => GetString("CHSY");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Hold code
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hold code")]
-		public string M3_AHLD => GetString("AHLD");
+		public string M3AHLD => GetString("AHLD");
 
 		/// <summary>
 		/// Description: Minimum rental type
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum rental type")]
-		public string M3_MRTP => GetString("MRTP");
+		public string M3MRTP => GetString("MRTP");
 
 		/// <summary>
 		/// Description: Minimum order value
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum order value")]
-		public decimal? M3_MINV => GetNullableDecimal("MINV");
+		public decimal? M3MINV => GetNullableDecimal("MINV");
 
 		/// <summary>
 		/// Description: Minimum hire period
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum hire period")]
-		public int? M3_MIHP => GetNullableInt("MIHP");
+		public int? M3MIHP => GetNullableInt("MIHP");
 
 		/// <summary>
 		/// Description: Currency
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Reason code - created agreement
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reason code - created agreement")]
-		public string M3_ARCC => GetString("ARCC");
+		public string M3ARCC => GetString("ARCC");
 
 		/// <summary>
 		/// Description: Search key
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search key")]
-		public string M3_AGSK => GetString("AGSK");
+		public string M3AGSK => GetString("AGSK");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Reason code - terminated agreement
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reason code - terminated agreement")]
-		public string M3_ARCT => GetString("ARCT");
+		public string M3ARCT => GetString("ARCT");
 
 		/// <summary>
 		/// Description: User
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Address number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_SAID => GetString("SAID");
+		public string M3SAID => GetString("SAID");
 
 		/// <summary>
 		/// Description: Version
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_VERS => GetNullableInt("VERS");
+		public int? M3VERS => GetNullableInt("VERS");
 
 		/// <summary>
 		/// Description: Status - agreement line
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - agreement line")]
-		public string M3_ASTH => GetString("ASTH");
+		public string M3ASTH => GetString("ASTH");
 
 		/// <summary>
 		/// Description: Lowest status - agreement line
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - agreement line")]
-		public string M3_ASTL => GetString("ASTL");
+		public string M3ASTL => GetString("ASTL");
 
 		/// <summary>
 		/// Description: Price list
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Rental depot
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental depot")]
-		public string M3_DPOT => GetString("DPOT");
+		public string M3DPOT => GetString("DPOT");
 
 		/// <summary>
 		/// Description: Project number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.STS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 	}
 }
 // EOF

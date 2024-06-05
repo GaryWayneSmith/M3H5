@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work center
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Current MO key type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current MO key type")]
-		public int? M3_CKTP => GetNullableInt("CKTP");
+		public int? M3CKTP => GetNullableInt("CKTP");
 
 		/// <summary>
 		/// Description: Current MO key
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current MO key")]
-		public string M3_CMKY => GetString("CMKY");
+		public string M3CMKY => GetString("CMKY");
 
 		/// <summary>
 		/// Description: Previous MO key type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous MO key type")]
-		public int? M3_PKTP => GetNullableInt("PKTP");
+		public int? M3PKTP => GetNullableInt("PKTP");
 
 		/// <summary>
 		/// Description: Previous MO key
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous MO key")]
-		public string M3_PMKY => GetString("PMKY");
+		public string M3PMKY => GetString("PMKY");
 
 		/// <summary>
 		/// Description: From date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: Setup time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup time")]
-		public int? M3_SETI => GetNullableInt("SETI");
+		public int? M3SETI => GetNullableInt("SETI");
 
 		/// <summary>
 		/// Description: Setup time type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup time type")]
-		public int? M3_SETT => GetNullableInt("SETT");
+		public int? M3SETT => GetNullableInt("SETT");
 
 		/// <summary>
 		/// Description: Selection matrix
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection matrix")]
-		public string M3_MXID => GetString("MXID");
+		public string M3MXID => GetString("MXID");
 
 		/// <summary>
 		/// Description: To date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Current warehouse               (M9REWH)
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current warehouse               (M9REWH)")]
-		public string M3_CWHL => GetString("CWHL");
+		public string M3CWHL => GetString("CWHL");
 
 		/// <summary>
 		/// Description: Previous warehouse              (M9REWH)
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous warehouse              (M9REWH)")]
-		public string M3_PWHL => GetString("PWHL");
+		public string M3PWHL => GetString("PWHL");
 
 		/// <summary>
 		/// Description: Setuptime expressed in hours
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setuptime expressed in hours")]
-		public int? M3_SET2 => GetNullableInt("SET2");
+		public int? M3SET2 => GetNullableInt("SET2");
 	}
 }
 // EOF

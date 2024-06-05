@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Purchase order line subnumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line subnumber")]
-		public int? M3_PNLS => GetNullableInt("PNLS");
+		public int? M3PNLS => GetNullableInt("PNLS");
 
 		/// <summary>
 		/// Description: Main product
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main product")]
-		public string M3_HDPR => GetString("HDPR");
+		public string M3HDPR => GetString("HDPR");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Style description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style description")]
-		public string M3_FUDS => GetString("FUDS");
+		public string M3FUDS => GetString("FUDS");
 
 		/// <summary>
 		/// Description: X-option
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("X-option")]
-		public string M3_OPTX => GetString("OPTX");
+		public string M3OPTX => GetString("OPTX");
 
 		/// <summary>
 		/// Description: X-option Name
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("X-option Name")]
-		public string M3_OXTX => GetString("OXTX");
+		public string M3OXTX => GetString("OXTX");
 
 		/// <summary>
 		/// Description: Y-option
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Y-option")]
-		public string M3_OPTY => GetString("OPTY");
+		public string M3OPTY => GetString("OPTY");
 
 		/// <summary>
 		/// Description: Y-option Name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Y-option Name")]
-		public string M3_OYTX => GetString("OYTX");
+		public string M3OYTX => GetString("OYTX");
 
 		/// <summary>
 		/// Description: Z-option
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Z-option")]
-		public string M3_OPTZ => GetString("OPTZ");
+		public string M3OPTZ => GetString("OPTZ");
 
 		/// <summary>
 		/// Description: Z-option Name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Z-option Name")]
-		public string M3_OZTX => GetString("OZTX");
+		public string M3OZTX => GetString("OZTX");
 
 		/// <summary>
 		/// Description: Configuration code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration code")]
-		public int? M3_CHCD => GetNullableInt("CHCD");
+		public int? M3CHCD => GetNullableInt("CHCD");
 
 		/// <summary>
 		/// Description: Feature ID X Text
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature ID X Text")]
-		public string M3_FTIX => GetString("FTIX");
+		public string M3FTIX => GetString("FTIX");
 
 		/// <summary>
 		/// Description: Feature ID Y Text
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature ID Y Text")]
-		public string M3_FTIY => GetString("FTIY");
+		public string M3FTIY => GetString("FTIY");
 
 		/// <summary>
 		/// Description: Feature ID Z Text
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature ID Z Text")]
-		public string M3_FTIZ => GetString("FTIZ");
+		public string M3FTIZ => GetString("FTIZ");
 
 		/// <summary>
 		/// Description: Sequence number for sorting X
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting X")]
-		public int? M3_SQFX => GetNullableInt("SQFX");
+		public int? M3SQFX => GetNullableInt("SQFX");
 
 		/// <summary>
 		/// Description: Sequence number for sorting Y
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting Y")]
-		public int? M3_SQFY => GetNullableInt("SQFY");
+		public int? M3SQFY => GetNullableInt("SQFY");
 
 		/// <summary>
 		/// Description: Sequence number for sorting Z
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting Z")]
-		public int? M3_SQFZ => GetNullableInt("SQFZ");
+		public int? M3SQFZ => GetNullableInt("SQFZ");
 
 		/// <summary>
 		/// Description: X-option Text
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("X-option Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Y-option Text
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Y-option Text")]
-		public string M3_TY30 => GetString("TY30");
+		public string M3TY30 => GetString("TY30");
 
 		/// <summary>
 		/// Description: Z-option Text
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Z-option Text")]
-		public string M3_TZ30 => GetString("TZ30");
+		public string M3TZ30 => GetString("TZ30");
 
 		/// <summary>
 		/// Description: Feature group X Name
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature group X Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Feature group Y Name
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature group Y Name")]
-		public string M3_TY15 => GetString("TY15");
+		public string M3TY15 => GetString("TY15");
 
 		/// <summary>
 		/// Description: Feature group Z Name
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature group Z Name")]
-		public string M3_TZ15 => GetString("TZ15");
+		public string M3TZ15 => GetString("TZ15");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 	}
 }
 // EOF

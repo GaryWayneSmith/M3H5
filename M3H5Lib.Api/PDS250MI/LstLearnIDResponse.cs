@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Learning curve")]
-		public string M3_LECU => GetString("LECU");
+		public string M3LECU => GetString("LECU");
 
 		/// <summary>
 		/// Description: Name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Grace period
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Grace period")]
-		public int? M3_GRAC => GetNullableInt("GRAC");
+		public int? M3GRAC => GetNullableInt("GRAC");
 
 		/// <summary>
 		/// Description: Standard hours per day
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard hours per day")]
-		public int? M3_STHU => GetNullableInt("STHU");
+		public int? M3STHU => GetNullableInt("STHU");
 
 		/// <summary>
 		/// Description: Number of levels
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of levels")]
-		public int? M3_DNLV => GetNullableInt("DNLV");
+		public int? M3DNLV => GetNullableInt("DNLV");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF1 => GetNullableInt("EFF1");
+		public int? M3EFF1 => GetNullableInt("EFF1");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF2 => GetNullableInt("EFF2");
+		public int? M3EFF2 => GetNullableInt("EFF2");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF3 => GetNullableInt("EFF3");
+		public int? M3EFF3 => GetNullableInt("EFF3");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF4 => GetNullableInt("EFF4");
+		public int? M3EFF4 => GetNullableInt("EFF4");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF5 => GetNullableInt("EFF5");
+		public int? M3EFF5 => GetNullableInt("EFF5");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF6 => GetNullableInt("EFF6");
+		public int? M3EFF6 => GetNullableInt("EFF6");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF7 => GetNullableInt("EFF7");
+		public int? M3EFF7 => GetNullableInt("EFF7");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF8 => GetNullableInt("EFF8");
+		public int? M3EFF8 => GetNullableInt("EFF8");
 
 		/// <summary>
 		/// Description: Efficiency
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency")]
-		public int? M3_EFF9 => GetNullableInt("EFF9");
+		public int? M3EFF9 => GetNullableInt("EFF9");
 
 		/// <summary>
 		/// Description: Days used
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA1 => GetNullableInt("UDA1");
+		public int? M3UDA1 => GetNullableInt("UDA1");
 
 		/// <summary>
 		/// Description: Days used
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA2 => GetNullableInt("UDA2");
+		public int? M3UDA2 => GetNullableInt("UDA2");
 
 		/// <summary>
 		/// Description: Days used
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA3 => GetNullableInt("UDA3");
+		public int? M3UDA3 => GetNullableInt("UDA3");
 
 		/// <summary>
 		/// Description: Days used
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA4 => GetNullableInt("UDA4");
+		public int? M3UDA4 => GetNullableInt("UDA4");
 
 		/// <summary>
 		/// Description: Days used
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA5 => GetNullableInt("UDA5");
+		public int? M3UDA5 => GetNullableInt("UDA5");
 
 		/// <summary>
 		/// Description: Days used
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA6 => GetNullableInt("UDA6");
+		public int? M3UDA6 => GetNullableInt("UDA6");
 
 		/// <summary>
 		/// Description: Days used
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA7 => GetNullableInt("UDA7");
+		public int? M3UDA7 => GetNullableInt("UDA7");
 
 		/// <summary>
 		/// Description: Days used
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA8 => GetNullableInt("UDA8");
+		public int? M3UDA8 => GetNullableInt("UDA8");
 
 		/// <summary>
 		/// Description: Days used
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDA9 => GetNullableInt("UDA9");
+		public int? M3UDA9 => GetNullableInt("UDA9");
 	}
 }
 // EOF

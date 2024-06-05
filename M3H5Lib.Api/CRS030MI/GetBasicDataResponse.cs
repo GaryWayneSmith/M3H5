@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: VAT method
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT method")]
-		public int? M3_VATT => GetNullableInt("VATT");
+		public int? M3VATT => GetNullableInt("VATT");
 
 		/// <summary>
 		/// Description: VAT date type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT date type")]
-		public int? M3_VDTT => GetNullableInt("VDTT");
+		public int? M3VDTT => GetNullableInt("VDTT");
 
 		/// <summary>
 		/// Description: VAT reported on payment day
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT reported on payment day")]
-		public int? M3_VPYM => GetNullableInt("VPYM");
+		public int? M3VPYM => GetNullableInt("VPYM");
 
 		/// <summary>
 		/// Description: VAT corrections
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT corrections")]
-		public int? M3_VTCO => GetNullableInt("VTCO");
+		public int? M3VTCO => GetNullableInt("VTCO");
 
 		/// <summary>
 		/// Description: Self-assessment tax
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Self-assessment tax")]
-		public int? M3_SATX => GetNullableInt("SATX");
+		public int? M3SATX => GetNullableInt("SATX");
 
 		/// <summary>
 		/// Description: VAT override
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT override")]
-		public int? M3_VTOV => GetNullableInt("VTOV");
+		public int? M3VTOV => GetNullableInt("VTOV");
 
 		/// <summary>
 		/// Description: VAT on services - yes/no
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT on services - yes/no")]
-		public int? M3_SERV => GetNullableInt("SERV");
+		public int? M3SERV => GetNullableInt("SERV");
 
 		/// <summary>
 		/// Description: VAT code group
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code group")]
-		public string M3_VATG => GetString("VATG");
+		public string M3VATG => GetString("VATG");
 	}
 }
 // EOF

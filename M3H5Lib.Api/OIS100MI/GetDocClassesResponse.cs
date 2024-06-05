@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document class 1")]
-		public int? M3_CO01 => GetNullableInt("CO01");
+		public int? M3CO01 => GetNullableInt("CO01");
 
 		/// <summary>
 		/// Description: Document class 2
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document class 2")]
-		public int? M3_CO02 => GetNullableInt("CO02");
+		public int? M3CO02 => GetNullableInt("CO02");
 
 		/// <summary>
 		/// Description: Document class 3
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document class 3")]
-		public int? M3_CO03 => GetNullableInt("CO03");
+		public int? M3CO03 => GetNullableInt("CO03");
 
 		/// <summary>
 		/// Description: Document class 4
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document class 4")]
-		public int? M3_CO04 => GetNullableInt("CO04");
+		public int? M3CO04 => GetNullableInt("CO04");
 
 		/// <summary>
 		/// Description: Document class 5
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document class 5")]
-		public int? M3_CO05 => GetNullableInt("CO05");
+		public int? M3CO05 => GetNullableInt("CO05");
 	}
 }
 // EOF

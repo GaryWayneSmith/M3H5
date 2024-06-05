@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.ENS100MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description List detailed transactions per job number
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_BJNO">Job number</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3BJNO">Job number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDetailsByJobResponse></returns>
 		/// <exception cref="M3Exception<LstDetailsByJobResponse>"></exception>
 		public async Task<M3Response<LstDetailsByJobResponse>> LstDetailsByJob(
-			string m3_DIVI = null, 
-			string m3_BJNO = null, 
+			string m3DIVI = null, 
+			string m3BJNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDetailsByJobResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// Description List totals per Eco-product code
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_BJNO">Job number</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3BJNO">Job number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTotalsByProdResponse></returns>
 		/// <exception cref="M3Exception<LstTotalsByProdResponse>"></exception>
 		public async Task<M3Response<LstTotalsByProdResponse>> LstTotalsByProd(
-			string m3_DIVI = null, 
-			string m3_BJNO = null, 
+			string m3DIVI = null, 
+			string m3BJNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -112,10 +115,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTotalsByProdResponse>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

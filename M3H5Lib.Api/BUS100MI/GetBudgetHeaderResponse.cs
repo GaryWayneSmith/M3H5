@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Budget number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget number")]
-		public int? M3_BUNO => GetNullableInt("BUNO");
+		public int? M3BUNO => GetNullableInt("BUNO");
 
 		/// <summary>
 		/// Description: Budget version
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget version")]
-		public string M3_BVER => GetString("BVER");
+		public string M3BVER => GetString("BVER");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Start period - budget
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start period - budget")]
-		public int? M3_BSPR => GetNullableInt("BSPR");
+		public int? M3BSPR => GetNullableInt("BSPR");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Number of periods
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of periods")]
-		public int? M3_NPAM => GetNullableInt("NPAM");
+		public int? M3NPAM => GetNullableInt("NPAM");
 
 		/// <summary>
 		/// Description: Rounding-off category
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rounding-off category")]
-		public int? M3_ROPP => GetNullableInt("ROPP");
+		public int? M3ROPP => GetNullableInt("ROPP");
 
 		/// <summary>
 		/// Description: Update balance file
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update balance file")]
-		public int? M3_UPDB => GetNullableInt("UPDB");
+		public int? M3UPDB => GetNullableInt("UPDB");
 
 		/// <summary>
 		/// Description: Allocation template
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocation template")]
-		public string M3_DTMP => GetString("DTMP");
+		public string M3DTMP => GetString("DTMP");
 
 		/// <summary>
 		/// Description: Object access group
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object access group")]
-		public string M3_ACGR => GetString("ACGR");
+		public string M3ACGR => GetString("ACGR");
 	}
 }
 // EOF

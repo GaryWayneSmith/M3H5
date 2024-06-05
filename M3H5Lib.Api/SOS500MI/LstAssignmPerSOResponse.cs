@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order job number")]
-		public int? M3_JOBN => GetNullableInt("JOBN");
+		public int? M3JOBN => GetNullableInt("JOBN");
 
 		/// <summary>
 		/// Description: Assignment suffix
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment suffix")]
-		public int? M3_JBSX => GetNullableInt("JBSX");
+		public int? M3JBSX => GetNullableInt("JBSX");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERI => GetString("SERI");
+		public string M3SERI => GetString("SERI");
 
 		/// <summary>
 		/// Description: Model description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model description")]
-		public string M3_MODE => GetString("MODE");
+		public string M3MODE => GetString("MODE");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Technician
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician")]
-		public string M3_TECH => GetString("TECH");
+		public string M3TECH => GetString("TECH");
 
 		/// <summary>
 		/// Description: Service manager
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Error reporting date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error reporting date")]
-		public DateTime? M3_PMDT => GetNullableDateTime("PMDT");
+		public DateTime? M3PMDT => GetNullableDateTime("PMDT");
 
 		/// <summary>
 		/// Description: Error report time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error report time")]
-		public int? M3_PMTM => GetNullableInt("PMTM");
+		public int? M3PMTM => GetNullableInt("PMTM");
 
 		/// <summary>
 		/// Description: Required start date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required start date")]
-		public DateTime? M3_RQSD => GetNullableDateTime("RQSD");
+		public DateTime? M3RQSD => GetNullableDateTime("RQSD");
 
 		/// <summary>
 		/// Description: Required start time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required start time")]
-		public int? M3_RQST => GetNullableInt("RQST");
+		public int? M3RQST => GetNullableInt("RQST");
 
 		/// <summary>
 		/// Description: Required finish date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required finish date")]
-		public DateTime? M3_RQFD => GetNullableDateTime("RQFD");
+		public DateTime? M3RQFD => GetNullableDateTime("RQFD");
 
 		/// <summary>
 		/// Description: Required finish time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required finish time")]
-		public int? M3_RQFT => GetNullableInt("RQFT");
+		public int? M3RQFT => GetNullableInt("RQFT");
 
 		/// <summary>
 		/// Description: Confirmed start date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed start date")]
-		public DateTime? M3_CSDT => GetNullableDateTime("CSDT");
+		public DateTime? M3CSDT => GetNullableDateTime("CSDT");
 
 		/// <summary>
 		/// Description: Confirmed start time
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed start time")]
-		public int? M3_CSTM => GetNullableInt("CSTM");
+		public int? M3CSTM => GetNullableInt("CSTM");
 
 		/// <summary>
 		/// Description: Confirmed finish date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed finish date")]
-		public DateTime? M3_CFDA => GetNullableDateTime("CFDA");
+		public DateTime? M3CFDA => GetNullableDateTime("CFDA");
 
 		/// <summary>
 		/// Description: Confirmed finish time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed finish time")]
-		public int? M3_CFTM => GetNullableInt("CFTM");
+		public int? M3CFTM => GetNullableInt("CFTM");
 
 		/// <summary>
 		/// Description: Last start date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last start date")]
-		public DateTime? M3_SSDT => GetNullableDateTime("SSDT");
+		public DateTime? M3SSDT => GetNullableDateTime("SSDT");
 
 		/// <summary>
 		/// Description: Last start time
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last start time")]
-		public int? M3_SSTM => GetNullableInt("SSTM");
+		public int? M3SSTM => GetNullableInt("SSTM");
 
 		/// <summary>
 		/// Description: Actual start date - assignment
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start date - assignment")]
-		public DateTime? M3_RSDJ => GetNullableDateTime("RSDJ");
+		public DateTime? M3RSDJ => GetNullableDateTime("RSDJ");
 
 		/// <summary>
 		/// Description: Actual start time - assignment
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start time - assignment")]
-		public int? M3_RSTJ => GetNullableInt("RSTJ");
+		public int? M3RSTJ => GetNullableInt("RSTJ");
 
 		/// <summary>
 		/// Description: Actual finish date - assignment
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual finish date - assignment")]
-		public DateTime? M3_RFDJ => GetNullableDateTime("RFDJ");
+		public DateTime? M3RFDJ => GetNullableDateTime("RFDJ");
 
 		/// <summary>
 		/// Description: Actual finish time - assignment
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual finish time - assignment")]
-		public int? M3_RFTJ => GetNullableInt("RFTJ");
+		public int? M3RFTJ => GetNullableInt("RFTJ");
 
 		/// <summary>
 		/// Description: Actual start date - task
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start date - task")]
-		public DateTime? M3_RSDW => GetNullableDateTime("RSDW");
+		public DateTime? M3RSDW => GetNullableDateTime("RSDW");
 
 		/// <summary>
 		/// Description: Actual start time - task
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start time - task")]
-		public int? M3_RSTW => GetNullableInt("RSTW");
+		public int? M3RSTW => GetNullableInt("RSTW");
 
 		/// <summary>
 		/// Description: Actual finish date - task
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual finish date - task")]
-		public DateTime? M3_RFDW => GetNullableDateTime("RFDW");
+		public DateTime? M3RFDW => GetNullableDateTime("RFDW");
 
 		/// <summary>
 		/// Description: Actual finish time - task
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual finish time - task")]
-		public int? M3_RFTW => GetNullableInt("RFTW");
+		public int? M3RFTW => GetNullableInt("RFTW");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Error symptom
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom")]
-		public string M3_ESCO => GetString("ESCO");
+		public string M3ESCO => GetString("ESCO");
 
 		/// <summary>
 		/// Description: Error cause
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error cause")]
-		public string M3_ERCO => GetString("ERCO");
+		public string M3ERCO => GetString("ERCO");
 
 		/// <summary>
 		/// Description: Payer control
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer control")]
-		public string M3_DBCO => GetString("DBCO");
+		public string M3DBCO => GetString("DBCO");
 
 		/// <summary>
 		/// Description: Service expense
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service expense")]
-		public string M3_SVID => GetString("SVID");
+		public string M3SVID => GetString("SVID");
 
 		/// <summary>
 		/// Description: Forecast work hours
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast work hours")]
-		public int? M3_WOTM => GetNullableInt("WOTM");
+		public int? M3WOTM => GetNullableInt("WOTM");
 
 		/// <summary>
 		/// Description: Planned preparation time
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned preparation time")]
-		public int? M3_PRTM => GetNullableInt("PRTM");
+		public int? M3PRTM => GetNullableInt("PRTM");
 
 		/// <summary>
 		/// Description: Planned completion time
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned completion time")]
-		public int? M3_FITM => GetNullableInt("FITM");
+		public int? M3FITM => GetNullableInt("FITM");
 
 		/// <summary>
 		/// Description: Planned travel time
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned travel time")]
-		public int? M3_TRTI => GetNullableInt("TRTI");
+		public int? M3TRTI => GetNullableInt("TRTI");
 
 		/// <summary>
 		/// Description: Planned start date - task
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start date - task")]
-		public DateTime? M3_PSDW => GetNullableDateTime("PSDW");
+		public DateTime? M3PSDW => GetNullableDateTime("PSDW");
 
 		/// <summary>
 		/// Description: Planned start time - task
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start time - task")]
-		public int? M3_PSTW => GetNullableInt("PSTW");
+		public int? M3PSTW => GetNullableInt("PSTW");
 
 		/// <summary>
 		/// Description: Planned finish date - task
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish date - task")]
-		public DateTime? M3_PFDW => GetNullableDateTime("PFDW");
+		public DateTime? M3PFDW => GetNullableDateTime("PFDW");
 
 		/// <summary>
 		/// Description: Planned finish time - task
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish time - task")]
-		public int? M3_PFTW => GetNullableInt("PFTW");
+		public int? M3PFTW => GetNullableInt("PFTW");
 
 		/// <summary>
 		/// Description: Planned start date - assignment
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start date - assignment")]
-		public DateTime? M3_PSDJ => GetNullableDateTime("PSDJ");
+		public DateTime? M3PSDJ => GetNullableDateTime("PSDJ");
 
 		/// <summary>
 		/// Description: Planned start time - assignment
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start time - assignment")]
-		public int? M3_PSTJ => GetNullableInt("PSTJ");
+		public int? M3PSTJ => GetNullableInt("PSTJ");
 
 		/// <summary>
 		/// Description: Planned finish date - assignment
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish date - assignment")]
-		public DateTime? M3_PFDJ => GetNullableDateTime("PFDJ");
+		public DateTime? M3PFDJ => GetNullableDateTime("PFDJ");
 
 		/// <summary>
 		/// Description: Planned finish time - assignment
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish time - assignment")]
-		public int? M3_PFTJ => GetNullableInt("PFTJ");
+		public int? M3PFTJ => GetNullableInt("PFTJ");
 
 		/// <summary>
 		/// Description: Action text
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action text")]
-		public string M3_MTCO => GetString("MTCO");
+		public string M3MTCO => GetString("MTCO");
 
 		/// <summary>
 		/// Description: Action
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action")]
-		public string M3_MECO => GetString("MECO");
+		public string M3MECO => GetString("MECO");
 
 		/// <summary>
 		/// Description: Priority
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_OPRI => GetNullableInt("OPRI");
+		public int? M3OPRI => GetNullableInt("OPRI");
 
 		/// <summary>
 		/// Description: Joint delivery
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Joint delivery")]
-		public string M3_JDCD => GetString("JDCD");
+		public string M3JDCD => GetString("JDCD");
 
 		/// <summary>
 		/// Description: Status service assignment
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status service assignment")]
-		public string M3_JBST => GetString("JBST");
+		public string M3JBST => GetString("JBST");
 
 		/// <summary>
 		/// Description: Project number
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Change date
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Assignment type
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment type")]
-		public string M3_ASST => GetString("ASST");
+		public string M3ASST => GetString("ASST");
 
 		/// <summary>
 		/// Description: Function area
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function area")]
-		public string M3_FCTN => GetString("FCTN");
+		public string M3FCTN => GetString("FCTN");
 
 		/// <summary>
 		/// Description: Transportation of individual item
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation of individual item")]
-		public int? M3_TRIN => GetNullableInt("TRIN");
+		public int? M3TRIN => GetNullableInt("TRIN");
 
 		/// <summary>
 		/// Description: Qualification
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Qualification")]
-		public string M3_QUNO => GetString("QUNO");
+		public string M3QUNO => GetString("QUNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Additional status
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional status")]
-		public string M3_JBSE => GetString("JBSE");
+		public string M3JBSE => GetString("JBSE");
 
 		/// <summary>
 		/// Description: Service
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Latest finish date
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Latest finish date")]
-		public DateTime? M3_LFDA => GetNullableDateTime("LFDA");
+		public DateTime? M3LFDA => GetNullableDateTime("LFDA");
 
 		/// <summary>
 		/// Description: Latest finish time
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Latest finish time")]
-		public int? M3_LFTM => GetNullableInt("LFTM");
+		public int? M3LFTM => GetNullableInt("LFTM");
 
 		/// <summary>
 		/// Description: Allocation block code
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocation block code")]
-		public int? M3_ABLC => GetNullableInt("ABLC");
+		public int? M3ABLC => GetNullableInt("ABLC");
 
 		/// <summary>
 		/// Description: Authority required
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authority required")]
-		public int? M3_ATQC => GetNullableInt("ATQC");
+		public int? M3ATQC => GetNullableInt("ATQC");
 
 		/// <summary>
 		/// Description: Fixed price exist
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed price exist")]
-		public string M3_FIXE => GetString("FIXE");
+		public string M3FIXE => GetString("FIXE");
 
 		/// <summary>
 		/// Description: Pre-text exist
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-text exist")]
-		public string M3_TEX1 => GetString("TEX1");
+		public string M3TEX1 => GetString("TEX1");
 
 		/// <summary>
 		/// Description: Post-text exist
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-text exist")]
-		public string M3_TEX2 => GetString("TEX2");
+		public string M3TEX2 => GetString("TEX2");
 
 		/// <summary>
 		/// Description: F6-text exist
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("F6-text exist")]
-		public string M3_TEX3 => GetString("TEX3");
+		public string M3TEX3 => GetString("TEX3");
 
 		/// <summary>
 		/// Description: Response time
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Response time")]
-		public int? M3_APTM => GetNullableInt("APTM");
+		public int? M3APTM => GetNullableInt("APTM");
 
 		/// <summary>
 		/// Description: Sent to remote server
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sent to remote server")]
-		public int? M3_PLME => GetNullableInt("PLME");
+		public int? M3PLME => GetNullableInt("PLME");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 	}
 }
 // EOF

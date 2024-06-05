@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.TXS130MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Get header information
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_ESSU">EU proposal (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3ESSU">EU proposal (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetHeadInfoResponse></returns>
 		/// <exception cref="M3Exception<GetHeadInfoResponse>"></exception>
 		public async Task<M3Response<GetHeadInfoResponse>> GetHeadInfo(
-			string m3_DIVI, 
-			string m3_ESSU, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			string m3ESSU, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,19 +66,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_ESSU))
-				throw new ArgumentNullException("m3_ESSU");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3ESSU))
+				throw new ArgumentNullException(nameof(m3ESSU));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("ESSU", m3_ESSU.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("ESSU", m3ESSU.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetHeadInfoResponse>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -97,9 +100,9 @@ namespace M3H5Lib.Api
 		/// Description List Amount EU Sale
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_ESSU">EU proposal (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3ESSU">EU proposal (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -108,9 +111,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAmountEUSaleResponse></returns>
 		/// <exception cref="M3Exception<LstAmountEUSaleResponse>"></exception>
 		public async Task<M3Response<LstAmountEUSaleResponse>> LstAmountEUSale(
-			string m3_DIVI, 
-			string m3_ESSU, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			string m3ESSU, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -125,19 +128,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_ESSU))
-				throw new ArgumentNullException("m3_ESSU");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3ESSU))
+				throw new ArgumentNullException(nameof(m3ESSU));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("ESSU", m3_ESSU.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("ESSU", m3ESSU.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAmountEUSaleResponse>(
@@ -147,7 +150,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -158,15 +162,15 @@ namespace M3H5Lib.Api
 		/// Description List Invoices EU Sale
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_ESSU">EU sales or purchase proposal (Required)</param>
-		/// <param name="m3_FTCO">From/to country (Required)</param>
-		/// <param name="m3_YVRN">VAT registration number (Required)</param>
-		/// <param name="m3_TRIA">Triangular trade (Required)</param>
-		/// <param name="m3_SERV">VAT report type (Required)</param>
-		/// <param name="m3_CORP">Correction (Required)</param>
-		/// <param name="m3_CVOP">Customer/supplier code (Required)</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3ESSU">EU sales or purchase proposal (Required)</param>
+		/// <param name="m3FTCO">From/to country (Required)</param>
+		/// <param name="m3YVRN">VAT registration number (Required)</param>
+		/// <param name="m3TRIA">Triangular trade (Required)</param>
+		/// <param name="m3SERV">VAT report type (Required)</param>
+		/// <param name="m3CORP">Correction (Required)</param>
+		/// <param name="m3CVOP">Customer/supplier code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -175,15 +179,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstInvEUSaleResponse></returns>
 		/// <exception cref="M3Exception<LstInvEUSaleResponse>"></exception>
 		public async Task<M3Response<LstInvEUSaleResponse>> LstInvEUSale(
-			int m3_CONO, 
-			string m3_DIVI, 
-			string m3_ESSU, 
-			string m3_FTCO, 
-			string m3_YVRN, 
-			int m3_TRIA, 
-			int m3_SERV, 
-			int m3_CORP, 
-			int m3_CVOP, 
+			int m3CONO, 
+			string m3DIVI, 
+			string m3ESSU, 
+			string m3FTCO, 
+			string m3YVRN, 
+			int m3TRIA, 
+			int m3SERV, 
+			int m3CORP, 
+			int m3CVOP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -198,26 +202,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_ESSU))
-				throw new ArgumentNullException("m3_ESSU");
-			if (string.IsNullOrWhiteSpace(m3_FTCO))
-				throw new ArgumentNullException("m3_FTCO");
-			if (string.IsNullOrWhiteSpace(m3_YVRN))
-				throw new ArgumentNullException("m3_YVRN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3ESSU))
+				throw new ArgumentNullException(nameof(m3ESSU));
+			if (string.IsNullOrWhiteSpace(m3FTCO))
+				throw new ArgumentNullException(nameof(m3FTCO));
+			if (string.IsNullOrWhiteSpace(m3YVRN))
+				throw new ArgumentNullException(nameof(m3YVRN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("ESSU", m3_ESSU.Trim())
-				.WithQueryParameter("FTCO", m3_FTCO.Trim())
-				.WithQueryParameter("YVRN", m3_YVRN.Trim())
-				.WithQueryParameter("TRIA", m3_TRIA.ToString())
-				.WithQueryParameter("SERV", m3_SERV.ToString())
-				.WithQueryParameter("CORP", m3_CORP.ToString())
-				.WithQueryParameter("CVOP", m3_CVOP.ToString());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("ESSU", m3ESSU.Trim())
+				.WithQueryParameter("FTCO", m3FTCO.Trim())
+				.WithQueryParameter("YVRN", m3YVRN.Trim())
+				.WithQueryParameter("TRIA", m3TRIA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SERV", m3SERV.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CORP", m3CORP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CVOP", m3CVOP.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstInvEUSaleResponse>(
@@ -227,7 +231,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

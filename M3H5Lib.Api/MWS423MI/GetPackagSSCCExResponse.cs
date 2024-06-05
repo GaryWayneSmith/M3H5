@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Package number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: Packaging
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Actual gross weight
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual gross weight")]
-		public decimal? M3_GWTM => GetNullableDecimal("GWTM");
+		public decimal? M3GWTM => GetNullableDecimal("GWTM");
 
 		/// <summary>
 		/// Description: Load building
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Load building")]
-		public int? M3_LOBL => GetNullableInt("LOBL");
+		public int? M3LOBL => GetNullableInt("LOBL");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS423MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public string M3_LODO => GetString("LODO");
+		public string M3LODO => GetString("LODO");
 	}
 }
 // EOF

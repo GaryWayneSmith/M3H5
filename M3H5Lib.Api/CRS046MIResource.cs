@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS046MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description List Area and State codes
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CSCD">Country (Required)</param>
+		/// <param name="m3CSCD">Country (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAreaCodesResponse></returns>
 		/// <exception cref="M3Exception<LstAreaCodesResponse>"></exception>
 		public async Task<M3Response<LstAreaCodesResponse>> LstAreaCodes(
-			string m3_CSCD, 
+			string m3CSCD, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSCD))
-				throw new ArgumentNullException("m3_CSCD");
+			if (string.IsNullOrWhiteSpace(m3CSCD))
+				throw new ArgumentNullException(nameof(m3CSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSCD", m3_CSCD.Trim());
+				.WithQueryParameter("CSCD", m3CSCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAreaCodesResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

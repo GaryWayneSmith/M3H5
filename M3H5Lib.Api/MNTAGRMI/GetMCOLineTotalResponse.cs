@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Quotation
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quotation")]
-		public int? M3_AQUO => GetNullableInt("AQUO");
+		public int? M3AQUO => GetNullableInt("AQUO");
 
 		/// <summary>
 		/// Description: Responsible
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Revenue time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue time")]
-		public decimal? M3_ASTM => GetNullableDecimal("ASTM");
+		public decimal? M3ASTM => GetNullableDecimal("ASTM");
 
 		/// <summary>
 		/// Description: Revenue material
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue material")]
-		public decimal? M3_ASMT => GetNullableDecimal("ASMT");
+		public decimal? M3ASMT => GetNullableDecimal("ASMT");
 
 		/// <summary>
 		/// Description: Revenue material handling charge
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue material handling charge")]
-		public decimal? M3_ASMC => GetNullableDecimal("ASMC");
+		public decimal? M3ASMC => GetNullableDecimal("ASMC");
 
 		/// <summary>
 		/// Description: Revenues subcontracting
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenues subcontracting")]
-		public decimal? M3_ASSC => GetNullableDecimal("ASSC");
+		public decimal? M3ASSC => GetNullableDecimal("ASSC");
 
 		/// <summary>
 		/// Description: Revenue subcontracting handling charge
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue subcontracting handling charge")]
-		public decimal? M3_ASSH => GetNullableDecimal("ASSH");
+		public decimal? M3ASSH => GetNullableDecimal("ASSH");
 
 		/// <summary>
 		/// Description: Revenue miscellaneous
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue miscellaneous")]
-		public decimal? M3_ASMI => GetNullableDecimal("ASMI");
+		public decimal? M3ASMI => GetNullableDecimal("ASMI");
 
 		/// <summary>
 		/// Description: Cost time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost time")]
-		public decimal? M3_ACTU => GetNullableDecimal("ACTU");
+		public decimal? M3ACTU => GetNullableDecimal("ACTU");
 
 		/// <summary>
 		/// Description: Cost material
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost material")]
-		public decimal? M3_ACM1 => GetNullableDecimal("ACM1");
+		public decimal? M3ACM1 => GetNullableDecimal("ACM1");
 
 		/// <summary>
 		/// Description: Cost subcontracting
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost subcontracting")]
-		public decimal? M3_ACSC => GetNullableDecimal("ACSC");
+		public decimal? M3ACSC => GetNullableDecimal("ACSC");
 
 		/// <summary>
 		/// Description: Cost miscellaneous
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost miscellaneous")]
-		public decimal? M3_ACMS => GetNullableDecimal("ACMS");
+		public decimal? M3ACMS => GetNullableDecimal("ACMS");
 
 		/// <summary>
 		/// Description: Price in agreement currency
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in agreement currency")]
-		public decimal? M3_APA1 => GetNullableDecimal("APA1");
+		public decimal? M3APA1 => GetNullableDecimal("APA1");
 
 		/// <summary>
 		/// Description: Price in material currency
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in material currency")]
-		public decimal? M3_APM1 => GetNullableDecimal("APM1");
+		public decimal? M3APM1 => GetNullableDecimal("APM1");
 
 		/// <summary>
 		/// Description: Labor %
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor %")]
-		public int? M3_TIP1 => GetNullableInt("TIP1");
+		public int? M3TIP1 => GetNullableInt("TIP1");
 
 		/// <summary>
 		/// Description: Material %
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material %")]
-		public int? M3_MAP1 => GetNullableInt("MAP1");
+		public int? M3MAP1 => GetNullableInt("MAP1");
 
 		/// <summary>
 		/// Description: Subcontract %
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract %")]
-		public int? M3_SUP1 => GetNullableInt("SUP1");
+		public int? M3SUP1 => GetNullableInt("SUP1");
 
 		/// <summary>
 		/// Description: Miscellaneous %
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous %")]
-		public int? M3_MIP1 => GetNullableInt("MIP1");
+		public int? M3MIP1 => GetNullableInt("MIP1");
 	}
 }
 // EOF

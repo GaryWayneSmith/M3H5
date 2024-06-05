@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PLNB => GetNullableInt("PLNB");
+		public int? M3PLNB => GetNullableInt("PLNB");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Extended invoice number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended invoice number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Customer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Remaining amount to pay - foreign curr
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining amount to pay - foreign curr")]
-		public decimal? M3_RAFC => GetNullableDecimal("RAFC");
+		public decimal? M3RAFC => GetNullableDecimal("RAFC");
 
 		/// <summary>
 		/// Description: Payment method - accounts receivable
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment method - accounts receivable")]
-		public string M3_PYCD => GetString("PYCD");
+		public string M3PYCD => GetString("PYCD");
 
 		/// <summary>
 		/// Description: Payment amount - foreign currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount - foreign currency")]
-		public decimal? M3_PMAM => GetNullableDecimal("PMAM");
+		public decimal? M3PMAM => GetNullableDecimal("PMAM");
 
 		/// <summary>
 		/// Description: Due date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Due date")]
-		public DateTime? M3_DUDT => GetNullableDateTime("DUDT");
+		public DateTime? M3DUDT => GetNullableDateTime("DUDT");
 
 		/// <summary>
 		/// Description: Payment date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment date")]
-		public DateTime? M3_PYDT => GetNullableDateTime("PYDT");
+		public DateTime? M3PYDT => GetNullableDateTime("PYDT");
 
 		/// <summary>
 		/// Description: Message
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message")]
-		public string M3_MSGT => GetString("MSGT");
+		public string M3MSGT => GetString("MSGT");
 
 		/// <summary>
 		/// Description: Transaction type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public string M3_TRT6 => GetString("TRT6");
+		public string M3TRT6 => GetString("TRT6");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Check number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check number")]
-		public string M3_CKNO => GetString("CKNO");
+		public string M3CKNO => GetString("CKNO");
 	}
 }
 // EOF

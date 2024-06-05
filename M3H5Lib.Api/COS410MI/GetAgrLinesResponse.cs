@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Service price method
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price method")]
-		public int? M3_SRVP => GetNullableInt("SRVP");
+		public int? M3SRVP => GetNullableInt("SRVP");
 
 		/// <summary>
 		/// Description: Product
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Start date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: To date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_PRTX => GetString("PRTX");
+		public string M3PRTX => GetString("PRTX");
 
 		/// <summary>
 		/// Description: Lead time - service
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time - service")]
-		public int? M3_LEAS => GetNullableInt("LEAS");
+		public int? M3LEAS => GetNullableInt("LEAS");
 
 		/// <summary>
 		/// Description: Meter
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Warranty limit 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 1")]
-		public decimal? M3_WAL1 => GetNullableDecimal("WAL1");
+		public decimal? M3WAL1 => GetNullableDecimal("WAL1");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Warranty limit 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 2")]
-		public decimal? M3_WAL2 => GetNullableDecimal("WAL2");
+		public decimal? M3WAL2 => GetNullableDecimal("WAL2");
 
 		/// <summary>
 		/// Description: Meter 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 2")]
-		public string M3_MES2 => GetString("MES2");
+		public string M3MES2 => GetString("MES2");
 
 		/// <summary>
 		/// Description: Warranty limit 3
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 3")]
-		public decimal? M3_WAL3 => GetNullableDecimal("WAL3");
+		public decimal? M3WAL3 => GetNullableDecimal("WAL3");
 
 		/// <summary>
 		/// Description: Meter 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 3")]
-		public string M3_MES3 => GetString("MES3");
+		public string M3MES3 => GetString("MES3");
 
 		/// <summary>
 		/// Description: Warranty limit 4
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 4")]
-		public decimal? M3_WAL4 => GetNullableDecimal("WAL4");
+		public decimal? M3WAL4 => GetNullableDecimal("WAL4");
 
 		/// <summary>
 		/// Description: Meter 4
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 4")]
-		public string M3_MES4 => GetString("MES4");
+		public string M3MES4 => GetString("MES4");
 
 		/// <summary>
 		/// Description: Index
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index")]
-		public int? M3_AINX => GetNullableInt("AINX");
+		public int? M3AINX => GetNullableInt("AINX");
 
 		/// <summary>
 		/// Description: Maximum material value per item
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum material value per item")]
-		public decimal? M3_AMVI => GetNullableDecimal("AMVI");
+		public decimal? M3AMVI => GetNullableDecimal("AMVI");
 
 		/// <summary>
 		/// Description: Maximum material cost
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum material cost")]
-		public decimal? M3_AMAM => GetNullableDecimal("AMAM");
+		public decimal? M3AMAM => GetNullableDecimal("AMAM");
 
 		/// <summary>
 		/// Description: Max material price per transaction
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max material price per transaction")]
-		public decimal? M3_AMPI => GetNullableDecimal("AMPI");
+		public decimal? M3AMPI => GetNullableDecimal("AMPI");
 
 		/// <summary>
 		/// Description: Maximum labor cost
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum labor cost")]
-		public decimal? M3_AMAL => GetNullableDecimal("AMAL");
+		public decimal? M3AMAL => GetNullableDecimal("AMAL");
 
 		/// <summary>
 		/// Description: Max material price per order
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max material price per order")]
-		public decimal? M3_AMM1 => GetNullableDecimal("AMM1");
+		public decimal? M3AMM1 => GetNullableDecimal("AMM1");
 
 		/// <summary>
 		/// Description: Minimum hours per line
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum hours per line")]
-		public decimal? M3_AMLL => GetNullableDecimal("AMLL");
+		public decimal? M3AMLL => GetNullableDecimal("AMLL");
 
 		/// <summary>
 		/// Description: Exclude / include material
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exclude / include material")]
-		public int? M3_AEXC => GetNullableInt("AEXC");
+		public int? M3AEXC => GetNullableInt("AEXC");
 
 		/// <summary>
 		/// Description: Minimum labor hours per job ID
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum labor hours per job ID")]
-		public decimal? M3_AMLJ => GetNullableDecimal("AMLJ");
+		public decimal? M3AMLJ => GetNullableDecimal("AMLJ");
 
 		/// <summary>
 		/// Description: Minimum hours per order
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum hours per order")]
-		public decimal? M3_AMLO => GetNullableDecimal("AMLO");
+		public decimal? M3AMLO => GetNullableDecimal("AMLO");
 
 		/// <summary>
 		/// Description: Minimum material cost/line
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum material cost/line")]
-		public decimal? M3_AMIL => GetNullableDecimal("AMIL");
+		public decimal? M3AMIL => GetNullableDecimal("AMIL");
 
 		/// <summary>
 		/// Description: Minimum material cost/order
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum material cost/order")]
-		public decimal? M3_AMIO => GetNullableDecimal("AMIO");
+		public decimal? M3AMIO => GetNullableDecimal("AMIO");
 
 		/// <summary>
 		/// Description: Minimum subcontract charge per line
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum subcontract charge per line")]
-		public decimal? M3_AMSL => GetNullableDecimal("AMSL");
+		public decimal? M3AMSL => GetNullableDecimal("AMSL");
 
 		/// <summary>
 		/// Description: Minimum subcontract charge per order
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum subcontract charge per order")]
-		public decimal? M3_AMSO => GetNullableDecimal("AMSO");
+		public decimal? M3AMSO => GetNullableDecimal("AMSO");
 	}
 }
 // EOF

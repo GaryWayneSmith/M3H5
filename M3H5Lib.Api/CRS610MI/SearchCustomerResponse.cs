@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Status
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Customer group
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer group")]
-		public string M3_CUCL => GetString("CUCL");
+		public string M3CUCL => GetString("CUCL");
 
 		/// <summary>
 		/// Description: Customer type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer type")]
-		public int? M3_CUTP => GetNullableInt("CUTP");
+		public int? M3CUTP => GetNullableInt("CUTP");
 
 		/// <summary>
 		/// Description: Payer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Responsible
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Customer stop
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer stop")]
-		public int? M3_BLCD => GetNullableInt("BLCD");
+		public int? M3BLCD => GetNullableInt("BLCD");
 
 		/// <summary>
 		/// Description: Entry date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Country
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: State
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Statistics identity 1 customer
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 1 customer")]
-		public string M3_FRE1 => GetString("FRE1");
+		public string M3FRE1 => GetString("FRE1");
 
 		/// <summary>
 		/// Description: Rental salesperson
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental salesperson")]
-		public string M3_RSMC => GetString("RSMC");
+		public string M3RSMC => GetString("RSMC");
 
 		/// <summary>
 		/// Description: Rental payer
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental payer")]
-		public string M3_RPYN => GetString("RPYN");
+		public string M3RPYN => GetString("RPYN");
 
 		/// <summary>
 		/// Description: Rental depot
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental depot")]
-		public string M3_DPOT => GetString("DPOT");
+		public string M3DPOT => GetString("DPOT");
 
 		/// <summary>
 		/// Description: Service manager
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Program name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

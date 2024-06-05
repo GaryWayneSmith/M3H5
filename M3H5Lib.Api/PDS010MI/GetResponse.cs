@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work center
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_PLNM => GetString("PLNM");
+		public string M3PLNM => GetString("PLNM");
 
 		/// <summary>
 		/// Description: Work center type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center type")]
-		public string M3_PLGT => GetString("PLGT");
+		public string M3PLGT => GetString("PLGT");
 
 		/// <summary>
 		/// Description: Resource type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Resource type")]
-		public string M3_PLTP => GetString("PLTP");
+		public string M3PLTP => GetString("PLTP");
 
 		/// <summary>
 		/// Description: Operation description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Run time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run time")]
-		public int? M3_PITI => GetNullableInt("PITI");
+		public int? M3PITI => GetNullableInt("PITI");
 
 		/// <summary>
 		/// Description: Setup time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup time")]
-		public int? M3_SETI => GetNullableInt("SETI");
+		public int? M3SETI => GetNullableInt("SETI");
 
 		/// <summary>
 		/// Description: Fixed time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed time")]
-		public int? M3_FXTI => GetNullableInt("FXTI");
+		public int? M3FXTI => GetNullableInt("FXTI");
 
 		/// <summary>
 		/// Description: Planned number of workers - run time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of workers - run time")]
-		public int? M3_PRNP => GetNullableInt("PRNP");
+		public int? M3PRNP => GetNullableInt("PRNP");
 
 		/// <summary>
 		/// Description: Included in work center
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in work center")]
-		public string M3_IIWC => GetString("IIWC");
+		public string M3IIWC => GetString("IIWC");
 
 		/// <summary>
 		/// Description: Department
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Department")]
-		public string M3_DEPT => GetString("DEPT");
+		public string M3DEPT => GetString("DEPT");
 
 		/// <summary>
 		/// Description: Planning area
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning area")]
-		public string M3_REAR => GetString("REAR");
+		public string M3REAR => GetString("REAR");
 
 		/// <summary>
 		/// Description: Capacity type
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity type")]
-		public string M3_PCAP => GetString("PCAP");
+		public string M3PCAP => GetString("PCAP");
 
 		/// <summary>
 		/// Description: Work center responsible
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center responsible")]
-		public string M3_WCRE => GetString("WCRE");
+		public string M3WCRE => GetString("WCRE");
 
 		/// <summary>
 		/// Description: Utilization rate
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Utilization rate")]
-		public int? M3_AVEF => GetNullableInt("AVEF");
+		public int? M3AVEF => GetNullableInt("AVEF");
 
 		/// <summary>
 		/// Description: Number of persons
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of persons")]
-		public int? M3_WCNP => GetNullableInt("WCNP");
+		public int? M3WCNP => GetNullableInt("WCNP");
 
 		/// <summary>
 		/// Description: Number of machines
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of machines")]
-		public int? M3_WCNM => GetNullableInt("WCNM");
+		public int? M3WCNM => GetNullableInt("WCNM");
 
 		/// <summary>
 		/// Description: Time U/M
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time U/M")]
-		public string M3_PTUN => GetString("PTUN");
+		public string M3PTUN => GetString("PTUN");
 
 		/// <summary>
 		/// Description: Panel identity - WO W/C schedule
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel identity - WO W/C schedule")]
-		public string M3_PIDW => GetString("PIDW");
+		public string M3PIDW => GetString("PIDW");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: To location
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To location")]
-		public string M3_TWSL => GetString("TWSL");
+		public string M3TWSL => GetString("TWSL");
 
 		/// <summary>
 		/// Description: Automatic receipt
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic receipt")]
-		public int? M3_AUIN => GetNullableInt("AUIN");
+		public int? M3AUIN => GetNullableInt("AUIN");
 
 		/// <summary>
 		/// Description: Critical resource
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Critical resource")]
-		public int? M3_CRTR => GetNullableInt("CRTR");
+		public int? M3CRTR => GetNullableInt("CRTR");
 
 		/// <summary>
 		/// Description: Cost center
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost center")]
-		public string M3_COCE => GetString("COCE");
+		public string M3COCE => GetString("COCE");
 
 		/// <summary>
 		/// Description: Location
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_APLC => GetString("APLC");
+		public string M3APLC => GetString("APLC");
 
 		/// <summary>
 		/// Description: Planned number of resources
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of resources")]
-		public int? M3_MAHD => GetNullableInt("MAHD");
+		public int? M3MAHD => GetNullableInt("MAHD");
 	}
 }
 // EOF

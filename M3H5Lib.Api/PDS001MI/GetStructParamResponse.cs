@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Structure types in use
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure types in use")]
-		public int? M3_STPU => GetNullableInt("STPU");
+		public int? M3STPU => GetNullableInt("STPU");
 
 		/// <summary>
 		/// Description: Product structure type - standard
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type - standard")]
-		public string M3_STPM => GetString("STPM");
+		public string M3STPM => GetString("STPM");
 
 		/// <summary>
 		/// Description: Validity dates in use
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validity dates in use")]
-		public int? M3_EFDU => GetNullableInt("EFDU");
+		public int? M3EFDU => GetNullableInt("EFDU");
 
 		/// <summary>
 		/// Description: Phantom operation addition
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Phantom operation addition")]
-		public int? M3_PHOH => GetNullableInt("PHOH");
+		public int? M3PHOH => GetNullableInt("PHOH");
 
 		/// <summary>
 		/// Description: Operation range for phantoms
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation range for phantoms")]
-		public int? M3_PHOI => GetNullableInt("PHOI");
+		public int? M3PHOI => GetNullableInt("PHOI");
 
 		/// <summary>
 		/// Description: Calculate quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculate quantity")]
-		public int? M3_CALQ => GetNullableInt("CALQ");
+		public int? M3CALQ => GetNullableInt("CALQ");
 
 		/// <summary>
 		/// Description: Structure type - Critical mtrl/oper
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type - Critical mtrl/oper")]
-		public string M3_STCM => GetString("STCM");
+		public string M3STCM => GetString("STCM");
 
 		/// <summary>
 		/// Description: Product structure type for kit
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type for kit")]
-		public string M3_STTK => GetString("STTK");
+		public string M3STTK => GetString("STTK");
 
 		/// <summary>
 		/// Description: Include by-products in lowest level
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Include by-products in lowest level")]
-		public int? M3_IBYL => GetNullableInt("IBYL");
+		public int? M3IBYL => GetNullableInt("IBYL");
 
 		/// <summary>
 		/// Description: Structure type used in SCP
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type used in SCP")]
-		public string M3_STSP => GetString("STSP");
+		public string M3STSP => GetString("STSP");
 
 		/// <summary>
 		/// Description: Structure type - maintenance
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type - maintenance")]
-		public string M3_STMA => GetString("STMA");
+		public string M3STMA => GetString("STMA");
 	}
 }
 // EOF

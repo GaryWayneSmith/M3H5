@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Constant value")]
-		public string M3_STCO => GetString("STCO");
+		public string M3STCO => GetString("STCO");
 
 		/// <summary>
 		/// Description: Key value for code
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value for code")]
-		public string M3_STKY => GetString("STKY");
+		public string M3STKY => GetString("STKY");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Parameter value
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parameter value")]
-		public string M3_PARM => GetString("PARM");
+		public string M3PARM => GetString("PARM");
 
 		/// <summary>
 		/// Description: Language specific name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language specific name")]
-		public string M3_LT15 => GetString("LT15");
+		public string M3LT15 => GetString("LT15");
 
 		/// <summary>
 		/// Description: Language specific description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language specific description")]
-		public string M3_LT60 => GetString("LT60");
+		public string M3LT60 => GetString("LT60");
 	}
 }
 // EOF

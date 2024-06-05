@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.APS430MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Get Tax Header information
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_JBNO">Job number (Required)</param>
-		/// <param name="m3_JBDT">Job date (Required)</param>
-		/// <param name="m3_JBTM">Job time (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3JBNO">Job number (Required)</param>
+		/// <param name="m3JBDT">Job date (Required)</param>
+		/// <param name="m3JBTM">Job time (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTaxHeadResponse></returns>
 		/// <exception cref="M3Exception<GetTaxHeadResponse>"></exception>
 		public async Task<M3Response<GetTaxHeadResponse>> GetTaxHead(
-			string m3_DIVI, 
-			int m3_JBNO, 
-			DateTime m3_JBDT, 
-			int m3_JBTM, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			int m3JBNO, 
+			DateTime m3JBDT, 
+			int m3JBTM, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,19 +70,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("JBNO", m3_JBNO.ToString())
-				.WithQueryParameter("JBDT", m3_JBDT.ToM3String())
-				.WithQueryParameter("JBTM", m3_JBTM.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("JBNO", m3JBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JBDT", m3JBDT.ToM3String())
+				.WithQueryParameter("JBTM", m3JBTM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetTaxHeadResponse>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -101,12 +104,12 @@ namespace M3H5Lib.Api
 		/// Description Get tax total per Service code
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_JBNO">Job number</param>
-		/// <param name="m3_JBDT">Job date</param>
-		/// <param name="m3_JBTM">Job time</param>
-		/// <param name="m3_SERS">Service code</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3JBNO">Job number</param>
+		/// <param name="m3JBDT">Job date</param>
+		/// <param name="m3JBTM">Job time</param>
+		/// <param name="m3SERS">Service code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -115,12 +118,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTaxTotSerResponse></returns>
 		/// <exception cref="M3Exception<GetTaxTotSerResponse>"></exception>
 		public async Task<M3Response<GetTaxTotSerResponse>> GetTaxTotSer(
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			int? m3_JBNO = null, 
-			DateTime? m3_JBDT = null, 
-			int? m3_JBTM = null, 
-			int? m3_SERS = null, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			int? m3JBNO = null, 
+			DateTime? m3JBDT = null, 
+			int? m3JBTM = null, 
+			int? m3SERS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -135,18 +138,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_JBNO.HasValue)
-				request.WithQueryParameter("JBNO", m3_JBNO.Value.ToString());
-			if (m3_JBDT.HasValue)
-				request.WithQueryParameter("JBDT", m3_JBDT.Value.ToM3String());
-			if (m3_JBTM.HasValue)
-				request.WithQueryParameter("JBTM", m3_JBTM.Value.ToString());
-			if (m3_SERS.HasValue)
-				request.WithQueryParameter("SERS", m3_SERS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3JBNO.HasValue)
+				request.WithQueryParameter("JBNO", m3JBNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JBDT.HasValue)
+				request.WithQueryParameter("JBDT", m3JBDT.Value.ToM3String());
+			if (m3JBTM.HasValue)
+				request.WithQueryParameter("JBTM", m3JBTM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SERS.HasValue)
+				request.WithQueryParameter("SERS", m3SERS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetTaxTotSerResponse>(
@@ -156,7 +159,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -167,12 +171,12 @@ namespace M3H5Lib.Api
 		/// Description Get tax total per supplier state and service code
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_JBNO">Job number (Required)</param>
-		/// <param name="m3_JBDT">Job date (Required)</param>
-		/// <param name="m3_JBTM">Job time (Required)</param>
-		/// <param name="m3_ECAR">Area/state (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3JBNO">Job number (Required)</param>
+		/// <param name="m3JBDT">Job date (Required)</param>
+		/// <param name="m3JBTM">Job time (Required)</param>
+		/// <param name="m3ECAR">Area/state (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -181,12 +185,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTaxTotStaSerResponse></returns>
 		/// <exception cref="M3Exception<GetTaxTotStaSerResponse>"></exception>
 		public async Task<M3Response<GetTaxTotStaSerResponse>> GetTaxTotStaSer(
-			string m3_DIVI, 
-			int m3_JBNO, 
-			DateTime m3_JBDT, 
-			int m3_JBTM, 
-			string m3_ECAR, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			int m3JBNO, 
+			DateTime m3JBDT, 
+			int m3JBTM, 
+			string m3ECAR, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -201,22 +205,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_ECAR))
-				throw new ArgumentNullException("m3_ECAR");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3ECAR))
+				throw new ArgumentNullException(nameof(m3ECAR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("JBNO", m3_JBNO.ToString())
-				.WithQueryParameter("JBDT", m3_JBDT.ToM3String())
-				.WithQueryParameter("JBTM", m3_JBTM.ToString())
-				.WithQueryParameter("ECAR", m3_ECAR.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("JBNO", m3JBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JBDT", m3JBDT.ToM3String())
+				.WithQueryParameter("JBTM", m3JBTM.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ECAR", m3ECAR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetTaxTotStaSerResponse>(
@@ -226,7 +230,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -237,13 +242,13 @@ namespace M3H5Lib.Api
 		/// Description Get Tax Total per Supplier and Service code
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_JBNO">Job number (Required)</param>
-		/// <param name="m3_JBDT">Job date (Required)</param>
-		/// <param name="m3_JBTM">Job time (Required)</param>
-		/// <param name="m3_SUNO">Supplier number (Required)</param>
-		/// <param name="m3_SERS">Service code (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3JBNO">Job number (Required)</param>
+		/// <param name="m3JBDT">Job date (Required)</param>
+		/// <param name="m3JBTM">Job time (Required)</param>
+		/// <param name="m3SUNO">Supplier number (Required)</param>
+		/// <param name="m3SERS">Service code (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -252,13 +257,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTaxTotSupSerResponse></returns>
 		/// <exception cref="M3Exception<GetTaxTotSupSerResponse>"></exception>
 		public async Task<M3Response<GetTaxTotSupSerResponse>> GetTaxTotSupSer(
-			string m3_DIVI, 
-			int m3_JBNO, 
-			DateTime m3_JBDT, 
-			int m3_JBTM, 
-			string m3_SUNO, 
-			int m3_SERS, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			int m3JBNO, 
+			DateTime m3JBDT, 
+			int m3JBTM, 
+			string m3SUNO, 
+			int m3SERS, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -273,23 +278,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("JBNO", m3_JBNO.ToString())
-				.WithQueryParameter("JBDT", m3_JBDT.ToM3String())
-				.WithQueryParameter("JBTM", m3_JBTM.ToString())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("SERS", m3_SERS.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("JBNO", m3JBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JBDT", m3JBDT.ToM3String())
+				.WithQueryParameter("JBTM", m3JBTM.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("SERS", m3SERS.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetTaxTotSupSerResponse>(
@@ -299,7 +304,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -310,14 +316,14 @@ namespace M3H5Lib.Api
 		/// Description List Tax Argentina Line Level
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_JBNO">Job number (Required)</param>
-		/// <param name="m3_JBDT">Job date (Required)</param>
-		/// <param name="m3_JBTM">Job time (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_SUNO">Supplier number</param>
-		/// <param name="m3_RESE">Related service code</param>
-		/// <param name="m3_SINO">Supplier invoice number</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3JBNO">Job number (Required)</param>
+		/// <param name="m3JBDT">Job date (Required)</param>
+		/// <param name="m3JBTM">Job time (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3SUNO">Supplier number</param>
+		/// <param name="m3RESE">Related service code</param>
+		/// <param name="m3SINO">Supplier invoice number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -326,14 +332,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTaxArLineResponse></returns>
 		/// <exception cref="M3Exception<LstTaxArLineResponse>"></exception>
 		public async Task<M3Response<LstTaxArLineResponse>> LstTaxArLine(
-			string m3_DIVI, 
-			int m3_JBNO, 
-			DateTime m3_JBDT, 
-			int m3_JBTM, 
-			int? m3_CONO = null, 
-			string m3_SUNO = null, 
-			int? m3_RESE = null, 
-			string m3_SINO = null, 
+			string m3DIVI, 
+			int m3JBNO, 
+			DateTime m3JBDT, 
+			int m3JBTM, 
+			int? m3CONO = null, 
+			string m3SUNO = null, 
+			int? m3RESE = null, 
+			string m3SINO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -348,25 +354,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("JBNO", m3_JBNO.ToString())
-				.WithQueryParameter("JBDT", m3_JBDT.ToM3String())
-				.WithQueryParameter("JBTM", m3_JBTM.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("JBNO", m3JBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JBDT", m3JBDT.ToM3String())
+				.WithQueryParameter("JBTM", m3JBTM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (m3_RESE.HasValue)
-				request.WithQueryParameter("RESE", m3_RESE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SINO))
-				request.WithQueryParameter("SINO", m3_SINO.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (m3RESE.HasValue)
+				request.WithQueryParameter("RESE", m3RESE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SINO))
+				request.WithQueryParameter("SINO", m3SINO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTaxArLineResponse>(
@@ -376,7 +382,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -387,12 +394,12 @@ namespace M3H5Lib.Api
 		/// Description List tax total per supplier state and service code
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_JBNO">Job number (Required)</param>
-		/// <param name="m3_JBDT">Job date (Required)</param>
-		/// <param name="m3_JBTM">Job time (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_ECAR">Area/state</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3JBNO">Job number (Required)</param>
+		/// <param name="m3JBDT">Job date (Required)</param>
+		/// <param name="m3JBTM">Job time (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3ECAR">Area/state</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -401,12 +408,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTaxTotStaSerResponse></returns>
 		/// <exception cref="M3Exception<LstTaxTotStaSerResponse>"></exception>
 		public async Task<M3Response<LstTaxTotStaSerResponse>> LstTaxTotStaSer(
-			string m3_DIVI, 
-			int m3_JBNO, 
-			DateTime m3_JBDT, 
-			int m3_JBTM, 
-			int? m3_CONO = null, 
-			string m3_ECAR = null, 
+			string m3DIVI, 
+			int m3JBNO, 
+			DateTime m3JBDT, 
+			int m3JBTM, 
+			int? m3CONO = null, 
+			string m3ECAR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -421,21 +428,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("JBNO", m3_JBNO.ToString())
-				.WithQueryParameter("JBDT", m3_JBDT.ToM3String())
-				.WithQueryParameter("JBTM", m3_JBTM.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("JBNO", m3JBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JBDT", m3JBDT.ToM3String())
+				.WithQueryParameter("JBTM", m3JBTM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ECAR))
-				request.WithQueryParameter("ECAR", m3_ECAR.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ECAR))
+				request.WithQueryParameter("ECAR", m3ECAR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTaxTotStaSerResponse>(
@@ -445,7 +452,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -456,13 +464,13 @@ namespace M3H5Lib.Api
 		/// Description List Tax Total per Supplier and Service code
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_JBNO">Job number (Required)</param>
-		/// <param name="m3_JBDT">Job date (Required)</param>
-		/// <param name="m3_JBTM">Job time (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_SUNO">Supplier number</param>
-		/// <param name="m3_SERS">Service code</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3JBNO">Job number (Required)</param>
+		/// <param name="m3JBDT">Job date (Required)</param>
+		/// <param name="m3JBTM">Job time (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3SUNO">Supplier number</param>
+		/// <param name="m3SERS">Service code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -471,13 +479,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTaxTotSupSerResponse></returns>
 		/// <exception cref="M3Exception<LstTaxTotSupSerResponse>"></exception>
 		public async Task<M3Response<LstTaxTotSupSerResponse>> LstTaxTotSupSer(
-			string m3_DIVI, 
-			int m3_JBNO, 
-			DateTime m3_JBDT, 
-			int m3_JBTM, 
-			int? m3_CONO = null, 
-			string m3_SUNO = null, 
-			int? m3_SERS = null, 
+			string m3DIVI, 
+			int m3JBNO, 
+			DateTime m3JBDT, 
+			int m3JBTM, 
+			int? m3CONO = null, 
+			string m3SUNO = null, 
+			int? m3SERS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -492,23 +500,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("JBNO", m3_JBNO.ToString())
-				.WithQueryParameter("JBDT", m3_JBDT.ToM3String())
-				.WithQueryParameter("JBTM", m3_JBTM.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("JBNO", m3JBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JBDT", m3JBDT.ToM3String())
+				.WithQueryParameter("JBTM", m3JBTM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (m3_SERS.HasValue)
-				request.WithQueryParameter("SERS", m3_SERS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (m3SERS.HasValue)
+				request.WithQueryParameter("SERS", m3SERS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstTaxTotSupSerResponse>(
@@ -518,7 +526,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

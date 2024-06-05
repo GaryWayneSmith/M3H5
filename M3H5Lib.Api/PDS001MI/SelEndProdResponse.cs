@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: End product
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End product")]
-		public string M3_ENDP => GetString("ENDP");
+		public string M3ENDP => GetString("ENDP");
 
 		/// <summary>
 		/// Description: From date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Yield
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yield")]
-		public decimal? M3_OQTY => GetNullableDecimal("OQTY");
+		public decimal? M3OQTY => GetNullableDecimal("OQTY");
 
 		/// <summary>
 		/// Description: Manufacturing U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing U/M")]
-		public string M3_MAUN => GetString("MAUN");
+		public string M3MAUN => GetString("MAUN");
 
 		/// <summary>
 		/// Description: Costing percentage
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing percentage")]
-		public int? M3_COSH => GetNullableInt("COSH");
+		public int? M3COSH => GetNullableInt("COSH");
 
 		/// <summary>
 		/// Description: Catch weight unit of measure
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight unit of measure")]
-		public string M3_CWUN => GetString("CWUN");
+		public string M3CWUN => GetString("CWUN");
 
 		/// <summary>
 		/// Description: Yield in basic unit
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yield in basic unit")]
-		public decimal? M3_OQTB => GetNullableDecimal("OQTB");
+		public decimal? M3OQTB => GetNullableDecimal("OQTB");
 	}
 }
 // EOF

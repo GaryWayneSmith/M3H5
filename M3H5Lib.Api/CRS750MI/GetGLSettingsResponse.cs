@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Debit / credit code used
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debit / credit code used")]
-		public int? M3_DCNY => GetNullableInt("DCNY");
+		public int? M3DCNY => GetNullableInt("DCNY");
 
 		/// <summary>
 		/// Description: Sign debit
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sign debit")]
-		public string M3_DBPS => GetString("DBPS");
+		public string M3DBPS => GetString("DBPS");
 
 		/// <summary>
 		/// Description: Sign credit
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sign credit")]
-		public string M3_DBNG => GetString("DBNG");
+		public string M3DBNG => GetString("DBNG");
 
 		/// <summary>
 		/// Description: Cancel A/C
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cancel A/C")]
-		public string M3_AIT1 => GetString("AIT1");
+		public string M3AIT1 => GetString("AIT1");
 
 		/// <summary>
 		/// Description: A/C description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("A/C description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Voucher name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher name")]
-		public string M3_VDSC => GetString("VDSC");
+		public string M3VDSC => GetString("VDSC");
 
 		/// <summary>
 		/// Description: Compress account enteries for interest invoices
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compress account enteries for interest invoices")]
-		public int? M3_ATC2 => GetNullableInt("ATC2");
+		public int? M3ATC2 => GetNullableInt("ATC2");
 
 		/// <summary>
 		/// Description: Check transaction file
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check transaction file")]
-		public int? M3_CHEC => GetNullableInt("CHEC");
+		public int? M3CHEC => GetNullableInt("CHEC");
 
 		/// <summary>
 		/// Description: Account addition
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account addition")]
-		public int? M3_AACC => GetNullableInt("AACC");
+		public int? M3AACC => GetNullableInt("AACC");
 
 		/// <summary>
 		/// Description: VAT check on-line
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT check on-line")]
-		public int? M3_OLVC => GetNullableInt("OLVC");
+		public int? M3OLVC => GetNullableInt("OLVC");
 
 		/// <summary>
 		/// Description: Accepted VAT deviation
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accepted VAT deviation")]
-		public decimal? M3_ACVD => GetNullableDecimal("ACVD");
+		public decimal? M3ACVD => GetNullableDecimal("ACVD");
 
 		/// <summary>
 		/// Description: Book of account
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Book of account")]
-		public int? M3_ACBC => GetNullableInt("ACBC");
+		public int? M3ACBC => GetNullableInt("ACBC");
 
 		/// <summary>
 		/// Description: Reconciliation
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reconciliation")]
-		public int? M3_RECE => GetNullableInt("RECE");
+		public int? M3RECE => GetNullableInt("RECE");
 
 		/// <summary>
 		/// Description: VAT Last run date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT Last run date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: Base amount - calc of doubtful accounts
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base amount - calc of doubtful accounts")]
-		public int? M3_AGNG => GetNullableInt("AGNG");
+		public int? M3AGNG => GetNullableInt("AGNG");
 
 		/// <summary>
 		/// Description: Update General Ledger
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update General Ledger")]
-		public int? M3_UPGL => GetNullableInt("UPGL");
+		public int? M3UPGL => GetNullableInt("UPGL");
 
 		/// <summary>
 		/// Description: External/internal transaction
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External/internal transaction")]
-		public int? M3_EICD => GetNullableInt("EICD");
+		public int? M3EICD => GetNullableInt("EICD");
 
 		/// <summary>
 		/// Description: VAT date type
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT date type")]
-		public int? M3_VDTT => GetNullableInt("VDTT");
+		public int? M3VDTT => GetNullableInt("VDTT");
 
 		/// <summary>
 		/// Description: Cross division voucher
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cross division voucher")]
-		public int? M3_CRDI => GetNullableInt("CRDI");
+		public int? M3CRDI => GetNullableInt("CRDI");
 
 		/// <summary>
 		/// Description: Third currency
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency")]
-		public string M3_THCC => GetString("THCC");
+		public string M3THCC => GetString("THCC");
 
 		/// <summary>
 		/// Description: Third currency rate type
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency rate type")]
-		public int? M3_TCRT => GetNullableInt("TCRT");
+		public int? M3TCRT => GetNullableInt("TCRT");
 
 		/// <summary>
 		/// Description: Use commitment
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Use commitment")]
-		public int? M3_FUCO => GetNullableInt("FUCO");
+		public int? M3FUCO => GetNullableInt("FUCO");
 
 		/// <summary>
 		/// Description: Budget number (committed value)
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget number (committed value)")]
-		public int? M3_BUNC => GetNullableInt("BUNC");
+		public int? M3BUNC => GetNullableInt("BUNC");
 
 		/// <summary>
 		/// Description: Budget version (committed value)
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget version (committed value)")]
-		public string M3_BVVC => GetString("BVVC");
+		public string M3BVVC => GetString("BVVC");
 
 		/// <summary>
 		/// Description: Budget number  (budget value)
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget number  (budget value)")]
-		public int? M3_BUNB => GetNullableInt("BUNB");
+		public int? M3BUNB => GetNullableInt("BUNB");
 
 		/// <summary>
 		/// Description: Budget version (budget value)
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget version (budget value)")]
-		public string M3_BVVB => GetString("BVVB");
+		public string M3BVVB => GetString("BVVB");
 
 		/// <summary>
 		/// Description: Budget number (manual values)
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget number (manual values)")]
-		public int? M3_BUNM => GetNullableInt("BUNM");
+		public int? M3BUNM => GetNullableInt("BUNM");
 
 		/// <summary>
 		/// Description: Budget version (manual values)
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget version (manual values)")]
-		public string M3_BVVM => GetString("BVVM");
+		public string M3BVVM => GetString("BVVM");
 
 		/// <summary>
 		/// Description: Block/warning
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Block/warning")]
-		public int? M3_BLWA => GetNullableInt("BLWA");
+		public int? M3BLWA => GetNullableInt("BLWA");
 
 		/// <summary>
 		/// Description: Reduce at
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reduce at")]
-		public int? M3_REDU => GetNullableInt("REDU");
+		public int? M3REDU => GetNullableInt("REDU");
 
 		/// <summary>
 		/// Description: Comparision at
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comparision at")]
-		public int? M3_CMPA => GetNullableInt("CMPA");
+		public int? M3CMPA => GetNullableInt("CMPA");
 
 		/// <summary>
 		/// Description: Commitment date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commitment date")]
-		public DateTime? M3_CMDT => GetNullableDateTime("CMDT");
+		public DateTime? M3CMDT => GetNullableDateTime("CMDT");
 
 		/// <summary>
 		/// Description: Accounting dimension 1 used
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 1 used")]
-		public string M3_FAC1 => GetString("FAC1");
+		public string M3FAC1 => GetString("FAC1");
 
 		/// <summary>
 		/// Description: Accounting dimension 2 used
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 2 used")]
-		public string M3_FAC2 => GetString("FAC2");
+		public string M3FAC2 => GetString("FAC2");
 
 		/// <summary>
 		/// Description: Accounting dimension 3 used
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 3 used")]
-		public string M3_FAC3 => GetString("FAC3");
+		public string M3FAC3 => GetString("FAC3");
 
 		/// <summary>
 		/// Description: Accounting dimension 4 used
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 4 used")]
-		public string M3_FAC4 => GetString("FAC4");
+		public string M3FAC4 => GetString("FAC4");
 
 		/// <summary>
 		/// Description: Accounting dimension 5 used
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 5 used")]
-		public string M3_FAC5 => GetString("FAC5");
+		public string M3FAC5 => GetString("FAC5");
 
 		/// <summary>
 		/// Description: Accounting dimension 6 used
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 6 used")]
-		public string M3_FAC6 => GetString("FAC6");
+		public string M3FAC6 => GetString("FAC6");
 
 		/// <summary>
 		/// Description: Accounting dimension 7 used
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 7 used")]
-		public string M3_FAC7 => GetString("FAC7");
+		public string M3FAC7 => GetString("FAC7");
 
 		/// <summary>
 		/// Description: VAT printout
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT printout")]
-		public int? M3_VTPC => GetNullableInt("VTPC");
+		public int? M3VTPC => GetNullableInt("VTPC");
 
 		/// <summary>
 		/// Description: VAT report from date
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT report from date")]
-		public DateTime? M3_VTFD => GetNullableDateTime("VTFD");
+		public DateTime? M3VTFD => GetNullableDateTime("VTFD");
 
 		/// <summary>
 		/// Description: Credit check including VAT
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit check including VAT")]
-		public int? M3_CLVT => GetNullableInt("CLVT");
+		public int? M3CLVT => GetNullableInt("CLVT");
 
 		/// <summary>
 		/// Description: Credit check incl blocked invoices
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit check incl blocked invoices")]
-		public int? M3_CLBI => GetNullableInt("CLBI");
+		public int? M3CLBI => GetNullableInt("CLBI");
 
 		/// <summary>
 		/// Description: Draft accounting method
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Draft accounting method")]
-		public int? M3_DAME => GetNullableInt("DAME");
+		public int? M3DAME => GetNullableInt("DAME");
 
 		/// <summary>
 		/// Description: Accounting ID in multiple structure
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting ID in multiple structure")]
-		public int? M3_AIMS => GetNullableInt("AIMS");
+		public int? M3AIMS => GetNullableInt("AIMS");
 
 		/// <summary>
 		/// Description: Legal reports
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Legal reports")]
-		public string M3_LRSP => GetString("LRSP");
+		public string M3LRSP => GetString("LRSP");
 
 		/// <summary>
 		/// Description: Official number
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Official number")]
-		public string M3_NBID => GetString("NBID");
+		public string M3NBID => GetString("NBID");
 
 		/// <summary>
 		/// Description: Credit time fence
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit time fence")]
-		public int? M3_TFC3 => GetNullableInt("TFC3");
+		public int? M3TFC3 => GetNullableInt("TFC3");
 
 		/// <summary>
 		/// Description: Invoice class
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice class")]
-		public int? M3_IVCC => GetNullableInt("IVCC");
+		public int? M3IVCC => GetNullableInt("IVCC");
 
 		/// <summary>
 		/// Description: Voucher cover sheet
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher cover sheet")]
-		public int? M3_VCSH => GetNullableInt("VCSH");
+		public int? M3VCSH => GetNullableInt("VCSH");
 
 		/// <summary>
 		/// Description: Update accounting date in trans tables
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update accounting date in trans tables")]
-		public int? M3_CHAD => GetNullableInt("CHAD");
+		public int? M3CHAD => GetNullableInt("CHAD");
 
 		/// <summary>
 		/// Description: Prepayment processing
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prepayment processing")]
-		public int? M3_PRPY => GetNullableInt("PRPY");
+		public int? M3PRPY => GetNullableInt("PRPY");
 
 		/// <summary>
 		/// Description: VAT rate method
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT rate method")]
-		public int? M3_VTRM => GetNullableInt("VTRM");
+		public int? M3VTRM => GetNullableInt("VTRM");
 
 		/// <summary>
 		/// Description: exchange rate type - VAT reporting
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("exchange rate type - VAT reporting")]
-		public int? M3_RTVR => GetNullableInt("RTVR");
+		public int? M3RTVR => GetNullableInt("RTVR");
 
 		/// <summary>
 		/// Description: Retrieve VATcode
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Retrieve VATcode")]
-		public int? M3_RTVC => GetNullableInt("RTVC");
+		public int? M3RTVC => GetNullableInt("RTVC");
 
 		/// <summary>
 		/// Description: Prevent balance file accumulation
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prevent balance file accumulation")]
-		public int? M3_PBF2 => GetNullableInt("PBF2");
+		public int? M3PBF2 => GetNullableInt("PBF2");
 
 		/// <summary>
 		/// Description: Prevent balance file accumulation
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prevent balance file accumulation")]
-		public int? M3_PBF3 => GetNullableInt("PBF3");
+		public int? M3PBF3 => GetNullableInt("PBF3");
 
 		/// <summary>
 		/// Description: Prevent balance file accumulation
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prevent balance file accumulation")]
-		public int? M3_PBF4 => GetNullableInt("PBF4");
+		public int? M3PBF4 => GetNullableInt("PBF4");
 
 		/// <summary>
 		/// Description: Prevent balance file accumulation
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prevent balance file accumulation")]
-		public int? M3_PBF5 => GetNullableInt("PBF5");
+		public int? M3PBF5 => GetNullableInt("PBF5");
 
 		/// <summary>
 		/// Description: Prevent balance file accumulation
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prevent balance file accumulation")]
-		public int? M3_PBF6 => GetNullableInt("PBF6");
+		public int? M3PBF6 => GetNullableInt("PBF6");
 
 		/// <summary>
 		/// Description: Prevent balance file accumulation
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.CRS750MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prevent balance file accumulation")]
-		public int? M3_PBF7 => GetNullableInt("PBF7");
+		public int? M3PBF7 => GetNullableInt("PBF7");
 	}
 }
 // EOF

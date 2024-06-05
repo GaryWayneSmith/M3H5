@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DTUM => GetNullableDateTime("DTUM");
+		public DateTime? M3DTUM => GetNullableDateTime("DTUM");
 
 		/// <summary>
 		/// Description: Project element
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Planned start date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start date")]
-		public DateTime? M3_PLSD => GetNullableDateTime("PLSD");
+		public DateTime? M3PLSD => GetNullableDateTime("PLSD");
 
 		/// <summary>
 		/// Description: Planned finish date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish date")]
-		public DateTime? M3_PLFD => GetNullableDateTime("PLFD");
+		public DateTime? M3PLFD => GetNullableDateTime("PLFD");
 
 		/// <summary>
 		/// Description: Original start date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original start date")]
-		public DateTime? M3_ORSD => GetNullableDateTime("ORSD");
+		public DateTime? M3ORSD => GetNullableDateTime("ORSD");
 
 		/// <summary>
 		/// Description: Original finish date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original finish date")]
-		public DateTime? M3_ORFD => GetNullableDateTime("ORFD");
+		public DateTime? M3ORFD => GetNullableDateTime("ORFD");
 
 		/// <summary>
 		/// Description: Priority
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_OPRI => GetNullableInt("OPRI");
+		public int? M3OPRI => GetNullableInt("OPRI");
 
 		/// <summary>
 		/// Description: Fixed date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.POS211MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed date")]
-		public int? M3_FIXD => GetNullableInt("FIXD");
+		public int? M3FIXD => GetNullableInt("FIXD");
 	}
 }
 // EOF

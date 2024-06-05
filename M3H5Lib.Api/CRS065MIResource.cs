@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS065MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,20 +38,20 @@ namespace M3H5Lib.Api
 		/// Description Add Delivery Term
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_TEL1">Termstext (Required)</param>
-		/// <param name="m3_DELT">Goodsresponsibility (Required)</param>
-		/// <param name="m3_TXPO">Tax point (Required)</param>
-		/// <param name="m3_FRRU">Fiscal representative rule (Required)</param>
-		/// <param name="m3_TEDL">Deliveryterms</param>
-		/// <param name="m3_LNCD">Language</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TEL2">Termstext</param>
-		/// <param name="m3_RCPY">Recipientpays</param>
-		/// <param name="m3_ADJR">Adjustmentfactorconsignee</param>
-		/// <param name="m3_ADJS">Adjustmentfactorconsignor</param>
-		/// <param name="m3_ECDT">Deliveryterms-INTRASTAT</param>
-		/// <param name="m3_EXTD">Delivery terms - Extrastat (Extra)</param>
-		/// <param name="m3_FRCK">Freight cost control</param>
+		/// <param name="m3TEL1">Termstext (Required)</param>
+		/// <param name="m3DELT">Goodsresponsibility (Required)</param>
+		/// <param name="m3TXPO">Tax point (Required)</param>
+		/// <param name="m3FRRU">Fiscal representative rule (Required)</param>
+		/// <param name="m3TEDL">Deliveryterms</param>
+		/// <param name="m3LNCD">Language</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TEL2">Termstext</param>
+		/// <param name="m3RCPY">Recipientpays</param>
+		/// <param name="m3ADJR">Adjustmentfactorconsignee</param>
+		/// <param name="m3ADJS">Adjustmentfactorconsignor</param>
+		/// <param name="m3ECDT">Deliveryterms-INTRASTAT</param>
+		/// <param name="m3EXTD">Delivery terms - Extrastat (Extra)</param>
+		/// <param name="m3FRCK">Freight cost control</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -58,20 +60,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddDelyTerm(
-			string m3_TEL1, 
-			int m3_DELT, 
-			int m3_TXPO, 
-			int m3_FRRU, 
-			string m3_TEDL = null, 
-			string m3_LNCD = null, 
-			string m3_TX15 = null, 
-			string m3_TEL2 = null, 
-			int? m3_RCPY = null, 
-			int? m3_ADJR = null, 
-			int? m3_ADJS = null, 
-			string m3_ECDT = null, 
-			string m3_EXTD = null, 
-			int? m3_FRCK = null, 
+			string m3TEL1, 
+			int m3DELT, 
+			int m3TXPO, 
+			int m3FRRU, 
+			string m3TEDL = null, 
+			string m3LNCD = null, 
+			string m3TX15 = null, 
+			string m3TEL2 = null, 
+			int? m3RCPY = null, 
+			int? m3ADJR = null, 
+			int? m3ADJS = null, 
+			string m3ECDT = null, 
+			string m3EXTD = null, 
+			int? m3FRCK = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -86,37 +88,37 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TEL1))
-				throw new ArgumentNullException("m3_TEL1");
+			if (string.IsNullOrWhiteSpace(m3TEL1))
+				throw new ArgumentNullException(nameof(m3TEL1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TEL1", m3_TEL1.Trim())
-				.WithQueryParameter("DELT", m3_DELT.ToString())
-				.WithQueryParameter("TXPO", m3_TXPO.ToString())
-				.WithQueryParameter("FRRU", m3_FRRU.ToString());
+				.WithQueryParameter("TEL1", m3TEL1.Trim())
+				.WithQueryParameter("DELT", m3DELT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TXPO", m3TXPO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FRRU", m3FRRU.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TEDL))
-				request.WithQueryParameter("TEDL", m3_TEDL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEL2))
-				request.WithQueryParameter("TEL2", m3_TEL2.Trim());
-			if (m3_RCPY.HasValue)
-				request.WithQueryParameter("RCPY", m3_RCPY.Value.ToString());
-			if (m3_ADJR.HasValue)
-				request.WithQueryParameter("ADJR", m3_ADJR.Value.ToString());
-			if (m3_ADJS.HasValue)
-				request.WithQueryParameter("ADJS", m3_ADJS.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ECDT))
-				request.WithQueryParameter("ECDT", m3_ECDT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EXTD))
-				request.WithQueryParameter("EXTD", m3_EXTD.Trim());
-			if (m3_FRCK.HasValue)
-				request.WithQueryParameter("FRCK", m3_FRCK.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TEDL))
+				request.WithQueryParameter("TEDL", m3TEDL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEL2))
+				request.WithQueryParameter("TEL2", m3TEL2.Trim());
+			if (m3RCPY.HasValue)
+				request.WithQueryParameter("RCPY", m3RCPY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ADJR.HasValue)
+				request.WithQueryParameter("ADJR", m3ADJR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ADJS.HasValue)
+				request.WithQueryParameter("ADJS", m3ADJS.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ECDT))
+				request.WithQueryParameter("ECDT", m3ECDT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EXTD))
+				request.WithQueryParameter("EXTD", m3EXTD.Trim());
+			if (m3FRCK.HasValue)
+				request.WithQueryParameter("FRCK", m3FRCK.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -126,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -137,8 +140,8 @@ namespace M3H5Lib.Api
 		/// Description Delete Delivery Term
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_TEDL">Deliveryterms</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3TEDL">Deliveryterms</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -147,8 +150,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelDelyTerm(
-			string m3_TEDL = null, 
-			string m3_LNCD = null, 
+			string m3TEDL = null, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -163,10 +166,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TEDL))
-				request.WithQueryParameter("TEDL", m3_TEDL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEDL))
+				request.WithQueryParameter("TEDL", m3TEDL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -176,7 +179,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -187,8 +191,8 @@ namespace M3H5Lib.Api
 		/// Description Get Delivery Term
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_TEDL">Deliveryterms</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3TEDL">Deliveryterms</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -197,8 +201,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDelyTermResponse></returns>
 		/// <exception cref="M3Exception<GetDelyTermResponse>"></exception>
 		public async Task<M3Response<GetDelyTermResponse>> GetDelyTerm(
-			string m3_TEDL = null, 
-			string m3_LNCD = null, 
+			string m3TEDL = null, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -213,10 +217,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TEDL))
-				request.WithQueryParameter("TEDL", m3_TEDL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEDL))
+				request.WithQueryParameter("TEDL", m3TEDL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetDelyTermResponse>(
@@ -226,7 +230,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -237,7 +242,7 @@ namespace M3H5Lib.Api
 		/// Description List Delivery Term
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_TEDL">Deliveryterms</param>
+		/// <param name="m3TEDL">Deliveryterms</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -246,7 +251,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDelyTermResponse></returns>
 		/// <exception cref="M3Exception<LstDelyTermResponse>"></exception>
 		public async Task<M3Response<LstDelyTermResponse>> LstDelyTerm(
-			string m3_TEDL = null, 
+			string m3TEDL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -261,8 +266,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TEDL))
-				request.WithQueryParameter("TEDL", m3_TEDL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEDL))
+				request.WithQueryParameter("TEDL", m3TEDL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDelyTermResponse>(
@@ -272,7 +277,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -283,20 +289,20 @@ namespace M3H5Lib.Api
 		/// Description Update Delivery Term
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_TEDL">Deliveryterms</param>
-		/// <param name="m3_LNCD">Language</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TEL1">Termstext</param>
-		/// <param name="m3_TEL2">Termstext</param>
-		/// <param name="m3_RCPY">Recipientpays</param>
-		/// <param name="m3_DELT">Goodsresponsibility</param>
-		/// <param name="m3_ADJR">Adjustmentfactorconsignee</param>
-		/// <param name="m3_ADJS">Adjustmentfactorconsignor</param>
-		/// <param name="m3_ECDT">Deliveryterms-INTRASTAT</param>
-		/// <param name="m3_EXTD">Delivery terms - Extrastat (Extra)</param>
-		/// <param name="m3_TXPO">Tax point</param>
-		/// <param name="m3_FRCK">Freight cost control</param>
-		/// <param name="m3_FRRU">Fiscal representative rule</param>
+		/// <param name="m3TEDL">Deliveryterms</param>
+		/// <param name="m3LNCD">Language</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TEL1">Termstext</param>
+		/// <param name="m3TEL2">Termstext</param>
+		/// <param name="m3RCPY">Recipientpays</param>
+		/// <param name="m3DELT">Goodsresponsibility</param>
+		/// <param name="m3ADJR">Adjustmentfactorconsignee</param>
+		/// <param name="m3ADJS">Adjustmentfactorconsignor</param>
+		/// <param name="m3ECDT">Deliveryterms-INTRASTAT</param>
+		/// <param name="m3EXTD">Delivery terms - Extrastat (Extra)</param>
+		/// <param name="m3TXPO">Tax point</param>
+		/// <param name="m3FRCK">Freight cost control</param>
+		/// <param name="m3FRRU">Fiscal representative rule</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -305,20 +311,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdDelyTerm(
-			string m3_TEDL = null, 
-			string m3_LNCD = null, 
-			string m3_TX15 = null, 
-			string m3_TEL1 = null, 
-			string m3_TEL2 = null, 
-			int? m3_RCPY = null, 
-			int? m3_DELT = null, 
-			int? m3_ADJR = null, 
-			int? m3_ADJS = null, 
-			string m3_ECDT = null, 
-			string m3_EXTD = null, 
-			int? m3_TXPO = null, 
-			int? m3_FRCK = null, 
-			int? m3_FRRU = null, 
+			string m3TEDL = null, 
+			string m3LNCD = null, 
+			string m3TX15 = null, 
+			string m3TEL1 = null, 
+			string m3TEL2 = null, 
+			int? m3RCPY = null, 
+			int? m3DELT = null, 
+			int? m3ADJR = null, 
+			int? m3ADJS = null, 
+			string m3ECDT = null, 
+			string m3EXTD = null, 
+			int? m3TXPO = null, 
+			int? m3FRCK = null, 
+			int? m3FRRU = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -333,34 +339,34 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TEDL))
-				request.WithQueryParameter("TEDL", m3_TEDL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEL1))
-				request.WithQueryParameter("TEL1", m3_TEL1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEL2))
-				request.WithQueryParameter("TEL2", m3_TEL2.Trim());
-			if (m3_RCPY.HasValue)
-				request.WithQueryParameter("RCPY", m3_RCPY.Value.ToString());
-			if (m3_DELT.HasValue)
-				request.WithQueryParameter("DELT", m3_DELT.Value.ToString());
-			if (m3_ADJR.HasValue)
-				request.WithQueryParameter("ADJR", m3_ADJR.Value.ToString());
-			if (m3_ADJS.HasValue)
-				request.WithQueryParameter("ADJS", m3_ADJS.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ECDT))
-				request.WithQueryParameter("ECDT", m3_ECDT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EXTD))
-				request.WithQueryParameter("EXTD", m3_EXTD.Trim());
-			if (m3_TXPO.HasValue)
-				request.WithQueryParameter("TXPO", m3_TXPO.Value.ToString());
-			if (m3_FRCK.HasValue)
-				request.WithQueryParameter("FRCK", m3_FRCK.Value.ToString());
-			if (m3_FRRU.HasValue)
-				request.WithQueryParameter("FRRU", m3_FRRU.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TEDL))
+				request.WithQueryParameter("TEDL", m3TEDL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEL1))
+				request.WithQueryParameter("TEL1", m3TEL1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEL2))
+				request.WithQueryParameter("TEL2", m3TEL2.Trim());
+			if (m3RCPY.HasValue)
+				request.WithQueryParameter("RCPY", m3RCPY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DELT.HasValue)
+				request.WithQueryParameter("DELT", m3DELT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ADJR.HasValue)
+				request.WithQueryParameter("ADJR", m3ADJR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ADJS.HasValue)
+				request.WithQueryParameter("ADJS", m3ADJS.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ECDT))
+				request.WithQueryParameter("ECDT", m3ECDT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EXTD))
+				request.WithQueryParameter("EXTD", m3EXTD.Trim());
+			if (m3TXPO.HasValue)
+				request.WithQueryParameter("TXPO", m3TXPO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FRCK.HasValue)
+				request.WithQueryParameter("FRCK", m3FRCK.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FRRU.HasValue)
+				request.WithQueryParameter("FRRU", m3FRRU.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -370,7 +376,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

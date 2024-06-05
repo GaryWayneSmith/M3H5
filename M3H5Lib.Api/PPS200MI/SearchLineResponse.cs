@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Purchase order line subnumber
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line subnumber")]
-		public int? M3_PNLS => GetNullableInt("PNLS");
+		public int? M3PNLS => GetNullableInt("PNLS");
 
 		/// <summary>
 		/// Description: Supplier
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Purchase order item name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order item name")]
-		public string M3_PITD => GetString("PITD");
+		public string M3PITD => GetString("PITD");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Facility
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Order type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Purchase order category
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order category")]
-		public string M3_POTC => GetString("POTC");
+		public string M3POTC => GetString("POTC");
 
 		/// <summary>
 		/// Description: Service process
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service process")]
-		public string M3_PRCS => GetString("PRCS");
+		public string M3PRCS => GetString("PRCS");
 
 		/// <summary>
 		/// Description: Supplier order number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier order number")]
-		public string M3_SORN => GetString("SORN");
+		public string M3SORN => GetString("SORN");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Program name
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

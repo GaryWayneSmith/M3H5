@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,13 +37,13 @@ namespace M3H5Lib.Api
 		/// Description Add Logg Record
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MWNO">Work order number</param>
-		/// <param name="m3_OPNO">Operation number</param>
-		/// <param name="m3_EVTE">Event type</param>
-		/// <param name="m3_TRDT">Transaction date</param>
-		/// <param name="m3_TRTM">Transaction time</param>
-		/// <param name="m3_RSCD">Transaction reason</param>
-		/// <param name="m3_TXT1">Text line 1</param>
+		/// <param name="m3MWNO">Work order number</param>
+		/// <param name="m3OPNO">Operation number</param>
+		/// <param name="m3EVTE">Event type</param>
+		/// <param name="m3TRDT">Transaction date</param>
+		/// <param name="m3TRTM">Transaction time</param>
+		/// <param name="m3RSCD">Transaction reason</param>
+		/// <param name="m3TXT1">Text line 1</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,13 +52,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_MWNO = null, 
-			int? m3_OPNO = null, 
-			string m3_EVTE = null, 
-			DateTime? m3_TRDT = null, 
-			int? m3_TRTM = null, 
-			string m3_RSCD = null, 
-			string m3_TXT1 = null, 
+			string m3MWNO = null, 
+			int? m3OPNO = null, 
+			string m3EVTE = null, 
+			DateTime? m3TRDT = null, 
+			int? m3TRTM = null, 
+			string m3RSCD = null, 
+			string m3TXT1 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -71,20 +73,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MWNO))
-				request.WithQueryParameter("MWNO", m3_MWNO.Trim());
-			if (m3_OPNO.HasValue)
-				request.WithQueryParameter("OPNO", m3_OPNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_EVTE))
-				request.WithQueryParameter("EVTE", m3_EVTE.Trim());
-			if (m3_TRDT.HasValue)
-				request.WithQueryParameter("TRDT", m3_TRDT.Value.ToM3String());
-			if (m3_TRTM.HasValue)
-				request.WithQueryParameter("TRTM", m3_TRTM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RSCD))
-				request.WithQueryParameter("RSCD", m3_RSCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TXT1))
-				request.WithQueryParameter("TXT1", m3_TXT1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MWNO))
+				request.WithQueryParameter("MWNO", m3MWNO.Trim());
+			if (m3OPNO.HasValue)
+				request.WithQueryParameter("OPNO", m3OPNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3EVTE))
+				request.WithQueryParameter("EVTE", m3EVTE.Trim());
+			if (m3TRDT.HasValue)
+				request.WithQueryParameter("TRDT", m3TRDT.Value.ToM3String());
+			if (m3TRTM.HasValue)
+				request.WithQueryParameter("TRTM", m3TRTM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RSCD))
+				request.WithQueryParameter("RSCD", m3RSCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TXT1))
+				request.WithQueryParameter("TXT1", m3TXT1.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -94,7 +96,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

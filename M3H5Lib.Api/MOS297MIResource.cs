@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MOS297MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add Industry Application
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INAP">Industry application (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3INAP">Industry application (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_INAP, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			string m3INAP, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_INAP))
-				throw new ArgumentNullException("m3_INAP");
+			if (string.IsNullOrWhiteSpace(m3INAP))
+				throw new ArgumentNullException(nameof(m3INAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INAP", m3_INAP.Trim());
+				.WithQueryParameter("INAP", m3INAP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,9 +99,9 @@ namespace M3H5Lib.Api
 		/// Description Change Industry Application
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INAP">Industry application (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3INAP">Industry application (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,9 +110,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Chg(
-			string m3_INAP, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			string m3INAP, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -124,18 +127,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_INAP))
-				throw new ArgumentNullException("m3_INAP");
+			if (string.IsNullOrWhiteSpace(m3INAP))
+				throw new ArgumentNullException(nameof(m3INAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INAP", m3_INAP.Trim());
+				.WithQueryParameter("INAP", m3INAP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,8 +160,8 @@ namespace M3H5Lib.Api
 		/// Description Copy Industry Application
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INAP">Industry application (Required)</param>
-		/// <param name="m3_CNAP">Industry application (Required)</param>
+		/// <param name="m3INAP">Industry application (Required)</param>
+		/// <param name="m3CNAP">Industry application (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -166,8 +170,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Cpy(
-			string m3_INAP, 
-			string m3_CNAP, 
+			string m3INAP, 
+			string m3CNAP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -182,15 +186,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_INAP))
-				throw new ArgumentNullException("m3_INAP");
-			if (string.IsNullOrWhiteSpace(m3_CNAP))
-				throw new ArgumentNullException("m3_CNAP");
+			if (string.IsNullOrWhiteSpace(m3INAP))
+				throw new ArgumentNullException(nameof(m3INAP));
+			if (string.IsNullOrWhiteSpace(m3CNAP))
+				throw new ArgumentNullException(nameof(m3CNAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INAP", m3_INAP.Trim())
-				.WithQueryParameter("CNAP", m3_CNAP.Trim());
+				.WithQueryParameter("INAP", m3INAP.Trim())
+				.WithQueryParameter("CNAP", m3CNAP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -200,7 +204,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -211,7 +216,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Industry Application
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INAP">Industry application (Required)</param>
+		/// <param name="m3INAP">Industry application (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -220,7 +225,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Del(
-			string m3_INAP, 
+			string m3INAP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -235,12 +240,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_INAP))
-				throw new ArgumentNullException("m3_INAP");
+			if (string.IsNullOrWhiteSpace(m3INAP))
+				throw new ArgumentNullException(nameof(m3INAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INAP", m3_INAP.Trim());
+				.WithQueryParameter("INAP", m3INAP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -250,7 +255,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -261,7 +267,7 @@ namespace M3H5Lib.Api
 		/// Description Get Industry Application
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INAP">Industry application (Required)</param>
+		/// <param name="m3INAP">Industry application (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -270,7 +276,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_INAP, 
+			string m3INAP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -285,12 +291,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_INAP))
-				throw new ArgumentNullException("m3_INAP");
+			if (string.IsNullOrWhiteSpace(m3INAP))
+				throw new ArgumentNullException(nameof(m3INAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INAP", m3_INAP.Trim());
+				.WithQueryParameter("INAP", m3INAP.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -300,7 +306,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -311,7 +318,7 @@ namespace M3H5Lib.Api
 		/// Description List Industry Application
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INAP">Industry application</param>
+		/// <param name="m3INAP">Industry application</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -320,7 +327,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_INAP = null, 
+			string m3INAP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -335,8 +342,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_INAP))
-				request.WithQueryParameter("INAP", m3_INAP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INAP))
+				request.WithQueryParameter("INAP", m3INAP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -346,7 +353,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

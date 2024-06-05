@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Itemnumber
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Itemnumber")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lotnumber
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lotnumber")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Status-balanceID
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status-balanceID")]
-		public string M3_STAS => GetString("STAS");
+		public string M3STAS => GetString("STAS");
 
 		/// <summary>
 		/// Description: Referenceordercategory
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Referenceordercategory")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Allocatable
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocatable")]
-		public int? M3_ALOC => GetNullableInt("ALOC");
+		public int? M3ALOC => GetNullableInt("ALOC");
 
 		/// <summary>
 		/// Description: Referenceordernumber
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Referenceordernumber")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Lottype
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lottype")]
-		public int? M3_LOTY => GetNullableInt("LOTY");
+		public int? M3LOTY => GetNullableInt("LOTY");
 
 		/// <summary>
 		/// Description: Referenceorderline
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Referenceorderline")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Linesuffix
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Linesuffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Suppliernumber
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliernumber")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Supplier/manufactureritemnumber
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier/manufactureritemnumber")]
-		public string M3_MFIT => GetString("MFIT");
+		public string M3MFIT => GetString("MFIT");
 
 		/// <summary>
 		/// Description: Manufacturerserialnumber
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturerserialnumber")]
-		public string M3_MFSN => GetString("MFSN");
+		public string M3MFSN => GetString("MFSN");
 
 		/// <summary>
 		/// Description: Revisionnumber
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revisionnumber")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Reclassificationdate
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reclassificationdate")]
-		public DateTime? M3_RCLS => GetNullableDateTime("RCLS");
+		public DateTime? M3RCLS => GetNullableDateTime("RCLS");
 
 		/// <summary>
 		/// Description: Qualityinspectionapprovaldate
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Qualityinspectionapprovaldate")]
-		public DateTime? M3_QIAD => GetNullableDateTime("QIAD");
+		public DateTime? M3QIAD => GetNullableDateTime("QIAD");
 
 		/// <summary>
 		/// Description: Expirationdate
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expirationdate")]
-		public DateTime? M3_EXPI => GetNullableDateTime("EXPI");
+		public DateTime? M3EXPI => GetNullableDateTime("EXPI");
 
 		/// <summary>
 		/// Description: Follow-update
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Follow-update")]
-		public DateTime? M3_CNDT => GetNullableDateTime("CNDT");
+		public DateTime? M3CNDT => GetNullableDateTime("CNDT");
 
 		/// <summary>
 		/// Description: Salesdate
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesdate")]
-		public DateTime? M3_SEDT => GetNullableDateTime("SEDT");
+		public DateTime? M3SEDT => GetNullableDateTime("SEDT");
 
 		/// <summary>
 		/// Description: Lotreference1
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lotreference1")]
-		public string M3_BREF => GetString("BREF");
+		public string M3BREF => GetString("BREF");
 
 		/// <summary>
 		/// Description: Lotreference2
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lotreference2")]
-		public string M3_BRE2 => GetString("BRE2");
+		public string M3BRE2 => GetString("BRE2");
 
 		/// <summary>
 		/// Description: On-handbalanceapproved
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("On-handbalanceapproved")]
-		public decimal? M3_STQT => GetNullableDecimal("STQT");
+		public decimal? M3STQT => GetNullableDecimal("STQT");
 
 		/// <summary>
 		/// Description: Allocatedquantity-basicU/M
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocatedquantity-basicU/M")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Allocatableon-handbalance
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocatableon-handbalance")]
-		public decimal? M3_AVAL => GetNullableDecimal("AVAL");
+		public decimal? M3AVAL => GetNullableDecimal("AVAL");
 
 		/// <summary>
 		/// Description: Countryoforigin
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Countryoforigin")]
-		public string M3_ORCO => GetString("ORCO");
+		public string M3ORCO => GetString("ORCO");
 
 		/// <summary>
 		/// Description: Filingaddress
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Filingaddress")]
-		public string M3_ARLA => GetString("ARLA");
+		public string M3ARLA => GetString("ARLA");
 
 		/// <summary>
 		/// Description: Taggingtype
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Taggingtype")]
-		public string M3_IDET => GetString("IDET");
+		public string M3IDET => GetString("IDET");
 
 		/// <summary>
 		/// Description: Owner
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Owner")]
-		public string M3_OWNC => GetString("OWNC");
+		public string M3OWNC => GetString("OWNC");
 
 		/// <summary>
 		/// Description: Lotcost
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lotcost")]
-		public decimal? M3_LOTC => GetNullableDecimal("LOTC");
+		public decimal? M3LOTC => GetNullableDecimal("LOTC");
 
 		/// <summary>
 		/// Description: User-definedfield3-item
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield3-item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-definedfield10-servagreement
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield10-servagreement")]
-		public string M3_CFJ0 => GetString("CFJ0");
+		public string M3CFJ0 => GetString("CFJ0");
 
 		/// <summary>
 		/// Description: User-definedfield2-item
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield2-item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: Lasttransactiondate
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lasttransactiondate")]
-		public DateTime? M3_LATD => GetNullableDateTime("LATD");
+		public DateTime? M3LATD => GetNullableDateTime("LATD");
 
 		/// <summary>
 		/// Description: Manufacturingdate
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturingdate")]
-		public DateTime? M3_MFDT => GetNullableDateTime("MFDT");
+		public DateTime? M3MFDT => GetNullableDateTime("MFDT");
 
 		/// <summary>
 		/// Description: Receiptdate
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiptdate")]
-		public DateTime? M3_REDA => GetNullableDateTime("REDA");
+		public DateTime? M3REDA => GetNullableDateTime("REDA");
 
 		/// <summary>
 		/// Description: LI request rule
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("LI request rule")]
-		public int? M3_LIRR => GetNullableInt("LIRR");
+		public int? M3LIRR => GetNullableInt("LIRR");
 
 		/// <summary>
 		/// Description: Harvested date
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harvested date")]
-		public DateTime? M3_HVDT => GetNullableDateTime("HVDT");
+		public DateTime? M3HVDT => GetNullableDateTime("HVDT");
 
 		/// <summary>
 		/// Description: Best before date
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Best before date")]
-		public DateTime? M3_BBDT => GetNullableDateTime("BBDT");
+		public DateTime? M3BBDT => GetNullableDateTime("BBDT");
 
 		/// <summary>
 		/// Description: Harvested item
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harvested item")]
-		public string M3_HVIT => GetString("HVIT");
+		public string M3HVIT => GetString("HVIT");
 
 		/// <summary>
 		/// Description: Harvested lot
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harvested lot")]
-		public string M3_HVLT => GetString("HVLT");
+		public string M3HVLT => GetString("HVLT");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS235MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 	}
 }
 // EOF

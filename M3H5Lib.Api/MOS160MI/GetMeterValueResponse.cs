@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("MeterValue")]
-		public decimal? M3_MVA0 => GetNullableDecimal("MVA0");
+		public decimal? M3MVA0 => GetNullableDecimal("MVA0");
 
 		/// <summary>
 		/// Description: Unit
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Meter
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Log date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Log date")]
-		public string M3_LOGD => GetString("LOGD");
+		public string M3LOGD => GetString("LOGD");
 
 		/// <summary>
 		/// Description: Log time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Log time")]
-		public string M3_LOGT => GetString("LOGT");
+		public string M3LOGT => GetString("LOGT");
 
 		/// <summary>
 		/// Description: Repl Mtr Val
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Repl Mtr Val")]
-		public decimal? M3_MVAX => GetNullableDecimal("MVAX");
+		public decimal? M3MVAX => GetNullableDecimal("MVAX");
 	}
 }
 // EOF

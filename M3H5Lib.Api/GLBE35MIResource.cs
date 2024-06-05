@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.GLBE35MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Get Year Account Records
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_BJNO">Job Number (Required)</param>
+		/// <param name="m3BJNO">Job Number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetLineResponse></returns>
 		/// <exception cref="M3Exception<GetLineResponse>"></exception>
 		public async Task<M3Response<GetLineResponse>> GetLine(
-			string m3_BJNO, 
+			string m3BJNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BJNO))
-				throw new ArgumentNullException("m3_BJNO");
+			if (string.IsNullOrWhiteSpace(m3BJNO))
+				throw new ArgumentNullException(nameof(m3BJNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BJNO", m3_BJNO.Trim());
+				.WithQueryParameter("BJNO", m3BJNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetLineResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

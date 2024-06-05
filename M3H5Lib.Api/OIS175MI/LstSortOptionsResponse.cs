@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Sorting option
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting option")]
-		public string M3_SOPT => GetString("SOPT");
+		public string M3SOPT => GetString("SOPT");
 
 		/// <summary>
 		/// Description: Key 1 - intranet statistics
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 1 - intranet statistics")]
-		public string M3_KEY1 => GetString("KEY1");
+		public string M3KEY1 => GetString("KEY1");
 
 		/// <summary>
 		/// Description: Key 1 - description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 1 - description")]
-		public string M3_TXK1 => GetString("TXK1");
+		public string M3TXK1 => GetString("TXK1");
 
 		/// <summary>
 		/// Description: Key 2 - intranet statistics
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 2 - intranet statistics")]
-		public string M3_KEY2 => GetString("KEY2");
+		public string M3KEY2 => GetString("KEY2");
 
 		/// <summary>
 		/// Description: Key 2 - description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 2 - description")]
-		public string M3_TXK2 => GetString("TXK2");
+		public string M3TXK2 => GetString("TXK2");
 
 		/// <summary>
 		/// Description: Key 3 - intranet statistics
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 3 - intranet statistics")]
-		public string M3_KEY3 => GetString("KEY3");
+		public string M3KEY3 => GetString("KEY3");
 
 		/// <summary>
 		/// Description: Key 3 - description
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 3 - description")]
-		public string M3_TXK3 => GetString("TXK3");
+		public string M3TXK3 => GetString("TXK3");
 
 		/// <summary>
 		/// Description: Key 4 - intranet statistics
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 4 - intranet statistics")]
-		public string M3_KEY4 => GetString("KEY4");
+		public string M3KEY4 => GetString("KEY4");
 
 		/// <summary>
 		/// Description: Key 4 - description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 4 - description")]
-		public string M3_TXK4 => GetString("TXK4");
+		public string M3TXK4 => GetString("TXK4");
 
 		/// <summary>
 		/// Description: Key 5 - intranet statistics
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 5 - intranet statistics")]
-		public string M3_KEY5 => GetString("KEY5");
+		public string M3KEY5 => GetString("KEY5");
 
 		/// <summary>
 		/// Description: Key 5 - description
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS175MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key 5 - description")]
-		public string M3_TXK5 => GetString("TXK5");
+		public string M3TXK5 => GetString("TXK5");
 	}
 }
 // EOF

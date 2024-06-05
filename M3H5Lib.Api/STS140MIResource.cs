@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS140MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Get toolbox status
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_PONR">Order line number (Required)</param>
-		/// <param name="m3_VERS">Version</param>
-		/// <param name="m3_POSX">Line suffix</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3PONR">Order line number (Required)</param>
+		/// <param name="m3VERS">Version</param>
+		/// <param name="m3POSX">Line suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetToolboxStatResponse></returns>
 		/// <exception cref="M3Exception<GetToolboxStatResponse>"></exception>
 		public async Task<M3Response<GetToolboxStatResponse>> GetToolboxStat(
-			string m3_AGNB, 
-			int m3_PONR, 
-			int? m3_VERS = null, 
-			int? m3_POSX = null, 
+			string m3AGNB, 
+			int m3PONR, 
+			int? m3VERS = null, 
+			int? m3POSX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,19 +68,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("PONR", m3_PONR.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
-			if (m3_POSX.HasValue)
-				request.WithQueryParameter("POSX", m3_POSX.Value.ToString());
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3POSX.HasValue)
+				request.WithQueryParameter("POSX", m3POSX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetToolboxStatResponse>(
@@ -88,7 +90,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -99,7 +102,7 @@ namespace M3H5Lib.Api
 		/// Description Search agreement
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SQRY">Search query (Required)</param>
+		/// <param name="m3SQRY">Search query (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -108,7 +111,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SearchAgreementResponse></returns>
 		/// <exception cref="M3Exception<SearchAgreementResponse>"></exception>
 		public async Task<M3Response<SearchAgreementResponse>> SearchAgreement(
-			string m3_SQRY, 
+			string m3SQRY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -123,12 +126,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SQRY))
-				throw new ArgumentNullException("m3_SQRY");
+			if (string.IsNullOrWhiteSpace(m3SQRY))
+				throw new ArgumentNullException(nameof(m3SQRY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SQRY", m3_SQRY.Trim());
+				.WithQueryParameter("SQRY", m3SQRY.Trim());
 
 			// Execute the request
 			var result = await Execute<SearchAgreementResponse>(
@@ -138,7 +141,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

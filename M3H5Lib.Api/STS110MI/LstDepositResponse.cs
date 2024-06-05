@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Payer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Status - advance invoicing line
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - advance invoicing line")]
-		public string M3_IVST => GetString("IVST");
+		public string M3IVST => GetString("IVST");
 
 		/// <summary>
 		/// Description: Foreign currency code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign currency code")]
-		public string M3_FOCU => GetString("FOCU");
+		public string M3FOCU => GetString("FOCU");
 
 		/// <summary>
 		/// Description: Local currency code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency code")]
-		public string M3_LOCU => GetString("LOCU");
+		public string M3LOCU => GetString("LOCU");
 
 		/// <summary>
 		/// Description: Deposit Amount
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deposit Amount")]
-		public decimal? M3_DEPA => GetNullableDecimal("DEPA");
+		public decimal? M3DEPA => GetNullableDecimal("DEPA");
 
 		/// <summary>
 		/// Description: Year
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Invoice Prefix
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Version
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_VERS => GetNullableInt("VERS");
+		public int? M3VERS => GetNullableInt("VERS");
 	}
 }
 // EOF

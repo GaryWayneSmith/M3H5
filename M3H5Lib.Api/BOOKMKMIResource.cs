@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.BOOKMKMI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Get bookmark parameters by information browse category
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_IBCA">Information browser category (Required)</param>
+		/// <param name="m3IBCA">Information browser category (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetParByInfoCatResponse></returns>
 		/// <exception cref="M3Exception<GetParByInfoCatResponse>"></exception>
 		public async Task<M3Response<GetParByInfoCatResponse>> GetParByInfoCat(
-			string m3_IBCA, 
+			string m3IBCA, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_IBCA))
-				throw new ArgumentNullException("m3_IBCA");
+			if (string.IsNullOrWhiteSpace(m3IBCA))
+				throw new ArgumentNullException(nameof(m3IBCA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("IBCA", m3_IBCA.Trim());
+				.WithQueryParameter("IBCA", m3IBCA.Trim());
 
 			// Execute the request
 			var result = await Execute<GetParByInfoCatResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// Description Get bookmark parameters by program
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PGNM">Program name (Required)</param>
-		/// <param name="m3_FILE">Table</param>
+		/// <param name="m3PGNM">Program name (Required)</param>
+		/// <param name="m3FILE">Table</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetParByPgmResponse></returns>
 		/// <exception cref="M3Exception<GetParByPgmResponse>"></exception>
 		public async Task<M3Response<GetParByPgmResponse>> GetParByPgm(
-			string m3_PGNM, 
-			string m3_FILE = null, 
+			string m3PGNM, 
+			string m3FILE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -112,16 +115,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<GetParByPgmResponse>(
@@ -131,7 +134,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -142,7 +146,7 @@ namespace M3H5Lib.Api
 		/// Description Get bookmark parameters by table
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_FILE">Table (Required)</param>
+		/// <param name="m3FILE">Table (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -151,7 +155,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetParByTableResponse></returns>
 		/// <exception cref="M3Exception<GetParByTableResponse>"></exception>
 		public async Task<M3Response<GetParByTableResponse>> GetParByTable(
-			string m3_FILE, 
+			string m3FILE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -166,12 +170,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<GetParByTableResponse>(
@@ -181,7 +185,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -192,7 +197,7 @@ namespace M3H5Lib.Api
 		/// Description List extra bookmark parameters
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_PGNM">Program name (Required)</param>
+		/// <param name="m3PGNM">Program name (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -201,7 +206,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstExtraParamsResponse></returns>
 		/// <exception cref="M3Exception<LstExtraParamsResponse>"></exception>
 		public async Task<M3Response<LstExtraParamsResponse>> LstExtraParams(
-			string m3_PGNM, 
+			string m3PGNM, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -216,12 +221,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim());
 
 			// Execute the request
 			var result = await Execute<LstExtraParamsResponse>(
@@ -231,7 +236,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

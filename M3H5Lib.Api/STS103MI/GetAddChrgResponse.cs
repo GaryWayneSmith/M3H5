@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Version
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_VERS => GetNullableInt("VERS");
+		public int? M3VERS => GetNullableInt("VERS");
 
 		/// <summary>
 		/// Description: Line number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Record type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record type")]
-		public string M3_RTYP => GetString("RTYP");
+		public string M3RTYP => GetString("RTYP");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Material usage
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material usage")]
-		public decimal? M3_COQT => GetNullableDecimal("COQT");
+		public decimal? M3COQT => GetNullableDecimal("COQT");
 
 		/// <summary>
 		/// Description: Material usage
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material usage")]
-		public decimal? M3_CIQT => GetNullableDecimal("CIQT");
+		public decimal? M3CIQT => GetNullableDecimal("CIQT");
 
 		/// <summary>
 		/// Description: Days per week
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days per week")]
-		public int? M3_ADPW => GetNullableInt("ADPW");
+		public int? M3ADPW => GetNullableInt("ADPW");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Contract item
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contract item")]
-		public string M3_AGRS => GetString("AGRS");
+		public string M3AGRS => GetString("AGRS");
 
 		/// <summary>
 		/// Description: Name
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Charge
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public decimal? M3_CHRG => GetNullableDecimal("CHRG");
+		public decimal? M3CHRG => GetNullableDecimal("CHRG");
 
 		/// <summary>
 		/// Description: Valid from
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Invoiced to date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced to date")]
-		public DateTime? M3_ITDT => GetNullableDateTime("ITDT");
+		public DateTime? M3ITDT => GetNullableDateTime("ITDT");
 
 		/// <summary>
 		/// Description: Payer
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Status - agreement line
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - agreement line")]
-		public string M3_ASTH => GetString("ASTH");
+		public string M3ASTH => GetString("ASTH");
 
 		/// <summary>
 		/// Description: Invoice Prefix
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.STS103MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 	}
 }
 // EOF

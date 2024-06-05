@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental price list table")]
-		public string M3_RPLT => GetString("RPLT");
+		public string M3RPLT => GetString("RPLT");
 
 		/// <summary>
 		/// Description: Rental discount model
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental discount model")]
-		public string M3_RDIS => GetString("RDIS");
+		public string M3RDIS => GetString("RDIS");
 
 		/// <summary>
 		/// Description: Rental payment terms
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental payment terms")]
-		public string M3_RTEP => GetString("RTEP");
+		public string M3RTEP => GetString("RTEP");
 
 		/// <summary>
 		/// Description: Rental salesperson
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental salesperson")]
-		public string M3_RSMC => GetString("RSMC");
+		public string M3RSMC => GetString("RSMC");
 
 		/// <summary>
 		/// Description: Agreement order type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order type")]
-		public string M3_AOTP => GetString("AOTP");
+		public string M3AOTP => GetString("AOTP");
 
 		/// <summary>
 		/// Description: Rental rate type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental rate type")]
-		public string M3_ST75 => GetString("ST75");
+		public string M3ST75 => GetString("ST75");
 
 		/// <summary>
 		/// Description: Number of shifts
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of shifts")]
-		public int? M3_ST76 => GetNullableInt("ST76");
+		public int? M3ST76 => GetNullableInt("ST76");
 
 		/// <summary>
 		/// Description: Number of days per week
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of days per week")]
-		public int? M3_ST77 => GetNullableInt("ST77");
+		public int? M3ST77 => GetNullableInt("ST77");
 
 		/// <summary>
 		/// Description: Minimum days/week to invoice a week
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum days/week to invoice a week")]
-		public int? M3_ST78 => GetNullableInt("ST78");
+		public int? M3ST78 => GetNullableInt("ST78");
 
 		/// <summary>
 		/// Description: Rate factor
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rate factor")]
-		public int? M3_RAFA => GetNullableInt("RAFA");
+		public int? M3RAFA => GetNullableInt("RAFA");
 
 		/// <summary>
 		/// Description: Minimum rental type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum rental type")]
-		public int? M3_MRTP => GetNullableInt("MRTP");
+		public int? M3MRTP => GetNullableInt("MRTP");
 
 		/// <summary>
 		/// Description: Min rental amount
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Min rental amount")]
-		public decimal? M3_MINV => GetNullableDecimal("MINV");
+		public decimal? M3MINV => GetNullableDecimal("MINV");
 
 		/// <summary>
 		/// Description: Min rental period
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Min rental period")]
-		public int? M3_MIHP => GetNullableInt("MIHP");
+		public int? M3MIHP => GetNullableInt("MIHP");
 
 		/// <summary>
 		/// Description: Return year - open agreement
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return year - open agreement")]
-		public int? M3_RTYR => GetNullableInt("RTYR");
+		public int? M3RTYR => GetNullableInt("RTYR");
 
 		/// <summary>
 		/// Description: Return month - open agreement
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return month - open agreement")]
-		public int? M3_RTMO => GetNullableInt("RTMO");
+		public int? M3RTMO => GetNullableInt("RTMO");
 
 		/// <summary>
 		/// Description: Invoice interval - years
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice interval - years")]
-		public int? M3_IIYR => GetNullableInt("IIYR");
+		public int? M3IIYR => GetNullableInt("IIYR");
 
 		/// <summary>
 		/// Description: Invoice interval - months
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice interval - months")]
-		public int? M3_IIMO => GetNullableInt("IIMO");
+		public int? M3IIMO => GetNullableInt("IIMO");
 
 		/// <summary>
 		/// Description: Invoice intervall days
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice intervall days")]
-		public int? M3_IIDA => GetNullableInt("IIDA");
+		public int? M3IIDA => GetNullableInt("IIDA");
 
 		/// <summary>
 		/// Description: Rental depot
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental depot")]
-		public string M3_DPOT => GetString("DPOT");
+		public string M3DPOT => GetString("DPOT");
 	}
 }
 // EOF

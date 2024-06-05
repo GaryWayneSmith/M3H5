@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Purchase order line subnumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line subnumber")]
-		public int? M3_PNLS => GetNullableInt("PNLS");
+		public int? M3PNLS => GetNullableInt("PNLS");
 
 		/// <summary>
 		/// Description: Configuration number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration number")]
-		public long? M3_CFIN => GetNullableLong("CFIN");
+		public long? M3CFIN => GetNullableLong("CFIN");
 
 		/// <summary>
 		/// Description: Kit control
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kit control")]
-		public int? M3_FSCD => GetNullableInt("FSCD");
+		public int? M3FSCD => GetNullableInt("FSCD");
 
 		/// <summary>
 		/// Description: Date type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date type")]
-		public int? M3_DT4T => GetNullableInt("DT4T");
+		public int? M3DT4T => GetNullableInt("DT4T");
 
 		/// <summary>
 		/// Description: Planning date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Pricing method
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricing method")]
-		public int? M3_PSET => GetNullableInt("PSET");
+		public int? M3PSET => GetNullableInt("PSET");
 
 		/// <summary>
 		/// Description: Reservation level
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reservation level")]
-		public int? M3_SRCD => GetNullableInt("SRCD");
+		public int? M3SRCD => GetNullableInt("SRCD");
 
 		/// <summary>
 		/// Description: Flagged as completed
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Flagged as completed")]
-		public int? M3_OEND => GetNullableInt("OEND");
+		public int? M3OEND => GetNullableInt("OEND");
 
 		/// <summary>
 		/// Description: Internal charge
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal charge")]
-		public decimal? M3_INEP => GetNullableDecimal("INEP");
+		public decimal? M3INEP => GetNullableDecimal("INEP");
 
 		/// <summary>
 		/// Description: External charge
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External charge")]
-		public decimal? M3_EXEP => GetNullableDecimal("EXEP");
+		public decimal? M3EXEP => GetNullableDecimal("EXEP");
 
 		/// <summary>
 		/// Description: Completed flag GT Nexus
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Completed flag GT Nexus")]
-		public int? M3_GTNF => GetNullableInt("GTNF");
+		public int? M3GTNF => GetNullableInt("GTNF");
 
 		/// <summary>
 		/// Description: Geographical code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographical code")]
-		public int? M3_GEOC => GetNullableInt("GEOC");
+		public int? M3GEOC => GetNullableInt("GEOC");
 	}
 }
 // EOF

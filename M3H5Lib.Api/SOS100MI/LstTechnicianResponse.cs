@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: User
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Employee number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_EMNM => GetString("EMNM");
+		public string M3EMNM => GetString("EMNM");
 
 		/// <summary>
 		/// Description: Short name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Short name")]
-		public string M3_TNL2 => GetString("TNL2");
+		public string M3TNL2 => GetString("TNL2");
 
 		/// <summary>
 		/// Description: Technician
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician")]
-		public string M3_TECH => GetString("TECH");
+		public string M3TECH => GetString("TECH");
 
 		/// <summary>
 		/// Description: Work schedule
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule")]
-		public int? M3_WOSC => GetNullableInt("WOSC");
+		public int? M3WOSC => GetNullableInt("WOSC");
 
 		/// <summary>
 		/// Description: Facility
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Department
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Department")]
-		public string M3_DEPT => GetString("DEPT");
+		public string M3DEPT => GetString("DEPT");
 
 		/// <summary>
 		/// Description: Planning area
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning area")]
-		public string M3_REAR => GetString("REAR");
+		public string M3REAR => GetString("REAR");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Service manager
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Hourly price
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly price")]
-		public decimal? M3_SPHO => GetNullableDecimal("SPHO");
+		public decimal? M3SPHO => GetNullableDecimal("SPHO");
 
 		/// <summary>
 		/// Description: Name
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Cost center
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost center")]
-		public string M3_TACC => GetString("TACC");
+		public string M3TACC => GetString("TACC");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Internal telephone number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal telephone number")]
-		public string M3_IPHN => GetString("IPHN");
+		public string M3IPHN => GetString("IPHN");
 
 		/// <summary>
 		/// Description: Cellular telephone number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cellular telephone number")]
-		public string M3_CAPH => GetString("CAPH");
+		public string M3CAPH => GetString("CAPH");
 
 		/// <summary>
 		/// Description: PIN code
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PIN code")]
-		public string M3_PNCO => GetString("PNCO");
+		public string M3PNCO => GetString("PNCO");
 
 		/// <summary>
 		/// Description: Location
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Application message recipient
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application message recipient")]
-		public int? M3_RECM => GetNullableInt("RECM");
+		public int? M3RECM => GetNullableInt("RECM");
 
 		/// <summary>
 		/// Description: Electronic mail address
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Electronic mail address")]
-		public string M3_EMAL => GetString("EMAL");
+		public string M3EMAL => GetString("EMAL");
 
 		/// <summary>
 		/// Description: Work schedule from date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule from date")]
-		public DateTime? M3_WODT => GetNullableDateTime("WODT");
+		public DateTime? M3WODT => GetNullableDateTime("WODT");
 
 		/// <summary>
 		/// Description: Start week - schedule
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start week - schedule")]
-		public int? M3_SWSC => GetNullableInt("SWSC");
+		public int? M3SWSC => GetNullableInt("SWSC");
 	}
 }
 // EOF

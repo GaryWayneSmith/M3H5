@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Parts return number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parts return number")]
-		public string M3_PRAN => GetString("PRAN");
+		public string M3PRAN => GetString("PRAN");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Return type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return type")]
-		public string M3_RETT => GetString("RETT");
+		public string M3RETT => GetString("RETT");
 
 		/// <summary>
 		/// Description: Package number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Delivered quantity - basic U/M
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity - basic U/M")]
-		public decimal? M3_DLQT => GetNullableDecimal("DLQT");
+		public decimal? M3DLQT => GetNullableDecimal("DLQT");
 
 		/// <summary>
 		/// Description: Volume
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Net weight
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 	}
 }
 // EOF

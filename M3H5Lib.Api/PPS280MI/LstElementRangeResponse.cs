@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Purchase costing element
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase costing element")]
-		public string M3_CEID => GetString("CEID");
+		public string M3CEID => GetString("CEID");
 
 		/// <summary>
 		/// Description: Text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: End value 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End value 1")]
-		public string M3_OBT1 => GetString("OBT1");
+		public string M3OBT1 => GetString("OBT1");
 
 		/// <summary>
 		/// Description: End value 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End value 2")]
-		public string M3_OBT2 => GetString("OBT2");
+		public string M3OBT2 => GetString("OBT2");
 
 		/// <summary>
 		/// Description: End value 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End value 3")]
-		public string M3_OBT3 => GetString("OBT3");
+		public string M3OBT3 => GetString("OBT3");
 
 		/// <summary>
 		/// Description: Costing operator
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing operator")]
-		public string M3_WSOP => GetString("WSOP");
+		public string M3WSOP => GetString("WSOP");
 
 		/// <summary>
 		/// Description: Markup
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Markup")]
-		public int? M3_POOV => GetNullableInt("POOV");
+		public int? M3POOV => GetNullableInt("POOV");
 
 		/// <summary>
 		/// Description: Charge type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge type")]
-		public int? M3_EXTY => GetNullableInt("EXTY");
+		public int? M3EXTY => GetNullableInt("EXTY");
 
 		/// <summary>
 		/// Description: Distribution method
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution method")]
-		public int? M3_DIMT => GetNullableInt("DIMT");
+		public int? M3DIMT => GetNullableInt("DIMT");
 
 		/// <summary>
 		/// Description: Distribution unit type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution unit type")]
-		public int? M3_DIUN => GetNullableInt("DIUN");
+		public int? M3DIUN => GetNullableInt("DIUN");
 
 		/// <summary>
 		/// Description: Charge invoicing
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge invoicing")]
-		public int? M3_EXIC => GetNullableInt("EXIC");
+		public int? M3EXIC => GetNullableInt("EXIC");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: VAT code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI1 => GetString("ATI1");
+		public string M3ATI1 => GetString("ATI1");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI2 => GetString("ATI2");
+		public string M3ATI2 => GetString("ATI2");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI3 => GetString("ATI3");
+		public string M3ATI3 => GetString("ATI3");
 
 		/// <summary>
 		/// Description: Value in range
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value in range")]
-		public int? M3_MRF1 => GetNullableInt("MRF1");
+		public int? M3MRF1 => GetNullableInt("MRF1");
 
 		/// <summary>
 		/// Description: Value in range
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value in range")]
-		public int? M3_MRF2 => GetNullableInt("MRF2");
+		public int? M3MRF2 => GetNullableInt("MRF2");
 
 		/// <summary>
 		/// Description: Value in range
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value in range")]
-		public int? M3_MRF3 => GetNullableInt("MRF3");
+		public int? M3MRF3 => GetNullableInt("MRF3");
 
 		/// <summary>
 		/// Description: Invoice charge quantity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice charge quantity")]
-		public int? M3_IVCQ => GetNullableInt("IVCQ");
+		public int? M3IVCQ => GetNullableInt("IVCQ");
 
 		/// <summary>
 		/// Description: Third part charge
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third part charge")]
-		public int? M3_THPR => GetNullableInt("THPR");
+		public int? M3THPR => GetNullableInt("THPR");
 
 		/// <summary>
 		/// Description: Hide element value
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hide element value")]
-		public int? M3_HELV => GetNullableInt("HELV");
+		public int? M3HELV => GetNullableInt("HELV");
 
 		/// <summary>
 		/// Description: Text identity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: End value 4
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End value 4")]
-		public string M3_OBT4 => GetString("OBT4");
+		public string M3OBT4 => GetString("OBT4");
 
 		/// <summary>
 		/// Description: End value 5
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End value 5")]
-		public string M3_OBT5 => GetString("OBT5");
+		public string M3OBT5 => GetString("OBT5");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI4 => GetString("ATI4");
+		public string M3ATI4 => GetString("ATI4");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI5 => GetString("ATI5");
+		public string M3ATI5 => GetString("ATI5");
 
 		/// <summary>
 		/// Description: Charge categori
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge categori")]
-		public int? M3_CTY2 => GetNullableInt("CTY2");
+		public int? M3CTY2 => GetNullableInt("CTY2");
 	}
 }
 // EOF

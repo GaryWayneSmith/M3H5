@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Error code 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error code 1")]
-		public string M3_FCLA => GetString("FCLA");
+		public string M3FCLA => GetString("FCLA");
 
 		/// <summary>
 		/// Description: Start date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Start time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public int? M3_STTI => GetNullableInt("STTI");
+		public int? M3STTI => GetNullableInt("STTI");
 
 		/// <summary>
 		/// Description: Remark
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Interface status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface status")]
-		public string M3_STAI => GetString("STAI");
+		public string M3STAI => GetString("STAI");
 
 		/// <summary>
 		/// Description: Text identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Partner
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Message type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message type")]
-		public string M3_E065 => GetString("E065");
+		public string M3E065 => GetString("E065");
 
 		/// <summary>
 		/// Description: Error code 2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error code 2")]
-		public string M3_FCL2 => GetString("FCL2");
+		public string M3FCL2 => GetString("FCL2");
 
 		/// <summary>
 		/// Description: Error code 3
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error code 3")]
-		public string M3_FCL3 => GetString("FCL3");
+		public string M3FCL3 => GetString("FCL3");
 
 		/// <summary>
 		/// Description: Number of verified failures
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of verified failures")]
-		public decimal? M3_CNFA => GetNullableDecimal("CNFA");
+		public decimal? M3CNFA => GetNullableDecimal("CNFA");
 
 		/// <summary>
 		/// Description: User-defined field 1 - item
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: New field description
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New field description")]
-		public string M3_CFI6 => GetString("CFI6");
+		public string M3CFI6 => GetString("CFI6");
 
 		/// <summary>
 		/// Description: New field description
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New field description")]
-		public decimal? M3_CFI7 => GetNullableDecimal("CFI7");
+		public decimal? M3CFI7 => GetNullableDecimal("CFI7");
 
 		/// <summary>
 		/// Description: New field description
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New field description")]
-		public string M3_CFI8 => GetString("CFI8");
+		public string M3CFI8 => GetString("CFI8");
 
 		/// <summary>
 		/// Description: New field description
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New field description")]
-		public string M3_CFI9 => GetString("CFI9");
+		public string M3CFI9 => GetString("CFI9");
 
 		/// <summary>
 		/// Description: New field description
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New field description")]
-		public string M3_CFI0 => GetString("CFI0");
+		public string M3CFI0 => GetString("CFI0");
 
 		/// <summary>
 		/// Description: Item number SMCS
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number SMCS")]
-		public string M3_ITNS => GetString("ITNS");
+		public string M3ITNS => GetString("ITNS");
 
 		/// <summary>
 		/// Description: OEM code
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC0 => GetString("SMC0");
+		public string M3SMC0 => GetString("SMC0");
 
 		/// <summary>
 		/// Description: OEM code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC1 => GetString("SMC1");
+		public string M3SMC1 => GetString("SMC1");
 
 		/// <summary>
 		/// Description: OEM code
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC2 => GetString("SMC2");
+		public string M3SMC2 => GetString("SMC2");
 
 		/// <summary>
 		/// Description: OEM code
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC3 => GetString("SMC3");
+		public string M3SMC3 => GetString("SMC3");
 
 		/// <summary>
 		/// Description: OEM code
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC4 => GetString("SMC4");
+		public string M3SMC4 => GetString("SMC4");
 
 		/// <summary>
 		/// Description: OEM code
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC5 => GetString("SMC5");
+		public string M3SMC5 => GetString("SMC5");
 
 		/// <summary>
 		/// Description: OEM code
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC6 => GetString("SMC6");
+		public string M3SMC6 => GetString("SMC6");
 
 		/// <summary>
 		/// Description: OEM code
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC7 => GetString("SMC7");
+		public string M3SMC7 => GetString("SMC7");
 
 		/// <summary>
 		/// Description: OEM code
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC8 => GetString("SMC8");
+		public string M3SMC8 => GetString("SMC8");
 
 		/// <summary>
 		/// Description: OEM code
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM code")]
-		public string M3_SMC9 => GetString("SMC9");
+		public string M3SMC9 => GetString("SMC9");
 
 		/// <summary>
 		/// Description: Planned order
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned order")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Description
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Criticality class
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Criticality class")]
-		public int? M3_AESC => GetNullableInt("AESC");
+		public int? M3AESC => GetNullableInt("AESC");
 
 		/// <summary>
 		/// Description: Language
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Since new
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Since new")]
-		public decimal? M3_MVA0 => GetNullableDecimal("MVA0");
+		public decimal? M3MVA0 => GetNullableDecimal("MVA0");
 
 		/// <summary>
 		/// Description: Meter
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 	}
 }
 // EOF

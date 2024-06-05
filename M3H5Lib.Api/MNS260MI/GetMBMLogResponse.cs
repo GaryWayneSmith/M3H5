@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS260MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("MBM Initiator Name")]
-		public string M3_BMIN => GetString("BMIN");
+		public string M3BMIN => GetString("BMIN");
 
 		/// <summary>
 		/// Description: MBM identifier
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS260MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("MBM identifier")]
-		public string M3_MBMI => GetString("MBMI");
+		public string M3MBMI => GetString("MBMI");
 
 		/// <summary>
 		/// Description: Record number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS260MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record number")]
-		public int? M3_RNBR => GetNullableInt("RNBR");
+		public int? M3RNBR => GetNullableInt("RNBR");
 
 		/// <summary>
 		/// Description: Data
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS260MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data")]
-		public string M3_DATA => GetString("DATA");
+		public string M3DATA => GetString("DATA");
 
 		/// <summary>
 		/// Description: Entry date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS260MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS260MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Responsible
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS260MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 	}
 }
 // EOF

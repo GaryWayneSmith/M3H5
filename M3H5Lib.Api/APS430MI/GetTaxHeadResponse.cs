@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Job number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JBNO => GetNullableInt("JBNO");
+		public int? M3JBNO => GetNullableInt("JBNO");
 
 		/// <summary>
 		/// Description: Job date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public DateTime? M3_JBDT => GetNullableDateTime("JBDT");
+		public DateTime? M3JBDT => GetNullableDateTime("JBDT");
 
 		/// <summary>
 		/// Description: Job time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_JBTM => GetNullableInt("JBTM");
+		public int? M3JBTM => GetNullableInt("JBTM");
 
 		/// <summary>
 		/// Description: Tax ID number for supplier
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax ID number for supplier")]
-		public int? M3_TIDN => GetNullableInt("TIDN");
+		public int? M3TIDN => GetNullableInt("TIDN");
 
 		/// <summary>
 		/// Description: Company name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Company address 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 1")]
-		public string M3_COA1 => GetString("COA1");
+		public string M3COA1 => GetString("COA1");
 
 		/// <summary>
 		/// Description: Company address 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 2")]
-		public string M3_COA2 => GetString("COA2");
+		public string M3COA2 => GetString("COA2");
 
 		/// <summary>
 		/// Description: Company address 3
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 3")]
-		public string M3_COA3 => GetString("COA3");
+		public string M3COA3 => GetString("COA3");
 
 		/// <summary>
 		/// Description: Company address 4
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 4")]
-		public string M3_COA4 => GetString("COA4");
+		public string M3COA4 => GetString("COA4");
 
 		/// <summary>
 		/// Description: Postal code
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: To date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 
 		/// <summary>
 		/// Description: Company city
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company city")]
-		public string M3_COCI => GetString("COCI");
+		public string M3COCI => GetString("COCI");
 
 		/// <summary>
 		/// Description: Company state
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company state")]
-		public string M3_COSE => GetString("COSE");
+		public string M3COSE => GetString("COSE");
 
 		/// <summary>
 		/// Description: Our reference
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Our reference")]
-		public string M3_OREF => GetString("OREF");
+		public string M3OREF => GetString("OREF");
 
 		/// <summary>
 		/// Description: Magnetic file indicator
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Magnetic file indicator")]
-		public int? M3_MFIN => GetNullableInt("MFIN");
+		public int? M3MFIN => GetNullableInt("MFIN");
 
 		/// <summary>
 		/// Description: Year
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Amount codes
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount codes")]
-		public string M3_AMCD => GetString("AMCD");
+		public string M3AMCD => GetString("AMCD");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Transmitter control code
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transmitter control code")]
-		public int? M3_TRCC => GetNullableInt("TRCC");
+		public int? M3TRCC => GetNullableInt("TRCC");
 	}
 }
 // EOF

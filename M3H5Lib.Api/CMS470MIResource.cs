@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS470MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,15 +38,15 @@ namespace M3H5Lib.Api
 		/// Description Add custom field
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMF">Custom field (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_FLDM">Field type (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_CFML">Heading - custom field</param>
-		/// <param name="m3_FLDB">Field length</param>
-		/// <param name="m3_DCCD">Number of decimal places</param>
-		/// <param name="m3_MES0">Meter</param>
-		/// <param name="m3_FLCT">Field category</param>
+		/// <param name="m3CFMF">Custom field (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3FLDM">Field type (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3CFML">Heading - custom field</param>
+		/// <param name="m3FLDB">Field length</param>
+		/// <param name="m3DCCD">Number of decimal places</param>
+		/// <param name="m3MES0">Meter</param>
+		/// <param name="m3FLCT">Field category</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -53,15 +55,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCustomField(
-			string m3_CFMF, 
-			string m3_TX40, 
-			string m3_FLDM, 
-			string m3_TX15 = null, 
-			string m3_CFML = null, 
-			int? m3_FLDB = null, 
-			int? m3_DCCD = null, 
-			string m3_MES0 = null, 
-			int? m3_FLCT = null, 
+			string m3CFMF, 
+			string m3TX40, 
+			string m3FLDM, 
+			string m3TX15 = null, 
+			string m3CFML = null, 
+			int? m3FLDB = null, 
+			int? m3DCCD = null, 
+			string m3MES0 = null, 
+			int? m3FLCT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -76,32 +78,32 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMF))
-				throw new ArgumentNullException("m3_CFMF");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_FLDM))
-				throw new ArgumentNullException("m3_FLDM");
+			if (string.IsNullOrWhiteSpace(m3CFMF))
+				throw new ArgumentNullException(nameof(m3CFMF));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3FLDM))
+				throw new ArgumentNullException(nameof(m3FLDM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMF", m3_CFMF.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("FLDM", m3_FLDM.Trim());
+				.WithQueryParameter("CFMF", m3CFMF.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("FLDM", m3FLDM.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFML))
-				request.WithQueryParameter("CFML", m3_CFML.Trim());
-			if (m3_FLDB.HasValue)
-				request.WithQueryParameter("FLDB", m3_FLDB.Value.ToString());
-			if (m3_DCCD.HasValue)
-				request.WithQueryParameter("DCCD", m3_DCCD.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MES0))
-				request.WithQueryParameter("MES0", m3_MES0.Trim());
-			if (m3_FLCT.HasValue)
-				request.WithQueryParameter("FLCT", m3_FLCT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFML))
+				request.WithQueryParameter("CFML", m3CFML.Trim());
+			if (m3FLDB.HasValue)
+				request.WithQueryParameter("FLDB", m3FLDB.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DCCD.HasValue)
+				request.WithQueryParameter("DCCD", m3DCCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MES0))
+				request.WithQueryParameter("MES0", m3MES0.Trim());
+			if (m3FLCT.HasValue)
+				request.WithQueryParameter("FLCT", m3FLCT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -111,7 +113,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -122,7 +125,7 @@ namespace M3H5Lib.Api
 		/// Description Delete custom field
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMF">Custom field (Required)</param>
+		/// <param name="m3CFMF">Custom field (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -131,7 +134,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltCustomField(
-			string m3_CFMF, 
+			string m3CFMF, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -146,12 +149,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMF))
-				throw new ArgumentNullException("m3_CFMF");
+			if (string.IsNullOrWhiteSpace(m3CFMF))
+				throw new ArgumentNullException(nameof(m3CFMF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMF", m3_CFMF.Trim());
+				.WithQueryParameter("CFMF", m3CFMF.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -161,7 +164,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -172,7 +176,7 @@ namespace M3H5Lib.Api
 		/// Description Get custom field
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMF">Custom field (Required)</param>
+		/// <param name="m3CFMF">Custom field (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -181,7 +185,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCustomFieldResponse></returns>
 		/// <exception cref="M3Exception<GetCustomFieldResponse>"></exception>
 		public async Task<M3Response<GetCustomFieldResponse>> GetCustomField(
-			string m3_CFMF, 
+			string m3CFMF, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -196,12 +200,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMF))
-				throw new ArgumentNullException("m3_CFMF");
+			if (string.IsNullOrWhiteSpace(m3CFMF))
+				throw new ArgumentNullException(nameof(m3CFMF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMF", m3_CFMF.Trim());
+				.WithQueryParameter("CFMF", m3CFMF.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCustomFieldResponse>(
@@ -211,7 +215,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -222,7 +227,7 @@ namespace M3H5Lib.Api
 		/// Description List custom field
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMF">Custom field</param>
+		/// <param name="m3CFMF">Custom field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -231,7 +236,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCustomFieldResponse></returns>
 		/// <exception cref="M3Exception<LstCustomFieldResponse>"></exception>
 		public async Task<M3Response<LstCustomFieldResponse>> LstCustomField(
-			string m3_CFMF = null, 
+			string m3CFMF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -246,8 +251,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CFMF))
-				request.WithQueryParameter("CFMF", m3_CFMF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFMF))
+				request.WithQueryParameter("CFMF", m3CFMF.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCustomFieldResponse>(
@@ -257,7 +262,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -268,15 +274,15 @@ namespace M3H5Lib.Api
 		/// Description Update custom field
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMF">Custom field (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_CFML">Heading - custom field</param>
-		/// <param name="m3_FLDM">Field type</param>
-		/// <param name="m3_FLDB">Field length</param>
-		/// <param name="m3_DCCD">Number of decimal places</param>
-		/// <param name="m3_MES0">Meter</param>
-		/// <param name="m3_FLCT">Field category</param>
+		/// <param name="m3CFMF">Custom field (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3CFML">Heading - custom field</param>
+		/// <param name="m3FLDM">Field type</param>
+		/// <param name="m3FLDB">Field length</param>
+		/// <param name="m3DCCD">Number of decimal places</param>
+		/// <param name="m3MES0">Meter</param>
+		/// <param name="m3FLCT">Field category</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -285,15 +291,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdCustomField(
-			string m3_CFMF, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_CFML = null, 
-			string m3_FLDM = null, 
-			int? m3_FLDB = null, 
-			int? m3_DCCD = null, 
-			string m3_MES0 = null, 
-			int? m3_FLCT = null, 
+			string m3CFMF, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3CFML = null, 
+			string m3FLDM = null, 
+			int? m3FLDB = null, 
+			int? m3DCCD = null, 
+			string m3MES0 = null, 
+			int? m3FLCT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -308,30 +314,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMF))
-				throw new ArgumentNullException("m3_CFMF");
+			if (string.IsNullOrWhiteSpace(m3CFMF))
+				throw new ArgumentNullException(nameof(m3CFMF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMF", m3_CFMF.Trim());
+				.WithQueryParameter("CFMF", m3CFMF.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFML))
-				request.WithQueryParameter("CFML", m3_CFML.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDM))
-				request.WithQueryParameter("FLDM", m3_FLDM.Trim());
-			if (m3_FLDB.HasValue)
-				request.WithQueryParameter("FLDB", m3_FLDB.Value.ToString());
-			if (m3_DCCD.HasValue)
-				request.WithQueryParameter("DCCD", m3_DCCD.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MES0))
-				request.WithQueryParameter("MES0", m3_MES0.Trim());
-			if (m3_FLCT.HasValue)
-				request.WithQueryParameter("FLCT", m3_FLCT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFML))
+				request.WithQueryParameter("CFML", m3CFML.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDM))
+				request.WithQueryParameter("FLDM", m3FLDM.Trim());
+			if (m3FLDB.HasValue)
+				request.WithQueryParameter("FLDB", m3FLDB.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DCCD.HasValue)
+				request.WithQueryParameter("DCCD", m3DCCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MES0))
+				request.WithQueryParameter("MES0", m3MES0.Trim());
+			if (m3FLCT.HasValue)
+				request.WithQueryParameter("FLCT", m3FLCT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -341,7 +347,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

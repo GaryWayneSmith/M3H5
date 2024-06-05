@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.TXS140MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Get header information
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_VRUN">VAT run (Required)</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3VRUN">VAT run (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetHeadInfoResponse></returns>
 		/// <exception cref="M3Exception<GetHeadInfoResponse>"></exception>
 		public async Task<M3Response<GetHeadInfoResponse>> GetHeadInfo(
-			int m3_CONO, 
-			string m3_DIVI, 
-			string m3_VRUN, 
+			int m3CONO, 
+			string m3DIVI, 
+			string m3VRUN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,16 +66,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_VRUN))
-				throw new ArgumentNullException("m3_VRUN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3VRUN))
+				throw new ArgumentNullException(nameof(m3VRUN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("VRUN", m3_VRUN.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("VRUN", m3VRUN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetHeadInfoResponse>(
@@ -83,7 +85,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -94,9 +97,9 @@ namespace M3H5Lib.Api
 		/// Description List Customer/Supplier VAT line
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_VRUN">VAT run (Required)</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3VRUN">VAT run (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -105,9 +108,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCusSupVATLinResponse></returns>
 		/// <exception cref="M3Exception<LstCusSupVATLinResponse>"></exception>
 		public async Task<M3Response<LstCusSupVATLinResponse>> LstCusSupVATLin(
-			int m3_CONO, 
-			string m3_DIVI, 
-			string m3_VRUN, 
+			int m3CONO, 
+			string m3DIVI, 
+			string m3VRUN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,16 +125,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_VRUN))
-				throw new ArgumentNullException("m3_VRUN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3VRUN))
+				throw new ArgumentNullException(nameof(m3VRUN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("VRUN", m3_VRUN.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("VRUN", m3VRUN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCusSupVATLinResponse>(
@@ -141,7 +144,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -152,12 +156,12 @@ namespace M3H5Lib.Api
 		/// Description List totals per invoice
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_VRUN">VAT run</param>
-		/// <param name="m3_YVRN">VAT registration number</param>
-		/// <param name="m3_FTCO">From/to country</param>
-		/// <param name="m3_CVOP">Customer/supplier code</param>
-		/// <param name="m3_CUSP">Customer/supplier</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3VRUN">VAT run</param>
+		/// <param name="m3YVRN">VAT registration number</param>
+		/// <param name="m3FTCO">From/to country</param>
+		/// <param name="m3CVOP">Customer/supplier code</param>
+		/// <param name="m3CUSP">Customer/supplier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -166,12 +170,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTotalPerInvResponse></returns>
 		/// <exception cref="M3Exception<LstTotalPerInvResponse>"></exception>
 		public async Task<M3Response<LstTotalPerInvResponse>> LstTotalPerInv(
-			string m3_DIVI, 
-			string m3_VRUN = null, 
-			string m3_YVRN = null, 
-			string m3_FTCO = null, 
-			int? m3_CVOP = null, 
-			string m3_CUSP = null, 
+			string m3DIVI, 
+			string m3VRUN = null, 
+			string m3YVRN = null, 
+			string m3FTCO = null, 
+			int? m3CVOP = null, 
+			string m3CUSP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -186,24 +190,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_VRUN))
-				request.WithQueryParameter("VRUN", m3_VRUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_YVRN))
-				request.WithQueryParameter("YVRN", m3_YVRN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FTCO))
-				request.WithQueryParameter("FTCO", m3_FTCO.Trim());
-			if (m3_CVOP.HasValue)
-				request.WithQueryParameter("CVOP", m3_CVOP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CUSP))
-				request.WithQueryParameter("CUSP", m3_CUSP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VRUN))
+				request.WithQueryParameter("VRUN", m3VRUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3YVRN))
+				request.WithQueryParameter("YVRN", m3YVRN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FTCO))
+				request.WithQueryParameter("FTCO", m3FTCO.Trim());
+			if (m3CVOP.HasValue)
+				request.WithQueryParameter("CVOP", m3CVOP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CUSP))
+				request.WithQueryParameter("CUSP", m3CUSP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTotalPerInvResponse>(
@@ -213,7 +217,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -224,9 +229,9 @@ namespace M3H5Lib.Api
 		/// Description List VAT registration no line
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_VRUN">VAT run (Required)</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3VRUN">VAT run (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -235,9 +240,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstVATRegNoLineResponse></returns>
 		/// <exception cref="M3Exception<LstVATRegNoLineResponse>"></exception>
 		public async Task<M3Response<LstVATRegNoLineResponse>> LstVATRegNoLine(
-			int m3_CONO, 
-			string m3_DIVI, 
-			string m3_VRUN, 
+			int m3CONO, 
+			string m3DIVI, 
+			string m3VRUN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -252,16 +257,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_VRUN))
-				throw new ArgumentNullException("m3_VRUN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3VRUN))
+				throw new ArgumentNullException(nameof(m3VRUN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("VRUN", m3_VRUN.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("VRUN", m3VRUN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstVATRegNoLineResponse>(
@@ -271,7 +276,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

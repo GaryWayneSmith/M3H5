@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS031MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description List service charges
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_EXCD">Service charge</param>
-		/// <param name="m3_CUCD">Currency</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3EXCD">Service charge</param>
+		/// <param name="m3CUCD">Currency</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstServChrgHeadResponse></returns>
 		/// <exception cref="M3Exception<LstServChrgHeadResponse>"></exception>
 		public async Task<M3Response<LstServChrgHeadResponse>> LstServChrgHead(
-			int? m3_CONO = null, 
-			string m3_EXCD = null, 
-			string m3_CUCD = null, 
+			int? m3CONO = null, 
+			string m3EXCD = null, 
+			string m3CUCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,12 +66,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_EXCD))
-				request.WithQueryParameter("EXCD", m3_EXCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3EXCD))
+				request.WithQueryParameter("EXCD", m3EXCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstServChrgHeadResponse>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -90,10 +93,10 @@ namespace M3H5Lib.Api
 		/// Description List service charges language description
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_EXCD">Service charge</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3EXCD">Service charge</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -102,10 +105,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstServChrgLngResponse></returns>
 		/// <exception cref="M3Exception<LstServChrgLngResponse>"></exception>
 		public async Task<M3Response<LstServChrgLngResponse>> LstServChrgLng(
-			int? m3_CONO = null, 
-			string m3_EXCD = null, 
-			string m3_CUCD = null, 
-			string m3_LNCD = null, 
+			int? m3CONO = null, 
+			string m3EXCD = null, 
+			string m3CUCD = null, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,14 +123,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_EXCD))
-				request.WithQueryParameter("EXCD", m3_EXCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3EXCD))
+				request.WithQueryParameter("EXCD", m3EXCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstServChrgLngResponse>(
@@ -137,7 +140,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -148,9 +152,9 @@ namespace M3H5Lib.Api
 		/// Description List service charge matrix
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_EXCD">Service charge</param>
-		/// <param name="m3_CUCD">Currency</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3EXCD">Service charge</param>
+		/// <param name="m3CUCD">Currency</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -159,9 +163,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstServChrgMtrxResponse></returns>
 		/// <exception cref="M3Exception<LstServChrgMtrxResponse>"></exception>
 		public async Task<M3Response<LstServChrgMtrxResponse>> LstServChrgMtrx(
-			int? m3_CONO = null, 
-			string m3_EXCD = null, 
-			string m3_CUCD = null, 
+			int? m3CONO = null, 
+			string m3EXCD = null, 
+			string m3CUCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -176,12 +180,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_EXCD))
-				request.WithQueryParameter("EXCD", m3_EXCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3EXCD))
+				request.WithQueryParameter("EXCD", m3EXCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstServChrgMtrxResponse>(
@@ -191,7 +195,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

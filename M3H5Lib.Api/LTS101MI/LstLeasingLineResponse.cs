@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Customer site
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_SAID => GetString("SAID");
+		public string M3SAID => GetString("SAID");
 
 		/// <summary>
 		/// Description: Line number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERI => GetString("SERI");
+		public string M3SERI => GetString("SERI");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Payer
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Service manager
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Number of periods
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of periods")]
-		public int? M3_NOPR => GetNullableInt("NOPR");
+		public int? M3NOPR => GetNullableInt("NOPR");
 
 		/// <summary>
 		/// Description: Valid from
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Current valid to
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current valid to")]
-		public DateTime? M3_ETDT => GetNullableDateTime("ETDT");
+		public DateTime? M3ETDT => GetNullableDateTime("ETDT");
 
 		/// <summary>
 		/// Description: Invoicing start date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing start date")]
-		public DateTime? M3_SIDT => GetNullableDateTime("SIDT");
+		public DateTime? M3SIDT => GetNullableDateTime("SIDT");
 
 		/// <summary>
 		/// Description: Invoicing end date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing end date")]
-		public DateTime? M3_EIDT => GetNullableDateTime("EIDT");
+		public DateTime? M3EIDT => GetNullableDateTime("EIDT");
 
 		/// <summary>
 		/// Description: Next order date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next order date")]
-		public DateTime? M3_NODT => GetNullableDateTime("NODT");
+		public DateTime? M3NODT => GetNullableDateTime("NODT");
 	}
 }
 // EOF

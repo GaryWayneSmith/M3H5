@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Milestone chain
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Milestone chain")]
-		public long? M3_MSTN => GetNullableLong("MSTN");
+		public long? M3MSTN => GetNullableLong("MSTN");
 
 		/// <summary>
 		/// Description: Milestone template
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Milestone template")]
-		public string M3_MICI => GetString("MICI");
+		public string M3MICI => GetString("MICI");
 
 		/// <summary>
 		/// Description: Project number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_LINO => GetNullableInt("LINO");
+		public int? M3LINO => GetNullableInt("LINO");
 
 		/// <summary>
 		/// Description: Element type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element type")]
-		public string M3_MIC1 => GetString("MIC1");
+		public string M3MIC1 => GetString("MIC1");
 
 		/// <summary>
 		/// Description: Milestone identity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Milestone identity")]
-		public string M3_MIID => GetString("MIID");
+		public string M3MIID => GetString("MIID");
 
 		/// <summary>
 		/// Description: Milestone type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Milestone type")]
-		public string M3_MITP => GetString("MITP");
+		public string M3MITP => GetString("MITP");
 
 		/// <summary>
 		/// Description: Milestone category
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Milestone category")]
-		public string M3_MICA => GetString("MICA");
+		public string M3MICA => GetString("MICA");
 
 		/// <summary>
 		/// Description: Planning date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Forecast date-First
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast date-First")]
-		public DateTime? M3_MIF1 => GetNullableDateTime("MIF1");
+		public DateTime? M3MIF1 => GetNullableDateTime("MIF1");
 
 		/// <summary>
 		/// Description: Forecast date-Last
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast date-Last")]
-		public DateTime? M3_MIFL => GetNullableDateTime("MIFL");
+		public DateTime? M3MIFL => GetNullableDateTime("MIFL");
 
 		/// <summary>
 		/// Description: Float days - First (Forecast date)
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Float days - First (Forecast date)")]
-		public decimal? M3_FACF => GetNullableDecimal("FACF");
+		public decimal? M3FACF => GetNullableDecimal("FACF");
 
 		/// <summary>
 		/// Description: PO no (Forecast - First)
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO no (Forecast - First)")]
-		public string M3_PUN1 => GetString("PUN1");
+		public string M3PUN1 => GetString("PUN1");
 
 		/// <summary>
 		/// Description: PO line (Forecast - First)
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO line (Forecast - First)")]
-		public int? M3_PNL1 => GetNullableInt("PNL1");
+		public int? M3PNL1 => GetNullableInt("PNL1");
 
 		/// <summary>
 		/// Description: Float days - Last (Forecast date)
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Float days - Last (Forecast date)")]
-		public decimal? M3_FAC1 => GetNullableDecimal("FAC1");
+		public decimal? M3FAC1 => GetNullableDecimal("FAC1");
 
 		/// <summary>
 		/// Description: PO no (Forecast-Last)
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO no (Forecast-Last)")]
-		public string M3_PUN2 => GetString("PUN2");
+		public string M3PUN2 => GetString("PUN2");
 
 		/// <summary>
 		/// Description: PO line (Forecast-Last)
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO line (Forecast-Last)")]
-		public int? M3_PNL2 => GetNullableInt("PNL2");
+		public int? M3PNL2 => GetNullableInt("PNL2");
 
 		/// <summary>
 		/// Description: Actual date-First
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual date-First")]
-		public DateTime? M3_MIA1 => GetNullableDateTime("MIA1");
+		public DateTime? M3MIA1 => GetNullableDateTime("MIA1");
 
 		/// <summary>
 		/// Description: Actual date-Last
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual date-Last")]
-		public DateTime? M3_MIAD => GetNullableDateTime("MIAD");
+		public DateTime? M3MIAD => GetNullableDateTime("MIAD");
 
 		/// <summary>
 		/// Description: Float days-First (Actual date)
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Float days-First (Actual date)")]
-		public int? M3_MID1 => GetNullableInt("MID1");
+		public int? M3MID1 => GetNullableInt("MID1");
 
 		/// <summary>
 		/// Description: PO no (Actual - First)
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO no (Actual - First)")]
-		public string M3_PUN3 => GetString("PUN3");
+		public string M3PUN3 => GetString("PUN3");
 
 		/// <summary>
 		/// Description: PO line (Actual - First)
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO line (Actual - First)")]
-		public int? M3_PNL3 => GetNullableInt("PNL3");
+		public int? M3PNL3 => GetNullableInt("PNL3");
 
 		/// <summary>
 		/// Description: Float days-Last (Actual date)
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Float days-Last (Actual date)")]
-		public DateTime? M3_MIDT => GetNullableDateTime("MIDT");
+		public DateTime? M3MIDT => GetNullableDateTime("MIDT");
 
 		/// <summary>
 		/// Description: PO no (Actual - Last)
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO no (Actual - Last)")]
-		public string M3_PUN4 => GetString("PUN4");
+		public string M3PUN4 => GetString("PUN4");
 
 		/// <summary>
 		/// Description: PO line (Actual-Line)
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO line (Actual-Line)")]
-		public int? M3_PNL4 => GetNullableInt("PNL4");
+		public int? M3PNL4 => GetNullableInt("PNL4");
 
 		/// <summary>
 		/// Description: Responsible
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Send application message
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS096MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send application message")]
-		public int? M3_SNDM => GetNullableInt("SNDM");
+		public int? M3SNDM => GetNullableInt("SNDM");
 	}
 }
 // EOF

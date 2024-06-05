@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Released/planned code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Released/planned code")]
-		public string M3_RPCD => GetString("RPCD");
+		public string M3RPCD => GetString("RPCD");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Finish date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Finish time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish time")]
-		public int? M3_MFTI => GetNullableInt("MFTI");
+		public int? M3MFTI => GetNullableInt("MFTI");
 
 		/// <summary>
 		/// Description: Error code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error code")]
-		public int? M3_ERRF => GetNullableInt("ERRF");
+		public int? M3ERRF => GetNullableInt("ERRF");
 
 		/// <summary>
 		/// Description: Error in operation
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error in operation")]
-		public int? M3_EROP => GetNullableInt("EROP");
+		public int? M3EROP => GetNullableInt("EROP");
 
 		/// <summary>
 		/// Description: Dummy
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dummy")]
-		public string M3_DUMM => GetString("DUMM");
+		public string M3DUMM => GetString("DUMM");
 	}
 }
 // EOF

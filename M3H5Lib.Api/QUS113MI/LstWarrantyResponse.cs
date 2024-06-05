@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Warranty type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty type")]
-		public string M3_WATP => GetString("WATP");
+		public string M3WATP => GetString("WATP");
 
 		/// <summary>
 		/// Description: Status
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Sales price
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Cost price
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public decimal? M3_UCOS => GetNullableDecimal("UCOS");
+		public decimal? M3UCOS => GetNullableDecimal("UCOS");
 
 		/// <summary>
 		/// Description: Currency
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Warranty class
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty class")]
-		public int? M3_WARC => GetNullableInt("WARC");
+		public int? M3WARC => GetNullableInt("WARC");
 
 		/// <summary>
 		/// Description: Warranty Days
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty Days")]
-		public int? M3_WAMN => GetNullableInt("WAMN");
+		public int? M3WAMN => GetNullableInt("WAMN");
 
 		/// <summary>
 		/// Description: Period type warranty
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type warranty")]
-		public int? M3_PTWA => GetNullableInt("PTWA");
+		public int? M3PTWA => GetNullableInt("PTWA");
 
 		/// <summary>
 		/// Description: Meter value 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 1")]
-		public decimal? M3_MVA1 => GetNullableDecimal("MVA1");
+		public decimal? M3MVA1 => GetNullableDecimal("MVA1");
 
 		/// <summary>
 		/// Description: Meter value 2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 2")]
-		public decimal? M3_MVA2 => GetNullableDecimal("MVA2");
+		public decimal? M3MVA2 => GetNullableDecimal("MVA2");
 
 		/// <summary>
 		/// Description: Meter value 3
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 3")]
-		public decimal? M3_MVA3 => GetNullableDecimal("MVA3");
+		public decimal? M3MVA3 => GetNullableDecimal("MVA3");
 
 		/// <summary>
 		/// Description: Meter value 4
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 4")]
-		public decimal? M3_MVA4 => GetNullableDecimal("MVA4");
+		public decimal? M3MVA4 => GetNullableDecimal("MVA4");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Meter 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 2")]
-		public string M3_MES2 => GetString("MES2");
+		public string M3MES2 => GetString("MES2");
 
 		/// <summary>
 		/// Description: Meter 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 3")]
-		public string M3_MES3 => GetString("MES3");
+		public string M3MES3 => GetString("MES3");
 
 		/// <summary>
 		/// Description: Meter 4
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 4")]
-		public string M3_MES4 => GetString("MES4");
+		public string M3MES4 => GetString("MES4");
 
 		/// <summary>
 		/// Description: Responsible
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Extended warranty start
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended warranty start")]
-		public int? M3_EWST => GetNullableInt("EWST");
+		public int? M3EWST => GetNullableInt("EWST");
 
 		/// <summary>
 		/// Description: Text identity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.QUS113MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

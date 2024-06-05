@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Responsible (User)
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible (User)")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: User name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User name")]
-		public string M3_RENM => GetString("RENM");
+		public string M3RENM => GetString("RENM");
 
 		/// <summary>
 		/// Description: Date format
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date format")]
-		public string M3_DTFM => GetString("DTFM");
+		public string M3DTFM => GetString("DTFM");
 
 		/// <summary>
 		/// Description: System language
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("System language")]
-		public string M3_LANC => GetString("LANC");
+		public string M3LANC => GetString("LANC");
 
 		/// <summary>
 		/// Description: User group - object access
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User group - object access")]
-		public string M3_USIG => GetString("USIG");
+		public string M3USIG => GetString("USIG");
 
 		/// <summary>
 		/// Description: Equipment alias search sequense
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment alias search sequense")]
-		public string M3_EQAL => GetString("EQAL");
+		public string M3EQAL => GetString("EQAL");
 
 		/// <summary>
 		/// Description: User status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User status")]
-		public string M3_USTA => GetString("USTA");
+		public string M3USTA => GetString("USTA");
 
 		/// <summary>
 		/// Description: Free field 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free field 1")]
-		public string M3_FRF6 => GetString("FRF6");
+		public string M3FRF6 => GetString("FRF6");
 
 		/// <summary>
 		/// Description: Free field 2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free field 2")]
-		public string M3_FRF7 => GetString("FRF7");
+		public string M3FRF7 => GetString("FRF7");
 
 		/// <summary>
 		/// Description: Free field 3
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free field 3")]
-		public decimal? M3_FRF8 => GetNullableDecimal("FRF8");
+		public decimal? M3FRF8 => GetNullableDecimal("FRF8");
 	}
 }
 // EOF

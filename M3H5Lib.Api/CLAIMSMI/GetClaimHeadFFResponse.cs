@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE1 => GetString("FRE1");
+		public string M3FRE1 => GetString("FRE1");
 
 		/// <summary>
 		/// Description: Text
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE2 => GetString("FRE2");
+		public string M3FRE2 => GetString("FRE2");
 
 		/// <summary>
 		/// Description: Text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE3 => GetString("FRE3");
+		public string M3FRE3 => GetString("FRE3");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE4 => GetString("FRE4");
+		public string M3FRE4 => GetString("FRE4");
 
 		/// <summary>
 		/// Description: Text
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE5 => GetString("FRE5");
+		public string M3FRE5 => GetString("FRE5");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE6 => GetString("FRE6");
+		public string M3FRE6 => GetString("FRE6");
 
 		/// <summary>
 		/// Description: Text
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE7 => GetString("FRE7");
+		public string M3FRE7 => GetString("FRE7");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE8 => GetString("FRE8");
+		public string M3FRE8 => GetString("FRE8");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FRE9 => GetString("FRE9");
+		public string M3FRE9 => GetString("FRE9");
 
 		/// <summary>
 		/// Description: Text
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_FREA => GetString("FREA");
+		public string M3FREA => GetString("FREA");
 
 		/// <summary>
 		/// Description: Entry date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_DT01 => GetNullableDateTime("DT01");
+		public DateTime? M3DT01 => GetNullableDateTime("DT01");
 
 		/// <summary>
 		/// Description: Entry date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_DT02 => GetNullableDateTime("DT02");
+		public DateTime? M3DT02 => GetNullableDateTime("DT02");
 
 		/// <summary>
 		/// Description: Numeric field 19¤6 positions
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19¤6 positions")]
-		public decimal? M3_NF01 => GetNullableDecimal("NF01");
+		public decimal? M3NF01 => GetNullableDecimal("NF01");
 
 		/// <summary>
 		/// Description: Numeric field 19¤6 positions
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19¤6 positions")]
-		public decimal? M3_NF02 => GetNullableDecimal("NF02");
+		public decimal? M3NF02 => GetNullableDecimal("NF02");
 	}
 }
 // EOF

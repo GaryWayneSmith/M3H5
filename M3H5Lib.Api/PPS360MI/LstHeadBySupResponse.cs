@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier type")]
-		public int? M3_SUTY => GetNullableInt("SUTY");
+		public int? M3SUTY => GetNullableInt("SUTY");
 
 		/// <summary>
 		/// Description: Delivery note number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note number")]
-		public string M3_SUDO => GetString("SUDO");
+		public string M3SUDO => GetString("SUDO");
 
 		/// <summary>
 		/// Description: Delivery note date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note date")]
-		public DateTime? M3_DNDT => GetNullableDateTime("DNDT");
+		public DateTime? M3DNDT => GetNullableDateTime("DNDT");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Lowest status - purchase order
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - purchase order")]
-		public string M3_PUSL => GetString("PUSL");
+		public string M3PUSL => GetString("PUSL");
 
 		/// <summary>
 		/// Description: Highest status - purchase order
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - purchase order")]
-		public string M3_PUST => GetString("PUST");
+		public string M3PUST => GetString("PUST");
 
 		/// <summary>
 		/// Description: Requested departure date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested departure date")]
-		public DateTime? M3_SHD4 => GetNullableDateTime("SHD4");
+		public DateTime? M3SHD4 => GetNullableDateTime("SHD4");
 
 		/// <summary>
 		/// Description: Transport identity - departure
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transport identity - departure")]
-		public string M3_E0B4 => GetString("E0B4");
+		public string M3E0B4 => GetString("E0B4");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS360MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 	}
 }
 // EOF

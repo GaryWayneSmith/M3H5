@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kit number")]
-		public string M3_KTNO => GetString("KTNO");
+		public string M3KTNO => GetString("KTNO");
 
 		/// <summary>
 		/// Description: Index adjustment line
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index adjustment line")]
-		public int? M3_INAL => GetNullableInt("INAL");
+		public int? M3INAL => GetNullableInt("INAL");
 
 		/// <summary>
 		/// Description: Price type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price type")]
-		public int? M3_AFPT => GetNullableInt("AFPT");
+		public int? M3AFPT => GetNullableInt("AFPT");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_KTDS => GetString("KTDS");
+		public string M3KTDS => GetString("KTDS");
 	}
 }
 // EOF

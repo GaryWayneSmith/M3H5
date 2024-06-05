@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Responsible
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Transaction identity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction identity")]
-		public string M3_TTID => GetString("TTID");
+		public string M3TTID => GetString("TTID");
 
 		/// <summary>
 		/// Description: Order type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_TRTP => GetString("TRTP");
+		public string M3TRTP => GetString("TRTP");
 
 		/// <summary>
 		/// Description: Stock transaction type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock transaction type")]
-		public int? M3_TTYP => GetNullableInt("TTYP");
+		public int? M3TTYP => GetNullableInt("TTYP");
 
 		/// <summary>
 		/// Description: Stock zone
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock zone")]
-		public string M3_SLTP => GetString("SLTP");
+		public string M3SLTP => GetString("SLTP");
 
 		/// <summary>
 		/// Description: Location
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Container
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Lot reference 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 1")]
-		public string M3_BREF => GetString("BREF");
+		public string M3BREF => GetString("BREF");
 
 		/// <summary>
 		/// Description: Lot reference 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 2")]
-		public string M3_BRE2 => GetString("BRE2");
+		public string M3BRE2 => GetString("BRE2");
 
 		/// <summary>
 		/// Description: Order number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order operation
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order operation")]
-		public int? M3_RIDO => GetNullableInt("RIDO");
+		public int? M3RIDO => GetNullableInt("RIDO");
 
 		/// <summary>
 		/// Description: Order line
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: Reference text
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference text")]
-		public string M3_RFTX => GetString("RFTX");
+		public string M3RFTX => GetString("RFTX");
 
 		/// <summary>
 		/// Description: Status - balance ID
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - balance ID")]
-		public string M3_STAS => GetString("STAS");
+		public string M3STAS => GetString("STAS");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Receiving number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving number")]
-		public long? M3_REPN => GetNullableLong("REPN");
+		public long? M3REPN => GetNullableLong("REPN");
 
 		/// <summary>
 		/// Description: Transaction reason
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction reason")]
-		public string M3_RSCD => GetString("RSCD");
+		public string M3RSCD => GetString("RSCD");
 
 		/// <summary>
 		/// Description: Catch weight
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight")]
-		public decimal? M3_CAWE => GetNullableDecimal("CAWE");
+		public decimal? M3CAWE => GetNullableDecimal("CAWE");
 
 		/// <summary>
 		/// Description: Lot control method
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot control method")]
-		public int? M3_INDI => GetNullableInt("INDI");
+		public int? M3INDI => GetNullableInt("INDI");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Attribute number lot
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number lot")]
-		public decimal? M3_ATNB => GetNullableDecimal("ATNB");
+		public decimal? M3ATNB => GetNullableDecimal("ATNB");
 
 		/// <summary>
 		/// Description: Transaction quantity in alt U/M
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity in alt U/M")]
-		public decimal? M3_TRQA => GetNullableDecimal("TRQA");
+		public decimal? M3TRQA => GetNullableDecimal("TRQA");
 
 		/// <summary>
 		/// Description: Inventory accounting
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting")]
-		public int? M3_STCD => GetNullableInt("STCD");
+		public int? M3STCD => GetNullableInt("STCD");
 
 		/// <summary>
 		/// Description: Package number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: Name
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Lot numbering method
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot numbering method")]
-		public int? M3_BACD => GetNullableInt("BACD");
+		public int? M3BACD => GetNullableInt("BACD");
 
 		/// <summary>
 		/// Description: Active or catch weight item
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active or catch weight item")]
-		public int? M3_ACTI => GetNullableInt("ACTI");
+		public int? M3ACTI => GetNullableInt("ACTI");
 
 		/// <summary>
 		/// Description: Attribute managed
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute managed")]
-		public int? M3_ATMN => GetNullableInt("ATMN");
+		public int? M3ATMN => GetNullableInt("ATMN");
 
 		/// <summary>
 		/// Description: Catch weight unit of measure
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight unit of measure")]
-		public string M3_CWUN => GetString("CWUN");
+		public string M3CWUN => GetString("CWUN");
 
 		/// <summary>
 		/// Description: Container management
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MWS070MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container management")]
-		public int? M3_COMG => GetNullableInt("COMG");
+		public int? M3COMG => GetNullableInt("COMG");
 	}
 }
 // EOF

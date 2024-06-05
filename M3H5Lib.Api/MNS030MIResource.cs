@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MNS030MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Return the miniker for an application
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_PRID">ProductID</param>
-		/// <param name="m3_MAJO">MajorVersion</param>
-		/// <param name="m3_MINO">MinorVersion</param>
-		/// <param name="m3_PREL">Release</param>
-		/// <param name="m3_PRSP">ServicePack</param>
-		/// <param name="m3_PABU">Patch build</param>
+		/// <param name="m3PRID">ProductID</param>
+		/// <param name="m3MAJO">MajorVersion</param>
+		/// <param name="m3MINO">MinorVersion</param>
+		/// <param name="m3PREL">Release</param>
+		/// <param name="m3PRSP">ServicePack</param>
+		/// <param name="m3PABU">Patch build</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetMonikerAppResponse></returns>
 		/// <exception cref="M3Exception<GetMonikerAppResponse>"></exception>
 		public async Task<M3Response<GetMonikerAppResponse>> GetMonikerApp(
-			string m3_PRID = null, 
-			string m3_MAJO = null, 
-			string m3_MINO = null, 
-			string m3_PREL = null, 
-			string m3_PRSP = null, 
-			string m3_PABU = null, 
+			string m3PRID = null, 
+			string m3MAJO = null, 
+			string m3MINO = null, 
+			string m3PREL = null, 
+			string m3PRSP = null, 
+			string m3PABU = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,18 +72,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRID))
-				request.WithQueryParameter("PRID", m3_PRID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAJO))
-				request.WithQueryParameter("MAJO", m3_MAJO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MINO))
-				request.WithQueryParameter("MINO", m3_MINO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PREL))
-				request.WithQueryParameter("PREL", m3_PREL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRSP))
-				request.WithQueryParameter("PRSP", m3_PRSP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PABU))
-				request.WithQueryParameter("PABU", m3_PABU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRID))
+				request.WithQueryParameter("PRID", m3PRID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAJO))
+				request.WithQueryParameter("MAJO", m3MAJO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MINO))
+				request.WithQueryParameter("MINO", m3MINO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PREL))
+				request.WithQueryParameter("PREL", m3PREL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRSP))
+				request.WithQueryParameter("PRSP", m3PRSP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PABU))
+				request.WithQueryParameter("PABU", m3PABU.Trim());
 
 			// Execute the request
 			var result = await Execute<GetMonikerAppResponse>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -102,9 +105,9 @@ namespace M3H5Lib.Api
 		/// Description List all monikers for an application major minor
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_PRID">ProductId</param>
-		/// <param name="m3_MAJO">MajorVersion</param>
-		/// <param name="m3_MINO">Minor Version</param>
+		/// <param name="m3PRID">ProductId</param>
+		/// <param name="m3MAJO">MajorVersion</param>
+		/// <param name="m3MINO">Minor Version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -113,9 +116,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstMonikerAppResponse></returns>
 		/// <exception cref="M3Exception<LstMonikerAppResponse>"></exception>
 		public async Task<M3Response<LstMonikerAppResponse>> LstMonikerApp(
-			string m3_PRID = null, 
-			string m3_MAJO = null, 
-			string m3_MINO = null, 
+			string m3PRID = null, 
+			string m3MAJO = null, 
+			string m3MINO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -130,12 +133,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRID))
-				request.WithQueryParameter("PRID", m3_PRID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAJO))
-				request.WithQueryParameter("MAJO", m3_MAJO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MINO))
-				request.WithQueryParameter("MINO", m3_MINO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRID))
+				request.WithQueryParameter("PRID", m3PRID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAJO))
+				request.WithQueryParameter("MAJO", m3MAJO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MINO))
+				request.WithQueryParameter("MINO", m3MINO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstMonikerAppResponse>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

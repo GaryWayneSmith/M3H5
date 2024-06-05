@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public string M3_PONR => GetString("PONR");
+		public string M3PONR => GetString("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public string M3_POSX => GetString("POSX");
+		public string M3POSX => GetString("POSX");
 
 		/// <summary>
 		/// Description: Highest status - Customer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - Customer")]
-		public string M3_ORST => GetString("ORST");
+		public string M3ORST => GetString("ORST");
 
 		/// <summary>
 		/// Description: Address number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_DWDZ => GetNullableDateTime("DWDZ");
+		public DateTime? M3DWDZ => GetNullableDateTime("DWDZ");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_DWHZ => GetNullableInt("DWHZ");
+		public int? M3DWHZ => GetNullableInt("DWHZ");
 
 		/// <summary>
 		/// Description: Confirmed delivery date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery date")]
-		public DateTime? M3_CODZ => GetNullableDateTime("CODZ");
+		public DateTime? M3CODZ => GetNullableDateTime("CODZ");
 
 		/// <summary>
 		/// Description: Confirmed delivery time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery time")]
-		public int? M3_COHZ => GetNullableInt("COHZ");
+		public int? M3COHZ => GetNullableInt("COHZ");
 	}
 }
 // EOF

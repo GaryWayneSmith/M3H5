@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Language
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Customer number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Organization number 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 1")]
-		public string M3_CORG => GetString("CORG");
+		public string M3CORG => GetString("CORG");
 
 		/// <summary>
 		/// Description: Organization number 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 2")]
-		public string M3_COR2 => GetString("COR2");
+		public string M3COR2 => GetString("COR2");
 
 		/// <summary>
 		/// Description: Currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: VAT code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Credit limit 1 - max overdue invoices
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit 1 - max overdue invoices")]
-		public decimal? M3_CRLM => GetNullableDecimal("CRLM");
+		public decimal? M3CRLM => GetNullableDecimal("CRLM");
 
 		/// <summary>
 		/// Description: Credit limit 2 - max out.invoices
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit 2 - max out.invoices")]
-		public decimal? M3_CRL2 => GetNullableDecimal("CRL2");
+		public decimal? M3CRL2 => GetNullableDecimal("CRL2");
 
 		/// <summary>
 		/// Description: Credit limit 3 - max out.invoices + ord.
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit 3 - max out.invoices + ord.")]
-		public decimal? M3_CRL3 => GetNullableDecimal("CRL3");
+		public decimal? M3CRL3 => GetNullableDecimal("CRL3");
 
 		/// <summary>
 		/// Description: Credit limit 4 - max days on invoices
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit 4 - max days on invoices")]
-		public int? M3_ODUD => GetNullableInt("ODUD");
+		public int? M3ODUD => GetNullableInt("ODUD");
 
 		/// <summary>
 		/// Description: Overdue invoice amount
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overdue invoice amount")]
-		public decimal? M3_TDIN => GetNullableDecimal("TDIN");
+		public decimal? M3TDIN => GetNullableDecimal("TDIN");
 
 		/// <summary>
 		/// Description: Insurance company
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance company")]
-		public string M3_INCO => GetString("INCO");
+		public string M3INCO => GetString("INCO");
 
 		/// <summary>
 		/// Description: Insurance number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance number")]
-		public string M3_INSN => GetString("INSN");
+		public string M3INSN => GetString("INSN");
 
 		/// <summary>
 		/// Description: Insurance limit
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance limit")]
-		public decimal? M3_INLI => GetNullableDecimal("INLI");
+		public decimal? M3INLI => GetNullableDecimal("INLI");
 
 		/// <summary>
 		/// Description: Payer - post giro
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer - post giro")]
-		public string M3_AGPY => GetString("AGPY");
+		public string M3AGPY => GetString("AGPY");
 
 		/// <summary>
 		/// Description: Clearing number -  post giro
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clearing number -  post giro")]
-		public string M3_AGCP => GetString("AGCP");
+		public string M3AGCP => GetString("AGCP");
 
 		/// <summary>
 		/// Description: Account number - post giro
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account number - post giro")]
-		public string M3_AGAC => GetString("AGAC");
+		public string M3AGAC => GetString("AGAC");
 
 		/// <summary>
 		/// Description: Payer - bank giro
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer - bank giro")]
-		public string M3_AGBP => GetString("AGBP");
+		public string M3AGBP => GetString("AGBP");
 
 		/// <summary>
 		/// Description: Clearing number - bank giro
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clearing number - bank giro")]
-		public string M3_AGLB => GetString("AGLB");
+		public string M3AGLB => GetString("AGLB");
 
 		/// <summary>
 		/// Description: Account number - bank giro
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account number - bank giro")]
-		public string M3_AACB => GetString("AACB");
+		public string M3AACB => GetString("AACB");
 
 		/// <summary>
 		/// Description: Bank giro number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank giro number")]
-		public long? M3_AGBG => GetNullableLong("AGBG");
+		public long? M3AGBG => GetNullableLong("AGBG");
 
 		/// <summary>
 		/// Description: Post giro number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post giro number")]
-		public string M3_AGPG => GetString("AGPG");
+		public string M3AGPG => GetString("AGPG");
 
 		/// <summary>
 		/// Description: Tax applicable
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax applicable")]
-		public int? M3_TXAP => GetNullableInt("TXAP");
+		public int? M3TXAP => GetNullableInt("TXAP");
 
 		/// <summary>
 		/// Description: Change date for customer
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date for customer")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Geographical code
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographical code")]
-		public int? M3_GEOC => GetNullableInt("GEOC");
+		public int? M3GEOC => GetNullableInt("GEOC");
 
 		/// <summary>
 		/// Description: Tax exemption contract number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax exemption contract number")]
-		public string M3_TECN => GetString("TECN");
+		public string M3TECN => GetString("TECN");
 
 		/// <summary>
 		/// Description: Tax exemption expiry date
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax exemption expiry date")]
-		public DateTime? M3_TEEC => GetNullableDateTime("TEEC");
+		public DateTime? M3TEEC => GetNullableDateTime("TEEC");
 
 		/// <summary>
 		/// Description: Tax code
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Invoice recipient
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice recipient")]
-		public string M3_INRC => GetString("INRC");
+		public string M3INRC => GetString("INRC");
 
 		/// <summary>
 		/// Description: Customer stop
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer stop")]
-		public int? M3_BLCD => GetNullableInt("BLCD");
+		public int? M3BLCD => GetNullableInt("BLCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Cash discount term
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount term")]
-		public string M3_TECD => GetString("TECD");
+		public string M3TECD => GetString("TECD");
 
 		/// <summary>
 		/// Description: Credit department reference
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit department reference")]
-		public string M3_CDRC => GetString("CDRC");
+		public string M3CDRC => GetString("CDRC");
 
 		/// <summary>
 		/// Description: Payment method AR
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment method AR")]
-		public string M3_PYCD => GetString("PYCD");
+		public string M3PYCD => GetString("PYCD");
 
 		/// <summary>
 		/// Description: Outstanding invoice amount
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Outstanding invoice amount")]
-		public decimal? M3_TOIN => GetNullableDecimal("TOIN");
+		public decimal? M3TOIN => GetNullableDecimal("TOIN");
 
 		/// <summary>
 		/// Description: Order value not invoiced
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order value not invoiced")]
-		public decimal? M3_TBLG => GetNullableDecimal("TBLG");
+		public decimal? M3TBLG => GetNullableDecimal("TBLG");
 
 		/// <summary>
 		/// Description: Number of overdue days
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of overdue days")]
-		public int? M3_ODUE => GetNullableInt("ODUE");
+		public int? M3ODUE => GetNullableInt("ODUE");
 
 		/// <summary>
 		/// Description: Collection
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Collection")]
-		public int? M3_CLCD => GetNullableInt("CLCD");
+		public int? M3CLCD => GetNullableInt("CLCD");
 
 		/// <summary>
 		/// Description: Payment reminder code
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment reminder code")]
-		public int? M3_BLPR => GetNullableInt("BLPR");
+		public int? M3BLPR => GetNullableInt("BLPR");
 
 		/// <summary>
 		/// Description: Payment reminder rule
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment reminder rule")]
-		public string M3_RMCT => GetString("RMCT");
+		public string M3RMCT => GetString("RMCT");
 
 		/// <summary>
 		/// Description: Advice code
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Advice code")]
-		public int? M3_BLAC => GetNullableInt("BLAC");
+		public int? M3BLAC => GetNullableInt("BLAC");
 
 		/// <summary>
 		/// Description: Advice rule
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Advice rule")]
-		public string M3_ADCA => GetString("ADCA");
+		public string M3ADCA => GetString("ADCA");
 
 		/// <summary>
 		/// Description: Payment instruction
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment instruction")]
-		public string M3_PYDI => GetString("PYDI");
+		public string M3PYDI => GetString("PYDI");
 
 		/// <summary>
 		/// Description: Company group customer number
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company group customer number")]
-		public string M3_CCUS => GetString("CCUS");
+		public string M3CCUS => GetString("CCUS");
 
 		/// <summary>
 		/// Description: Statement rule
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statement rule")]
-		public string M3_STMR => GetString("STMR");
+		public string M3STMR => GetString("STMR");
 
 		/// <summary>
 		/// Description: Interest invoicing
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest invoicing")]
-		public int? M3_BLII => GetNullableInt("BLII");
+		public int? M3BLII => GetNullableInt("BLII");
 
 		/// <summary>
 		/// Description: Interest rule
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest rule")]
-		public string M3_IICT => GetString("IICT");
+		public string M3IICT => GetString("IICT");
 	}
 }
 // EOF

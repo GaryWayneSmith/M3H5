@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Customer number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Blanket agreement number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blanket agreement number")]
-		public string M3_AGNO => GetString("AGNO");
+		public string M3AGNO => GetString("AGNO");
 
 		/// <summary>
 		/// Description: From date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: Priority
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PREX => GetString("PREX");
+		public string M3PREX => GetString("PREX");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: Start date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Lowest quantity limit
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest quantity limit")]
-		public decimal? M3_QTYL => GetNullableDecimal("QTYL");
+		public decimal? M3QTYL => GetNullableDecimal("QTYL");
 
 		/// <summary>
 		/// Description: Sales price
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Discount
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount")]
-		public int? M3_DIPC => GetNullableInt("DIPC");
+		public int? M3DIPC => GetNullableInt("DIPC");
 
 		/// <summary>
 		/// Description: Discount amount per unit
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount per unit")]
-		public decimal? M3_DIPR => GetNullableDecimal("DIPR");
+		public decimal? M3DIPR => GetNullableDecimal("DIPR");
 
 		/// <summary>
 		/// Description: Net price used
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price used")]
-		public int? M3_NTCD => GetNullableInt("NTCD");
+		public int? M3NTCD => GetNullableInt("NTCD");
 	}
 }
 // EOF

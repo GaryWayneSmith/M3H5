@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS105MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description List Assortment Customer
 		/// Version Release: 12
 		/// </summary>
-		/// <param name="m3_ASCD">Assortment (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FCUN">From customer number</param>
-		/// <param name="m3_TCUN">To customer number</param>
-		/// <param name="m3_LMDT">Change date</param>
+		/// <param name="m3ASCD">Assortment (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FCUN">From customer number</param>
+		/// <param name="m3TCUN">To customer number</param>
+		/// <param name="m3LMDT">Change date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAssmCustResponse></returns>
 		/// <exception cref="M3Exception<LstAssmCustResponse>"></exception>
 		public async Task<M3Response<LstAssmCustResponse>> LstAssmCust(
-			string m3_ASCD, 
-			int? m3_CONO = null, 
-			string m3_FCUN = null, 
-			string m3_TCUN = null, 
-			DateTime? m3_LMDT = null, 
+			string m3ASCD, 
+			int? m3CONO = null, 
+			string m3FCUN = null, 
+			string m3TCUN = null, 
+			DateTime? m3LMDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,22 +70,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ASCD))
-				throw new ArgumentNullException("m3_ASCD");
+			if (string.IsNullOrWhiteSpace(m3ASCD))
+				throw new ArgumentNullException(nameof(m3ASCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ASCD", m3_ASCD.Trim());
+				.WithQueryParameter("ASCD", m3ASCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FCUN))
-				request.WithQueryParameter("FCUN", m3_FCUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TCUN))
-				request.WithQueryParameter("TCUN", m3_TCUN.Trim());
-			if (m3_LMDT.HasValue)
-				request.WithQueryParameter("LMDT", m3_LMDT.Value.ToM3String());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FCUN))
+				request.WithQueryParameter("FCUN", m3FCUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TCUN))
+				request.WithQueryParameter("TCUN", m3TCUN.Trim());
+			if (m3LMDT.HasValue)
+				request.WithQueryParameter("LMDT", m3LMDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstAssmCustResponse>(
@@ -93,7 +95,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -104,10 +107,10 @@ namespace M3H5Lib.Api
 		/// Description List Assortment Head
 		/// Version Release: 12
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FASC">From Assortment</param>
-		/// <param name="m3_TASC">To Assortment</param>
-		/// <param name="m3_LMDT">Change date</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FASC">From Assortment</param>
+		/// <param name="m3TASC">To Assortment</param>
+		/// <param name="m3LMDT">Change date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -116,10 +119,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAssmHeadResponse></returns>
 		/// <exception cref="M3Exception<LstAssmHeadResponse>"></exception>
 		public async Task<M3Response<LstAssmHeadResponse>> LstAssmHead(
-			int? m3_CONO = null, 
-			string m3_FASC = null, 
-			string m3_TASC = null, 
-			DateTime? m3_LMDT = null, 
+			int? m3CONO = null, 
+			string m3FASC = null, 
+			string m3TASC = null, 
+			DateTime? m3LMDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -134,14 +137,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FASC))
-				request.WithQueryParameter("FASC", m3_FASC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TASC))
-				request.WithQueryParameter("TASC", m3_TASC.Trim());
-			if (m3_LMDT.HasValue)
-				request.WithQueryParameter("LMDT", m3_LMDT.Value.ToM3String());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FASC))
+				request.WithQueryParameter("FASC", m3FASC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TASC))
+				request.WithQueryParameter("TASC", m3TASC.Trim());
+			if (m3LMDT.HasValue)
+				request.WithQueryParameter("LMDT", m3LMDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstAssmHeadResponse>(
@@ -151,7 +154,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -162,11 +166,11 @@ namespace M3H5Lib.Api
 		/// Description List Assortment Item
 		/// Version Release: 12
 		/// </summary>
-		/// <param name="m3_ASCD">Assortment (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FITN">From item number</param>
-		/// <param name="m3_TITN">To item number</param>
-		/// <param name="m3_LMDT">Change date</param>
+		/// <param name="m3ASCD">Assortment (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FITN">From item number</param>
+		/// <param name="m3TITN">To item number</param>
+		/// <param name="m3LMDT">Change date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -175,11 +179,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAssmItemResponse></returns>
 		/// <exception cref="M3Exception<LstAssmItemResponse>"></exception>
 		public async Task<M3Response<LstAssmItemResponse>> LstAssmItem(
-			string m3_ASCD, 
-			int? m3_CONO = null, 
-			string m3_FITN = null, 
-			string m3_TITN = null, 
-			DateTime? m3_LMDT = null, 
+			string m3ASCD, 
+			int? m3CONO = null, 
+			string m3FITN = null, 
+			string m3TITN = null, 
+			DateTime? m3LMDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -194,22 +198,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ASCD))
-				throw new ArgumentNullException("m3_ASCD");
+			if (string.IsNullOrWhiteSpace(m3ASCD))
+				throw new ArgumentNullException(nameof(m3ASCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ASCD", m3_ASCD.Trim());
+				.WithQueryParameter("ASCD", m3ASCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FITN))
-				request.WithQueryParameter("FITN", m3_FITN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TITN))
-				request.WithQueryParameter("TITN", m3_TITN.Trim());
-			if (m3_LMDT.HasValue)
-				request.WithQueryParameter("LMDT", m3_LMDT.Value.ToM3String());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FITN))
+				request.WithQueryParameter("FITN", m3FITN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TITN))
+				request.WithQueryParameter("TITN", m3TITN.Trim());
+			if (m3LMDT.HasValue)
+				request.WithQueryParameter("LMDT", m3LMDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstAssmItemResponse>(
@@ -219,7 +223,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

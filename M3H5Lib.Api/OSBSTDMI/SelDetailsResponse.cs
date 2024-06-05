@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Line number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Order date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Year
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Customer number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer group
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer group")]
-		public string M3_CUCL => GetString("CUCL");
+		public string M3CUCL => GetString("CUCL");
 
 		/// <summary>
 		/// Description: Customer order type
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Item number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Item group
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGR => GetString("ITGR");
+		public string M3ITGR => GetString("ITGR");
 
 		/// <summary>
 		/// Description: Item type
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item type")]
-		public string M3_ITTY => GetString("ITTY");
+		public string M3ITTY => GetString("ITTY");
 
 		/// <summary>
 		/// Description: Product group
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product group")]
-		public string M3_ITCL => GetString("ITCL");
+		public string M3ITCL => GetString("ITCL");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Origin
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin")]
-		public int? M3_ORIG => GetNullableInt("ORIG");
+		public int? M3ORIG => GetNullableInt("ORIG");
 
 		/// <summary>
 		/// Description: Service order job number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order job number")]
-		public int? M3_JOBN => GetNullableInt("JOBN");
+		public int? M3JOBN => GetNullableInt("JOBN");
 
 		/// <summary>
 		/// Description: Assignment suffix
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment suffix")]
-		public int? M3_JBSX => GetNullableInt("JBSX");
+		public int? M3JBSX => GetNullableInt("JBSX");
 
 		/// <summary>
 		/// Description: Delivered/not invoiced statistics
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered/not invoiced statistics")]
-		public int? M3_DLNI => GetNullableInt("DLNI");
+		public int? M3DLNI => GetNullableInt("DLNI");
 
 		/// <summary>
 		/// Description: Equipment
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment")]
-		public string M3_CONS => GetString("CONS");
+		public string M3CONS => GetString("CONS");
 
 		/// <summary>
 		/// Description: Customer order category
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order category")]
-		public string M3_ORTK => GetString("ORTK");
+		public string M3ORTK => GetString("ORTK");
 
 		/// <summary>
 		/// Description: Invoiced quantity - basic U/M
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity - basic U/M")]
-		public decimal? M3_IVQT => GetNullableDecimal("IVQT");
+		public decimal? M3IVQT => GetNullableDecimal("IVQT");
 
 		/// <summary>
 		/// Description: Line amount - local currency
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount - local currency")]
-		public decimal? M3_SAAM => GetNullableDecimal("SAAM");
+		public decimal? M3SAAM => GetNullableDecimal("SAAM");
 
 		/// <summary>
 		/// Description: Entry date
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Customer type
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer type")]
-		public int? M3_CUTP => GetNullableInt("CUTP");
+		public int? M3CUTP => GetNullableInt("CUTP");
 
 		/// <summary>
 		/// Description: Statistics customer
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics customer")]
-		public string M3_CUST => GetString("CUST");
+		public string M3CUST => GetString("CUST");
 
 		/// <summary>
 		/// Description: Product number highest level
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number highest level")]
-		public string M3_PRHL => GetString("PRHL");
+		public string M3PRHL => GetString("PRHL");
 
 		/// <summary>
 		/// Description: Serial number
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Serial number
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERW => GetString("SERW");
+		public string M3SERW => GetString("SERW");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Service
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Warranty type
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty type")]
-		public string M3_WATP => GetString("WATP");
+		public string M3WATP => GetString("WATP");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Address number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Item number - individual item
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number - individual item")]
-		public string M3_IITN => GetString("IITN");
+		public string M3IITN => GetString("IITN");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: Statistics identity 1 customer
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 1 customer")]
-		public string M3_FRE1 => GetString("FRE1");
+		public string M3FRE1 => GetString("FRE1");
 
 		/// <summary>
 		/// Description: Extended invoice number
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OSBSTDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended invoice number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 	}
 }
 // EOF

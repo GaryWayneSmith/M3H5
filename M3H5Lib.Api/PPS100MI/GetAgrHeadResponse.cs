@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Valid from
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_UVDT => GetNullableDateTime("UVDT");
+		public DateTime? M3UVDT => GetNullableDateTime("UVDT");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Agreement date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement date")]
-		public DateTime? M3_AGRD => GetNullableDateTime("AGRD");
+		public DateTime? M3AGRD => GetNullableDateTime("AGRD");
 
 		/// <summary>
 		/// Description: Renewal date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Renewal date")]
-		public DateTime? M3_RNDT => GetNullableDateTime("RNDT");
+		public DateTime? M3RNDT => GetNullableDateTime("RNDT");
 
 		/// <summary>
 		/// Description: Status - supplier agreement
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - supplier agreement")]
-		public string M3_PAST => GetString("PAST");
+		public string M3PAST => GetString("PAST");
 
 		/// <summary>
 		/// Description: Period of notice
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period of notice")]
-		public int? M3_TENT => GetNullableInt("TENT");
+		public int? M3TENT => GetNullableInt("TENT");
 
 		/// <summary>
 		/// Description: Buyer
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buyer")]
-		public string M3_BUYE => GetString("BUYE");
+		public string M3BUYE => GetString("BUYE");
 
 		/// <summary>
 		/// Description: Agreement priority
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement priority")]
-		public int? M3_AGPT => GetNullableInt("AGPT");
+		public int? M3AGPT => GetNullableInt("AGPT");
 
 		/// <summary>
 		/// Description: Reference
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference")]
-		public string M3_RFID => GetString("RFID");
+		public string M3RFID => GetString("RFID");
 
 		/// <summary>
 		/// Description: Update purchased quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update purchased quantity")]
-		public int? M3_QREM => GetNullableInt("QREM");
+		public int? M3QREM => GetNullableInt("QREM");
 
 		/// <summary>
 		/// Description: Currency
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Packaging terms
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging terms")]
-		public string M3_TEPA => GetString("TEPA");
+		public string M3TEPA => GetString("TEPA");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Freight terms
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight terms")]
-		public string M3_TEAF => GetString("TEAF");
+		public string M3TEAF => GetString("TEAF");
 
 		/// <summary>
 		/// Description: Check item/supplier combination
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check item/supplier combination")]
-		public int? M3_CIVC => GetNullableInt("CIVC");
+		public int? M3CIVC => GetNullableInt("CIVC");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Supplier agreement number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier agreement number")]
-		public string M3_VAGN => GetString("VAGN");
+		public string M3VAGN => GetString("VAGN");
 
 		/// <summary>
 		/// Description: Discount 2
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 2")]
-		public int? M3_DIP2 => GetNullableInt("DIP2");
+		public int? M3DIP2 => GetNullableInt("DIP2");
 
 		/// <summary>
 		/// Description: Facility
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Self-billing agreement number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Self-billing agreement number")]
-		public string M3_SBAN => GetString("SBAN");
+		public string M3SBAN => GetString("SBAN");
 
 		/// <summary>
 		/// Description: Object access group
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object access group")]
-		public string M3_ACGR => GetString("ACGR");
+		public string M3ACGR => GetString("ACGR");
 	}
 }
 // EOF

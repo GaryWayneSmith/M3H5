@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: SCP Version
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SCP Version")]
-		public string M3_SCVE => GetString("SCVE");
+		public string M3SCVE => GetString("SCVE");
 
 		/// <summary>
 		/// Description: Version Category
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version Category")]
-		public string M3_VCAT => GetString("VCAT");
+		public string M3VCAT => GetString("VCAT");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STA2 => GetString("STA2");
+		public string M3STA2 => GetString("STA2");
 
 		/// <summary>
 		/// Description: SCP period type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SCP period type")]
-		public int? M3_SCPP => GetNullableInt("SCPP");
+		public int? M3SCPP => GetNullableInt("SCPP");
 
 		/// <summary>
 		/// Description: Aggregation level
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Aggregation level")]
-		public int? M3_AGLE => GetNullableInt("AGLE");
+		public int? M3AGLE => GetNullableInt("AGLE");
 	}
 }
 // EOF

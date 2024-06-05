@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: To warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To warehouse")]
-		public string M3_TWHL => GetString("TWHL");
+		public string M3TWHL => GetString("TWHL");
 
 		/// <summary>
 		/// Description: From warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From warehouse")]
-		public string M3_FWHL => GetString("FWHL");
+		public string M3FWHL => GetString("FWHL");
 
 		/// <summary>
 		/// Description: Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Planned order
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned order")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: Time hours & minutes
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time hours & minutes")]
-		public int? M3_TIHM => GetNullableInt("TIHM");
+		public int? M3TIHM => GetNullableInt("TIHM");
 
 		/// <summary>
 		/// Description: Planned quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned quantity")]
-		public decimal? M3_PPQT => GetNullableDecimal("PPQT");
+		public decimal? M3PPQT => GetNullableDecimal("PPQT");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Responsible
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Program name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

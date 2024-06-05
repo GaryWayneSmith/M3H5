@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Revision number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Operation number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Selection type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection type")]
-		public string M3_OTYP => GetString("OTYP");
+		public string M3OTYP => GetString("OTYP");
 
 		/// <summary>
 		/// Description: Selection identity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection identity")]
-		public string M3_FTID => GetString("FTID");
+		public string M3FTID => GetString("FTID");
 
 		/// <summary>
 		/// Description: Option
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPTN => GetString("OPTN");
+		public string M3OPTN => GetString("OPTN");
 
 		/// <summary>
 		/// Description: From numeric range value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From numeric range value")]
-		public decimal? M3_NUVF => GetNullableDecimal("NUVF");
+		public decimal? M3NUVF => GetNullableDecimal("NUVF");
 
 		/// <summary>
 		/// Description: To numeric range value
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To numeric range value")]
-		public decimal? M3_NUVT => GetNullableDecimal("NUVT");
+		public decimal? M3NUVT => GetNullableDecimal("NUVT");
 
 		/// <summary>
 		/// Description: Include/exclude product strukture line
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Include/exclude product strukture line")]
-		public string M3_INCE => GetString("INCE");
+		public string M3INCE => GetString("INCE");
 
 		/// <summary>
 		/// Description: Text identity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Change date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ECS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

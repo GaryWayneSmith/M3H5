@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_TRNR => GetString("TRNR");
+		public string M3TRNR => GetString("TRNR");
 
 		/// <summary>
 		/// Description: Order type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_TRTP => GetString("TRTP");
+		public string M3TRTP => GetString("TRTP");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Responsible
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Lowest status - stock transaction
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - stock transaction")]
-		public string M3_TRSL => GetString("TRSL");
+		public string M3TRSL => GetString("TRSL");
 
 		/// <summary>
 		/// Description: Highest status - stock transaction
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - stock transaction")]
-		public string M3_TRSH => GetString("TRSH");
+		public string M3TRSH => GetString("TRSH");
 
 		/// <summary>
 		/// Description: Priority
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Transaction date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction date")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: Receiving date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving date")]
-		public DateTime? M3_RIDT => GetNullableDateTime("RIDT");
+		public DateTime? M3RIDT => GetNullableDateTime("RIDT");
 
 		/// <summary>
 		/// Description: Receiving time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving time")]
-		public int? M3_RITM => GetNullableInt("RITM");
+		public int? M3RITM => GetNullableInt("RITM");
 
 		/// <summary>
 		/// Description: To location
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To location")]
-		public string M3_TWSL => GetString("TWSL");
+		public string M3TWSL => GetString("TWSL");
 
 		/// <summary>
 		/// Description: To warehouse
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To warehouse")]
-		public string M3_TWLO => GetString("TWLO");
+		public string M3TWLO => GetString("TWLO");
 
 		/// <summary>
 		/// Description: Remark
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Forwarding agent
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarding agent")]
-		public string M3_FWNO => GetString("FWNO");
+		public string M3FWNO => GetString("FWNO");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Project number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Planned order
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned order")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Subnumber - planned order
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - planned order")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Delivery regrouping
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery regrouping")]
-		public int? M3_SCED => GetNullableInt("SCED");
+		public int? M3SCED => GetNullableInt("SCED");
 	}
 }
 // EOF

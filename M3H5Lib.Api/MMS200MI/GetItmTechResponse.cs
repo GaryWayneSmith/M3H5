@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Net weight
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: By/co-product code
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("By/co-product code")]
-		public int? M3_BYPR => GetNullableInt("BYPR");
+		public int? M3BYPR => GetNullableInt("BYPR");
 
 		/// <summary>
 		/// Description: Normal waste percentage
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Normal waste percentage")]
-		public int? M3_WAPC => GetNullableInt("WAPC");
+		public int? M3WAPC => GetNullableInt("WAPC");
 
 		/// <summary>
 		/// Description: Inspection code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection code")]
-		public int? M3_QACD => GetNullableInt("QACD");
+		public int? M3QACD => GetNullableInt("QACD");
 
 		/// <summary>
 		/// Description: Yield calculation
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yield calculation")]
-		public int? M3_EPCD => GetNullableInt("EPCD");
+		public int? M3EPCD => GetNullableInt("EPCD");
 
 		/// <summary>
 		/// Description: Normal potency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Normal potency")]
-		public int? M3_POCY => GetNullableInt("POCY");
+		public int? M3POCY => GetNullableInt("POCY");
 
 		/// <summary>
 		/// Description: Active or catch weight item
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active or catch weight item")]
-		public int? M3_ACTI => GetNullableInt("ACTI");
+		public int? M3ACTI => GetNullableInt("ACTI");
 
 		/// <summary>
 		/// Description: Revision number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Engineering change order type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Engineering change order type")]
-		public string M3_ECAC => GetString("ECAC");
+		public string M3ECAC => GetString("ECAC");
 
 		/// <summary>
 		/// Description: ECO managed
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ECO managed")]
-		public int? M3_ECMA => GetNullableInt("ECMA");
+		public int? M3ECMA => GetNullableInt("ECMA");
 
 		/// <summary>
 		/// Description: Active engineering changes
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active engineering changes")]
-		public int? M3_ECFL => GetNullableInt("ECFL");
+		public int? M3ECFL => GetNullableInt("ECFL");
 
 		/// <summary>
 		/// Description: External instruction
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External instruction")]
-		public string M3_ETRF => GetString("ETRF");
+		public string M3ETRF => GetString("ETRF");
 
 		/// <summary>
 		/// Description: Description - External instruction
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - External instruction")]
-		public string M3_DS01 => GetString("DS01");
+		public string M3DS01 => GetString("DS01");
 
 		/// <summary>
 		/// Description: Internal instruction
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal instruction")]
-		public string M3_ITRF => GetString("ITRF");
+		public string M3ITRF => GetString("ITRF");
 
 		/// <summary>
 		/// Description: Description - Internal instruction
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Internal instruction")]
-		public string M3_DS02 => GetString("DS02");
+		public string M3DS02 => GetString("DS02");
 
 		/// <summary>
 		/// Description: Danger indicator
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Danger indicator")]
-		public int? M3_HAZI => GetNullableInt("HAZI");
+		public int? M3HAZI => GetNullableInt("HAZI");
 
 		/// <summary>
 		/// Description: Fragility
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fragility")]
-		public int? M3_FRAG => GetNullableInt("FRAG");
+		public int? M3FRAG => GetNullableInt("FRAG");
 
 		/// <summary>
 		/// Description: Danger class 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Danger class 1")]
-		public string M3_HAC1 => GetString("HAC1");
+		public string M3HAC1 => GetString("HAC1");
 
 		/// <summary>
 		/// Description: Description - Danger class 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Danger class 1")]
-		public string M3_DS03 => GetString("DS03");
+		public string M3DS03 => GetString("DS03");
 
 		/// <summary>
 		/// Description: Danger class 2
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Danger class 2")]
-		public string M3_HAC2 => GetString("HAC2");
+		public string M3HAC2 => GetString("HAC2");
 
 		/// <summary>
 		/// Description: Description - Danger class 2
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Danger class 2")]
-		public string M3_DS04 => GetString("DS04");
+		public string M3DS04 => GetString("DS04");
 
 		/// <summary>
 		/// Description: Danger class 3
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Danger class 3")]
-		public string M3_HAC3 => GetString("HAC3");
+		public string M3HAC3 => GetString("HAC3");
 
 		/// <summary>
 		/// Description: Description - Danger class 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Danger class 3")]
-		public string M3_DS05 => GetString("DS05");
+		public string M3DS05 => GetString("DS05");
 
 		/// <summary>
 		/// Description: Measurement 1
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement 1")]
-		public string M3_DIM1 => GetString("DIM1");
+		public string M3DIM1 => GetString("DIM1");
 
 		/// <summary>
 		/// Description: Measurement 2
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement 2")]
-		public string M3_DIM2 => GetString("DIM2");
+		public string M3DIM2 => GetString("DIM2");
 
 		/// <summary>
 		/// Description: Measurement 3
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement 3")]
-		public string M3_DIM3 => GetString("DIM3");
+		public string M3DIM3 => GetString("DIM3");
 
 		/// <summary>
 		/// Description: Specification 1
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 1")]
-		public string M3_SPE1 => GetString("SPE1");
+		public string M3SPE1 => GetString("SPE1");
 
 		/// <summary>
 		/// Description: Specification 2
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 2")]
-		public string M3_SPE2 => GetString("SPE2");
+		public string M3SPE2 => GetString("SPE2");
 
 		/// <summary>
 		/// Description: Specification 3
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 3")]
-		public string M3_SPE3 => GetString("SPE3");
+		public string M3SPE3 => GetString("SPE3");
 
 		/// <summary>
 		/// Description: Specification 4
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 4")]
-		public string M3_SPE4 => GetString("SPE4");
+		public string M3SPE4 => GetString("SPE4");
 
 		/// <summary>
 		/// Description: Specification 5
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification 5")]
-		public string M3_SPE5 => GetString("SPE5");
+		public string M3SPE5 => GetString("SPE5");
 
 		/// <summary>
 		/// Description: Repair supplier
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Repair supplier")]
-		public string M3_ARPA => GetString("ARPA");
+		public string M3ARPA => GetString("ARPA");
 
 		/// <summary>
 		/// Description: Repair planner
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Repair planner")]
-		public string M3_ARPR => GetString("ARPR");
+		public string M3ARPR => GetString("ARPR");
 
 		/// <summary>
 		/// Description: Repair time
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Repair time")]
-		public int? M3_AMPT => GetNullableInt("AMPT");
+		public int? M3AMPT => GetNullableInt("AMPT");
 
 		/// <summary>
 		/// Description: Repair warranty - days
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Repair warranty - days")]
-		public int? M3_AWDY => GetNullableInt("AWDY");
+		public int? M3AWDY => GetNullableInt("AWDY");
 
 		/// <summary>
 		/// Description: Tool quantity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tool quantity")]
-		public int? M3_NPTO => GetNullableInt("NPTO");
+		public int? M3NPTO => GetNullableInt("NPTO");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Meter 2
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 2")]
-		public string M3_MES2 => GetString("MES2");
+		public string M3MES2 => GetString("MES2");
 
 		/// <summary>
 		/// Description: Meter 3
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 3")]
-		public string M3_MES3 => GetString("MES3");
+		public string M3MES3 => GetString("MES3");
 
 		/// <summary>
 		/// Description: Meter 4
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 4")]
-		public string M3_MES4 => GetString("MES4");
+		public string M3MES4 => GetString("MES4");
 
 		/// <summary>
 		/// Description: Meter value 1
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 1")]
-		public decimal? M3_MVA1 => GetNullableDecimal("MVA1");
+		public decimal? M3MVA1 => GetNullableDecimal("MVA1");
 
 		/// <summary>
 		/// Description: Meter value 2
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 2")]
-		public decimal? M3_MVA2 => GetNullableDecimal("MVA2");
+		public decimal? M3MVA2 => GetNullableDecimal("MVA2");
 
 		/// <summary>
 		/// Description: Meter value 3
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 3")]
-		public decimal? M3_MVA3 => GetNullableDecimal("MVA3");
+		public decimal? M3MVA3 => GetNullableDecimal("MVA3");
 
 		/// <summary>
 		/// Description: Meter value 4
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 4")]
-		public decimal? M3_MVA4 => GetNullableDecimal("MVA4");
+		public decimal? M3MVA4 => GetNullableDecimal("MVA4");
 
 		/// <summary>
 		/// Description: Quantity or time
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity or time")]
-		public int? M3_PEQ1 => GetNullableInt("PEQ1");
+		public int? M3PEQ1 => GetNullableInt("PEQ1");
 
 		/// <summary>
 		/// Description: Quantity or time
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity or time")]
-		public int? M3_PEQ2 => GetNullableInt("PEQ2");
+		public int? M3PEQ2 => GetNullableInt("PEQ2");
 
 		/// <summary>
 		/// Description: Quantity or time
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity or time")]
-		public int? M3_PEQ3 => GetNullableInt("PEQ3");
+		public int? M3PEQ3 => GetNullableInt("PEQ3");
 
 		/// <summary>
 		/// Description: Quantity or time
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity or time")]
-		public int? M3_PEQ4 => GetNullableInt("PEQ4");
+		public int? M3PEQ4 => GetNullableInt("PEQ4");
 
 		/// <summary>
 		/// Description: Trigger type
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trigger type")]
-		public int? M3_PET1 => GetNullableInt("PET1");
+		public int? M3PET1 => GetNullableInt("PET1");
 
 		/// <summary>
 		/// Description: Trigger type
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trigger type")]
-		public int? M3_PET2 => GetNullableInt("PET2");
+		public int? M3PET2 => GetNullableInt("PET2");
 
 		/// <summary>
 		/// Description: Trigger type
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trigger type")]
-		public int? M3_PET3 => GetNullableInt("PET3");
+		public int? M3PET3 => GetNullableInt("PET3");
 
 		/// <summary>
 		/// Description: Trigger type
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trigger type")]
-		public int? M3_PET4 => GetNullableInt("PET4");
+		public int? M3PET4 => GetNullableInt("PET4");
 
 		/// <summary>
 		/// Description: Maintenance program
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maintenance program")]
-		public string M3_MPGM => GetString("MPGM");
+		public string M3MPGM => GetString("MPGM");
 
 		/// <summary>
 		/// Description: Order type
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Planning policy
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning policy")]
-		public string M3_PLCD => GetString("PLCD");
+		public string M3PLCD => GetString("PLCD");
 
 		/// <summary>
 		/// Description: Planner - maintenance
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planner - maintenance")]
-		public string M3_MAPL => GetString("MAPL");
+		public string M3MAPL => GetString("MAPL");
 
 		/// <summary>
 		/// Description: Tool history
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tool history")]
-		public int? M3_TOHI => GetNullableInt("TOHI");
+		public int? M3TOHI => GetNullableInt("TOHI");
 
 		/// <summary>
 		/// Description: Tool allocation
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tool allocation")]
-		public int? M3_TORE => GetNullableInt("TORE");
+		public int? M3TORE => GetNullableInt("TORE");
 
 		/// <summary>
 		/// Description: Tool reporting
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tool reporting")]
-		public int? M3_FEBA => GetNullableInt("FEBA");
+		public int? M3FEBA => GetNullableInt("FEBA");
 
 		/// <summary>
 		/// Description: Downtime cost
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Downtime cost")]
-		public decimal? M3_STCS => GetNullableDecimal("STCS");
+		public decimal? M3STCS => GetNullableDecimal("STCS");
 
 		/// <summary>
 		/// Description: Next shop action type
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next shop action type")]
-		public string M3_NESA => GetString("NESA");
+		public string M3NESA => GetString("NESA");
 
 		/// <summary>
 		/// Description: Next service
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next service")]
-		public string M3_NSUF => GetString("NSUF");
+		public string M3NSUF => GetString("NSUF");
 
 		/// <summary>
 		/// Description: Forecast logic
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast logic")]
-		public string M3_FCCM => GetString("FCCM");
+		public string M3FCCM => GetString("FCCM");
 
 		/// <summary>
 		/// Description: Period frame
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period frame")]
-		public int? M3_DPID => GetNullableInt("DPID");
+		public int? M3DPID => GetNullableInt("DPID");
 
 		/// <summary>
 		/// Description: Continuous net change
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Continuous net change")]
-		public int? M3_CONC => GetNullableInt("CONC");
+		public int? M3CONC => GetNullableInt("CONC");
 
 		/// <summary>
 		/// Description: Planning horizon
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning horizon")]
-		public int? M3_PLMZ => GetNullableInt("PLMZ");
+		public int? M3PLMZ => GetNullableInt("PLMZ");
 
 		/// <summary>
 		/// Description: Calculation constant 1
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation constant 1")]
-		public int? M3_CCO1 => GetNullableInt("CCO1");
+		public int? M3CCO1 => GetNullableInt("CCO1");
 
 		/// <summary>
 		/// Description: Calculation constant 2
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation constant 2")]
-		public int? M3_CCO2 => GetNullableInt("CCO2");
+		public int? M3CCO2 => GetNullableInt("CCO2");
 
 		/// <summary>
 		/// Description: Calculation constant 3
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation constant 3")]
-		public int? M3_CCO3 => GetNullableInt("CCO3");
+		public int? M3CCO3 => GetNullableInt("CCO3");
 
 		/// <summary>
 		/// Description: Time between scheduled shop visits
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time between scheduled shop visits")]
-		public decimal? M3_TBSR => GetNullableDecimal("TBSR");
+		public decimal? M3TBSR => GetNullableDecimal("TBSR");
 
 		/// <summary>
 		/// Description: Meter - scheduled shop visits
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter - scheduled shop visits")]
-		public string M3_MBSR => GetString("MBSR");
+		public string M3MBSR => GetString("MBSR");
 
 		/// <summary>
 		/// Description: Unscheduled removal rate
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unscheduled removal rate")]
-		public decimal? M3_TBUR => GetNullableDecimal("TBUR");
+		public decimal? M3TBUR => GetNullableDecimal("TBUR");
 
 		/// <summary>
 		/// Description: Meter - unscheduled removal rate
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter - unscheduled removal rate")]
-		public string M3_MBUR => GetString("MBUR");
+		public string M3MBUR => GetString("MBUR");
 
 		/// <summary>
 		/// Description: Time between failure
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time between failure")]
-		public decimal? M3_TBFR => GetNullableDecimal("TBFR");
+		public decimal? M3TBFR => GetNullableDecimal("TBFR");
 
 		/// <summary>
 		/// Description: Meter - failure
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter - failure")]
-		public string M3_MBFR => GetString("MBFR");
+		public string M3MBFR => GetString("MBFR");
 
 		/// <summary>
 		/// Description: Criticality class
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Criticality class")]
-		public int? M3_AESC => GetNullableInt("AESC");
+		public int? M3AESC => GetNullableInt("AESC");
 
 		/// <summary>
 		/// Description: Extended-range twin-engine operations
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended-range twin-engine operations")]
-		public int? M3_AES2 => GetNullableInt("AES2");
+		public int? M3AES2 => GetNullableInt("AES2");
 
 		/// <summary>
 		/// Description: Maintenance/overhaul/repair class
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maintenance/overhaul/repair class")]
-		public int? M3_AMOR => GetNullableInt("AMOR");
+		public int? M3AMOR => GetNullableInt("AMOR");
 
 		/// <summary>
 		/// Description: Function area
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function area")]
-		public string M3_FUNC => GetString("FUNC");
+		public string M3FUNC => GetString("FUNC");
 
 		/// <summary>
 		/// Description: Standard numbering system
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard numbering system")]
-		public string M3_STNC => GetString("STNC");
+		public string M3STNC => GetString("STNC");
 
 		/// <summary>
 		/// Description: Dimensional removal rate
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dimensional removal rate")]
-		public decimal? M3_DIRR => GetNullableDecimal("DIRR");
+		public decimal? M3DIRR => GetNullableDecimal("DIRR");
 
 		/// <summary>
 		/// Description: Meter - dimensioning removal rate
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter - dimensioning removal rate")]
-		public string M3_MDIR => GetString("MDIR");
+		public string M3MDIR => GetString("MDIR");
 
 		/// <summary>
 		/// Description: Service level
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service level")]
-		public int? M3_SCGR => GetNullableInt("SCGR");
+		public int? M3SCGR => GetNullableInt("SCGR");
 
 		/// <summary>
 		/// Description: Removal class
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Removal class")]
-		public int? M3_ARR1 => GetNullableInt("ARR1");
+		public int? M3ARR1 => GetNullableInt("ARR1");
 
 		/// <summary>
 		/// Description: Extra quantity
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extra quantity")]
-		public decimal? M3_AEQY => GetNullableDecimal("AEQY");
+		public decimal? M3AEQY => GetNullableDecimal("AEQY");
 
 		/// <summary>
 		/// Description: Internal lead time
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal lead time")]
-		public int? M3_LEAI => GetNullableInt("LEAI");
+		public int? M3LEAI => GetNullableInt("LEAI");
 
 		/// <summary>
 		/// Description: Warranty limit 1
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 1")]
-		public decimal? M3_WAL1 => GetNullableDecimal("WAL1");
+		public decimal? M3WAL1 => GetNullableDecimal("WAL1");
 
 		/// <summary>
 		/// Description: Warranty limit 2
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 2")]
-		public decimal? M3_WAL2 => GetNullableDecimal("WAL2");
+		public decimal? M3WAL2 => GetNullableDecimal("WAL2");
 
 		/// <summary>
 		/// Description: Warranty limit 3
@@ -1024,7 +1024,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 3")]
-		public decimal? M3_WAL3 => GetNullableDecimal("WAL3");
+		public decimal? M3WAL3 => GetNullableDecimal("WAL3");
 
 		/// <summary>
 		/// Description: Warranty limit 4
@@ -1035,7 +1035,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 4")]
-		public decimal? M3_WAL4 => GetNullableDecimal("WAL4");
+		public decimal? M3WAL4 => GetNullableDecimal("WAL4");
 
 		/// <summary>
 		/// Description: Change date
@@ -1046,7 +1046,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Group technology class
@@ -1057,7 +1057,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group technology class")]
-		public string M3_GRTI => GetString("GRTI");
+		public string M3GRTI => GetString("GRTI");
 
 		/// <summary>
 		/// Description: Description group tech.class
@@ -1068,7 +1068,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description group tech.class")]
-		public string M3_DS06 => GetString("DS06");
+		public string M3DS06 => GetString("DS06");
 
 		/// <summary>
 		/// Description: Catch weight mode
@@ -1079,7 +1079,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight mode")]
-		public int? M3_CAWP => GetNullableInt("CAWP");
+		public int? M3CAWP => GetNullableInt("CAWP");
 
 		/// <summary>
 		/// Description: Catch weight unit of measure
@@ -1090,7 +1090,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight unit of measure")]
-		public string M3_CWUN => GetString("CWUN");
+		public string M3CWUN => GetString("CWUN");
 
 		/// <summary>
 		/// Description: Standard cost price unit of measure
@@ -1101,7 +1101,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard cost price unit of measure")]
-		public string M3_CPUN => GetString("CPUN");
+		public string M3CPUN => GetString("CPUN");
 
 		/// <summary>
 		/// Description: Specific gravity
@@ -1112,7 +1112,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specific gravity")]
-		public decimal? M3_SPGV => GetNullableDecimal("SPGV");
+		public decimal? M3SPGV => GetNullableDecimal("SPGV");
 	}
 }
 // EOF

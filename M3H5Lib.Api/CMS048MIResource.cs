@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS048MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add record in CSYEVF
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_EVNM">Event name</param>
-		/// <param name="m3_EVNO">Event name operation</param>
-		/// <param name="m3_EVPB">Event publisher</param>
-		/// <param name="m3_FLDI">Field</param>
-		/// <param name="m3_STAT">Status</param>
+		/// <param name="m3EVNM">Event name</param>
+		/// <param name="m3EVNO">Event name operation</param>
+		/// <param name="m3EVPB">Event publisher</param>
+		/// <param name="m3FLDI">Field</param>
+		/// <param name="m3STAT">Status</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddField(
-			string m3_EVNM = null, 
-			string m3_EVNO = null, 
-			string m3_EVPB = null, 
-			string m3_FLDI = null, 
-			string m3_STAT = null, 
+			string m3EVNM = null, 
+			string m3EVNO = null, 
+			string m3EVPB = null, 
+			string m3FLDI = null, 
+			string m3STAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,16 +70,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EVNM))
-				request.WithQueryParameter("EVNM", m3_EVNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVNO))
-				request.WithQueryParameter("EVNO", m3_EVNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVPB))
-				request.WithQueryParameter("EVPB", m3_EVPB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNM))
+				request.WithQueryParameter("EVNM", m3EVNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNO))
+				request.WithQueryParameter("EVNO", m3EVNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVPB))
+				request.WithQueryParameter("EVPB", m3EVPB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -87,7 +89,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -98,10 +101,10 @@ namespace M3H5Lib.Api
 		/// Description Delete record in CSYEVF
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_EVNM">Event name</param>
-		/// <param name="m3_EVNO">Event name operation</param>
-		/// <param name="m3_EVPB">Event publisher</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3EVNM">Event name</param>
+		/// <param name="m3EVNO">Event name operation</param>
+		/// <param name="m3EVPB">Event publisher</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -110,10 +113,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltField(
-			string m3_EVNM = null, 
-			string m3_EVNO = null, 
-			string m3_EVPB = null, 
-			string m3_FLDI = null, 
+			string m3EVNM = null, 
+			string m3EVNO = null, 
+			string m3EVPB = null, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -128,14 +131,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EVNM))
-				request.WithQueryParameter("EVNM", m3_EVNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVNO))
-				request.WithQueryParameter("EVNO", m3_EVNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVPB))
-				request.WithQueryParameter("EVPB", m3_EVPB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNM))
+				request.WithQueryParameter("EVNM", m3EVNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNO))
+				request.WithQueryParameter("EVNO", m3EVNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVPB))
+				request.WithQueryParameter("EVPB", m3EVPB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,10 +160,10 @@ namespace M3H5Lib.Api
 		/// Description Get record from CSYEVF
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_EVNM">Event name</param>
-		/// <param name="m3_EVNO">Event name operation</param>
-		/// <param name="m3_EVPB">Event publisher</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3EVNM">Event name</param>
+		/// <param name="m3EVNO">Event name operation</param>
+		/// <param name="m3EVPB">Event publisher</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -168,10 +172,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetFieldResponse></returns>
 		/// <exception cref="M3Exception<GetFieldResponse>"></exception>
 		public async Task<M3Response<GetFieldResponse>> GetField(
-			string m3_EVNM = null, 
-			string m3_EVNO = null, 
-			string m3_EVPB = null, 
-			string m3_FLDI = null, 
+			string m3EVNM = null, 
+			string m3EVNO = null, 
+			string m3EVPB = null, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -186,14 +190,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EVNM))
-				request.WithQueryParameter("EVNM", m3_EVNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVNO))
-				request.WithQueryParameter("EVNO", m3_EVNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVPB))
-				request.WithQueryParameter("EVPB", m3_EVPB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNM))
+				request.WithQueryParameter("EVNM", m3EVNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNO))
+				request.WithQueryParameter("EVNO", m3EVNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVPB))
+				request.WithQueryParameter("EVPB", m3EVPB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetFieldResponse>(
@@ -203,7 +207,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -214,9 +219,9 @@ namespace M3H5Lib.Api
 		/// Description List records from CSYEVF
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_EVNM">Event name</param>
-		/// <param name="m3_EVNO">Event name operation</param>
-		/// <param name="m3_EVPB">Event publisher</param>
+		/// <param name="m3EVNM">Event name</param>
+		/// <param name="m3EVNO">Event name operation</param>
+		/// <param name="m3EVPB">Event publisher</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -225,9 +230,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFieldsResponse></returns>
 		/// <exception cref="M3Exception<LstFieldsResponse>"></exception>
 		public async Task<M3Response<LstFieldsResponse>> LstFields(
-			string m3_EVNM = null, 
-			string m3_EVNO = null, 
-			string m3_EVPB = null, 
+			string m3EVNM = null, 
+			string m3EVNO = null, 
+			string m3EVPB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -242,12 +247,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EVNM))
-				request.WithQueryParameter("EVNM", m3_EVNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVNO))
-				request.WithQueryParameter("EVNO", m3_EVNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVPB))
-				request.WithQueryParameter("EVPB", m3_EVPB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNM))
+				request.WithQueryParameter("EVNM", m3EVNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNO))
+				request.WithQueryParameter("EVNO", m3EVNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVPB))
+				request.WithQueryParameter("EVPB", m3EVPB.Trim());
 
 			// Execute the request
 			var result = await Execute<LstFieldsResponse>(
@@ -257,7 +262,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -268,11 +274,11 @@ namespace M3H5Lib.Api
 		/// Description Update record in CSYEVF
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_EVNM">Event name</param>
-		/// <param name="m3_EVNO">Event name operation</param>
-		/// <param name="m3_EVPB">Event publisher</param>
-		/// <param name="m3_FLDI">Field</param>
-		/// <param name="m3_STAT">Status</param>
+		/// <param name="m3EVNM">Event name</param>
+		/// <param name="m3EVNO">Event name operation</param>
+		/// <param name="m3EVPB">Event publisher</param>
+		/// <param name="m3FLDI">Field</param>
+		/// <param name="m3STAT">Status</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -281,11 +287,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdField(
-			string m3_EVNM = null, 
-			string m3_EVNO = null, 
-			string m3_EVPB = null, 
-			string m3_FLDI = null, 
-			string m3_STAT = null, 
+			string m3EVNM = null, 
+			string m3EVNO = null, 
+			string m3EVPB = null, 
+			string m3FLDI = null, 
+			string m3STAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -300,16 +306,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EVNM))
-				request.WithQueryParameter("EVNM", m3_EVNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVNO))
-				request.WithQueryParameter("EVNO", m3_EVNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EVPB))
-				request.WithQueryParameter("EVPB", m3_EVPB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNM))
+				request.WithQueryParameter("EVNM", m3EVNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVNO))
+				request.WithQueryParameter("EVNO", m3EVNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EVPB))
+				request.WithQueryParameter("EVPB", m3EVPB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -319,7 +325,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Employee number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: From date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_TDAF => GetNullableDateTime("TDAF");
+		public DateTime? M3TDAF => GetNullableDateTime("TDAF");
 
 		/// <summary>
 		/// Description: To date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Work hours
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours")]
-		public decimal? M3_WTD1 => GetNullableDecimal("WTD1");
+		public decimal? M3WTD1 => GetNullableDecimal("WTD1");
 
 		/// <summary>
 		/// Description: Workday percentage
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Workday percentage")]
-		public int? M3_HDCO => GetNullableInt("HDCO");
+		public int? M3HDCO => GetNullableInt("HDCO");
 
 		/// <summary>
 		/// Description: Work hour definition code
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TMS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hour definition code")]
-		public string M3_WTC1 => GetString("WTC1");
+		public string M3WTC1 => GetString("WTC1");
 	}
 }
 // EOF

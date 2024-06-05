@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Work schedule
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule")]
-		public int? M3_WOSC => GetNullableInt("WOSC");
+		public int? M3WOSC => GetNullableInt("WOSC");
 
 		/// <summary>
 		/// Description: Date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DTUM => GetNullableDateTime("DTUM");
+		public DateTime? M3DTUM => GetNullableDateTime("DTUM");
 
 		/// <summary>
 		/// Description: From time
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From time")]
-		public int? M3_FRTM => GetNullableInt("FRTM");
+		public int? M3FRTM => GetNullableInt("FRTM");
 
 		/// <summary>
 		/// Description: To time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To time")]
-		public int? M3_TOTM => GetNullableInt("TOTM");
+		public int? M3TOTM => GetNullableInt("TOTM");
 
 		/// <summary>
 		/// Description: Break
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Break")]
-		public string M3_BRCD => GetString("BRCD");
+		public string M3BRCD => GetString("BRCD");
 
 		/// <summary>
 		/// Description: Ref field 0-2 allowed
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field 0-2 allowed")]
-		public int? M3_REF4 => GetNullableInt("REF4");
+		public int? M3REF4 => GetNullableInt("REF4");
 
 		/// <summary>
 		/// Description: Work hour definition
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hour definition")]
-		public string M3_WTCD => GetString("WTCD");
+		public string M3WTCD => GetString("WTCD");
 
 		/// <summary>
 		/// Description: Work hours per day
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours per day")]
-		public int? M3_WTDY => GetNullableInt("WTDY");
+		public int? M3WTDY => GetNullableInt("WTDY");
 	}
 }
 // EOF

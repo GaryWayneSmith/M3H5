@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Data identity
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Data identity reference
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity reference")]
-		public int? M3_DTRF => GetNullableInt("DTRF");
+		public int? M3DTRF => GetNullableInt("DTRF");
 
 		/// <summary>
 		/// Description: Data identity subnumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity subnumber")]
-		public int? M3_DTIS => GetNullableInt("DTIS");
+		public int? M3DTIS => GetNullableInt("DTIS");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Message ID
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Message
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message")]
-		public string M3_MSGD => GetString("MSGD");
+		public string M3MSGD => GetString("MSGD");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX61 => GetString("TX61");
+		public string M3TX61 => GetString("TX61");
 
 		/// <summary>
 		/// Description: Text
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX62 => GetString("TX62");
+		public string M3TX62 => GetString("TX62");
 
 		/// <summary>
 		/// Description: Text
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX63 => GetString("TX63");
+		public string M3TX63 => GetString("TX63");
 
 		/// <summary>
 		/// Description: Severity level
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Severity level")]
-		public int? M3_SEVL => GetNullableInt("SEVL");
+		public int? M3SEVL => GetNullableInt("SEVL");
 
 		/// <summary>
 		/// Description: Program name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Text identity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Mail
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mail")]
-		public decimal? M3_MLID => GetNullableDecimal("MLID");
+		public decimal? M3MLID => GetNullableDecimal("MLID");
 
 		/// <summary>
 		/// Description: Receiver
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiver")]
-		public string M3_REC2 => GetString("REC2");
+		public string M3REC2 => GetString("REC2");
 
 		/// <summary>
 		/// Description: Application message type
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application message type")]
-		public string M3_MTPE => GetString("MTPE");
+		public string M3MTPE => GetString("MTPE");
 
 		/// <summary>
 		/// Description: Text
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Sender
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sender")]
-		public string M3_SEND => GetString("SEND");
+		public string M3SEND => GetString("SEND");
 
 		/// <summary>
 		/// Description: Original receiver
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original receiver")]
-		public string M3_REC3 => GetString("REC3");
+		public string M3REC3 => GetString("REC3");
 
 		/// <summary>
 		/// Description: Action date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action date")]
-		public DateTime? M3_ADAT => GetNullableDateTime("ADAT");
+		public DateTime? M3ADAT => GetNullableDateTime("ADAT");
 
 		/// <summary>
 		/// Description: Completed date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Completed date")]
-		public DateTime? M3_CDAT => GetNullableDateTime("CDAT");
+		public DateTime? M3CDAT => GetNullableDateTime("CDAT");
 
 		/// <summary>
 		/// Description: Removal date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Removal date")]
-		public DateTime? M3_RMDT => GetNullableDateTime("RMDT");
+		public DateTime? M3RMDT => GetNullableDateTime("RMDT");
 
 		/// <summary>
 		/// Description: Message
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message")]
-		public string M3_MSGT => GetString("MSGT");
+		public string M3MSGT => GetString("MSGT");
 
 		/// <summary>
 		/// Description: Panel check ID
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel check ID")]
-		public string M3_PICC => GetString("PICC");
+		public string M3PICC => GetString("PICC");
 
 		/// <summary>
 		/// Description: Inquiry type
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inquiry type")]
-		public int? M3_QTTP => GetNullableInt("QTTP");
+		public int? M3QTTP => GetNullableInt("QTTP");
 
 		/// <summary>
 		/// Description: Option
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPT2 => GetString("OPT2");
+		public string M3OPT2 => GetString("OPT2");
 
 		/// <summary>
 		/// Description: Table
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Field
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Keystring exists
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Keystring exists")]
-		public string M3_KSEX => GetString("KSEX");
+		public string M3KSEX => GetString("KSEX");
 	}
 }
 // EOF

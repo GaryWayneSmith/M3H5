@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PPS385MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// Description Dlt
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Dlt(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -112,10 +115,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -136,8 +140,8 @@ namespace M3H5Lib.Api
 		/// Description Get
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -146,8 +150,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -162,10 +166,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -175,7 +179,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -186,8 +191,8 @@ namespace M3H5Lib.Api
 		/// Description Lst
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -196,8 +201,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -212,10 +217,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -225,7 +230,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -236,8 +242,8 @@ namespace M3H5Lib.Api
 		/// Description Upd
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -246,8 +252,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -262,10 +268,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -275,7 +281,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

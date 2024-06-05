@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Message
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message")]
-		public string M3_MSG1 => GetString("MSG1");
+		public string M3MSG1 => GetString("MSG1");
 
 		/// <summary>
 		/// Description: Severity level allowed
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Severity level allowed")]
-		public int? M3_SLEL => GetNullableInt("SLEL");
+		public int? M3SLEL => GetNullableInt("SLEL");
 
 		/// <summary>
 		/// Description: Customer text exist
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer text exist")]
-		public string M3_CTXT => GetString("CTXT");
+		public string M3CTXT => GetString("CTXT");
 
 		/// <summary>
 		/// Description: Customer order message exist
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order message exist")]
-		public string M3_CMSG => GetString("CMSG");
+		public string M3CMSG => GetString("CMSG");
 
 		/// <summary>
 		/// Description: Credit limit exceeded
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit exceeded")]
-		public string M3_CCRD => GetString("CCRD");
+		public string M3CCRD => GetString("CCRD");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Job number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public string M3_BJNO => GetString("BJNO");
+		public string M3BJNO => GetString("BJNO");
 
 		/// <summary>
 		/// Description: Function
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function")]
-		public string M3_FNID => GetString("FNID");
+		public string M3FNID => GetString("FNID");
 
 		/// <summary>
 		/// Description: Version
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_XVSN => GetNullableInt("XVSN");
+		public int? M3XVSN => GetNullableInt("XVSN");
 
 		/// <summary>
 		/// Description: User
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Job schedule type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job schedule type")]
-		public int? M3_SCTY => GetNullableInt("SCTY");
+		public int? M3SCTY => GetNullableInt("SCTY");
 
 		/// <summary>
 		/// Description: Text
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Job schedule category
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job schedule category")]
-		public string M3_XCAT => GetString("XCAT");
+		public string M3XCAT => GetString("XCAT");
 
 		/// <summary>
 		/// Description: Last run status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last run status")]
-		public string M3_XLRS => GetString("XLRS");
+		public string M3XLRS => GetString("XLRS");
 
 		/// <summary>
 		/// Description: Last run date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last run date")]
-		public DateTime? M3_XLRD => GetNullableDateTime("XLRD");
+		public DateTime? M3XLRD => GetNullableDateTime("XLRD");
 
 		/// <summary>
 		/// Description: Last run time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last run time")]
-		public int? M3_XLRT => GetNullableInt("XLRT");
+		public int? M3XLRT => GetNullableInt("XLRT");
 
 		/// <summary>
 		/// Description: Recovery action
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recovery action")]
-		public string M3_XSTI => GetString("XSTI");
+		public string M3XSTI => GetString("XSTI");
 
 		/// <summary>
 		/// Description: Entry date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Ad hoc report group
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ad hoc report group")]
-		public string M3_REPO => GetString("REPO");
+		public string M3REPO => GetString("REPO");
 
 		/// <summary>
 		/// Description: Ad hoc report
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ad hoc report")]
-		public string M3_REPV => GetString("REPV");
+		public string M3REPV => GetString("REPV");
 
 		/// <summary>
 		/// Description: Period type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type")]
-		public int? M3_PETP => GetNullableInt("PETP");
+		public int? M3PETP => GetNullableInt("PETP");
 
 		/// <summary>
 		/// Description: Text
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Job scheduler external id
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SHS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job scheduler external id")]
-		public string M3_JSEI => GetString("JSEI");
+		public string M3JSEI => GetString("JSEI");
 	}
 }
 // EOF

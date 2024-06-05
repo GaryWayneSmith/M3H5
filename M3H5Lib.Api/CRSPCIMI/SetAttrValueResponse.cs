@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Attribute value
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value")]
-		public string M3_ATVA => GetString("ATVA");
+		public string M3ATVA => GetString("ATVA");
 
 		/// <summary>
 		/// Description: Target value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target value")]
-		public decimal? M3_ATAN => GetNullableDecimal("ATAN");
+		public decimal? M3ATAN => GetNullableDecimal("ATAN");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public decimal? M3_ANUF => GetNullableDecimal("ANUF");
+		public decimal? M3ANUF => GetNullableDecimal("ANUF");
 
 		/// <summary>
 		/// Description: To attribute value
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To attribute value")]
-		public decimal? M3_ANUT => GetNullableDecimal("ANUT");
+		public decimal? M3ANUT => GetNullableDecimal("ANUT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_DATE => GetNullableDateTime("DATE");
+		public DateTime? M3DATE => GetNullableDateTime("DATE");
 
 		/// <summary>
 		/// Description: Attribute type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute type")]
-		public string M3_ATVC => GetString("ATVC");
+		public string M3ATVC => GetString("ATVC");
 
 		/// <summary>
 		/// Description: Name
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Text
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Main attribute
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main attribute")]
-		public int? M3_MAAT => GetNullableInt("MAAT");
+		public int? M3MAAT => GetNullableInt("MAAT");
 
 		/// <summary>
 		/// Description: Error
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error")]
-		public string M3_ATER => GetString("ATER");
+		public string M3ATER => GetString("ATER");
 
 		/// <summary>
 		/// Description: Text
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Sales price
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_SAPR => GetString("SAPR");
+		public string M3SAPR => GetString("SAPR");
 
 		/// <summary>
 		/// Description: Cost price
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public string M3_UCOS => GetString("UCOS");
+		public string M3UCOS => GetString("UCOS");
 
 		/// <summary>
 		/// Description: Sales price
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_SAPT => GetString("SAPT");
+		public string M3SAPT => GetString("SAPT");
 
 		/// <summary>
 		/// Description: Cost price
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public string M3_UCOT => GetString("UCOT");
+		public string M3UCOT => GetString("UCOT");
 
 		/// <summary>
 		/// Description: Text identity attribute line
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity attribute line")]
-		public decimal? M3_TXI1 => GetNullableDecimal("TXI1");
+		public decimal? M3TXI1 => GetNullableDecimal("TXI1");
 
 		/// <summary>
 		/// Description: Margin amount
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Margin amount")]
-		public string M3_MARG => GetString("MARG");
+		public string M3MARG => GetString("MARG");
 
 		/// <summary>
 		/// Description: Margin percentage
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Margin percentage")]
-		public int? M3_MAPC => GetNullableInt("MAPC");
+		public int? M3MAPC => GetNullableInt("MAPC");
 
 		/// <summary>
 		/// Description: Sales price
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_LOSP => GetString("LOSP");
+		public string M3LOSP => GetString("LOSP");
 
 		/// <summary>
 		/// Description: Currency
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_LODC => GetNullableInt("LODC");
+		public int? M3LODC => GetNullableInt("LODC");
 
 		/// <summary>
 		/// Description: Sales price
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_LOST => GetString("LOST");
+		public string M3LOST => GetString("LOST");
 
 		/// <summary>
 		/// Description: Sales price
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_SPLP => GetString("SPLP");
+		public string M3SPLP => GetString("SPLP");
 
 		/// <summary>
 		/// Description: Attribute value sequence number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value sequence number")]
-		public int? M3_AVSQ => GetNullableInt("AVSQ");
+		public int? M3AVSQ => GetNullableInt("AVSQ");
 
 		/// <summary>
 		/// Description: Attachment indicator
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attachment indicator")]
-		public int? M3_ATCI => GetNullableInt("ATCI");
+		public int? M3ATCI => GetNullableInt("ATCI");
 
 		/// <summary>
 		/// Description: Shipless indicator
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipless indicator")]
-		public int? M3_SHIP => GetNullableInt("SHIP");
+		public int? M3SHIP => GetNullableInt("SHIP");
 
 		/// <summary>
 		/// Description: Multiple attribute values
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiple attribute values")]
-		public int? M3_MUAV => GetNullableInt("MUAV");
+		public int? M3MUAV => GetNullableInt("MUAV");
 
 		/// <summary>
 		/// Description: Allow blank
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allow blank")]
-		public int? M3_ALBA => GetNullableInt("ALBA");
+		public int? M3ALBA => GetNullableInt("ALBA");
 	}
 }
 // EOF

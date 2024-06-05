@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business message")]
-		public string M3_BMSG => GetString("BMSG");
+		public string M3BMSG => GetString("BMSG");
 
 		/// <summary>
 		/// Description: Parent element(s)
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parent element(s)")]
-		public string M3_ELMP => GetString("ELMP");
+		public string M3ELMP => GetString("ELMP");
 
 		/// <summary>
 		/// Description: Data element
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data element")]
-		public string M3_ELMD => GetString("ELMD");
+		public string M3ELMD => GetString("ELMD");
 
 		/// <summary>
 		/// Description: Base country
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base country")]
-		public string M3_BSCD => GetString("BSCD");
+		public string M3BSCD => GetString("BSCD");
 
 		/// <summary>
 		/// Description: M3 Field
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("M3 Field")]
-		public string M3_MBFL => GetString("MBFL");
+		public string M3MBFL => GetString("MBFL");
 
 		/// <summary>
 		/// Description: M3 value From
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("M3 value From")]
-		public string M3_MVLF => GetString("MVLF");
+		public string M3MVLF => GetString("MVLF");
 
 		/// <summary>
 		/// Description: M3 value To
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("M3 value To")]
-		public string M3_MVLT => GetString("MVLT");
+		public string M3MVLT => GetString("MVLT");
 
 		/// <summary>
 		/// Description: Data element value
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS880MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data element value")]
-		public string M3_DELV => GetString("DELV");
+		public string M3DELV => GetString("DELV");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FAS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution unit")]
-		public string M3_DMTS => GetString("DMTS");
+		public string M3DMTS => GetString("DMTS");
 
 		/// <summary>
 		/// Description: Value period
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FAS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value period")]
-		public int? M3_VPER => GetNullableInt("VPER");
+		public int? M3VPER => GetNullableInt("VPER");
 
 		/// <summary>
 		/// Description: Share
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FAS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Share")]
-		public decimal? M3_ADSH => GetNullableDecimal("ADSH");
+		public decimal? M3ADSH => GetNullableDecimal("ADSH");
 
 		/// <summary>
 		/// Description: Used share
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FAS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used share")]
-		public decimal? M3_USSH => GetNullableDecimal("USSH");
+		public decimal? M3USSH => GetNullableDecimal("USSH");
 	}
 }
 // EOF

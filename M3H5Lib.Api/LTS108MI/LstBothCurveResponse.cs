@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS108MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_PERD => GetNullableInt("PERD");
+		public int? M3PERD => GetNullableInt("PERD");
 
 		/// <summary>
 		/// Description: Valid from
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS108MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS108MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Rent amount
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS108MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rent amount")]
-		public decimal? M3_RENT => GetNullableDecimal("RENT");
+		public decimal? M3RENT => GetNullableDecimal("RENT");
 
 		/// <summary>
 		/// Description: Amortization
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.LTS108MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amortization")]
-		public decimal? M3_AMRT => GetNullableDecimal("AMRT");
+		public decimal? M3AMRT => GetNullableDecimal("AMRT");
 
 		/// <summary>
 		/// Description: Interest amount
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.LTS108MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest amount")]
-		public decimal? M3_INVU => GetNullableDecimal("INVU");
+		public decimal? M3INVU => GetNullableDecimal("INVU");
 
 		/// <summary>
 		/// Description: Interest rate
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.LTS108MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest rate")]
-		public decimal? M3_INPE => GetNullableDecimal("INPE");
+		public decimal? M3INPE => GetNullableDecimal("INPE");
 	}
 }
 // EOF

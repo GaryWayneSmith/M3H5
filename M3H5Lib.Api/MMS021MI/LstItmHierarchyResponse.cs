@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Hierarchylevel
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hierarchylevel")]
-		public int? M3_HLVL => GetNullableInt("HLVL");
+		public int? M3HLVL => GetNullableInt("HLVL");
 
 		/// <summary>
 		/// Description: Hierachyidentity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hierachyidentity")]
-		public string M3_HIE0 => GetString("HIE0");
+		public string M3HIE0 => GetString("HIE0");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Upperlevel
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Upperlevel")]
-		public int? M3_ULVL => GetNullableInt("ULVL");
+		public int? M3ULVL => GetNullableInt("ULVL");
 
 		/// <summary>
 		/// Description: Upperlevelidentity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Upperlevelidentity")]
-		public string M3_ULID => GetString("ULID");
+		public string M3ULID => GetString("ULID");
 
 		/// <summary>
 		/// Description: Searchgroup
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Searchgroup")]
-		public string M3_GRP0 => GetString("GRP0");
+		public string M3GRP0 => GetString("GRP0");
 
 		/// <summary>
 		/// Description: Searchcriteria
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Searchcriteria")]
-		public string M3_ALTX => GetString("ALTX");
+		public string M3ALTX => GetString("ALTX");
 
 		/// <summary>
 		/// Description: Textidentity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Textidentity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

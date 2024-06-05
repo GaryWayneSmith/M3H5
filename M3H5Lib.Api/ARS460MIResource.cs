@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.ARS460MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Get Agreements by Customer
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_DDAN">Agreement proposal number (Required)</param>
-		/// <param name="m3_BKI2">Bank account identity (Required)</param>
-		/// <param name="m3_AGIN">Agreement indicator (Required)</param>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_BKID">Bank account identity (Required)</param>
-		/// <param name="m3_BKAG">Bank EDI agreement number (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3DDAN">Agreement proposal number (Required)</param>
+		/// <param name="m3BKI2">Bank account identity (Required)</param>
+		/// <param name="m3AGIN">Agreement indicator (Required)</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3BKID">Bank account identity (Required)</param>
+		/// <param name="m3BKAG">Bank EDI agreement number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAgByCustomerResponse></returns>
 		/// <exception cref="M3Exception<GetAgByCustomerResponse>"></exception>
 		public async Task<M3Response<GetAgByCustomerResponse>> GetAgByCustomer(
-			string m3_DIVI, 
-			long m3_DDAN, 
-			string m3_BKI2, 
-			string m3_AGIN, 
-			string m3_CUNO, 
-			string m3_BKID, 
-			string m3_BKAG, 
+			string m3DIVI, 
+			long m3DDAN, 
+			string m3BKI2, 
+			string m3AGIN, 
+			string m3CUNO, 
+			string m3BKID, 
+			string m3BKAG, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,28 +74,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BKI2))
-				throw new ArgumentNullException("m3_BKI2");
-			if (string.IsNullOrWhiteSpace(m3_AGIN))
-				throw new ArgumentNullException("m3_AGIN");
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_BKID))
-				throw new ArgumentNullException("m3_BKID");
-			if (string.IsNullOrWhiteSpace(m3_BKAG))
-				throw new ArgumentNullException("m3_BKAG");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BKI2))
+				throw new ArgumentNullException(nameof(m3BKI2));
+			if (string.IsNullOrWhiteSpace(m3AGIN))
+				throw new ArgumentNullException(nameof(m3AGIN));
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3BKID))
+				throw new ArgumentNullException(nameof(m3BKID));
+			if (string.IsNullOrWhiteSpace(m3BKAG))
+				throw new ArgumentNullException(nameof(m3BKAG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("DDAN", m3_DDAN.ToString())
-				.WithQueryParameter("BKI2", m3_BKI2.Trim())
-				.WithQueryParameter("AGIN", m3_AGIN.Trim())
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("BKID", m3_BKID.Trim())
-				.WithQueryParameter("BKAG", m3_BKAG.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("DDAN", m3DDAN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("BKI2", m3BKI2.Trim())
+				.WithQueryParameter("AGIN", m3AGIN.Trim())
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("BKID", m3BKID.Trim())
+				.WithQueryParameter("BKAG", m3BKAG.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAgByCustomerResponse>(
@@ -103,7 +105,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -114,12 +117,12 @@ namespace M3H5Lib.Api
 		/// Description Get Customer Information
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_DDAN">Agreement proposal number (Required)</param>
-		/// <param name="m3_BKI2">Bank account identity (Required)</param>
-		/// <param name="m3_AGIN">Agreement indicator (Required)</param>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_BKID">Bank account identity (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3DDAN">Agreement proposal number (Required)</param>
+		/// <param name="m3BKI2">Bank account identity (Required)</param>
+		/// <param name="m3AGIN">Agreement indicator (Required)</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3BKID">Bank account identity (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -128,12 +131,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCustomerHeadResponse></returns>
 		/// <exception cref="M3Exception<GetCustomerHeadResponse>"></exception>
 		public async Task<M3Response<GetCustomerHeadResponse>> GetCustomerHead(
-			string m3_DIVI, 
-			long m3_DDAN, 
-			string m3_BKI2, 
-			string m3_AGIN, 
-			string m3_CUNO, 
-			string m3_BKID, 
+			string m3DIVI, 
+			long m3DDAN, 
+			string m3BKI2, 
+			string m3AGIN, 
+			string m3CUNO, 
+			string m3BKID, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -148,25 +151,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BKI2))
-				throw new ArgumentNullException("m3_BKI2");
-			if (string.IsNullOrWhiteSpace(m3_AGIN))
-				throw new ArgumentNullException("m3_AGIN");
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_BKID))
-				throw new ArgumentNullException("m3_BKID");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BKI2))
+				throw new ArgumentNullException(nameof(m3BKI2));
+			if (string.IsNullOrWhiteSpace(m3AGIN))
+				throw new ArgumentNullException(nameof(m3AGIN));
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3BKID))
+				throw new ArgumentNullException(nameof(m3BKID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("DDAN", m3_DDAN.ToString())
-				.WithQueryParameter("BKI2", m3_BKI2.Trim())
-				.WithQueryParameter("AGIN", m3_AGIN.Trim())
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("BKID", m3_BKID.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("DDAN", m3DDAN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("BKI2", m3BKI2.Trim())
+				.WithQueryParameter("AGIN", m3AGIN.Trim())
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("BKID", m3BKID.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCustomerHeadResponse>(
@@ -176,7 +179,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -187,10 +191,10 @@ namespace M3H5Lib.Api
 		/// Description Get Head Information
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_DDAN">Agreement proposal number (Required)</param>
-		/// <param name="m3_BKI2">Bank account identity (Required)</param>
-		/// <param name="m3_AGIN">Agreement indicator (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3DDAN">Agreement proposal number (Required)</param>
+		/// <param name="m3BKI2">Bank account identity (Required)</param>
+		/// <param name="m3AGIN">Agreement indicator (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -199,10 +203,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetHeadResponse></returns>
 		/// <exception cref="M3Exception<GetHeadResponse>"></exception>
 		public async Task<M3Response<GetHeadResponse>> GetHead(
-			string m3_DIVI, 
-			long m3_DDAN, 
-			string m3_BKI2, 
-			string m3_AGIN, 
+			string m3DIVI, 
+			long m3DDAN, 
+			string m3BKI2, 
+			string m3AGIN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -217,19 +221,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BKI2))
-				throw new ArgumentNullException("m3_BKI2");
-			if (string.IsNullOrWhiteSpace(m3_AGIN))
-				throw new ArgumentNullException("m3_AGIN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BKI2))
+				throw new ArgumentNullException(nameof(m3BKI2));
+			if (string.IsNullOrWhiteSpace(m3AGIN))
+				throw new ArgumentNullException(nameof(m3AGIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("DDAN", m3_DDAN.ToString())
-				.WithQueryParameter("BKI2", m3_BKI2.Trim())
-				.WithQueryParameter("AGIN", m3_AGIN.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("DDAN", m3DDAN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("BKI2", m3BKI2.Trim())
+				.WithQueryParameter("AGIN", m3AGIN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetHeadResponse>(
@@ -239,7 +243,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -250,10 +255,10 @@ namespace M3H5Lib.Api
 		/// Description Get Head Adresses
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_DDAN">Agreement proposal number (Required)</param>
-		/// <param name="m3_BKI2">Bank account identity (Required)</param>
-		/// <param name="m3_AGIN">Agreement indicator (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3DDAN">Agreement proposal number (Required)</param>
+		/// <param name="m3BKI2">Bank account identity (Required)</param>
+		/// <param name="m3AGIN">Agreement indicator (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -262,10 +267,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetHeadAdressResponse></returns>
 		/// <exception cref="M3Exception<GetHeadAdressResponse>"></exception>
 		public async Task<M3Response<GetHeadAdressResponse>> GetHeadAdress(
-			string m3_DIVI, 
-			long m3_DDAN, 
-			string m3_BKI2, 
-			string m3_AGIN, 
+			string m3DIVI, 
+			long m3DDAN, 
+			string m3BKI2, 
+			string m3AGIN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -280,19 +285,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BKI2))
-				throw new ArgumentNullException("m3_BKI2");
-			if (string.IsNullOrWhiteSpace(m3_AGIN))
-				throw new ArgumentNullException("m3_AGIN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BKI2))
+				throw new ArgumentNullException(nameof(m3BKI2));
+			if (string.IsNullOrWhiteSpace(m3AGIN))
+				throw new ArgumentNullException(nameof(m3AGIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("DDAN", m3_DDAN.ToString())
-				.WithQueryParameter("BKI2", m3_BKI2.Trim())
-				.WithQueryParameter("AGIN", m3_AGIN.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("DDAN", m3DDAN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("BKI2", m3BKI2.Trim())
+				.WithQueryParameter("AGIN", m3AGIN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetHeadAdressResponse>(
@@ -302,7 +307,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -313,12 +319,12 @@ namespace M3H5Lib.Api
 		/// Description List Agreements by Customer
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_DDAN">Agreement proposal number (Required)</param>
-		/// <param name="m3_BKI2">Bank account identity (Required)</param>
-		/// <param name="m3_AGIN">Agreement indicator (Required)</param>
-		/// <param name="m3_CUNO">Customer number</param>
-		/// <param name="m3_BKID">Bank account identity</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3DDAN">Agreement proposal number (Required)</param>
+		/// <param name="m3BKI2">Bank account identity (Required)</param>
+		/// <param name="m3AGIN">Agreement indicator (Required)</param>
+		/// <param name="m3CUNO">Customer number</param>
+		/// <param name="m3BKID">Bank account identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -327,12 +333,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAgByCustomerResponse></returns>
 		/// <exception cref="M3Exception<LstAgByCustomerResponse>"></exception>
 		public async Task<M3Response<LstAgByCustomerResponse>> LstAgByCustomer(
-			string m3_DIVI, 
-			long m3_DDAN, 
-			string m3_BKI2, 
-			string m3_AGIN, 
-			string m3_CUNO = null, 
-			string m3_BKID = null, 
+			string m3DIVI, 
+			long m3DDAN, 
+			string m3BKI2, 
+			string m3AGIN, 
+			string m3CUNO = null, 
+			string m3BKID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -347,25 +353,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_BKI2))
-				throw new ArgumentNullException("m3_BKI2");
-			if (string.IsNullOrWhiteSpace(m3_AGIN))
-				throw new ArgumentNullException("m3_AGIN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3BKI2))
+				throw new ArgumentNullException(nameof(m3BKI2));
+			if (string.IsNullOrWhiteSpace(m3AGIN))
+				throw new ArgumentNullException(nameof(m3AGIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("DDAN", m3_DDAN.ToString())
-				.WithQueryParameter("BKI2", m3_BKI2.Trim())
-				.WithQueryParameter("AGIN", m3_AGIN.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("DDAN", m3DDAN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("BKI2", m3BKI2.Trim())
+				.WithQueryParameter("AGIN", m3AGIN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BKID))
-				request.WithQueryParameter("BKID", m3_BKID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BKID))
+				request.WithQueryParameter("BKID", m3BKID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAgByCustomerResponse>(
@@ -375,7 +381,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

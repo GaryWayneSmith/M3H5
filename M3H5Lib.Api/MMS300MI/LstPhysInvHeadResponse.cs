@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Physical inventory number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory number")]
-		public long? M3_STNB => GetNullableLong("STNB");
+		public long? M3STNB => GetNullableLong("STNB");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Physical inventory method
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory method")]
-		public int? M3_STMD => GetNullableInt("STMD");
+		public int? M3STMD => GetNullableInt("STMD");
 
 		/// <summary>
 		/// Description: Active physical inventory lines
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active physical inventory lines")]
-		public int? M3_STAR => GetNullableInt("STAR");
+		public int? M3STAR => GetNullableInt("STAR");
 
 		/// <summary>
 		/// Description: Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Planned physical inventory date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned physical inventory date")]
-		public DateTime? M3_STPD => GetNullableDateTime("STPD");
+		public DateTime? M3STPD => GetNullableDateTime("STPD");
 
 		/// <summary>
 		/// Description: Recount number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recount number")]
-		public long? M3_RENU => GetNullableLong("RENU");
+		public long? M3RENU => GetNullableLong("RENU");
 
 		/// <summary>
 		/// Description: Status - physical inventory
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - physical inventory")]
-		public long? M3_STAG => GetNullableLong("STAG");
+		public long? M3STAG => GetNullableLong("STAG");
 
 		/// <summary>
 		/// Description: Number of records
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of records")]
-		public int? M3_ARTO => GetNullableInt("ARTO");
+		public int? M3ARTO => GetNullableInt("ARTO");
 
 		/// <summary>
 		/// Description: Location
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Stock zone
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock zone")]
-		public string M3_SLTP => GetString("SLTP");
+		public string M3SLTP => GetString("SLTP");
 	}
 }
 // EOF

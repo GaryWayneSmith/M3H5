@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Physical inventory number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory number")]
-		public long? M3_STNB => GetNullableLong("STNB");
+		public long? M3STNB => GetNullableLong("STNB");
 
 		/// <summary>
 		/// Description: Text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Physical inventory date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory date")]
-		public DateTime? M3_STDI => GetNullableDateTime("STDI");
+		public DateTime? M3STDI => GetNullableDateTime("STDI");
 
 		/// <summary>
 		/// Description: Physical inventory line
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory line")]
-		public int? M3_STRN => GetNullableInt("STRN");
+		public int? M3STRN => GetNullableInt("STRN");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Location
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Container
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Physical inventory quantity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory quantity")]
-		public decimal? M3_STQI => GetNullableDecimal("STQI");
+		public decimal? M3STQI => GetNullableDecimal("STQI");
 
 		/// <summary>
 		/// Description: On-hand balance approved
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("On-hand balance approved")]
-		public decimal? M3_STQT => GetNullableDecimal("STQT");
+		public decimal? M3STQT => GetNullableDecimal("STQT");
 
 		/// <summary>
 		/// Description: Difference - basic U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Difference - basic U/M")]
-		public decimal? M3_DFQT => GetNullableDecimal("DFQT");
+		public decimal? M3DFQT => GetNullableDecimal("DFQT");
 
 		/// <summary>
 		/// Description: Difference amount
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Difference amount")]
-		public decimal? M3_DFAM => GetNullableDecimal("DFAM");
+		public decimal? M3DFAM => GetNullableDecimal("DFAM");
 
 		/// <summary>
 		/// Description: Acquisition cost
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition cost")]
-		public decimal? M3_DAQB => GetNullableDecimal("DAQB");
+		public decimal? M3DAQB => GetNullableDecimal("DAQB");
 
 		/// <summary>
 		/// Description: Acquisition cost
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition cost")]
-		public decimal? M3_DAQI => GetNullableDecimal("DAQI");
+		public decimal? M3DAQI => GetNullableDecimal("DAQI");
 
 		/// <summary>
 		/// Description: Discount
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount")]
-		public int? M3_DIPC => GetNullableInt("DIPC");
+		public int? M3DIPC => GetNullableInt("DIPC");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_DAPC => GetNullableInt("DAPC");
+		public int? M3DAPC => GetNullableInt("DAPC");
 
 		/// <summary>
 		/// Description: Status - physical inventory
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - physical inventory")]
-		public int? M3_STAG => GetNullableInt("STAG");
+		public int? M3STAG => GetNullableInt("STAG");
 
 		/// <summary>
 		/// Description: Responsible
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Status
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAC => GetString("STAC");
+		public string M3STAC => GetString("STAC");
 
 		/// <summary>
 		/// Description: Entry date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Facility
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS307MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 	}
 }
 // EOF

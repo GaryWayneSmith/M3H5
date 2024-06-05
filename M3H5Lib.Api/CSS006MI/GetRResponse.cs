@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Dealer code
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dealer code")]
-		public string M3_IDL1 => GetString("IDL1");
+		public string M3IDL1 => GetString("IDL1");
 
 		/// <summary>
 		/// Description: Price model
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price model")]
-		public string M3_APRM => GetString("APRM");
+		public string M3APRM => GetString("APRM");
 
 		/// <summary>
 		/// Description: From date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: Section code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Section code")]
-		public string M3_SECO => GetString("SECO");
+		public string M3SECO => GetString("SECO");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQ3 => GetNullableInt("SEQ3");
+		public int? M3SEQ3 => GetNullableInt("SEQ3");
 
 		/// <summary>
 		/// Description: Sub sequence number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sub sequence number")]
-		public int? M3_SEQ2 => GetNullableInt("SEQ2");
+		public int? M3SEQ2 => GetNullableInt("SEQ2");
 
 		/// <summary>
 		/// Description: Item category
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item category")]
-		public int? M3_TPCD => GetNullableInt("TPCD");
+		public int? M3TPCD => GetNullableInt("TPCD");
 
 		/// <summary>
 		/// Description: Reference sequence number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference sequence number")]
-		public int? M3_SEQ5 => GetNullableInt("SEQ5");
+		public int? M3SEQ5 => GetNullableInt("SEQ5");
 
 		/// <summary>
 		/// Description: Change date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_CHDA => GetNullableDateTime("CHDA");
+		public DateTime? M3CHDA => GetNullableDateTime("CHDA");
 
 		/// <summary>
 		/// Description: Activity code
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activity code")]
-		public string M3_AVCD => GetString("AVCD");
+		public string M3AVCD => GetString("AVCD");
 
 		/// <summary>
 		/// Description: Item number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Date introduced into Movex
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date introduced into Movex")]
-		public DateTime? M3_BIRS => GetNullableDateTime("BIRS");
+		public DateTime? M3BIRS => GetNullableDateTime("BIRS");
 
 		/// <summary>
 		/// Description: Replaced item number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replaced item number")]
-		public string M3_REPI => GetString("REPI");
+		public string M3REPI => GetString("REPI");
 
 		/// <summary>
 		/// Description: Use code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Use code")]
-		public string M3_USCO => GetString("USCO");
+		public string M3USCO => GetString("USCO");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Net weight
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Sales price
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAP1 => GetNullableDecimal("SAP1");
+		public decimal? M3SAP1 => GetNullableDecimal("SAP1");
 
 		/// <summary>
 		/// Description: Net price used
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price used")]
-		public int? M3_NTCD => GetNullableInt("NTCD");
+		public int? M3NTCD => GetNullableInt("NTCD");
 
 		/// <summary>
 		/// Description: Discount 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 1")]
-		public int? M3_DIP1 => GetNullableInt("DIP1");
+		public int? M3DIP1 => GetNullableInt("DIP1");
 
 		/// <summary>
 		/// Description: Name
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Attachment indicator
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attachment indicator")]
-		public string M3_ATCI => GetString("ATCI");
+		public string M3ATCI => GetString("ATCI");
 
 		/// <summary>
 		/// Description: Indicator
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Indicator")]
-		public string M3_IN60 => GetString("IN60");
+		public string M3IN60 => GetString("IN60");
 
 		/// <summary>
 		/// Description: Order product type
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order product type")]
-		public string M3_ORPT => GetString("ORPT");
+		public string M3ORPT => GetString("ORPT");
 
 		/// <summary>
 		/// Description: Indicator
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Indicator")]
-		public string M3_IN71 => GetString("IN71");
+		public string M3IN71 => GetString("IN71");
 
 		/// <summary>
 		/// Description: Sales model
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales model")]
-		public string M3_ASLM => GetString("ASLM");
+		public string M3ASLM => GetString("ASLM");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSDS => GetNullableInt("MSDS");
+		public int? M3MSDS => GetNullableInt("MSDS");
 
 		/// <summary>
 		/// Description: Attribute sequence number
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute sequence number")]
-		public int? M3_ANSQ => GetNullableInt("ANSQ");
+		public int? M3ANSQ => GetNullableInt("ANSQ");
 
 		/// <summary>
 		/// Description: Text identity
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CSS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

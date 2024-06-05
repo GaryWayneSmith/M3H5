@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection identity")]
-		public string M3_INSI => GetString("INSI");
+		public string M3INSI => GetString("INSI");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Line number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_SPOS => GetNullableInt("SPOS");
+		public int? M3SPOS => GetNullableInt("SPOS");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Result identity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result identity")]
-		public string M3_RSIY => GetString("RSIY");
+		public string M3RSIY => GetString("RSIY");
 
 		/// <summary>
 		/// Description: Result unit of measure
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result unit of measure")]
-		public string M3_RUOM => GetString("RUOM");
+		public string M3RUOM => GetString("RUOM");
 
 		/// <summary>
 		/// Description: Meter
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Expected value
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expected value")]
-		public string M3_EVAL => GetString("EVAL");
+		public string M3EVAL => GetString("EVAL");
 
 		/// <summary>
 		/// Description: Operator
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE1 => GetString("OPE1");
+		public string M3OPE1 => GetString("OPE1");
 
 		/// <summary>
 		/// Description: Range value
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Range value")]
-		public string M3_RBFR => GetString("RBFR");
+		public string M3RBFR => GetString("RBFR");
 
 		/// <summary>
 		/// Description: Operator
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE2 => GetString("OPE2");
+		public string M3OPE2 => GetString("OPE2");
 
 		/// <summary>
 		/// Description: Range value
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Range value")]
-		public string M3_RBTO => GetString("RBTO");
+		public string M3RBTO => GetString("RBTO");
 
 		/// <summary>
 		/// Description: Operator
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE3 => GetString("OPE3");
+		public string M3OPE3 => GetString("OPE3");
 
 		/// <summary>
 		/// Description: External limit
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External limit")]
-		public string M3_EAFR => GetString("EAFR");
+		public string M3EAFR => GetString("EAFR");
 
 		/// <summary>
 		/// Description: Operator
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE4 => GetString("OPE4");
+		public string M3OPE4 => GetString("OPE4");
 
 		/// <summary>
 		/// Description: External limit
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External limit")]
-		public string M3_EATO => GetString("EATO");
+		public string M3EATO => GetString("EATO");
 
 		/// <summary>
 		/// Description: Operator
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE5 => GetString("OPE5");
+		public string M3OPE5 => GetString("OPE5");
 
 		/// <summary>
 		/// Description: Alarm limit
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alarm limit")]
-		public string M3_AAFR => GetString("AAFR");
+		public string M3AAFR => GetString("AAFR");
 
 		/// <summary>
 		/// Description: Operator
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE6 => GetString("OPE6");
+		public string M3OPE6 => GetString("OPE6");
 
 		/// <summary>
 		/// Description: Alarm limit
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alarm limit")]
-		public string M3_AATO => GetString("AATO");
+		public string M3AATO => GetString("AATO");
 
 		/// <summary>
 		/// Description: Operator
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE7 => GetString("OPE7");
+		public string M3OPE7 => GetString("OPE7");
 
 		/// <summary>
 		/// Description: Trend limit
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trend limit")]
-		public string M3_AATR => GetString("AATR");
+		public string M3AATR => GetString("AATR");
 
 		/// <summary>
 		/// Description: Text line 1
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 1")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line 2
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 2")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Text identity
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PDS041MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

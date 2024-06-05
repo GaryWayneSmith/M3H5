@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Invoice series
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice series")]
-		public string M3_OT34 => GetString("OT34");
+		public string M3OT34 => GetString("OT34");
 
 		/// <summary>
 		/// Description: Year
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Invoice prefix
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public string M3_NOIF => GetString("NOIF");
+		public string M3NOIF => GetString("NOIF");
 
 		/// <summary>
 		/// Description: Information type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information type")]
-		public string M3_IVTP => GetString("IVTP");
+		public string M3IVTP => GetString("IVTP");
 
 		/// <summary>
 		/// Description: Invoice reference
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice reference")]
-		public string M3_IVRF => GetString("IVRF");
+		public string M3IVRF => GetString("IVRF");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Entry date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public string M3_DTEM => GetString("DTEM");
+		public string M3DTEM => GetString("DTEM");
 
 		/// <summary>
 		/// Description: Item number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Item name
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Internal CFOP Code
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal CFOP Code")]
-		public string M3_ICFO => GetString("ICFO");
+		public string M3ICFO => GetString("ICFO");
 
 		/// <summary>
 		/// Description: CFOP
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CFOP")]
-		public string M3_CFOP => GetString("CFOP");
+		public string M3CFOP => GetString("CFOP");
 
 		/// <summary>
 		/// Description: ICMS tribute code
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ICMS tribute code")]
-		public string M3_XCCS => GetString("XCCS");
+		public string M3XCCS => GetString("XCCS");
 
 		/// <summary>
 		/// Description: Classificacao Fiscal
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Classificacao Fiscal")]
-		public string M3_CFIS => GetString("CFIS");
+		public string M3CFIS => GetString("CFIS");
 
 		/// <summary>
 		/// Description: Invoiced quantity - sales price U/M
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity - sales price U/M")]
-		public decimal? M3_IVQS => GetNullableDecimal("IVQS");
+		public decimal? M3IVQS => GetNullableDecimal("IVQS");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_SQUN => GetString("SQUN");
+		public string M3SQUN => GetString("SQUN");
 
 		/// <summary>
 		/// Description: Sales price unit of measure
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price unit of measure")]
-		public string M3_SPUN => GetString("SPUN");
+		public string M3SPUN => GetString("SPUN");
 
 		/// <summary>
 		/// Description: % IPI
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% IPI")]
-		public int? M3_PIPI => GetNullableInt("PIPI");
+		public int? M3PIPI => GetNullableInt("PIPI");
 
 		/// <summary>
 		/// Description: % ICMS
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% ICMS")]
-		public int? M3_PICM => GetNullableInt("PICM");
+		public int? M3PICM => GetNullableInt("PICM");
 
 		/// <summary>
 		/// Description: % tax subst
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% tax subst")]
-		public int? M3_ASTR => GetNullableInt("ASTR");
+		public int? M3ASTR => GetNullableInt("ASTR");
 
 		/// <summary>
 		/// Description: % ISS
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% ISS")]
-		public int? M3_CISS => GetNullableInt("CISS");
+		public int? M3CISS => GetNullableInt("CISS");
 
 		/// <summary>
 		/// Description: % IRRF
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% IRRF")]
-		public int? M3_IRRF => GetNullableInt("IRRF");
+		public int? M3IRRF => GetNullableInt("IRRF");
 
 		/// <summary>
 		/// Description: % PIS
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% PIS")]
-		public int? M3_XPI1 => GetNullableInt("XPI1");
+		public int? M3XPI1 => GetNullableInt("XPI1");
 
 		/// <summary>
 		/// Description: COFINS percentage
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("COFINS percentage")]
-		public int? M3_XPCO => GetNullableInt("XPCO");
+		public int? M3XPCO => GetNullableInt("XPCO");
 
 		/// <summary>
 		/// Description: Insurance amount overdue
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance amount overdue")]
-		public int? M3_FL06 => GetNullableInt("FL06");
+		public int? M3FL06 => GetNullableInt("FL06");
 
 		/// <summary>
 		/// Description: Returned quantity
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Returned quantity")]
-		public decimal? M3_REQ1 => GetNullableDecimal("REQ1");
+		public decimal? M3REQ1 => GetNullableDecimal("REQ1");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVAM => GetNullableDecimal("IVAM");
+		public decimal? M3IVAM => GetNullableDecimal("IVAM");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVLA => GetNullableDecimal("IVLA");
+		public decimal? M3IVLA => GetNullableDecimal("IVLA");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Text identity
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Extended invoice number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended invoice number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: NF-e key
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("NF-e key")]
-		public string M3_RKEY => GetString("RKEY");
+		public string M3RKEY => GetString("RKEY");
 
 		/// <summary>
 		/// Description: Issuer IBGE FU code
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issuer IBGE FU code")]
-		public string M3_RCFU => GetString("RCFU");
+		public string M3RCFU => GetString("RCFU");
 
 		/// <summary>
 		/// Description: Year
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_RAME => GetNullableInt("RAME");
+		public int? M3RAME => GetNullableInt("RAME");
 
 		/// <summary>
 		/// Description: Issuer CNPJ code
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issuer CNPJ code")]
-		public string M3_RCNP => GetString("RCNP");
+		public string M3RCNP => GetString("RCNP");
 
 		/// <summary>
 		/// Description: Referenced Document model
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Referenced Document model")]
-		public string M3_RMOD => GetString("RMOD");
+		public string M3RMOD => GetString("RMOD");
 
 		/// <summary>
 		/// Description: Referenced Document series
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Referenced Document series")]
-		public string M3_RSER => GetString("RSER");
+		public string M3RSER => GetString("RSER");
 
 		/// <summary>
 		/// Description: Referenced Document number
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Referenced Document number")]
-		public string M3_RNDF => GetString("RNDF");
+		public string M3RNDF => GetString("RNDF");
 
 		/// <summary>
 		/// Description: DI item
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("DI item")]
-		public int? M3_ADNR => GetNullableInt("ADNR");
+		public int? M3ADNR => GetNullableInt("ADNR");
 
 		/// <summary>
 		/// Description: Line number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_ADLN => GetNullableInt("ADLN");
+		public int? M3ADLN => GetNullableInt("ADLN");
 
 		/// <summary>
 		/// Description: Foreign maker code
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign maker code")]
-		public string M3_FMCD => GetString("FMCD");
+		public string M3FMCD => GetString("FMCD");
 
 		/// <summary>
 		/// Description: Discount value
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount value")]
-		public decimal? M3_ADDV => GetNullableDecimal("ADDV");
+		public decimal? M3ADDV => GetNullableDecimal("ADDV");
 
 		/// <summary>
 		/// Description: Customers order number
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Line number
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_CUPO => GetNullableInt("CUPO");
+		public int? M3CUPO => GetNullableInt("CUPO");
 
 		/// <summary>
 		/// Description: Withheld ICMS ST bas amount
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Withheld ICMS ST bas amount")]
-		public decimal? M3_WSTB => GetNullableDecimal("WSTB");
+		public decimal? M3WSTB => GetNullableDecimal("WSTB");
 
 		/// <summary>
 		/// Description: Withheld ICMS ST amount
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Withheld ICMS ST amount")]
-		public decimal? M3_WSTV => GetNullableDecimal("WSTV");
+		public decimal? M3WSTV => GetNullableDecimal("WSTV");
 	}
 }
 // EOF

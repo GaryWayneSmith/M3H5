@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Component identity
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component identity")]
-		public string M3_MTRL => GetString("MTRL");
+		public string M3MTRL => GetString("MTRL");
 
 		/// <summary>
 		/// Description: Serial number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Configuration position
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration position")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: Position Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Position Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SER2 => GetString("SER2");
+		public string M3SER2 => GetString("SER2");
 
 		/// <summary>
 		/// Description: Item Name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Not known
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Not known")]
-		public int? M3_NOTK => GetNullableInt("NOTK");
+		public int? M3NOTK => GetNullableInt("NOTK");
 
 		/// <summary>
 		/// Description: Concession number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Concession number")]
-		public string M3_EXNO => GetString("EXNO");
+		public string M3EXNO => GetString("EXNO");
 
 		/// <summary>
 		/// Description: Status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Number of units for config position
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of units for config position")]
-		public int? M3_NUCP => GetNullableInt("NUCP");
+		public int? M3NUCP => GetNullableInt("NUCP");
 
 		/// <summary>
 		/// Description: Item/serial number code
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item/serial number code")]
-		public string M3_FEMP => GetString("FEMP");
+		public string M3FEMP => GetString("FEMP");
 
 		/// <summary>
 		/// Description: Text identity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Engine
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Engine")]
-		public int? M3_ENGI => GetNullableInt("ENGI");
+		public int? M3ENGI => GetNullableInt("ENGI");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Meter value 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 1")]
-		public decimal? M3_MVA1 => GetNullableDecimal("MVA1");
+		public decimal? M3MVA1 => GetNullableDecimal("MVA1");
 
 		/// <summary>
 		/// Description: Meter 2
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 2")]
-		public string M3_MES2 => GetString("MES2");
+		public string M3MES2 => GetString("MES2");
 
 		/// <summary>
 		/// Description: Meter value 2
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 2")]
-		public decimal? M3_MVA2 => GetNullableDecimal("MVA2");
+		public decimal? M3MVA2 => GetNullableDecimal("MVA2");
 
 		/// <summary>
 		/// Description: Meter 3
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 3")]
-		public string M3_MES3 => GetString("MES3");
+		public string M3MES3 => GetString("MES3");
 
 		/// <summary>
 		/// Description: Meter value 3
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 3")]
-		public decimal? M3_MVA3 => GetNullableDecimal("MVA3");
+		public decimal? M3MVA3 => GetNullableDecimal("MVA3");
 
 		/// <summary>
 		/// Description: Meter 4
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 4")]
-		public string M3_MES4 => GetString("MES4");
+		public string M3MES4 => GetString("MES4");
 
 		/// <summary>
 		/// Description: Meter value 4
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 4")]
-		public decimal? M3_MVA4 => GetNullableDecimal("MVA4");
+		public decimal? M3MVA4 => GetNullableDecimal("MVA4");
 
 		/// <summary>
 		/// Description: Lower level exist
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lower level exist")]
-		public string M3_PLUS => GetString("PLUS");
+		public string M3PLUS => GetString("PLUS");
 
 		/// <summary>
 		/// Description: Equipment type
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment type")]
-		public string M3_EQTP => GetString("EQTP");
+		public string M3EQTP => GetString("EQTP");
 
 		/// <summary>
 		/// Description: Sales model
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales model")]
-		public string M3_ASLM => GetString("ASLM");
+		public string M3ASLM => GetString("ASLM");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MOS256MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 	}
 }
 // EOF

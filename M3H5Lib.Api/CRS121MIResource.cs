@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS121MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add Inventory Segment
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ISEG">Inventory segment (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3ISEG">Inventory segment (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddInventorySeg(
-			string m3_ISEG, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
+			string m3ISEG, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ISEG))
-				throw new ArgumentNullException("m3_ISEG");
+			if (string.IsNullOrWhiteSpace(m3ISEG))
+				throw new ArgumentNullException(nameof(m3ISEG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ISEG", m3_ISEG.Trim());
+				.WithQueryParameter("ISEG", m3ISEG.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,7 +99,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Inventory Segment
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ISEG">Inventory segment (Required)</param>
+		/// <param name="m3ISEG">Inventory segment (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -105,7 +108,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltInventorySeg(
-			string m3_ISEG, 
+			string m3ISEG, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,12 +123,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ISEG))
-				throw new ArgumentNullException("m3_ISEG");
+			if (string.IsNullOrWhiteSpace(m3ISEG))
+				throw new ArgumentNullException(nameof(m3ISEG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ISEG", m3_ISEG.Trim());
+				.WithQueryParameter("ISEG", m3ISEG.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -135,7 +138,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -146,7 +150,7 @@ namespace M3H5Lib.Api
 		/// Description Get Inventory Segment
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ISEG">Inventory segment (Required)</param>
+		/// <param name="m3ISEG">Inventory segment (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -155,7 +159,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetInventorySegResponse></returns>
 		/// <exception cref="M3Exception<GetInventorySegResponse>"></exception>
 		public async Task<M3Response<GetInventorySegResponse>> GetInventorySeg(
-			string m3_ISEG, 
+			string m3ISEG, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -170,12 +174,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ISEG))
-				throw new ArgumentNullException("m3_ISEG");
+			if (string.IsNullOrWhiteSpace(m3ISEG))
+				throw new ArgumentNullException(nameof(m3ISEG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ISEG", m3_ISEG.Trim());
+				.WithQueryParameter("ISEG", m3ISEG.Trim());
 
 			// Execute the request
 			var result = await Execute<GetInventorySegResponse>(
@@ -185,7 +189,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -196,7 +201,7 @@ namespace M3H5Lib.Api
 		/// Description List inventory Segment
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ISEG">Inventory segment (Required)</param>
+		/// <param name="m3ISEG">Inventory segment (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -205,7 +210,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstInventorySegResponse></returns>
 		/// <exception cref="M3Exception<LstInventorySegResponse>"></exception>
 		public async Task<M3Response<LstInventorySegResponse>> LstInventorySeg(
-			string m3_ISEG, 
+			string m3ISEG, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -220,12 +225,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ISEG))
-				throw new ArgumentNullException("m3_ISEG");
+			if (string.IsNullOrWhiteSpace(m3ISEG))
+				throw new ArgumentNullException(nameof(m3ISEG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ISEG", m3_ISEG.Trim());
+				.WithQueryParameter("ISEG", m3ISEG.Trim());
 
 			// Execute the request
 			var result = await Execute<LstInventorySegResponse>(
@@ -235,7 +240,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -246,9 +252,9 @@ namespace M3H5Lib.Api
 		/// Description Upd inventory segment
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ISEG">Inventory segment</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3ISEG">Inventory segment</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -257,9 +263,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdInventorySeg(
-			string m3_ISEG = null, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
+			string m3ISEG = null, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -274,12 +280,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ISEG))
-				request.WithQueryParameter("ISEG", m3_ISEG.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ISEG))
+				request.WithQueryParameter("ISEG", m3ISEG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -289,7 +295,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

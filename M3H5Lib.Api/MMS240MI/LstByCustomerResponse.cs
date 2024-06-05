@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Brand
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: Year model
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year model")]
-		public string M3_MLYR => GetString("MLYR");
+		public string M3MLYR => GetString("MLYR");
 
 		/// <summary>
 		/// Description: Registration number/site
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number/site")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 
 		/// <summary>
 		/// Description: Fleet number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fleet number")]
-		public string M3_FLNO => GetString("FLNO");
+		public string M3FLNO => GetString("FLNO");
 
 		/// <summary>
 		/// Description: Sales model
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales model")]
-		public string M3_ASLM => GetString("ASLM");
+		public string M3ASLM => GetString("ASLM");
 
 		/// <summary>
 		/// Description: Price model
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price model")]
-		public string M3_APRM => GetString("APRM");
+		public string M3APRM => GetString("APRM");
 
 		/// <summary>
 		/// Description: Dealer model
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dealer model")]
-		public string M3_ADLM => GetString("ADLM");
+		public string M3ADLM => GetString("ADLM");
 
 		/// <summary>
 		/// Description: Compatibility code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compatibility code")]
-		public string M3_ACMC => GetString("ACMC");
+		public string M3ACMC => GetString("ACMC");
 
 		/// <summary>
 		/// Description: Owner
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Owner")]
-		public string M3_CUOW => GetString("CUOW");
+		public string M3CUOW => GetString("CUOW");
 
 		/// <summary>
 		/// Description: Address number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line number")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Purchase order  line subnumber
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order  line subnumber")]
-		public string M3_PNLS => GetString("PNLS");
+		public string M3PNLS => GetString("PNLS");
 	}
 }
 // EOF

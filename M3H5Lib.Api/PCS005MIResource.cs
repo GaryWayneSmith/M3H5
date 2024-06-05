@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PCS005MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,16 +38,16 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 14
 		/// </summary>
-		/// <param name="m3_PCTP">Costing type (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_REUP">Update permitted</param>
-		/// <param name="m3_SIMA">Permit simulation</param>
-		/// <param name="m3_RECI">Recalculation at inquiry</param>
-		/// <param name="m3_CSUR">Distribute order costs on order qty</param>
-		/// <param name="m3_SCOT">Substituting costing type</param>
-		/// <param name="m3_OCRT">Exchange rate type</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3PCTP">Costing type (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3REUP">Update permitted</param>
+		/// <param name="m3SIMA">Permit simulation</param>
+		/// <param name="m3RECI">Recalculation at inquiry</param>
+		/// <param name="m3CSUR">Distribute order costs on order qty</param>
+		/// <param name="m3SCOT">Substituting costing type</param>
+		/// <param name="m3OCRT">Exchange rate type</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -54,16 +56,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_PCTP, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
-			int? m3_REUP = null, 
-			int? m3_SIMA = null, 
-			int? m3_RECI = null, 
-			int? m3_CSUR = null, 
-			string m3_SCOT = null, 
-			int? m3_OCRT = null, 
-			decimal? m3_TXID = null, 
+			string m3PCTP, 
+			string m3TX40, 
+			string m3TX15 = null, 
+			int? m3REUP = null, 
+			int? m3SIMA = null, 
+			int? m3RECI = null, 
+			int? m3CSUR = null, 
+			string m3SCOT = null, 
+			int? m3OCRT = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -78,33 +80,33 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PCTP))
-				throw new ArgumentNullException("m3_PCTP");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3PCTP))
+				throw new ArgumentNullException(nameof(m3PCTP));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PCTP", m3_PCTP.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("PCTP", m3PCTP.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_REUP.HasValue)
-				request.WithQueryParameter("REUP", m3_REUP.Value.ToString());
-			if (m3_SIMA.HasValue)
-				request.WithQueryParameter("SIMA", m3_SIMA.Value.ToString());
-			if (m3_RECI.HasValue)
-				request.WithQueryParameter("RECI", m3_RECI.Value.ToString());
-			if (m3_CSUR.HasValue)
-				request.WithQueryParameter("CSUR", m3_CSUR.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SCOT))
-				request.WithQueryParameter("SCOT", m3_SCOT.Trim());
-			if (m3_OCRT.HasValue)
-				request.WithQueryParameter("OCRT", m3_OCRT.Value.ToString());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3REUP.HasValue)
+				request.WithQueryParameter("REUP", m3REUP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SIMA.HasValue)
+				request.WithQueryParameter("SIMA", m3SIMA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RECI.HasValue)
+				request.WithQueryParameter("RECI", m3RECI.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CSUR.HasValue)
+				request.WithQueryParameter("CSUR", m3CSUR.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SCOT))
+				request.WithQueryParameter("SCOT", m3SCOT.Trim());
+			if (m3OCRT.HasValue)
+				request.WithQueryParameter("OCRT", m3OCRT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -114,7 +116,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -125,7 +128,7 @@ namespace M3H5Lib.Api
 		/// Description Delete
 		/// Version Release: 14
 		/// </summary>
-		/// <param name="m3_PCTP">Costing type</param>
+		/// <param name="m3PCTP">Costing type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -134,7 +137,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Del(
-			string m3_PCTP = null, 
+			string m3PCTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -149,8 +152,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PCTP))
-				request.WithQueryParameter("PCTP", m3_PCTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PCTP))
+				request.WithQueryParameter("PCTP", m3PCTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -160,7 +163,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -171,7 +175,7 @@ namespace M3H5Lib.Api
 		/// Description Get
 		/// Version Release: 14
 		/// </summary>
-		/// <param name="m3_PCTP">Costing type</param>
+		/// <param name="m3PCTP">Costing type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -180,7 +184,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_PCTP = null, 
+			string m3PCTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -195,8 +199,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PCTP))
-				request.WithQueryParameter("PCTP", m3_PCTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PCTP))
+				request.WithQueryParameter("PCTP", m3PCTP.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -206,7 +210,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -246,7 +251,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -257,16 +263,16 @@ namespace M3H5Lib.Api
 		/// Description Update
 		/// Version Release: 14
 		/// </summary>
-		/// <param name="m3_PCTP">Costing type</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_REUP">Update permitted</param>
-		/// <param name="m3_SIMA">Permit simulation</param>
-		/// <param name="m3_RECI">Recalculation at inquiry</param>
-		/// <param name="m3_CSUR">Distribute order costs on order qty</param>
-		/// <param name="m3_SCOT">Substituting costing type</param>
-		/// <param name="m3_OCRT">Exchange rate type</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3PCTP">Costing type</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3REUP">Update permitted</param>
+		/// <param name="m3SIMA">Permit simulation</param>
+		/// <param name="m3RECI">Recalculation at inquiry</param>
+		/// <param name="m3CSUR">Distribute order costs on order qty</param>
+		/// <param name="m3SCOT">Substituting costing type</param>
+		/// <param name="m3OCRT">Exchange rate type</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -275,16 +281,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_PCTP = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			int? m3_REUP = null, 
-			int? m3_SIMA = null, 
-			int? m3_RECI = null, 
-			int? m3_CSUR = null, 
-			string m3_SCOT = null, 
-			int? m3_OCRT = null, 
-			decimal? m3_TXID = null, 
+			string m3PCTP = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			int? m3REUP = null, 
+			int? m3SIMA = null, 
+			int? m3RECI = null, 
+			int? m3CSUR = null, 
+			string m3SCOT = null, 
+			int? m3OCRT = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -299,26 +305,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PCTP))
-				request.WithQueryParameter("PCTP", m3_PCTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_REUP.HasValue)
-				request.WithQueryParameter("REUP", m3_REUP.Value.ToString());
-			if (m3_SIMA.HasValue)
-				request.WithQueryParameter("SIMA", m3_SIMA.Value.ToString());
-			if (m3_RECI.HasValue)
-				request.WithQueryParameter("RECI", m3_RECI.Value.ToString());
-			if (m3_CSUR.HasValue)
-				request.WithQueryParameter("CSUR", m3_CSUR.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SCOT))
-				request.WithQueryParameter("SCOT", m3_SCOT.Trim());
-			if (m3_OCRT.HasValue)
-				request.WithQueryParameter("OCRT", m3_OCRT.Value.ToString());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PCTP))
+				request.WithQueryParameter("PCTP", m3PCTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3REUP.HasValue)
+				request.WithQueryParameter("REUP", m3REUP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SIMA.HasValue)
+				request.WithQueryParameter("SIMA", m3SIMA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RECI.HasValue)
+				request.WithQueryParameter("RECI", m3RECI.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CSUR.HasValue)
+				request.WithQueryParameter("CSUR", m3CSUR.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SCOT))
+				request.WithQueryParameter("SCOT", m3SCOT.Trim());
+			if (m3OCRT.HasValue)
+				request.WithQueryParameter("OCRT", m3OCRT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -328,7 +334,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.GMS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get basic data from the parent
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_GCID">Subsidiary</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3GCID">Subsidiary</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetParentInfoResponse></returns>
 		/// <exception cref="M3Exception<GetParentInfoResponse>"></exception>
 		public async Task<M3Response<GetParentInfoResponse>> GetParentInfo(
-			int? m3_CONO = null, 
-			string m3_GCID = null, 
+			int? m3CONO = null, 
+			string m3GCID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_GCID))
-				request.WithQueryParameter("GCID", m3_GCID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3GCID))
+				request.WithQueryParameter("GCID", m3GCID.Trim());
 
 			// Execute the request
 			var result = await Execute<GetParentInfoResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,9 +89,9 @@ namespace M3H5Lib.Api
 		/// Description Get basiv data for the consolidation proposal head
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_GMPR">Consolidation proposal</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3GMPR">Consolidation proposal</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -97,9 +100,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTransfTotResponse></returns>
 		/// <exception cref="M3Exception<GetTransfTotResponse>"></exception>
 		public async Task<M3Response<GetTransfTotResponse>> GetTransfTot(
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			string m3_GMPR = null, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			string m3GMPR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -114,12 +117,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_GMPR))
-				request.WithQueryParameter("GMPR", m3_GMPR.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3GMPR))
+				request.WithQueryParameter("GMPR", m3GMPR.Trim());
 
 			// Execute the request
 			var result = await Execute<GetTransfTotResponse>(
@@ -129,7 +132,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -140,9 +144,9 @@ namespace M3H5Lib.Api
 		/// Description Get detailed trans. incl in the transfer proposal
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_GMPR">Consolidation proposal</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3GMPR">Consolidation proposal</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -151,9 +155,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTransfDetResponse></returns>
 		/// <exception cref="M3Exception<LstTransfDetResponse>"></exception>
 		public async Task<M3Response<LstTransfDetResponse>> LstTransfDet(
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			string m3_GMPR = null, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			string m3GMPR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -168,12 +172,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_GMPR))
-				request.WithQueryParameter("GMPR", m3_GMPR.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3GMPR))
+				request.WithQueryParameter("GMPR", m3GMPR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTransfDetResponse>(
@@ -183,7 +187,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

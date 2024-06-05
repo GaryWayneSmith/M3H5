@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Language
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Customer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Service manager
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Technician
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician")]
-		public string M3_TECH => GetString("TECH");
+		public string M3TECH => GetString("TECH");
 
 		/// <summary>
 		/// Description: Service order type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order type")]
-		public string M3_SOTP => GetString("SOTP");
+		public string M3SOTP => GetString("SOTP");
 
 		/// <summary>
 		/// Description: Price list SO
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list SO")]
-		public string M3_PRS1 => GetString("PRS1");
+		public string M3PRS1 => GetString("PRS1");
 
 		/// <summary>
 		/// Description: Price list 2 SO
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 2 SO")]
-		public string M3_PRS2 => GetString("PRS2");
+		public string M3PRS2 => GetString("PRS2");
 
 		/// <summary>
 		/// Description: Price list 3 SO
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 3 SO")]
-		public string M3_PRS3 => GetString("PRS3");
+		public string M3PRS3 => GetString("PRS3");
 
 		/// <summary>
 		/// Description: Price list 4 SO
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 4 SO")]
-		public string M3_PRS4 => GetString("PRS4");
+		public string M3PRS4 => GetString("PRS4");
 
 		/// <summary>
 		/// Description: Price list 5 SO
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 5 SO")]
-		public string M3_PRS5 => GetString("PRS5");
+		public string M3PRS5 => GetString("PRS5");
 
 		/// <summary>
 		/// Description: Discount model SO
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model SO")]
-		public string M3_DMSO => GetString("DMSO");
+		public string M3DMSO => GetString("DMSO");
 
 		/// <summary>
 		/// Description: Mandatory entry of customer's order no.
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mandatory entry of customer's order no.")]
-		public int? M3_MCON => GetNullableInt("MCON");
+		public int? M3MCON => GetNullableInt("MCON");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Job number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JBNO => GetNullableInt("JBNO");
+		public int? M3JBNO => GetNullableInt("JBNO");
 
 		/// <summary>
 		/// Description: Job date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public DateTime? M3_JBDT => GetNullableDateTime("JBDT");
+		public DateTime? M3JBDT => GetNullableDateTime("JBDT");
 
 		/// <summary>
 		/// Description: Job time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_JBTM => GetNullableInt("JBTM");
+		public int? M3JBTM => GetNullableInt("JBTM");
 
 		/// <summary>
 		/// Description: Area/state
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/state")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Number of payments
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of payments")]
-		public int? M3_NOPY => GetNullableInt("NOPY");
+		public int? M3NOPY => GetNullableInt("NOPY");
 
 		/// <summary>
 		/// Description: Control total 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 1")]
-		public decimal? M3_PA01 => GetNullableDecimal("PA01");
+		public decimal? M3PA01 => GetNullableDecimal("PA01");
 
 		/// <summary>
 		/// Description: Control total 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 2")]
-		public decimal? M3_PA02 => GetNullableDecimal("PA02");
+		public decimal? M3PA02 => GetNullableDecimal("PA02");
 
 		/// <summary>
 		/// Description: Control total 3
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 3")]
-		public decimal? M3_PA03 => GetNullableDecimal("PA03");
+		public decimal? M3PA03 => GetNullableDecimal("PA03");
 
 		/// <summary>
 		/// Description: Post-actual value - component A04
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-actual value - component A04")]
-		public decimal? M3_PA04 => GetNullableDecimal("PA04");
+		public decimal? M3PA04 => GetNullableDecimal("PA04");
 
 		/// <summary>
 		/// Description: Post-actual value - component A05
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-actual value - component A05")]
-		public decimal? M3_PA05 => GetNullableDecimal("PA05");
+		public decimal? M3PA05 => GetNullableDecimal("PA05");
 
 		/// <summary>
 		/// Description: Control total 6
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 6")]
-		public decimal? M3_PA06 => GetNullableDecimal("PA06");
+		public decimal? M3PA06 => GetNullableDecimal("PA06");
 
 		/// <summary>
 		/// Description: Control total 7
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 7")]
-		public decimal? M3_PA07 => GetNullableDecimal("PA07");
+		public decimal? M3PA07 => GetNullableDecimal("PA07");
 
 		/// <summary>
 		/// Description: Control total 8
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 8")]
-		public decimal? M3_PA08 => GetNullableDecimal("PA08");
+		public decimal? M3PA08 => GetNullableDecimal("PA08");
 
 		/// <summary>
 		/// Description: Control total 9
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 9")]
-		public decimal? M3_PA09 => GetNullableDecimal("PA09");
+		public decimal? M3PA09 => GetNullableDecimal("PA09");
 
 		/// <summary>
 		/// Description: Control total 10
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 10")]
-		public decimal? M3_PA10 => GetNullableDecimal("PA10");
+		public decimal? M3PA10 => GetNullableDecimal("PA10");
 
 		/// <summary>
 		/// Description: Control total 11
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 11")]
-		public decimal? M3_PA11 => GetNullableDecimal("PA11");
+		public decimal? M3PA11 => GetNullableDecimal("PA11");
 
 		/// <summary>
 		/// Description: Control total 12
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 12")]
-		public decimal? M3_PA12 => GetNullableDecimal("PA12");
+		public decimal? M3PA12 => GetNullableDecimal("PA12");
 
 		/// <summary>
 		/// Description: Control total 13
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 13")]
-		public decimal? M3_PA13 => GetNullableDecimal("PA13");
+		public decimal? M3PA13 => GetNullableDecimal("PA13");
 
 		/// <summary>
 		/// Description: Control total 14
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 14")]
-		public decimal? M3_PA14 => GetNullableDecimal("PA14");
+		public decimal? M3PA14 => GetNullableDecimal("PA14");
 
 		/// <summary>
 		/// Description: Control total 16
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 16")]
-		public decimal? M3_PA15 => GetNullableDecimal("PA15");
+		public decimal? M3PA15 => GetNullableDecimal("PA15");
 
 		/// <summary>
 		/// Description: Control total 16
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 16")]
-		public decimal? M3_PA16 => GetNullableDecimal("PA16");
+		public decimal? M3PA16 => GetNullableDecimal("PA16");
 
 		/// <summary>
 		/// Description: Control total 17
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 17")]
-		public decimal? M3_PA17 => GetNullableDecimal("PA17");
+		public decimal? M3PA17 => GetNullableDecimal("PA17");
 
 		/// <summary>
 		/// Description: Control total 18
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 18")]
-		public decimal? M3_PA18 => GetNullableDecimal("PA18");
+		public decimal? M3PA18 => GetNullableDecimal("PA18");
 
 		/// <summary>
 		/// Description: Control total 19
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 19")]
-		public decimal? M3_PA19 => GetNullableDecimal("PA19");
+		public decimal? M3PA19 => GetNullableDecimal("PA19");
 
 		/// <summary>
 		/// Description: Control total 20
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Control total 20")]
-		public decimal? M3_PA20 => GetNullableDecimal("PA20");
+		public decimal? M3PA20 => GetNullableDecimal("PA20");
 	}
 }
 // EOF

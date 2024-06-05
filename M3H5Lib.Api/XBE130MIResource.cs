@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.XBE130MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Get Payee Total - Extension
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_PRPN">Payment Proposal (Required)</param>
-		/// <param name="m3_PYON">Payment Order (Required)</param>
-		/// <param name="m3_SPYN">Payee (Required)</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3PRPN">Payment Proposal (Required)</param>
+		/// <param name="m3PYON">Payment Order (Required)</param>
+		/// <param name="m3SPYN">Payee (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPayeeTotalResponse></returns>
 		/// <exception cref="M3Exception<GetPayeeTotalResponse>"></exception>
 		public async Task<M3Response<GetPayeeTotalResponse>> GetPayeeTotal(
-			int m3_CONO, 
-			string m3_DIVI, 
-			long m3_PRPN, 
-			int m3_PYON, 
-			string m3_SPYN, 
+			int m3CONO, 
+			string m3DIVI, 
+			long m3PRPN, 
+			int m3PYON, 
+			string m3SPYN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,18 +70,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SPYN))
-				throw new ArgumentNullException("m3_SPYN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SPYN))
+				throw new ArgumentNullException(nameof(m3SPYN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("PRPN", m3_PRPN.ToString())
-				.WithQueryParameter("PYON", m3_PYON.ToString())
-				.WithQueryParameter("SPYN", m3_SPYN.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("PRPN", m3PRPN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PYON", m3PYON.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SPYN", m3SPYN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetPayeeTotalResponse>(
@@ -89,7 +91,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -100,11 +103,11 @@ namespace M3H5Lib.Api
 		/// Description List Invoices by Payee - Extension
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_PRPN">Payment Proposal (Required)</param>
-		/// <param name="m3_PYON">Payment Order (Required)</param>
-		/// <param name="m3_SPYN">Payee</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3PRPN">Payment Proposal (Required)</param>
+		/// <param name="m3PYON">Payment Order (Required)</param>
+		/// <param name="m3SPYN">Payee</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -113,11 +116,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstInvByPayeeResponse></returns>
 		/// <exception cref="M3Exception<LstInvByPayeeResponse>"></exception>
 		public async Task<M3Response<LstInvByPayeeResponse>> LstInvByPayee(
-			int m3_CONO, 
-			string m3_DIVI, 
-			long m3_PRPN, 
-			int m3_PYON, 
-			string m3_SPYN = null, 
+			int m3CONO, 
+			string m3DIVI, 
+			long m3PRPN, 
+			int m3PYON, 
+			string m3SPYN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -132,19 +135,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("PRPN", m3_PRPN.ToString())
-				.WithQueryParameter("PYON", m3_PYON.ToString());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("PRPN", m3PRPN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PYON", m3PYON.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SPYN))
-				request.WithQueryParameter("SPYN", m3_SPYN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPYN))
+				request.WithQueryParameter("SPYN", m3SPYN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstInvByPayeeResponse>(
@@ -154,7 +157,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

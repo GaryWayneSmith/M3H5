@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("KPI ID")]
-		public string M3_KPID => GetString("KPID");
+		public string M3KPID => GetString("KPID");
 
 		/// <summary>
 		/// Description: Primary key 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 1")]
-		public string M3_PK01 => GetString("PK01");
+		public string M3PK01 => GetString("PK01");
 
 		/// <summary>
 		/// Description: Primary key 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 2")]
-		public string M3_PK02 => GetString("PK02");
+		public string M3PK02 => GetString("PK02");
 
 		/// <summary>
 		/// Description: Primary key 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 3")]
-		public string M3_PK03 => GetString("PK03");
+		public string M3PK03 => GetString("PK03");
 
 		/// <summary>
 		/// Description: Primary key 4
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 4")]
-		public string M3_PK04 => GetString("PK04");
+		public string M3PK04 => GetString("PK04");
 
 		/// <summary>
 		/// Description: Primary key 5
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 5")]
-		public string M3_PK05 => GetString("PK05");
+		public string M3PK05 => GetString("PK05");
 
 		/// <summary>
 		/// Description: Primary key 6
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 6")]
-		public string M3_PK06 => GetString("PK06");
+		public string M3PK06 => GetString("PK06");
 
 		/// <summary>
 		/// Description: Primary key 7
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 7")]
-		public string M3_PK07 => GetString("PK07");
+		public string M3PK07 => GetString("PK07");
 
 		/// <summary>
 		/// Description: Primary key 8
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 8")]
-		public string M3_PK08 => GetString("PK08");
+		public string M3PK08 => GetString("PK08");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL30 => GetString("AL30");
+		public string M3AL30 => GetString("AL30");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL31 => GetString("AL31");
+		public string M3AL31 => GetString("AL31");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL32 => GetString("AL32");
+		public string M3AL32 => GetString("AL32");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL33 => GetString("AL33");
+		public string M3AL33 => GetString("AL33");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL34 => GetString("AL34");
+		public string M3AL34 => GetString("AL34");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL35 => GetString("AL35");
+		public string M3AL35 => GetString("AL35");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL36 => GetString("AL36");
+		public string M3AL36 => GetString("AL36");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL37 => GetString("AL37");
+		public string M3AL37 => GetString("AL37");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL38 => GetString("AL38");
+		public string M3AL38 => GetString("AL38");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_AL39 => GetString("AL39");
+		public string M3AL39 => GetString("AL39");
 	}
 }
 // EOF

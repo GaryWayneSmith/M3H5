@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Payment request type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment request type")]
-		public string M3_PPYT => GetString("PPYT");
+		public string M3PPYT => GetString("PPYT");
 
 		/// <summary>
 		/// Description: Payment request  number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment request  number")]
-		public string M3_PPYN => GetString("PPYN");
+		public string M3PPYN => GetString("PPYN");
 
 		/// <summary>
 		/// Description: Year
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_RYEA => GetNullableInt("RYEA");
+		public int? M3RYEA => GetNullableInt("RYEA");
 
 		/// <summary>
 		/// Description: Co/Invoice no
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Co/Invoice no")]
-		public string M3_COIV => GetString("COIV");
+		public string M3COIV => GetString("COIV");
 
 		/// <summary>
 		/// Description: Customer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Request reference number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Request reference number")]
-		public string M3_PYRE => GetString("PYRE");
+		public string M3PYRE => GetString("PYRE");
 
 		/// <summary>
 		/// Description: Language
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Need date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Need date")]
-		public DateTime? M3_RQDT => GetNullableDateTime("RQDT");
+		public DateTime? M3RQDT => GetNullableDateTime("RQDT");
 
 		/// <summary>
 		/// Description: Status
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Currency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVAM => GetNullableDecimal("IVAM");
+		public decimal? M3IVAM => GetNullableDecimal("IVAM");
 
 		/// <summary>
 		/// Description: Percentage of value/amount
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Percentage of value/amount")]
-		public int? M3_PNAM => GetNullableInt("PNAM");
+		public int? M3PNAM => GetNullableInt("PNAM");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: VAT code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: VAT amount 1
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT amount 1")]
-		public decimal? M3_VTA1 => GetNullableDecimal("VTA1");
+		public decimal? M3VTA1 => GetNullableDecimal("VTA1");
 
 		/// <summary>
 		/// Description: VAT amount 2
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT amount 2")]
-		public decimal? M3_VTA2 => GetNullableDecimal("VTA2");
+		public decimal? M3VTA2 => GetNullableDecimal("VTA2");
 
 		/// <summary>
 		/// Description: VAT included
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT included")]
-		public int? M3_TINC => GetNullableInt("TINC");
+		public int? M3TINC => GetNullableInt("TINC");
 
 		/// <summary>
 		/// Description: Text
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Text
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Date printed
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date printed")]
-		public DateTime? M3_DTPR => GetNullableDateTime("DTPR");
+		public DateTime? M3DTPR => GetNullableDateTime("DTPR");
 
 		/// <summary>
 		/// Description: Text identity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

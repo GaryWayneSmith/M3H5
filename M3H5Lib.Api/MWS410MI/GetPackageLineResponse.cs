@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Lot number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Container
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Item number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Delivered quantity - basic U/M
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity - basic U/M")]
-		public decimal? M3_DLQT => GetNullableDecimal("DLQT");
+		public decimal? M3DLQT => GetNullableDecimal("DLQT");
 
 		/// <summary>
 		/// Description: Receipt quantity - basic U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receipt quantity - basic U/M")]
-		public decimal? M3_RCQT => GetNullableDecimal("RCQT");
+		public decimal? M3RCQT => GetNullableDecimal("RCQT");
 
 		/// <summary>
 		/// Description: Flagged as completed
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Flagged as completed")]
-		public int? M3_OEND => GetNullableInt("OEND");
+		public int? M3OEND => GetNullableInt("OEND");
 
 		/// <summary>
 		/// Description: Volume
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Net weight
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Standard quantity - basic U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard quantity - basic U/M")]
-		public decimal? M3_D1QT => GetNullableDecimal("D1QT");
+		public decimal? M3D1QT => GetNullableDecimal("D1QT");
 
 		/// <summary>
 		/// Description: Delivery specification
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery specification")]
-		public string M3_DLSP => GetString("DLSP");
+		public string M3DLSP => GetString("DLSP");
 
 		/// <summary>
 		/// Description: Customers order number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Estimated free unit of assigned goods
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated free unit of assigned goods")]
-		public decimal? M3_FCU1 => GetNullableDecimal("FCU1");
+		public decimal? M3FCU1 => GetNullableDecimal("FCU1");
 
 		/// <summary>
 		/// Description: Delivered quantity - alternate U/M
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity - alternate U/M")]
-		public decimal? M3_DLQA => GetNullableDecimal("DLQA");
+		public decimal? M3DLQA => GetNullableDecimal("DLQA");
 
 		/// <summary>
 		/// Description: Received quantity - alternate U/M
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity - alternate U/M")]
-		public decimal? M3_RCQM => GetNullableDecimal("RCQM");
+		public decimal? M3RCQM => GetNullableDecimal("RCQM");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Alternate U/M
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 	}
 }
 // EOF

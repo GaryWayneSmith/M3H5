@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,8 +37,8 @@ namespace M3H5Lib.Api
 		/// Description Submits output from server
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_BJNO">Batch job number (Required)</param>
-		/// <param name="m3_FILE">File name (Required)</param>
+		/// <param name="m3BJNO">Batch job number (Required)</param>
+		/// <param name="m3FILE">File name (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,8 +47,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SbmOutput(
-			string m3_BJNO, 
-			string m3_FILE, 
+			string m3BJNO, 
+			string m3FILE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -61,15 +63,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BJNO))
-				throw new ArgumentNullException("m3_BJNO");
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3BJNO))
+				throw new ArgumentNullException(nameof(m3BJNO));
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BJNO", m3_BJNO.Trim())
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("BJNO", m3BJNO.Trim())
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -90,11 +93,11 @@ namespace M3H5Lib.Api
 		/// Description Updates control record
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_BJNO">Batch job number (Required)</param>
-		/// <param name="m3_FILE">File name (Required)</param>
-		/// <param name="m3_SSTA">Status</param>
-		/// <param name="m3_MSID">Message ID</param>
-		/// <param name="m3_MSGD">Message description</param>
+		/// <param name="m3BJNO">Batch job number (Required)</param>
+		/// <param name="m3FILE">File name (Required)</param>
+		/// <param name="m3SSTA">Status</param>
+		/// <param name="m3MSID">Message ID</param>
+		/// <param name="m3MSGD">Message description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -103,11 +106,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdControl(
-			string m3_BJNO, 
-			string m3_FILE, 
-			string m3_SSTA = null, 
-			string m3_MSID = null, 
-			string m3_MSGD = null, 
+			string m3BJNO, 
+			string m3FILE, 
+			string m3SSTA = null, 
+			string m3MSID = null, 
+			string m3MSGD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,23 +125,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BJNO))
-				throw new ArgumentNullException("m3_BJNO");
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3BJNO))
+				throw new ArgumentNullException(nameof(m3BJNO));
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BJNO", m3_BJNO.Trim())
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("BJNO", m3BJNO.Trim())
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SSTA))
-				request.WithQueryParameter("SSTA", m3_SSTA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MSID))
-				request.WithQueryParameter("MSID", m3_MSID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MSGD))
-				request.WithQueryParameter("MSGD", m3_MSGD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SSTA))
+				request.WithQueryParameter("SSTA", m3SSTA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSID))
+				request.WithQueryParameter("MSID", m3MSID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSGD))
+				request.WithQueryParameter("MSGD", m3MSGD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -148,7 +151,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

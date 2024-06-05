@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Year
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Facility
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Invoice Prefix
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Subnumber
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber")]
-		public int? M3_SBNO => GetNullableInt("SBNO");
+		public int? M3SBNO => GetNullableInt("SBNO");
 
 		/// <summary>
 		/// Description: Invoice type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice type")]
-		public int? M3_XITP => GetNullableInt("XITP");
+		public int? M3XITP => GetNullableInt("XITP");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public string M3_XGTI => GetString("XGTI");
+		public string M3XGTI => GetString("XGTI");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVAM => GetNullableDecimal("IVAM");
+		public decimal? M3IVAM => GetNullableDecimal("IVAM");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVLA => GetNullableDecimal("IVLA");
+		public decimal? M3IVLA => GetNullableDecimal("IVLA");
 
 		/// <summary>
 		/// Description: VAT
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT")]
-		public decimal? M3_VTAM => GetNullableDecimal("VTAM");
+		public decimal? M3VTAM => GetNullableDecimal("VTAM");
 
 		/// <summary>
 		/// Description: VAT
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT")]
-		public decimal? M3_VTLA => GetNullableDecimal("VTLA");
+		public decimal? M3VTLA => GetNullableDecimal("VTLA");
 
 		/// <summary>
 		/// Description: Number of lines
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of lines")]
-		public int? M3_XINL => GetNullableInt("XINL");
+		public int? M3XINL => GetNullableInt("XINL");
 
 		/// <summary>
 		/// Description: Line status
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line status")]
-		public int? M3_XLST => GetNullableInt("XLST");
+		public int? M3XLST => GetNullableInt("XLST");
 
 		/// <summary>
 		/// Description: Text identity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Checker
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Checker")]
-		public string M3_XCEK => GetString("XCEK");
+		public string M3XCEK => GetString("XCEK");
 
 		/// <summary>
 		/// Description: Comments
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_XCOM => GetString("XCOM");
+		public string M3XCOM => GetString("XCOM");
 
 		/// <summary>
 		/// Description: Original Golden Tax Invoice number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original Golden Tax Invoice number")]
-		public string M3_XOGT => GetString("XOGT");
+		public string M3XOGT => GetString("XOGT");
 
 		/// <summary>
 		/// Description: Original transfer date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original transfer date")]
-		public int? M3_XOTD => GetNullableInt("XOTD");
+		public int? M3XOTD => GetNullableInt("XOTD");
 
 		/// <summary>
 		/// Description: Reject date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reject date")]
-		public DateTime? M3_XRDT => GetNullableDateTime("XRDT");
+		public DateTime? M3XRDT => GetNullableDateTime("XRDT");
 
 		/// <summary>
 		/// Description: VAT monitor list
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT monitor list")]
-		public string M3_XVTN => GetString("XVTN");
+		public string M3XVTN => GetString("XVTN");
 
 		/// <summary>
 		/// Description: Additional invoice number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional invoice number")]
-		public string M3_XAIV => GetString("XAIV");
+		public string M3XAIV => GetString("XAIV");
 	}
 }
 // EOF

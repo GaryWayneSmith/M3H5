@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Address type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address type")]
-		public int? M3_ADTE => GetNullableInt("ADTE");
+		public int? M3ADTE => GetNullableInt("ADTE");
 
 		/// <summary>
 		/// Description: Address number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Start date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: City tax registration number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City tax registration number")]
-		public string M3_IMUN => GetString("IMUN");
+		public string M3IMUN => GetString("IMUN");
 
 		/// <summary>
 		/// Description: State registration number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State registration number")]
-		public string M3_XIES => GetString("XIES");
+		public string M3XIES => GetString("XIES");
 
 		/// <summary>
 		/// Description: CNPJ / CPF
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CNPJ / CPF")]
-		public decimal? M3_CNPJ => GetNullableDecimal("CNPJ");
+		public decimal? M3CNPJ => GetNullableDecimal("CNPJ");
 
 		/// <summary>
 		/// Description: Juridica / Fisica
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Juridica / Fisica")]
-		public string M3_PJUR => GetString("PJUR");
+		public string M3PJUR => GetString("PJUR");
 
 		/// <summary>
 		/// Description: Federation Unit
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Federation Unit")]
-		public string M3_FEDA => GetString("FEDA");
+		public string M3FEDA => GetString("FEDA");
 
 		/// <summary>
 		/// Description: IBGE City code
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("IBGE City code")]
-		public string M3_IBCD => GetString("IBCD");
+		public string M3IBCD => GetString("IBCD");
 
 		/// <summary>
 		/// Description: CNAE code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CNAE code")]
-		public string M3_CNAE => GetString("CNAE");
+		public string M3CNAE => GetString("CNAE");
 	}
 }
 // EOF

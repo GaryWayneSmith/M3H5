@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Rental depot
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental depot")]
-		public string M3_DPOT => GetString("DPOT");
+		public string M3DPOT => GetString("DPOT");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Warehouse - yard
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse - yard")]
-		public string M3_WHYA => GetString("WHYA");
+		public string M3WHYA => GetString("WHYA");
 
 		/// <summary>
 		/// Description: Warehouse - on hire
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse - on hire")]
-		public string M3_WHOH => GetString("WHOH");
+		public string M3WHOH => GetString("WHOH");
 
 		/// <summary>
 		/// Description: Warehouse - cross hire on yard
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse - cross hire on yard")]
-		public string M3_WXYA => GetString("WXYA");
+		public string M3WXYA => GetString("WXYA");
 
 		/// <summary>
 		/// Description: Warehouse - cross hire on hire
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse - cross hire on hire")]
-		public string M3_WXOH => GetString("WXOH");
+		public string M3WXOH => GetString("WXOH");
 
 		/// <summary>
 		/// Description: Rent PL tab
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rent PL tab")]
-		public string M3_RPLT => GetString("RPLT");
+		public string M3RPLT => GetString("RPLT");
 
 		/// <summary>
 		/// Description: Price list table
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list table")]
-		public string M3_PLTB => GetString("PLTB");
+		public string M3PLTB => GetString("PLTB");
 
 		/// <summary>
 		/// Description: Rental discount model
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental discount model")]
-		public string M3_RDIS => GetString("RDIS");
+		public string M3RDIS => GetString("RDIS");
 
 		/// <summary>
 		/// Description: Discount model
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Price list
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Currency
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.STS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 	}
 }
 // EOF

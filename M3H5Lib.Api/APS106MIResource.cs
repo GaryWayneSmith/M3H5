@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.APS106MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Get Payment request line
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_PPYT">Payment request type (Required)</param>
-		/// <param name="m3_SPYN">Payer (Required)</param>
-		/// <param name="m3_PPYR">Reference number (Required)</param>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_PPYN">Payment request number (Required)</param>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3PPYT">Payment request type (Required)</param>
+		/// <param name="m3SPYN">Payer (Required)</param>
+		/// <param name="m3PPYR">Reference number (Required)</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3PPYN">Payment request number (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPaymentReqResponse></returns>
 		/// <exception cref="M3Exception<GetPaymentReqResponse>"></exception>
 		public async Task<M3Response<GetPaymentReqResponse>> GetPaymentReq(
-			string m3_DIVI, 
-			string m3_PPYT, 
-			string m3_SPYN, 
-			string m3_PPYR, 
-			int m3_YEA4, 
-			string m3_PPYN, 
-			string m3_SUNO, 
+			string m3DIVI, 
+			string m3PPYT, 
+			string m3SPYN, 
+			string m3PPYR, 
+			int m3YEA4, 
+			string m3PPYN, 
+			string m3SUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,28 +74,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_PPYT))
-				throw new ArgumentNullException("m3_PPYT");
-			if (string.IsNullOrWhiteSpace(m3_SPYN))
-				throw new ArgumentNullException("m3_SPYN");
-			if (string.IsNullOrWhiteSpace(m3_PPYR))
-				throw new ArgumentNullException("m3_PPYR");
-			if (string.IsNullOrWhiteSpace(m3_PPYN))
-				throw new ArgumentNullException("m3_PPYN");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3PPYT))
+				throw new ArgumentNullException(nameof(m3PPYT));
+			if (string.IsNullOrWhiteSpace(m3SPYN))
+				throw new ArgumentNullException(nameof(m3SPYN));
+			if (string.IsNullOrWhiteSpace(m3PPYR))
+				throw new ArgumentNullException(nameof(m3PPYR));
+			if (string.IsNullOrWhiteSpace(m3PPYN))
+				throw new ArgumentNullException(nameof(m3PPYN));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("PPYT", m3_PPYT.Trim())
-				.WithQueryParameter("SPYN", m3_SPYN.Trim())
-				.WithQueryParameter("PPYR", m3_PPYR.Trim())
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("PPYN", m3_PPYN.Trim())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("PPYT", m3PPYT.Trim())
+				.WithQueryParameter("SPYN", m3SPYN.Trim())
+				.WithQueryParameter("PPYR", m3PPYR.Trim())
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PPYN", m3PPYN.Trim())
+				.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetPaymentReqResponse>(
@@ -103,7 +105,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -114,9 +117,9 @@ namespace M3H5Lib.Api
 		/// Description Lst Request By Payee
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_PPYT">Payment request type (Required)</param>
-		/// <param name="m3_SPYN">Payee (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3PPYT">Payment request type (Required)</param>
+		/// <param name="m3SPYN">Payee (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -125,9 +128,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstReqByPayeeResponse></returns>
 		/// <exception cref="M3Exception<LstReqByPayeeResponse>"></exception>
 		public async Task<M3Response<LstReqByPayeeResponse>> LstReqByPayee(
-			string m3_DIVI, 
-			string m3_PPYT, 
-			string m3_SPYN, 
+			string m3DIVI, 
+			string m3PPYT, 
+			string m3SPYN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -142,18 +145,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_PPYT))
-				throw new ArgumentNullException("m3_PPYT");
-			if (string.IsNullOrWhiteSpace(m3_SPYN))
-				throw new ArgumentNullException("m3_SPYN");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3PPYT))
+				throw new ArgumentNullException(nameof(m3PPYT));
+			if (string.IsNullOrWhiteSpace(m3SPYN))
+				throw new ArgumentNullException(nameof(m3SPYN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("PPYT", m3_PPYT.Trim())
-				.WithQueryParameter("SPYN", m3_SPYN.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("PPYT", m3PPYT.Trim())
+				.WithQueryParameter("SPYN", m3SPYN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstReqByPayeeResponse>(
@@ -163,7 +166,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -174,10 +178,10 @@ namespace M3H5Lib.Api
 		/// Description List Payment Request By RefNo
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_PPYT">Payment request type (Required)</param>
-		/// <param name="m3_SPYN">Payer (Required)</param>
-		/// <param name="m3_PPYR">Reference number (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3PPYT">Payment request type (Required)</param>
+		/// <param name="m3SPYN">Payer (Required)</param>
+		/// <param name="m3PPYR">Reference number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -186,10 +190,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstReqByRefNoResponse></returns>
 		/// <exception cref="M3Exception<LstReqByRefNoResponse>"></exception>
 		public async Task<M3Response<LstReqByRefNoResponse>> LstReqByRefNo(
-			string m3_DIVI, 
-			string m3_PPYT, 
-			string m3_SPYN, 
-			string m3_PPYR, 
+			string m3DIVI, 
+			string m3PPYT, 
+			string m3SPYN, 
+			string m3PPYR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -204,21 +208,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_PPYT))
-				throw new ArgumentNullException("m3_PPYT");
-			if (string.IsNullOrWhiteSpace(m3_SPYN))
-				throw new ArgumentNullException("m3_SPYN");
-			if (string.IsNullOrWhiteSpace(m3_PPYR))
-				throw new ArgumentNullException("m3_PPYR");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3PPYT))
+				throw new ArgumentNullException(nameof(m3PPYT));
+			if (string.IsNullOrWhiteSpace(m3SPYN))
+				throw new ArgumentNullException(nameof(m3SPYN));
+			if (string.IsNullOrWhiteSpace(m3PPYR))
+				throw new ArgumentNullException(nameof(m3PPYR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("PPYT", m3_PPYT.Trim())
-				.WithQueryParameter("SPYN", m3_SPYN.Trim())
-				.WithQueryParameter("PPYR", m3_PPYR.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("PPYT", m3PPYT.Trim())
+				.WithQueryParameter("SPYN", m3SPYN.Trim())
+				.WithQueryParameter("PPYR", m3PPYR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstReqByRefNoResponse>(
@@ -228,7 +232,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

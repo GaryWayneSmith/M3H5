@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Constant value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Constant value")]
-		public string M3_STCO => GetString("STCO");
+		public string M3STCO => GetString("STCO");
 
 		/// <summary>
 		/// Description: Key value
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key value")]
-		public string M3_STKY => GetString("STKY");
+		public string M3STKY => GetString("STKY");
 
 		/// <summary>
 		/// Description: Language
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Payment class
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment class")]
-		public int? M3_PYCL => GetNullableInt("PYCL");
+		public int? M3PYCL => GetNullableInt("PYCL");
 
 		/// <summary>
 		/// Description: Remittance method
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remittance method")]
-		public int? M3_ARTP => GetNullableInt("ARTP");
+		public int? M3ARTP => GetNullableInt("ARTP");
 
 		/// <summary>
 		/// Description: Factoring company
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Factoring company")]
-		public string M3_FACO => GetString("FACO");
+		public string M3FACO => GetString("FACO");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Fixed factoring charge
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed factoring charge")]
-		public decimal? M3_FACF => GetNullableDecimal("FACF");
+		public decimal? M3FACF => GetNullableDecimal("FACF");
 
 		/// <summary>
 		/// Description: Factoring charge in percent
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Factoring charge in percent")]
-		public int? M3_FACR => GetNullableInt("FACR");
+		public int? M3FACR => GetNullableInt("FACR");
 
 		/// <summary>
 		/// Description: Postdated check
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postdated check")]
-		public int? M3_PDCA => GetNullableInt("PDCA");
+		public int? M3PDCA => GetNullableInt("PDCA");
 
 		/// <summary>
 		/// Description: Cancel customer risk
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cancel customer risk")]
-		public int? M3_PDRR => GetNullableInt("PDRR");
+		public int? M3PDRR => GetNullableInt("PDRR");
 
 		/// <summary>
 		/// Description: Direct debit scheme
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS078MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direct debit scheme")]
-		public int? M3_SDDS => GetNullableInt("SDDS");
+		public int? M3SDDS => GetNullableInt("SDDS");
 	}
 }
 // EOF

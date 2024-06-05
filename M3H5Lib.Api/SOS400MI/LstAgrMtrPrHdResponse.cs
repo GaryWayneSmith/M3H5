@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Customer site
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Line number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Contract item
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contract item")]
-		public string M3_AGRS => GetString("AGRS");
+		public string M3AGRS => GetString("AGRS");
 
 		/// <summary>
 		/// Description: Price schedule type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price schedule type")]
-		public int? M3_PSCT => GetNullableInt("PSCT");
+		public int? M3PSCT => GetNullableInt("PSCT");
 
 		/// <summary>
 		/// Description: Agreed fixed price
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed fixed price")]
-		public decimal? M3_AFXP => GetNullableDecimal("AFXP");
+		public decimal? M3AFXP => GetNullableDecimal("AFXP");
 
 		/// <summary>
 		/// Description: Agreed total quantity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed total quantity")]
-		public decimal? M3_ATOQ => GetNullableDecimal("ATOQ");
+		public decimal? M3ATOQ => GetNullableDecimal("ATOQ");
 
 		/// <summary>
 		/// Description: Agreed meter unit price
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed meter unit price")]
-		public decimal? M3_AMPR => GetNullableDecimal("AMPR");
+		public decimal? M3AMPR => GetNullableDecimal("AMPR");
 
 		/// <summary>
 		/// Description: Agreed interval - years
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed interval - years")]
-		public int? M3_AIYR => GetNullableInt("AIYR");
+		public int? M3AIYR => GetNullableInt("AIYR");
 
 		/// <summary>
 		/// Description: Agreed interval - months
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed interval - months")]
-		public int? M3_AIMO => GetNullableInt("AIMO");
+		public int? M3AIMO => GetNullableInt("AIMO");
 
 		/// <summary>
 		/// Description: Agreed interval - days
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed interval - days")]
-		public int? M3_AIDY => GetNullableInt("AIDY");
+		public int? M3AIDY => GetNullableInt("AIDY");
 
 		/// <summary>
 		/// Description: Reinvoice percentage
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reinvoice percentage")]
-		public int? M3_RIPC => GetNullableInt("RIPC");
+		public int? M3RIPC => GetNullableInt("RIPC");
 
 		/// <summary>
 		/// Description: Reconciliation interval - years
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reconciliation interval - years")]
-		public int? M3_RCYR => GetNullableInt("RCYR");
+		public int? M3RCYR => GetNullableInt("RCYR");
 
 		/// <summary>
 		/// Description: Reconciliation interval - months
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reconciliation interval - months")]
-		public int? M3_RCMO => GetNullableInt("RCMO");
+		public int? M3RCMO => GetNullableInt("RCMO");
 
 		/// <summary>
 		/// Description: Reconciliation interval - days
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reconciliation interval - days")]
-		public int? M3_RCDY => GetNullableInt("RCDY");
+		public int? M3RCDY => GetNullableInt("RCDY");
 
 		/// <summary>
 		/// Description: Overusage meter unit price
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overusage meter unit price")]
-		public decimal? M3_OUMP => GetNullableDecimal("OUMP");
+		public decimal? M3OUMP => GetNullableDecimal("OUMP");
 
 		/// <summary>
 		/// Description: Underusage meter unit price
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Underusage meter unit price")]
-		public decimal? M3_UUMP => GetNullableDecimal("UUMP");
+		public decimal? M3UUMP => GetNullableDecimal("UUMP");
 
 		/// <summary>
 		/// Description: Credit unit price - inv meter
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit unit price - inv meter")]
-		public decimal? M3_ICP1 => GetNullableDecimal("ICP1");
+		public decimal? M3ICP1 => GetNullableDecimal("ICP1");
 
 		/// <summary>
 		/// Description: Credit unit price - inv meter
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit unit price - inv meter")]
-		public decimal? M3_ICP2 => GetNullableDecimal("ICP2");
+		public decimal? M3ICP2 => GetNullableDecimal("ICP2");
 
 		/// <summary>
 		/// Description: Credit unit price - inv meter
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit unit price - inv meter")]
-		public decimal? M3_ICP3 => GetNullableDecimal("ICP3");
+		public decimal? M3ICP3 => GetNullableDecimal("ICP3");
 
 		/// <summary>
 		/// Description: Credit unit price - inv meter
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit unit price - inv meter")]
-		public decimal? M3_ICP4 => GetNullableDecimal("ICP4");
+		public decimal? M3ICP4 => GetNullableDecimal("ICP4");
 
 		/// <summary>
 		/// Description: Credit unit price - inv meter
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit unit price - inv meter")]
-		public decimal? M3_ICP5 => GetNullableDecimal("ICP5");
+		public decimal? M3ICP5 => GetNullableDecimal("ICP5");
 
 		/// <summary>
 		/// Description: Credit unit price - inv meter
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit unit price - inv meter")]
-		public decimal? M3_ICP6 => GetNullableDecimal("ICP6");
+		public decimal? M3ICP6 => GetNullableDecimal("ICP6");
 
 		/// <summary>
 		/// Description: Start reconciliation date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start reconciliation date")]
-		public DateTime? M3_SRED => GetNullableDateTime("SRED");
+		public DateTime? M3SRED => GetNullableDateTime("SRED");
 
 		/// <summary>
 		/// Description: End reconciliation date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End reconciliation date")]
-		public DateTime? M3_ERED => GetNullableDateTime("ERED");
+		public DateTime? M3ERED => GetNullableDateTime("ERED");
 
 		/// <summary>
 		/// Description: Next reconciliation date
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next reconciliation date")]
-		public DateTime? M3_NRED => GetNullableDateTime("NRED");
+		public DateTime? M3NRED => GetNullableDateTime("NRED");
 
 		/// <summary>
 		/// Description: Last invoice date meter value
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last invoice date meter value")]
-		public DateTime? M3_LIMD => GetNullableDateTime("LIMD");
+		public DateTime? M3LIMD => GetNullableDateTime("LIMD");
 
 		/// <summary>
 		/// Description: Last meter (1-6) value
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last meter (1-6) value")]
-		public decimal? M3_LIM1 => GetNullableDecimal("LIM1");
+		public decimal? M3LIM1 => GetNullableDecimal("LIM1");
 
 		/// <summary>
 		/// Description: Last meter (1-6) value
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last meter (1-6) value")]
-		public decimal? M3_LIM2 => GetNullableDecimal("LIM2");
+		public decimal? M3LIM2 => GetNullableDecimal("LIM2");
 
 		/// <summary>
 		/// Description: Last meter (1-6) value
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last meter (1-6) value")]
-		public decimal? M3_LIM3 => GetNullableDecimal("LIM3");
+		public decimal? M3LIM3 => GetNullableDecimal("LIM3");
 
 		/// <summary>
 		/// Description: Last meter (1-6) value
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last meter (1-6) value")]
-		public decimal? M3_LIM4 => GetNullableDecimal("LIM4");
+		public decimal? M3LIM4 => GetNullableDecimal("LIM4");
 
 		/// <summary>
 		/// Description: Last meter (1-6) value
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last meter (1-6) value")]
-		public decimal? M3_LIM5 => GetNullableDecimal("LIM5");
+		public decimal? M3LIM5 => GetNullableDecimal("LIM5");
 
 		/// <summary>
 		/// Description: Last meter (1-6) value
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last meter (1-6) value")]
-		public decimal? M3_LIM6 => GetNullableDecimal("LIM6");
+		public decimal? M3LIM6 => GetNullableDecimal("LIM6");
 
 		/// <summary>
 		/// Description: Agreed QTY meter 1
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed QTY meter 1")]
-		public decimal? M3_AQM1 => GetNullableDecimal("AQM1");
+		public decimal? M3AQM1 => GetNullableDecimal("AQM1");
 
 		/// <summary>
 		/// Description: Agreed QTY meter 2
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed QTY meter 2")]
-		public decimal? M3_AQM2 => GetNullableDecimal("AQM2");
+		public decimal? M3AQM2 => GetNullableDecimal("AQM2");
 
 		/// <summary>
 		/// Description: Agreed QTY meter 3
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed QTY meter 3")]
-		public decimal? M3_AQM3 => GetNullableDecimal("AQM3");
+		public decimal? M3AQM3 => GetNullableDecimal("AQM3");
 
 		/// <summary>
 		/// Description: Agreed QTY meter 4
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed QTY meter 4")]
-		public decimal? M3_AQM4 => GetNullableDecimal("AQM4");
+		public decimal? M3AQM4 => GetNullableDecimal("AQM4");
 
 		/// <summary>
 		/// Description: Agreed QTY meter 5
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed QTY meter 5")]
-		public decimal? M3_AQM5 => GetNullableDecimal("AQM5");
+		public decimal? M3AQM5 => GetNullableDecimal("AQM5");
 
 		/// <summary>
 		/// Description: Agreed QTY meter 6
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed QTY meter 6")]
-		public decimal? M3_AQM6 => GetNullableDecimal("AQM6");
+		public decimal? M3AQM6 => GetNullableDecimal("AQM6");
 
 		/// <summary>
 		/// Description: Agreement origin
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement origin")]
-		public int? M3_AGRO => GetNullableInt("AGRO");
+		public int? M3AGRO => GetNullableInt("AGRO");
 
 		/// <summary>
 		/// Description: Change date
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

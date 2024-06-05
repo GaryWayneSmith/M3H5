@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Customer number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Blanket agreement number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blanket agreement number")]
-		public string M3_AGNO => GetString("AGNO");
+		public string M3AGNO => GetString("AGNO");
 
 		/// <summary>
 		/// Description: Start date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Valid to
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Object access group
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object access group")]
-		public string M3_ACGR => GetString("ACGR");
+		public string M3ACGR => GetString("ACGR");
 
 		/// <summary>
 		/// Description: Status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_AGST => GetString("AGST");
+		public string M3AGST => GetString("AGST");
 
 		/// <summary>
 		/// Description: Blanket agreement date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blanket agreement date")]
-		public DateTime? M3_AGDT => GetNullableDateTime("AGDT");
+		public DateTime? M3AGDT => GetNullableDateTime("AGDT");
 
 		/// <summary>
 		/// Description: Superior groups
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Superior groups")]
-		public int? M3_SPGR => GetNullableInt("SPGR");
+		public int? M3SPGR => GetNullableInt("SPGR");
 
 		/// <summary>
 		/// Description: Business chain agreement
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain agreement")]
-		public int? M3_AGCB => GetNullableInt("AGCB");
+		public int? M3AGCB => GetNullableInt("AGCB");
 
 		/// <summary>
 		/// Description: Agreed prices
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed prices")]
-		public int? M3_AGPD => GetNullableInt("AGPD");
+		public int? M3AGPD => GetNullableInt("AGPD");
 
 		/// <summary>
 		/// Description: Agreed quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed quantity")]
-		public decimal? M3_AGQT => GetNullableDecimal("AGQT");
+		public decimal? M3AGQT => GetNullableDecimal("AGQT");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Summed agreement quantity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Summed agreement quantity")]
-		public int? M3_AGHE => GetNullableInt("AGHE");
+		public int? M3AGHE => GetNullableInt("AGHE");
 
 		/// <summary>
 		/// Description: Quantity check
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity check")]
-		public string M3_AGEC => GetString("AGEC");
+		public string M3AGEC => GetString("AGEC");
 
 		/// <summary>
 		/// Description: Address number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Season in use
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Season in use")]
-		public int? M3_SEAH => GetNullableInt("SEAH");
+		public int? M3SEAH => GetNullableInt("SEAH");
 
 		/// <summary>
 		/// Description: Project number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Price list
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Price list customer number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list customer number")]
-		public string M3_PRLC => GetString("PRLC");
+		public string M3PRLC => GetString("PRLC");
 
 		/// <summary>
 		/// Description: Currency
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Language
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Customer´s purchase order date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer´s purchase order date")]
-		public DateTime? M3_CUDT => GetNullableDateTime("CUDT");
+		public DateTime? M3CUDT => GetNullableDateTime("CUDT");
 
 		/// <summary>
 		/// Description: Customers order number
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Our reference
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Our reference")]
-		public string M3_OREF => GetString("OREF");
+		public string M3OREF => GetString("OREF");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 
 		/// <summary>
 		/// Description: Future rate agreement number
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Future rate agreement number")]
-		public string M3_FECN => GetString("FECN");
+		public string M3FECN => GetString("FECN");
 
 		/// <summary>
 		/// Description: Costing model - sales price
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - sales price")]
-		public string M3_SCMO => GetString("SCMO");
+		public string M3SCMO => GetString("SCMO");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Packaging terms
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging terms")]
-		public string M3_TEPA => GetString("TEPA");
+		public string M3TEPA => GetString("TEPA");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Responsible
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Cash discount term
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount term")]
-		public string M3_TECD => GetString("TECD");
+		public string M3TECD => GetString("TECD");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Net price used
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price used")]
-		public int? M3_NTCD => GetNullableInt("NTCD");
+		public int? M3NTCD => GetNullableInt("NTCD");
 
 		/// <summary>
 		/// Description: Bonus generating
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus generating")]
-		public int? M3_BNCD => GetNullableInt("BNCD");
+		public int? M3BNCD => GetNullableInt("BNCD");
 
 		/// <summary>
 		/// Description: Commission generating
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commission generating")]
-		public int? M3_PRAC => GetNullableInt("PRAC");
+		public int? M3PRAC => GetNullableInt("PRAC");
 
 		/// <summary>
 		/// Description: Recipient agreement type 1 - commission
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 1 - commission")]
-		public string M3_AGNT => GetString("AGNT");
+		public string M3AGNT => GetString("AGNT");
 
 		/// <summary>
 		/// Description: Recipient agreement type 2 - commission
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 2 - commission")]
-		public string M3_AGN2 => GetString("AGN2");
+		public string M3AGN2 => GetString("AGN2");
 
 		/// <summary>
 		/// Description: Recipient agreement type 3 - commission
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 3 - commission")]
-		public string M3_AGN3 => GetString("AGN3");
+		public string M3AGN3 => GetString("AGN3");
 
 		/// <summary>
 		/// Description: Recipient agreement type 4 - commission
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 4 - commission")]
-		public string M3_AGN4 => GetString("AGN4");
+		public string M3AGN4 => GetString("AGN4");
 
 		/// <summary>
 		/// Description: Recipient agreement type 5 - commission
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 5 - commission")]
-		public string M3_AGN5 => GetString("AGN5");
+		public string M3AGN5 => GetString("AGN5");
 
 		/// <summary>
 		/// Description: Recipient agreement type 6 - commission
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 6 - commission")]
-		public string M3_AGN6 => GetString("AGN6");
+		public string M3AGN6 => GetString("AGN6");
 
 		/// <summary>
 		/// Description: Recipient agreement type 7 - commission
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 7 - commission")]
-		public string M3_AGN7 => GetString("AGN7");
+		public string M3AGN7 => GetString("AGN7");
 
 		/// <summary>
 		/// Description: Recipient agreement type 9 - bonus
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OIS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient agreement type 9 - bonus")]
-		public string M3_BREC => GetString("BREC");
+		public string M3BREC => GetString("BREC");
 	}
 }
 // EOF

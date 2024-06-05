@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Proposal number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proposal number")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Operation number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Operation description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Sequencing status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequencing status")]
-		public int? M3_SEQS => GetNullableInt("SEQS");
+		public int? M3SEQS => GetNullableInt("SEQS");
 
 		/// <summary>
 		/// Description: APP work center
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("APP work center")]
-		public string M3_PLG1 => GetString("PLG1");
+		public string M3PLG1 => GetString("PLG1");
 
 		/// <summary>
 		/// Description: Finite scheduled resource
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finite scheduled resource")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Forced resource
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forced resource")]
-		public string M3_PLGF => GetString("PLGF");
+		public string M3PLGF => GetString("PLGF");
 
 		/// <summary>
 		/// Description: Planning area
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning area")]
-		public string M3_REAR => GetString("REAR");
+		public string M3REAR => GetString("REAR");
 
 		/// <summary>
 		/// Description: Planning area priority
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning area priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Fixed time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed time")]
-		public int? M3_FXTI => GetNullableInt("FXTI");
+		public int? M3FXTI => GetNullableInt("FXTI");
 
 		/// <summary>
 		/// Description: Price and time quantity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price and time quantity")]
-		public int? M3_CTCD => GetNullableInt("CTCD");
+		public int? M3CTCD => GetNullableInt("CTCD");
 
 		/// <summary>
 		/// Description: Setup time expressed in W/C time U/M
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup time expressed in W/C time U/M")]
-		public long? M3_SETI => GetNullableLong("SETI");
+		public long? M3SETI => GetNullableLong("SETI");
 
 		/// <summary>
 		/// Description: Filler
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Filler")]
-		public string M3_FILL => GetString("FILL");
+		public string M3FILL => GetString("FILL");
 
 		/// <summary>
 		/// Description: Co-sorting key
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Co-sorting key")]
-		public string M3_PSSQ => GetString("PSSQ");
+		public string M3PSSQ => GetString("PSSQ");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Parallel operation overlap code
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parallel operation overlap code")]
-		public int? M3_POOC => GetNullableInt("POOC");
+		public int? M3POOC => GetNullableInt("POOC");
 
 		/// <summary>
 		/// Description: Transit U/M / Overlap's code
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transit U/M / Overlap's code")]
-		public string M3_SLAT => GetString("SLAT");
+		public string M3SLAT => GetString("SLAT");
 
 		/// <summary>
 		/// Description: Transport days / Overlap base
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transport days / Overlap base")]
-		public decimal? M3_SLAC => GetNullableDecimal("SLAC");
+		public decimal? M3SLAC => GetNullableDecimal("SLAC");
 
 		/// <summary>
 		/// Description: Next operation number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next operation number")]
-		public int? M3_NXOP => GetNullableInt("NXOP");
+		public int? M3NXOP => GetNullableInt("NXOP");
 
 		/// <summary>
 		/// Description: APP primary operation number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("APP primary operation number")]
-		public int? M3_APON => GetNullableInt("APON");
+		public int? M3APON => GetNullableInt("APON");
 
 		/// <summary>
 		/// Description: Resource restriction
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Resource restriction")]
-		public string M3_RESR => GetString("RESR");
+		public string M3RESR => GetString("RESR");
 
 		/// <summary>
 		/// Description: Number of operations after split
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of operations after split")]
-		public string M3_SPLN => GetString("SPLN");
+		public string M3SPLN => GetString("SPLN");
 
 		/// <summary>
 		/// Description: Splitting key - operation
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Splitting key - operation")]
-		public int? M3_SPLK => GetNullableInt("SPLK");
+		public int? M3SPLK => GetNullableInt("SPLK");
 
 		/// <summary>
 		/// Description: Split quantity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split quantity")]
-		public decimal? M3_SPSZ => GetNullableDecimal("SPSZ");
+		public decimal? M3SPSZ => GetNullableDecimal("SPSZ");
 
 		/// <summary>
 		/// Description: APP-processed
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("APP-processed")]
-		public string M3_PRAP => GetString("PRAP");
+		public string M3PRAP => GetString("PRAP");
 
 		/// <summary>
 		/// Description: Split quantity
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split quantity")]
-		public int? M3_SPLT => GetNullableInt("SPLT");
+		public int? M3SPLT => GetNullableInt("SPLT");
 
 		/// <summary>
 		/// Description: Planned start date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Planned start time
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start time")]
-		public int? M3_MSTI => GetNullableInt("MSTI");
+		public int? M3MSTI => GetNullableInt("MSTI");
 
 		/// <summary>
 		/// Description: Planned finish date
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Planned finish time
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish time")]
-		public int? M3_MFTI => GetNullableInt("MFTI");
+		public int? M3MFTI => GetNullableInt("MFTI");
 
 		/// <summary>
 		/// Description: Forced start date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forced start date")]
-		public DateTime? M3_FRCD => GetNullableDateTime("FRCD");
+		public DateTime? M3FRCD => GetNullableDateTime("FRCD");
 
 		/// <summary>
 		/// Description: Forced start time
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forced start time")]
-		public int? M3_FRCT => GetNullableInt("FRCT");
+		public int? M3FRCT => GetNullableInt("FRCT");
 
 		/// <summary>
 		/// Description: Text line
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Planned number of machines
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of machines")]
-		public string M3_PRNM => GetString("PRNM");
+		public string M3PRNM => GetString("PRNM");
 
 		/// <summary>
 		/// Description: Planned number of persons - setup
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of persons - setup")]
-		public int? M3_SENP => GetNullableInt("SENP");
+		public int? M3SENP => GetNullableInt("SENP");
 
 		/// <summary>
 		/// Description: Planned number of persons - runtime
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of persons - runtime")]
-		public string M3_PRNP => GetString("PRNP");
+		public string M3PRNP => GetString("PRNP");
 
 		/// <summary>
 		/// Description: Planned number of resources
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of resources")]
-		public string M3_PLNR => GetString("PLNR");
+		public string M3PLNR => GetString("PLNR");
 
 		/// <summary>
 		/// Description: Change date
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Run time
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run time")]
-		public decimal? M3_PITI => GetNullableDecimal("PITI");
+		public decimal? M3PITI => GetNullableDecimal("PITI");
 
 		/// <summary>
 		/// Description: Run time expressed in hours
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run time expressed in hours")]
-		public decimal? M3_PIT2 => GetNullableDecimal("PIT2");
+		public decimal? M3PIT2 => GetNullableDecimal("PIT2");
 
 		/// <summary>
 		/// Description: Infinite/finite
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Infinite/finite")]
-		public int? M3_WLDE => GetNullableInt("WLDE");
+		public int? M3WLDE => GetNullableInt("WLDE");
 
 		/// <summary>
 		/// Description: Product number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRN1 => GetString("PRN1");
+		public string M3PRN1 => GetString("PRN1");
 
 		/// <summary>
 		/// Description: Setup time expressed in hours
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup time expressed in hours")]
-		public long? M3_SET2 => GetNullableLong("SET2");
+		public long? M3SET2 => GetNullableLong("SET2");
 
 		/// <summary>
 		/// Description: Efficiency factor
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Efficiency factor")]
-		public int? M3_EFFA => GetNullableInt("EFFA");
+		public int? M3EFFA => GetNullableInt("EFFA");
 
 		/// <summary>
 		/// Description: Preparation time
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Preparation time")]
-		public int? M3_PRET => GetNullableInt("PRET");
+		public int? M3PRET => GetNullableInt("PRET");
 
 		/// <summary>
 		/// Description: Post-operation time
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-operation time")]
-		public int? M3_POTM => GetNullableInt("POTM");
+		public int? M3POTM => GetNullableInt("POTM");
 
 		/// <summary>
 		/// Description: Alternate routing 01
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 01")]
-		public string M3_AO01 => GetString("AO01");
+		public string M3AO01 => GetString("AO01");
 
 		/// <summary>
 		/// Description: Alternate routing 02
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 02")]
-		public string M3_AO02 => GetString("AO02");
+		public string M3AO02 => GetString("AO02");
 
 		/// <summary>
 		/// Description: Alternate routing 03
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 03")]
-		public string M3_AO03 => GetString("AO03");
+		public string M3AO03 => GetString("AO03");
 
 		/// <summary>
 		/// Description: Alternate routing 04
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 04")]
-		public string M3_AO04 => GetString("AO04");
+		public string M3AO04 => GetString("AO04");
 
 		/// <summary>
 		/// Description: Alternate routing 05
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 05")]
-		public string M3_AO05 => GetString("AO05");
+		public string M3AO05 => GetString("AO05");
 
 		/// <summary>
 		/// Description: Schedule number
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Schedule number")]
-		public decimal? M3_SCHN => GetNullableDecimal("SCHN");
+		public decimal? M3SCHN => GetNullableDecimal("SCHN");
 
 		/// <summary>
 		/// Description: Sequence number in schedule
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number in schedule")]
-		public long? M3_SCHS => GetNullableLong("SCHS");
+		public long? M3SCHS => GetNullableLong("SCHS");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Facility
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Run time adjusted for subcontracting
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run time adjusted for subcontracting")]
-		public decimal? M3_PIT3 => GetNullableDecimal("PIT3");
+		public decimal? M3PIT3 => GetNullableDecimal("PIT3");
 
 		/// <summary>
 		/// Description: Max percentage duration of operation
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max percentage duration of operation")]
-		public int? M3_MDOP => GetNullableInt("MDOP");
+		public int? M3MDOP => GetNullableInt("MDOP");
 
 		/// <summary>
 		/// Description: Subcontracted control
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontracted control")]
-		public string M3_SUBC => GetString("SUBC");
+		public string M3SUBC => GetString("SUBC");
 
 		/// <summary>
 		/// Description: Runtime(hours) for altrouting 01
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Runtime(hours) for altrouting 01")]
-		public decimal? M3_PI01 => GetNullableDecimal("PI01");
+		public decimal? M3PI01 => GetNullableDecimal("PI01");
 
 		/// <summary>
 		/// Description: Runtime(hours) for altrouting 02
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Runtime(hours) for altrouting 02")]
-		public decimal? M3_PI02 => GetNullableDecimal("PI02");
+		public decimal? M3PI02 => GetNullableDecimal("PI02");
 
 		/// <summary>
 		/// Description: Runtime(hours) for altrouting 03
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Runtime(hours) for altrouting 03")]
-		public decimal? M3_PI03 => GetNullableDecimal("PI03");
+		public decimal? M3PI03 => GetNullableDecimal("PI03");
 
 		/// <summary>
 		/// Description: Runtime(hours) for altrouting 04
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Runtime(hours) for altrouting 04")]
-		public decimal? M3_PI04 => GetNullableDecimal("PI04");
+		public decimal? M3PI04 => GetNullableDecimal("PI04");
 
 		/// <summary>
 		/// Description: Runtime(hours) for altrouting 05
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Runtime(hours) for altrouting 05")]
-		public decimal? M3_PI05 => GetNullableDecimal("PI05");
+		public decimal? M3PI05 => GetNullableDecimal("PI05");
 
 		/// <summary>
 		/// Description: Remaining buffer percentage
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining buffer percentage")]
-		public int? M3_RBUP => GetNullableInt("RBUP");
+		public int? M3RBUP => GetNullableInt("RBUP");
 
 		/// <summary>
 		/// Description: Alternate routing 06
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 06")]
-		public string M3_AO06 => GetString("AO06");
+		public string M3AO06 => GetString("AO06");
 
 		/// <summary>
 		/// Description: Alternate routing 07
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 07")]
-		public string M3_AO07 => GetString("AO07");
+		public string M3AO07 => GetString("AO07");
 
 		/// <summary>
 		/// Description: Alternate routing 08
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 08")]
-		public string M3_AO08 => GetString("AO08");
+		public string M3AO08 => GetString("AO08");
 
 		/// <summary>
 		/// Description: Alternate routing 09
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 09")]
-		public string M3_AO09 => GetString("AO09");
+		public string M3AO09 => GetString("AO09");
 
 		/// <summary>
 		/// Description: Alternate routing 10
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 10")]
-		public string M3_AO10 => GetString("AO10");
+		public string M3AO10 => GetString("AO10");
 
 		/// <summary>
 		/// Description: Alternate routing 11
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 11")]
-		public string M3_AO11 => GetString("AO11");
+		public string M3AO11 => GetString("AO11");
 
 		/// <summary>
 		/// Description: Alternate routing 12
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 12")]
-		public string M3_AO12 => GetString("AO12");
+		public string M3AO12 => GetString("AO12");
 
 		/// <summary>
 		/// Description: Alternate routing 13
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 13")]
-		public string M3_AO13 => GetString("AO13");
+		public string M3AO13 => GetString("AO13");
 
 		/// <summary>
 		/// Description: Alternate routing 14
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 14")]
-		public string M3_AO14 => GetString("AO14");
+		public string M3AO14 => GetString("AO14");
 
 		/// <summary>
 		/// Description: Alternate routing 15
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 15")]
-		public string M3_AO15 => GetString("AO15");
+		public string M3AO15 => GetString("AO15");
 
 		/// <summary>
 		/// Description: Alternate routing 16
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 16")]
-		public string M3_AO16 => GetString("AO16");
+		public string M3AO16 => GetString("AO16");
 
 		/// <summary>
 		/// Description: Alternate routing 17
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 17")]
-		public string M3_AO17 => GetString("AO17");
+		public string M3AO17 => GetString("AO17");
 
 		/// <summary>
 		/// Description: Alternate routing 18
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 18")]
-		public string M3_AO18 => GetString("AO18");
+		public string M3AO18 => GetString("AO18");
 
 		/// <summary>
 		/// Description: Alternate routing 19
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 19")]
-		public string M3_AO19 => GetString("AO19");
+		public string M3AO19 => GetString("AO19");
 
 		/// <summary>
 		/// Description: Alternate routing 20
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 20")]
-		public string M3_AO20 => GetString("AO20");
+		public string M3AO20 => GetString("AO20");
 
 		/// <summary>
 		/// Description: Alternate routing 21
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 21")]
-		public string M3_AO21 => GetString("AO21");
+		public string M3AO21 => GetString("AO21");
 
 		/// <summary>
 		/// Description: Alternate routing 22
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 22")]
-		public string M3_AO22 => GetString("AO22");
+		public string M3AO22 => GetString("AO22");
 
 		/// <summary>
 		/// Description: Alternate routing 23
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 23")]
-		public string M3_AO23 => GetString("AO23");
+		public string M3AO23 => GetString("AO23");
 
 		/// <summary>
 		/// Description: Alternate routing 24
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 24")]
-		public string M3_AO24 => GetString("AO24");
+		public string M3AO24 => GetString("AO24");
 
 		/// <summary>
 		/// Description: Alternate routing 25
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 25")]
-		public string M3_AO25 => GetString("AO25");
+		public string M3AO25 => GetString("AO25");
 
 		/// <summary>
 		/// Description: Alternate routing 26
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 26")]
-		public string M3_AO26 => GetString("AO26");
+		public string M3AO26 => GetString("AO26");
 
 		/// <summary>
 		/// Description: Alternate routing 27
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 27")]
-		public string M3_AO27 => GetString("AO27");
+		public string M3AO27 => GetString("AO27");
 
 		/// <summary>
 		/// Description: Alternate routing 28
@@ -1024,7 +1024,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 28")]
-		public string M3_AO28 => GetString("AO28");
+		public string M3AO28 => GetString("AO28");
 
 		/// <summary>
 		/// Description: Alternate routing 29
@@ -1035,7 +1035,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 29")]
-		public string M3_AO29 => GetString("AO29");
+		public string M3AO29 => GetString("AO29");
 
 		/// <summary>
 		/// Description: Alternate routing 30
@@ -1046,7 +1046,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate routing 30")]
-		public string M3_AO30 => GetString("AO30");
+		public string M3AO30 => GetString("AO30");
 	}
 }
 // EOF

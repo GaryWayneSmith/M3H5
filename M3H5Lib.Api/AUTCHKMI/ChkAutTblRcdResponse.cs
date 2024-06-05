@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.AUTCHKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authorized")]
-		public string M3_TX05 => GetString("TX05");
+		public string M3TX05 => GetString("TX05");
 
 		/// <summary>
 		/// Description: Message ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.AUTCHKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Message
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.AUTCHKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message")]
-		public string M3_MSGD => GetString("MSGD");
+		public string M3MSGD => GetString("MSGD");
 	}
 }
 // EOF

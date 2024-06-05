@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public string M3_SAPR => GetString("SAPR");
+		public string M3SAPR => GetString("SAPR");
 
 		/// <summary>
 		/// Description: Cost price
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public string M3_UCOS => GetString("UCOS");
+		public string M3UCOS => GetString("UCOS");
 
 		/// <summary>
 		/// Description: Margin amount
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Margin amount")]
-		public string M3_MARG => GetString("MARG");
+		public string M3MARG => GetString("MARG");
 
 		/// <summary>
 		/// Description: Margin percentage
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Margin percentage")]
-		public int? M3_MAPC => GetNullableInt("MAPC");
+		public int? M3MAPC => GetNullableInt("MAPC");
 
 		/// <summary>
 		/// Description: Local sales price
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local sales price")]
-		public string M3_LOSP => GetString("LOSP");
+		public string M3LOSP => GetString("LOSP");
 
 		/// <summary>
 		/// Description: Local currency code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency code")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 	}
 }
 // EOF

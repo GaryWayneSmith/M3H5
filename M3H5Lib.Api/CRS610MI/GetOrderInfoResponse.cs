@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Language
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Customer number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Customer group
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer group")]
-		public string M3_CUCL => GetString("CUCL");
+		public string M3CUCL => GetString("CUCL");
 
 		/// <summary>
 		/// Description: Our reference
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Our reference")]
-		public string M3_OREF => GetString("OREF");
+		public string M3OREF => GetString("OREF");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: District
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("District")]
-		public string M3_SDST => GetString("SDST");
+		public string M3SDST => GetString("SDST");
 
 		/// <summary>
 		/// Description: Customer order type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Service model
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service model")]
-		public string M3_EXCD => GetString("EXCD");
+		public string M3EXCD => GetString("EXCD");
 
 		/// <summary>
 		/// Description: Charge model
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge model")]
-		public string M3_CHSY => GetString("CHSY");
+		public string M3CHSY => GetString("CHSY");
 
 		/// <summary>
 		/// Description: Term of delivery
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Term of delivery")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Discount model
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Discount group - customer
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount group - customer")]
-		public string M3_DIGC => GetString("DIGC");
+		public string M3DIGC => GetString("DIGC");
 
 		/// <summary>
 		/// Description: Discount - percentage
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount - percentage")]
-		public int? M3_DIPC => GetNullableInt("DIPC");
+		public int? M3DIPC => GetNullableInt("DIPC");
 
 		/// <summary>
 		/// Description: Place-replaced by EDE2
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place-replaced by EDE2")]
-		public string M3_EDES => GetString("EDES");
+		public string M3EDES => GetString("EDES");
 
 		/// <summary>
 		/// Description: Commission group
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commission group")]
-		public string M3_PRVG => GetString("PRVG");
+		public string M3PRVG => GetString("PRVG");
 
 		/// <summary>
 		/// Description: Bonus group
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus group")]
-		public string M3_BGRP => GetString("BGRP");
+		public string M3BGRP => GetString("BGRP");
 
 		/// <summary>
 		/// Description: Term of payment
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Term of payment")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Payer
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Change date for customer
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date for customer")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Invoicing group
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing group")]
-		public string M3_IVGP => GetString("IVGP");
+		public string M3IVGP => GetString("IVGP");
 
 		/// <summary>
 		/// Description: Place
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place")]
-		public string M3_EDE2 => GetString("EDE2");
+		public string M3EDE2 => GetString("EDE2");
 
 		/// <summary>
 		/// Description: Address number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Price list table
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list table")]
-		public string M3_PLTB => GetString("PLTB");
+		public string M3PLTB => GetString("PLTB");
 
 		/// <summary>
 		/// Description: Summary invoice
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Summary invoice")]
-		public int? M3_AICD => GetNullableInt("AICD");
+		public int? M3AICD => GetNullableInt("AICD");
 
 		/// <summary>
 		/// Description: Bonus/Commission Active
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus/Commission Active")]
-		public int? M3_BUSE => GetNullableInt("BUSE");
+		public int? M3BUSE => GetNullableInt("BUSE");
 
 		/// <summary>
 		/// Description: Facility
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Assortment check
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assortment check")]
-		public int? M3_ACHK => GetNullableInt("ACHK");
+		public int? M3ACHK => GetNullableInt("ACHK");
 
 		/// <summary>
 		/// Description: Ship-via
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ship-via")]
-		public string M3_ADVI => GetString("ADVI");
+		public string M3ADVI => GetString("ADVI");
 
 		/// <summary>
 		/// Description: Statistic identity 1 customer
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistic identity 1 customer")]
-		public string M3_FRE1 => GetString("FRE1");
+		public string M3FRE1 => GetString("FRE1");
 
 		/// <summary>
 		/// Description: Statistic identity 2 customer
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistic identity 2 customer")]
-		public string M3_FRE2 => GetString("FRE2");
+		public string M3FRE2 => GetString("FRE2");
 
 		/// <summary>
 		/// Description: Customer document group
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer document group")]
-		public string M3_DOGR => GetString("DOGR");
+		public string M3DOGR => GetString("DOGR");
 
 		/// <summary>
 		/// Description: Separate invoices
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Separate invoices")]
-		public int? M3_ADBO => GetNullableInt("ADBO");
+		public int? M3ADBO => GetNullableInt("ADBO");
 
 		/// <summary>
 		/// Description: VAT included
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT included")]
-		public int? M3_TINC => GetNullableInt("TINC");
+		public int? M3TINC => GetNullableInt("TINC");
 
 		/// <summary>
 		/// Description: Responsible
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Statistics customer
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics customer")]
-		public string M3_CUST => GetString("CUST");
+		public string M3CUST => GetString("CUST");
 
 		/// <summary>
 		/// Description: Packaging terms
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging terms")]
-		public string M3_TEPA => GetString("TEPA");
+		public string M3TEPA => GetString("TEPA");
 
 		/// <summary>
 		/// Description: Priority
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Agreement check - order header
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement check - order header")]
-		public int? M3_AGCH => GetNullableInt("AGCH");
+		public int? M3AGCH => GetNullableInt("AGCH");
 
 		/// <summary>
 		/// Description: Agreement check - order lines
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement check - order lines")]
-		public int? M3_AGCT => GetNullableInt("AGCT");
+		public int? M3AGCT => GetNullableInt("AGCT");
 
 		/// <summary>
 		/// Description: Unloading zone
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unloading zone")]
-		public string M3_ULZO => GetString("ULZO");
+		public string M3ULZO => GetString("ULZO");
 
 		/// <summary>
 		/// Description: Labor code - trade statistics (TST)
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor code - trade statistics (TST)")]
-		public string M3_ECLC => GetString("ECLC");
+		public string M3ECLC => GetString("ECLC");
 
 		/// <summary>
 		/// Description: Group invoice
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group invoice")]
-		public int? M3_GRPY => GetNullableInt("GRPY");
+		public int? M3GRPY => GetNullableInt("GRPY");
 
 		/// <summary>
 		/// Description: Alias category
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias category")]
-		public int? M3_ALWT => GetNullableInt("ALWT");
+		public int? M3ALWT => GetNullableInt("ALWT");
 
 		/// <summary>
 		/// Description: Alias number
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: Print delivery information
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print delivery information")]
-		public int? M3_PRDL => GetNullableInt("PRDL");
+		public int? M3PRDL => GetNullableInt("PRDL");
 
 		/// <summary>
 		/// Description: CO number mandatory
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CO number mandatory")]
-		public int? M3_MCOS => GetNullableInt("MCOS");
+		public int? M3MCOS => GetNullableInt("MCOS");
 
 		/// <summary>
 		/// Description: Backorder
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Backorder")]
-		public int? M3_BCKO => GetNullableInt("BCKO");
+		public int? M3BCKO => GetNullableInt("BCKO");
 
 		/// <summary>
 		/// Description: Partial delivery
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partial delivery")]
-		public int? M3_PADL => GetNullableInt("PADL");
+		public int? M3PADL => GetNullableInt("PADL");
 
 		/// <summary>
 		/// Description: Delivery regrouping
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery regrouping")]
-		public int? M3_SCED => GetNullableInt("SCED");
+		public int? M3SCED => GetNullableInt("SCED");
 
 		/// <summary>
 		/// Description: Automatic closing
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic closing")]
-		public int? M3_BOP1 => GetNullableInt("BOP1");
+		public int? M3BOP1 => GetNullableInt("BOP1");
 	}
 }
 // EOF

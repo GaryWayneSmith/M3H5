@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key search id")]
-		public string M3_CONI => GetString("CONI");
+		public string M3CONI => GetString("CONI");
 
 		/// <summary>
 		/// Description: File
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: User
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Role
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Role")]
-		public string M3_ROLL => GetString("ROLL");
+		public string M3ROLL => GetString("ROLL");
 
 		/// <summary>
 		/// Description: Program name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SQNR => GetNullableInt("SQNR");
+		public int? M3SQNR => GetNullableInt("SQNR");
 
 		/// <summary>
 		/// Description: Name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Message ID
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Field
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL01 => GetString("FL01");
+		public string M3FL01 => GetString("FL01");
 
 		/// <summary>
 		/// Description: Field
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL02 => GetString("FL02");
+		public string M3FL02 => GetString("FL02");
 
 		/// <summary>
 		/// Description: Field
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL03 => GetString("FL03");
+		public string M3FL03 => GetString("FL03");
 
 		/// <summary>
 		/// Description: Field
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL04 => GetString("FL04");
+		public string M3FL04 => GetString("FL04");
 
 		/// <summary>
 		/// Description: Field
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL05 => GetString("FL05");
+		public string M3FL05 => GetString("FL05");
 
 		/// <summary>
 		/// Description: Field
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL06 => GetString("FL06");
+		public string M3FL06 => GetString("FL06");
 
 		/// <summary>
 		/// Description: Field
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL07 => GetString("FL07");
+		public string M3FL07 => GetString("FL07");
 
 		/// <summary>
 		/// Description: Field
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL08 => GetString("FL08");
+		public string M3FL08 => GetString("FL08");
 
 		/// <summary>
 		/// Description: Field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL09 => GetString("FL09");
+		public string M3FL09 => GetString("FL09");
 
 		/// <summary>
 		/// Description: Field
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL10 => GetString("FL10");
+		public string M3FL10 => GetString("FL10");
 
 		/// <summary>
 		/// Description: Field
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL11 => GetString("FL11");
+		public string M3FL11 => GetString("FL11");
 
 		/// <summary>
 		/// Description: Field
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL12 => GetString("FL12");
+		public string M3FL12 => GetString("FL12");
 
 		/// <summary>
 		/// Description: Field
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL13 => GetString("FL13");
+		public string M3FL13 => GetString("FL13");
 
 		/// <summary>
 		/// Description: Field
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL14 => GetString("FL14");
+		public string M3FL14 => GetString("FL14");
 
 		/// <summary>
 		/// Description: Field
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL15 => GetString("FL15");
+		public string M3FL15 => GetString("FL15");
 
 		/// <summary>
 		/// Description: Field
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL16 => GetString("FL16");
+		public string M3FL16 => GetString("FL16");
 
 		/// <summary>
 		/// Description: Text identity
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Search query
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search query")]
-		public string M3_SQRY => GetString("SQRY");
+		public string M3SQRY => GetString("SQRY");
 
 		/// <summary>
 		/// Description: Status
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Priority
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Field type
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field type")]
-		public string M3_FLDT => GetString("FLDT");
+		public string M3FLDT => GetString("FLDT");
 
 		/// <summary>
 		/// Description: Sub search ID
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CMS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sub search ID")]
-		public string M3_SCNI => GetString("SCNI");
+		public string M3SCNI => GetString("SCNI");
 	}
 }
 // EOF

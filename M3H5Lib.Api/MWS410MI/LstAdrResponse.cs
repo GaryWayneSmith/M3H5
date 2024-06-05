@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address type")]
-		public int? M3_ADRT => GetNullableInt("ADRT");
+		public int? M3ADRT => GetNullableInt("ADRT");
 
 		/// <summary>
 		/// Description: Consignee
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignee")]
-		public string M3_CONA => GetString("CONA");
+		public string M3CONA => GetString("CONA");
 
 		/// <summary>
 		/// Description: Consignee address number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignee address number")]
-		public string M3_COAA => GetString("COAA");
+		public string M3COAA => GetString("COAA");
 
 		/// <summary>
 		/// Description: Delivery specification
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery specification")]
-		public string M3_DLSP => GetString("DLSP");
+		public string M3DLSP => GetString("DLSP");
 
 		/// <summary>
 		/// Description: Consignor
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignor")]
-		public string M3_CONB => GetString("CONB");
+		public string M3CONB => GetString("CONB");
 
 		/// <summary>
 		/// Description: Consignor address number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignor address number")]
-		public string M3_COBB => GetString("COBB");
+		public string M3COBB => GetString("COBB");
 
 		/// <summary>
 		/// Description: Division
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_NAME => GetString("NAME");
+		public string M3NAME => GetString("NAME");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Postal code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Country
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Area/state
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/state")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Language
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: City
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Rail station
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rail station")]
-		public string M3_RASN => GetString("RASN");
+		public string M3RASN => GetString("RASN");
 
 		/// <summary>
 		/// Description: County ID
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 
 		/// <summary>
 		/// Description: Standard point location code
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard point location code")]
-		public string M3_SPLE => GetString("SPLE");
+		public string M3SPLE => GetString("SPLE");
 	}
 }
 // EOF

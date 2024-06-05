@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounted amount (debit)")]
-		public decimal? M3_ACAD => GetNullableDecimal("ACAD");
+		public decimal? M3ACAD => GetNullableDecimal("ACAD");
 
 		/// <summary>
 		/// Description: Accounted amount (credit)
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounted amount (credit)")]
-		public decimal? M3_ACAC => GetNullableDecimal("ACAC");
+		public decimal? M3ACAC => GetNullableDecimal("ACAC");
 
 		/// <summary>
 		/// Description: Currency amount (debit)
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency amount (debit)")]
-		public decimal? M3_CUAD => GetNullableDecimal("CUAD");
+		public decimal? M3CUAD => GetNullableDecimal("CUAD");
 
 		/// <summary>
 		/// Description: Currency amount (credit)
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency amount (credit)")]
-		public decimal? M3_CUAC => GetNullableDecimal("CUAC");
+		public decimal? M3CUAC => GetNullableDecimal("CUAC");
 
 		/// <summary>
 		/// Description: Accounted quantity (debit)
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounted quantity (debit)")]
-		public decimal? M3_ACQD => GetNullableDecimal("ACQD");
+		public decimal? M3ACQD => GetNullableDecimal("ACQD");
 
 		/// <summary>
 		/// Description: Accounted quantity (credit)
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounted quantity (credit)")]
-		public decimal? M3_ACQC => GetNullableDecimal("ACQC");
+		public decimal? M3ACQC => GetNullableDecimal("ACQC");
 
 		/// <summary>
 		/// Description: Third currency amount - debit
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency amount - debit")]
-		public decimal? M3_TCAD => GetNullableDecimal("TCAD");
+		public decimal? M3TCAD => GetNullableDecimal("TCAD");
 
 		/// <summary>
 		/// Description: Third currency amount - credit
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency amount - credit")]
-		public decimal? M3_TCAC => GetNullableDecimal("TCAC");
+		public decimal? M3TCAC => GetNullableDecimal("TCAC");
 
 		/// <summary>
 		/// Description: Internal accounted amount (debit)
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal accounted amount (debit)")]
-		public decimal? M3_IAAD => GetNullableDecimal("IAAD");
+		public decimal? M3IAAD => GetNullableDecimal("IAAD");
 
 		/// <summary>
 		/// Description: Internal accounted amount (credit)
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal accounted amount (credit)")]
-		public decimal? M3_IAAC => GetNullableDecimal("IAAC");
+		public decimal? M3IAAC => GetNullableDecimal("IAAC");
 
 		/// <summary>
 		/// Description: Internal currency amount (debit)
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal currency amount (debit)")]
-		public decimal? M3_ICUD => GetNullableDecimal("ICUD");
+		public decimal? M3ICUD => GetNullableDecimal("ICUD");
 
 		/// <summary>
 		/// Description: Internal currency amount (credit)
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal currency amount (credit)")]
-		public decimal? M3_ICUC => GetNullableDecimal("ICUC");
+		public decimal? M3ICUC => GetNullableDecimal("ICUC");
 
 		/// <summary>
 		/// Description: Internal 3rd currency amount (debit)
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal 3rd currency amount (debit)")]
-		public decimal? M3_ITAD => GetNullableDecimal("ITAD");
+		public decimal? M3ITAD => GetNullableDecimal("ITAD");
 
 		/// <summary>
 		/// Description: Internal 3rd currency amount (credit)
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal 3rd currency amount (credit)")]
-		public decimal? M3_ITAC => GetNullableDecimal("ITAC");
+		public decimal? M3ITAC => GetNullableDecimal("ITAC");
 
 		/// <summary>
 		/// Description: Third currency code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency code")]
-		public string M3_THCC => GetString("THCC");
+		public string M3THCC => GetString("THCC");
 	}
 }
 // EOF

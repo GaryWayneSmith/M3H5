@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Format
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Format")]
-		public int? M3_XMLF => GetNullableInt("XMLF");
+		public int? M3XMLF => GetNullableInt("XMLF");
 
 		/// <summary>
 		/// Description: Variant
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Variant")]
-		public int? M3_XMLT => GetNullableInt("XMLT");
+		public int? M3XMLT => GetNullableInt("XMLT");
 
 		/// <summary>
 		/// Description: Split XML file
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split XML file")]
-		public int? M3_SPKY => GetNullableInt("SPKY");
+		public int? M3SPKY => GetNullableInt("SPKY");
 
 		/// <summary>
 		/// Description: Root element
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Root element")]
-		public string M3_RELM => GetString("RELM");
+		public string M3RELM => GetString("RELM");
 
 		/// <summary>
 		/// Description: Default namespace
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default namespace")]
-		public string M3_NMSP => GetString("NMSP");
+		public string M3NMSP => GetString("NMSP");
 
 		/// <summary>
 		/// Description: Namespace 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Namespace 1")]
-		public string M3_NMS1 => GetString("NMS1");
+		public string M3NMS1 => GetString("NMS1");
 
 		/// <summary>
 		/// Description: Prefix for namespace 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prefix for namespace 1")]
-		public string M3_PRE1 => GetString("PRE1");
+		public string M3PRE1 => GetString("PRE1");
 
 		/// <summary>
 		/// Description: Schema namespace
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Schema namespace")]
-		public string M3_SCNP => GetString("SCNP");
+		public string M3SCNP => GetString("SCNP");
 
 		/// <summary>
 		/// Description: Schema
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Schema")]
-		public string M3_SCHM => GetString("SCHM");
+		public string M3SCHM => GetString("SCHM");
 
 		/// <summary>
 		/// Description: Element name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element name")]
-		public string M3_ELNM => GetString("ELNM");
+		public string M3ELNM => GetString("ELNM");
 	}
 }
 // EOF

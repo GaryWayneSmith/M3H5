@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,14 +37,14 @@ namespace M3H5Lib.Api
 		/// Description Adds Operation Plan
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_DICU">Distribution curve (Required)</param>
-		/// <param name="m3_CYP6">From Period (Required)</param>
-		/// <param name="m3_OPVR">Operation plan version</param>
-		/// <param name="m3_SERN">Serial number</param>
-		/// <param name="m3_MES0">Meter</param>
-		/// <param name="m3_QTYA">Total F/C</param>
-		/// <param name="m3_PERI">No of Periods</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3DICU">Distribution curve (Required)</param>
+		/// <param name="m3CYP6">From Period (Required)</param>
+		/// <param name="m3OPVR">Operation plan version</param>
+		/// <param name="m3SERN">Serial number</param>
+		/// <param name="m3MES0">Meter</param>
+		/// <param name="m3QTYA">Total F/C</param>
+		/// <param name="m3PERI">No of Periods</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,14 +53,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddOpPlan(
-			string m3_ITNO, 
-			int m3_DICU, 
-			int m3_CYP6, 
-			string m3_OPVR = null, 
-			string m3_SERN = null, 
-			string m3_MES0 = null, 
-			decimal? m3_QTYA = null, 
-			int? m3_PERI = null, 
+			string m3ITNO, 
+			int m3DICU, 
+			int m3CYP6, 
+			string m3OPVR = null, 
+			string m3SERN = null, 
+			string m3MES0 = null, 
+			decimal? m3QTYA = null, 
+			int? m3PERI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -73,26 +75,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("DICU", m3_DICU.ToString())
-				.WithQueryParameter("CYP6", m3_CYP6.ToString());
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("DICU", m3DICU.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CYP6", m3CYP6.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OPVR))
-				request.WithQueryParameter("OPVR", m3_OPVR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SERN))
-				request.WithQueryParameter("SERN", m3_SERN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MES0))
-				request.WithQueryParameter("MES0", m3_MES0.Trim());
-			if (m3_QTYA.HasValue)
-				request.WithQueryParameter("QTYA", m3_QTYA.Value.ToString());
-			if (m3_PERI.HasValue)
-				request.WithQueryParameter("PERI", m3_PERI.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3OPVR))
+				request.WithQueryParameter("OPVR", m3OPVR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SERN))
+				request.WithQueryParameter("SERN", m3SERN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MES0))
+				request.WithQueryParameter("MES0", m3MES0.Trim());
+			if (m3QTYA.HasValue)
+				request.WithQueryParameter("QTYA", m3QTYA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PERI.HasValue)
+				request.WithQueryParameter("PERI", m3PERI.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -102,7 +104,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

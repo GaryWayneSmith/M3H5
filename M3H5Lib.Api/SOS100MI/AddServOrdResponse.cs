@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Proposal status
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proposal status")]
-		public string M3_PPST => GetString("PPST");
+		public string M3PPST => GetString("PPST");
 
 		/// <summary>
 		/// Description: Service assignment number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service assignment number")]
-		public int? M3_JOBN => GetNullableInt("JOBN");
+		public int? M3JOBN => GetNullableInt("JOBN");
 
 		/// <summary>
 		/// Description: Service assignment suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service assignment suffix")]
-		public int? M3_JBSX => GetNullableInt("JBSX");
+		public int? M3JBSX => GetNullableInt("JBSX");
 
 		/// <summary>
 		/// Description: Technician
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician")]
-		public string M3_TECH => GetString("TECH");
+		public string M3TECH => GetString("TECH");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("E-mail type")]
-		public string M3_EMTP => GetString("EMTP");
+		public string M3EMTP => GetString("EMTP");
 
 		/// <summary>
 		/// Description: E-mail key value
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("E-mail key value")]
-		public string M3_EMKY => GetString("EMKY");
+		public string M3EMKY => GetString("EMKY");
 
 		/// <summary>
 		/// Description: Electronic mail address
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Electronic mail address")]
-		public string M3_EMAL => GetString("EMAL");
+		public string M3EMAL => GetString("EMAL");
 	}
 }
 // EOF

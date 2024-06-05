@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Transaction type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public int? M3_SSTT => GetNullableInt("SSTT");
+		public int? M3SSTT => GetNullableInt("SSTT");
 
 		/// <summary>
 		/// Description: Budget version
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget version")]
-		public string M3_BVER => GetString("BVER");
+		public string M3BVER => GetString("BVER");
 
 		/// <summary>
 		/// Description: Year
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Period
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_PERI => GetNullableInt("PERI");
+		public int? M3PERI => GetNullableInt("PERI");
 
 		/// <summary>
 		/// Description: Key
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key")]
-		public string M3_KEY1 => GetString("KEY1");
+		public string M3KEY1 => GetString("KEY1");
 
 		/// <summary>
 		/// Description: Key
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key")]
-		public string M3_KEY2 => GetString("KEY2");
+		public string M3KEY2 => GetString("KEY2");
 
 		/// <summary>
 		/// Description: Key
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key")]
-		public string M3_KEY3 => GetString("KEY3");
+		public string M3KEY3 => GetString("KEY3");
 
 		/// <summary>
 		/// Description: Key
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key")]
-		public string M3_KEY4 => GetString("KEY4");
+		public string M3KEY4 => GetString("KEY4");
 
 		/// <summary>
 		/// Description: Key
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key")]
-		public string M3_KEY5 => GetString("KEY5");
+		public string M3KEY5 => GetString("KEY5");
 
 		/// <summary>
 		/// Description: Key
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key")]
-		public string M3_KEY6 => GetString("KEY6");
+		public string M3KEY6 => GetString("KEY6");
 
 		/// <summary>
 		/// Description: Column
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL01 => GetString("CL01");
+		public string M3CL01 => GetString("CL01");
 
 		/// <summary>
 		/// Description: Column
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL02 => GetString("CL02");
+		public string M3CL02 => GetString("CL02");
 
 		/// <summary>
 		/// Description: Column
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL03 => GetString("CL03");
+		public string M3CL03 => GetString("CL03");
 
 		/// <summary>
 		/// Description: Column
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL04 => GetString("CL04");
+		public string M3CL04 => GetString("CL04");
 
 		/// <summary>
 		/// Description: Column
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL05 => GetString("CL05");
+		public string M3CL05 => GetString("CL05");
 
 		/// <summary>
 		/// Description: Column
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL06 => GetString("CL06");
+		public string M3CL06 => GetString("CL06");
 
 		/// <summary>
 		/// Description: Column
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL07 => GetString("CL07");
+		public string M3CL07 => GetString("CL07");
 
 		/// <summary>
 		/// Description: Column
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL08 => GetString("CL08");
+		public string M3CL08 => GetString("CL08");
 
 		/// <summary>
 		/// Description: Column
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL09 => GetString("CL09");
+		public string M3CL09 => GetString("CL09");
 
 		/// <summary>
 		/// Description: Column
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL10 => GetString("CL10");
+		public string M3CL10 => GetString("CL10");
 
 		/// <summary>
 		/// Description: Column
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL11 => GetString("CL11");
+		public string M3CL11 => GetString("CL11");
 
 		/// <summary>
 		/// Description: Column
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL12 => GetString("CL12");
+		public string M3CL12 => GetString("CL12");
 
 		/// <summary>
 		/// Description: Column
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL13 => GetString("CL13");
+		public string M3CL13 => GetString("CL13");
 
 		/// <summary>
 		/// Description: Column
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL14 => GetString("CL14");
+		public string M3CL14 => GetString("CL14");
 
 		/// <summary>
 		/// Description: Column
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL15 => GetString("CL15");
+		public string M3CL15 => GetString("CL15");
 
 		/// <summary>
 		/// Description: Column
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL16 => GetString("CL16");
+		public string M3CL16 => GetString("CL16");
 
 		/// <summary>
 		/// Description: Column
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL17 => GetString("CL17");
+		public string M3CL17 => GetString("CL17");
 
 		/// <summary>
 		/// Description: Column
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL18 => GetString("CL18");
+		public string M3CL18 => GetString("CL18");
 
 		/// <summary>
 		/// Description: Column
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL19 => GetString("CL19");
+		public string M3CL19 => GetString("CL19");
 
 		/// <summary>
 		/// Description: Column
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL20 => GetString("CL20");
+		public string M3CL20 => GetString("CL20");
 
 		/// <summary>
 		/// Description: Column
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL21 => GetString("CL21");
+		public string M3CL21 => GetString("CL21");
 
 		/// <summary>
 		/// Description: Column
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL22 => GetString("CL22");
+		public string M3CL22 => GetString("CL22");
 
 		/// <summary>
 		/// Description: Column
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL23 => GetString("CL23");
+		public string M3CL23 => GetString("CL23");
 
 		/// <summary>
 		/// Description: Column
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_CL24 => GetString("CL24");
+		public string M3CL24 => GetString("CL24");
 	}
 }
 // EOF

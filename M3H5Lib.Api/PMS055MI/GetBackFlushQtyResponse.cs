@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Component number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component number")]
-		public string M3_MTNO => GetString("MTNO");
+		public string M3MTNO => GetString("MTNO");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Reported quantity in alternative unit
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported quantity in alternative unit")]
-		public decimal? M3_RPQA => GetNullableDecimal("RPQA");
+		public decimal? M3RPQA => GetNullableDecimal("RPQA");
 
 		/// <summary>
 		/// Description: Manufacturing U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing U/M")]
-		public string M3_MAUN => GetString("MAUN");
+		public string M3MAUN => GetString("MAUN");
 
 		/// <summary>
 		/// Description: Catch weight
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight")]
-		public decimal? M3_CAWE => GetNullableDecimal("CAWE");
+		public decimal? M3CAWE => GetNullableDecimal("CAWE");
 
 		/// <summary>
 		/// Description: Reported quantity type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported quantity type")]
-		public int? M3_RPQ2 => GetNullableInt("RPQ2");
+		public int? M3RPQ2 => GetNullableInt("RPQ2");
 
 		/// <summary>
 		/// Description: Product engineering U/M
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product engineering U/M")]
-		public string M3_PEUN => GetString("PEUN");
+		public string M3PEUN => GetString("PEUN");
 	}
 }
 // EOF

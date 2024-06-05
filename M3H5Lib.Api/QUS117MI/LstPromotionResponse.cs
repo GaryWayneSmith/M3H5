@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Promotion
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_QCAM => GetString("QCAM");
+		public string M3QCAM => GetString("QCAM");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Discount
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount")]
-		public int? M3_DIPC => GetNullableInt("DIPC");
+		public int? M3DIPC => GetNullableInt("DIPC");
 
 		/// <summary>
 		/// Description: Discount amount
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount")]
-		public decimal? M3_DIAM => GetNullableDecimal("DIAM");
+		public decimal? M3DIAM => GetNullableDecimal("DIAM");
 
 		/// <summary>
 		/// Description: Currency
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Valid from
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Item group
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGR => GetString("ITGR");
+		public string M3ITGR => GetString("ITGR");
 
 		/// <summary>
 		/// Description: Product group
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product group")]
-		public string M3_ITCL => GetString("ITCL");
+		public string M3ITCL => GetString("ITCL");
 
 		/// <summary>
 		/// Description: Supplier
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: ID number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ID number")]
-		public string M3_LKNR => GetString("LKNR");
+		public string M3LKNR => GetString("LKNR");
 
 		/// <summary>
 		/// Description: Responsible
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Claimable
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claimable")]
-		public int? M3_QCLY => GetNullableInt("QCLY");
+		public int? M3QCLY => GetNullableInt("QCLY");
 
 		/// <summary>
 		/// Description: Internal customer
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal customer")]
-		public string M3_ICUN => GetString("ICUN");
+		public string M3ICUN => GetString("ICUN");
 
 		/// <summary>
 		/// Description: Industry Application
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Industry Application")]
-		public string M3_INAP => GetString("INAP");
+		public string M3INAP => GetString("INAP");
 
 		/// <summary>
 		/// Description: Customer
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer group
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer group")]
-		public string M3_CUCL => GetString("CUCL");
+		public string M3CUCL => GetString("CUCL");
 
 		/// <summary>
 		/// Description: Internal promotion
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal promotion")]
-		public int? M3_INPM => GetNullableInt("INPM");
+		public int? M3INPM => GetNullableInt("INPM");
 
 		/// <summary>
 		/// Description: Discount base
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount base")]
-		public int? M3_DISB => GetNullableInt("DISB");
+		public int? M3DISB => GetNullableInt("DISB");
 
 		/// <summary>
 		/// Description: Discount model
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Text identity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.QUS117MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

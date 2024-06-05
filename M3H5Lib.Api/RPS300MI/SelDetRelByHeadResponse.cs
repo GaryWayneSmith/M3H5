@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Macro order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Macro order number")]
-		public string M3_MONO => GetString("MONO");
+		public string M3MONO => GetString("MONO");
 
 		/// <summary>
 		/// Description: Material sequence number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material sequence number")]
-		public int? M3_SEMA => GetNullableInt("SEMA");
+		public int? M3SEMA => GetNullableInt("SEMA");
 
 		/// <summary>
 		/// Description: Operation sequence number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation sequence number")]
-		public int? M3_SEOP => GetNullableInt("SEOP");
+		public int? M3SEOP => GetNullableInt("SEOP");
 
 		/// <summary>
 		/// Description: Order category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Order operation
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order operation")]
-		public int? M3_RIDO => GetNullableInt("RIDO");
+		public int? M3RIDO => GetNullableInt("RIDO");
 
 		/// <summary>
 		/// Description: Structure sequence number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure sequence number")]
-		public long? M3_STSQ => GetNullableLong("STSQ");
+		public long? M3STSQ => GetNullableLong("STSQ");
 
 		/// <summary>
 		/// Description: Supply chain number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply chain number")]
-		public string M3_SCNB => GetString("SCNB");
+		public string M3SCNB => GetString("SCNB");
 
 		/// <summary>
 		/// Description: Planning date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Time hours & minutes
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time hours & minutes")]
-		public int? M3_TIHM => GetNullableInt("TIHM");
+		public int? M3TIHM => GetNullableInt("TIHM");
 
 		/// <summary>
 		/// Description: Transaction quantity - Basic U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - Basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Basic Unit of measure
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic Unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Manufactured quantity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufactured quantity")]
-		public decimal? M3_MAQT => GetNullableDecimal("MAQT");
+		public decimal? M3MAQT => GetNullableDecimal("MAQT");
 
 		/// <summary>
 		/// Description: Subnumber - planned order
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - planned order")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Subnumber - order proposal
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - order proposal")]
-		public int? M3_PLP2 => GetNullableInt("PLP2");
+		public int? M3PLP2 => GetNullableInt("PLP2");
 	}
 }
 // EOF

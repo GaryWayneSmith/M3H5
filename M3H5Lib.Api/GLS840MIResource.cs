@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.GLS840MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add data to FGLINH
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_KEY1">Key value (Required)</param>
-		/// <param name="m3_INTN">Interface (Required)</param>
-		/// <param name="m3_DESC">Description (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3KEY1">Key value (Required)</param>
+		/// <param name="m3INTN">Interface (Required)</param>
+		/// <param name="m3DESC">Description (Required)</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddBatchHeadResponse></returns>
 		/// <exception cref="M3Exception<AddBatchHeadResponse>"></exception>
 		public async Task<M3Response<AddBatchHeadResponse>> AddBatchHead(
-			int m3_CONO, 
-			string m3_KEY1, 
-			string m3_INTN, 
-			string m3_DESC, 
-			string m3_DIVI = null, 
-			string m3_USID = null, 
+			int m3CONO, 
+			string m3KEY1, 
+			string m3INTN, 
+			string m3DESC, 
+			string m3DIVI = null, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,25 +72,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_KEY1))
-				throw new ArgumentNullException("m3_KEY1");
-			if (string.IsNullOrWhiteSpace(m3_INTN))
-				throw new ArgumentNullException("m3_INTN");
-			if (string.IsNullOrWhiteSpace(m3_DESC))
-				throw new ArgumentNullException("m3_DESC");
+			if (string.IsNullOrWhiteSpace(m3KEY1))
+				throw new ArgumentNullException(nameof(m3KEY1));
+			if (string.IsNullOrWhiteSpace(m3INTN))
+				throw new ArgumentNullException(nameof(m3INTN));
+			if (string.IsNullOrWhiteSpace(m3DESC))
+				throw new ArgumentNullException(nameof(m3DESC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("KEY1", m3_KEY1.Trim())
-				.WithQueryParameter("INTN", m3_INTN.Trim())
-				.WithQueryParameter("DESC", m3_DESC.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("KEY1", m3KEY1.Trim())
+				.WithQueryParameter("INTN", m3INTN.Trim())
+				.WithQueryParameter("DESC", m3DESC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<AddBatchHeadResponse>(
@@ -98,7 +100,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -109,11 +112,11 @@ namespace M3H5Lib.Api
 		/// Description Add data to FGLINL
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_KEY1">Key value (Required)</param>
-		/// <param name="m3_LINE">Line number (Required)</param>
-		/// <param name="m3_PARM">Parameter value (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3KEY1">Key value (Required)</param>
+		/// <param name="m3LINE">Line number (Required)</param>
+		/// <param name="m3PARM">Parameter value (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -122,11 +125,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddBatchLineResponse></returns>
 		/// <exception cref="M3Exception<AddBatchLineResponse>"></exception>
 		public async Task<M3Response<AddBatchLineResponse>> AddBatchLine(
-			int m3_CONO, 
-			string m3_KEY1, 
-			int m3_LINE, 
-			string m3_PARM, 
-			string m3_DIVI = null, 
+			int m3CONO, 
+			string m3KEY1, 
+			int m3LINE, 
+			string m3PARM, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -141,21 +144,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_KEY1))
-				throw new ArgumentNullException("m3_KEY1");
-			if (string.IsNullOrWhiteSpace(m3_PARM))
-				throw new ArgumentNullException("m3_PARM");
+			if (string.IsNullOrWhiteSpace(m3KEY1))
+				throw new ArgumentNullException(nameof(m3KEY1));
+			if (string.IsNullOrWhiteSpace(m3PARM))
+				throw new ArgumentNullException(nameof(m3PARM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("KEY1", m3_KEY1.Trim())
-				.WithQueryParameter("LINE", m3_LINE.ToString())
-				.WithQueryParameter("PARM", m3_PARM.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("KEY1", m3KEY1.Trim())
+				.WithQueryParameter("LINE", m3LINE.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PARM", m3PARM.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<AddBatchLineResponse>(
@@ -165,7 +168,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -176,9 +180,9 @@ namespace M3H5Lib.Api
 		/// Description Run option 6 from GLS840
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_KEY1">Key value (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3KEY1">Key value (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -187,9 +191,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<CtrlBatchResponse></returns>
 		/// <exception cref="M3Exception<CtrlBatchResponse>"></exception>
 		public async Task<M3Response<CtrlBatchResponse>> CtrlBatch(
-			int m3_CONO, 
-			string m3_KEY1, 
-			string m3_DIVI = null, 
+			int m3CONO, 
+			string m3KEY1, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -204,17 +208,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_KEY1))
-				throw new ArgumentNullException("m3_KEY1");
+			if (string.IsNullOrWhiteSpace(m3KEY1))
+				throw new ArgumentNullException(nameof(m3KEY1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("KEY1", m3_KEY1.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("KEY1", m3KEY1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<CtrlBatchResponse>(
@@ -224,7 +228,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -235,9 +240,9 @@ namespace M3H5Lib.Api
 		/// Description Run option 9 from GLS840
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_KEY1">Key value (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3KEY1">Key value (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -246,9 +251,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<UpdBatchResponse></returns>
 		/// <exception cref="M3Exception<UpdBatchResponse>"></exception>
 		public async Task<M3Response<UpdBatchResponse>> UpdBatch(
-			int m3_CONO, 
-			string m3_KEY1, 
-			string m3_DIVI = null, 
+			int m3CONO, 
+			string m3KEY1, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -263,17 +268,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_KEY1))
-				throw new ArgumentNullException("m3_KEY1");
+			if (string.IsNullOrWhiteSpace(m3KEY1))
+				throw new ArgumentNullException(nameof(m3KEY1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("KEY1", m3_KEY1.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("KEY1", m3KEY1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<UpdBatchResponse>(
@@ -283,7 +288,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

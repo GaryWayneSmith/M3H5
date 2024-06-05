@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JBNO => GetNullableInt("JBNO");
+		public int? M3JBNO => GetNullableInt("JBNO");
 
 		/// <summary>
 		/// Description: Job date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public DateTime? M3_JBDT => GetNullableDateTime("JBDT");
+		public DateTime? M3JBDT => GetNullableDateTime("JBDT");
 
 		/// <summary>
 		/// Description: Job time
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_JBTM => GetNullableInt("JBTM");
+		public int? M3JBTM => GetNullableInt("JBTM");
 
 		/// <summary>
 		/// Description: Company
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public string M3_CINO => GetString("CINO");
+		public string M3CINO => GetString("CINO");
 
 		/// <summary>
 		/// Description: Invoice year
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice year")]
-		public int? M3_INYR => GetNullableInt("INYR");
+		public int? M3INYR => GetNullableInt("INYR");
 
 		/// <summary>
 		/// Description: Customer
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Payer
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_ILNO => GetNullableInt("ILNO");
+		public int? M3ILNO => GetNullableInt("ILNO");
 
 		/// <summary>
 		/// Description: Line type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public string M3_LTYP => GetString("LTYP");
+		public string M3LTYP => GetString("LTYP");
 
 		/// <summary>
 		/// Description: Line text
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line text")]
-		public string M3_LTXT => GetString("LTXT");
+		public string M3LTXT => GetString("LTXT");
 
 		/// <summary>
 		/// Description: Alpha field 20 positions
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 20 positions")]
-		public string M3_DLID => GetString("DLID");
+		public string M3DLID => GetString("DLID");
 
 		/// <summary>
 		/// Description: Quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_ACQT => GetNullableDecimal("ACQT");
+		public decimal? M3ACQT => GetNullableDecimal("ACQT");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Unit price, foreign currency
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit price, foreign currency")]
-		public decimal? M3_PIPR => GetNullableDecimal("PIPR");
+		public decimal? M3PIPR => GetNullableDecimal("PIPR");
 
 		/// <summary>
 		/// Description: Unit price, loc curr (calculated)
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit price, loc curr (calculated)")]
-		public decimal? M3_CPPR => GetNullableDecimal("CPPR");
+		public decimal? M3CPPR => GetNullableDecimal("CPPR");
 
 		/// <summary>
 		/// Description: Inv amt, foreign currency
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv amt, foreign currency")]
-		public decimal? M3_CUAM => GetNullableDecimal("CUAM");
+		public decimal? M3CUAM => GetNullableDecimal("CUAM");
 
 		/// <summary>
 		/// Description: Inv amt, loc curr (calculated)
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv amt, loc curr (calculated)")]
-		public decimal? M3_CCUM => GetNullableDecimal("CCUM");
+		public decimal? M3CCUM => GetNullableDecimal("CCUM");
 
 		/// <summary>
 		/// Description: Debit/credit code
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debit/credit code")]
-		public string M3_DBCR => GetString("DBCR");
+		public string M3DBCR => GetString("DBCR");
 
 		/// <summary>
 		/// Description: VAT code
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Invoice amount, foreign currency
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount, foreign currency")]
-		public decimal? M3_IVAM => GetNullableDecimal("IVAM");
+		public decimal? M3IVAM => GetNullableDecimal("IVAM");
 
 		/// <summary>
 		/// Description: Inv amt, local curr (calculated)
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv amt, local curr (calculated)")]
-		public decimal? M3_CIVM => GetNullableDecimal("CIVM");
+		public decimal? M3CIVM => GetNullableDecimal("CIVM");
 
 		/// <summary>
 		/// Description: Payment amount, foreign currency
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount, foreign currency")]
-		public decimal? M3_PYAM => GetNullableDecimal("PYAM");
+		public decimal? M3PYAM => GetNullableDecimal("PYAM");
 
 		/// <summary>
 		/// Description: Payment amt, loc curr (calculated)
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amt, loc curr (calculated)")]
-		public decimal? M3_CPYM => GetNullableDecimal("CPYM");
+		public decimal? M3CPYM => GetNullableDecimal("CPYM");
 
 		/// <summary>
 		/// Description: Open amount, foreign currency
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Open amount, foreign currency")]
-		public decimal? M3_OPAM => GetNullableDecimal("OPAM");
+		public decimal? M3OPAM => GetNullableDecimal("OPAM");
 
 		/// <summary>
 		/// Description: Open amt, loc curr (calculated)
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Open amt, loc curr (calculated)")]
-		public decimal? M3_COPM => GetNullableDecimal("COPM");
+		public decimal? M3COPM => GetNullableDecimal("COPM");
 
 		/// <summary>
 		/// Description: Check number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check number")]
-		public string M3_CKNO => GetString("CKNO");
+		public string M3CKNO => GetString("CKNO");
 
 		/// <summary>
 		/// Description: Tax code customer/address
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code customer/address")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Base invoice number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base invoice number")]
-		public string M3_BCIN => GetString("BCIN");
+		public string M3BCIN => GetString("BCIN");
 
 		/// <summary>
 		/// Description: Base invoice year
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base invoice year")]
-		public int? M3_BINY => GetNullableInt("BINY");
+		public int? M3BINY => GetNullableInt("BINY");
 
 		/// <summary>
 		/// Description: Base invoice line
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base invoice line")]
-		public int? M3_BLIN => GetNullableInt("BLIN");
+		public int? M3BLIN => GetNullableInt("BLIN");
 
 		/// <summary>
 		/// Description: Corrective invoice exists
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Corrective invoice exists")]
-		public int? M3_EINV => GetNullableInt("EINV");
+		public int? M3EINV => GetNullableInt("EINV");
 
 		/// <summary>
 		/// Description: Previous invoice
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous invoice")]
-		public string M3_PREC => GetString("PREC");
+		public string M3PREC => GetString("PREC");
 
 		/// <summary>
 		/// Description: Previous invoice year
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous invoice year")]
-		public int? M3_PREY => GetNullableInt("PREY");
+		public int? M3PREY => GetNullableInt("PREY");
 
 		/// <summary>
 		/// Description: Previous corrective invoice exists
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous corrective invoice exists")]
-		public int? M3_EIN2 => GetNullableInt("EIN2");
+		public int? M3EIN2 => GetNullableInt("EIN2");
 
 		/// <summary>
 		/// Description: Entry date
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 	}
 }
 // EOF

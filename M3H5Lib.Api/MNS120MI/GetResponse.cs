@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Format
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Format")]
-		public string M3_RFMT => GetString("RFMT");
+		public string M3RFMT => GetString("RFMT");
 
 		/// <summary>
 		/// Description: Table type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table type")]
-		public string M3_FTYP => GetString("FTYP");
+		public string M3FTYP => GetString("FTYP");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQ1 => GetNullableInt("SEQ1");
+		public int? M3SEQ1 => GetNullableInt("SEQ1");
 
 		/// <summary>
 		/// Description: Reference
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference")]
-		public string M3_RFID => GetString("RFID");
+		public string M3RFID => GetString("RFID");
 
 		/// <summary>
 		/// Description: Max key length
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max key length")]
-		public int? M3_MXKL => GetNullableInt("MXKL");
+		public int? M3MXKL => GetNullableInt("MXKL");
 
 		/// <summary>
 		/// Description: Max record length
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max record length")]
-		public int? M3_MXRL => GetNullableInt("MXRL");
+		public int? M3MXRL => GetNullableInt("MXRL");
 
 		/// <summary>
 		/// Description: Physical file
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical file")]
-		public string M3_BOFI => GetString("BOFI");
+		public string M3BOFI => GetString("BOFI");
 
 		/// <summary>
 		/// Description: Key field
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY1 => GetString("KEY1");
+		public string M3KEY1 => GetString("KEY1");
 
 		/// <summary>
 		/// Description: Key field
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY2 => GetString("KEY2");
+		public string M3KEY2 => GetString("KEY2");
 
 		/// <summary>
 		/// Description: Key field
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY3 => GetString("KEY3");
+		public string M3KEY3 => GetString("KEY3");
 
 		/// <summary>
 		/// Description: Key field
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY4 => GetString("KEY4");
+		public string M3KEY4 => GetString("KEY4");
 
 		/// <summary>
 		/// Description: Key field
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY5 => GetString("KEY5");
+		public string M3KEY5 => GetString("KEY5");
 
 		/// <summary>
 		/// Description: Key field
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY6 => GetString("KEY6");
+		public string M3KEY6 => GetString("KEY6");
 
 		/// <summary>
 		/// Description: Key field
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY7 => GetString("KEY7");
+		public string M3KEY7 => GetString("KEY7");
 
 		/// <summary>
 		/// Description: Key field
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY8 => GetString("KEY8");
+		public string M3KEY8 => GetString("KEY8");
 
 		/// <summary>
 		/// Description: Key field
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY9 => GetString("KEY9");
+		public string M3KEY9 => GetString("KEY9");
 
 		/// <summary>
 		/// Description: Reference field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL1 => GetString("RFL1");
+		public string M3RFL1 => GetString("RFL1");
 
 		/// <summary>
 		/// Description: Reference field
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL2 => GetString("RFL2");
+		public string M3RFL2 => GetString("RFL2");
 
 		/// <summary>
 		/// Description: Reference field
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL3 => GetString("RFL3");
+		public string M3RFL3 => GetString("RFL3");
 
 		/// <summary>
 		/// Description: Reference field
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL4 => GetString("RFL4");
+		public string M3RFL4 => GetString("RFL4");
 
 		/// <summary>
 		/// Description: Reference field
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL5 => GetString("RFL5");
+		public string M3RFL5 => GetString("RFL5");
 
 		/// <summary>
 		/// Description: Reference field
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL6 => GetString("RFL6");
+		public string M3RFL6 => GetString("RFL6");
 
 		/// <summary>
 		/// Description: Reference field
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL7 => GetString("RFL7");
+		public string M3RFL7 => GetString("RFL7");
 
 		/// <summary>
 		/// Description: Reference field
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL8 => GetString("RFL8");
+		public string M3RFL8 => GetString("RFL8");
 
 		/// <summary>
 		/// Description: Reference field
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFL9 => GetString("RFL9");
+		public string M3RFL9 => GetString("RFL9");
 
 		/// <summary>
 		/// Description: Entry date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Browse function
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Browse function")]
-		public string M3_BPGM => GetString("BPGM");
+		public string M3BPGM => GetString("BPGM");
 
 		/// <summary>
 		/// Description: Archiving function
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Archiving function")]
-		public string M3_FNAR => GetString("FNAR");
+		public string M3FNAR => GetString("FNAR");
 
 		/// <summary>
 		/// Description: Mass delete function
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mass delete function")]
-		public string M3_FNMD => GetString("FNMD");
+		public string M3FNMD => GetString("FNMD");
 
 		/// <summary>
 		/// Description: Security function
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Security function")]
-		public string M3_APGM => GetString("APGM");
+		public string M3APGM => GetString("APGM");
 
 		/// <summary>
 		/// Description: Message ID
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Description
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MNS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 	}
 }
 // EOF

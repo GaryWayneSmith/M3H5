@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event ID")]
-		public string M3_EVID => GetString("EVID");
+		public string M3EVID => GetString("EVID");
 
 		/// <summary>
 		/// Description: Connector  ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Connector  ID")]
-		public int? M3_CNID => GetNullableInt("CNID");
+		public int? M3CNID => GetNullableInt("CNID");
 
 		/// <summary>
 		/// Description: Event priority
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event priority")]
-		public int? M3_EVPR => GetNullableInt("EVPR");
+		public int? M3EVPR => GetNullableInt("EVPR");
 
 		/// <summary>
 		/// Description: Business object name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business object name")]
-		public string M3_BONM => GetString("BONM");
+		public string M3BONM => GetString("BONM");
 
 		/// <summary>
 		/// Description: Event verb
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event verb")]
-		public string M3_BOVB => GetString("BOVB");
+		public string M3BOVB => GetString("BOVB");
 
 		/// <summary>
 		/// Description: Business object key
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business object key")]
-		public string M3_BOKY => GetString("BOKY");
+		public string M3BOKY => GetString("BOKY");
 
 		/// <summary>
 		/// Description: Business object attributes
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business object attributes")]
-		public string M3_BOAT => GetString("BOAT");
+		public string M3BOAT => GetString("BOAT");
 
 		/// <summary>
 		/// Description: Event status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event status")]
-		public int? M3_ESTS => GetNullableInt("ESTS");
+		public int? M3ESTS => GetNullableInt("ESTS");
 
 		/// <summary>
 		/// Description: Message ID
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Message
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message")]
-		public string M3_MSGD => GetString("MSGD");
+		public string M3MSGD => GetString("MSGD");
 
 		/// <summary>
 		/// Description: Entry date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Event processed date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event processed date")]
-		public DateTime? M3_PEDT => GetNullableDateTime("PEDT");
+		public DateTime? M3PEDT => GetNullableDateTime("PEDT");
 
 		/// <summary>
 		/// Description: Event processed time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event processed time")]
-		public int? M3_PETM => GetNullableInt("PETM");
+		public int? M3PETM => GetNullableInt("PETM");
 
 		/// <summary>
 		/// Description: Change number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CEVENTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

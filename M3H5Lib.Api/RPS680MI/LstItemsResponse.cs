@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Supplier
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Last reported surplus qty
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last reported surplus qty")]
-		public decimal? M3_LRSQ => GetNullableDecimal("LRSQ");
+		public decimal? M3LRSQ => GetNullableDecimal("LRSQ");
 
 		/// <summary>
 		/// Description: New available surplus qty
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New available surplus qty")]
-		public decimal? M3_NASQ => GetNullableDecimal("NASQ");
+		public decimal? M3NASQ => GetNullableDecimal("NASQ");
 
 		/// <summary>
 		/// Description: Status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Avaliable quantitiy
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Avaliable quantitiy")]
-		public decimal? M3_AV02 => GetNullableDecimal("AV02");
+		public decimal? M3AV02 => GetNullableDecimal("AV02");
 
 		/// <summary>
 		/// Description: Entry date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Text identity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Surplus stock type
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.RPS680MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Surplus stock type")]
-		public string M3_SURT => GetString("SURT");
+		public string M3SURT => GetString("SURT");
 	}
 }
 // EOF

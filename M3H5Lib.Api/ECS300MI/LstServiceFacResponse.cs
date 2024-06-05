@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Revision number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Order type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Planning policy
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning policy")]
-		public string M3_PLCD => GetString("PLCD");
+		public string M3PLCD => GetString("PLCD");
 
 		/// <summary>
 		/// Description: Responsible
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Period frame
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period frame")]
-		public int? M3_DPID => GetNullableInt("DPID");
+		public int? M3DPID => GetNullableInt("DPID");
 
 		/// <summary>
 		/// Description: Continuous net change
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Continuous net change")]
-		public int? M3_CONC => GetNullableInt("CONC");
+		public int? M3CONC => GetNullableInt("CONC");
 
 		/// <summary>
 		/// Description: Planning horizon
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning horizon")]
-		public int? M3_PLMZ => GetNullableInt("PLMZ");
+		public int? M3PLMZ => GetNullableInt("PLMZ");
 
 		/// <summary>
 		/// Description: Exchange
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange")]
-		public int? M3_EXCH => GetNullableInt("EXCH");
+		public int? M3EXCH => GetNullableInt("EXCH");
 
 		/// <summary>
 		/// Description: External maintenance
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External maintenance")]
-		public int? M3_EXMI => GetNullableInt("EXMI");
+		public int? M3EXMI => GetNullableInt("EXMI");
 
 		/// <summary>
 		/// Description: Supplier
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Completion flag
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Completion flag")]
-		public int? M3_AZSE => GetNullableInt("AZSE");
+		public int? M3AZSE => GetNullableInt("AZSE");
 
 		/// <summary>
 		/// Description: Automatic approval of service
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic approval of service")]
-		public int? M3_ACNF => GetNullableInt("ACNF");
+		public int? M3ACNF => GetNullableInt("ACNF");
 
 		/// <summary>
 		/// Description: Lead time this level
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time this level")]
-		public int? M3_LEAL => GetNullableInt("LEAL");
+		public int? M3LEAL => GetNullableInt("LEAL");
 
 		/// <summary>
 		/// Description: Lead time 5 production time all levels
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time 5 production time all levels")]
-		public int? M3_LEAA => GetNullableInt("LEAA");
+		public int? M3LEAA => GetNullableInt("LEAA");
 
 		/// <summary>
 		/// Description: Product lead time
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product lead time")]
-		public int? M3_LEAP => GetNullableInt("LEAP");
+		public int? M3LEAP => GetNullableInt("LEAP");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Dynamic configurator
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dynamic configurator")]
-		public int? M3_DCON => GetNullableInt("DCON");
+		public int? M3DCON => GetNullableInt("DCON");
 
 		/// <summary>
 		/// Description: Text identity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Issue method
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue method")]
-		public int? M3_SPMT => GetNullableInt("SPMT");
+		public int? M3SPMT => GetNullableInt("SPMT");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNB => GetNullableDecimal("ATNB");
+		public decimal? M3ATNB => GetNullableDecimal("ATNB");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Packing instruction header number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packing instruction header number")]
-		public long? M3_PINN => GetNullableLong("PINN");
+		public long? M3PINN => GetNullableLong("PINN");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_DWDT => GetNullableDateTime("DWDT");
+		public DateTime? M3DWDT => GetNullableDateTime("DWDT");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_DWHM => GetNullableInt("DWHM");
+		public int? M3DWHM => GetNullableInt("DWHM");
 
 		/// <summary>
 		/// Description: Packaging Istruction Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging Istruction Status")]
-		public string M3_INPS => GetString("INPS");
+		public string M3INPS => GetString("INPS");
 
 		/// <summary>
 		/// Description: Pre-pack number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack number")]
-		public string M3_PPNB => GetString("PPNB");
+		public string M3PPNB => GetString("PPNB");
 
 		/// <summary>
 		/// Description: Number of packages
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages")]
-		public decimal? M3_NBPA => GetNullableDecimal("NBPA");
+		public decimal? M3NBPA => GetNullableDecimal("NBPA");
 
 		/// <summary>
 		/// Description: Number of packages to consignee
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages to consignee")]
-		public decimal? M3_NBPC => GetNullableDecimal("NBPC");
+		public decimal? M3NBPC => GetNullableDecimal("NBPC");
 
 		/// <summary>
 		/// Description: Packaging Istruction Status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging Istruction Status")]
-		public string M3_INP2 => GetString("INP2");
+		public string M3INP2 => GetString("INP2");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Pre-pack type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack type")]
-		public string M3_PPTY => GetString("PPTY");
+		public string M3PPTY => GetString("PPTY");
 
 		/// <summary>
 		/// Description: Pre-pack status
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack status")]
-		public string M3_PPSA => GetString("PPSA");
+		public string M3PPSA => GetString("PPSA");
 
 		/// <summary>
 		/// Description: Item number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Description
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DSCR => GetString("DSCR");
+		public string M3DSCR => GetString("DSCR");
 
 		/// <summary>
 		/// Description: Packaging
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Product number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Facility
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Item number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITN2 => GetString("ITN2");
+		public string M3ITN2 => GetString("ITN2");
 
 		/// <summary>
 		/// Description: Style number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style number")]
-		public string M3_STYN => GetString("STYN");
+		public string M3STYN => GetString("STYN");
 
 		/// <summary>
 		/// Description: Z-option
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Z-option")]
-		public string M3_OPTZ => GetString("OPTZ");
+		public string M3OPTZ => GetString("OPTZ");
 
 		/// <summary>
 		/// Description: Y-option
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Y-option")]
-		public string M3_OPTY => GetString("OPTY");
+		public string M3OPTY => GetString("OPTY");
 
 		/// <summary>
 		/// Description: X-option
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("X-option")]
-		public string M3_OPTX => GetString("OPTX");
+		public string M3OPTX => GetString("OPTX");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Standard quantity
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard quantity")]
-		public decimal? M3_D1QT => GetNullableDecimal("D1QT");
+		public decimal? M3D1QT => GetNullableDecimal("D1QT");
 
 		/// <summary>
 		/// Description: Minimum quantity
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum quantity")]
-		public decimal? M3_D2QT => GetNullableDecimal("D2QT");
+		public decimal? M3D2QT => GetNullableDecimal("D2QT");
 
 		/// <summary>
 		/// Description: Maximum quantity
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum quantity")]
-		public decimal? M3_D3QT => GetNullableDecimal("D3QT");
+		public decimal? M3D3QT => GetNullableDecimal("D3QT");
 	}
 }
 // EOF

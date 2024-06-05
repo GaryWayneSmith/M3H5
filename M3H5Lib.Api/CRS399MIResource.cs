@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS399MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Gets the inventory account event CA60 and type 910
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_WHLO">Warehouse</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3WHLO">Warehouse</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCA60910Response></returns>
 		/// <exception cref="M3Exception<GetCA60910Response>"></exception>
 		public async Task<M3Response<GetCA60910Response>> GetCA60910(
-			string m3_ITNO, 
-			DateTime? m3_FDAT = null, 
-			string m3_FACI = null, 
-			string m3_WHLO = null, 
+			string m3ITNO, 
+			DateTime? m3FDAT = null, 
+			string m3FACI = null, 
+			string m3WHLO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,20 +68,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCA60910Response>(
@@ -89,7 +91,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

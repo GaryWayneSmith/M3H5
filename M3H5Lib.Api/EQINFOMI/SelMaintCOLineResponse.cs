@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Order quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order quantity")]
-		public decimal? M3_AORQ => GetNullableDecimal("AORQ");
+		public decimal? M3AORQ => GetNullableDecimal("AORQ");
 
 		/// <summary>
 		/// Description: Highest status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status")]
-		public string M3_AOST => GetString("AOST");
+		public string M3AOST => GetString("AOST");
 
 		/// <summary>
 		/// Description: Claim warranty
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim warranty")]
-		public int? M3_ACWA => GetNullableInt("ACWA");
+		public int? M3ACWA => GetNullableInt("ACWA");
 
 		/// <summary>
 		/// Description: Service price method
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price method")]
-		public int? M3_SRVP => GetNullableInt("SRVP");
+		public int? M3SRVP => GetNullableInt("SRVP");
 
 		/// <summary>
 		/// Description: MCO line type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("MCO line type")]
-		public int? M3_AEXT => GetNullableInt("AEXT");
+		public int? M3AEXT => GetNullableInt("AEXT");
 
 		/// <summary>
 		/// Description: Order date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_RLDT => GetNullableDateTime("RLDT");
+		public DateTime? M3RLDT => GetNullableDateTime("RLDT");
 
 		/// <summary>
 		/// Description: Order time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order time")]
-		public int? M3_AORT => GetNullableInt("AORT");
+		public int? M3AORT => GetNullableInt("AORT");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_DWHM => GetNullableInt("DWHM");
+		public int? M3DWHM => GetNullableInt("DWHM");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS072MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,16 +38,16 @@ namespace M3H5Lib.Api
 		/// Description Get cumulative detailed record
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_IRTY">Internal reference type (Required)</param>
-		/// <param name="m3_INRF">Internal reference (Required)</param>
-		/// <param name="m3_CUML">Cumulative level (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_IECD">Include/exclude current delivery</param>
-		/// <param name="m3_DLIX">Delivery number</param>
-		/// <param name="m3_PUNO">Purchase order number</param>
-		/// <param name="m3_PNLI">Purchase order line</param>
-		/// <param name="m3_PNLS">Purchase order line subnumber</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3IRTY">Internal reference type (Required)</param>
+		/// <param name="m3INRF">Internal reference (Required)</param>
+		/// <param name="m3CUML">Cumulative level (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3IECD">Include/exclude current delivery</param>
+		/// <param name="m3DLIX">Delivery number</param>
+		/// <param name="m3PUNO">Purchase order number</param>
+		/// <param name="m3PNLI">Purchase order line</param>
+		/// <param name="m3PNLS">Purchase order line subnumber</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -54,16 +56,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCumulativeResponse></returns>
 		/// <exception cref="M3Exception<GetCumulativeResponse>"></exception>
 		public async Task<M3Response<GetCumulativeResponse>> GetCumulative(
-			string m3_ITNO, 
-			int m3_IRTY, 
-			string m3_INRF, 
-			int m3_CUML, 
-			int? m3_CONO = null, 
-			int? m3_IECD = null, 
-			decimal? m3_DLIX = null, 
-			string m3_PUNO = null, 
-			int? m3_PNLI = null, 
-			int? m3_PNLS = null, 
+			string m3ITNO, 
+			int m3IRTY, 
+			string m3INRF, 
+			int m3CUML, 
+			int? m3CONO = null, 
+			int? m3IECD = null, 
+			decimal? m3DLIX = null, 
+			string m3PUNO = null, 
+			int? m3PNLI = null, 
+			int? m3PNLS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -78,31 +80,31 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_INRF))
-				throw new ArgumentNullException("m3_INRF");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3INRF))
+				throw new ArgumentNullException(nameof(m3INRF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("IRTY", m3_IRTY.ToString())
-				.WithQueryParameter("INRF", m3_INRF.Trim())
-				.WithQueryParameter("CUML", m3_CUML.ToString());
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("IRTY", m3IRTY.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("INRF", m3INRF.Trim())
+				.WithQueryParameter("CUML", m3CUML.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_IECD.HasValue)
-				request.WithQueryParameter("IECD", m3_IECD.Value.ToString());
-			if (m3_DLIX.HasValue)
-				request.WithQueryParameter("DLIX", m3_DLIX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PUNO))
-				request.WithQueryParameter("PUNO", m3_PUNO.Trim());
-			if (m3_PNLI.HasValue)
-				request.WithQueryParameter("PNLI", m3_PNLI.Value.ToString());
-			if (m3_PNLS.HasValue)
-				request.WithQueryParameter("PNLS", m3_PNLS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IECD.HasValue)
+				request.WithQueryParameter("IECD", m3IECD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DLIX.HasValue)
+				request.WithQueryParameter("DLIX", m3DLIX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PUNO))
+				request.WithQueryParameter("PUNO", m3PUNO.Trim());
+			if (m3PNLI.HasValue)
+				request.WithQueryParameter("PNLI", m3PNLI.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PNLS.HasValue)
+				request.WithQueryParameter("PNLS", m3PNLS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetCumulativeResponse>(
@@ -112,7 +114,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -123,10 +126,10 @@ namespace M3H5Lib.Api
 		/// Description List cumulative detailed records
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_IRTY">Internal reference type (Required)</param>
-		/// <param name="m3_INRF">Internal reference (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3IRTY">Internal reference type (Required)</param>
+		/// <param name="m3INRF">Internal reference (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -135,10 +138,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCumulativeResponse></returns>
 		/// <exception cref="M3Exception<LstCumulativeResponse>"></exception>
 		public async Task<M3Response<LstCumulativeResponse>> LstCumulative(
-			string m3_ITNO, 
-			int m3_IRTY, 
-			string m3_INRF, 
-			int? m3_CONO = null, 
+			string m3ITNO, 
+			int m3IRTY, 
+			string m3INRF, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -153,20 +156,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_INRF))
-				throw new ArgumentNullException("m3_INRF");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3INRF))
+				throw new ArgumentNullException(nameof(m3INRF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("IRTY", m3_IRTY.ToString())
-				.WithQueryParameter("INRF", m3_INRF.Trim());
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("IRTY", m3IRTY.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("INRF", m3INRF.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstCumulativeResponse>(
@@ -176,7 +179,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

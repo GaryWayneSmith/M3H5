@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS137MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographical code")]
-		public int? M3_GEOC => GetNullableInt("GEOC");
+		public int? M3GEOC => GetNullableInt("GEOC");
 
 		/// <summary>
 		/// Description: Tax jurisdiction 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS137MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax jurisdiction 1")]
-		public string M3_TAJ1 => GetString("TAJ1");
+		public string M3TAJ1 => GetString("TAJ1");
 
 		/// <summary>
 		/// Description: Tax jurisdiction 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS137MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax jurisdiction 2")]
-		public string M3_TAJ2 => GetString("TAJ2");
+		public string M3TAJ2 => GetString("TAJ2");
 
 		/// <summary>
 		/// Description: Tax jurisdiction 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS137MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax jurisdiction 3")]
-		public string M3_TAJ3 => GetString("TAJ3");
+		public string M3TAJ3 => GetString("TAJ3");
 
 		/// <summary>
 		/// Description: Tax jurisdiction 4
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS137MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax jurisdiction 4")]
-		public string M3_TAJ4 => GetString("TAJ4");
+		public string M3TAJ4 => GetString("TAJ4");
 
 		/// <summary>
 		/// Description: Tax jurisdiction 5
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS137MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax jurisdiction 5")]
-		public string M3_TAJ5 => GetString("TAJ5");
+		public string M3TAJ5 => GetString("TAJ5");
 	}
 }
 // EOF

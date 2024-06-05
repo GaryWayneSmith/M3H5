@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Version
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_VRSN => GetNullableInt("VRSN");
+		public int? M3VRSN => GetNullableInt("VRSN");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: From date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Lead time 5 production time all levels
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time 5 production time all levels")]
-		public int? M3_LEAA => GetNullableInt("LEAA");
+		public int? M3LEAA => GetNullableInt("LEAA");
 
 		/// <summary>
 		/// Description: Lead time this level
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time this level")]
-		public int? M3_LEAL => GetNullableInt("LEAL");
+		public int? M3LEAL => GetNullableInt("LEAL");
 
 		/// <summary>
 		/// Description: Batch recalculation
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Batch recalculation")]
-		public int? M3_BACO => GetNullableInt("BACO");
+		public int? M3BACO => GetNullableInt("BACO");
 
 		/// <summary>
 		/// Description: Yield quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yield quantity")]
-		public decimal? M3_BAQT => GetNullableDecimal("BAQT");
+		public decimal? M3BAQT => GetNullableDecimal("BAQT");
 
 		/// <summary>
 		/// Description: Yield percentage
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yield percentage")]
-		public int? M3_EXPC => GetNullableInt("EXPC");
+		public int? M3EXPC => GetNullableInt("EXPC");
 
 		/// <summary>
 		/// Description: Batch quantity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Batch quantity")]
-		public decimal? M3_TEXQ => GetNullableDecimal("TEXQ");
+		public decimal? M3TEXQ => GetNullableDecimal("TEXQ");
 
 		/// <summary>
 		/// Description: Infinite/finite
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Infinite/finite")]
-		public int? M3_WLDE => GetNullableInt("WLDE");
+		public int? M3WLDE => GetNullableInt("WLDE");
 
 		/// <summary>
 		/// Description: Number of components
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of components")]
-		public int? M3_NUMA => GetNullableInt("NUMA");
+		public int? M3NUMA => GetNullableInt("NUMA");
 
 		/// <summary>
 		/// Description: Number of operations
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of operations")]
-		public int? M3_NUOP => GetNullableInt("NUOP");
+		public int? M3NUOP => GetNullableInt("NUOP");
 
 		/// <summary>
 		/// Description: Number of subcontract operations
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of subcontract operations")]
-		public int? M3_NUSC => GetNullableInt("NUSC");
+		public int? M3NUSC => GetNullableInt("NUSC");
 
 		/// <summary>
 		/// Description: Number of phantom items
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of phantom items")]
-		public int? M3_NUPH => GetNullableInt("NUPH");
+		public int? M3NUPH => GetNullableInt("NUPH");
 
 		/// <summary>
 		/// Description: Number of yield components
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of yield components")]
-		public int? M3_NUEX => GetNullableInt("NUEX");
+		public int? M3NUEX => GetNullableInt("NUEX");
 
 		/// <summary>
 		/// Description: Number of lot controlling components
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of lot controlling components")]
-		public int? M3_NUCM => GetNullableInt("NUCM");
+		public int? M3NUCM => GetNullableInt("NUCM");
 
 		/// <summary>
 		/// Description: Accumulated queue time
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accumulated queue time")]
-		public int? M3_ASLA => GetNullableInt("ASLA");
+		public int? M3ASLA => GetNullableInt("ASLA");
 
 		/// <summary>
 		/// Description: Cumulative scrap percentage
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative scrap percentage")]
-		public int? M3_ASPC => GetNullableInt("ASPC");
+		public int? M3ASPC => GetNullableInt("ASPC");
 
 		/// <summary>
 		/// Description: Text identity
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Number of explosion items
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PDS028MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of explosion items")]
-		public int? M3_NUBD => GetNullableInt("NUBD");
+		public int? M3NUBD => GetNullableInt("NUBD");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Specification
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification")]
-		public string M3_SPEC => GetString("SPEC");
+		public string M3SPEC => GetString("SPEC");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Effective date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective date")]
-		public DateTime? M3_QSE1 => GetNullableDateTime("QSE1");
+		public DateTime? M3QSE1 => GetNullableDateTime("QSE1");
 
 		/// <summary>
 		/// Description: Effective time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective time")]
-		public int? M3_QSE2 => GetNullableInt("QSE2");
+		public int? M3QSE2 => GetNullableInt("QSE2");
 
 		/// <summary>
 		/// Description: Bulk item
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bulk item")]
-		public string M3_BITN => GetString("BITN");
+		public string M3BITN => GetString("BITN");
 
 		/// <summary>
 		/// Description: Inactive date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inactive date")]
-		public DateTime? M3_QSI1 => GetNullableDateTime("QSI1");
+		public DateTime? M3QSI1 => GetNullableDateTime("QSI1");
 
 		/// <summary>
 		/// Description: Inactive time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inactive time")]
-		public int? M3_QSI2 => GetNullableInt("QSI2");
+		public int? M3QSI2 => GetNullableInt("QSI2");
 
 		/// <summary>
 		/// Description: Description
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Date approved
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date approved")]
-		public DateTime? M3_APDT => GetNullableDateTime("APDT");
+		public DateTime? M3APDT => GetNullableDateTime("APDT");
 
 		/// <summary>
 		/// Description: Approved by
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved by")]
-		public string M3_APUS => GetString("APUS");
+		public string M3APUS => GetString("APUS");
 
 		/// <summary>
 		/// Description: Deactivated date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deactivated date")]
-		public DateTime? M3_DVDT => GetNullableDateTime("DVDT");
+		public DateTime? M3DVDT => GetNullableDateTime("DVDT");
 
 		/// <summary>
 		/// Description: Deactivated by
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deactivated by")]
-		public string M3_DVUS => GetString("DVUS");
+		public string M3DVUS => GetString("DVUS");
 
 		/// <summary>
 		/// Description: Spec type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Spec type")]
-		public int? M3_SPET => GetNullableInt("SPET");
+		public int? M3SPET => GetNullableInt("SPET");
 
 		/// <summary>
 		/// Description: Retest
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Retest")]
-		public int? M3_SRTT => GetNullableInt("SRTT");
+		public int? M3SRTT => GetNullableInt("SRTT");
 
 		/// <summary>
 		/// Description: Reclassification
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reclassification")]
-		public int? M3_SRCL => GetNullableInt("SRCL");
+		public int? M3SRCL => GetNullableInt("SRCL");
 
 		/// <summary>
 		/// Description: Auto attach
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Auto attach")]
-		public int? M3_AUAT => GetNullableInt("AUAT");
+		public int? M3AUAT => GetNullableInt("AUAT");
 
 		/// <summary>
 		/// Description: LI specification manager
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("LI specification manager")]
-		public string M3_SPRE => GetString("SPRE");
+		public string M3SPRE => GetString("SPRE");
 
 		/// <summary>
 		/// Description: Laboratory manager
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Laboratory manager")]
-		public string M3_SPAN => GetString("SPAN");
+		public string M3SPAN => GetString("SPAN");
 
 		/// <summary>
 		/// Description: Number of copies
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of copies")]
-		public int? M3_NBEX => GetNullableInt("NBEX");
+		public int? M3NBEX => GetNullableInt("NBEX");
 
 		/// <summary>
 		/// Description: Comments
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI01 => GetString("SI01");
+		public string M3SI01 => GetString("SI01");
 
 		/// <summary>
 		/// Description: Comments
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI02 => GetString("SI02");
+		public string M3SI02 => GetString("SI02");
 
 		/// <summary>
 		/// Description: Comments
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI03 => GetString("SI03");
+		public string M3SI03 => GetString("SI03");
 
 		/// <summary>
 		/// Description: Comments
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI04 => GetString("SI04");
+		public string M3SI04 => GetString("SI04");
 
 		/// <summary>
 		/// Description: Comments
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI05 => GetString("SI05");
+		public string M3SI05 => GetString("SI05");
 
 		/// <summary>
 		/// Description: Blending
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blending")]
-		public int? M3_SBLN => GetNullableInt("SBLN");
+		public int? M3SBLN => GetNullableInt("SBLN");
 
 		/// <summary>
 		/// Description: Retest DO rec
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.QMS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Retest DO rec")]
-		public int? M3_SDOR => GetNullableInt("SDOR");
+		public int? M3SDOR => GetNullableInt("SDOR");
 	}
 }
 // EOF

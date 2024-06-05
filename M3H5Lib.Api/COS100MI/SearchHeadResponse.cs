@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Product
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Customer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Lowest status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status")]
-		public string M3_AOSL => GetString("AOSL");
+		public string M3AOSL => GetString("AOSL");
 
 		/// <summary>
 		/// Description: Highest status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status")]
-		public string M3_AOST => GetString("AOST");
+		public string M3AOST => GetString("AOST");
 
 		/// <summary>
 		/// Description: Planned receipt date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned receipt date")]
-		public DateTime? M3_AAP1 => GetNullableDateTime("AAP1");
+		public DateTime? M3AAP1 => GetNullableDateTime("AAP1");
 
 		/// <summary>
 		/// Description: Planned delivery time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery time")]
-		public int? M3_APTA => GetNullableInt("APTA");
+		public int? M3APTA => GetNullableInt("APTA");
 
 		/// <summary>
 		/// Description: Customer´s order number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer´s order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 
 		/// <summary>
 		/// Description: Program name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

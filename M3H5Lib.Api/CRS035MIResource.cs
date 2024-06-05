@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS035MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add Product Group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITCL">Product group (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_SECU">Seasonal curve</param>
-		/// <param name="m3_CONF">CONF Yes/no</param>
+		/// <param name="m3ITCL">Product group (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3SECU">Seasonal curve</param>
+		/// <param name="m3CONF">CONF Yes/no</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddProductGroup(
-			string m3_ITCL, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
-			int? m3_SECU = null, 
-			int? m3_CONF = null, 
+			string m3ITCL, 
+			string m3TX40, 
+			string m3TX15 = null, 
+			int? m3SECU = null, 
+			int? m3CONF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,23 +70,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITCL))
-				throw new ArgumentNullException("m3_ITCL");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3ITCL))
+				throw new ArgumentNullException(nameof(m3ITCL));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITCL", m3_ITCL.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("ITCL", m3ITCL.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_SECU.HasValue)
-				request.WithQueryParameter("SECU", m3_SECU.Value.ToString());
-			if (m3_CONF.HasValue)
-				request.WithQueryParameter("CONF", m3_CONF.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3SECU.HasValue)
+				request.WithQueryParameter("SECU", m3SECU.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CONF.HasValue)
+				request.WithQueryParameter("CONF", m3CONF.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -94,7 +96,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -105,7 +108,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Product Group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITCL">Product group (Required)</param>
+		/// <param name="m3ITCL">Product group (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -114,7 +117,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelProductGroup(
-			string m3_ITCL, 
+			string m3ITCL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -129,12 +132,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITCL))
-				throw new ArgumentNullException("m3_ITCL");
+			if (string.IsNullOrWhiteSpace(m3ITCL))
+				throw new ArgumentNullException(nameof(m3ITCL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITCL", m3_ITCL.Trim());
+				.WithQueryParameter("ITCL", m3ITCL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -144,7 +147,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -155,7 +159,7 @@ namespace M3H5Lib.Api
 		/// Description Get Product Group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITCL">Product group (Required)</param>
+		/// <param name="m3ITCL">Product group (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -164,7 +168,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetProductGroupResponse></returns>
 		/// <exception cref="M3Exception<GetProductGroupResponse>"></exception>
 		public async Task<M3Response<GetProductGroupResponse>> GetProductGroup(
-			string m3_ITCL, 
+			string m3ITCL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -179,12 +183,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITCL))
-				throw new ArgumentNullException("m3_ITCL");
+			if (string.IsNullOrWhiteSpace(m3ITCL))
+				throw new ArgumentNullException(nameof(m3ITCL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITCL", m3_ITCL.Trim());
+				.WithQueryParameter("ITCL", m3ITCL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetProductGroupResponse>(
@@ -194,7 +198,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -234,7 +239,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -245,11 +251,11 @@ namespace M3H5Lib.Api
 		/// Description Update Product Group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITCL">Product group (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_SECU">Seasonal curve</param>
-		/// <param name="m3_CONF">CONF Yes/no</param>
+		/// <param name="m3ITCL">Product group (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3SECU">Seasonal curve</param>
+		/// <param name="m3CONF">CONF Yes/no</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -258,11 +264,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdProductGroup(
-			string m3_ITCL, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			int? m3_SECU = null, 
-			int? m3_CONF = null, 
+			string m3ITCL, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			int? m3SECU = null, 
+			int? m3CONF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -277,22 +283,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITCL))
-				throw new ArgumentNullException("m3_ITCL");
+			if (string.IsNullOrWhiteSpace(m3ITCL))
+				throw new ArgumentNullException(nameof(m3ITCL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITCL", m3_ITCL.Trim());
+				.WithQueryParameter("ITCL", m3ITCL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_SECU.HasValue)
-				request.WithQueryParameter("SECU", m3_SECU.Value.ToString());
-			if (m3_CONF.HasValue)
-				request.WithQueryParameter("CONF", m3_CONF.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3SECU.HasValue)
+				request.WithQueryParameter("SECU", m3SECU.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CONF.HasValue)
+				request.WithQueryParameter("CONF", m3CONF.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -302,7 +308,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Payer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Address number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_IVAD => GetString("IVAD");
+		public string M3IVAD => GetString("IVAD");
 
 		/// <summary>
 		/// Description: Customer site
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_SAID => GetString("SAID");
+		public string M3SAID => GetString("SAID");
 
 		/// <summary>
 		/// Description: Order line number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Total amount
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total amount")]
-		public decimal? M3_PRAM => GetNullableDecimal("PRAM");
+		public decimal? M3PRAM => GetNullableDecimal("PRAM");
 
 		/// <summary>
 		/// Description: Currency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 	}
 }
 // EOF

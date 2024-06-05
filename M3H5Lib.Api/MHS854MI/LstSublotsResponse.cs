@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message number")]
-		public string M3_MSGN => GetString("MSGN");
+		public string M3MSGN => GetString("MSGN");
 
 		/// <summary>
 		/// Description: Package number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PACN => GetString("PACN");
+		public string M3PACN => GetString("PACN");
 
 		/// <summary>
 		/// Description: Message line number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message line number")]
-		public int? M3_MSLN => GetNullableInt("MSLN");
+		public int? M3MSLN => GetNullableInt("MSLN");
 
 		/// <summary>
 		/// Description: Subline number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subline number")]
-		public int? M3_SUBL => GetNullableInt("SUBL");
+		public int? M3SUBL => GetNullableInt("SUBL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Reference sublot ID
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference sublot ID")]
-		public string M3_BANT => GetString("BANT");
+		public string M3BANT => GetString("BANT");
 
 		/// <summary>
 		/// Description: Item number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Catch weight
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight")]
-		public decimal? M3_CAWE => GetNullableDecimal("CAWE");
+		public decimal? M3CAWE => GetNullableDecimal("CAWE");
 
 		/// <summary>
 		/// Description: Date generated
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date generated")]
-		public DateTime? M3_GEDT => GetNullableDateTime("GEDT");
+		public DateTime? M3GEDT => GetNullableDateTime("GEDT");
 
 		/// <summary>
 		/// Description: Time generated
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time generated")]
-		public int? M3_GETM => GetNullableInt("GETM");
+		public int? M3GETM => GetNullableInt("GETM");
 
 		/// <summary>
 		/// Description: Qualifier
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS854MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Qualifier")]
-		public string M3_QLFR => GetString("QLFR");
+		public string M3QLFR => GetString("QLFR");
 	}
 }
 // EOF

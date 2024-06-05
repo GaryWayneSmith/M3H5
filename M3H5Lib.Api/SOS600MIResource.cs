@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SOS600MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Get chrg connected to a SO, assignmnt no and sf
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_JOBN">Service order job number (Required)</param>
-		/// <param name="m3_CRID">Charge (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_JBSX">Assignment suffix</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3JOBN">Service order job number (Required)</param>
+		/// <param name="m3CRID">Charge (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3JBSX">Assignment suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAssignmChrgResponse></returns>
 		/// <exception cref="M3Exception<GetAssignmChrgResponse>"></exception>
 		public async Task<M3Response<GetAssignmChrgResponse>> GetAssignmChrg(
-			string m3_ORNO, 
-			int m3_JOBN, 
-			string m3_CRID, 
-			int? m3_CONO = null, 
-			int? m3_JBSX = null, 
+			string m3ORNO, 
+			int m3JOBN, 
+			string m3CRID, 
+			int? m3CONO = null, 
+			int? m3JBSX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,22 +70,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
-			if (string.IsNullOrWhiteSpace(m3_CRID))
-				throw new ArgumentNullException("m3_CRID");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
+			if (string.IsNullOrWhiteSpace(m3CRID))
+				throw new ArgumentNullException(nameof(m3CRID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim())
-				.WithQueryParameter("JOBN", m3_JOBN.ToString())
-				.WithQueryParameter("CRID", m3_CRID.Trim());
+				.WithQueryParameter("ORNO", m3ORNO.Trim())
+				.WithQueryParameter("JOBN", m3JOBN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_JBSX.HasValue)
-				request.WithQueryParameter("JBSX", m3_JBSX.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JBSX.HasValue)
+				request.WithQueryParameter("JBSX", m3JBSX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetAssignmChrgResponse>(
@@ -93,7 +95,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -104,11 +107,11 @@ namespace M3H5Lib.Api
 		/// Description Get charge connected to a service order line
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_CRID">Charge (Required)</param>
-		/// <param name="m3_POSX">Line suffix</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3CRID">Charge (Required)</param>
+		/// <param name="m3POSX">Line suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -117,11 +120,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSOLineChrgResponse></returns>
 		/// <exception cref="M3Exception<GetSOLineChrgResponse>"></exception>
 		public async Task<M3Response<GetSOLineChrgResponse>> GetSOLineChrg(
-			int m3_CONO, 
-			string m3_ORNO, 
-			int m3_PONR, 
-			string m3_CRID, 
-			int? m3_POSX = null, 
+			int m3CONO, 
+			string m3ORNO, 
+			int m3PONR, 
+			string m3CRID, 
+			int? m3POSX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -136,21 +139,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
-			if (string.IsNullOrWhiteSpace(m3_CRID))
-				throw new ArgumentNullException("m3_CRID");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
+			if (string.IsNullOrWhiteSpace(m3CRID))
+				throw new ArgumentNullException(nameof(m3CRID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("ORNO", m3_ORNO.Trim())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("CRID", m3_CRID.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ORNO", m3ORNO.Trim())
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_POSX.HasValue)
-				request.WithQueryParameter("POSX", m3_POSX.Value.ToString());
+			if (m3POSX.HasValue)
+				request.WithQueryParameter("POSX", m3POSX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetSOLineChrgResponse>(
@@ -160,7 +163,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -171,11 +175,11 @@ namespace M3H5Lib.Api
 		/// Description List assignment charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_JOBN">Service order job number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_JBSX">Assignment suffix</param>
-		/// <param name="m3_CRID">Charge</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3JOBN">Service order job number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3JBSX">Assignment suffix</param>
+		/// <param name="m3CRID">Charge</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -184,11 +188,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAssignmChrgResponse></returns>
 		/// <exception cref="M3Exception<LstAssignmChrgResponse>"></exception>
 		public async Task<M3Response<LstAssignmChrgResponse>> LstAssignmChrg(
-			string m3_ORNO, 
-			int m3_JOBN, 
-			int? m3_CONO = null, 
-			int? m3_JBSX = null, 
-			string m3_CRID = null, 
+			string m3ORNO, 
+			int m3JOBN, 
+			int? m3CONO = null, 
+			int? m3JBSX = null, 
+			string m3CRID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -203,21 +207,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim())
-				.WithQueryParameter("JOBN", m3_JOBN.ToString());
+				.WithQueryParameter("ORNO", m3ORNO.Trim())
+				.WithQueryParameter("JOBN", m3JOBN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_JBSX.HasValue)
-				request.WithQueryParameter("JBSX", m3_JBSX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3JBSX.HasValue)
+				request.WithQueryParameter("JBSX", m3JBSX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAssignmChrgResponse>(
@@ -227,7 +231,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -238,11 +243,11 @@ namespace M3H5Lib.Api
 		/// Description List service order line charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_POSX">Line suffix</param>
-		/// <param name="m3_CRID">Charge</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3POSX">Line suffix</param>
+		/// <param name="m3CRID">Charge</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -251,11 +256,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSOLineChrgResponse></returns>
 		/// <exception cref="M3Exception<LstSOLineChrgResponse>"></exception>
 		public async Task<M3Response<LstSOLineChrgResponse>> LstSOLineChrg(
-			string m3_ORNO, 
-			int m3_PONR, 
-			int? m3_CONO = null, 
-			int? m3_POSX = null, 
-			string m3_CRID = null, 
+			string m3ORNO, 
+			int m3PONR, 
+			int? m3CONO = null, 
+			int? m3POSX = null, 
+			string m3CRID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -270,21 +275,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim())
-				.WithQueryParameter("PONR", m3_PONR.ToString());
+				.WithQueryParameter("ORNO", m3ORNO.Trim())
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_POSX.HasValue)
-				request.WithQueryParameter("POSX", m3_POSX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3POSX.HasValue)
+				request.WithQueryParameter("POSX", m3POSX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSOLineChrgResponse>(
@@ -294,7 +299,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

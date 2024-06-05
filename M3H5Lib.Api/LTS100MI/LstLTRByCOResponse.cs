@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Fleet Number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fleet Number")]
-		public string M3_CFE1 => GetString("CFE1");
+		public string M3CFE1 => GetString("CFE1");
 
 		/// <summary>
 		/// Description: Agreement customer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement customer")]
-		public string M3_AGCN => GetString("AGCN");
+		public string M3AGCN => GetString("AGCN");
 
 		/// <summary>
 		/// Description: Customer name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.LTS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 	}
 }
 // EOF

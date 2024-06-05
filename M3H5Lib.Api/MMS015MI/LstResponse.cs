@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Alternate U/M type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M type")]
-		public int? M3_AUTP => GetNullableInt("AUTP");
+		public int? M3AUTP => GetNullableInt("AUTP");
 
 		/// <summary>
 		/// Description: Alternate U/M
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Conversion factor
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion factor")]
-		public decimal? M3_COFA => GetNullableDecimal("COFA");
+		public decimal? M3COFA => GetNullableDecimal("COFA");
 
 		/// <summary>
 		/// Description: Conversion form
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion form")]
-		public int? M3_DMCF => GetNullableInt("DMCF");
+		public int? M3DMCF => GetNullableInt("DMCF");
 
 		/// <summary>
 		/// Description: Price adjustment factor
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price adjustment factor")]
-		public decimal? M3_PCOF => GetNullableDecimal("PCOF");
+		public decimal? M3PCOF => GetNullableDecimal("PCOF");
 
 		/// <summary>
 		/// Description: Standard U/M - purchase order
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - purchase order")]
-		public int? M3_AUS1 => GetNullableInt("AUS1");
+		public int? M3AUS1 => GetNullableInt("AUS1");
 
 		/// <summary>
 		/// Description: Standard U/M - customer order sales
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - customer order sales")]
-		public int? M3_AUS2 => GetNullableInt("AUS2");
+		public int? M3AUS2 => GetNullableInt("AUS2");
 
 		/// <summary>
 		/// Description: Standard U/M - manufacturing
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - manufacturing")]
-		public int? M3_AUS3 => GetNullableInt("AUS3");
+		public int? M3AUS3 => GetNullableInt("AUS3");
 
 		/// <summary>
 		/// Description: Standard U/M - production engineering
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - production engineering")]
-		public int? M3_AUS4 => GetNullableInt("AUS4");
+		public int? M3AUS4 => GetNullableInt("AUS4");
 
 		/// <summary>
 		/// Description: Standard U/M - purchase price
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - purchase price")]
-		public int? M3_AUS5 => GetNullableInt("AUS5");
+		public int? M3AUS5 => GetNullableInt("AUS5");
 
 		/// <summary>
 		/// Description: Standard U/M - statistics
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - statistics")]
-		public int? M3_AUS6 => GetNullableInt("AUS6");
+		public int? M3AUS6 => GetNullableInt("AUS6");
 
 		/// <summary>
 		/// Description: Default U/M - sales price
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default U/M - sales price")]
-		public int? M3_AUS9 => GetNullableInt("AUS9");
+		public int? M3AUS9 => GetNullableInt("AUS9");
 
 		/// <summary>
 		/// Description: Order multiple
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order multiple")]
-		public decimal? M3_UNMU => GetNullableDecimal("UNMU");
+		public decimal? M3UNMU => GetNullableDecimal("UNMU");
 
 		/// <summary>
 		/// Description: Formula
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula")]
-		public string M3_FMID => GetString("FMID");
+		public string M3FMID => GetString("FMID");
 
 		/// <summary>
 		/// Description: Result identity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result identity")]
-		public string M3_RESI => GetString("RESI");
+		public string M3RESI => GetString("RESI");
 
 		/// <summary>
 		/// Description: Packaging
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Standard U/M - catch weight
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - catch weight")]
-		public int? M3_AUSC => GetNullableInt("AUSC");
+		public int? M3AUSC => GetNullableInt("AUSC");
 
 		/// <summary>
 		/// Description: Standard U/M - cost
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard U/M - cost")]
-		public int? M3_AUSB => GetNullableInt("AUSB");
+		public int? M3AUSB => GetNullableInt("AUSB");
 
 		/// <summary>
 		/// Description: Logistics U/M
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logistics U/M")]
-		public int? M3_LGUN => GetNullableInt("LGUN");
+		public int? M3LGUN => GetNullableInt("LGUN");
 
 		/// <summary>
 		/// Description: Catch weight price U/M
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight price U/M")]
-		public int? M3_CWPU => GetNullableInt("CWPU");
+		public int? M3CWPU => GetNullableInt("CWPU");
 
 		/// <summary>
 		/// Description: Text identity
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

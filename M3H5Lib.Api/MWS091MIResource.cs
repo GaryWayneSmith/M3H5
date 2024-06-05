@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MWS091MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add Core Attrition
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_ENNO">Entitlement number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_AODT">Attrition date</param>
-		/// <param name="m3_ATQT">Attrition quantity</param>
-		/// <param name="m3_RSCD">Transaction reason</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_SUNO">Supplier</param>
+		/// <param name="m3ENNO">Entitlement number (Required)</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3AODT">Attrition date</param>
+		/// <param name="m3ATQT">Attrition quantity</param>
+		/// <param name="m3RSCD">Transaction reason</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3SUNO">Supplier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCorAttrition(
-			string m3_ENNO, 
-			int? m3_SEQN = null, 
-			string m3_STAT = null, 
-			DateTime? m3_AODT = null, 
-			decimal? m3_ATQT = null, 
-			string m3_RSCD = null, 
-			string m3_ITNO = null, 
-			string m3_SUNO = null, 
+			string m3ENNO, 
+			int? m3SEQN = null, 
+			string m3STAT = null, 
+			DateTime? m3AODT = null, 
+			decimal? m3ATQT = null, 
+			string m3RSCD = null, 
+			string m3ITNO = null, 
+			string m3SUNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,28 +76,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ENNO))
-				throw new ArgumentNullException("m3_ENNO");
+			if (string.IsNullOrWhiteSpace(m3ENNO))
+				throw new ArgumentNullException(nameof(m3ENNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ENNO", m3_ENNO.Trim());
+				.WithQueryParameter("ENNO", m3ENNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (m3_AODT.HasValue)
-				request.WithQueryParameter("AODT", m3_AODT.Value.ToM3String());
-			if (m3_ATQT.HasValue)
-				request.WithQueryParameter("ATQT", m3_ATQT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RSCD))
-				request.WithQueryParameter("RSCD", m3_RSCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (m3AODT.HasValue)
+				request.WithQueryParameter("AODT", m3AODT.Value.ToM3String());
+			if (m3ATQT.HasValue)
+				request.WithQueryParameter("ATQT", m3ATQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RSCD))
+				request.WithQueryParameter("RSCD", m3RSCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -105,7 +107,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -116,14 +119,14 @@ namespace M3H5Lib.Api
 		/// Description Change Core Attrition
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_ENNO">Entitlement number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number (Required)</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_AODT">Attrition date</param>
-		/// <param name="m3_ATQT">Attrition quantity</param>
-		/// <param name="m3_RSCD">Transaction reason</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_SUNO">Supplier</param>
+		/// <param name="m3ENNO">Entitlement number (Required)</param>
+		/// <param name="m3SEQN">Sequence number (Required)</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3AODT">Attrition date</param>
+		/// <param name="m3ATQT">Attrition quantity</param>
+		/// <param name="m3RSCD">Transaction reason</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3SUNO">Supplier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -132,14 +135,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgCorAttrition(
-			string m3_ENNO, 
-			int m3_SEQN, 
-			string m3_STAT = null, 
-			DateTime? m3_AODT = null, 
-			decimal? m3_ATQT = null, 
-			string m3_RSCD = null, 
-			string m3_ITNO = null, 
-			string m3_SUNO = null, 
+			string m3ENNO, 
+			int m3SEQN, 
+			string m3STAT = null, 
+			DateTime? m3AODT = null, 
+			decimal? m3ATQT = null, 
+			string m3RSCD = null, 
+			string m3ITNO = null, 
+			string m3SUNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -154,27 +157,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ENNO))
-				throw new ArgumentNullException("m3_ENNO");
+			if (string.IsNullOrWhiteSpace(m3ENNO))
+				throw new ArgumentNullException(nameof(m3ENNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ENNO", m3_ENNO.Trim())
-				.WithQueryParameter("SEQN", m3_SEQN.ToString());
+				.WithQueryParameter("ENNO", m3ENNO.Trim())
+				.WithQueryParameter("SEQN", m3SEQN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (m3_AODT.HasValue)
-				request.WithQueryParameter("AODT", m3_AODT.Value.ToM3String());
-			if (m3_ATQT.HasValue)
-				request.WithQueryParameter("ATQT", m3_ATQT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RSCD))
-				request.WithQueryParameter("RSCD", m3_RSCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (m3AODT.HasValue)
+				request.WithQueryParameter("AODT", m3AODT.Value.ToM3String());
+			if (m3ATQT.HasValue)
+				request.WithQueryParameter("ATQT", m3ATQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RSCD))
+				request.WithQueryParameter("RSCD", m3RSCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -184,7 +187,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -195,8 +199,8 @@ namespace M3H5Lib.Api
 		/// Description Delete Core Attrition
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_ENNO">Entitlement number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number (Required)</param>
+		/// <param name="m3ENNO">Entitlement number (Required)</param>
+		/// <param name="m3SEQN">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -205,8 +209,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<DltCorAttritionResponse></returns>
 		/// <exception cref="M3Exception<DltCorAttritionResponse>"></exception>
 		public async Task<M3Response<DltCorAttritionResponse>> DltCorAttrition(
-			string m3_ENNO, 
-			int m3_SEQN, 
+			string m3ENNO, 
+			int m3SEQN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -221,13 +225,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ENNO))
-				throw new ArgumentNullException("m3_ENNO");
+			if (string.IsNullOrWhiteSpace(m3ENNO))
+				throw new ArgumentNullException(nameof(m3ENNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ENNO", m3_ENNO.Trim())
-				.WithQueryParameter("SEQN", m3_SEQN.ToString());
+				.WithQueryParameter("ENNO", m3ENNO.Trim())
+				.WithQueryParameter("SEQN", m3SEQN.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<DltCorAttritionResponse>(
@@ -237,7 +241,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -248,8 +253,8 @@ namespace M3H5Lib.Api
 		/// Description Get Core Attrition
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_ENNO">Entitlement number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number (Required)</param>
+		/// <param name="m3ENNO">Entitlement number (Required)</param>
+		/// <param name="m3SEQN">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -258,8 +263,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCorAttritionResponse></returns>
 		/// <exception cref="M3Exception<GetCorAttritionResponse>"></exception>
 		public async Task<M3Response<GetCorAttritionResponse>> GetCorAttrition(
-			string m3_ENNO, 
-			int m3_SEQN, 
+			string m3ENNO, 
+			int m3SEQN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -274,13 +279,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ENNO))
-				throw new ArgumentNullException("m3_ENNO");
+			if (string.IsNullOrWhiteSpace(m3ENNO))
+				throw new ArgumentNullException(nameof(m3ENNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ENNO", m3_ENNO.Trim())
-				.WithQueryParameter("SEQN", m3_SEQN.ToString());
+				.WithQueryParameter("ENNO", m3ENNO.Trim())
+				.WithQueryParameter("SEQN", m3SEQN.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetCorAttritionResponse>(
@@ -290,7 +295,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -301,9 +307,9 @@ namespace M3H5Lib.Api
 		/// Description List Core Attrition by supplier
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
-		/// <param name="m3_STAT">Status (Required)</param>
-		/// <param name="m3_ENNO">Entitlement number</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
+		/// <param name="m3STAT">Status (Required)</param>
+		/// <param name="m3ENNO">Entitlement number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -312,9 +318,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAttrBySunoResponse></returns>
 		/// <exception cref="M3Exception<LstAttrBySunoResponse>"></exception>
 		public async Task<M3Response<LstAttrBySunoResponse>> LstAttrBySuno(
-			string m3_SUNO, 
-			string m3_STAT, 
-			string m3_ENNO = null, 
+			string m3SUNO, 
+			string m3STAT, 
+			string m3ENNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -329,19 +335,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
-			if (string.IsNullOrWhiteSpace(m3_STAT))
-				throw new ArgumentNullException("m3_STAT");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
+			if (string.IsNullOrWhiteSpace(m3STAT))
+				throw new ArgumentNullException(nameof(m3STAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("STAT", m3_STAT.Trim());
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ENNO))
-				request.WithQueryParameter("ENNO", m3_ENNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ENNO))
+				request.WithQueryParameter("ENNO", m3ENNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAttrBySunoResponse>(
@@ -351,7 +357,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -362,7 +369,7 @@ namespace M3H5Lib.Api
 		/// Description List Core Attrition
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_ENNO">Entitlement number (Required)</param>
+		/// <param name="m3ENNO">Entitlement number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -371,7 +378,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCorAttritionResponse></returns>
 		/// <exception cref="M3Exception<LstCorAttritionResponse>"></exception>
 		public async Task<M3Response<LstCorAttritionResponse>> LstCorAttrition(
-			string m3_ENNO, 
+			string m3ENNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -386,12 +393,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ENNO))
-				throw new ArgumentNullException("m3_ENNO");
+			if (string.IsNullOrWhiteSpace(m3ENNO))
+				throw new ArgumentNullException(nameof(m3ENNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ENNO", m3_ENNO.Trim());
+				.WithQueryParameter("ENNO", m3ENNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCorAttritionResponse>(
@@ -401,7 +408,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

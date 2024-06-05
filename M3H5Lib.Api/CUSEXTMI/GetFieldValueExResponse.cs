@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB1 => GetNullableInt("CHB1");
+		public int? M3CHB1 => GetNullableInt("CHB1");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB2 => GetNullableInt("CHB2");
+		public int? M3CHB2 => GetNullableInt("CHB2");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB3 => GetNullableInt("CHB3");
+		public int? M3CHB3 => GetNullableInt("CHB3");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB4 => GetNullableInt("CHB4");
+		public int? M3CHB4 => GetNullableInt("CHB4");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB5 => GetNullableInt("CHB5");
+		public int? M3CHB5 => GetNullableInt("CHB5");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB6 => GetNullableInt("CHB6");
+		public int? M3CHB6 => GetNullableInt("CHB6");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB7 => GetNullableInt("CHB7");
+		public int? M3CHB7 => GetNullableInt("CHB7");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB8 => GetNullableInt("CHB8");
+		public int? M3CHB8 => GetNullableInt("CHB8");
 
 		/// <summary>
 		/// Description: Yes/no
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yes/no")]
-		public int? M3_CHB9 => GetNullableInt("CHB9");
+		public int? M3CHB9 => GetNullableInt("CHB9");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT1 => GetNullableDateTime("DAT1");
+		public DateTime? M3DAT1 => GetNullableDateTime("DAT1");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT2 => GetNullableDateTime("DAT2");
+		public DateTime? M3DAT2 => GetNullableDateTime("DAT2");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT3 => GetNullableDateTime("DAT3");
+		public DateTime? M3DAT3 => GetNullableDateTime("DAT3");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT4 => GetNullableDateTime("DAT4");
+		public DateTime? M3DAT4 => GetNullableDateTime("DAT4");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT5 => GetNullableDateTime("DAT5");
+		public DateTime? M3DAT5 => GetNullableDateTime("DAT5");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT6 => GetNullableDateTime("DAT6");
+		public DateTime? M3DAT6 => GetNullableDateTime("DAT6");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT7 => GetNullableDateTime("DAT7");
+		public DateTime? M3DAT7 => GetNullableDateTime("DAT7");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT8 => GetNullableDateTime("DAT8");
+		public DateTime? M3DAT8 => GetNullableDateTime("DAT8");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_DAT9 => GetNullableDateTime("DAT9");
+		public DateTime? M3DAT9 => GetNullableDateTime("DAT9");
 
 		/// <summary>
 		/// Description: Alphanumeric field 120 positions
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric field 120 positions")]
-		public string M3_A122 => GetString("A122");
+		public string M3A122 => GetString("A122");
 
 		/// <summary>
 		/// Description: Alphanumeric field 256 positions
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric field 256 positions")]
-		public string M3_A256 => GetString("A256");
+		public string M3A256 => GetString("A256");
 	}
 }
 // EOF

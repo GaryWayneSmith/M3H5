@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PDS075MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Add a product structure class
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PSCL">Product structure class</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_PCLT">Class type</param>
+		/// <param name="m3PSCL">Product structure class</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3PCLT">Class type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddStructClass(
-			string m3_PSCL = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_PCLT = null, 
+			string m3PSCL = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3PCLT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,14 +68,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PSCL))
-				request.WithQueryParameter("PSCL", m3_PSCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PCLT))
-				request.WithQueryParameter("PCLT", m3_PCLT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PSCL))
+				request.WithQueryParameter("PSCL", m3PSCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PCLT))
+				request.WithQueryParameter("PCLT", m3PCLT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -83,7 +85,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -94,7 +97,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a product structure class
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PSCL">Product structure class</param>
+		/// <param name="m3PSCL">Product structure class</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -103,7 +106,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltStructClass(
-			string m3_PSCL = null, 
+			string m3PSCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -118,8 +121,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PSCL))
-				request.WithQueryParameter("PSCL", m3_PSCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PSCL))
+				request.WithQueryParameter("PSCL", m3PSCL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -129,7 +132,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -140,7 +144,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a product structure class
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PSCL">Product structure class</param>
+		/// <param name="m3PSCL">Product structure class</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -149,7 +153,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetStructClassResponse></returns>
 		/// <exception cref="M3Exception<GetStructClassResponse>"></exception>
 		public async Task<M3Response<GetStructClassResponse>> GetStructClass(
-			string m3_PSCL = null, 
+			string m3PSCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -164,8 +168,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PSCL))
-				request.WithQueryParameter("PSCL", m3_PSCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PSCL))
+				request.WithQueryParameter("PSCL", m3PSCL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetStructClassResponse>(
@@ -175,7 +179,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -186,7 +191,7 @@ namespace M3H5Lib.Api
 		/// Description List data for product structure classes
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PSCL">Product structure class</param>
+		/// <param name="m3PSCL">Product structure class</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -195,7 +200,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstStructClassResponse></returns>
 		/// <exception cref="M3Exception<LstStructClassResponse>"></exception>
 		public async Task<M3Response<LstStructClassResponse>> LstStructClass(
-			string m3_PSCL = null, 
+			string m3PSCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -210,8 +215,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PSCL))
-				request.WithQueryParameter("PSCL", m3_PSCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PSCL))
+				request.WithQueryParameter("PSCL", m3PSCL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstStructClassResponse>(
@@ -221,7 +226,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -232,10 +238,10 @@ namespace M3H5Lib.Api
 		/// Description Update data for a product structure class
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PSCL">Product structure class</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_PCLT">Class type</param>
+		/// <param name="m3PSCL">Product structure class</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3PCLT">Class type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -244,10 +250,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdStructClass(
-			string m3_PSCL = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_PCLT = null, 
+			string m3PSCL = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3PCLT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -262,14 +268,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PSCL))
-				request.WithQueryParameter("PSCL", m3_PSCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PCLT))
-				request.WithQueryParameter("PCLT", m3_PCLT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PSCL))
+				request.WithQueryParameter("PSCL", m3PSCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PCLT))
+				request.WithQueryParameter("PCLT", m3PCLT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -279,7 +285,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

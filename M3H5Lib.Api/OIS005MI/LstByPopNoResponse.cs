@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Alias number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Description 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 1")]
-		public string M3_TEDS => GetString("TEDS");
+		public string M3TEDS => GetString("TEDS");
 
 		/// <summary>
 		/// Description: Reasonability check method
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reasonability check method")]
-		public int? M3_RCOP => GetNullableInt("RCOP");
+		public int? M3RCOP => GetNullableInt("RCOP");
 
 		/// <summary>
 		/// Description: Minimum quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum quantity")]
-		public decimal? M3_D2QT => GetNullableDecimal("D2QT");
+		public decimal? M3D2QT => GetNullableDecimal("D2QT");
 
 		/// <summary>
 		/// Description: Maximum quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum quantity")]
-		public decimal? M3_D3QT => GetNullableDecimal("D3QT");
+		public decimal? M3D3QT => GetNullableDecimal("D3QT");
 
 		/// <summary>
 		/// Description: Expiration time adjustment - days
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expiration time adjustment - days")]
-		public int? M3_ADCU => GetNullableInt("ADCU");
+		public int? M3ADCU => GetNullableInt("ADCU");
 
 		/// <summary>
 		/// Description: Alternate U/M
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 
 		/// <summary>
 		/// Description: Dangerous goods indicator
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dangerous goods indicator")]
-		public int? M3_DGDS => GetNullableInt("DGDS");
+		public int? M3DGDS => GetNullableInt("DGDS");
 
 		/// <summary>
 		/// Description: Material handling code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material handling code")]
-		public string M3_MTHC => GetString("MTHC");
+		public string M3MTHC => GetString("MTHC");
 
 		/// <summary>
 		/// Description: Pilot part
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pilot part")]
-		public int? M3_PIPA => GetNullableInt("PIPA");
+		public int? M3PIPA => GetNullableInt("PIPA");
 
 		/// <summary>
 		/// Description: Partner´s engineering change order no
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner´s engineering change order no")]
-		public string M3_RSEC => GetString("RSEC");
+		public string M3RSEC => GetString("RSEC");
 
 		/// <summary>
 		/// Description: Engineering change order date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Engineering change order date")]
-		public DateTime? M3_RSED => GetNullableDateTime("RSED");
+		public DateTime? M3RSED => GetNullableDateTime("RSED");
 
 		/// <summary>
 		/// Description: Partner design revision number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner design revision number")]
-		public string M3_RSRN => GetString("RSRN");
+		public string M3RSRN => GetString("RSRN");
 
 		/// <summary>
 		/// Description: Responsible
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: From date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Text identity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXI2 => GetNullableDecimal("TXI2");
+		public decimal? M3TXI2 => GetNullableDecimal("TXI2");
 
 		/// <summary>
 		/// Description: Text identity
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXI3 => GetNullableDecimal("TXI3");
+		public decimal? M3TXI3 => GetNullableDecimal("TXI3");
 
 		/// <summary>
 		/// Description: Data identity
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Strict rotation method
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Strict rotation method")]
-		public int? M3_SRMT => GetNullableInt("SRMT");
+		public int? M3SRMT => GetNullableInt("SRMT");
 	}
 }
 // EOF

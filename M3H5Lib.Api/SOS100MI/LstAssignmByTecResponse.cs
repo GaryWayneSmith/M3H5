@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Assignment number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment number")]
-		public int? M3_JOBN => GetNullableInt("JOBN");
+		public int? M3JOBN => GetNullableInt("JOBN");
 
 		/// <summary>
 		/// Description: Assignment suffix
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment suffix")]
-		public int? M3_JBSX => GetNullableInt("JBSX");
+		public int? M3JBSX => GetNullableInt("JBSX");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERI => GetString("SERI");
+		public string M3SERI => GetString("SERI");
 
 		/// <summary>
 		/// Description: Error symptom code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom code")]
-		public string M3_ESCO => GetString("ESCO");
+		public string M3ESCO => GetString("ESCO");
 
 		/// <summary>
 		/// Description: Error symptom text 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom text 1")]
-		public string M3_ETX1 => GetString("ETX1");
+		public string M3ETX1 => GetString("ETX1");
 
 		/// <summary>
 		/// Description: Priority
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_OPRI => GetNullableInt("OPRI");
+		public int? M3OPRI => GetNullableInt("OPRI");
 
 		/// <summary>
 		/// Description: Assignment type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment type")]
-		public string M3_ASST => GetString("ASST");
+		public string M3ASST => GetString("ASST");
 
 		/// <summary>
 		/// Description: Forecasted work hours
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecasted work hours")]
-		public int? M3_WOTM => GetNullableInt("WOTM");
+		public int? M3WOTM => GetNullableInt("WOTM");
 
 		/// <summary>
 		/// Description: Assignment status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment status")]
-		public string M3_JBST => GetString("JBST");
+		public string M3JBST => GetString("JBST");
 
 		/// <summary>
 		/// Description: Error report date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error report date")]
-		public DateTime? M3_PMDT => GetNullableDateTime("PMDT");
+		public DateTime? M3PMDT => GetNullableDateTime("PMDT");
 
 		/// <summary>
 		/// Description: Error report time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error report time")]
-		public int? M3_PMTM => GetNullableInt("PMTM");
+		public int? M3PMTM => GetNullableInt("PMTM");
 
 		/// <summary>
 		/// Description: Last start date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last start date")]
-		public DateTime? M3_SSDT => GetNullableDateTime("SSDT");
+		public DateTime? M3SSDT => GetNullableDateTime("SSDT");
 
 		/// <summary>
 		/// Description: Last start time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last start time")]
-		public int? M3_SSTM => GetNullableInt("SSTM");
+		public int? M3SSTM => GetNullableInt("SSTM");
 
 		/// <summary>
 		/// Description: Planned start date assignment
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start date assignment")]
-		public DateTime? M3_PSDJ => GetNullableDateTime("PSDJ");
+		public DateTime? M3PSDJ => GetNullableDateTime("PSDJ");
 
 		/// <summary>
 		/// Description: Planned start time assignment
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start time assignment")]
-		public int? M3_PSTJ => GetNullableInt("PSTJ");
+		public int? M3PSTJ => GetNullableInt("PSTJ");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Location
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_LOCS => GetString("LOCS");
+		public string M3LOCS => GetString("LOCS");
 
 		/// <summary>
 		/// Description: Customer name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Postal code
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Change date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

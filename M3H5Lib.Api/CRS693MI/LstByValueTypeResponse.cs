@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Bank account type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account type")]
-		public int? M3_BKTP => GetNullableInt("BKTP");
+		public int? M3BKTP => GetNullableInt("BKTP");
 
 		/// <summary>
 		/// Description: Account holder
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account holder")]
-		public string M3_ACHO => GetString("ACHO");
+		public string M3ACHO => GetString("ACHO");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Bank account value type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account value type")]
-		public int? M3_BVTP => GetNullableInt("BVTP");
+		public int? M3BVTP => GetNullableInt("BVTP");
 
 		/// <summary>
 		/// Description: Bank account value
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account value")]
-		public string M3_BAVA => GetString("BAVA");
+		public string M3BAVA => GetString("BAVA");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 1")]
-		public int? M3_BIL1 => GetNullableInt("BIL1");
+		public int? M3BIL1 => GetNullableInt("BIL1");
 
 		/// <summary>
 		/// Description: Numeric field 1 position
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 1 position")]
-		public int? M3_NUM1 => GetNullableInt("NUM1");
+		public int? M3NUM1 => GetNullableInt("NUM1");
 
 		/// <summary>
 		/// Description: Description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS693MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 	}
 }
 // EOF

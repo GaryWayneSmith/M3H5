@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS030MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Get Basic Data
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_VTCD">VAT code (Required)</param>
+		/// <param name="m3VTCD">VAT code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetBasicDataResponse></returns>
 		/// <exception cref="M3Exception<GetBasicDataResponse>"></exception>
 		public async Task<M3Response<GetBasicDataResponse>> GetBasicData(
-			int m3_VTCD, 
+			int m3VTCD, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -63,7 +65,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("VTCD", m3_VTCD.ToString());
+				.WithQueryParameter("VTCD", m3VTCD.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetBasicDataResponse>(
@@ -73,7 +75,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -84,7 +87,7 @@ namespace M3H5Lib.Api
 		/// Description List Vat Code
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_VTCD">VAT code</param>
+		/// <param name="m3VTCD">VAT code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -93,7 +96,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstVatResponse></returns>
 		/// <exception cref="M3Exception<LstVatResponse>"></exception>
 		public async Task<M3Response<LstVatResponse>> LstVat(
-			int? m3_VTCD = null, 
+			int? m3VTCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -108,8 +111,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_VTCD.HasValue)
-				request.WithQueryParameter("VTCD", m3_VTCD.Value.ToString());
+			if (m3VTCD.HasValue)
+				request.WithQueryParameter("VTCD", m3VTCD.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstVatResponse>(
@@ -119,7 +122,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

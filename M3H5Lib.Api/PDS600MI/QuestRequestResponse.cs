@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("1=Feat 2=Draw 3=End Quest 4=Itno 5=Qty")]
-		public string M3_QTYP => GetString("QTYP");
+		public string M3QTYP => GetString("QTYP");
 
 		/// <summary>
 		/// Description: Configurator ID (Feature/Draw/Matrix)
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configurator ID (Feature/Draw/Matrix)")]
-		public string M3_CFID => GetString("CFID");
+		public string M3CFID => GetString("CFID");
 
 		/// <summary>
 		/// Description: Default, must or chosen value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default, must or chosen value")]
-		public string M3_OPTN => GetString("OPTN");
+		public string M3OPTN => GetString("OPTN");
 
 		/// <summary>
 		/// Description: Product number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Open measurement/item matrix/qty matrix
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Open measurement/item matrix/qty matrix")]
-		public string M3_NCLN => GetString("NCLN");
+		public string M3NCLN => GetString("NCLN");
 
 		/// <summary>
 		/// Description: Unit om measurement
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit om measurement")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Measurement value
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement value")]
-		public string M3_MEVA => GetString("MEVA");
+		public string M3MEVA => GetString("MEVA");
 
 		/// <summary>
 		/// Description: Question from product configurator
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Question from product configurator")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Chosen quantity for not closed matrix
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chosen quantity for not closed matrix")]
-		public string M3_CNQT => GetString("CNQT");
+		public string M3CNQT => GetString("CNQT");
 
 		/// <summary>
 		/// Description: Explanatory
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Explanatory")]
-		public string M3_TX75 => GetString("TX75");
+		public string M3TX75 => GetString("TX75");
 
 		/// <summary>
 		/// Description: New question sequence
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New question sequence")]
-		public string M3_COLI => GetString("COLI");
+		public string M3COLI => GetString("COLI");
 
 		/// <summary>
 		/// Description: Option description
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 	}
 }
 // EOF

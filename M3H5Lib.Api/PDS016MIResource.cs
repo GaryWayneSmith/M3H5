@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PDS016MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Adds Daily Capacity
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PLGR">Workcenter (Required)</param>
-		/// <param name="m3_DATE">Entrydate (Required)</param>
-		/// <param name="m3_SHFC">Shift (Required)</param>
-		/// <param name="m3_ETIM">Endtime (Required)</param>
-		/// <param name="m3_STIM">Starttime</param>
-		/// <param name="m3_AVEF">Utilizationrate</param>
-		/// <param name="m3_WCNM">Numberofmachines</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PLGR">Workcenter (Required)</param>
+		/// <param name="m3DATE">Entrydate (Required)</param>
+		/// <param name="m3SHFC">Shift (Required)</param>
+		/// <param name="m3ETIM">Endtime (Required)</param>
+		/// <param name="m3STIM">Starttime</param>
+		/// <param name="m3AVEF">Utilizationrate</param>
+		/// <param name="m3WCNM">Numberofmachines</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddDailyCap(
-			string m3_FACI, 
-			string m3_PLGR, 
-			DateTime m3_DATE, 
-			string m3_SHFC, 
-			int m3_ETIM, 
-			int? m3_STIM = null, 
-			int? m3_AVEF = null, 
-			int? m3_WCNM = null, 
+			string m3FACI, 
+			string m3PLGR, 
+			DateTime m3DATE, 
+			string m3SHFC, 
+			int m3ETIM, 
+			int? m3STIM = null, 
+			int? m3AVEF = null, 
+			int? m3WCNM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,28 +76,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_PLGR))
-				throw new ArgumentNullException("m3_PLGR");
-			if (string.IsNullOrWhiteSpace(m3_SHFC))
-				throw new ArgumentNullException("m3_SHFC");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3PLGR))
+				throw new ArgumentNullException(nameof(m3PLGR));
+			if (string.IsNullOrWhiteSpace(m3SHFC))
+				throw new ArgumentNullException(nameof(m3SHFC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("PLGR", m3_PLGR.Trim())
-				.WithQueryParameter("DATE", m3_DATE.ToM3String())
-				.WithQueryParameter("SHFC", m3_SHFC.Trim())
-				.WithQueryParameter("ETIM", m3_ETIM.ToString());
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("PLGR", m3PLGR.Trim())
+				.WithQueryParameter("DATE", m3DATE.ToM3String())
+				.WithQueryParameter("SHFC", m3SHFC.Trim())
+				.WithQueryParameter("ETIM", m3ETIM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_STIM.HasValue)
-				request.WithQueryParameter("STIM", m3_STIM.Value.ToString());
-			if (m3_AVEF.HasValue)
-				request.WithQueryParameter("AVEF", m3_AVEF.Value.ToString());
-			if (m3_WCNM.HasValue)
-				request.WithQueryParameter("WCNM", m3_WCNM.Value.ToString());
+			if (m3STIM.HasValue)
+				request.WithQueryParameter("STIM", m3STIM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3AVEF.HasValue)
+				request.WithQueryParameter("AVEF", m3AVEF.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3WCNM.HasValue)
+				request.WithQueryParameter("WCNM", m3WCNM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -105,7 +107,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -116,10 +119,10 @@ namespace M3H5Lib.Api
 		/// Description Deletes Daily Capacity
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PLGR">Workcenter (Required)</param>
-		/// <param name="m3_DATE">Entrydate (Required)</param>
-		/// <param name="m3_STIM">Starttime (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PLGR">Workcenter (Required)</param>
+		/// <param name="m3DATE">Entrydate (Required)</param>
+		/// <param name="m3STIM">Starttime (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -128,10 +131,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelDailyCap(
-			string m3_FACI, 
-			string m3_PLGR, 
-			DateTime m3_DATE, 
-			int m3_STIM, 
+			string m3FACI, 
+			string m3PLGR, 
+			DateTime m3DATE, 
+			int m3STIM, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -146,17 +149,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_PLGR))
-				throw new ArgumentNullException("m3_PLGR");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3PLGR))
+				throw new ArgumentNullException(nameof(m3PLGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("PLGR", m3_PLGR.Trim())
-				.WithQueryParameter("DATE", m3_DATE.ToM3String())
-				.WithQueryParameter("STIM", m3_STIM.ToString());
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("PLGR", m3PLGR.Trim())
+				.WithQueryParameter("DATE", m3DATE.ToM3String())
+				.WithQueryParameter("STIM", m3STIM.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -166,7 +169,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -177,10 +181,10 @@ namespace M3H5Lib.Api
 		/// Description Gets Daily Capacity
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PLGR">Workcenter (Required)</param>
-		/// <param name="m3_DATE">Entrydate (Required)</param>
-		/// <param name="m3_STIM">Starttime (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PLGR">Workcenter (Required)</param>
+		/// <param name="m3DATE">Entrydate (Required)</param>
+		/// <param name="m3STIM">Starttime (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -189,10 +193,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDailyCapResponse></returns>
 		/// <exception cref="M3Exception<GetDailyCapResponse>"></exception>
 		public async Task<M3Response<GetDailyCapResponse>> GetDailyCap(
-			string m3_FACI, 
-			string m3_PLGR, 
-			DateTime m3_DATE, 
-			int m3_STIM, 
+			string m3FACI, 
+			string m3PLGR, 
+			DateTime m3DATE, 
+			int m3STIM, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -207,17 +211,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_PLGR))
-				throw new ArgumentNullException("m3_PLGR");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3PLGR))
+				throw new ArgumentNullException(nameof(m3PLGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("PLGR", m3_PLGR.Trim())
-				.WithQueryParameter("DATE", m3_DATE.ToM3String())
-				.WithQueryParameter("STIM", m3_STIM.ToString());
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("PLGR", m3PLGR.Trim())
+				.WithQueryParameter("DATE", m3DATE.ToM3String())
+				.WithQueryParameter("STIM", m3STIM.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetDailyCapResponse>(
@@ -227,7 +231,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -238,10 +243,10 @@ namespace M3H5Lib.Api
 		/// Description Lists Daily Capacity
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PLGR">Workcenter (Required)</param>
-		/// <param name="m3_DATE">Entrydate</param>
-		/// <param name="m3_STIM">Starttime</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PLGR">Workcenter (Required)</param>
+		/// <param name="m3DATE">Entrydate</param>
+		/// <param name="m3STIM">Starttime</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -250,10 +255,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDailyCapResponse></returns>
 		/// <exception cref="M3Exception<LstDailyCapResponse>"></exception>
 		public async Task<M3Response<LstDailyCapResponse>> LstDailyCap(
-			string m3_FACI, 
-			string m3_PLGR, 
-			DateTime? m3_DATE = null, 
-			int? m3_STIM = null, 
+			string m3FACI, 
+			string m3PLGR, 
+			DateTime? m3DATE = null, 
+			int? m3STIM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -268,21 +273,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_PLGR))
-				throw new ArgumentNullException("m3_PLGR");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3PLGR))
+				throw new ArgumentNullException(nameof(m3PLGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("PLGR", m3_PLGR.Trim());
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("PLGR", m3PLGR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_DATE.HasValue)
-				request.WithQueryParameter("DATE", m3_DATE.Value.ToM3String());
-			if (m3_STIM.HasValue)
-				request.WithQueryParameter("STIM", m3_STIM.Value.ToString());
+			if (m3DATE.HasValue)
+				request.WithQueryParameter("DATE", m3DATE.Value.ToM3String());
+			if (m3STIM.HasValue)
+				request.WithQueryParameter("STIM", m3STIM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstDailyCapResponse>(
@@ -292,7 +297,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -303,13 +309,13 @@ namespace M3H5Lib.Api
 		/// Description Selects WCCap
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_PLTP">Resource type</param>
-		/// <param name="m3_REAR">Planning area</param>
-		/// <param name="m3_DEPT">Department</param>
-		/// <param name="m3_DATE">Entry date</param>
-		/// <param name="m3_STIM">Start time</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3PLTP">Resource type</param>
+		/// <param name="m3REAR">Planning area</param>
+		/// <param name="m3DEPT">Department</param>
+		/// <param name="m3DATE">Entry date</param>
+		/// <param name="m3STIM">Start time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -318,13 +324,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelWCCapResponse></returns>
 		/// <exception cref="M3Exception<SelWCCapResponse>"></exception>
 		public async Task<M3Response<SelWCCapResponse>> SelWCCap(
-			string m3_FACI, 
-			string m3_PLGR = null, 
-			string m3_PLTP = null, 
-			string m3_REAR = null, 
-			string m3_DEPT = null, 
-			DateTime? m3_DATE = null, 
-			int? m3_STIM = null, 
+			string m3FACI, 
+			string m3PLGR = null, 
+			string m3PLTP = null, 
+			string m3REAR = null, 
+			string m3DEPT = null, 
+			DateTime? m3DATE = null, 
+			int? m3STIM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -339,26 +345,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim());
+				.WithQueryParameter("FACI", m3FACI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PLTP))
-				request.WithQueryParameter("PLTP", m3_PLTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REAR))
-				request.WithQueryParameter("REAR", m3_REAR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DEPT))
-				request.WithQueryParameter("DEPT", m3_DEPT.Trim());
-			if (m3_DATE.HasValue)
-				request.WithQueryParameter("DATE", m3_DATE.Value.ToM3String());
-			if (m3_STIM.HasValue)
-				request.WithQueryParameter("STIM", m3_STIM.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PLTP))
+				request.WithQueryParameter("PLTP", m3PLTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REAR))
+				request.WithQueryParameter("REAR", m3REAR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DEPT))
+				request.WithQueryParameter("DEPT", m3DEPT.Trim());
+			if (m3DATE.HasValue)
+				request.WithQueryParameter("DATE", m3DATE.Value.ToM3String());
+			if (m3STIM.HasValue)
+				request.WithQueryParameter("STIM", m3STIM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelWCCapResponse>(
@@ -368,7 +374,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -379,14 +386,14 @@ namespace M3H5Lib.Api
 		/// Description Updates Daily Capacity
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PLGR">Workcenter (Required)</param>
-		/// <param name="m3_DATE">Entrydate (Required)</param>
-		/// <param name="m3_STIM">Starttime (Required)</param>
-		/// <param name="m3_SHFC">Shift</param>
-		/// <param name="m3_ETIM">Endtime</param>
-		/// <param name="m3_AVEF">Utilizationrate</param>
-		/// <param name="m3_WCNM">Numberofmachines</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PLGR">Workcenter (Required)</param>
+		/// <param name="m3DATE">Entrydate (Required)</param>
+		/// <param name="m3STIM">Starttime (Required)</param>
+		/// <param name="m3SHFC">Shift</param>
+		/// <param name="m3ETIM">Endtime</param>
+		/// <param name="m3AVEF">Utilizationrate</param>
+		/// <param name="m3WCNM">Numberofmachines</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -395,14 +402,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdDailyCap(
-			string m3_FACI, 
-			string m3_PLGR, 
-			DateTime m3_DATE, 
-			int m3_STIM, 
-			string m3_SHFC = null, 
-			int? m3_ETIM = null, 
-			int? m3_AVEF = null, 
-			int? m3_WCNM = null, 
+			string m3FACI, 
+			string m3PLGR, 
+			DateTime m3DATE, 
+			int m3STIM, 
+			string m3SHFC = null, 
+			int? m3ETIM = null, 
+			int? m3AVEF = null, 
+			int? m3WCNM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -417,27 +424,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_PLGR))
-				throw new ArgumentNullException("m3_PLGR");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3PLGR))
+				throw new ArgumentNullException(nameof(m3PLGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("PLGR", m3_PLGR.Trim())
-				.WithQueryParameter("DATE", m3_DATE.ToM3String())
-				.WithQueryParameter("STIM", m3_STIM.ToString());
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("PLGR", m3PLGR.Trim())
+				.WithQueryParameter("DATE", m3DATE.ToM3String())
+				.WithQueryParameter("STIM", m3STIM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SHFC))
-				request.WithQueryParameter("SHFC", m3_SHFC.Trim());
-			if (m3_ETIM.HasValue)
-				request.WithQueryParameter("ETIM", m3_ETIM.Value.ToString());
-			if (m3_AVEF.HasValue)
-				request.WithQueryParameter("AVEF", m3_AVEF.Value.ToString());
-			if (m3_WCNM.HasValue)
-				request.WithQueryParameter("WCNM", m3_WCNM.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3SHFC))
+				request.WithQueryParameter("SHFC", m3SHFC.Trim());
+			if (m3ETIM.HasValue)
+				request.WithQueryParameter("ETIM", m3ETIM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3AVEF.HasValue)
+				request.WithQueryParameter("AVEF", m3AVEF.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3WCNM.HasValue)
+				request.WithQueryParameter("WCNM", m3WCNM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -447,7 +454,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

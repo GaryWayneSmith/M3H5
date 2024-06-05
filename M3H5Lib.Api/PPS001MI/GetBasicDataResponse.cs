@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Purchase Order Number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase Order Number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase Order Line Number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase Order Line Number")]
-		public string M3_PNLI => GetString("PNLI");
+		public string M3PNLI => GetString("PNLI");
 
 		/// <summary>
 		/// Description: Purchase Order Line Number Suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase Order Line Number Suffix")]
-		public int? M3_PNLS => GetNullableInt("PNLS");
+		public int? M3PNLS => GetNullableInt("PNLS");
 
 		/// <summary>
 		/// Description: Item Number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item Number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Supplier item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier item number")]
-		public string M3_SITE => GetString("SITE");
+		public string M3SITE => GetString("SITE");
 
 		/// <summary>
 		/// Description: Confirmed delivery date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery date")]
-		public DateTime? M3_CODT => GetNullableDateTime("CODT");
+		public DateTime? M3CODT => GetNullableDateTime("CODT");
 
 		/// <summary>
 		/// Description: Confirmed quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed quantity")]
-		public string M3_CFQA => GetString("CFQA");
+		public string M3CFQA => GetString("CFQA");
 
 		/// <summary>
 		/// Description: Purchase order U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order U/M")]
-		public string M3_PUUN => GetString("PUUN");
+		public string M3PUUN => GetString("PUUN");
 
 		/// <summary>
 		/// Description: Goods receiving method
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods receiving method")]
-		public string M3_GRMT => GetString("GRMT");
+		public string M3GRMT => GetString("GRMT");
 
 		/// <summary>
 		/// Description: Remaining quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining quantity")]
-		public string M3_RSTQ => GetString("RSTQ");
+		public string M3RSTQ => GetString("RSTQ");
 
 		/// <summary>
 		/// Description: Name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Lot control method
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot control method")]
-		public int? M3_INDI => GetNullableInt("INDI");
+		public int? M3INDI => GetNullableInt("INDI");
 
 		/// <summary>
 		/// Description: Lot numbering method
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot numbering method")]
-		public int? M3_BACD => GetNullableInt("BACD");
+		public int? M3BACD => GetNullableInt("BACD");
 
 		/// <summary>
 		/// Description: EAN code
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EAN code")]
-		public decimal? M3_EACD => GetNullableDecimal("EACD");
+		public decimal? M3EACD => GetNullableDecimal("EACD");
 
 		/// <summary>
 		/// Description: Quality inspection reporting
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quality inspection reporting")]
-		public int? M3_QUCO => GetNullableInt("QUCO");
+		public int? M3QUCO => GetNullableInt("QUCO");
 
 		/// <summary>
 		/// Description: Location
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Stock Balance
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock Balance")]
-		public string M3_STQT => GetString("STQT");
+		public string M3STQT => GetString("STQT");
 
 		/// <summary>
 		/// Description: Direct put-away
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direct put-away")]
-		public int? M3_DSTO => GetNullableInt("DSTO");
+		public int? M3DSTO => GetNullableInt("DSTO");
 
 		/// <summary>
 		/// Description: Inspection point
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection point")]
-		public int? M3_FLCD => GetNullableInt("FLCD");
+		public int? M3FLCD => GetNullableInt("FLCD");
 
 		/// <summary>
 		/// Description: Active Quantity
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active Quantity")]
-		public string M3_TSQT => GetString("TSQT");
+		public string M3TSQT => GetString("TSQT");
 
 		/// <summary>
 		/// Description: Country of origin
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin")]
-		public string M3_ORCO => GetString("ORCO");
+		public string M3ORCO => GetString("ORCO");
 
 		/// <summary>
 		/// Description: Pickup address number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pickup address number")]
-		public string M3_PIAD => GetString("PIAD");
+		public string M3PIAD => GetString("PIAD");
 
 		/// <summary>
 		/// Description: Place of loading
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place of loading")]
-		public string M3_SDES => GetString("SDES");
+		public string M3SDES => GetString("SDES");
 
 		/// <summary>
 		/// Description: Confirmed pickup address
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed pickup address")]
-		public string M3_CIAD => GetString("CIAD");
+		public string M3CIAD => GetString("CIAD");
 
 		/// <summary>
 		/// Description: Confirmed place of loading
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed place of loading")]
-		public string M3_CDES => GetString("CDES");
+		public string M3CDES => GetString("CDES");
 
 		/// <summary>
 		/// Description: Ordering warehouse
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordering warehouse")]
-		public string M3_OWHL => GetString("OWHL");
+		public string M3OWHL => GetString("OWHL");
 	}
 }
 // EOF

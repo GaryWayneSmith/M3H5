@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS004MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_DLSP">Delivery specification (Required)</param>
-		/// <param name="m3_DSTX">Description (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3DLSP">Delivery specification (Required)</param>
+		/// <param name="m3DSTX">Description (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_CUNO, 
-			string m3_DLSP, 
-			string m3_DSTX, 
-			string m3_ADID = null, 
-			string m3_TX15 = null, 
+			string m3CUNO, 
+			string m3DLSP, 
+			string m3DSTX, 
+			string m3ADID = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,24 +70,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_DLSP))
-				throw new ArgumentNullException("m3_DLSP");
-			if (string.IsNullOrWhiteSpace(m3_DSTX))
-				throw new ArgumentNullException("m3_DSTX");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3DLSP))
+				throw new ArgumentNullException(nameof(m3DLSP));
+			if (string.IsNullOrWhiteSpace(m3DSTX))
+				throw new ArgumentNullException(nameof(m3DSTX));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("DLSP", m3_DLSP.Trim())
-				.WithQueryParameter("DSTX", m3_DSTX.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("DLSP", m3DLSP.Trim())
+				.WithQueryParameter("DSTX", m3DSTX.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -95,7 +97,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -106,9 +109,9 @@ namespace M3H5Lib.Api
 		/// Description Del
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_DLSP">Delivery specification (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3DLSP">Delivery specification (Required)</param>
+		/// <param name="m3ADID">Address number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -117,9 +120,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Del(
-			string m3_CUNO, 
-			string m3_DLSP, 
-			string m3_ADID = null, 
+			string m3CUNO, 
+			string m3DLSP, 
+			string m3ADID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -134,19 +137,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_DLSP))
-				throw new ArgumentNullException("m3_DLSP");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3DLSP))
+				throw new ArgumentNullException(nameof(m3DLSP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("DLSP", m3_DLSP.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("DLSP", m3DLSP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -156,7 +159,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -167,9 +171,9 @@ namespace M3H5Lib.Api
 		/// Description Get
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_DLSP">Delivery specification (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3DLSP">Delivery specification (Required)</param>
+		/// <param name="m3ADID">Address number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -178,9 +182,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_CUNO, 
-			string m3_DLSP, 
-			string m3_ADID = null, 
+			string m3CUNO, 
+			string m3DLSP, 
+			string m3ADID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -195,19 +199,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_DLSP))
-				throw new ArgumentNullException("m3_DLSP");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3DLSP))
+				throw new ArgumentNullException(nameof(m3DLSP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("DLSP", m3_DLSP.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("DLSP", m3DLSP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -217,7 +221,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -228,9 +233,9 @@ namespace M3H5Lib.Api
 		/// Description Lst
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_DLSP">Delivery specification</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3DLSP">Delivery specification</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -239,9 +244,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_CUNO, 
-			string m3_ADID = null, 
-			string m3_DLSP = null, 
+			string m3CUNO, 
+			string m3ADID = null, 
+			string m3DLSP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -256,18 +261,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DLSP))
-				request.WithQueryParameter("DLSP", m3_DLSP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DLSP))
+				request.WithQueryParameter("DLSP", m3DLSP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -277,7 +282,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -288,11 +294,11 @@ namespace M3H5Lib.Api
 		/// Description Upd
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_DLSP">Delivery specification (Required)</param>
-		/// <param name="m3_DSTX">Description (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3DLSP">Delivery specification (Required)</param>
+		/// <param name="m3DSTX">Description (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -301,11 +307,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_CUNO, 
-			string m3_DLSP, 
-			string m3_DSTX, 
-			string m3_ADID = null, 
-			string m3_TX15 = null, 
+			string m3CUNO, 
+			string m3DLSP, 
+			string m3DSTX, 
+			string m3ADID = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -320,24 +326,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_DLSP))
-				throw new ArgumentNullException("m3_DLSP");
-			if (string.IsNullOrWhiteSpace(m3_DSTX))
-				throw new ArgumentNullException("m3_DSTX");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3DLSP))
+				throw new ArgumentNullException(nameof(m3DLSP));
+			if (string.IsNullOrWhiteSpace(m3DSTX))
+				throw new ArgumentNullException(nameof(m3DSTX));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("DLSP", m3_DLSP.Trim())
-				.WithQueryParameter("DSTX", m3_DSTX.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("DLSP", m3DLSP.Trim())
+				.WithQueryParameter("DSTX", m3DSTX.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -347,7 +353,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

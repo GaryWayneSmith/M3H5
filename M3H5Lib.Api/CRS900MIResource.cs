@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS900MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Add working days to a date
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FRDT">From date (Required)</param>
-		/// <param name="m3_DAYS">Additional days</param>
+		/// <param name="m3FRDT">From date (Required)</param>
+		/// <param name="m3DAYS">Additional days</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddWorkingDaysResponse></returns>
 		/// <exception cref="M3Exception<AddWorkingDaysResponse>"></exception>
 		public async Task<M3Response<AddWorkingDaysResponse>> AddWorkingDays(
-			DateTime m3_FRDT, 
-			int? m3_DAYS = null, 
+			DateTime m3FRDT, 
+			int? m3DAYS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -65,11 +67,11 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FRDT", m3_FRDT.ToM3String());
+				.WithQueryParameter("FRDT", m3FRDT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_DAYS.HasValue)
-				request.WithQueryParameter("DAYS", m3_DAYS.Value.ToString());
+			if (m3DAYS.HasValue)
+				request.WithQueryParameter("DAYS", m3DAYS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<AddWorkingDaysResponse>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -90,10 +93,10 @@ namespace M3H5Lib.Api
 		/// Description List system calendar
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_FRDT">From date</param>
-		/// <param name="m3_TODT">To date</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3FRDT">From date</param>
+		/// <param name="m3TODT">To date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -102,10 +105,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSysCalendarResponse></returns>
 		/// <exception cref="M3Exception<LstSysCalendarResponse>"></exception>
 		public async Task<M3Response<LstSysCalendarResponse>> LstSysCalendar(
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			DateTime? m3_FRDT = null, 
-			DateTime? m3_TODT = null, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			DateTime? m3FRDT = null, 
+			DateTime? m3TODT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,14 +123,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_FRDT.HasValue)
-				request.WithQueryParameter("FRDT", m3_FRDT.Value.ToM3String());
-			if (m3_TODT.HasValue)
-				request.WithQueryParameter("TODT", m3_TODT.Value.ToM3String());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3FRDT.HasValue)
+				request.WithQueryParameter("FRDT", m3FRDT.Value.ToM3String());
+			if (m3TODT.HasValue)
+				request.WithQueryParameter("TODT", m3TODT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstSysCalendarResponse>(
@@ -137,7 +140,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

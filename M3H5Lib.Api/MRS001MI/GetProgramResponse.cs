@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Associated MI-program")]
-		public string M3_MINM => GetString("MINM");
+		public string M3MINM => GetString("MINM");
 
 		/// <summary>
 		/// Description: Component name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component name")]
-		public string M3_OBNM => GetString("OBNM");
+		public string M3OBNM => GetString("OBNM");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_MIDS => GetString("MIDS");
+		public string M3MIDS => GetString("MIDS");
 
 		/// <summary>
 		/// Description: Text ID for leading description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text ID for leading description")]
-		public decimal? M3_TXT1 => GetNullableDecimal("TXT1");
+		public decimal? M3TXT1 => GetNullableDecimal("TXT1");
 
 		/// <summary>
 		/// Description: Text ID for trailing description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text ID for trailing description")]
-		public decimal? M3_TXT2 => GetNullableDecimal("TXT2");
+		public decimal? M3TXT2 => GetNullableDecimal("TXT2");
 
 		/// <summary>
 		/// Description: Entry date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Version number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version number")]
-		public string M3_VERS => GetString("VERS");
+		public string M3VERS => GetString("VERS");
 
 		/// <summary>
 		/// Description: Change date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Classification
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Classification")]
-		public string M3_MNID => GetString("MNID");
+		public string M3MNID => GetString("MNID");
 	}
 }
 // EOF

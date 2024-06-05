@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.ECS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add Affected Serial No.
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_BANO">Lot number (Required)</param>
-		/// <param name="m3_PLSD">Planned start date</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3BANO">Lot number (Required)</param>
+		/// <param name="m3PLSD">Planned start date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAffSerialNo(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_ITNO, 
-			string m3_BANO, 
-			DateTime? m3_PLSD = null, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3ITNO, 
+			string m3BANO, 
+			DateTime? m3PLSD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,25 +70,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_BANO))
-				throw new ArgumentNullException("m3_BANO");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3BANO))
+				throw new ArgumentNullException(nameof(m3BANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("BANO", m3_BANO.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("BANO", m3BANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PLSD.HasValue)
-				request.WithQueryParameter("PLSD", m3_PLSD.Value.ToM3String());
+			if (m3PLSD.HasValue)
+				request.WithQueryParameter("PLSD", m3PLSD.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -96,7 +98,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -107,37 +110,37 @@ namespace M3H5Lib.Api
 		/// Description Add Engineering Order
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECT">Engineering order type (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_DEPT">Department (Required)</param>
-		/// <param name="m3_AECC">Engineering order category (Required)</param>
-		/// <param name="m3_AECL">Engineering order class (Required)</param>
-		/// <param name="m3_AECN">Engineering order number</param>
-		/// <param name="m3_AECS">Status - engineering order</param>
-		/// <param name="m3_ARVD">Revision date</param>
-		/// <param name="m3_RESP">Responsible</param>
-		/// <param name="m3_AECM">Mandatory</param>
-		/// <param name="m3_PCHG">Item number change</param>
-		/// <param name="m3_AERE">Repetitive</param>
-		/// <param name="m3_ACMO">Automatic approval of modification</param>
-		/// <param name="m3_AGRP">Engineering order group</param>
-		/// <param name="m3_APR2">Priority</param>
-		/// <param name="m3_STNC">Standard numbering system</param>
-		/// <param name="m3_PROJ">Project number</param>
-		/// <param name="m3_ELNO">Project element</param>
-		/// <param name="m3_FUNC">Function area</param>
-		/// <param name="m3_DOID">Document identity</param>
-		/// <param name="m3_ECVE">Revision number</param>
-		/// <param name="m3_AISB">Document issuer</param>
-		/// <param name="m3_ADOB">Document object</param>
-		/// <param name="m3_ALPD">Latest performance date</param>
-		/// <param name="m3_ALDS">Latest performance date - warehouse</param>
-		/// <param name="m3_WATP">Warranty type</param>
-		/// <param name="m3_MRET">Retrospective</param>
-		/// <param name="m3_ARVR">Reason for document revision</param>
-		/// <param name="m3_ATRD">Date revised</param>
-		/// <param name="m3_ARVB">Revised by</param>
-		/// <param name="m3_REDA">Receipt date</param>
+		/// <param name="m3AECT">Engineering order type (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3DEPT">Department (Required)</param>
+		/// <param name="m3AECC">Engineering order category (Required)</param>
+		/// <param name="m3AECL">Engineering order class (Required)</param>
+		/// <param name="m3AECN">Engineering order number</param>
+		/// <param name="m3AECS">Status - engineering order</param>
+		/// <param name="m3ARVD">Revision date</param>
+		/// <param name="m3RESP">Responsible</param>
+		/// <param name="m3AECM">Mandatory</param>
+		/// <param name="m3PCHG">Item number change</param>
+		/// <param name="m3AERE">Repetitive</param>
+		/// <param name="m3ACMO">Automatic approval of modification</param>
+		/// <param name="m3AGRP">Engineering order group</param>
+		/// <param name="m3APR2">Priority</param>
+		/// <param name="m3STNC">Standard numbering system</param>
+		/// <param name="m3PROJ">Project number</param>
+		/// <param name="m3ELNO">Project element</param>
+		/// <param name="m3FUNC">Function area</param>
+		/// <param name="m3DOID">Document identity</param>
+		/// <param name="m3ECVE">Revision number</param>
+		/// <param name="m3AISB">Document issuer</param>
+		/// <param name="m3ADOB">Document object</param>
+		/// <param name="m3ALPD">Latest performance date</param>
+		/// <param name="m3ALDS">Latest performance date - warehouse</param>
+		/// <param name="m3WATP">Warranty type</param>
+		/// <param name="m3MRET">Retrospective</param>
+		/// <param name="m3ARVR">Reason for document revision</param>
+		/// <param name="m3ATRD">Date revised</param>
+		/// <param name="m3ARVB">Revised by</param>
+		/// <param name="m3REDA">Receipt date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -146,37 +149,37 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddEOResponse></returns>
 		/// <exception cref="M3Exception<AddEOResponse>"></exception>
 		public async Task<M3Response<AddEOResponse>> AddEO(
-			string m3_AECT, 
-			string m3_TX40, 
-			string m3_DEPT, 
-			string m3_AECC, 
-			string m3_AECL, 
-			string m3_AECN = null, 
-			string m3_AECS = null, 
-			DateTime? m3_ARVD = null, 
-			string m3_RESP = null, 
-			int? m3_AECM = null, 
-			int? m3_PCHG = null, 
-			int? m3_AERE = null, 
-			int? m3_ACMO = null, 
-			string m3_AGRP = null, 
-			int? m3_APR2 = null, 
-			string m3_STNC = null, 
-			string m3_PROJ = null, 
-			string m3_ELNO = null, 
-			string m3_FUNC = null, 
-			string m3_DOID = null, 
-			string m3_ECVE = null, 
-			string m3_AISB = null, 
-			string m3_ADOB = null, 
-			DateTime? m3_ALPD = null, 
-			DateTime? m3_ALDS = null, 
-			string m3_WATP = null, 
-			int? m3_MRET = null, 
-			string m3_ARVR = null, 
-			DateTime? m3_ATRD = null, 
-			string m3_ARVB = null, 
-			DateTime? m3_REDA = null, 
+			string m3AECT, 
+			string m3TX40, 
+			string m3DEPT, 
+			string m3AECC, 
+			string m3AECL, 
+			string m3AECN = null, 
+			string m3AECS = null, 
+			DateTime? m3ARVD = null, 
+			string m3RESP = null, 
+			int? m3AECM = null, 
+			int? m3PCHG = null, 
+			int? m3AERE = null, 
+			int? m3ACMO = null, 
+			string m3AGRP = null, 
+			int? m3APR2 = null, 
+			string m3STNC = null, 
+			string m3PROJ = null, 
+			string m3ELNO = null, 
+			string m3FUNC = null, 
+			string m3DOID = null, 
+			string m3ECVE = null, 
+			string m3AISB = null, 
+			string m3ADOB = null, 
+			DateTime? m3ALPD = null, 
+			DateTime? m3ALDS = null, 
+			string m3WATP = null, 
+			int? m3MRET = null, 
+			string m3ARVR = null, 
+			DateTime? m3ATRD = null, 
+			string m3ARVB = null, 
+			DateTime? m3REDA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -191,78 +194,78 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECT))
-				throw new ArgumentNullException("m3_AECT");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_DEPT))
-				throw new ArgumentNullException("m3_DEPT");
-			if (string.IsNullOrWhiteSpace(m3_AECC))
-				throw new ArgumentNullException("m3_AECC");
-			if (string.IsNullOrWhiteSpace(m3_AECL))
-				throw new ArgumentNullException("m3_AECL");
+			if (string.IsNullOrWhiteSpace(m3AECT))
+				throw new ArgumentNullException(nameof(m3AECT));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3DEPT))
+				throw new ArgumentNullException(nameof(m3DEPT));
+			if (string.IsNullOrWhiteSpace(m3AECC))
+				throw new ArgumentNullException(nameof(m3AECC));
+			if (string.IsNullOrWhiteSpace(m3AECL))
+				throw new ArgumentNullException(nameof(m3AECL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECT", m3_AECT.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("DEPT", m3_DEPT.Trim())
-				.WithQueryParameter("AECC", m3_AECC.Trim())
-				.WithQueryParameter("AECL", m3_AECL.Trim());
+				.WithQueryParameter("AECT", m3AECT.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("DEPT", m3DEPT.Trim())
+				.WithQueryParameter("AECC", m3AECC.Trim())
+				.WithQueryParameter("AECL", m3AECL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AECN))
-				request.WithQueryParameter("AECN", m3_AECN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AECS))
-				request.WithQueryParameter("AECS", m3_AECS.Trim());
-			if (m3_ARVD.HasValue)
-				request.WithQueryParameter("ARVD", m3_ARVD.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_RESP))
-				request.WithQueryParameter("RESP", m3_RESP.Trim());
-			if (m3_AECM.HasValue)
-				request.WithQueryParameter("AECM", m3_AECM.Value.ToString());
-			if (m3_PCHG.HasValue)
-				request.WithQueryParameter("PCHG", m3_PCHG.Value.ToString());
-			if (m3_AERE.HasValue)
-				request.WithQueryParameter("AERE", m3_AERE.Value.ToString());
-			if (m3_ACMO.HasValue)
-				request.WithQueryParameter("ACMO", m3_ACMO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_AGRP))
-				request.WithQueryParameter("AGRP", m3_AGRP.Trim());
-			if (m3_APR2.HasValue)
-				request.WithQueryParameter("APR2", m3_APR2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_STNC))
-				request.WithQueryParameter("STNC", m3_STNC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PROJ))
-				request.WithQueryParameter("PROJ", m3_PROJ.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ELNO))
-				request.WithQueryParameter("ELNO", m3_ELNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FUNC))
-				request.WithQueryParameter("FUNC", m3_FUNC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DOID))
-				request.WithQueryParameter("DOID", m3_DOID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ECVE))
-				request.WithQueryParameter("ECVE", m3_ECVE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AISB))
-				request.WithQueryParameter("AISB", m3_AISB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADOB))
-				request.WithQueryParameter("ADOB", m3_ADOB.Trim());
-			if (m3_ALPD.HasValue)
-				request.WithQueryParameter("ALPD", m3_ALPD.Value.ToM3String());
-			if (m3_ALDS.HasValue)
-				request.WithQueryParameter("ALDS", m3_ALDS.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_WATP))
-				request.WithQueryParameter("WATP", m3_WATP.Trim());
-			if (m3_MRET.HasValue)
-				request.WithQueryParameter("MRET", m3_MRET.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ARVR))
-				request.WithQueryParameter("ARVR", m3_ARVR.Trim());
-			if (m3_ATRD.HasValue)
-				request.WithQueryParameter("ATRD", m3_ATRD.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ARVB))
-				request.WithQueryParameter("ARVB", m3_ARVB.Trim());
-			if (m3_REDA.HasValue)
-				request.WithQueryParameter("REDA", m3_REDA.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3AECN))
+				request.WithQueryParameter("AECN", m3AECN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECS))
+				request.WithQueryParameter("AECS", m3AECS.Trim());
+			if (m3ARVD.HasValue)
+				request.WithQueryParameter("ARVD", m3ARVD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3RESP))
+				request.WithQueryParameter("RESP", m3RESP.Trim());
+			if (m3AECM.HasValue)
+				request.WithQueryParameter("AECM", m3AECM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PCHG.HasValue)
+				request.WithQueryParameter("PCHG", m3PCHG.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3AERE.HasValue)
+				request.WithQueryParameter("AERE", m3AERE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ACMO.HasValue)
+				request.WithQueryParameter("ACMO", m3ACMO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3AGRP))
+				request.WithQueryParameter("AGRP", m3AGRP.Trim());
+			if (m3APR2.HasValue)
+				request.WithQueryParameter("APR2", m3APR2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3STNC))
+				request.WithQueryParameter("STNC", m3STNC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PROJ))
+				request.WithQueryParameter("PROJ", m3PROJ.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELNO))
+				request.WithQueryParameter("ELNO", m3ELNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FUNC))
+				request.WithQueryParameter("FUNC", m3FUNC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DOID))
+				request.WithQueryParameter("DOID", m3DOID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ECVE))
+				request.WithQueryParameter("ECVE", m3ECVE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AISB))
+				request.WithQueryParameter("AISB", m3AISB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADOB))
+				request.WithQueryParameter("ADOB", m3ADOB.Trim());
+			if (m3ALPD.HasValue)
+				request.WithQueryParameter("ALPD", m3ALPD.Value.ToM3String());
+			if (m3ALDS.HasValue)
+				request.WithQueryParameter("ALDS", m3ALDS.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WATP))
+				request.WithQueryParameter("WATP", m3WATP.Trim());
+			if (m3MRET.HasValue)
+				request.WithQueryParameter("MRET", m3MRET.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ARVR))
+				request.WithQueryParameter("ARVR", m3ARVR.Trim());
+			if (m3ATRD.HasValue)
+				request.WithQueryParameter("ATRD", m3ATRD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ARVB))
+				request.WithQueryParameter("ARVB", m3ARVB.Trim());
+			if (m3REDA.HasValue)
+				request.WithQueryParameter("REDA", m3REDA.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<AddEOResponse>(
@@ -272,7 +275,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -283,12 +287,12 @@ namespace M3H5Lib.Api
 		/// Description Add Engineering Order Line
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_SUFI">Service (Required)</param>
-		/// <param name="m3_ECVE">Revision number (Required)</param>
-		/// <param name="m3_PRNO">Product</param>
-		/// <param name="m3_STRT">Product structure type</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3SUFI">Service (Required)</param>
+		/// <param name="m3ECVE">Revision number (Required)</param>
+		/// <param name="m3PRNO">Product</param>
+		/// <param name="m3STRT">Product structure type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -297,12 +301,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddEOLine(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_SUFI, 
-			string m3_ECVE, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3SUFI, 
+			string m3ECVE, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -317,27 +321,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_SUFI))
-				throw new ArgumentNullException("m3_SUFI");
-			if (string.IsNullOrWhiteSpace(m3_ECVE))
-				throw new ArgumentNullException("m3_ECVE");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3SUFI))
+				throw new ArgumentNullException(nameof(m3SUFI));
+			if (string.IsNullOrWhiteSpace(m3ECVE))
+				throw new ArgumentNullException(nameof(m3ECVE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("SUFI", m3_SUFI.Trim())
-				.WithQueryParameter("ECVE", m3_ECVE.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("SUFI", m3SUFI.Trim())
+				.WithQueryParameter("ECVE", m3ECVE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -347,7 +351,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -358,13 +363,13 @@ namespace M3H5Lib.Api
 		/// Description Add Modification reference component
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_AOPN">Old item number (Required)</param>
-		/// <param name="m3_MODM">Modification marking</param>
-		/// <param name="m3_ANPN">New item number</param>
-		/// <param name="m3_AINS">Instruction</param>
-		/// <param name="m3_CNQT">Quantity</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AOPN">Old item number (Required)</param>
+		/// <param name="m3MODM">Modification marking</param>
+		/// <param name="m3ANPN">New item number</param>
+		/// <param name="m3AINS">Instruction</param>
+		/// <param name="m3CNQT">Quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -373,13 +378,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddModRefComp(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_AOPN, 
-			string m3_MODM = null, 
-			string m3_ANPN = null, 
-			string m3_AINS = null, 
-			decimal? m3_CNQT = null, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3AOPN, 
+			string m3MODM = null, 
+			string m3ANPN = null, 
+			string m3AINS = null, 
+			decimal? m3CNQT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -394,28 +399,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_AOPN))
-				throw new ArgumentNullException("m3_AOPN");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3AOPN))
+				throw new ArgumentNullException(nameof(m3AOPN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("AOPN", m3_AOPN.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("AOPN", m3AOPN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODM))
-				request.WithQueryParameter("MODM", m3_MODM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ANPN))
-				request.WithQueryParameter("ANPN", m3_ANPN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AINS))
-				request.WithQueryParameter("AINS", m3_AINS.Trim());
-			if (m3_CNQT.HasValue)
-				request.WithQueryParameter("CNQT", m3_CNQT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MODM))
+				request.WithQueryParameter("MODM", m3MODM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ANPN))
+				request.WithQueryParameter("ANPN", m3ANPN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AINS))
+				request.WithQueryParameter("AINS", m3AINS.Trim());
+			if (m3CNQT.HasValue)
+				request.WithQueryParameter("CNQT", m3CNQT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -425,7 +430,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -436,8 +442,8 @@ namespace M3H5Lib.Api
 		/// Description Copy Engineering order to new revision
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number</param>
-		/// <param name="m3_AECR">Revision number - engineering order</param>
+		/// <param name="m3AECN">Engineering order number</param>
+		/// <param name="m3AECR">Revision number - engineering order</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -446,8 +452,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> CopyToNewRev(
-			string m3_AECN = null, 
-			string m3_AECR = null, 
+			string m3AECN = null, 
+			string m3AECR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -462,10 +468,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AECN))
-				request.WithQueryParameter("AECN", m3_AECN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AECR))
-				request.WithQueryParameter("AECR", m3_AECR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECN))
+				request.WithQueryParameter("AECN", m3AECN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECR))
+				request.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -475,7 +481,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -486,8 +493,8 @@ namespace M3H5Lib.Api
 		/// Description Deactivate Engineering order
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -496,8 +503,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DeactivateEO(
-			string m3_AECN, 
-			string m3_AECR, 
+			string m3AECN, 
+			string m3AECR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -512,15 +519,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -530,7 +537,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -541,10 +549,10 @@ namespace M3H5Lib.Api
 		/// Description Delete Affected Serial Number
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_BANO">Lot number (Required)</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3BANO">Lot number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -553,10 +561,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelAffSerialNo(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_ITNO, 
-			string m3_BANO, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3ITNO, 
+			string m3BANO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -571,21 +579,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_BANO))
-				throw new ArgumentNullException("m3_BANO");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3BANO))
+				throw new ArgumentNullException(nameof(m3BANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("BANO", m3_BANO.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("BANO", m3BANO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -595,7 +603,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -606,12 +615,12 @@ namespace M3H5Lib.Api
 		/// Description Delete Engineering Order Line
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_SUFI">Service (Required)</param>
-		/// <param name="m3_ECVE">Revision number (Required)</param>
-		/// <param name="m3_PRNO">Product</param>
-		/// <param name="m3_STRT">Product structure type</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3SUFI">Service (Required)</param>
+		/// <param name="m3ECVE">Revision number (Required)</param>
+		/// <param name="m3PRNO">Product</param>
+		/// <param name="m3STRT">Product structure type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -620,12 +629,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelEOLine(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_SUFI, 
-			string m3_ECVE, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3SUFI, 
+			string m3ECVE, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -640,27 +649,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_SUFI))
-				throw new ArgumentNullException("m3_SUFI");
-			if (string.IsNullOrWhiteSpace(m3_ECVE))
-				throw new ArgumentNullException("m3_ECVE");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3SUFI))
+				throw new ArgumentNullException(nameof(m3SUFI));
+			if (string.IsNullOrWhiteSpace(m3ECVE))
+				throw new ArgumentNullException(nameof(m3ECVE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("SUFI", m3_SUFI.Trim())
-				.WithQueryParameter("ECVE", m3_ECVE.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("SUFI", m3SUFI.Trim())
+				.WithQueryParameter("ECVE", m3ECVE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -670,7 +679,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -681,10 +691,10 @@ namespace M3H5Lib.Api
 		/// Description DelModRefComp
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_AOPN">Old item number (Required)</param>
-		/// <param name="m3_ANPN">New item number</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AOPN">Old item number (Required)</param>
+		/// <param name="m3ANPN">New item number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -693,10 +703,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelModRefComp(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_AOPN, 
-			string m3_ANPN = null, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3AOPN, 
+			string m3ANPN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -711,22 +721,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_AOPN))
-				throw new ArgumentNullException("m3_AOPN");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3AOPN))
+				throw new ArgumentNullException(nameof(m3AOPN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("AOPN", m3_AOPN.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("AOPN", m3AOPN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ANPN))
-				request.WithQueryParameter("ANPN", m3_ANPN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ANPN))
+				request.WithQueryParameter("ANPN", m3ANPN.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -736,7 +746,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -747,10 +758,10 @@ namespace M3H5Lib.Api
 		/// Description Get affected serial numbers
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_BANO">Lot number (Required)</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3BANO">Lot number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -759,10 +770,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAffSerialNoResponse></returns>
 		/// <exception cref="M3Exception<GetAffSerialNoResponse>"></exception>
 		public async Task<M3Response<GetAffSerialNoResponse>> GetAffSerialNo(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_ITNO, 
-			string m3_BANO, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3ITNO, 
+			string m3BANO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -777,21 +788,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_BANO))
-				throw new ArgumentNullException("m3_BANO");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3BANO))
+				throw new ArgumentNullException(nameof(m3BANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("BANO", m3_BANO.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("BANO", m3BANO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAffSerialNoResponse>(
@@ -801,7 +812,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -812,8 +824,8 @@ namespace M3H5Lib.Api
 		/// Description Get Basic data for EO
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -822,8 +834,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetBasicResponse></returns>
 		/// <exception cref="M3Exception<GetBasicResponse>"></exception>
 		public async Task<M3Response<GetBasicResponse>> GetBasic(
-			string m3_AECN, 
-			string m3_AECR, 
+			string m3AECN, 
+			string m3AECR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -838,15 +850,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Execute the request
 			var result = await Execute<GetBasicResponse>(
@@ -856,7 +868,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -867,7 +880,7 @@ namespace M3H5Lib.Api
 		/// Description List EO by responsible
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RESP">Responsible (Required)</param>
+		/// <param name="m3RESP">Responsible (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -876,7 +889,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByRespResponse></returns>
 		/// <exception cref="M3Exception<LstByRespResponse>"></exception>
 		public async Task<M3Response<LstByRespResponse>> LstByResp(
-			string m3_RESP, 
+			string m3RESP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -891,12 +904,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_RESP))
-				throw new ArgumentNullException("m3_RESP");
+			if (string.IsNullOrWhiteSpace(m3RESP))
+				throw new ArgumentNullException(nameof(m3RESP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("RESP", m3_RESP.Trim());
+				.WithQueryParameter("RESP", m3RESP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByRespResponse>(
@@ -906,7 +919,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -917,8 +931,8 @@ namespace M3H5Lib.Api
 		/// Description List Engineering Order Lines
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -927,8 +941,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstEOLinesResponse></returns>
 		/// <exception cref="M3Exception<LstEOLinesResponse>"></exception>
 		public async Task<M3Response<LstEOLinesResponse>> LstEOLines(
-			string m3_AECN, 
-			string m3_AECR, 
+			string m3AECN, 
+			string m3AECR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -943,15 +957,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstEOLinesResponse>(
@@ -961,7 +975,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -972,8 +987,8 @@ namespace M3H5Lib.Api
 		/// Description List Modification reference component
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -982,8 +997,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstModRefCompResponse></returns>
 		/// <exception cref="M3Exception<LstModRefCompResponse>"></exception>
 		public async Task<M3Response<LstModRefCompResponse>> LstModRefComp(
-			string m3_AECN, 
-			string m3_AECR, 
+			string m3AECN, 
+			string m3AECR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -998,15 +1013,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstModRefCompResponse>(
@@ -1016,7 +1031,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1027,11 +1043,11 @@ namespace M3H5Lib.Api
 		/// Description Retrieve affected serial numbers
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PLSD">Planned start date (Required)</param>
-		/// <param name="m3_DOID">Document identity</param>
-		/// <param name="m3_ECVE">Revision number</param>
-		/// <param name="m3_AECN">Engineering order number</param>
-		/// <param name="m3_AECR">Revision number - engineering order</param>
+		/// <param name="m3PLSD">Planned start date (Required)</param>
+		/// <param name="m3DOID">Document identity</param>
+		/// <param name="m3ECVE">Revision number</param>
+		/// <param name="m3AECN">Engineering order number</param>
+		/// <param name="m3AECR">Revision number - engineering order</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1040,11 +1056,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<RtvAffectedResponse></returns>
 		/// <exception cref="M3Exception<RtvAffectedResponse>"></exception>
 		public async Task<M3Response<RtvAffectedResponse>> RtvAffected(
-			DateTime m3_PLSD, 
-			string m3_DOID = null, 
-			string m3_ECVE = null, 
-			string m3_AECN = null, 
-			string m3_AECR = null, 
+			DateTime m3PLSD, 
+			string m3DOID = null, 
+			string m3ECVE = null, 
+			string m3AECN = null, 
+			string m3AECR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1062,17 +1078,17 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PLSD", m3_PLSD.ToM3String());
+				.WithQueryParameter("PLSD", m3PLSD.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DOID))
-				request.WithQueryParameter("DOID", m3_DOID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ECVE))
-				request.WithQueryParameter("ECVE", m3_ECVE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AECN))
-				request.WithQueryParameter("AECN", m3_AECN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AECR))
-				request.WithQueryParameter("AECR", m3_AECR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DOID))
+				request.WithQueryParameter("DOID", m3DOID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ECVE))
+				request.WithQueryParameter("ECVE", m3ECVE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECN))
+				request.WithQueryParameter("AECN", m3AECN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECR))
+				request.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Execute the request
 			var result = await Execute<RtvAffectedResponse>(
@@ -1082,7 +1098,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1093,8 +1110,8 @@ namespace M3H5Lib.Api
 		/// Description Transfer Engineering order to production
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number</param>
-		/// <param name="m3_AECR">Revision number - engineering order</param>
+		/// <param name="m3AECN">Engineering order number</param>
+		/// <param name="m3AECR">Revision number - engineering order</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1103,8 +1120,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> TransferToProd(
-			string m3_AECN = null, 
-			string m3_AECR = null, 
+			string m3AECN = null, 
+			string m3AECR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1119,10 +1136,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AECN))
-				request.WithQueryParameter("AECN", m3_AECN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AECR))
-				request.WithQueryParameter("AECR", m3_AECR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECN))
+				request.WithQueryParameter("AECN", m3AECN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECR))
+				request.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1132,7 +1149,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1143,35 +1161,35 @@ namespace M3H5Lib.Api
 		/// Description Update Engineering Order
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_AECS">Status - engineering order</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_RESP">Responsible</param>
-		/// <param name="m3_DEPT">Department</param>
-		/// <param name="m3_AECM">Mandatory</param>
-		/// <param name="m3_PCHG">Item number change</param>
-		/// <param name="m3_AERE">Repetitive</param>
-		/// <param name="m3_ACMO">Automatic approval of modification</param>
-		/// <param name="m3_AECC">Engineering order category</param>
-		/// <param name="m3_AGRP">Engineering order group</param>
-		/// <param name="m3_AECL">Engineering order class</param>
-		/// <param name="m3_APR2">Priority</param>
-		/// <param name="m3_STNC">Standard numbering system</param>
-		/// <param name="m3_PROJ">Project number</param>
-		/// <param name="m3_ELNO">Project element</param>
-		/// <param name="m3_FUNC">Function area</param>
-		/// <param name="m3_DOID">Document identity</param>
-		/// <param name="m3_ECVE">Revision number</param>
-		/// <param name="m3_ALPD">Latest performance date</param>
-		/// <param name="m3_ALDS">Latest performance date - warehouse</param>
-		/// <param name="m3_WATP">Warranty type</param>
-		/// <param name="m3_MRET">Retrospective</param>
-		/// <param name="m3_ARVD">Revision date</param>
-		/// <param name="m3_ARVR">Reason for document revision</param>
-		/// <param name="m3_ATRD">Date revised</param>
-		/// <param name="m3_ARVB">Revised by</param>
-		/// <param name="m3_REDA">Receipt date</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AECS">Status - engineering order</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3RESP">Responsible</param>
+		/// <param name="m3DEPT">Department</param>
+		/// <param name="m3AECM">Mandatory</param>
+		/// <param name="m3PCHG">Item number change</param>
+		/// <param name="m3AERE">Repetitive</param>
+		/// <param name="m3ACMO">Automatic approval of modification</param>
+		/// <param name="m3AECC">Engineering order category</param>
+		/// <param name="m3AGRP">Engineering order group</param>
+		/// <param name="m3AECL">Engineering order class</param>
+		/// <param name="m3APR2">Priority</param>
+		/// <param name="m3STNC">Standard numbering system</param>
+		/// <param name="m3PROJ">Project number</param>
+		/// <param name="m3ELNO">Project element</param>
+		/// <param name="m3FUNC">Function area</param>
+		/// <param name="m3DOID">Document identity</param>
+		/// <param name="m3ECVE">Revision number</param>
+		/// <param name="m3ALPD">Latest performance date</param>
+		/// <param name="m3ALDS">Latest performance date - warehouse</param>
+		/// <param name="m3WATP">Warranty type</param>
+		/// <param name="m3MRET">Retrospective</param>
+		/// <param name="m3ARVD">Revision date</param>
+		/// <param name="m3ARVR">Reason for document revision</param>
+		/// <param name="m3ATRD">Date revised</param>
+		/// <param name="m3ARVB">Revised by</param>
+		/// <param name="m3REDA">Receipt date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1180,35 +1198,35 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdEO(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_AECS = null, 
-			string m3_TX40 = null, 
-			string m3_RESP = null, 
-			string m3_DEPT = null, 
-			int? m3_AECM = null, 
-			int? m3_PCHG = null, 
-			int? m3_AERE = null, 
-			int? m3_ACMO = null, 
-			string m3_AECC = null, 
-			string m3_AGRP = null, 
-			string m3_AECL = null, 
-			int? m3_APR2 = null, 
-			string m3_STNC = null, 
-			string m3_PROJ = null, 
-			string m3_ELNO = null, 
-			string m3_FUNC = null, 
-			string m3_DOID = null, 
-			string m3_ECVE = null, 
-			DateTime? m3_ALPD = null, 
-			DateTime? m3_ALDS = null, 
-			string m3_WATP = null, 
-			int? m3_MRET = null, 
-			DateTime? m3_ARVD = null, 
-			string m3_ARVR = null, 
-			DateTime? m3_ATRD = null, 
-			string m3_ARVB = null, 
-			DateTime? m3_REDA = null, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3AECS = null, 
+			string m3TX40 = null, 
+			string m3RESP = null, 
+			string m3DEPT = null, 
+			int? m3AECM = null, 
+			int? m3PCHG = null, 
+			int? m3AERE = null, 
+			int? m3ACMO = null, 
+			string m3AECC = null, 
+			string m3AGRP = null, 
+			string m3AECL = null, 
+			int? m3APR2 = null, 
+			string m3STNC = null, 
+			string m3PROJ = null, 
+			string m3ELNO = null, 
+			string m3FUNC = null, 
+			string m3DOID = null, 
+			string m3ECVE = null, 
+			DateTime? m3ALPD = null, 
+			DateTime? m3ALDS = null, 
+			string m3WATP = null, 
+			int? m3MRET = null, 
+			DateTime? m3ARVD = null, 
+			string m3ARVR = null, 
+			DateTime? m3ATRD = null, 
+			string m3ARVB = null, 
+			DateTime? m3REDA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1223,71 +1241,71 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AECS))
-				request.WithQueryParameter("AECS", m3_AECS.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RESP))
-				request.WithQueryParameter("RESP", m3_RESP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DEPT))
-				request.WithQueryParameter("DEPT", m3_DEPT.Trim());
-			if (m3_AECM.HasValue)
-				request.WithQueryParameter("AECM", m3_AECM.Value.ToString());
-			if (m3_PCHG.HasValue)
-				request.WithQueryParameter("PCHG", m3_PCHG.Value.ToString());
-			if (m3_AERE.HasValue)
-				request.WithQueryParameter("AERE", m3_AERE.Value.ToString());
-			if (m3_ACMO.HasValue)
-				request.WithQueryParameter("ACMO", m3_ACMO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_AECC))
-				request.WithQueryParameter("AECC", m3_AECC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AGRP))
-				request.WithQueryParameter("AGRP", m3_AGRP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AECL))
-				request.WithQueryParameter("AECL", m3_AECL.Trim());
-			if (m3_APR2.HasValue)
-				request.WithQueryParameter("APR2", m3_APR2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_STNC))
-				request.WithQueryParameter("STNC", m3_STNC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PROJ))
-				request.WithQueryParameter("PROJ", m3_PROJ.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ELNO))
-				request.WithQueryParameter("ELNO", m3_ELNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FUNC))
-				request.WithQueryParameter("FUNC", m3_FUNC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DOID))
-				request.WithQueryParameter("DOID", m3_DOID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ECVE))
-				request.WithQueryParameter("ECVE", m3_ECVE.Trim());
-			if (m3_ALPD.HasValue)
-				request.WithQueryParameter("ALPD", m3_ALPD.Value.ToM3String());
-			if (m3_ALDS.HasValue)
-				request.WithQueryParameter("ALDS", m3_ALDS.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_WATP))
-				request.WithQueryParameter("WATP", m3_WATP.Trim());
-			if (m3_MRET.HasValue)
-				request.WithQueryParameter("MRET", m3_MRET.Value.ToString());
-			if (m3_ARVD.HasValue)
-				request.WithQueryParameter("ARVD", m3_ARVD.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ARVR))
-				request.WithQueryParameter("ARVR", m3_ARVR.Trim());
-			if (m3_ATRD.HasValue)
-				request.WithQueryParameter("ATRD", m3_ATRD.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ARVB))
-				request.WithQueryParameter("ARVB", m3_ARVB.Trim());
-			if (m3_REDA.HasValue)
-				request.WithQueryParameter("REDA", m3_REDA.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3AECS))
+				request.WithQueryParameter("AECS", m3AECS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RESP))
+				request.WithQueryParameter("RESP", m3RESP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DEPT))
+				request.WithQueryParameter("DEPT", m3DEPT.Trim());
+			if (m3AECM.HasValue)
+				request.WithQueryParameter("AECM", m3AECM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PCHG.HasValue)
+				request.WithQueryParameter("PCHG", m3PCHG.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3AERE.HasValue)
+				request.WithQueryParameter("AERE", m3AERE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ACMO.HasValue)
+				request.WithQueryParameter("ACMO", m3ACMO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3AECC))
+				request.WithQueryParameter("AECC", m3AECC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGRP))
+				request.WithQueryParameter("AGRP", m3AGRP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AECL))
+				request.WithQueryParameter("AECL", m3AECL.Trim());
+			if (m3APR2.HasValue)
+				request.WithQueryParameter("APR2", m3APR2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3STNC))
+				request.WithQueryParameter("STNC", m3STNC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PROJ))
+				request.WithQueryParameter("PROJ", m3PROJ.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELNO))
+				request.WithQueryParameter("ELNO", m3ELNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FUNC))
+				request.WithQueryParameter("FUNC", m3FUNC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DOID))
+				request.WithQueryParameter("DOID", m3DOID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ECVE))
+				request.WithQueryParameter("ECVE", m3ECVE.Trim());
+			if (m3ALPD.HasValue)
+				request.WithQueryParameter("ALPD", m3ALPD.Value.ToM3String());
+			if (m3ALDS.HasValue)
+				request.WithQueryParameter("ALDS", m3ALDS.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WATP))
+				request.WithQueryParameter("WATP", m3WATP.Trim());
+			if (m3MRET.HasValue)
+				request.WithQueryParameter("MRET", m3MRET.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ARVD.HasValue)
+				request.WithQueryParameter("ARVD", m3ARVD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ARVR))
+				request.WithQueryParameter("ARVR", m3ARVR.Trim());
+			if (m3ATRD.HasValue)
+				request.WithQueryParameter("ATRD", m3ATRD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ARVB))
+				request.WithQueryParameter("ARVB", m3ARVB.Trim());
+			if (m3REDA.HasValue)
+				request.WithQueryParameter("REDA", m3REDA.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1297,7 +1315,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1308,13 +1327,13 @@ namespace M3H5Lib.Api
 		/// Description Update Modification reference component
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AECN">Engineering order number (Required)</param>
-		/// <param name="m3_AECR">Revision number - engineering order (Required)</param>
-		/// <param name="m3_AOPN">Old item number (Required)</param>
-		/// <param name="m3_MODM">Modification marking</param>
-		/// <param name="m3_ANPN">New item number</param>
-		/// <param name="m3_AINS">Instruction</param>
-		/// <param name="m3_CNQT">Quantity</param>
+		/// <param name="m3AECN">Engineering order number (Required)</param>
+		/// <param name="m3AECR">Revision number - engineering order (Required)</param>
+		/// <param name="m3AOPN">Old item number (Required)</param>
+		/// <param name="m3MODM">Modification marking</param>
+		/// <param name="m3ANPN">New item number</param>
+		/// <param name="m3AINS">Instruction</param>
+		/// <param name="m3CNQT">Quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1323,13 +1342,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdModRefComp(
-			string m3_AECN, 
-			string m3_AECR, 
-			string m3_AOPN, 
-			string m3_MODM = null, 
-			string m3_ANPN = null, 
-			string m3_AINS = null, 
-			decimal? m3_CNQT = null, 
+			string m3AECN, 
+			string m3AECR, 
+			string m3AOPN, 
+			string m3MODM = null, 
+			string m3ANPN = null, 
+			string m3AINS = null, 
+			decimal? m3CNQT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1344,28 +1363,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AECN))
-				throw new ArgumentNullException("m3_AECN");
-			if (string.IsNullOrWhiteSpace(m3_AECR))
-				throw new ArgumentNullException("m3_AECR");
-			if (string.IsNullOrWhiteSpace(m3_AOPN))
-				throw new ArgumentNullException("m3_AOPN");
+			if (string.IsNullOrWhiteSpace(m3AECN))
+				throw new ArgumentNullException(nameof(m3AECN));
+			if (string.IsNullOrWhiteSpace(m3AECR))
+				throw new ArgumentNullException(nameof(m3AECR));
+			if (string.IsNullOrWhiteSpace(m3AOPN))
+				throw new ArgumentNullException(nameof(m3AOPN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AECN", m3_AECN.Trim())
-				.WithQueryParameter("AECR", m3_AECR.Trim())
-				.WithQueryParameter("AOPN", m3_AOPN.Trim());
+				.WithQueryParameter("AECN", m3AECN.Trim())
+				.WithQueryParameter("AECR", m3AECR.Trim())
+				.WithQueryParameter("AOPN", m3AOPN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MODM))
-				request.WithQueryParameter("MODM", m3_MODM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ANPN))
-				request.WithQueryParameter("ANPN", m3_ANPN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AINS))
-				request.WithQueryParameter("AINS", m3_AINS.Trim());
-			if (m3_CNQT.HasValue)
-				request.WithQueryParameter("CNQT", m3_CNQT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MODM))
+				request.WithQueryParameter("MODM", m3MODM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ANPN))
+				request.WithQueryParameter("ANPN", m3ANPN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AINS))
+				request.WithQueryParameter("AINS", m3AINS.Trim());
+			if (m3CNQT.HasValue)
+				request.WithQueryParameter("CNQT", m3CNQT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1375,7 +1394,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

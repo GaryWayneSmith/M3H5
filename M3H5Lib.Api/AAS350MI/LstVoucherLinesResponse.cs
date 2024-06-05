@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Run number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run number")]
-		public int? M3_RNNO => GetNullableInt("RNNO");
+		public int? M3RNNO => GetNullableInt("RNNO");
 
 		/// <summary>
 		/// Description: Protocol number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Protocol number")]
-		public int? M3_GLRP => GetNullableInt("GLRP");
+		public int? M3GLRP => GetNullableInt("GLRP");
 
 		/// <summary>
 		/// Description: Year
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Journal number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal number")]
-		public int? M3_JRNO => GetNullableInt("JRNO");
+		public int? M3JRNO => GetNullableInt("JRNO");
 
 		/// <summary>
 		/// Description: Journal sequence number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal sequence number")]
-		public int? M3_JSNO => GetNullableInt("JSNO");
+		public int? M3JSNO => GetNullableInt("JSNO");
 
 		/// <summary>
 		/// Description: FAM entry ID
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM entry ID")]
-		public string M3_FEID => GetString("FEID");
+		public string M3FEID => GetString("FEID");
 
 		/// <summary>
 		/// Description: FAM function
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM function")]
-		public int? M3_FNCN => GetNullableInt("FNCN");
+		public int? M3FNCN => GetNullableInt("FNCN");
 
 		/// <summary>
 		/// Description: Transaction description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction description")]
-		public string M3_TDSC => GetString("TDSC");
+		public string M3TDSC => GetString("TDSC");
 
 		/// <summary>
 		/// Description: Voucher name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher name")]
-		public string M3_VDSC => GetString("VDSC");
+		public string M3VDSC => GetString("VDSC");
 
 		/// <summary>
 		/// Description: Transaction code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction code")]
-		public int? M3_TRCD => GetNullableInt("TRCD");
+		public int? M3TRCD => GetNullableInt("TRCD");
 
 		/// <summary>
 		/// Description: Accounting date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting date")]
-		public DateTime? M3_ACDT => GetNullableDateTime("ACDT");
+		public DateTime? M3ACDT => GetNullableDateTime("ACDT");
 
 		/// <summary>
 		/// Description: Voucher number series
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number series")]
-		public string M3_VSER => GetString("VSER");
+		public string M3VSER => GetString("VSER");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: External/internal transaction
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External/internal transaction")]
-		public int? M3_EICD => GetNullableInt("EICD");
+		public int? M3EICD => GetNullableInt("EICD");
 
 		/// <summary>
 		/// Description: Transaction date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction date")]
-		public DateTime? M3_OCDT => GetNullableDateTime("OCDT");
+		public DateTime? M3OCDT => GetNullableDateTime("OCDT");
 
 		/// <summary>
 		/// Description: Internal reconciliation date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal reconciliation date")]
-		public DateTime? M3_REDE => GetNullableDateTime("REDE");
+		public DateTime? M3REDE => GetNullableDateTime("REDE");
 
 		/// <summary>
 		/// Description: Internal reconciliation code
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal reconciliation code")]
-		public int? M3_RECO => GetNullableInt("RECO");
+		public int? M3RECO => GetNullableInt("RECO");
 
 		/// <summary>
 		/// Description: External reconciliation date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External reconciliation date")]
-		public DateTime? M3_ERDT => GetNullableDateTime("ERDT");
+		public DateTime? M3ERDT => GetNullableDateTime("ERDT");
 
 		/// <summary>
 		/// Description: VAT date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT date")]
-		public DateTime? M3_VATD => GetNullableDateTime("VATD");
+		public DateTime? M3VATD => GetNullableDateTime("VATD");
 
 		/// <summary>
 		/// Description: Check mark
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check mark")]
-		public string M3_TOCD => GetString("TOCD");
+		public string M3TOCD => GetString("TOCD");
 
 		/// <summary>
 		/// Description: Accounting dimension 1
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 1")]
-		public string M3_AIT1 => GetString("AIT1");
+		public string M3AIT1 => GetString("AIT1");
 
 		/// <summary>
 		/// Description: Accounting dimension 2
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 2")]
-		public string M3_AIT2 => GetString("AIT2");
+		public string M3AIT2 => GetString("AIT2");
 
 		/// <summary>
 		/// Description: Accounting dimension 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 3")]
-		public string M3_AIT3 => GetString("AIT3");
+		public string M3AIT3 => GetString("AIT3");
 
 		/// <summary>
 		/// Description: Accounting dimension 4
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 4")]
-		public string M3_AIT4 => GetString("AIT4");
+		public string M3AIT4 => GetString("AIT4");
 
 		/// <summary>
 		/// Description: Accounting dimension 5
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 5")]
-		public string M3_AIT5 => GetString("AIT5");
+		public string M3AIT5 => GetString("AIT5");
 
 		/// <summary>
 		/// Description: Accounting dimension 6
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 6")]
-		public string M3_AIT6 => GetString("AIT6");
+		public string M3AIT6 => GetString("AIT6");
 
 		/// <summary>
 		/// Description: Accounting dimension 7
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 7")]
-		public string M3_AIT7 => GetString("AIT7");
+		public string M3AIT7 => GetString("AIT7");
 
 		/// <summary>
 		/// Description: Accounted quantity
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounted quantity")]
-		public decimal? M3_ACQT => GetNullableDecimal("ACQT");
+		public decimal? M3ACQT => GetNullableDecimal("ACQT");
 
 		/// <summary>
 		/// Description: Decimal places for quantities
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Decimal places for quantities")]
-		public int? M3_DCQT => GetNullableInt("DCQT");
+		public int? M3DCQT => GetNullableInt("DCQT");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Currency
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Third currency
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency")]
-		public string M3_THCC => GetString("THCC");
+		public string M3THCC => GetString("THCC");
 
 		/// <summary>
 		/// Description: Third currency rate type
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency rate type")]
-		public int? M3_TCRT => GetNullableInt("TCRT");
+		public int? M3TCRT => GetNullableInt("TCRT");
 
 		/// <summary>
 		/// Description: Third exchange rate
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third exchange rate")]
-		public decimal? M3_TCAR => GetNullableDecimal("TCAR");
+		public decimal? M3TCAR => GetNullableDecimal("TCAR");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACAM => GetNullableDecimal("ACAM");
+		public decimal? M3ACAM => GetNullableDecimal("ACAM");
 
 		/// <summary>
 		/// Description: Decimal places for amount
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Decimal places for amount")]
-		public int? M3_DCAM => GetNullableInt("DCAM");
+		public int? M3DCAM => GetNullableInt("DCAM");
 
 		/// <summary>
 		/// Description: Debit/credit code
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debit/credit code")]
-		public string M3_DBCR => GetString("DBCR");
+		public string M3DBCR => GetString("DBCR");
 
 		/// <summary>
 		/// Description: Foreign currency amount
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign currency amount")]
-		public decimal? M3_CUAM => GetNullableDecimal("CUAM");
+		public decimal? M3CUAM => GetNullableDecimal("CUAM");
 
 		/// <summary>
 		/// Description: Transferred to group management
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transferred to group management")]
-		public int? M3_TGCD => GetNullableInt("TGCD");
+		public int? M3TGCD => GetNullableInt("TGCD");
 
 		/// <summary>
 		/// Description: VAT rate 1
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT rate 1")]
-		public int? M3_VTP1 => GetNullableInt("VTP1");
+		public int? M3VTP1 => GetNullableInt("VTP1");
 
 		/// <summary>
 		/// Description: Calculated VAT amount 1
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated VAT amount 1")]
-		public decimal? M3_CVT1 => GetNullableDecimal("CVT1");
+		public decimal? M3CVT1 => GetNullableDecimal("CVT1");
 
 		/// <summary>
 		/// Description: VAT rate 2
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT rate 2")]
-		public int? M3_VTP2 => GetNullableInt("VTP2");
+		public int? M3VTP2 => GetNullableInt("VTP2");
 
 		/// <summary>
 		/// Description: Calculated VAT amount 2
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated VAT amount 2")]
-		public decimal? M3_CVT2 => GetNullableDecimal("CVT2");
+		public decimal? M3CVT2 => GetNullableDecimal("CVT2");
 
 		/// <summary>
 		/// Description: Calculated VAT amount 3
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated VAT amount 3")]
-		public decimal? M3_CVT3 => GetNullableDecimal("CVT3");
+		public decimal? M3CVT3 => GetNullableDecimal("CVT3");
 
 		/// <summary>
 		/// Description: Calculated VAT amount 4
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated VAT amount 4")]
-		public decimal? M3_CVT4 => GetNullableDecimal("CVT4");
+		public decimal? M3CVT4 => GetNullableDecimal("CVT4");
 
 		/// <summary>
 		/// Description: VAT reported
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT reported")]
-		public string M3_VATR => GetString("VATR");
+		public string M3VATR => GetString("VATR");
 
 		/// <summary>
 		/// Description: VAT registration no existed
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration no existed")]
-		public int? M3_VRNE => GetNullableInt("VRNE");
+		public int? M3VRNE => GetNullableInt("VRNE");
 
 		/// <summary>
 		/// Description: Service code
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service code")]
-		public int? M3_SERS => GetNullableInt("SERS");
+		public int? M3SERS => GetNullableInt("SERS");
 
 		/// <summary>
 		/// Description: Filing code
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Filing code")]
-		public int? M3_ARCD => GetNullableInt("ARCD");
+		public int? M3ARCD => GetNullableInt("ARCD");
 
 		/// <summary>
 		/// Description: 1 position for miscellaneous use in GL
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("1 position for miscellaneous use in GL")]
-		public string M3_GFL1 => GetString("GFL1");
+		public string M3GFL1 => GetString("GFL1");
 
 		/// <summary>
 		/// Description: 1 position for miscellaneous use in GL
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("1 position for miscellaneous use in GL")]
-		public string M3_GFL2 => GetString("GFL2");
+		public string M3GFL2 => GetString("GFL2");
 
 		/// <summary>
 		/// Description: 1 position for miscellaneous use in GL
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("1 position for miscellaneous use in GL")]
-		public string M3_GFL3 => GetString("GFL3");
+		public string M3GFL3 => GetString("GFL3");
 
 		/// <summary>
 		/// Description: 1 position for miscellaneous use in GL
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("1 position for miscellaneous use in GL")]
-		public string M3_GFL4 => GetString("GFL4");
+		public string M3GFL4 => GetString("GFL4");
 
 		/// <summary>
 		/// Description: 1 position for miscellaneous use in GL
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("1 position for miscellaneous use in GL")]
-		public string M3_GFL5 => GetString("GFL5");
+		public string M3GFL5 => GetString("GFL5");
 
 		/// <summary>
 		/// Description: Base country
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base country")]
-		public string M3_BSCD => GetString("BSCD");
+		public string M3BSCD => GetString("BSCD");
 
 		/// <summary>
 		/// Description: From/to country
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From/to country")]
-		public string M3_FTCO => GetString("FTCO");
+		public string M3FTCO => GetString("FTCO");
 
 		/// <summary>
 		/// Description: Text identity
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Accounting period
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting period")]
-		public int? M3_ACYP => GetNullableInt("ACYP");
+		public int? M3ACYP => GetNullableInt("ACYP");
 
 		/// <summary>
 		/// Description: Third currency amount
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third currency amount")]
-		public decimal? M3_TCAM => GetNullableDecimal("TCAM");
+		public decimal? M3TCAM => GetNullableDecimal("TCAM");
 
 		/// <summary>
 		/// Description: Changed by
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Voucher text
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher text")]
-		public string M3_VTXT => GetString("VTXT");
+		public string M3VTXT => GetString("VTXT");
 
 		/// <summary>
 		/// Description: Entry date
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Authorized
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authorized")]
-		public string M3_APCD => GetString("APCD");
+		public string M3APCD => GetString("APCD");
 
 		/// <summary>
 		/// Description: Approved for payment
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved for payment")]
-		public int? M3_APRV => GetNullableInt("APRV");
+		public int? M3APRV => GetNullableInt("APRV");
 
 		/// <summary>
 		/// Description: State
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Voucher sequence number
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher sequence number")]
-		public int? M3_VSNO => GetNullableInt("VSNO");
+		public int? M3VSNO => GetNullableInt("VSNO");
 
 		/// <summary>
 		/// Description: Change date
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Quebec sales tax rate
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quebec sales tax rate")]
-		public int? M3_VTPQ => GetNullableInt("VTPQ");
+		public int? M3VTPQ => GetNullableInt("VTPQ");
 
 		/// <summary>
 		/// Description: Deductable VAT 1
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deductable VAT 1")]
-		public int? M3_VTD1 => GetNullableInt("VTD1");
+		public int? M3VTD1 => GetNullableInt("VTD1");
 
 		/// <summary>
 		/// Description: Cross authorizer
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cross authorizer")]
-		public string M3_CRAU => GetString("CRAU");
+		public string M3CRAU => GetString("CRAU");
 
 		/// <summary>
 		/// Description: Approved for payment by cross authorizer
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved for payment by cross authorizer")]
-		public int? M3_CRAY => GetNullableInt("CRAY");
+		public int? M3CRAY => GetNullableInt("CRAY");
 
 		/// <summary>
 		/// Description: Period
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_CYP6 => GetNullableInt("CYP6");
+		public int? M3CYP6 => GetNullableInt("CYP6");
 
 		/// <summary>
 		/// Description: Debit/Credit Flag
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debit/Credit Flag")]
-		public string M3_DCFG => GetString("DCFG");
+		public string M3DCFG => GetString("DCFG");
 
 		/// <summary>
 		/// Description: Line number
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.AAS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public decimal? M3_GLRL => GetNullableDecimal("GLRL");
+		public decimal? M3GLRL => GetNullableDecimal("GLRL");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Batch number 10 pos
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Batch number 10 pos")]
-		public long? M3_BA10 => GetNullableLong("BA10");
+		public long? M3BA10 => GetNullableLong("BA10");
 
 		/// <summary>
 		/// Description: Type of transfer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Type of transfer")]
-		public int? M3_XTTF => GetNullableInt("XTTF");
+		public int? M3XTTF => GetNullableInt("XTTF");
 
 		/// <summary>
 		/// Description: Transfer date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer date")]
-		public DateTime? M3_TRDE => GetNullableDateTime("TRDE");
+		public DateTime? M3TRDE => GetNullableDateTime("TRDE");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Transfer status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer status")]
-		public int? M3_XTST => GetNullableInt("XTST");
+		public int? M3XTST => GetNullableInt("XTST");
 
 		/// <summary>
 		/// Description: Header - text file
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Header - text file")]
-		public string M3_XHTX => GetString("XHTX");
+		public string M3XHTX => GetString("XHTX");
 
 		/// <summary>
 		/// Description: Company information 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company information 1")]
-		public string M3_XCI1 => GetString("XCI1");
+		public string M3XCI1 => GetString("XCI1");
 
 		/// <summary>
 		/// Description: Company information 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company information 2")]
-		public string M3_XCI2 => GetString("XCI2");
+		public string M3XCI2 => GetString("XCI2");
 
 		/// <summary>
 		/// Description: Address number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.GTCN10MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 	}
 }
 // EOF

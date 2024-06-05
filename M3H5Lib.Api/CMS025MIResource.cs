@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS025MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,17 +38,17 @@ namespace M3H5Lib.Api
 		/// Description Add a report layout
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RLAY">Report layout (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_RPLY">XML structure (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_DUCO">Display update panel</param>
-		/// <param name="m3_PDOC">External ID</param>
-		/// <param name="m3_COVR">Cover information</param>
-		/// <param name="m3_FOIN">Formatting information</param>
-		/// <param name="m3_LAIN">Label information</param>
-		/// <param name="m3_MEIN">Media information</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RLAY">Report layout (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3RPLY">XML structure (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3DUCO">Display update panel</param>
+		/// <param name="m3PDOC">External ID</param>
+		/// <param name="m3COVR">Cover information</param>
+		/// <param name="m3FOIN">Formatting information</param>
+		/// <param name="m3LAIN">Label information</param>
+		/// <param name="m3MEIN">Media information</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -55,17 +57,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddReportLayout(
-			string m3_PRTF, 
-			string m3_RLAY, 
-			string m3_TX40, 
-			string m3_RPLY, 
-			string m3_TX15 = null, 
-			int? m3_DUCO = null, 
-			string m3_PDOC = null, 
-			int? m3_COVR = null, 
-			int? m3_FOIN = null, 
-			int? m3_LAIN = null, 
-			int? m3_MEIN = null, 
+			string m3PRTF, 
+			string m3RLAY, 
+			string m3TX40, 
+			string m3RPLY, 
+			string m3TX15 = null, 
+			int? m3DUCO = null, 
+			string m3PDOC = null, 
+			int? m3COVR = null, 
+			int? m3FOIN = null, 
+			int? m3LAIN = null, 
+			int? m3MEIN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -80,37 +82,37 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RLAY))
-				throw new ArgumentNullException("m3_RLAY");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_RPLY))
-				throw new ArgumentNullException("m3_RPLY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RLAY))
+				throw new ArgumentNullException(nameof(m3RLAY));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3RPLY))
+				throw new ArgumentNullException(nameof(m3RPLY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RLAY", m3_RLAY.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("RPLY", m3_RPLY.Trim());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RLAY", m3RLAY.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("RPLY", m3RPLY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_DUCO.HasValue)
-				request.WithQueryParameter("DUCO", m3_DUCO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PDOC))
-				request.WithQueryParameter("PDOC", m3_PDOC.Trim());
-			if (m3_COVR.HasValue)
-				request.WithQueryParameter("COVR", m3_COVR.Value.ToString());
-			if (m3_FOIN.HasValue)
-				request.WithQueryParameter("FOIN", m3_FOIN.Value.ToString());
-			if (m3_LAIN.HasValue)
-				request.WithQueryParameter("LAIN", m3_LAIN.Value.ToString());
-			if (m3_MEIN.HasValue)
-				request.WithQueryParameter("MEIN", m3_MEIN.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3DUCO.HasValue)
+				request.WithQueryParameter("DUCO", m3DUCO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PDOC))
+				request.WithQueryParameter("PDOC", m3PDOC.Trim());
+			if (m3COVR.HasValue)
+				request.WithQueryParameter("COVR", m3COVR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FOIN.HasValue)
+				request.WithQueryParameter("FOIN", m3FOIN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3LAIN.HasValue)
+				request.WithQueryParameter("LAIN", m3LAIN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MEIN.HasValue)
+				request.WithQueryParameter("MEIN", m3MEIN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -120,7 +122,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -131,8 +134,8 @@ namespace M3H5Lib.Api
 		/// Description Delete a report layout
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RLAY">Report layout (Required)</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RLAY">Report layout (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -141,8 +144,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltReportLayout(
-			string m3_PRTF, 
-			string m3_RLAY, 
+			string m3PRTF, 
+			string m3RLAY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -157,15 +160,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RLAY))
-				throw new ArgumentNullException("m3_RLAY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RLAY))
+				throw new ArgumentNullException(nameof(m3RLAY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RLAY", m3_RLAY.Trim());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RLAY", m3RLAY.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -175,7 +178,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -186,8 +190,8 @@ namespace M3H5Lib.Api
 		/// Description Get data for a report layout
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RLAY">Report layout (Required)</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RLAY">Report layout (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -196,8 +200,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetReportLayoutResponse></returns>
 		/// <exception cref="M3Exception<GetReportLayoutResponse>"></exception>
 		public async Task<M3Response<GetReportLayoutResponse>> GetReportLayout(
-			string m3_PRTF, 
-			string m3_RLAY, 
+			string m3PRTF, 
+			string m3RLAY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -212,15 +216,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RLAY))
-				throw new ArgumentNullException("m3_RLAY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RLAY))
+				throw new ArgumentNullException(nameof(m3RLAY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RLAY", m3_RLAY.Trim());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RLAY", m3RLAY.Trim());
 
 			// Execute the request
 			var result = await Execute<GetReportLayoutResponse>(
@@ -230,7 +234,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -241,8 +246,8 @@ namespace M3H5Lib.Api
 		/// Description List data for report layouts
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file</param>
-		/// <param name="m3_RLAY">Report layout</param>
+		/// <param name="m3PRTF">Printer file</param>
+		/// <param name="m3RLAY">Report layout</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -251,8 +256,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstReportLayoutResponse></returns>
 		/// <exception cref="M3Exception<LstReportLayoutResponse>"></exception>
 		public async Task<M3Response<LstReportLayoutResponse>> LstReportLayout(
-			string m3_PRTF = null, 
-			string m3_RLAY = null, 
+			string m3PRTF = null, 
+			string m3RLAY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -267,10 +272,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRTF))
-				request.WithQueryParameter("PRTF", m3_PRTF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RLAY))
-				request.WithQueryParameter("RLAY", m3_RLAY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRTF))
+				request.WithQueryParameter("PRTF", m3PRTF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RLAY))
+				request.WithQueryParameter("RLAY", m3RLAY.Trim());
 
 			// Execute the request
 			var result = await Execute<LstReportLayoutResponse>(
@@ -280,7 +285,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -291,17 +297,17 @@ namespace M3H5Lib.Api
 		/// Description Update data for a report layout
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_RLAY">Report layout (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_RPLY">XML structure</param>
-		/// <param name="m3_DUCO">Display update panel</param>
-		/// <param name="m3_PDOC">External ID</param>
-		/// <param name="m3_COVR">Cover information</param>
-		/// <param name="m3_FOIN">Formatting information</param>
-		/// <param name="m3_LAIN">Label information</param>
-		/// <param name="m3_MEIN">Media information</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3RLAY">Report layout (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3RPLY">XML structure</param>
+		/// <param name="m3DUCO">Display update panel</param>
+		/// <param name="m3PDOC">External ID</param>
+		/// <param name="m3COVR">Cover information</param>
+		/// <param name="m3FOIN">Formatting information</param>
+		/// <param name="m3LAIN">Label information</param>
+		/// <param name="m3MEIN">Media information</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -310,17 +316,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdReportLayout(
-			string m3_PRTF, 
-			string m3_RLAY, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_RPLY = null, 
-			int? m3_DUCO = null, 
-			string m3_PDOC = null, 
-			int? m3_COVR = null, 
-			int? m3_FOIN = null, 
-			int? m3_LAIN = null, 
-			int? m3_MEIN = null, 
+			string m3PRTF, 
+			string m3RLAY, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3RPLY = null, 
+			int? m3DUCO = null, 
+			string m3PDOC = null, 
+			int? m3COVR = null, 
+			int? m3FOIN = null, 
+			int? m3LAIN = null, 
+			int? m3MEIN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -335,35 +341,35 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
-			if (string.IsNullOrWhiteSpace(m3_RLAY))
-				throw new ArgumentNullException("m3_RLAY");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
+			if (string.IsNullOrWhiteSpace(m3RLAY))
+				throw new ArgumentNullException(nameof(m3RLAY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("RLAY", m3_RLAY.Trim());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("RLAY", m3RLAY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RPLY))
-				request.WithQueryParameter("RPLY", m3_RPLY.Trim());
-			if (m3_DUCO.HasValue)
-				request.WithQueryParameter("DUCO", m3_DUCO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PDOC))
-				request.WithQueryParameter("PDOC", m3_PDOC.Trim());
-			if (m3_COVR.HasValue)
-				request.WithQueryParameter("COVR", m3_COVR.Value.ToString());
-			if (m3_FOIN.HasValue)
-				request.WithQueryParameter("FOIN", m3_FOIN.Value.ToString());
-			if (m3_LAIN.HasValue)
-				request.WithQueryParameter("LAIN", m3_LAIN.Value.ToString());
-			if (m3_MEIN.HasValue)
-				request.WithQueryParameter("MEIN", m3_MEIN.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RPLY))
+				request.WithQueryParameter("RPLY", m3RPLY.Trim());
+			if (m3DUCO.HasValue)
+				request.WithQueryParameter("DUCO", m3DUCO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PDOC))
+				request.WithQueryParameter("PDOC", m3PDOC.Trim());
+			if (m3COVR.HasValue)
+				request.WithQueryParameter("COVR", m3COVR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FOIN.HasValue)
+				request.WithQueryParameter("FOIN", m3FOIN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3LAIN.HasValue)
+				request.WithQueryParameter("LAIN", m3LAIN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MEIN.HasValue)
+				request.WithQueryParameter("MEIN", m3MEIN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -373,7 +379,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

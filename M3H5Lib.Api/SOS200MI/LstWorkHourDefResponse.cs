@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Work hour definition
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hour definition")]
-		public string M3_WTCD => GetString("WTCD");
+		public string M3WTCD => GetString("WTCD");
 
 		/// <summary>
 		/// Description: Work hours per day
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours per day")]
-		public int? M3_WTDY => GetNullableInt("WTDY");
+		public int? M3WTDY => GetNullableInt("WTDY");
 
 		/// <summary>
 		/// Description: Break
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Break")]
-		public string M3_BRCD => GetString("BRCD");
+		public string M3BRCD => GetString("BRCD");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Work hours from
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours from")]
-		public int? M3_STWT => GetNullableInt("STWT");
+		public int? M3STWT => GetNullableInt("STWT");
 
 		/// <summary>
 		/// Description: Work hours to
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours to")]
-		public int? M3_ENWT => GetNullableInt("ENWT");
+		public int? M3ENWT => GetNullableInt("ENWT");
 
 		/// <summary>
 		/// Description: Clock-in valid from
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clock-in valid from")]
-		public int? M3_CNSB => GetNullableInt("CNSB");
+		public int? M3CNSB => GetNullableInt("CNSB");
 
 		/// <summary>
 		/// Description: Clock-out valid until
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clock-out valid until")]
-		public int? M3_CNSE => GetNullableInt("CNSE");
+		public int? M3CNSE => GetNullableInt("CNSE");
 
 		/// <summary>
 		/// Description: Change date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document identity")]
-		public string M3_DOID => GetString("DOID");
+		public string M3DOID => GetString("DOID");
 
 		/// <summary>
 		/// Description: Subdocument
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subdocument")]
-		public string M3_SUID => GetString("SUID");
+		public string M3SUID => GetString("SUID");
 
 		/// <summary>
 		/// Description: From revision number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From revision number")]
-		public string M3_FECV => GetString("FECV");
+		public string M3FECV => GetString("FECV");
 
 		/// <summary>
 		/// Description: To revision number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To revision number")]
-		public string M3_TECV => GetString("TECV");
+		public string M3TECV => GetString("TECV");
 
 		/// <summary>
 		/// Description: Remark
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Document type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document type")]
-		public string M3_DOTY => GetString("DOTY");
+		public string M3DOTY => GetString("DOTY");
 
 		/// <summary>
 		/// Description: Document issuer
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document issuer")]
-		public string M3_AISB => GetString("AISB");
+		public string M3AISB => GetString("AISB");
 
 		/// <summary>
 		/// Description: Document
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document")]
-		public string M3_DNUM => GetString("DNUM");
+		public string M3DNUM => GetString("DNUM");
 
 		/// <summary>
 		/// Description: Document object
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document object")]
-		public string M3_ADOB => GetString("ADOB");
+		public string M3ADOB => GetString("ADOB");
 	}
 }
 // EOF

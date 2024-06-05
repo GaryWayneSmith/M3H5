@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rec agr type 1")]
-		public string M3_AGNT => GetString("AGNT");
+		public string M3AGNT => GetString("AGNT");
 
 		/// <summary>
 		/// Description: Rec agr type 2
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rec agr type 2")]
-		public string M3_AGN2 => GetString("AGN2");
+		public string M3AGN2 => GetString("AGN2");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Stat customer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stat customer")]
-		public string M3_CUST => GetString("CUST");
+		public string M3CUST => GetString("CUST");
 
 		/// <summary>
 		/// Description: Group customer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group customer")]
-		public string M3_CCUS => GetString("CCUS");
+		public string M3CCUS => GetString("CCUS");
 
 		/// <summary>
 		/// Description: User-def fld 6
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-def fld 6")]
-		public string M3_CFC6 => GetString("CFC6");
+		public string M3CFC6 => GetString("CFC6");
 
 		/// <summary>
 		/// Description: Inv recipient
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv recipient")]
-		public string M3_INRC => GetString("INRC");
+		public string M3INRC => GetString("INRC");
 	}
 }
 // EOF

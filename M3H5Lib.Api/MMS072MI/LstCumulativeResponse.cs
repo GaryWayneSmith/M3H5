@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Internal reference type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal reference type")]
-		public int? M3_IRTY => GetNullableInt("IRTY");
+		public int? M3IRTY => GetNullableInt("IRTY");
 
 		/// <summary>
 		/// Description: Internal reference
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal reference")]
-		public string M3_INRF => GetString("INRF");
+		public string M3INRF => GetString("INRF");
 
 		/// <summary>
 		/// Description: Cumulative level
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative level")]
-		public int? M3_CUML => GetNullableInt("CUML");
+		public int? M3CUML => GetNullableInt("CUML");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Address number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Delivery specification
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery specification")]
-		public string M3_DLSP => GetString("DLSP");
+		public string M3DLSP => GetString("DLSP");
 
 		/// <summary>
 		/// Description: Model/year
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model/year")]
-		public string M3_MOYE => GetString("MOYE");
+		public string M3MOYE => GetString("MOYE");
 
 		/// <summary>
 		/// Description: Blanket agreement number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blanket agreement number")]
-		public string M3_AGNO => GetString("AGNO");
+		public string M3AGNO => GetString("AGNO");
 
 		/// <summary>
 		/// Description: Cumulative quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative quantity")]
-		public decimal? M3_CQCF => GetNullableDecimal("CQCF");
+		public decimal? M3CQCF => GetNullableDecimal("CQCF");
 
 		/// <summary>
 		/// Description: Cumulative quantity Alternate U/M
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative quantity Alternate U/M")]
-		public decimal? M3_CQCA => GetNullableDecimal("CQCA");
+		public decimal? M3CQCA => GetNullableDecimal("CQCA");
 
 		/// <summary>
 		/// Description: Cumulative calculation date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative calculation date")]
-		public DateTime? M3_CUMD => GetNullableDateTime("CUMD");
+		public DateTime? M3CUMD => GetNullableDateTime("CUMD");
 
 		/// <summary>
 		/// Description: Alias number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: Alias category
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias category")]
-		public int? M3_ALWT => GetNullableInt("ALWT");
+		public int? M3ALWT => GetNullableInt("ALWT");
 
 		/// <summary>
 		/// Description: Alias qualifier
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias qualifier")]
-		public string M3_ALWQ => GetString("ALWQ");
+		public string M3ALWQ => GetString("ALWQ");
 
 		/// <summary>
 		/// Description: Cumulative from date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative from date")]
-		public DateTime? M3_CUFD => GetNullableDateTime("CUFD");
+		public DateTime? M3CUFD => GetNullableDateTime("CUFD");
 
 		/// <summary>
 		/// Description: Deduct returns
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deduct returns")]
-		public int? M3_CUMR => GetNullableInt("CUMR");
+		public int? M3CUMR => GetNullableInt("CUMR");
 
 		/// <summary>
 		/// Description: Year to year cumulative calculation
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS072MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year to year cumulative calculation")]
-		public int? M3_CUAY => GetNullableInt("CUAY");
+		public int? M3CUAY => GetNullableInt("CUAY");
 	}
 }
 // EOF

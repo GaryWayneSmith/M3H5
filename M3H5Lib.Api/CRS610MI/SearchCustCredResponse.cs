@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Customer
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Payer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Overdue invoice amount
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overdue invoice amount")]
-		public decimal? M3_ODIN => GetNullableDecimal("ODIN");
+		public decimal? M3ODIN => GetNullableDecimal("ODIN");
 
 		/// <summary>
 		/// Description: Number of overdue days
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of overdue days")]
-		public int? M3_NOOD => GetNullableInt("NOOD");
+		public int? M3NOOD => GetNullableInt("NOOD");
 
 		/// <summary>
 		/// Description: Outstanding invoice amount
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Outstanding invoice amount")]
-		public decimal? M3_OINA => GetNullableDecimal("OINA");
+		public decimal? M3OINA => GetNullableDecimal("OINA");
 
 		/// <summary>
 		/// Description: Order value not invoiced
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order value not invoiced")]
-		public decimal? M3_OVNI => GetNullableDecimal("OVNI");
+		public decimal? M3OVNI => GetNullableDecimal("OVNI");
 
 		/// <summary>
 		/// Description: Outstanding without risk
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Outstanding without risk")]
-		public decimal? M3_OWOR => GetNullableDecimal("OWOR");
+		public decimal? M3OWOR => GetNullableDecimal("OWOR");
 
 		/// <summary>
 		/// Description: Order value without risk
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order value without risk")]
-		public decimal? M3_OVWR => GetNullableDecimal("OVWR");
+		public decimal? M3OVWR => GetNullableDecimal("OVWR");
 
 		/// <summary>
 		/// Description: Last invoice date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last invoice date")]
-		public DateTime? M3_LIND => GetNullableDateTime("LIND");
+		public DateTime? M3LIND => GetNullableDateTime("LIND");
 
 		/// <summary>
 		/// Description: Program name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS610MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

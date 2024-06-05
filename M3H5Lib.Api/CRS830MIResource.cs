@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS830MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get language texts
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DTID">Data identity (Required)</param>
-		/// <param name="m3_LNCD">Language (Required)</param>
+		/// <param name="m3DTID">Data identity (Required)</param>
+		/// <param name="m3LNCD">Language (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetLngTxtResponse></returns>
 		/// <exception cref="M3Exception<GetLngTxtResponse>"></exception>
 		public async Task<M3Response<GetLngTxtResponse>> GetLngTxt(
-			decimal m3_DTID, 
-			string m3_LNCD, 
+			decimal m3DTID, 
+			string m3LNCD, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,13 +64,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LNCD))
-				throw new ArgumentNullException("m3_LNCD");
+			if (string.IsNullOrWhiteSpace(m3LNCD))
+				throw new ArgumentNullException(nameof(m3LNCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DTID", m3_DTID.ToString())
-				.WithQueryParameter("LNCD", m3_LNCD.Trim());
+				.WithQueryParameter("DTID", m3DTID.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetLngTxtResponse>(
@@ -78,7 +80,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -89,7 +92,7 @@ namespace M3H5Lib.Api
 		/// Description List language texts
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DTID">Data identity (Required)</param>
+		/// <param name="m3DTID">Data identity (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -98,7 +101,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLngTxtResponse></returns>
 		/// <exception cref="M3Exception<LstLngTxtResponse>"></exception>
 		public async Task<M3Response<LstLngTxtResponse>> LstLngTxt(
-			decimal m3_DTID, 
+			decimal m3DTID, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -116,7 +119,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DTID", m3_DTID.ToString());
+				.WithQueryParameter("DTID", m3DTID.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstLngTxtResponse>(
@@ -126,7 +129,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

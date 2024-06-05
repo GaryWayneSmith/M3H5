@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capability object category")]
-		public int? M3_OBCA => GetNullableInt("OBCA");
+		public int? M3OBCA => GetNullableInt("OBCA");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Capability type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capability type")]
-		public string M3_CATY => GetString("CATY");
+		public string M3CATY => GetString("CATY");
 
 		/// <summary>
 		/// Description: Capability
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capability")]
-		public string M3_CABI => GetString("CABI");
+		public string M3CABI => GetString("CABI");
 
 		/// <summary>
 		/// Description: From date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public string M3_AALF => GetString("AALF");
+		public string M3AALF => GetString("AALF");
 
 		/// <summary>
 		/// Description: To attribute value
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To attribute value")]
-		public string M3_AALT => GetString("AALT");
+		public string M3AALT => GetString("AALT");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public decimal? M3_ANUF => GetNullableDecimal("ANUF");
+		public decimal? M3ANUF => GetNullableDecimal("ANUF");
 
 		/// <summary>
 		/// Description: To attribute value
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To attribute value")]
-		public decimal? M3_ANUT => GetNullableDecimal("ANUT");
+		public decimal? M3ANUT => GetNullableDecimal("ANUT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CBS003MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 	}
 }
 // EOF

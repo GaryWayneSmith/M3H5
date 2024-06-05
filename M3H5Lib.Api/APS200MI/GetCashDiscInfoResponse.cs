@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Year
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Journal number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal number")]
-		public int? M3_JRNO => GetNullableInt("JRNO");
+		public int? M3JRNO => GetNullableInt("JRNO");
 
 		/// <summary>
 		/// Description: Journal sequence number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal sequence number")]
-		public int? M3_JSNO => GetNullableInt("JSNO");
+		public int? M3JSNO => GetNullableInt("JSNO");
 
 		/// <summary>
 		/// Description: Voucher number series
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number series")]
-		public string M3_VSER => GetString("VSER");
+		public string M3VSER => GetString("VSER");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: Cash discount term
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount term")]
-		public string M3_TECD => GetString("TECD");
+		public string M3TECD => GetString("TECD");
 
 		/// <summary>
 		/// Description: Cash discount - foreign currency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount - foreign currency")]
-		public decimal? M3_CDAM => GetNullableDecimal("CDAM");
+		public decimal? M3CDAM => GetNullableDecimal("CDAM");
 
 		/// <summary>
 		/// Description: Cash discount - local currency (converted from CDAM)
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount - local currency (converted from CDAM)")]
-		public decimal? M3_LDAM => GetNullableDecimal("LDAM");
+		public decimal? M3LDAM => GetNullableDecimal("LDAM");
 
 		/// <summary>
 		/// Description: Cash discount percentage
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount percentage")]
-		public int? M3_CDP1 => GetNullableInt("CDP1");
+		public int? M3CDP1 => GetNullableInt("CDP1");
 
 		/// <summary>
 		/// Description: Cash discount date 1
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount date 1")]
-		public DateTime? M3_CDT1 => GetNullableDateTime("CDT1");
+		public DateTime? M3CDT1 => GetNullableDateTime("CDT1");
 
 		/// <summary>
 		/// Description: Cash discount percentage
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount percentage")]
-		public int? M3_CDP2 => GetNullableInt("CDP2");
+		public int? M3CDP2 => GetNullableInt("CDP2");
 
 		/// <summary>
 		/// Description: Cash discount date 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount date 2")]
-		public DateTime? M3_CDT2 => GetNullableDateTime("CDT2");
+		public DateTime? M3CDT2 => GetNullableDateTime("CDT2");
 
 		/// <summary>
 		/// Description: Cash discount percentage
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount percentage")]
-		public int? M3_CDP3 => GetNullableInt("CDP3");
+		public int? M3CDP3 => GetNullableInt("CDP3");
 
 		/// <summary>
 		/// Description: Cash discount date 3
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount date 3")]
-		public DateTime? M3_CDT3 => GetNullableDateTime("CDT3");
+		public DateTime? M3CDT3 => GetNullableDateTime("CDT3");
 
 		/// <summary>
 		/// Description: Split code
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split code")]
-		public int? M3_SPLT => GetNullableInt("SPLT");
+		public int? M3SPLT => GetNullableInt("SPLT");
 
 		/// <summary>
 		/// Description: Currency
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Local currency
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Cash discount amount 1 - foreign currency
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount 1 - foreign currency")]
-		public decimal? M3_CDA1 => GetNullableDecimal("CDA1");
+		public decimal? M3CDA1 => GetNullableDecimal("CDA1");
 
 		/// <summary>
 		/// Description: Cash discount amount 2 - foreign currency
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount 2 - foreign currency")]
-		public decimal? M3_CDA2 => GetNullableDecimal("CDA2");
+		public decimal? M3CDA2 => GetNullableDecimal("CDA2");
 
 		/// <summary>
 		/// Description: Cash discount amount 3 - foreign currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount 3 - foreign currency")]
-		public decimal? M3_CDA3 => GetNullableDecimal("CDA3");
+		public decimal? M3CDA3 => GetNullableDecimal("CDA3");
 
 		/// <summary>
 		/// Description: Cash discount amount 1- local currency
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount 1- local currency")]
-		public decimal? M3_LDA1 => GetNullableDecimal("LDA1");
+		public decimal? M3LDA1 => GetNullableDecimal("LDA1");
 
 		/// <summary>
 		/// Description: Cash discount amount 2 - local currency
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount 2 - local currency")]
-		public decimal? M3_LDA2 => GetNullableDecimal("LDA2");
+		public decimal? M3LDA2 => GetNullableDecimal("LDA2");
 
 		/// <summary>
 		/// Description: Cash discount amount 3 - local currency
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount 3 - local currency")]
-		public decimal? M3_LDA3 => GetNullableDecimal("LDA3");
+		public decimal? M3LDA3 => GetNullableDecimal("LDA3");
 	}
 }
 // EOF

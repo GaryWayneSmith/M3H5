@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Job number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JBNO => GetNullableInt("JBNO");
+		public int? M3JBNO => GetNullableInt("JBNO");
 
 		/// <summary>
 		/// Description: Job date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public DateTime? M3_JBDT => GetNullableDateTime("JBDT");
+		public DateTime? M3JBDT => GetNullableDateTime("JBDT");
 
 		/// <summary>
 		/// Description: Job time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_JBTM => GetNullableInt("JBTM");
+		public int? M3JBTM => GetNullableInt("JBTM");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Service code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service code")]
-		public int? M3_SERS => GetNullableInt("SERS");
+		public int? M3SERS => GetNullableInt("SERS");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Country
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Activity code
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activity code")]
-		public string M3_AVCD => GetString("AVCD");
+		public string M3AVCD => GetString("AVCD");
 
 		/// <summary>
 		/// Description: Tax ID number for supplier
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax ID number for supplier")]
-		public int? M3_TIDN => GetNullableInt("TIDN");
+		public int? M3TIDN => GetNullableInt("TIDN");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Area/state
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/state")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Payment amount
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount")]
-		public decimal? M3_PYAM => GetNullableDecimal("PYAM");
+		public decimal? M3PYAM => GetNullableDecimal("PYAM");
 
 		/// <summary>
 		/// Description: Withheld tax - local currency
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Withheld tax - local currency")]
-		public decimal? M3_WAAM => GetNullableDecimal("WAAM");
+		public decimal? M3WAAM => GetNullableDecimal("WAAM");
 
 		/// <summary>
 		/// Description: Payment amount box id 01
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 01")]
-		public decimal? M3_PA01 => GetNullableDecimal("PA01");
+		public decimal? M3PA01 => GetNullableDecimal("PA01");
 
 		/// <summary>
 		/// Description: Payment amount box id 02
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 02")]
-		public decimal? M3_PA02 => GetNullableDecimal("PA02");
+		public decimal? M3PA02 => GetNullableDecimal("PA02");
 
 		/// <summary>
 		/// Description: Payment amount box id 03
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 03")]
-		public decimal? M3_PA03 => GetNullableDecimal("PA03");
+		public decimal? M3PA03 => GetNullableDecimal("PA03");
 
 		/// <summary>
 		/// Description: Post-actual value - component A04
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-actual value - component A04")]
-		public decimal? M3_PA04 => GetNullableDecimal("PA04");
+		public decimal? M3PA04 => GetNullableDecimal("PA04");
 
 		/// <summary>
 		/// Description: Post-actual value - component A05
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-actual value - component A05")]
-		public decimal? M3_PA05 => GetNullableDecimal("PA05");
+		public decimal? M3PA05 => GetNullableDecimal("PA05");
 
 		/// <summary>
 		/// Description: Payment amount box id 06
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 06")]
-		public decimal? M3_PA06 => GetNullableDecimal("PA06");
+		public decimal? M3PA06 => GetNullableDecimal("PA06");
 
 		/// <summary>
 		/// Description: Payment amount box id 07
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 07")]
-		public decimal? M3_PA07 => GetNullableDecimal("PA07");
+		public decimal? M3PA07 => GetNullableDecimal("PA07");
 
 		/// <summary>
 		/// Description: Payment amount box id 08
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 08")]
-		public decimal? M3_PA08 => GetNullableDecimal("PA08");
+		public decimal? M3PA08 => GetNullableDecimal("PA08");
 
 		/// <summary>
 		/// Description: Payment amount box id 09
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 09")]
-		public decimal? M3_PA09 => GetNullableDecimal("PA09");
+		public decimal? M3PA09 => GetNullableDecimal("PA09");
 
 		/// <summary>
 		/// Description: Payment amount box id 10
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 10")]
-		public decimal? M3_PA10 => GetNullableDecimal("PA10");
+		public decimal? M3PA10 => GetNullableDecimal("PA10");
 
 		/// <summary>
 		/// Description: Payment amount box id 11
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 11")]
-		public decimal? M3_PA11 => GetNullableDecimal("PA11");
+		public decimal? M3PA11 => GetNullableDecimal("PA11");
 
 		/// <summary>
 		/// Description: Payment amount box id 12
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 12")]
-		public decimal? M3_PA12 => GetNullableDecimal("PA12");
+		public decimal? M3PA12 => GetNullableDecimal("PA12");
 
 		/// <summary>
 		/// Description: Payment amount box id 13
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 13")]
-		public decimal? M3_PA13 => GetNullableDecimal("PA13");
+		public decimal? M3PA13 => GetNullableDecimal("PA13");
 
 		/// <summary>
 		/// Description: Payment amount box id 14
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 14")]
-		public decimal? M3_PA14 => GetNullableDecimal("PA14");
+		public decimal? M3PA14 => GetNullableDecimal("PA14");
 
 		/// <summary>
 		/// Description: Payment amount box id 15
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 15")]
-		public decimal? M3_PA15 => GetNullableDecimal("PA15");
+		public decimal? M3PA15 => GetNullableDecimal("PA15");
 
 		/// <summary>
 		/// Description: Payment amount box id 16
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 16")]
-		public decimal? M3_PA16 => GetNullableDecimal("PA16");
+		public decimal? M3PA16 => GetNullableDecimal("PA16");
 
 		/// <summary>
 		/// Description: Payment amount box id 17
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 17")]
-		public decimal? M3_PA17 => GetNullableDecimal("PA17");
+		public decimal? M3PA17 => GetNullableDecimal("PA17");
 
 		/// <summary>
 		/// Description: Payment amount box id 18
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 18")]
-		public decimal? M3_PA18 => GetNullableDecimal("PA18");
+		public decimal? M3PA18 => GetNullableDecimal("PA18");
 
 		/// <summary>
 		/// Description: Payment amount box id 19
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 19")]
-		public decimal? M3_PA19 => GetNullableDecimal("PA19");
+		public decimal? M3PA19 => GetNullableDecimal("PA19");
 
 		/// <summary>
 		/// Description: Payment amount box id 20
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment amount box id 20")]
-		public decimal? M3_PA20 => GetNullableDecimal("PA20");
+		public decimal? M3PA20 => GetNullableDecimal("PA20");
 
 		/// <summary>
 		/// Description: Postal code
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Box identity
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.APS430MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Box identity")]
-		public int? M3_BOXI => GetNullableInt("BOXI");
+		public int? M3BOXI => GetNullableInt("BOXI");
 	}
 }
 // EOF

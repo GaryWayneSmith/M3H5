@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS105MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add advanced selection
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report (Required)</param>
-		/// <param name="m3_REPV">Ad-hoc report version (Required)</param>
-		/// <param name="m3_SNNO">Sequence number (Required)</param>
-		/// <param name="m3_OBJC">Field (Required)</param>
-		/// <param name="m3_CODI">Condition (Required)</param>
-		/// <param name="m3_ACTF">Active</param>
-		/// <param name="m3_VALF">Value field</param>
-		/// <param name="m3_SEBL">Selection block</param>
+		/// <param name="m3REPO">Ad-hoc report (Required)</param>
+		/// <param name="m3REPV">Ad-hoc report version (Required)</param>
+		/// <param name="m3SNNO">Sequence number (Required)</param>
+		/// <param name="m3OBJC">Field (Required)</param>
+		/// <param name="m3CODI">Condition (Required)</param>
+		/// <param name="m3ACTF">Active</param>
+		/// <param name="m3VALF">Value field</param>
+		/// <param name="m3SEBL">Selection block</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAdvSelection(
-			string m3_REPO, 
-			string m3_REPV, 
-			int m3_SNNO, 
-			string m3_OBJC, 
-			int m3_CODI, 
-			int? m3_ACTF = null, 
-			string m3_VALF = null, 
-			int? m3_SEBL = null, 
+			string m3REPO, 
+			string m3REPV, 
+			int m3SNNO, 
+			string m3OBJC, 
+			int m3CODI, 
+			int? m3ACTF = null, 
+			string m3VALF = null, 
+			int? m3SEBL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,28 +76,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_REPO))
-				throw new ArgumentNullException("m3_REPO");
-			if (string.IsNullOrWhiteSpace(m3_REPV))
-				throw new ArgumentNullException("m3_REPV");
-			if (string.IsNullOrWhiteSpace(m3_OBJC))
-				throw new ArgumentNullException("m3_OBJC");
+			if (string.IsNullOrWhiteSpace(m3REPO))
+				throw new ArgumentNullException(nameof(m3REPO));
+			if (string.IsNullOrWhiteSpace(m3REPV))
+				throw new ArgumentNullException(nameof(m3REPV));
+			if (string.IsNullOrWhiteSpace(m3OBJC))
+				throw new ArgumentNullException(nameof(m3OBJC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("REPO", m3_REPO.Trim())
-				.WithQueryParameter("REPV", m3_REPV.Trim())
-				.WithQueryParameter("SNNO", m3_SNNO.ToString())
-				.WithQueryParameter("OBJC", m3_OBJC.Trim())
-				.WithQueryParameter("CODI", m3_CODI.ToString());
+				.WithQueryParameter("REPO", m3REPO.Trim())
+				.WithQueryParameter("REPV", m3REPV.Trim())
+				.WithQueryParameter("SNNO", m3SNNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("OBJC", m3OBJC.Trim())
+				.WithQueryParameter("CODI", m3CODI.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_VALF))
-				request.WithQueryParameter("VALF", m3_VALF.Trim());
-			if (m3_SEBL.HasValue)
-				request.WithQueryParameter("SEBL", m3_SEBL.Value.ToString());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3VALF))
+				request.WithQueryParameter("VALF", m3VALF.Trim());
+			if (m3SEBL.HasValue)
+				request.WithQueryParameter("SEBL", m3SEBL.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -105,7 +107,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -116,9 +119,9 @@ namespace M3H5Lib.Api
 		/// Description Delete advanced selection
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report (Required)</param>
-		/// <param name="m3_REPV">Ad-hoc report version (Required)</param>
-		/// <param name="m3_SNNO">Sequence number (Required)</param>
+		/// <param name="m3REPO">Ad-hoc report (Required)</param>
+		/// <param name="m3REPV">Ad-hoc report version (Required)</param>
+		/// <param name="m3SNNO">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -127,9 +130,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelAdvSelection(
-			string m3_REPO, 
-			string m3_REPV, 
-			int m3_SNNO, 
+			string m3REPO, 
+			string m3REPV, 
+			int m3SNNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -144,16 +147,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_REPO))
-				throw new ArgumentNullException("m3_REPO");
-			if (string.IsNullOrWhiteSpace(m3_REPV))
-				throw new ArgumentNullException("m3_REPV");
+			if (string.IsNullOrWhiteSpace(m3REPO))
+				throw new ArgumentNullException(nameof(m3REPO));
+			if (string.IsNullOrWhiteSpace(m3REPV))
+				throw new ArgumentNullException(nameof(m3REPV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("REPO", m3_REPO.Trim())
-				.WithQueryParameter("REPV", m3_REPV.Trim())
-				.WithQueryParameter("SNNO", m3_SNNO.ToString());
+				.WithQueryParameter("REPO", m3REPO.Trim())
+				.WithQueryParameter("REPV", m3REPV.Trim())
+				.WithQueryParameter("SNNO", m3SNNO.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -163,7 +166,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -174,9 +178,9 @@ namespace M3H5Lib.Api
 		/// Description Get advanced selection
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report (Required)</param>
-		/// <param name="m3_REPV">Ad-hoc report version (Required)</param>
-		/// <param name="m3_SNNO">Sequence number (Required)</param>
+		/// <param name="m3REPO">Ad-hoc report (Required)</param>
+		/// <param name="m3REPV">Ad-hoc report version (Required)</param>
+		/// <param name="m3SNNO">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -185,9 +189,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAdvSelectionResponse></returns>
 		/// <exception cref="M3Exception<GetAdvSelectionResponse>"></exception>
 		public async Task<M3Response<GetAdvSelectionResponse>> GetAdvSelection(
-			string m3_REPO, 
-			string m3_REPV, 
-			int m3_SNNO, 
+			string m3REPO, 
+			string m3REPV, 
+			int m3SNNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -202,16 +206,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_REPO))
-				throw new ArgumentNullException("m3_REPO");
-			if (string.IsNullOrWhiteSpace(m3_REPV))
-				throw new ArgumentNullException("m3_REPV");
+			if (string.IsNullOrWhiteSpace(m3REPO))
+				throw new ArgumentNullException(nameof(m3REPO));
+			if (string.IsNullOrWhiteSpace(m3REPV))
+				throw new ArgumentNullException(nameof(m3REPV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("REPO", m3_REPO.Trim())
-				.WithQueryParameter("REPV", m3_REPV.Trim())
-				.WithQueryParameter("SNNO", m3_SNNO.ToString());
+				.WithQueryParameter("REPO", m3REPO.Trim())
+				.WithQueryParameter("REPV", m3REPV.Trim())
+				.WithQueryParameter("SNNO", m3SNNO.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetAdvSelectionResponse>(
@@ -221,7 +225,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -232,9 +237,9 @@ namespace M3H5Lib.Api
 		/// Description List advanced selection
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report</param>
-		/// <param name="m3_REPV">Ad-hoc report version</param>
-		/// <param name="m3_SNNO">Sequence number</param>
+		/// <param name="m3REPO">Ad-hoc report</param>
+		/// <param name="m3REPV">Ad-hoc report version</param>
+		/// <param name="m3SNNO">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -243,9 +248,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAdvSelectionResponse></returns>
 		/// <exception cref="M3Exception<LstAdvSelectionResponse>"></exception>
 		public async Task<M3Response<LstAdvSelectionResponse>> LstAdvSelection(
-			string m3_REPO = null, 
-			string m3_REPV = null, 
-			int? m3_SNNO = null, 
+			string m3REPO = null, 
+			string m3REPV = null, 
+			int? m3SNNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -260,12 +265,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_REPO))
-				request.WithQueryParameter("REPO", m3_REPO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REPV))
-				request.WithQueryParameter("REPV", m3_REPV.Trim());
-			if (m3_SNNO.HasValue)
-				request.WithQueryParameter("SNNO", m3_SNNO.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3REPO))
+				request.WithQueryParameter("REPO", m3REPO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REPV))
+				request.WithQueryParameter("REPV", m3REPV.Trim());
+			if (m3SNNO.HasValue)
+				request.WithQueryParameter("SNNO", m3SNNO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAdvSelectionResponse>(
@@ -275,7 +280,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -286,14 +292,14 @@ namespace M3H5Lib.Api
 		/// Description Update advanced selection
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report (Required)</param>
-		/// <param name="m3_REPV">Ad-hoc report version (Required)</param>
-		/// <param name="m3_SNNO">Sequence number (Required)</param>
-		/// <param name="m3_OBJC">Field (Required)</param>
-		/// <param name="m3_CODI">Condition (Required)</param>
-		/// <param name="m3_ACTF">Active</param>
-		/// <param name="m3_VALF">Value field</param>
-		/// <param name="m3_SEBL">Selection block</param>
+		/// <param name="m3REPO">Ad-hoc report (Required)</param>
+		/// <param name="m3REPV">Ad-hoc report version (Required)</param>
+		/// <param name="m3SNNO">Sequence number (Required)</param>
+		/// <param name="m3OBJC">Field (Required)</param>
+		/// <param name="m3CODI">Condition (Required)</param>
+		/// <param name="m3ACTF">Active</param>
+		/// <param name="m3VALF">Value field</param>
+		/// <param name="m3SEBL">Selection block</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -302,14 +308,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAdvSelection(
-			string m3_REPO, 
-			string m3_REPV, 
-			int m3_SNNO, 
-			string m3_OBJC, 
-			int m3_CODI, 
-			int? m3_ACTF = null, 
-			string m3_VALF = null, 
-			int? m3_SEBL = null, 
+			string m3REPO, 
+			string m3REPV, 
+			int m3SNNO, 
+			string m3OBJC, 
+			int m3CODI, 
+			int? m3ACTF = null, 
+			string m3VALF = null, 
+			int? m3SEBL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -324,28 +330,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_REPO))
-				throw new ArgumentNullException("m3_REPO");
-			if (string.IsNullOrWhiteSpace(m3_REPV))
-				throw new ArgumentNullException("m3_REPV");
-			if (string.IsNullOrWhiteSpace(m3_OBJC))
-				throw new ArgumentNullException("m3_OBJC");
+			if (string.IsNullOrWhiteSpace(m3REPO))
+				throw new ArgumentNullException(nameof(m3REPO));
+			if (string.IsNullOrWhiteSpace(m3REPV))
+				throw new ArgumentNullException(nameof(m3REPV));
+			if (string.IsNullOrWhiteSpace(m3OBJC))
+				throw new ArgumentNullException(nameof(m3OBJC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("REPO", m3_REPO.Trim())
-				.WithQueryParameter("REPV", m3_REPV.Trim())
-				.WithQueryParameter("SNNO", m3_SNNO.ToString())
-				.WithQueryParameter("OBJC", m3_OBJC.Trim())
-				.WithQueryParameter("CODI", m3_CODI.ToString());
+				.WithQueryParameter("REPO", m3REPO.Trim())
+				.WithQueryParameter("REPV", m3REPV.Trim())
+				.WithQueryParameter("SNNO", m3SNNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("OBJC", m3OBJC.Trim())
+				.WithQueryParameter("CODI", m3CODI.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_VALF))
-				request.WithQueryParameter("VALF", m3_VALF.Trim());
-			if (m3_SEBL.HasValue)
-				request.WithQueryParameter("SEBL", m3_SEBL.Value.ToString());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3VALF))
+				request.WithQueryParameter("VALF", m3VALF.Trim());
+			if (m3SEBL.HasValue)
+				request.WithQueryParameter("SEBL", m3SEBL.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -355,7 +361,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

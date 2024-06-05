@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Priority
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: Start value 5
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 5")]
-		public string M3_OBV5 => GetString("OBV5");
+		public string M3OBV5 => GetString("OBV5");
 
 		/// <summary>
 		/// Description: Man-hour price
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Man-hour price")]
-		public decimal? M3_ALP1 => GetNullableDecimal("ALP1");
+		public decimal? M3ALP1 => GetNullableDecimal("ALP1");
 
 		/// <summary>
 		/// Description: To date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS024MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 	}
 }
 // EOF

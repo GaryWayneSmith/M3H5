@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,12 +37,12 @@ namespace M3H5Lib.Api
 		/// Description Copy test results from an item to another given item
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QRID">Request ID (Required)</param>
-		/// <param name="m3_TOID">Request ID (Required)</param>
-		/// <param name="m3_SPEC">Specification</param>
-		/// <param name="m3_QSE1">Effective date</param>
-		/// <param name="m3_QSE2">Effective time</param>
-		/// <param name="m3_FACI">Facility</param>
+		/// <param name="m3QRID">Request ID (Required)</param>
+		/// <param name="m3TOID">Request ID (Required)</param>
+		/// <param name="m3SPEC">Specification</param>
+		/// <param name="m3QSE1">Effective date</param>
+		/// <param name="m3QSE2">Effective time</param>
+		/// <param name="m3FACI">Facility</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,12 +51,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdTestResults(
-			string m3_QRID, 
-			string m3_TOID, 
-			string m3_SPEC = null, 
-			DateTime? m3_QSE1 = null, 
-			int? m3_QSE2 = null, 
-			string m3_FACI = null, 
+			string m3QRID, 
+			string m3TOID, 
+			string m3SPEC = null, 
+			DateTime? m3QSE1 = null, 
+			int? m3QSE2 = null, 
+			string m3FACI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -69,25 +71,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QRID))
-				throw new ArgumentNullException("m3_QRID");
-			if (string.IsNullOrWhiteSpace(m3_TOID))
-				throw new ArgumentNullException("m3_TOID");
+			if (string.IsNullOrWhiteSpace(m3QRID))
+				throw new ArgumentNullException(nameof(m3QRID));
+			if (string.IsNullOrWhiteSpace(m3TOID))
+				throw new ArgumentNullException(nameof(m3TOID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QRID", m3_QRID.Trim())
-				.WithQueryParameter("TOID", m3_TOID.Trim());
+				.WithQueryParameter("QRID", m3QRID.Trim())
+				.WithQueryParameter("TOID", m3TOID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SPEC))
-				request.WithQueryParameter("SPEC", m3_SPEC.Trim());
-			if (m3_QSE1.HasValue)
-				request.WithQueryParameter("QSE1", m3_QSE1.Value.ToM3String());
-			if (m3_QSE2.HasValue)
-				request.WithQueryParameter("QSE2", m3_QSE2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPEC))
+				request.WithQueryParameter("SPEC", m3SPEC.Trim());
+			if (m3QSE1.HasValue)
+				request.WithQueryParameter("QSE1", m3QSE1.Value.ToM3String());
+			if (m3QSE2.HasValue)
+				request.WithQueryParameter("QSE2", m3QSE2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -97,7 +99,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

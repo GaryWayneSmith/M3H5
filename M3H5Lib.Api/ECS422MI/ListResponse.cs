@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Line number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Change type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change type")]
-		public string M3_ECEX => GetString("ECEX");
+		public string M3ECEX => GetString("ECEX");
 
 		/// <summary>
 		/// Description: Change ID
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change ID")]
-		public string M3_ECID => GetString("ECID");
+		public string M3ECID => GetString("ECID");
 
 		/// <summary>
 		/// Description: Facility
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Structure type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_ECST => GetString("ECST");
+		public string M3ECST => GetString("ECST");
 
 		/// <summary>
 		/// Description: New revision
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New revision")]
-		public string M3_NECV => GetString("NECV");
+		public string M3NECV => GetString("NECV");
 
 		/// <summary>
 		/// Description: Old subidentity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Old subidentity")]
-		public string M3_OLSI => GetString("OLSI");
+		public string M3OLSI => GetString("OLSI");
 
 		/// <summary>
 		/// Description: New subidentity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New subidentity")]
-		public string M3_NWSI => GetString("NWSI");
+		public string M3NWSI => GetString("NWSI");
 
 		/// <summary>
 		/// Description: From date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: Old operation number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Old operation number")]
-		public int? M3_OOPN => GetNullableInt("OOPN");
+		public int? M3OOPN => GetNullableInt("OOPN");
 
 		/// <summary>
 		/// Description: New sequence number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New sequence number")]
-		public int? M3_NSEQ => GetNullableInt("NSEQ");
+		public int? M3NSEQ => GetNullableInt("NSEQ");
 
 		/// <summary>
 		/// Description: New operation number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New operation number")]
-		public int? M3_NOPN => GetNullableInt("NOPN");
+		public int? M3NOPN => GetNullableInt("NOPN");
 
 		/// <summary>
 		/// Description: New qty
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ECS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New qty")]
-		public string M3_NCNQ => GetString("NCNQ");
+		public string M3NCNQ => GetString("NCNQ");
 	}
 }
 // EOF

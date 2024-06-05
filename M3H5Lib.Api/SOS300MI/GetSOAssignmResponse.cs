@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Changed by
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Planned preparation time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned preparation time")]
-		public int? M3_PRTM => GetNullableInt("PRTM");
+		public int? M3PRTM => GetNullableInt("PRTM");
 
 		/// <summary>
 		/// Description: Forecast work hours
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast work hours")]
-		public int? M3_WOTM => GetNullableInt("WOTM");
+		public int? M3WOTM => GetNullableInt("WOTM");
 
 		/// <summary>
 		/// Description: Planned travel time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned travel time")]
-		public int? M3_TRTI => GetNullableInt("TRTI");
+		public int? M3TRTI => GetNullableInt("TRTI");
 
 		/// <summary>
 		/// Description: Planned completion time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned completion time")]
-		public int? M3_FITM => GetNullableInt("FITM");
+		public int? M3FITM => GetNullableInt("FITM");
 
 		/// <summary>
 		/// Description: Required finish date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required finish date")]
-		public DateTime? M3_RQFD => GetNullableDateTime("RQFD");
+		public DateTime? M3RQFD => GetNullableDateTime("RQFD");
 
 		/// <summary>
 		/// Description: Required finish time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required finish time")]
-		public int? M3_RQFT => GetNullableInt("RQFT");
+		public int? M3RQFT => GetNullableInt("RQFT");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Assignment
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment")]
-		public int? M3_JOBN => GetNullableInt("JOBN");
+		public int? M3JOBN => GetNullableInt("JOBN");
 
 		/// <summary>
 		/// Description: Assignment suffix
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment suffix")]
-		public int? M3_JBSX => GetNullableInt("JBSX");
+		public int? M3JBSX => GetNullableInt("JBSX");
 
 		/// <summary>
 		/// Description: Text identity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Required start date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required start date")]
-		public DateTime? M3_RQSD => GetNullableDateTime("RQSD");
+		public DateTime? M3RQSD => GetNullableDateTime("RQSD");
 
 		/// <summary>
 		/// Description: Required start time
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required start time")]
-		public int? M3_RQST => GetNullableInt("RQST");
+		public int? M3RQST => GetNullableInt("RQST");
 	}
 }
 // EOF

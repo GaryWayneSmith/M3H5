@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.RPS080MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description List Poist of time tables
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_WHGR">Warehouse group</param>
-		/// <param name="m3_PTTT">Point of time type</param>
-		/// <param name="m3_FRPO">Point of time table</param>
-		/// <param name="m3_TOPO">Point of time table</param>
-		/// <param name="m3_STDT">Start date</param>
-		/// <param name="m3_ENDT">Finish date</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3WHGR">Warehouse group</param>
+		/// <param name="m3PTTT">Point of time type</param>
+		/// <param name="m3FRPO">Point of time table</param>
+		/// <param name="m3TOPO">Point of time table</param>
+		/// <param name="m3STDT">Start date</param>
+		/// <param name="m3ENDT">Finish date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPointOfTimeResponse></returns>
 		/// <exception cref="M3Exception<LstPointOfTimeResponse>"></exception>
 		public async Task<M3Response<LstPointOfTimeResponse>> LstPointOfTime(
-			string m3_WHLO = null, 
-			string m3_WHGR = null, 
-			string m3_PTTT = null, 
-			string m3_FRPO = null, 
-			string m3_TOPO = null, 
-			DateTime? m3_STDT = null, 
-			DateTime? m3_ENDT = null, 
+			string m3WHLO = null, 
+			string m3WHGR = null, 
+			string m3PTTT = null, 
+			string m3FRPO = null, 
+			string m3TOPO = null, 
+			DateTime? m3STDT = null, 
+			DateTime? m3ENDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,20 +74,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHGR))
-				request.WithQueryParameter("WHGR", m3_WHGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PTTT))
-				request.WithQueryParameter("PTTT", m3_PTTT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRPO))
-				request.WithQueryParameter("FRPO", m3_FRPO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOPO))
-				request.WithQueryParameter("TOPO", m3_TOPO.Trim());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (m3_ENDT.HasValue)
-				request.WithQueryParameter("ENDT", m3_ENDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHGR))
+				request.WithQueryParameter("WHGR", m3WHGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PTTT))
+				request.WithQueryParameter("PTTT", m3PTTT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRPO))
+				request.WithQueryParameter("FRPO", m3FRPO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOPO))
+				request.WithQueryParameter("TOPO", m3TOPO.Trim());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (m3ENDT.HasValue)
+				request.WithQueryParameter("ENDT", m3ENDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstPointOfTimeResponse>(
@@ -95,7 +97,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Toolnumber
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toolnumber")]
-		public string M3_TOOL => GetString("TOOL");
+		public string M3TOOL => GetString("TOOL");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Tooltype
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tooltype")]
-		public string M3_TOOT => GetString("TOOT");
+		public string M3TOOT => GetString("TOOT");
 
 		/// <summary>
 		/// Description: Purchaseprice
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchaseprice")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Purchasedate
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchasedate")]
-		public DateTime? M3_MPDT => GetNullableDateTime("MPDT");
+		public DateTime? M3MPDT => GetNullableDateTime("MPDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Change date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.EUS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_DENO => GetString("DENO");
+		public string M3DENO => GetString("DENO");
 
 		/// <summary>
 		/// Description: Acquistion order category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquistion order category")]
-		public string M3_AOCA => GetString("AOCA");
+		public string M3AOCA => GetString("AOCA");
 
 		/// <summary>
 		/// Description: Acquisition order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition order number")]
-		public string M3_ARDN => GetString("ARDN");
+		public string M3ARDN => GetString("ARDN");
 	}
 }
 // EOF

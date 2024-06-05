@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Year
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Payer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Invoice status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice status")]
-		public string M3_AIIS => GetString("AIIS");
+		public string M3AIIS => GetString("AIIS");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVAM => GetNullableDecimal("IVAM");
+		public decimal? M3IVAM => GetNullableDecimal("IVAM");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVLA => GetNullableDecimal("IVLA");
+		public decimal? M3IVLA => GetNullableDecimal("IVLA");
 
 		/// <summary>
 		/// Description: Currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Invoice rate
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice rate")]
-		public decimal? M3_RAIN => GetNullableDecimal("RAIN");
+		public decimal? M3RAIN => GetNullableDecimal("RAIN");
 
 		/// <summary>
 		/// Description: Due date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Due date")]
-		public DateTime? M3_DUDT => GetNullableDateTime("DUDT");
+		public DateTime? M3DUDT => GetNullableDateTime("DUDT");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Invoice line type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice line type")]
-		public string M3_AIVT => GetString("AIVT");
+		public string M3AIVT => GetString("AIVT");
 
 		/// <summary>
 		/// Description: VAT code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Base country
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base country")]
-		public string M3_BSCD => GetString("BSCD");
+		public string M3BSCD => GetString("BSCD");
 
 		/// <summary>
 		/// Description: From/to country
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From/to country")]
-		public string M3_FTCO => GetString("FTCO");
+		public string M3FTCO => GetString("FTCO");
 
 		/// <summary>
 		/// Description: State
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: VAT rate 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT rate 1")]
-		public int? M3_VTP1 => GetNullableInt("VTP1");
+		public int? M3VTP1 => GetNullableInt("VTP1");
 
 		/// <summary>
 		/// Description: VAT rate 2
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT rate 2")]
-		public int? M3_VTP2 => GetNullableInt("VTP2");
+		public int? M3VTP2 => GetNullableInt("VTP2");
 
 		/// <summary>
 		/// Description: Calculated VAT amount 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated VAT amount 1")]
-		public decimal? M3_CVT1 => GetNullableDecimal("CVT1");
+		public decimal? M3CVT1 => GetNullableDecimal("CVT1");
 
 		/// <summary>
 		/// Description: Calculated VAT amount 2
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.COS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated VAT amount 2")]
-		public decimal? M3_CVT2 => GetNullableDecimal("CVT2");
+		public decimal? M3CVT2 => GetNullableDecimal("CVT2");
 	}
 }
 // EOF

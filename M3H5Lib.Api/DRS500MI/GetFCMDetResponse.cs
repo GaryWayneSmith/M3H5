@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Freight rate aggregation level
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight rate aggregation level")]
-		public int? M3_FRAL => GetNullableInt("FRAL");
+		public int? M3FRAL => GetNullableInt("FRAL");
 
 		/// <summary>
 		/// Description: Shipment
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment")]
-		public int? M3_CONN => GetNullableInt("CONN");
+		public int? M3CONN => GetNullableInt("CONN");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Stock transaction type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock transaction type")]
-		public int? M3_TTYP => GetNullableInt("TTYP");
+		public int? M3TTYP => GetNullableInt("TTYP");
 
 		/// <summary>
 		/// Description: Sequence number - freight element
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number - freight element")]
-		public int? M3_FDSE => GetNullableInt("FDSE");
+		public int? M3FDSE => GetNullableInt("FDSE");
 
 		/// <summary>
 		/// Description: Freight rate element
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight rate element")]
-		public string M3_FREL => GetString("FREL");
+		public string M3FREL => GetString("FREL");
 
 		/// <summary>
 		/// Description: Freight operator
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight operator")]
-		public string M3_FROP => GetString("FROP");
+		public string M3FROP => GetString("FROP");
 
 		/// <summary>
 		/// Description: Freight rate
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight rate")]
-		public decimal? M3_FRRA => GetNullableDecimal("FRRA");
+		public decimal? M3FRRA => GetNullableDecimal("FRRA");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Currency
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Freight element amount
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight element amount")]
-		public decimal? M3_ECMT => GetNullableDecimal("ECMT");
+		public decimal? M3ECMT => GetNullableDecimal("ECMT");
 
 		/// <summary>
 		/// Description: Calculated quantity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated quantity")]
-		public decimal? M3_CQTY => GetNullableDecimal("CQTY");
+		public decimal? M3CQTY => GetNullableDecimal("CQTY");
 
 		/// <summary>
 		/// Description: Recipient pays
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient pays")]
-		public int? M3_RCPY => GetNullableInt("RCPY");
+		public int? M3RCPY => GetNullableInt("RCPY");
 
 		/// <summary>
 		/// Description: Manual update - freight rate
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual update - freight rate")]
-		public int? M3_MNUP => GetNullableInt("MNUP");
+		public int? M3MNUP => GetNullableInt("MNUP");
 
 		/// <summary>
 		/// Description: Manually locked
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually locked")]
-		public int? M3_MLCK => GetNullableInt("MLCK");
+		public int? M3MLCK => GetNullableInt("MLCK");
 
 		/// <summary>
 		/// Description: Manually changed
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually changed")]
-		public int? M3_MCHG => GetNullableInt("MCHG");
+		public int? M3MCHG => GetNullableInt("MCHG");
 
 		/// <summary>
 		/// Description: Text identity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Status
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Included in internal freight cost
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in internal freight cost")]
-		public int? M3_IINT => GetNullableInt("IINT");
+		public int? M3IINT => GetNullableInt("IINT");
 
 		/// <summary>
 		/// Description: Included in freight cost PO to main fwdr
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in freight cost PO to main fwdr")]
-		public int? M3_IIPO => GetNullableInt("IIPO");
+		public int? M3IIPO => GetNullableInt("IIPO");
 
 		/// <summary>
 		/// Description: Included in freight charge to consignee
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in freight charge to consignee")]
-		public int? M3_IEXT => GetNullableInt("IEXT");
+		public int? M3IEXT => GetNullableInt("IEXT");
 
 		/// <summary>
 		/// Description: Freight charge ID
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight charge ID")]
-		public string M3_FCID => GetString("FCID");
+		public string M3FCID => GetString("FCID");
 
 		/// <summary>
 		/// Description: Included in PO to 3rd-party forwarder
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in PO to 3rd-party forwarder")]
-		public int? M3_I3PT => GetNullableInt("I3PT");
+		public int? M3I3PT => GetNullableInt("I3PT");
 
 		/// <summary>
 		/// Description: Third-party forwarder
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.DRS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third-party forwarder")]
-		public string M3_3PFW => GetString("3PFW");
+		public string M33PFW => GetString("3PFW");
 	}
 }
 // EOF

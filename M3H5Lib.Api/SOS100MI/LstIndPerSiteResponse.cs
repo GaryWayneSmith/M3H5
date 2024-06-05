@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_LOCS => GetString("LOCS");
+		public string M3LOCS => GetString("LOCS");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERI => GetString("SERI");
+		public string M3SERI => GetString("SERI");
 
 		/// <summary>
 		/// Description: Model description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model description")]
-		public string M3_MODE => GetString("MODE");
+		public string M3MODE => GetString("MODE");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: Change date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

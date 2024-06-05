@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Menu")]
-		public string M3_MNID => GetString("MNID");
+		public string M3MNID => GetString("MNID");
 
 		/// <summary>
 		/// Description: Menu version
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Menu version")]
-		public string M3_MNVR => GetString("MNVR");
+		public string M3MNVR => GetString("MNVR");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Function
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function")]
-		public string M3_FNID => GetString("FNID");
+		public string M3FNID => GetString("FNID");
 
 		/// <summary>
 		/// Description: Function category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function category")]
-		public string M3_FNT3 => GetString("FNT3");
+		public string M3FNT3 => GetString("FNT3");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Message ID
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MSID => GetString("MSID");
+		public string M3MSID => GetString("MSID");
 
 		/// <summary>
 		/// Description: Menu option
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Menu option")]
-		public int? M3_MNOP => GetNullableInt("MNOP");
+		public int? M3MNOP => GetNullableInt("MNOP");
 
 		/// <summary>
 		/// Description: Mashup
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mashup")]
-		public string M3_MASH => GetString("MASH");
+		public string M3MASH => GetString("MASH");
 
 		/// <summary>
 		/// Description: Application
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application")]
-		public string M3_MAON => GetString("MAON");
+		public string M3MAON => GetString("MAON");
 
 		/// <summary>
 		/// Description: Default values
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default values")]
-		public string M3_MDEV => GetString("MDEV");
+		public string M3MDEV => GetString("MDEV");
 
 		/// <summary>
 		/// Description: URL-address
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("URL-address")]
-		public string M3_URLA => GetString("URLA");
+		public string M3URLA => GetString("URLA");
 	}
 }
 // EOF

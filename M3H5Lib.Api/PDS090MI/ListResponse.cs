@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Selection matrix
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection matrix")]
-		public string M3_MXID => GetString("MXID");
+		public string M3MXID => GetString("MXID");
 
 		/// <summary>
 		/// Description: Selection matrix type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection matrix type")]
-		public int? M3_MXTP => GetNullableInt("MXTP");
+		public int? M3MXTP => GetNullableInt("MXTP");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Field group
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field group")]
-		public string M3_MGRP => GetString("MGRP");
+		public string M3MGRP => GetString("MGRP");
 
 		/// <summary>
 		/// Description: Responsible
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Display quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Display quantity")]
-		public int? M3_DSQU => GetNullableInt("DSQU");
+		public int? M3DSQU => GetNullableInt("DSQU");
 
 		/// <summary>
 		/// Description: Text
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_DMD1 => GetString("DMD1");
+		public string M3DMD1 => GetString("DMD1");
 
 		/// <summary>
 		/// Description: Text
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_DMD2 => GetString("DMD2");
+		public string M3DMD2 => GetString("DMD2");
 
 		/// <summary>
 		/// Description: Text
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_DMD3 => GetString("DMD3");
+		public string M3DMD3 => GetString("DMD3");
 
 		/// <summary>
 		/// Description: Column Type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC1 => GetNullableInt("MOC1");
+		public int? M3MOC1 => GetNullableInt("MOC1");
 
 		/// <summary>
 		/// Description: Column
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC1 => GetString("MCC1");
+		public string M3MCC1 => GetString("MCC1");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC1 => GetNullableInt("MRC1");
+		public int? M3MRC1 => GetNullableInt("MRC1");
 
 		/// <summary>
 		/// Description: Description
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL1 => GetString("COL1");
+		public string M3COL1 => GetString("COL1");
 
 		/// <summary>
 		/// Description: Column Type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC2 => GetNullableInt("MOC2");
+		public int? M3MOC2 => GetNullableInt("MOC2");
 
 		/// <summary>
 		/// Description: Column
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC2 => GetString("MCC2");
+		public string M3MCC2 => GetString("MCC2");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC2 => GetNullableInt("MRC2");
+		public int? M3MRC2 => GetNullableInt("MRC2");
 
 		/// <summary>
 		/// Description: Description
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL2 => GetString("COL2");
+		public string M3COL2 => GetString("COL2");
 
 		/// <summary>
 		/// Description: Column Type
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public string M3_MOC3 => GetString("MOC3");
+		public string M3MOC3 => GetString("MOC3");
 
 		/// <summary>
 		/// Description: Column
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC3 => GetString("MCC3");
+		public string M3MCC3 => GetString("MCC3");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC3 => GetNullableInt("MRC3");
+		public int? M3MRC3 => GetNullableInt("MRC3");
 
 		/// <summary>
 		/// Description: Description
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL3 => GetString("COL3");
+		public string M3COL3 => GetString("COL3");
 
 		/// <summary>
 		/// Description: Column Type
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC4 => GetNullableInt("MOC4");
+		public int? M3MOC4 => GetNullableInt("MOC4");
 
 		/// <summary>
 		/// Description: Column
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC4 => GetString("MCC4");
+		public string M3MCC4 => GetString("MCC4");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC4 => GetNullableInt("MRC4");
+		public int? M3MRC4 => GetNullableInt("MRC4");
 
 		/// <summary>
 		/// Description: Description
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL4 => GetString("COL4");
+		public string M3COL4 => GetString("COL4");
 
 		/// <summary>
 		/// Description: Column Type
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC5 => GetNullableInt("MOC5");
+		public int? M3MOC5 => GetNullableInt("MOC5");
 
 		/// <summary>
 		/// Description: Column
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC5 => GetString("MCC5");
+		public string M3MCC5 => GetString("MCC5");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC5 => GetNullableInt("MRC5");
+		public int? M3MRC5 => GetNullableInt("MRC5");
 
 		/// <summary>
 		/// Description: Description
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL5 => GetString("COL5");
+		public string M3COL5 => GetString("COL5");
 
 		/// <summary>
 		/// Description: Column Type
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC6 => GetNullableInt("MOC6");
+		public int? M3MOC6 => GetNullableInt("MOC6");
 
 		/// <summary>
 		/// Description: Column
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC6 => GetString("MCC6");
+		public string M3MCC6 => GetString("MCC6");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC6 => GetNullableInt("MRC6");
+		public int? M3MRC6 => GetNullableInt("MRC6");
 
 		/// <summary>
 		/// Description: Description
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL6 => GetString("COL6");
+		public string M3COL6 => GetString("COL6");
 
 		/// <summary>
 		/// Description: Column Type
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC7 => GetNullableInt("MOC7");
+		public int? M3MOC7 => GetNullableInt("MOC7");
 
 		/// <summary>
 		/// Description: Column
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC7 => GetString("MCC7");
+		public string M3MCC7 => GetString("MCC7");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC7 => GetNullableInt("MRC7");
+		public int? M3MRC7 => GetNullableInt("MRC7");
 
 		/// <summary>
 		/// Description: Description
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL7 => GetString("COL7");
+		public string M3COL7 => GetString("COL7");
 
 		/// <summary>
 		/// Description: Column Type
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC8 => GetNullableInt("MOC8");
+		public int? M3MOC8 => GetNullableInt("MOC8");
 
 		/// <summary>
 		/// Description: Column
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC8 => GetString("MCC8");
+		public string M3MCC8 => GetString("MCC8");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC8 => GetNullableInt("MRC8");
+		public int? M3MRC8 => GetNullableInt("MRC8");
 
 		/// <summary>
 		/// Description: Description
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL8 => GetString("COL8");
+		public string M3COL8 => GetString("COL8");
 
 		/// <summary>
 		/// Description: Column Type
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Type")]
-		public int? M3_MOC9 => GetNullableInt("MOC9");
+		public int? M3MOC9 => GetNullableInt("MOC9");
 
 		/// <summary>
 		/// Description: Column
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column")]
-		public string M3_MCC9 => GetString("MCC9");
+		public string M3MCC9 => GetString("MCC9");
 
 		/// <summary>
 		/// Description: Column Rank
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column Rank")]
-		public int? M3_MRC9 => GetNullableInt("MRC9");
+		public int? M3MRC9 => GetNullableInt("MRC9");
 
 		/// <summary>
 		/// Description: Description
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_COL9 => GetString("COL9");
+		public string M3COL9 => GetString("COL9");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR1 => GetString("FOR1");
+		public string M3FOR1 => GetString("FOR1");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR2 => GetString("FOR2");
+		public string M3FOR2 => GetString("FOR2");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR3 => GetString("FOR3");
+		public string M3FOR3 => GetString("FOR3");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR4 => GetString("FOR4");
+		public string M3FOR4 => GetString("FOR4");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR5 => GetString("FOR5");
+		public string M3FOR5 => GetString("FOR5");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR6 => GetString("FOR6");
+		public string M3FOR6 => GetString("FOR6");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR7 => GetString("FOR7");
+		public string M3FOR7 => GetString("FOR7");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR8 => GetString("FOR8");
+		public string M3FOR8 => GetString("FOR8");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FOR9 => GetString("FOR9");
+		public string M3FOR9 => GetString("FOR9");
 	}
 }
 // EOF

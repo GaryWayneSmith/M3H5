@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MOS450MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add Component
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MOTP">Model/site (Required)</param>
-		/// <param name="m3_MTRL">Component identity (Required)</param>
-		/// <param name="m3_CFGL">Configuration position (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_MVRN">Model level</param>
+		/// <param name="m3MOTP">Model/site (Required)</param>
+		/// <param name="m3MTRL">Component identity (Required)</param>
+		/// <param name="m3CFGL">Configuration position (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3MVRN">Model level</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddComponent(
-			string m3_MOTP, 
-			string m3_MTRL, 
-			string m3_CFGL, 
-			int? m3_CONO = null, 
-			string m3_STAT = null, 
-			string m3_MVRN = null, 
+			string m3MOTP, 
+			string m3MTRL, 
+			string m3CFGL, 
+			int? m3CONO = null, 
+			string m3STAT = null, 
+			string m3MVRN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,26 +72,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MOTP))
-				throw new ArgumentNullException("m3_MOTP");
-			if (string.IsNullOrWhiteSpace(m3_MTRL))
-				throw new ArgumentNullException("m3_MTRL");
-			if (string.IsNullOrWhiteSpace(m3_CFGL))
-				throw new ArgumentNullException("m3_CFGL");
+			if (string.IsNullOrWhiteSpace(m3MOTP))
+				throw new ArgumentNullException(nameof(m3MOTP));
+			if (string.IsNullOrWhiteSpace(m3MTRL))
+				throw new ArgumentNullException(nameof(m3MTRL));
+			if (string.IsNullOrWhiteSpace(m3CFGL))
+				throw new ArgumentNullException(nameof(m3CFGL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MOTP", m3_MOTP.Trim())
-				.WithQueryParameter("MTRL", m3_MTRL.Trim())
-				.WithQueryParameter("CFGL", m3_CFGL.Trim());
+				.WithQueryParameter("MOTP", m3MOTP.Trim())
+				.WithQueryParameter("MTRL", m3MTRL.Trim())
+				.WithQueryParameter("CFGL", m3CFGL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVRN))
-				request.WithQueryParameter("MVRN", m3_MVRN.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVRN))
+				request.WithQueryParameter("MVRN", m3MVRN.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -99,7 +101,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -110,10 +113,10 @@ namespace M3H5Lib.Api
 		/// Description Delete Component
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MOTP">Model/site (Required)</param>
-		/// <param name="m3_MTRL">Component identity (Required)</param>
-		/// <param name="m3_CFGL">Configuration position (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3MOTP">Model/site (Required)</param>
+		/// <param name="m3MTRL">Component identity (Required)</param>
+		/// <param name="m3CFGL">Configuration position (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -122,10 +125,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltComponent(
-			string m3_MOTP, 
-			string m3_MTRL, 
-			string m3_CFGL, 
-			int? m3_CONO = null, 
+			string m3MOTP, 
+			string m3MTRL, 
+			string m3CFGL, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -140,22 +143,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MOTP))
-				throw new ArgumentNullException("m3_MOTP");
-			if (string.IsNullOrWhiteSpace(m3_MTRL))
-				throw new ArgumentNullException("m3_MTRL");
-			if (string.IsNullOrWhiteSpace(m3_CFGL))
-				throw new ArgumentNullException("m3_CFGL");
+			if (string.IsNullOrWhiteSpace(m3MOTP))
+				throw new ArgumentNullException(nameof(m3MOTP));
+			if (string.IsNullOrWhiteSpace(m3MTRL))
+				throw new ArgumentNullException(nameof(m3MTRL));
+			if (string.IsNullOrWhiteSpace(m3CFGL))
+				throw new ArgumentNullException(nameof(m3CFGL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MOTP", m3_MOTP.Trim())
-				.WithQueryParameter("MTRL", m3_MTRL.Trim())
-				.WithQueryParameter("CFGL", m3_CFGL.Trim());
+				.WithQueryParameter("MOTP", m3MOTP.Trim())
+				.WithQueryParameter("MTRL", m3MTRL.Trim())
+				.WithQueryParameter("CFGL", m3CFGL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -165,7 +168,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -176,10 +180,10 @@ namespace M3H5Lib.Api
 		/// Description Get Component
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MOTP">Model/site (Required)</param>
-		/// <param name="m3_MTRL">Component identity (Required)</param>
-		/// <param name="m3_CFGL">Configuration position (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3MOTP">Model/site (Required)</param>
+		/// <param name="m3MTRL">Component identity (Required)</param>
+		/// <param name="m3CFGL">Configuration position (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -188,10 +192,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetComponentResponse></returns>
 		/// <exception cref="M3Exception<GetComponentResponse>"></exception>
 		public async Task<M3Response<GetComponentResponse>> GetComponent(
-			string m3_MOTP, 
-			string m3_MTRL, 
-			string m3_CFGL, 
-			int? m3_CONO = null, 
+			string m3MOTP, 
+			string m3MTRL, 
+			string m3CFGL, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -206,22 +210,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MOTP))
-				throw new ArgumentNullException("m3_MOTP");
-			if (string.IsNullOrWhiteSpace(m3_MTRL))
-				throw new ArgumentNullException("m3_MTRL");
-			if (string.IsNullOrWhiteSpace(m3_CFGL))
-				throw new ArgumentNullException("m3_CFGL");
+			if (string.IsNullOrWhiteSpace(m3MOTP))
+				throw new ArgumentNullException(nameof(m3MOTP));
+			if (string.IsNullOrWhiteSpace(m3MTRL))
+				throw new ArgumentNullException(nameof(m3MTRL));
+			if (string.IsNullOrWhiteSpace(m3CFGL))
+				throw new ArgumentNullException(nameof(m3CFGL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MOTP", m3_MOTP.Trim())
-				.WithQueryParameter("MTRL", m3_MTRL.Trim())
-				.WithQueryParameter("CFGL", m3_CFGL.Trim());
+				.WithQueryParameter("MOTP", m3MOTP.Trim())
+				.WithQueryParameter("MTRL", m3MTRL.Trim())
+				.WithQueryParameter("CFGL", m3CFGL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetComponentResponse>(
@@ -231,7 +235,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -242,9 +247,9 @@ namespace M3H5Lib.Api
 		/// Description List Components
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MOTP">Model/site (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CFGL">Configuration position</param>
+		/// <param name="m3MOTP">Model/site (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CFGL">Configuration position</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -253,9 +258,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstComponentResponse></returns>
 		/// <exception cref="M3Exception<LstComponentResponse>"></exception>
 		public async Task<M3Response<LstComponentResponse>> LstComponent(
-			string m3_MOTP, 
-			int? m3_CONO = null, 
-			string m3_CFGL = null, 
+			string m3MOTP, 
+			int? m3CONO = null, 
+			string m3CFGL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -270,18 +275,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MOTP))
-				throw new ArgumentNullException("m3_MOTP");
+			if (string.IsNullOrWhiteSpace(m3MOTP))
+				throw new ArgumentNullException(nameof(m3MOTP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MOTP", m3_MOTP.Trim());
+				.WithQueryParameter("MOTP", m3MOTP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CFGL))
-				request.WithQueryParameter("CFGL", m3_CFGL.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CFGL))
+				request.WithQueryParameter("CFGL", m3CFGL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstComponentResponse>(
@@ -291,7 +296,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -302,12 +308,12 @@ namespace M3H5Lib.Api
 		/// Description Update Component
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MOTP">Model/site (Required)</param>
-		/// <param name="m3_MTRL">Component identity (Required)</param>
-		/// <param name="m3_CFGL">Configuration position (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_MVRN">Model level</param>
+		/// <param name="m3MOTP">Model/site (Required)</param>
+		/// <param name="m3MTRL">Component identity (Required)</param>
+		/// <param name="m3CFGL">Configuration position (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3MVRN">Model level</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -316,12 +322,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdComponent(
-			string m3_MOTP, 
-			string m3_MTRL, 
-			string m3_CFGL, 
-			int? m3_CONO = null, 
-			string m3_STAT = null, 
-			string m3_MVRN = null, 
+			string m3MOTP, 
+			string m3MTRL, 
+			string m3CFGL, 
+			int? m3CONO = null, 
+			string m3STAT = null, 
+			string m3MVRN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -336,26 +342,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MOTP))
-				throw new ArgumentNullException("m3_MOTP");
-			if (string.IsNullOrWhiteSpace(m3_MTRL))
-				throw new ArgumentNullException("m3_MTRL");
-			if (string.IsNullOrWhiteSpace(m3_CFGL))
-				throw new ArgumentNullException("m3_CFGL");
+			if (string.IsNullOrWhiteSpace(m3MOTP))
+				throw new ArgumentNullException(nameof(m3MOTP));
+			if (string.IsNullOrWhiteSpace(m3MTRL))
+				throw new ArgumentNullException(nameof(m3MTRL));
+			if (string.IsNullOrWhiteSpace(m3CFGL))
+				throw new ArgumentNullException(nameof(m3CFGL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MOTP", m3_MOTP.Trim())
-				.WithQueryParameter("MTRL", m3_MTRL.Trim())
-				.WithQueryParameter("CFGL", m3_CFGL.Trim());
+				.WithQueryParameter("MOTP", m3MOTP.Trim())
+				.WithQueryParameter("MTRL", m3MTRL.Trim())
+				.WithQueryParameter("CFGL", m3CFGL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVRN))
-				request.WithQueryParameter("MVRN", m3_MVRN.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVRN))
+				request.WithQueryParameter("MVRN", m3MVRN.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -365,7 +371,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

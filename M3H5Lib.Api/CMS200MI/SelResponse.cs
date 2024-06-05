@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer channel id")]
-		public string M3_CUCH => GetString("CUCH");
+		public string M3CUCH => GetString("CUCH");
 
 		/// <summary>
 		/// Description: Order by customer
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order by customer")]
-		public string M3_ORCU => GetString("ORCU");
+		public string M3ORCU => GetString("ORCU");
 
 		/// <summary>
 		/// Description: Delivery customer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery customer")]
-		public string M3_DECU => GetString("DECU");
+		public string M3DECU => GetString("DECU");
 
 		/// <summary>
 		/// Description: Address number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Activity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activity")]
-		public string M3_GCAC => GetString("GCAC");
+		public string M3GCAC => GetString("GCAC");
 
 		/// <summary>
 		/// Description: Invoice recipient
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice recipient")]
-		public string M3_INRC => GetString("INRC");
+		public string M3INRC => GetString("INRC");
 
 		/// <summary>
 		/// Description: Invoice adress
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice adress")]
-		public string M3_ADI3 => GetString("ADI3");
+		public string M3ADI3 => GetString("ADI3");
 
 		/// <summary>
 		/// Description: From date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Order by customer
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order by customer")]
-		public string M3_ORC1 => GetString("ORC1");
+		public string M3ORC1 => GetString("ORC1");
 
 		/// <summary>
 		/// Description: Delivery customer
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery customer")]
-		public string M3_DEC1 => GetString("DEC1");
+		public string M3DEC1 => GetString("DEC1");
 
 		/// <summary>
 		/// Description: Delivery adress
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery adress")]
-		public string M3_ADI1 => GetString("ADI1");
+		public string M3ADI1 => GetString("ADI1");
 
 		/// <summary>
 		/// Description: Invoice recipient
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice recipient")]
-		public string M3_INR1 => GetString("INR1");
+		public string M3INR1 => GetString("INR1");
 
 		/// <summary>
 		/// Description: Invoice adress
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice adress")]
-		public string M3_ADI4 => GetString("ADI4");
+		public string M3ADI4 => GetString("ADI4");
 
 		/// <summary>
 		/// Description: Payer
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Activity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activity")]
-		public string M3_CCAC => GetString("CCAC");
+		public string M3CCAC => GetString("CCAC");
 
 		/// <summary>
 		/// Description: Commersial customer
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commersial customer")]
-		public string M3_CMCU => GetString("CMCU");
+		public string M3CMCU => GetString("CMCU");
 
 		/// <summary>
 		/// Description: Text identity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

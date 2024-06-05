@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Pricelist
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricelist")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Currency
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Customernumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customernumber")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Validfrom
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validfrom")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Validto
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validto")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Salescampaign
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salescampaign")]
-		public string M3_CMNO => GetString("CMNO");
+		public string M3CMNO => GetString("CMNO");
 
 		/// <summary>
 		/// Description: Objectaccessgroup
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Objectaccessgroup")]
-		public string M3_ACGR => GetString("ACGR");
+		public string M3ACGR => GetString("ACGR");
 
 		/// <summary>
 		/// Description: Costingmodel-salesprice
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costingmodel-salesprice")]
-		public string M3_SCMO => GetString("SCMO");
+		public string M3SCMO => GetString("SCMO");
 
 		/// <summary>
 		/// Description: Manualupdate-salesprices
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manualupdate-salesprices")]
-		public int? M3_SCMU => GetNullableInt("SCMU");
+		public int? M3SCMU => GetNullableInt("SCMU");
 
 		/// <summary>
 		/// Description: Manualupdaterule
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manualupdaterule")]
-		public int? M3_SCSC => GetNullableInt("SCSC");
+		public int? M3SCSC => GetNullableInt("SCSC");
 
 		/// <summary>
 		/// Description: Netpriceused
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Netpriceused")]
-		public int? M3_NTCD => GetNullableInt("NTCD");
+		public int? M3NTCD => GetNullableInt("NTCD");
 
 		/// <summary>
 		/// Description: Bonusgenerating
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonusgenerating")]
-		public int? M3_BNCD => GetNullableInt("BNCD");
+		public int? M3BNCD => GetNullableInt("BNCD");
 
 		/// <summary>
 		/// Description: Rounding-offcategory
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rounding-offcategory")]
-		public int? M3_ROPP => GetNullableInt("ROPP");
+		public int? M3ROPP => GetNullableInt("ROPP");
 
 		/// <summary>
 		/// Description: Commissiongenerating
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commissiongenerating")]
-		public int? M3_PRAC => GetNullableInt("PRAC");
+		public int? M3PRAC => GetNullableInt("PRAC");
 
 		/// <summary>
 		/// Description: Field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ1 => GetString("OBJ1");
+		public string M3OBJ1 => GetString("OBJ1");
 
 		/// <summary>
 		/// Description: Field
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ2 => GetString("OBJ2");
+		public string M3OBJ2 => GetString("OBJ2");
 
 		/// <summary>
 		/// Description: Field
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ3 => GetString("OBJ3");
+		public string M3OBJ3 => GetString("OBJ3");
 
 		/// <summary>
 		/// Description: Fromitemnumber
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromitemnumber")]
-		public string M3_FITN => GetString("FITN");
+		public string M3FITN => GetString("FITN");
 
 		/// <summary>
 		/// Description: Toitemnumber
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toitemnumber")]
-		public string M3_TITN => GetString("TITN");
+		public string M3TITN => GetString("TITN");
 
 		/// <summary>
 		/// Description: Fromitemgroup
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromitemgroup")]
-		public string M3_FITG => GetString("FITG");
+		public string M3FITG => GetString("FITG");
 
 		/// <summary>
 		/// Description: Toitemgroup
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toitemgroup")]
-		public string M3_TITG => GetString("TITG");
+		public string M3TITG => GetString("TITG");
 
 		/// <summary>
 		/// Description: Fromproductgroup
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromproductgroup")]
-		public string M3_FITC => GetString("FITC");
+		public string M3FITC => GetString("FITC");
 
 		/// <summary>
 		/// Description: Toproductgroup
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toproductgroup")]
-		public string M3_TITC => GetString("TITC");
+		public string M3TITC => GetString("TITC");
 
 		/// <summary>
 		/// Description: Fromitemtype
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromitemtype")]
-		public string M3_FITT => GetString("FITT");
+		public string M3FITT => GetString("FITT");
 
 		/// <summary>
 		/// Description: Toitemtype
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toitemtype")]
-		public string M3_TITT => GetString("TITT");
+		public string M3TITT => GetString("TITT");
 
 		/// <summary>
 		/// Description: Fromitemresponsible
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromitemresponsible")]
-		public string M3_FRSP => GetString("FRSP");
+		public string M3FRSP => GetString("FRSP");
 
 		/// <summary>
 		/// Description: Toitemresponsible
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toitemresponsible")]
-		public string M3_TRSP => GetString("TRSP");
+		public string M3TRSP => GetString("TRSP");
 
 		/// <summary>
 		/// Description: Fromstatus
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromstatus")]
-		public string M3_SLFR => GetString("SLFR");
+		public string M3SLFR => GetString("SLFR");
 
 		/// <summary>
 		/// Description: Tostatus
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tostatus")]
-		public string M3_SLTO => GetString("SLTO");
+		public string M3SLTO => GetString("SLTO");
 
 		/// <summary>
 		/// Description: Frommake/buycode
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frommake/buycode")]
-		public int? M3_FMAB => GetNullableInt("FMAB");
+		public int? M3FMAB => GetNullableInt("FMAB");
 
 		/// <summary>
 		/// Description: Tomake/buycode
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tomake/buycode")]
-		public int? M3_TMAB => GetNullableInt("TMAB");
+		public int? M3TMAB => GetNullableInt("TMAB");
 
 		/// <summary>
 		/// Description: Fromconfigurationcode
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromconfigurationcode")]
-		public int? M3_FCHC => GetNullableInt("FCHC");
+		public int? M3FCHC => GetNullableInt("FCHC");
 
 		/// <summary>
 		/// Description: Toconfigurationcode
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toconfigurationcode")]
-		public int? M3_TCHC => GetNullableInt("TCHC");
+		public int? M3TCHC => GetNullableInt("TCHC");
 
 		/// <summary>
 		/// Description: Frommainsupplier
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frommainsupplier")]
-		public string M3_FSUN => GetString("FSUN");
+		public string M3FSUN => GetString("FSUN");
 
 		/// <summary>
 		/// Description: Tomainsupplier
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tomainsupplier")]
-		public string M3_TSUN => GetString("TSUN");
+		public string M3TSUN => GetString("TSUN");
 
 		/// <summary>
 		/// Description: Fromcustomernumber
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromcustomernumber")]
-		public string M3_FCUN => GetString("FCUN");
+		public string M3FCUN => GetString("FCUN");
 
 		/// <summary>
 		/// Description: Tocustomernumber
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tocustomernumber")]
-		public string M3_TCUN => GetString("TCUN");
+		public string M3TCUN => GetString("TCUN");
 
 		/// <summary>
 		/// Description: Frombonusgroup
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frombonusgroup")]
-		public string M3_FBGR => GetString("FBGR");
+		public string M3FBGR => GetString("FBGR");
 
 		/// <summary>
 		/// Description: Tobonusgroup
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tobonusgroup")]
-		public string M3_TBGR => GetString("TBGR");
+		public string M3TBGR => GetString("TBGR");
 
 		/// <summary>
 		/// Description: Fromcommissiongroup
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromcommissiongroup")]
-		public string M3_FPRC => GetString("FPRC");
+		public string M3FPRC => GetString("FPRC");
 
 		/// <summary>
 		/// Description: Tocommissiongroup
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tocommissiongroup")]
-		public string M3_TPRC => GetString("TPRC");
+		public string M3TPRC => GetString("TPRC");
 
 		/// <summary>
 		/// Description: Fromassortment
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fromassortment")]
-		public string M3_FASS => GetString("FASS");
+		public string M3FASS => GetString("FASS");
 
 		/// <summary>
 		/// Description: Toassortment
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Toassortment")]
-		public string M3_TASS => GetString("TASS");
+		public string M3TASS => GetString("TASS");
 
 		/// <summary>
 		/// Description: Calculationbase
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculationbase")]
-		public int? M3_CABA => GetNullableInt("CABA");
+		public int? M3CABA => GetNullableInt("CABA");
 
 		/// <summary>
 		/// Description: Automaticsalespricecalculation
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automaticsalespricecalculation")]
-		public int? M3_SCAC => GetNullableInt("SCAC");
+		public int? M3SCAC => GetNullableInt("SCAC");
 
 		/// <summary>
 		/// Description: Costingbaseroundedoff-salesprice
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costingbaseroundedoff-salesprice")]
-		public int? M3_SCBR => GetNullableInt("SCBR");
+		public int? M3SCBR => GetNullableInt("SCBR");
 
 		/// <summary>
 		/// Description: Exchangeratetype
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchangeratetype")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Costingmodel-purchasing
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costingmodel-purchasing")]
-		public string M3_WSCA => GetString("WSCA");
+		public string M3WSCA => GetString("WSCA");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Basicpricelist
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basicpricelist")]
-		public string M3_BAPL => GetString("BAPL");
+		public string M3BAPL => GetString("BAPL");
 
 		/// <summary>
 		/// Description: Costingtype
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costingtype")]
-		public string M3_PCTP => GetString("PCTP");
+		public string M3PCTP => GetString("PCTP");
 
 		/// <summary>
 		/// Description: Field
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_1OBJ => GetString("1OBJ");
+		public string M31OBJ => GetString("1OBJ");
 
 		/// <summary>
 		/// Description: Field
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_2OBJ => GetString("2OBJ");
+		public string M32OBJ => GetString("2OBJ");
 
 		/// <summary>
 		/// Description: Field
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_3OBJ => GetString("3OBJ");
+		public string M33OBJ => GetString("3OBJ");
 	}
 }
 // EOF

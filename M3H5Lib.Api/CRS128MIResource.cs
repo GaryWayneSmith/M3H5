@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS128MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add Intrastat report data
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CSNO">Customs statistical number (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_INYN">INTRASTAT generating</param>
-		/// <param name="m3_SUPL">Supplementary U/M</param>
-		/// <param name="m3_SPFA">Conversion factor supplementary U/M</param>
+		/// <param name="m3CSNO">Customs statistical number (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3INYN">INTRASTAT generating</param>
+		/// <param name="m3SUPL">Supplementary U/M</param>
+		/// <param name="m3SPFA">Conversion factor supplementary U/M</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddBasicData(
-			string m3_CSNO, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
-			int? m3_INYN = null, 
-			string m3_SUPL = null, 
-			decimal? m3_SPFA = null, 
+			string m3CSNO, 
+			string m3TX40, 
+			string m3TX15 = null, 
+			int? m3INYN = null, 
+			string m3SUPL = null, 
+			decimal? m3SPFA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,25 +72,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSNO))
-				throw new ArgumentNullException("m3_CSNO");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3CSNO))
+				throw new ArgumentNullException(nameof(m3CSNO));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSNO", m3_CSNO.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("CSNO", m3CSNO.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_INYN.HasValue)
-				request.WithQueryParameter("INYN", m3_INYN.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUPL))
-				request.WithQueryParameter("SUPL", m3_SUPL.Trim());
-			if (m3_SPFA.HasValue)
-				request.WithQueryParameter("SPFA", m3_SPFA.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3INYN.HasValue)
+				request.WithQueryParameter("INYN", m3INYN.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUPL))
+				request.WithQueryParameter("SUPL", m3SUPL.Trim());
+			if (m3SPFA.HasValue)
+				request.WithQueryParameter("SPFA", m3SPFA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -98,7 +100,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -109,7 +112,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Intrastat report data
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CSNO">Customs statistical number (Required)</param>
+		/// <param name="m3CSNO">Customs statistical number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -118,7 +121,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltBasicData(
-			string m3_CSNO, 
+			string m3CSNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -133,12 +136,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSNO))
-				throw new ArgumentNullException("m3_CSNO");
+			if (string.IsNullOrWhiteSpace(m3CSNO))
+				throw new ArgumentNullException(nameof(m3CSNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSNO", m3_CSNO.Trim());
+				.WithQueryParameter("CSNO", m3CSNO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -148,7 +151,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -159,8 +163,8 @@ namespace M3H5Lib.Api
 		/// Description Retrieve Intrastat report data
 		/// Version Release: MNB
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CSNO">Customs statistical number</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CSNO">Customs statistical number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -169,8 +173,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetBasicDataResponse></returns>
 		/// <exception cref="M3Exception<GetBasicDataResponse>"></exception>
 		public async Task<M3Response<GetBasicDataResponse>> GetBasicData(
-			int? m3_CONO = null, 
-			string m3_CSNO = null, 
+			int? m3CONO = null, 
+			string m3CSNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -185,10 +189,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CSNO))
-				request.WithQueryParameter("CSNO", m3_CSNO.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CSNO))
+				request.WithQueryParameter("CSNO", m3CSNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetBasicDataResponse>(
@@ -198,7 +202,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -209,8 +214,8 @@ namespace M3H5Lib.Api
 		/// Description List Intrastat report data by cust stat number
 		/// Version Release: MNB
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CSNO">Customs statistical number</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CSNO">Customs statistical number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -219,8 +224,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByNumberResponse></returns>
 		/// <exception cref="M3Exception<LstByNumberResponse>"></exception>
 		public async Task<M3Response<LstByNumberResponse>> LstByNumber(
-			int? m3_CONO = null, 
-			string m3_CSNO = null, 
+			int? m3CONO = null, 
+			string m3CSNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -235,10 +240,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CSNO))
-				request.WithQueryParameter("CSNO", m3_CSNO.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CSNO))
+				request.WithQueryParameter("CSNO", m3CSNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByNumberResponse>(
@@ -248,7 +253,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -259,12 +265,12 @@ namespace M3H5Lib.Api
 		/// Description Update Intrastat report data
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CSNO">Customs statistical number (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_INYN">INTRASTAT generating</param>
-		/// <param name="m3_SUPL">Supplementary U/M</param>
-		/// <param name="m3_SPFA">Conversion factor supplementary U/M</param>
+		/// <param name="m3CSNO">Customs statistical number (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3INYN">INTRASTAT generating</param>
+		/// <param name="m3SUPL">Supplementary U/M</param>
+		/// <param name="m3SPFA">Conversion factor supplementary U/M</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -273,12 +279,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdBasicData(
-			string m3_CSNO, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			int? m3_INYN = null, 
-			string m3_SUPL = null, 
-			decimal? m3_SPFA = null, 
+			string m3CSNO, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			int? m3INYN = null, 
+			string m3SUPL = null, 
+			decimal? m3SPFA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -293,24 +299,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSNO))
-				throw new ArgumentNullException("m3_CSNO");
+			if (string.IsNullOrWhiteSpace(m3CSNO))
+				throw new ArgumentNullException(nameof(m3CSNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSNO", m3_CSNO.Trim());
+				.WithQueryParameter("CSNO", m3CSNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_INYN.HasValue)
-				request.WithQueryParameter("INYN", m3_INYN.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUPL))
-				request.WithQueryParameter("SUPL", m3_SUPL.Trim());
-			if (m3_SPFA.HasValue)
-				request.WithQueryParameter("SPFA", m3_SPFA.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3INYN.HasValue)
+				request.WithQueryParameter("INYN", m3INYN.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUPL))
+				request.WithQueryParameter("SUPL", m3SUPL.Trim());
+			if (m3SPFA.HasValue)
+				request.WithQueryParameter("SPFA", m3SPFA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -320,7 +326,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

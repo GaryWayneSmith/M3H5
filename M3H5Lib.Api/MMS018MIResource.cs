@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS018MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Create Connect composition to style
 		/// Version Release: 11.3
 		/// </summary>
-		/// <param name="m3_STYN">Style number (Required)</param>
-		/// <param name="m3_XCDE">Composition (Required)</param>
-		/// <param name="m3_XCDS">Composition percentage (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3STYN">Style number (Required)</param>
+		/// <param name="m3XCDE">Composition (Required)</param>
+		/// <param name="m3XCDS">Composition percentage (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_STYN, 
-			string m3_XCDE, 
-			int m3_XCDS, 
-			int? m3_CONO = null, 
-			decimal? m3_TXID = null, 
+			string m3STYN, 
+			string m3XCDE, 
+			int m3XCDS, 
+			int? m3CONO = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,22 +70,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STYN))
-				throw new ArgumentNullException("m3_STYN");
-			if (string.IsNullOrWhiteSpace(m3_XCDE))
-				throw new ArgumentNullException("m3_XCDE");
+			if (string.IsNullOrWhiteSpace(m3STYN))
+				throw new ArgumentNullException(nameof(m3STYN));
+			if (string.IsNullOrWhiteSpace(m3XCDE))
+				throw new ArgumentNullException(nameof(m3XCDE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STYN", m3_STYN.Trim())
-				.WithQueryParameter("XCDE", m3_XCDE.Trim())
-				.WithQueryParameter("XCDS", m3_XCDS.ToString());
+				.WithQueryParameter("STYN", m3STYN.Trim())
+				.WithQueryParameter("XCDE", m3XCDE.Trim())
+				.WithQueryParameter("XCDS", m3XCDS.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -93,7 +95,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -104,10 +107,10 @@ namespace M3H5Lib.Api
 		/// Description Copy Connect composition to style
 		/// Version Release: 11.3
 		/// </summary>
-		/// <param name="m3_STYN">Style number (Required)</param>
-		/// <param name="m3_XCDE">Composition (Required)</param>
-		/// <param name="m3_TCDE">Target Composition (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3STYN">Style number (Required)</param>
+		/// <param name="m3XCDE">Composition (Required)</param>
+		/// <param name="m3TCDE">Target Composition (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -116,10 +119,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Copy(
-			string m3_STYN, 
-			string m3_XCDE, 
-			string m3_TCDE, 
-			int? m3_CONO = null, 
+			string m3STYN, 
+			string m3XCDE, 
+			string m3TCDE, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -134,22 +137,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STYN))
-				throw new ArgumentNullException("m3_STYN");
-			if (string.IsNullOrWhiteSpace(m3_XCDE))
-				throw new ArgumentNullException("m3_XCDE");
-			if (string.IsNullOrWhiteSpace(m3_TCDE))
-				throw new ArgumentNullException("m3_TCDE");
+			if (string.IsNullOrWhiteSpace(m3STYN))
+				throw new ArgumentNullException(nameof(m3STYN));
+			if (string.IsNullOrWhiteSpace(m3XCDE))
+				throw new ArgumentNullException(nameof(m3XCDE));
+			if (string.IsNullOrWhiteSpace(m3TCDE))
+				throw new ArgumentNullException(nameof(m3TCDE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STYN", m3_STYN.Trim())
-				.WithQueryParameter("XCDE", m3_XCDE.Trim())
-				.WithQueryParameter("TCDE", m3_TCDE.Trim());
+				.WithQueryParameter("STYN", m3STYN.Trim())
+				.WithQueryParameter("XCDE", m3XCDE.Trim())
+				.WithQueryParameter("TCDE", m3TCDE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -159,7 +162,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -170,9 +174,9 @@ namespace M3H5Lib.Api
 		/// Description Delete Connect composition to style
 		/// Version Release: 11.3
 		/// </summary>
-		/// <param name="m3_STYN">Style number (Required)</param>
-		/// <param name="m3_XCDE">Composition (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3STYN">Style number (Required)</param>
+		/// <param name="m3XCDE">Composition (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -181,9 +185,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Delete(
-			string m3_STYN, 
-			string m3_XCDE, 
-			int? m3_CONO = null, 
+			string m3STYN, 
+			string m3XCDE, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -198,19 +202,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STYN))
-				throw new ArgumentNullException("m3_STYN");
-			if (string.IsNullOrWhiteSpace(m3_XCDE))
-				throw new ArgumentNullException("m3_XCDE");
+			if (string.IsNullOrWhiteSpace(m3STYN))
+				throw new ArgumentNullException(nameof(m3STYN));
+			if (string.IsNullOrWhiteSpace(m3XCDE))
+				throw new ArgumentNullException(nameof(m3XCDE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STYN", m3_STYN.Trim())
-				.WithQueryParameter("XCDE", m3_XCDE.Trim());
+				.WithQueryParameter("STYN", m3STYN.Trim())
+				.WithQueryParameter("XCDE", m3XCDE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -220,7 +224,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -231,9 +236,9 @@ namespace M3H5Lib.Api
 		/// Description Get Connect composition to style
 		/// Version Release: 11.3
 		/// </summary>
-		/// <param name="m3_STYN">Style number (Required)</param>
-		/// <param name="m3_XCDE">Composition (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3STYN">Style number (Required)</param>
+		/// <param name="m3XCDE">Composition (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -242,9 +247,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_STYN, 
-			string m3_XCDE, 
-			int? m3_CONO = null, 
+			string m3STYN, 
+			string m3XCDE, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -259,19 +264,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STYN))
-				throw new ArgumentNullException("m3_STYN");
-			if (string.IsNullOrWhiteSpace(m3_XCDE))
-				throw new ArgumentNullException("m3_XCDE");
+			if (string.IsNullOrWhiteSpace(m3STYN))
+				throw new ArgumentNullException(nameof(m3STYN));
+			if (string.IsNullOrWhiteSpace(m3XCDE))
+				throw new ArgumentNullException(nameof(m3XCDE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STYN", m3_STYN.Trim())
-				.WithQueryParameter("XCDE", m3_XCDE.Trim());
+				.WithQueryParameter("STYN", m3STYN.Trim())
+				.WithQueryParameter("XCDE", m3XCDE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -281,7 +286,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -292,9 +298,9 @@ namespace M3H5Lib.Api
 		/// Description List Connect composition to style
 		/// Version Release: 11.3
 		/// </summary>
-		/// <param name="m3_STYN">Style number (Required)</param>
-		/// <param name="m3_XCDE">Composition (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3STYN">Style number (Required)</param>
+		/// <param name="m3XCDE">Composition (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -303,9 +309,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListResponse></returns>
 		/// <exception cref="M3Exception<ListResponse>"></exception>
 		public async Task<M3Response<ListResponse>> List(
-			string m3_STYN, 
-			string m3_XCDE, 
-			int? m3_CONO = null, 
+			string m3STYN, 
+			string m3XCDE, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -320,19 +326,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STYN))
-				throw new ArgumentNullException("m3_STYN");
-			if (string.IsNullOrWhiteSpace(m3_XCDE))
-				throw new ArgumentNullException("m3_XCDE");
+			if (string.IsNullOrWhiteSpace(m3STYN))
+				throw new ArgumentNullException(nameof(m3STYN));
+			if (string.IsNullOrWhiteSpace(m3XCDE))
+				throw new ArgumentNullException(nameof(m3XCDE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STYN", m3_STYN.Trim())
-				.WithQueryParameter("XCDE", m3_XCDE.Trim());
+				.WithQueryParameter("STYN", m3STYN.Trim())
+				.WithQueryParameter("XCDE", m3XCDE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListResponse>(
@@ -342,7 +348,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -353,11 +360,11 @@ namespace M3H5Lib.Api
 		/// Description Update Connect composition to style
 		/// Version Release: 11.3
 		/// </summary>
-		/// <param name="m3_STYN">Style number (Required)</param>
-		/// <param name="m3_XCDE">Composition (Required)</param>
-		/// <param name="m3_XCDS">Composition percentage (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3STYN">Style number (Required)</param>
+		/// <param name="m3XCDE">Composition (Required)</param>
+		/// <param name="m3XCDS">Composition percentage (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -366,11 +373,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Update(
-			string m3_STYN, 
-			string m3_XCDE, 
-			int m3_XCDS, 
-			int? m3_CONO = null, 
-			decimal? m3_TXID = null, 
+			string m3STYN, 
+			string m3XCDE, 
+			int m3XCDS, 
+			int? m3CONO = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -385,22 +392,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_STYN))
-				throw new ArgumentNullException("m3_STYN");
-			if (string.IsNullOrWhiteSpace(m3_XCDE))
-				throw new ArgumentNullException("m3_XCDE");
+			if (string.IsNullOrWhiteSpace(m3STYN))
+				throw new ArgumentNullException(nameof(m3STYN));
+			if (string.IsNullOrWhiteSpace(m3XCDE))
+				throw new ArgumentNullException(nameof(m3XCDE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STYN", m3_STYN.Trim())
-				.WithQueryParameter("XCDE", m3_XCDE.Trim())
-				.WithQueryParameter("XCDS", m3_XCDS.ToString());
+				.WithQueryParameter("STYN", m3STYN.Trim())
+				.WithQueryParameter("XCDE", m3XCDE.Trim())
+				.WithQueryParameter("XCDS", m3XCDS.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -410,7 +417,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

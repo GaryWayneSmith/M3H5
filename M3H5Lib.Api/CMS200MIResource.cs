@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,24 +38,24 @@ namespace M3H5Lib.Api
 		/// Description Add Customer Channel
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CUCH">Customer channel id (Required)</param>
-		/// <param name="m3_ORCU">Order by customer (Required)</param>
-		/// <param name="m3_DECU">Delivery customer (Required)</param>
-		/// <param name="m3_FDAT">From date (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_GCAC">Activity</param>
-		/// <param name="m3_INRC">Invoice recipient</param>
-		/// <param name="m3_ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
-		/// <param name="m3_TDAT">To date</param>
-		/// <param name="m3_ORC1">Order by customer</param>
-		/// <param name="m3_DEC1">Delivery customer</param>
-		/// <param name="m3_ADI1">Delivery adress</param>
-		/// <param name="m3_INR1">Invoice recipient</param>
-		/// <param name="m3_ADI4">Invoice adress - NOT IN USE (2017-07-17)</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_CCAC">Activity</param>
-		/// <param name="m3_CMCU">Commersial customer</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3CUCH">Customer channel id (Required)</param>
+		/// <param name="m3ORCU">Order by customer (Required)</param>
+		/// <param name="m3DECU">Delivery customer (Required)</param>
+		/// <param name="m3FDAT">From date (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3GCAC">Activity</param>
+		/// <param name="m3INRC">Invoice recipient</param>
+		/// <param name="m3ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
+		/// <param name="m3TDAT">To date</param>
+		/// <param name="m3ORC1">Order by customer</param>
+		/// <param name="m3DEC1">Delivery customer</param>
+		/// <param name="m3ADI1">Delivery adress</param>
+		/// <param name="m3INR1">Invoice recipient</param>
+		/// <param name="m3ADI4">Invoice adress - NOT IN USE (2017-07-17)</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3CCAC">Activity</param>
+		/// <param name="m3CMCU">Commersial customer</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -62,24 +64,24 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_CUCH, 
-			string m3_ORCU, 
-			string m3_DECU, 
-			DateTime m3_FDAT, 
-			string m3_ADID = null, 
-			string m3_GCAC = null, 
-			string m3_INRC = null, 
-			string m3_ADI3 = null, 
-			DateTime? m3_TDAT = null, 
-			string m3_ORC1 = null, 
-			string m3_DEC1 = null, 
-			string m3_ADI1 = null, 
-			string m3_INR1 = null, 
-			string m3_ADI4 = null, 
-			string m3_PYNO = null, 
-			string m3_CCAC = null, 
-			string m3_CMCU = null, 
-			decimal? m3_TXID = null, 
+			string m3CUCH, 
+			string m3ORCU, 
+			string m3DECU, 
+			DateTime m3FDAT, 
+			string m3ADID = null, 
+			string m3GCAC = null, 
+			string m3INRC = null, 
+			string m3ADI3 = null, 
+			DateTime? m3TDAT = null, 
+			string m3ORC1 = null, 
+			string m3DEC1 = null, 
+			string m3ADI1 = null, 
+			string m3INR1 = null, 
+			string m3ADI4 = null, 
+			string m3PYNO = null, 
+			string m3CCAC = null, 
+			string m3CMCU = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -94,49 +96,49 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCH))
-				throw new ArgumentNullException("m3_CUCH");
-			if (string.IsNullOrWhiteSpace(m3_ORCU))
-				throw new ArgumentNullException("m3_ORCU");
-			if (string.IsNullOrWhiteSpace(m3_DECU))
-				throw new ArgumentNullException("m3_DECU");
+			if (string.IsNullOrWhiteSpace(m3CUCH))
+				throw new ArgumentNullException(nameof(m3CUCH));
+			if (string.IsNullOrWhiteSpace(m3ORCU))
+				throw new ArgumentNullException(nameof(m3ORCU));
+			if (string.IsNullOrWhiteSpace(m3DECU))
+				throw new ArgumentNullException(nameof(m3DECU));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCH", m3_CUCH.Trim())
-				.WithQueryParameter("ORCU", m3_ORCU.Trim())
-				.WithQueryParameter("DECU", m3_DECU.Trim())
-				.WithQueryParameter("FDAT", m3_FDAT.ToM3String());
+				.WithQueryParameter("CUCH", m3CUCH.Trim())
+				.WithQueryParameter("ORCU", m3ORCU.Trim())
+				.WithQueryParameter("DECU", m3DECU.Trim())
+				.WithQueryParameter("FDAT", m3FDAT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_GCAC))
-				request.WithQueryParameter("GCAC", m3_GCAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INRC))
-				request.WithQueryParameter("INRC", m3_INRC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI3))
-				request.WithQueryParameter("ADI3", m3_ADI3.Trim());
-			if (m3_TDAT.HasValue)
-				request.WithQueryParameter("TDAT", m3_TDAT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ORC1))
-				request.WithQueryParameter("ORC1", m3_ORC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DEC1))
-				request.WithQueryParameter("DEC1", m3_DEC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI1))
-				request.WithQueryParameter("ADI1", m3_ADI1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INR1))
-				request.WithQueryParameter("INR1", m3_INR1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI4))
-				request.WithQueryParameter("ADI4", m3_ADI4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CCAC))
-				request.WithQueryParameter("CCAC", m3_CCAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CMCU))
-				request.WithQueryParameter("CMCU", m3_CMCU.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3GCAC))
+				request.WithQueryParameter("GCAC", m3GCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INRC))
+				request.WithQueryParameter("INRC", m3INRC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI3))
+				request.WithQueryParameter("ADI3", m3ADI3.Trim());
+			if (m3TDAT.HasValue)
+				request.WithQueryParameter("TDAT", m3TDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ORC1))
+				request.WithQueryParameter("ORC1", m3ORC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DEC1))
+				request.WithQueryParameter("DEC1", m3DEC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI1))
+				request.WithQueryParameter("ADI1", m3ADI1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INR1))
+				request.WithQueryParameter("INR1", m3INR1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI4))
+				request.WithQueryParameter("ADI4", m3ADI4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CCAC))
+				request.WithQueryParameter("CCAC", m3CCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CMCU))
+				request.WithQueryParameter("CMCU", m3CMCU.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -146,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -157,9 +160,9 @@ namespace M3H5Lib.Api
 		/// Description Add customer channel activity
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CCAC">Activity</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3CCAC">Activity</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -168,9 +171,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCusActivity(
-			string m3_CCAC = null, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
+			string m3CCAC = null, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -185,12 +188,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CCAC))
-				request.WithQueryParameter("CCAC", m3_CCAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CCAC))
+				request.WithQueryParameter("CCAC", m3CCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -200,7 +203,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -211,9 +215,9 @@ namespace M3H5Lib.Api
 		/// Description Add customer channel ID
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CUCH">Customer channel id</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3CUCH">Customer channel id</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -222,9 +226,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCusChannelID(
-			string m3_CUCH = null, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
+			string m3CUCH = null, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -239,12 +243,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUCH))
-				request.WithQueryParameter("CUCH", m3_CUCH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCH))
+				request.WithQueryParameter("CUCH", m3CUCH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -254,7 +258,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -265,14 +270,14 @@ namespace M3H5Lib.Api
 		/// Description Delete Customer Channel
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CUCH">Customer channel id (Required)</param>
-		/// <param name="m3_ORCU">Order by customer (Required)</param>
-		/// <param name="m3_DECU">Delivery customer (Required)</param>
-		/// <param name="m3_FDAT">From date (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_GCAC">Activity</param>
-		/// <param name="m3_INRC">Invoice recipient</param>
-		/// <param name="m3_ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
+		/// <param name="m3CUCH">Customer channel id (Required)</param>
+		/// <param name="m3ORCU">Order by customer (Required)</param>
+		/// <param name="m3DECU">Delivery customer (Required)</param>
+		/// <param name="m3FDAT">From date (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3GCAC">Activity</param>
+		/// <param name="m3INRC">Invoice recipient</param>
+		/// <param name="m3ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -281,14 +286,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Del(
-			string m3_CUCH, 
-			string m3_ORCU, 
-			string m3_DECU, 
-			DateTime m3_FDAT, 
-			string m3_ADID = null, 
-			string m3_GCAC = null, 
-			string m3_INRC = null, 
-			string m3_ADI3 = null, 
+			string m3CUCH, 
+			string m3ORCU, 
+			string m3DECU, 
+			DateTime m3FDAT, 
+			string m3ADID = null, 
+			string m3GCAC = null, 
+			string m3INRC = null, 
+			string m3ADI3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -303,29 +308,29 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCH))
-				throw new ArgumentNullException("m3_CUCH");
-			if (string.IsNullOrWhiteSpace(m3_ORCU))
-				throw new ArgumentNullException("m3_ORCU");
-			if (string.IsNullOrWhiteSpace(m3_DECU))
-				throw new ArgumentNullException("m3_DECU");
+			if (string.IsNullOrWhiteSpace(m3CUCH))
+				throw new ArgumentNullException(nameof(m3CUCH));
+			if (string.IsNullOrWhiteSpace(m3ORCU))
+				throw new ArgumentNullException(nameof(m3ORCU));
+			if (string.IsNullOrWhiteSpace(m3DECU))
+				throw new ArgumentNullException(nameof(m3DECU));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCH", m3_CUCH.Trim())
-				.WithQueryParameter("ORCU", m3_ORCU.Trim())
-				.WithQueryParameter("DECU", m3_DECU.Trim())
-				.WithQueryParameter("FDAT", m3_FDAT.ToM3String());
+				.WithQueryParameter("CUCH", m3CUCH.Trim())
+				.WithQueryParameter("ORCU", m3ORCU.Trim())
+				.WithQueryParameter("DECU", m3DECU.Trim())
+				.WithQueryParameter("FDAT", m3FDAT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_GCAC))
-				request.WithQueryParameter("GCAC", m3_GCAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INRC))
-				request.WithQueryParameter("INRC", m3_INRC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI3))
-				request.WithQueryParameter("ADI3", m3_ADI3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3GCAC))
+				request.WithQueryParameter("GCAC", m3GCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INRC))
+				request.WithQueryParameter("INRC", m3INRC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI3))
+				request.WithQueryParameter("ADI3", m3ADI3.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -335,7 +340,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -346,7 +352,7 @@ namespace M3H5Lib.Api
 		/// Description Delete customer channel activity
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CCAC">Activity</param>
+		/// <param name="m3CCAC">Activity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -355,7 +361,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelCusActivity(
-			string m3_CCAC = null, 
+			string m3CCAC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -370,8 +376,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CCAC))
-				request.WithQueryParameter("CCAC", m3_CCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CCAC))
+				request.WithQueryParameter("CCAC", m3CCAC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -381,7 +387,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -392,7 +399,7 @@ namespace M3H5Lib.Api
 		/// Description Delete customer channel ID
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CUCH">Customer channel id</param>
+		/// <param name="m3CUCH">Customer channel id</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -401,7 +408,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelCusChannelID(
-			string m3_CUCH = null, 
+			string m3CUCH = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -416,8 +423,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUCH))
-				request.WithQueryParameter("CUCH", m3_CUCH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCH))
+				request.WithQueryParameter("CUCH", m3CUCH.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -427,7 +434,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -438,18 +446,18 @@ namespace M3H5Lib.Api
 		/// Description List Customer Channel
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_FRCH">Customer channel id</param>
-		/// <param name="m3_TOCH">Customer channel id</param>
-		/// <param name="m3_FROR">Order by customer</param>
-		/// <param name="m3_TOOR">Order by customer</param>
-		/// <param name="m3_FRDE">Delivery customer</param>
-		/// <param name="m3_TODE">Delivery customer</param>
-		/// <param name="m3_FRAC">Activity</param>
-		/// <param name="m3_TOAC">Activity</param>
-		/// <param name="m3_FRIN">Invoice recipient</param>
-		/// <param name="m3_TOIN">Invoice recipient</param>
-		/// <param name="m3_FRDA">From date</param>
-		/// <param name="m3_TODA">To date</param>
+		/// <param name="m3FRCH">Customer channel id</param>
+		/// <param name="m3TOCH">Customer channel id</param>
+		/// <param name="m3FROR">Order by customer</param>
+		/// <param name="m3TOOR">Order by customer</param>
+		/// <param name="m3FRDE">Delivery customer</param>
+		/// <param name="m3TODE">Delivery customer</param>
+		/// <param name="m3FRAC">Activity</param>
+		/// <param name="m3TOAC">Activity</param>
+		/// <param name="m3FRIN">Invoice recipient</param>
+		/// <param name="m3TOIN">Invoice recipient</param>
+		/// <param name="m3FRDA">From date</param>
+		/// <param name="m3TODA">To date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -458,18 +466,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_FRCH = null, 
-			string m3_TOCH = null, 
-			string m3_FROR = null, 
-			string m3_TOOR = null, 
-			string m3_FRDE = null, 
-			string m3_TODE = null, 
-			string m3_FRAC = null, 
-			string m3_TOAC = null, 
-			string m3_FRIN = null, 
-			string m3_TOIN = null, 
-			DateTime? m3_FRDA = null, 
-			DateTime? m3_TODA = null, 
+			string m3FRCH = null, 
+			string m3TOCH = null, 
+			string m3FROR = null, 
+			string m3TOOR = null, 
+			string m3FRDE = null, 
+			string m3TODE = null, 
+			string m3FRAC = null, 
+			string m3TOAC = null, 
+			string m3FRIN = null, 
+			string m3TOIN = null, 
+			DateTime? m3FRDA = null, 
+			DateTime? m3TODA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -484,30 +492,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FRCH))
-				request.WithQueryParameter("FRCH", m3_FRCH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOCH))
-				request.WithQueryParameter("TOCH", m3_TOCH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FROR))
-				request.WithQueryParameter("FROR", m3_FROR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOR))
-				request.WithQueryParameter("TOOR", m3_TOOR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRDE))
-				request.WithQueryParameter("FRDE", m3_FRDE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TODE))
-				request.WithQueryParameter("TODE", m3_TODE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRAC))
-				request.WithQueryParameter("FRAC", m3_FRAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOAC))
-				request.WithQueryParameter("TOAC", m3_TOAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRIN))
-				request.WithQueryParameter("FRIN", m3_FRIN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOIN))
-				request.WithQueryParameter("TOIN", m3_TOIN.Trim());
-			if (m3_FRDA.HasValue)
-				request.WithQueryParameter("FRDA", m3_FRDA.Value.ToM3String());
-			if (m3_TODA.HasValue)
-				request.WithQueryParameter("TODA", m3_TODA.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3FRCH))
+				request.WithQueryParameter("FRCH", m3FRCH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOCH))
+				request.WithQueryParameter("TOCH", m3TOCH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FROR))
+				request.WithQueryParameter("FROR", m3FROR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOR))
+				request.WithQueryParameter("TOOR", m3TOOR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRDE))
+				request.WithQueryParameter("FRDE", m3FRDE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TODE))
+				request.WithQueryParameter("TODE", m3TODE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRAC))
+				request.WithQueryParameter("FRAC", m3FRAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOAC))
+				request.WithQueryParameter("TOAC", m3TOAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRIN))
+				request.WithQueryParameter("FRIN", m3FRIN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOIN))
+				request.WithQueryParameter("TOIN", m3TOIN.Trim());
+			if (m3FRDA.HasValue)
+				request.WithQueryParameter("FRDA", m3FRDA.Value.ToM3String());
+			if (m3TODA.HasValue)
+				request.WithQueryParameter("TODA", m3TODA.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -517,7 +525,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -528,8 +537,8 @@ namespace M3H5Lib.Api
 		/// Description List customer channel activity
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_FRAC">Activity</param>
-		/// <param name="m3_TOAC">Activity</param>
+		/// <param name="m3FRAC">Activity</param>
+		/// <param name="m3TOAC">Activity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -538,8 +547,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCusActivityResponse></returns>
 		/// <exception cref="M3Exception<LstCusActivityResponse>"></exception>
 		public async Task<M3Response<LstCusActivityResponse>> LstCusActivity(
-			string m3_FRAC = null, 
-			string m3_TOAC = null, 
+			string m3FRAC = null, 
+			string m3TOAC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -554,10 +563,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FRAC))
-				request.WithQueryParameter("FRAC", m3_FRAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOAC))
-				request.WithQueryParameter("TOAC", m3_TOAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRAC))
+				request.WithQueryParameter("FRAC", m3FRAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOAC))
+				request.WithQueryParameter("TOAC", m3TOAC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCusActivityResponse>(
@@ -567,7 +576,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -578,8 +588,8 @@ namespace M3H5Lib.Api
 		/// Description List customer channel ID
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_FRCH">Customer channel id</param>
-		/// <param name="m3_TOCH">Customer channel id</param>
+		/// <param name="m3FRCH">Customer channel id</param>
+		/// <param name="m3TOCH">Customer channel id</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -588,8 +598,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCusChannelIDResponse></returns>
 		/// <exception cref="M3Exception<LstCusChannelIDResponse>"></exception>
 		public async Task<M3Response<LstCusChannelIDResponse>> LstCusChannelID(
-			string m3_FRCH = null, 
-			string m3_TOCH = null, 
+			string m3FRCH = null, 
+			string m3TOCH = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -604,10 +614,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FRCH))
-				request.WithQueryParameter("FRCH", m3_FRCH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOCH))
-				request.WithQueryParameter("TOCH", m3_TOCH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRCH))
+				request.WithQueryParameter("FRCH", m3FRCH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOCH))
+				request.WithQueryParameter("TOCH", m3TOCH.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCusChannelIDResponse>(
@@ -617,7 +627,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -628,14 +639,14 @@ namespace M3H5Lib.Api
 		/// Description Select Customer Channel
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CUCH">Customer channel id (Required)</param>
-		/// <param name="m3_ORCU">Order by customer (Required)</param>
-		/// <param name="m3_DECU">Delivery customer (Required)</param>
-		/// <param name="m3_FDAT">From date (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_GCAC">Activity</param>
-		/// <param name="m3_INRC">Invoice recipient</param>
-		/// <param name="m3_ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
+		/// <param name="m3CUCH">Customer channel id (Required)</param>
+		/// <param name="m3ORCU">Order by customer (Required)</param>
+		/// <param name="m3DECU">Delivery customer (Required)</param>
+		/// <param name="m3FDAT">From date (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3GCAC">Activity</param>
+		/// <param name="m3INRC">Invoice recipient</param>
+		/// <param name="m3ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -644,14 +655,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelResponse></returns>
 		/// <exception cref="M3Exception<SelResponse>"></exception>
 		public async Task<M3Response<SelResponse>> Sel(
-			string m3_CUCH, 
-			string m3_ORCU, 
-			string m3_DECU, 
-			DateTime m3_FDAT, 
-			string m3_ADID = null, 
-			string m3_GCAC = null, 
-			string m3_INRC = null, 
-			string m3_ADI3 = null, 
+			string m3CUCH, 
+			string m3ORCU, 
+			string m3DECU, 
+			DateTime m3FDAT, 
+			string m3ADID = null, 
+			string m3GCAC = null, 
+			string m3INRC = null, 
+			string m3ADI3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -666,29 +677,29 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCH))
-				throw new ArgumentNullException("m3_CUCH");
-			if (string.IsNullOrWhiteSpace(m3_ORCU))
-				throw new ArgumentNullException("m3_ORCU");
-			if (string.IsNullOrWhiteSpace(m3_DECU))
-				throw new ArgumentNullException("m3_DECU");
+			if (string.IsNullOrWhiteSpace(m3CUCH))
+				throw new ArgumentNullException(nameof(m3CUCH));
+			if (string.IsNullOrWhiteSpace(m3ORCU))
+				throw new ArgumentNullException(nameof(m3ORCU));
+			if (string.IsNullOrWhiteSpace(m3DECU))
+				throw new ArgumentNullException(nameof(m3DECU));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCH", m3_CUCH.Trim())
-				.WithQueryParameter("ORCU", m3_ORCU.Trim())
-				.WithQueryParameter("DECU", m3_DECU.Trim())
-				.WithQueryParameter("FDAT", m3_FDAT.ToM3String());
+				.WithQueryParameter("CUCH", m3CUCH.Trim())
+				.WithQueryParameter("ORCU", m3ORCU.Trim())
+				.WithQueryParameter("DECU", m3DECU.Trim())
+				.WithQueryParameter("FDAT", m3FDAT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_GCAC))
-				request.WithQueryParameter("GCAC", m3_GCAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INRC))
-				request.WithQueryParameter("INRC", m3_INRC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI3))
-				request.WithQueryParameter("ADI3", m3_ADI3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3GCAC))
+				request.WithQueryParameter("GCAC", m3GCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INRC))
+				request.WithQueryParameter("INRC", m3INRC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI3))
+				request.WithQueryParameter("ADI3", m3ADI3.Trim());
 
 			// Execute the request
 			var result = await Execute<SelResponse>(
@@ -698,7 +709,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -709,24 +721,24 @@ namespace M3H5Lib.Api
 		/// Description Add Customer Channel
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CUCH">Customer channel id (Required)</param>
-		/// <param name="m3_ORCU">Order by customer (Required)</param>
-		/// <param name="m3_DECU">Delivery customer (Required)</param>
-		/// <param name="m3_FDAT">From date (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_INRC">Invoice recipient</param>
-		/// <param name="m3_GCAC">Activity</param>
-		/// <param name="m3_ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
-		/// <param name="m3_TDAT">To date</param>
-		/// <param name="m3_ORC1">Order by customer</param>
-		/// <param name="m3_DEC1">Delivery customer</param>
-		/// <param name="m3_ADI1">Delivery adress</param>
-		/// <param name="m3_INR1">Invoice recipient</param>
-		/// <param name="m3_ADI4">Invoice adress - NOT IN USE (2017-07-17)</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_CCAC">Activity</param>
-		/// <param name="m3_CMCU">Commersial customer</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3CUCH">Customer channel id (Required)</param>
+		/// <param name="m3ORCU">Order by customer (Required)</param>
+		/// <param name="m3DECU">Delivery customer (Required)</param>
+		/// <param name="m3FDAT">From date (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3INRC">Invoice recipient</param>
+		/// <param name="m3GCAC">Activity</param>
+		/// <param name="m3ADI3">Invoice adress - NOT IN USE (2017-07-17)</param>
+		/// <param name="m3TDAT">To date</param>
+		/// <param name="m3ORC1">Order by customer</param>
+		/// <param name="m3DEC1">Delivery customer</param>
+		/// <param name="m3ADI1">Delivery adress</param>
+		/// <param name="m3INR1">Invoice recipient</param>
+		/// <param name="m3ADI4">Invoice adress - NOT IN USE (2017-07-17)</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3CCAC">Activity</param>
+		/// <param name="m3CMCU">Commersial customer</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -735,24 +747,24 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_CUCH, 
-			string m3_ORCU, 
-			string m3_DECU, 
-			DateTime m3_FDAT, 
-			string m3_ADID = null, 
-			string m3_INRC = null, 
-			string m3_GCAC = null, 
-			string m3_ADI3 = null, 
-			DateTime? m3_TDAT = null, 
-			string m3_ORC1 = null, 
-			string m3_DEC1 = null, 
-			string m3_ADI1 = null, 
-			string m3_INR1 = null, 
-			string m3_ADI4 = null, 
-			string m3_PYNO = null, 
-			string m3_CCAC = null, 
-			string m3_CMCU = null, 
-			decimal? m3_TXID = null, 
+			string m3CUCH, 
+			string m3ORCU, 
+			string m3DECU, 
+			DateTime m3FDAT, 
+			string m3ADID = null, 
+			string m3INRC = null, 
+			string m3GCAC = null, 
+			string m3ADI3 = null, 
+			DateTime? m3TDAT = null, 
+			string m3ORC1 = null, 
+			string m3DEC1 = null, 
+			string m3ADI1 = null, 
+			string m3INR1 = null, 
+			string m3ADI4 = null, 
+			string m3PYNO = null, 
+			string m3CCAC = null, 
+			string m3CMCU = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -767,49 +779,49 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCH))
-				throw new ArgumentNullException("m3_CUCH");
-			if (string.IsNullOrWhiteSpace(m3_ORCU))
-				throw new ArgumentNullException("m3_ORCU");
-			if (string.IsNullOrWhiteSpace(m3_DECU))
-				throw new ArgumentNullException("m3_DECU");
+			if (string.IsNullOrWhiteSpace(m3CUCH))
+				throw new ArgumentNullException(nameof(m3CUCH));
+			if (string.IsNullOrWhiteSpace(m3ORCU))
+				throw new ArgumentNullException(nameof(m3ORCU));
+			if (string.IsNullOrWhiteSpace(m3DECU))
+				throw new ArgumentNullException(nameof(m3DECU));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCH", m3_CUCH.Trim())
-				.WithQueryParameter("ORCU", m3_ORCU.Trim())
-				.WithQueryParameter("DECU", m3_DECU.Trim())
-				.WithQueryParameter("FDAT", m3_FDAT.ToM3String());
+				.WithQueryParameter("CUCH", m3CUCH.Trim())
+				.WithQueryParameter("ORCU", m3ORCU.Trim())
+				.WithQueryParameter("DECU", m3DECU.Trim())
+				.WithQueryParameter("FDAT", m3FDAT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INRC))
-				request.WithQueryParameter("INRC", m3_INRC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_GCAC))
-				request.WithQueryParameter("GCAC", m3_GCAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI3))
-				request.WithQueryParameter("ADI3", m3_ADI3.Trim());
-			if (m3_TDAT.HasValue)
-				request.WithQueryParameter("TDAT", m3_TDAT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ORC1))
-				request.WithQueryParameter("ORC1", m3_ORC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DEC1))
-				request.WithQueryParameter("DEC1", m3_DEC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI1))
-				request.WithQueryParameter("ADI1", m3_ADI1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INR1))
-				request.WithQueryParameter("INR1", m3_INR1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADI4))
-				request.WithQueryParameter("ADI4", m3_ADI4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CCAC))
-				request.WithQueryParameter("CCAC", m3_CCAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CMCU))
-				request.WithQueryParameter("CMCU", m3_CMCU.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INRC))
+				request.WithQueryParameter("INRC", m3INRC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3GCAC))
+				request.WithQueryParameter("GCAC", m3GCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI3))
+				request.WithQueryParameter("ADI3", m3ADI3.Trim());
+			if (m3TDAT.HasValue)
+				request.WithQueryParameter("TDAT", m3TDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ORC1))
+				request.WithQueryParameter("ORC1", m3ORC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DEC1))
+				request.WithQueryParameter("DEC1", m3DEC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI1))
+				request.WithQueryParameter("ADI1", m3ADI1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INR1))
+				request.WithQueryParameter("INR1", m3INR1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADI4))
+				request.WithQueryParameter("ADI4", m3ADI4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CCAC))
+				request.WithQueryParameter("CCAC", m3CCAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CMCU))
+				request.WithQueryParameter("CMCU", m3CMCU.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -819,7 +831,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

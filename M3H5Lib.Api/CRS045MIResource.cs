@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS045MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Retrieve country information
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_CSCD">Country (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3CSCD">Country (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetBasicDataResponse></returns>
 		/// <exception cref="M3Exception<GetBasicDataResponse>"></exception>
 		public async Task<M3Response<GetBasicDataResponse>> GetBasicData(
-			string m3_CSCD, 
-			int? m3_CONO = null, 
+			string m3CSCD, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,16 +64,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSCD))
-				throw new ArgumentNullException("m3_CSCD");
+			if (string.IsNullOrWhiteSpace(m3CSCD))
+				throw new ArgumentNullException(nameof(m3CSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSCD", m3_CSCD.Trim());
+				.WithQueryParameter("CSCD", m3CSCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetBasicDataResponse>(
@@ -81,7 +83,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -92,8 +95,8 @@ namespace M3H5Lib.Api
 		/// Description List country information by country code
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CSCD">Country</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CSCD">Country</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -102,8 +105,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByCodeResponse></returns>
 		/// <exception cref="M3Exception<LstByCodeResponse>"></exception>
 		public async Task<M3Response<LstByCodeResponse>> LstByCode(
-			int? m3_CONO = null, 
-			string m3_CSCD = null, 
+			int? m3CONO = null, 
+			string m3CSCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -118,10 +121,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CSCD))
-				request.WithQueryParameter("CSCD", m3_CSCD.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CSCD))
+				request.WithQueryParameter("CSCD", m3CSCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByCodeResponse>(
@@ -131,7 +134,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -142,10 +146,10 @@ namespace M3H5Lib.Api
 		/// Description List country information by country code
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FRCD">From Country code</param>
-		/// <param name="m3_TOCD">To Country code</param>
-		/// <param name="m3_LMTS">Last import´s timestamp</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FRCD">From Country code</param>
+		/// <param name="m3TOCD">To Country code</param>
+		/// <param name="m3LMTS">Last import´s timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -154,10 +158,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCountryResponse></returns>
 		/// <exception cref="M3Exception<LstCountryResponse>"></exception>
 		public async Task<M3Response<LstCountryResponse>> LstCountry(
-			int? m3_CONO = null, 
-			string m3_FRCD = null, 
-			string m3_TOCD = null, 
-			decimal? m3_LMTS = null, 
+			int? m3CONO = null, 
+			string m3FRCD = null, 
+			string m3TOCD = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -172,14 +176,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FRCD))
-				request.WithQueryParameter("FRCD", m3_FRCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOCD))
-				request.WithQueryParameter("TOCD", m3_TOCD.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FRCD))
+				request.WithQueryParameter("FRCD", m3FRCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOCD))
+				request.WithQueryParameter("TOCD", m3TOCD.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstCountryResponse>(
@@ -189,7 +193,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -200,9 +205,9 @@ namespace M3H5Lib.Api
 		/// Description List country information by country code
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CSCD">Country</param>
-		/// <param name="m3_LMTS">Last import´s timestamp</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CSCD">Country</param>
+		/// <param name="m3LMTS">Last import´s timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -211,9 +216,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCountryAreaResponse></returns>
 		/// <exception cref="M3Exception<LstCountryAreaResponse>"></exception>
 		public async Task<M3Response<LstCountryAreaResponse>> LstCountryArea(
-			int? m3_CONO = null, 
-			string m3_CSCD = null, 
-			decimal? m3_LMTS = null, 
+			int? m3CONO = null, 
+			string m3CSCD = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -228,12 +233,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CSCD))
-				request.WithQueryParameter("CSCD", m3_CSCD.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CSCD))
+				request.WithQueryParameter("CSCD", m3CSCD.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstCountryAreaResponse>(
@@ -243,7 +248,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

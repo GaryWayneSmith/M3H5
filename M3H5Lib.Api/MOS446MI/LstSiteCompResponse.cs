@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Site
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Site")]
-		public string M3_MOTP => GetString("MOTP");
+		public string M3MOTP => GetString("MOTP");
 
 		/// <summary>
 		/// Description: Structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type")]
-		public string M3_CSTR => GetString("CSTR");
+		public string M3CSTR => GetString("CSTR");
 
 		/// <summary>
 		/// Description: NHA Configuration Position
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("NHA Configuration Position")]
-		public string M3_CFGH => GetString("CFGH");
+		public string M3CFGH => GetString("CFGH");
 
 		/// <summary>
 		/// Description: Position/Equipment/Spare part
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Position/Equipment/Spare part")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: Position/Equipment/spare part code 0/1/2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Position/Equipment/spare part code 0/1/2")]
-		public int? M3_POEQ => GetNullableInt("POEQ");
+		public int? M3POEQ => GetNullableInt("POEQ");
 
 		/// <summary>
 		/// Description: Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Pos/Eq/spare description
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pos/Eq/spare description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Lover level exists                   +/-
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lover level exists                   +/-")]
-		public string M3_PLUS => GetString("PLUS");
+		public string M3PLUS => GetString("PLUS");
 
 		/// <summary>
 		/// Description: Item number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: SubEquipment exists
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS446MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SubEquipment exists")]
-		public string M3_SUBE => GetString("SUBE");
+		public string M3SUBE => GetString("SUBE");
 	}
 }
 // EOF

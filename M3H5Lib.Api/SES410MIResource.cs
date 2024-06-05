@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SES410MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get data for an eSign Program
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PGNM">Program (Required)</param>
-		/// <param name="m3_FILE">File (Required)</param>
+		/// <param name="m3PGNM">Program (Required)</param>
+		/// <param name="m3FILE">File (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetProgramResponse></returns>
 		/// <exception cref="M3Exception<GetProgramResponse>"></exception>
 		public async Task<M3Response<GetProgramResponse>> GetProgram(
-			string m3_PGNM, 
-			string m3_FILE, 
+			string m3PGNM, 
+			string m3FILE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,15 +64,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim())
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim())
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<GetProgramResponse>(
@@ -80,7 +82,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -91,7 +94,7 @@ namespace M3H5Lib.Api
 		/// Description List data for eSign Programs
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PGNM">Program</param>
+		/// <param name="m3PGNM">Program</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -100,7 +103,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstProgramsResponse></returns>
 		/// <exception cref="M3Exception<LstProgramsResponse>"></exception>
 		public async Task<M3Response<LstProgramsResponse>> LstPrograms(
-			string m3_PGNM = null, 
+			string m3PGNM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -115,8 +118,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PGNM))
-				request.WithQueryParameter("PGNM", m3_PGNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGNM))
+				request.WithQueryParameter("PGNM", m3PGNM.Trim());
 
 			// Execute the request
 			var result = await Execute<LstProgramsResponse>(
@@ -126,7 +129,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -137,10 +141,10 @@ namespace M3H5Lib.Api
 		/// Description Update data for an eSign Program
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PGNM">Program (Required)</param>
-		/// <param name="m3_FILE">File (Required)</param>
-		/// <param name="m3_ESEV">Sign event</param>
-		/// <param name="m3_STAT">Status</param>
+		/// <param name="m3PGNM">Program (Required)</param>
+		/// <param name="m3FILE">File (Required)</param>
+		/// <param name="m3ESEV">Sign event</param>
+		/// <param name="m3STAT">Status</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -149,10 +153,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdProgram(
-			string m3_PGNM, 
-			string m3_FILE, 
-			int? m3_ESEV = null, 
-			string m3_STAT = null, 
+			string m3PGNM, 
+			string m3FILE, 
+			int? m3ESEV = null, 
+			string m3STAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -167,21 +171,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim())
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim())
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_ESEV.HasValue)
-				request.WithQueryParameter("ESEV", m3_ESEV.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
+			if (m3ESEV.HasValue)
+				request.WithQueryParameter("ESEV", m3ESEV.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -191,7 +195,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

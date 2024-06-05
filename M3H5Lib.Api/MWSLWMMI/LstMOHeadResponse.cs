@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Item number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_VANO => GetString("VANO");
+		public string M3VANO => GetString("VANO");
 
 		/// <summary>
 		/// Description: Division
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Priority
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Order type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Origin
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin")]
-		public int? M3_GETP => GetNullableInt("GETP");
+		public int? M3GETP => GetNullableInt("GETP");
 
 		/// <summary>
 		/// Description: Status - manufacturing order
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - manufacturing order")]
-		public string M3_WHST => GetString("WHST");
+		public string M3WHST => GetString("WHST");
 
 		/// <summary>
 		/// Description: Change date - order status
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date - order status")]
-		public DateTime? M3_SLDT => GetNullableDateTime("SLDT");
+		public DateTime? M3SLDT => GetNullableDateTime("SLDT");
 
 		/// <summary>
 		/// Description: Highest operation status - order
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest operation status - order")]
-		public string M3_WHHS => GetString("WHHS");
+		public string M3WHHS => GetString("WHHS");
 
 		/// <summary>
 		/// Description: Change date - highest operation status
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date - highest operation status")]
-		public DateTime? M3_HSDT => GetNullableDateTime("HSDT");
+		public DateTime? M3HSDT => GetNullableDateTime("HSDT");
 
 		/// <summary>
 		/// Description: Material status
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material status")]
-		public string M3_WMST => GetString("WMST");
+		public string M3WMST => GetString("WMST");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Reporting number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting number")]
-		public decimal? M3_WOSQ => GetNullableDecimal("WOSQ");
+		public decimal? M3WOSQ => GetNullableDecimal("WOSQ");
 
 		/// <summary>
 		/// Description: Drawing number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing number")]
-		public string M3_DWNO => GetString("DWNO");
+		public string M3DWNO => GetString("DWNO");
 
 		/// <summary>
 		/// Description: Picking list round
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list round")]
-		public int? M3_PLPR => GetNullableInt("PLPR");
+		public int? M3PLPR => GetNullableInt("PLPR");
 
 		/// <summary>
 		/// Description: Responsible
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Text line 1
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 1")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line 2
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 2")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Original start date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original start date")]
-		public DateTime? M3_FSTD => GetNullableDateTime("FSTD");
+		public DateTime? M3FSTD => GetNullableDateTime("FSTD");
 
 		/// <summary>
 		/// Description: Original finish date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original finish date")]
-		public DateTime? M3_FFID => GetNullableDateTime("FFID");
+		public DateTime? M3FFID => GetNullableDateTime("FFID");
 
 		/// <summary>
 		/// Description: Number of times replanned
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of times replanned")]
-		public int? M3_NURP => GetNullableInt("NURP");
+		public int? M3NURP => GetNullableInt("NURP");
 
 		/// <summary>
 		/// Description: Start date
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Finish date
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Actual start date
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual start date")]
-		public DateTime? M3_RSDT => GetNullableDateTime("RSDT");
+		public DateTime? M3RSDT => GetNullableDateTime("RSDT");
 
 		/// <summary>
 		/// Description: Actual finish date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual finish date")]
-		public DateTime? M3_REFD => GetNullableDateTime("REFD");
+		public DateTime? M3REFD => GetNullableDateTime("REFD");
 
 		/// <summary>
 		/// Description: Reporting date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting date")]
-		public DateTime? M3_RPDT => GetNullableDateTime("RPDT");
+		public DateTime? M3RPDT => GetNullableDateTime("RPDT");
 
 		/// <summary>
 		/// Description: Planning date
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Order documents printed
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order documents printed")]
-		public int? M3_WODP => GetNullableInt("WODP");
+		public int? M3WODP => GetNullableInt("WODP");
 
 		/// <summary>
 		/// Description: Original ordered quantity
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original ordered quantity")]
-		public decimal? M3_OROQ => GetNullableDecimal("OROQ");
+		public decimal? M3OROQ => GetNullableDecimal("OROQ");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Original ordered qty - alt U/M
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original ordered qty - alt U/M")]
-		public decimal? M3_OROA => GetNullableDecimal("OROA");
+		public decimal? M3OROA => GetNullableDecimal("OROA");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Number of lots
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of lots")]
-		public int? M3_NUBA => GetNullableInt("NUBA");
+		public int? M3NUBA => GetNullableInt("NUBA");
 
 		/// <summary>
 		/// Description: Manufacturing U/M
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing U/M")]
-		public string M3_MAUN => GetString("MAUN");
+		public string M3MAUN => GetString("MAUN");
 
 		/// <summary>
 		/// Description: Received quantity
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity")]
-		public decimal? M3_RVQT => GetNullableDecimal("RVQT");
+		public decimal? M3RVQT => GetNullableDecimal("RVQT");
 
 		/// <summary>
 		/// Description: Received quantity
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity")]
-		public decimal? M3_RVQA => GetNullableDecimal("RVQA");
+		public decimal? M3RVQA => GetNullableDecimal("RVQA");
 
 		/// <summary>
 		/// Description: Approved quantity - alternate U/M
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved quantity - alternate U/M")]
-		public decimal? M3_CAQA => GetNullableDecimal("CAQA");
+		public decimal? M3CAQA => GetNullableDecimal("CAQA");
 
 		/// <summary>
 		/// Description: Manufactured quantity
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufactured quantity")]
-		public decimal? M3_MAQT => GetNullableDecimal("MAQT");
+		public decimal? M3MAQT => GetNullableDecimal("MAQT");
 
 		/// <summary>
 		/// Description: Manufactured quantity
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufactured quantity")]
-		public decimal? M3_MAQA => GetNullableDecimal("MAQA");
+		public decimal? M3MAQA => GetNullableDecimal("MAQA");
 
 		/// <summary>
 		/// Description: Manual completion flag
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual completion flag")]
-		public int? M3_REND => GetNullableInt("REND");
+		public int? M3REND => GetNullableInt("REND");
 
 		/// <summary>
 		/// Description: Conversion factor
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion factor")]
-		public decimal? M3_COFA => GetNullableDecimal("COFA");
+		public decimal? M3COFA => GetNullableDecimal("COFA");
 
 		/// <summary>
 		/// Description: Conversion form
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion form")]
-		public int? M3_DMCF => GetNullableInt("DMCF");
+		public int? M3DMCF => GetNullableInt("DMCF");
 
 		/// <summary>
 		/// Description: Number of put-away cards
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of put-away cards")]
-		public int? M3_NUC1 => GetNullableInt("NUC1");
+		public int? M3NUC1 => GetNullableInt("NUC1");
 
 		/// <summary>
 		/// Description: Number of material requisitions
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of material requisitions")]
-		public int? M3_NUC2 => GetNullableInt("NUC2");
+		public int? M3NUC2 => GetNullableInt("NUC2");
 
 		/// <summary>
 		/// Description: Number of labor tickets
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of labor tickets")]
-		public int? M3_NUC3 => GetNullableInt("NUC3");
+		public int? M3NUC3 => GetNullableInt("NUC3");
 
 		/// <summary>
 		/// Description: Number of shop travelers
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of shop travelers")]
-		public int? M3_NUC4 => GetNullableInt("NUC4");
+		public int? M3NUC4 => GetNullableInt("NUC4");
 
 		/// <summary>
 		/// Description: Number of routing cards
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of routing cards")]
-		public int? M3_NUC5 => GetNullableInt("NUC5");
+		public int? M3NUC5 => GetNullableInt("NUC5");
 
 		/// <summary>
 		/// Description: Number of picking lists
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of picking lists")]
-		public int? M3_NUC6 => GetNullableInt("NUC6");
+		public int? M3NUC6 => GetNullableInt("NUC6");
 
 		/// <summary>
 		/// Description: Number of design documents
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of design documents")]
-		public int? M3_NUC7 => GetNullableInt("NUC7");
+		public int? M3NUC7 => GetNullableInt("NUC7");
 
 		/// <summary>
 		/// Description: Explosion
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Explosion")]
-		public int? M3_BDCD => GetNullableInt("BDCD");
+		public int? M3BDCD => GetNullableInt("BDCD");
 
 		/// <summary>
 		/// Description: Yield quantity
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Yield quantity")]
-		public decimal? M3_BAQT => GetNullableDecimal("BAQT");
+		public decimal? M3BAQT => GetNullableDecimal("BAQT");
 
 		/// <summary>
 		/// Description: Lead time this level
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time this level")]
-		public int? M3_LEAL => GetNullableInt("LEAL");
+		public int? M3LEAL => GetNullableInt("LEAL");
 
 		/// <summary>
 		/// Description: Share of lead time
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Share of lead time")]
-		public int? M3_LTRE => GetNullableInt("LTRE");
+		public int? M3LTRE => GetNullableInt("LTRE");
 
 		/// <summary>
 		/// Description: Infinite/finite
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Infinite/finite")]
-		public int? M3_WLDE => GetNullableInt("WLDE");
+		public int? M3WLDE => GetNullableInt("WLDE");
 
 		/// <summary>
 		/// Description: Same date for batches
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Same date for batches")]
-		public int? M3_SDTB => GetNullableInt("SDTB");
+		public int? M3SDTB => GetNullableInt("SDTB");
 
 		/// <summary>
 		/// Description: Subcontracting exists
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontracting exists")]
-		public int? M3_SCEX => GetNullableInt("SCEX");
+		public int? M3SCEX => GetNullableInt("SCEX");
 
 		/// <summary>
 		/// Description: Work center
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Production days
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Production days")]
-		public int? M3_PRDY => GetNullableInt("PRDY");
+		public int? M3PRDY => GetNullableInt("PRDY");
 
 		/// <summary>
 		/// Description: Lowest level
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest level")]
-		public int? M3_LEVL => GetNullableInt("LEVL");
+		public int? M3LEVL => GetNullableInt("LEVL");
 
 		/// <summary>
 		/// Description: Product number highest level
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number highest level")]
-		public string M3_PRHL => GetString("PRHL");
+		public string M3PRHL => GetString("PRHL");
 
 		/// <summary>
 		/// Description: MO number highest level
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("MO number highest level")]
-		public string M3_MFHL => GetString("MFHL");
+		public string M3MFHL => GetString("MFHL");
 
 		/// <summary>
 		/// Description: Product number overlying level
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number overlying level")]
-		public string M3_PRLO => GetString("PRLO");
+		public string M3PRLO => GetString("PRLO");
 
 		/// <summary>
 		/// Description: MO number nect higher level
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("MO number nect higher level")]
-		public string M3_MFLO => GetString("MFLO");
+		public string M3MFLO => GetString("MFLO");
 
 		/// <summary>
 		/// Description: Serial number overlying level
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number overlying level")]
-		public int? M3_MSLO => GetNullableInt("MSLO");
+		public int? M3MSLO => GetNullableInt("MSLO");
 
 		/// <summary>
 		/// Description: Level sequence
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Level sequence")]
-		public int? M3_LVSQ => GetNullableInt("LVSQ");
+		public int? M3LVSQ => GetNullableInt("LVSQ");
 
 		/// <summary>
 		/// Description: Cumulative scrap percentage
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative scrap percentage")]
-		public int? M3_ASPC => GetNullableInt("ASPC");
+		public int? M3ASPC => GetNullableInt("ASPC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Text identity
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Revision number
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Costing performed
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing performed")]
-		public int? M3_PCDO => GetNullableInt("PCDO");
+		public int? M3PCDO => GetNullableInt("PCDO");
 
 		/// <summary>
 		/// Description: Alternative routing
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternative routing")]
-		public string M3_AOID => GetString("AOID");
+		public string M3AOID => GetString("AOID");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Configuration number
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration number")]
-		public long? M3_CFIN => GetNullableLong("CFIN");
+		public long? M3CFIN => GetNullableLong("CFIN");
 
 		/// <summary>
 		/// Description: Simulation round
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Simulation round")]
-		public int? M3_ECVS => GetNullableInt("ECVS");
+		public int? M3ECVS => GetNullableInt("ECVS");
 
 		/// <summary>
 		/// Description: Project number
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Start time
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public int? M3_MSTI => GetNullableInt("MSTI");
+		public int? M3MSTI => GetNullableInt("MSTI");
 
 		/// <summary>
 		/// Description: Finish time
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish time")]
-		public int? M3_MFTI => GetNullableInt("MFTI");
+		public int? M3MFTI => GetNullableInt("MFTI");
 
 		/// <summary>
 		/// Description: Structure complexity
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure complexity")]
-		public int? M3_SCOM => GetNullableInt("SCOM");
+		public int? M3SCOM => GetNullableInt("SCOM");
 
 		/// <summary>
 		/// Description: Production line
@@ -1024,7 +1024,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Production line")]
-		public string M3_WCLN => GetString("WCLN");
+		public string M3WCLN => GetString("WCLN");
 
 		/// <summary>
 		/// Description: Number of operations
@@ -1035,7 +1035,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of operations")]
-		public int? M3_NUOP => GetNullableInt("NUOP");
+		public int? M3NUOP => GetNullableInt("NUOP");
 
 		/// <summary>
 		/// Description: Number of finished operations
@@ -1046,7 +1046,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of finished operations")]
-		public int? M3_NUFO => GetNullableInt("NUFO");
+		public int? M3NUFO => GetNullableInt("NUFO");
 
 		/// <summary>
 		/// Description: Action message (AM)
@@ -1057,7 +1057,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action message (AM)")]
-		public string M3_ACTP => GetString("ACTP");
+		public string M3ACTP => GetString("ACTP");
 
 		/// <summary>
 		/// Description: Alternate planning date
@@ -1068,7 +1068,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate planning date")]
-		public DateTime? M3_NNDT => GetNullableDateTime("NNDT");
+		public DateTime? M3NNDT => GetNullableDateTime("NNDT");
 
 		/// <summary>
 		/// Description: Schedule number
@@ -1079,7 +1079,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Schedule number")]
-		public decimal? M3_SCHN => GetNullableDecimal("SCHN");
+		public decimal? M3SCHN => GetNullableDecimal("SCHN");
 
 		/// <summary>
 		/// Description: Main product
@@ -1090,7 +1090,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main product")]
-		public string M3_HDPR => GetString("HDPR");
+		public string M3HDPR => GetString("HDPR");
 
 		/// <summary>
 		/// Description: Process code
@@ -1101,7 +1101,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Process code")]
-		public int? M3_PCCO => GetNullableInt("PCCO");
+		public int? M3PCCO => GetNullableInt("PCCO");
 
 		/// <summary>
 		/// Description: Costing percentage
@@ -1112,7 +1112,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing percentage")]
-		public int? M3_COSH => GetNullableInt("COSH");
+		public int? M3COSH => GetNullableInt("COSH");
 
 		/// <summary>
 		/// Description: Reschedule in - filter date
@@ -1123,7 +1123,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reschedule in - filter date")]
-		public DateTime? M3_RIFD => GetNullableDateTime("RIFD");
+		public DateTime? M3RIFD => GetNullableDateTime("RIFD");
 
 		/// <summary>
 		/// Description: Reschedule out - filter date
@@ -1134,7 +1134,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reschedule out - filter date")]
-		public DateTime? M3_ROFD => GetNullableDateTime("ROFD");
+		public DateTime? M3ROFD => GetNullableDateTime("ROFD");
 
 		/// <summary>
 		/// Description: App timestamp
@@ -1145,7 +1145,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("App timestamp")]
-		public DateTime? M3_TSDA => GetNullableDateTime("TSDA");
+		public DateTime? M3TSDA => GetNullableDateTime("TSDA");
 
 		/// <summary>
 		/// Description: App timestamp
@@ -1156,7 +1156,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("App timestamp")]
-		public int? M3_TSTE => GetNullableInt("TSTE");
+		public int? M3TSTE => GetNullableInt("TSTE");
 
 		/// <summary>
 		/// Description: Pull-up of delayed orders
@@ -1167,7 +1167,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pull-up of delayed orders")]
-		public int? M3_PULD => GetNullableInt("PULD");
+		public int? M3PULD => GetNullableInt("PULD");
 
 		/// <summary>
 		/// Description: Pull-up of early orders
@@ -1178,7 +1178,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pull-up of early orders")]
-		public int? M3_PULN => GetNullableInt("PULN");
+		public int? M3PULN => GetNullableInt("PULN");
 
 		/// <summary>
 		/// Description: Sub-network mark
@@ -1189,7 +1189,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sub-network mark")]
-		public int? M3_SUBN => GetNullableInt("SUBN");
+		public int? M3SUBN => GetNullableInt("SUBN");
 
 		/// <summary>
 		/// Description: App processed
@@ -1200,7 +1200,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("App processed")]
-		public int? M3_PRAP => GetNullableInt("PRAP");
+		public int? M3PRAP => GetNullableInt("PRAP");
 
 		/// <summary>
 		/// Description: Verify operation closing
@@ -1211,7 +1211,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Verify operation closing")]
-		public int? M3_VEOC => GetNullableInt("VEOC");
+		public int? M3VEOC => GetNullableInt("VEOC");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -1222,7 +1222,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Lot control method
@@ -1233,7 +1233,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot control method")]
-		public int? M3_INDI => GetNullableInt("INDI");
+		public int? M3INDI => GetNullableInt("INDI");
 
 		/// <summary>
 		/// Description: Lot numbering method
@@ -1244,7 +1244,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot numbering method")]
-		public int? M3_BACD => GetNullableInt("BACD");
+		public int? M3BACD => GetNullableInt("BACD");
 
 		/// <summary>
 		/// Description: Expiration date method
@@ -1255,7 +1255,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expiration date method")]
-		public int? M3_EXPD => GetNullableInt("EXPD");
+		public int? M3EXPD => GetNullableInt("EXPD");
 
 		/// <summary>
 		/// Description: Active or catch weight item
@@ -1266,7 +1266,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active or catch weight item")]
-		public int? M3_ACTI => GetNullableInt("ACTI");
+		public int? M3ACTI => GetNullableInt("ACTI");
 
 		/// <summary>
 		/// Description: Attribute managed
@@ -1277,7 +1277,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute managed")]
-		public int? M3_ATMN => GetNullableInt("ATMN");
+		public int? M3ATMN => GetNullableInt("ATMN");
 
 		/// <summary>
 		/// Description: Catch weight unit of measure
@@ -1288,7 +1288,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight unit of measure")]
-		public string M3_CWUN => GetString("CWUN");
+		public string M3CWUN => GetString("CWUN");
 
 		/// <summary>
 		/// Description: Container management
@@ -1299,7 +1299,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container management")]
-		public int? M3_COMG => GetNullableInt("COMG");
+		public int? M3COMG => GetNullableInt("COMG");
 
 		/// <summary>
 		/// Description: Inspection code
@@ -1310,7 +1310,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection code")]
-		public int? M3_QACD => GetNullableInt("QACD");
+		public int? M3QACD => GetNullableInt("QACD");
 
 		/// <summary>
 		/// Description: Shelf life
@@ -1321,7 +1321,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shelf life")]
-		public int? M3_SLDY => GetNullableInt("SLDY");
+		public int? M3SLDY => GetNullableInt("SLDY");
 
 		/// <summary>
 		/// Description: Two-step put-away
@@ -1332,7 +1332,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Two-step put-away")]
-		public int? M3_TSPA => GetNullableInt("TSPA");
+		public int? M3TSPA => GetNullableInt("TSPA");
 
 		/// <summary>
 		/// Description: To location
@@ -1343,7 +1343,7 @@ namespace M3H5Lib.Api.MWSLWMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To location")]
-		public string M3_TWSL => GetString("TWSL");
+		public string M3TWSL => GetString("TWSL");
 	}
 }
 // EOF

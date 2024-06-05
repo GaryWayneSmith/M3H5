@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim")]
-		public string M3_CLNO => GetString("CLNO");
+		public string M3CLNO => GetString("CLNO");
 
 		/// <summary>
 		/// Description: Version
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_VENO => GetNullableInt("VENO");
+		public int? M3VENO => GetNullableInt("VENO");
 
 		/// <summary>
 		/// Description: Claim spec
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim spec")]
-		public int? M3_CLSP => GetNullableInt("CLSP");
+		public int? M3CLSP => GetNullableInt("CLSP");
 
 		/// <summary>
 		/// Description: Transaction Sequence number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction Sequence number")]
-		public int? M3_TSEQ => GetNullableInt("TSEQ");
+		public int? M3TSEQ => GetNullableInt("TSEQ");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Line type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public int? M3_ALNT => GetNullableInt("ALNT");
+		public int? M3ALNT => GetNullableInt("ALNT");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_ALI1 => GetNullableInt("ALI1");
+		public int? M3ALI1 => GetNullableInt("ALI1");
 
 		/// <summary>
 		/// Description: Item number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Facility
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Return date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return date")]
-		public DateTime? M3_ARET => GetNullableDateTime("ARET");
+		public DateTime? M3ARET => GetNullableDateTime("ARET");
 
 		/// <summary>
 		/// Description: Return date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return date")]
-		public DateTime? M3_ARE1 => GetNullableDateTime("ARE1");
+		public DateTime? M3ARE1 => GetNullableDateTime("ARE1");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Employee number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Work center
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Miscellaneous cost type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous cost type")]
-		public string M3_MCTP => GetString("MCTP");
+		public string M3MCTP => GetString("MCTP");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Invoiced quantity - basic U/M
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity - basic U/M")]
-		public decimal? M3_IVQT => GetNullableDecimal("IVQT");
+		public decimal? M3IVQT => GetNullableDecimal("IVQT");
 
 		/// <summary>
 		/// Description: Sales price
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Handling charge
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Handling charge")]
-		public decimal? M3_AHPR => GetNullableDecimal("AHPR");
+		public decimal? M3AHPR => GetNullableDecimal("AHPR");
 
 		/// <summary>
 		/// Description: Parts settlement percentage
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parts settlement percentage")]
-		public int? M3_PSPC => GetNullableInt("PSPC");
+		public int? M3PSPC => GetNullableInt("PSPC");
 
 		/// <summary>
 		/// Description: Mfg approved qty
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mfg approved qty")]
-		public decimal? M3_MFAQ => GetNullableDecimal("MFAQ");
+		public decimal? M3MFAQ => GetNullableDecimal("MFAQ");
 
 		/// <summary>
 		/// Description: Mfg approved price
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mfg approved price")]
-		public decimal? M3_MFAP => GetNullableDecimal("MFAP");
+		public decimal? M3MFAP => GetNullableDecimal("MFAP");
 
 		/// <summary>
 		/// Description: Mfg handling approved amount
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mfg handling approved amount")]
-		public decimal? M3_MHAA => GetNullableDecimal("MHAA");
+		public decimal? M3MHAA => GetNullableDecimal("MHAA");
 
 		/// <summary>
 		/// Description: Net price
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price")]
-		public decimal? M3_NEPR => GetNullableDecimal("NEPR");
+		public decimal? M3NEPR => GetNullableDecimal("NEPR");
 
 		/// <summary>
 		/// Description: Total amount
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total amount")]
-		public decimal? M3_TOAM => GetNullableDecimal("TOAM");
+		public decimal? M3TOAM => GetNullableDecimal("TOAM");
 
 		/// <summary>
 		/// Description: Date part return requested
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date part return requested")]
-		public DateTime? M3_DPRR => GetNullableDateTime("DPRR");
+		public DateTime? M3DPRR => GetNullableDateTime("DPRR");
 
 		/// <summary>
 		/// Description: Part rtn dt ship
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Part rtn dt ship")]
-		public DateTime? M3_RTND => GetNullableDateTime("RTND");
+		public DateTime? M3RTND => GetNullableDateTime("RTND");
 
 		/// <summary>
 		/// Description: Remark
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_DLRM => GetString("DLRM");
+		public string M3DLRM => GetString("DLRM");
 
 		/// <summary>
 		/// Description: Text
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Work order number
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: WIP debit
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("WIP debit")]
-		public decimal? M3_AWCO => GetNullableDecimal("AWCO");
+		public decimal? M3AWCO => GetNullableDecimal("AWCO");
 
 		/// <summary>
 		/// Description: Discount
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount")]
-		public int? M3_DIPL => GetNullableInt("DIPL");
+		public int? M3DIPL => GetNullableInt("DIPL");
 
 		/// <summary>
 		/// Description: Discount amount
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount")]
-		public decimal? M3_DIAL => GetNullableDecimal("DIAL");
+		public decimal? M3DIAL => GetNullableDecimal("DIAL");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Time type
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type")]
-		public string M3_TTPE => GetString("TTPE");
+		public string M3TTPE => GetString("TTPE");
 
 		/// <summary>
 		/// Description: Service
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 	}
 }
 // EOF

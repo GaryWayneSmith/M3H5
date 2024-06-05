@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Selection matrix
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection matrix")]
-		public string M3_MXID => GetString("MXID");
+		public string M3MXID => GetString("MXID");
 
 		/// <summary>
 		/// Description: Valid date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: Matrix value in column 1 alpha
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 1 alpha")]
-		public string M3_MVC1 => GetString("MVC1");
+		public string M3MVC1 => GetString("MVC1");
 
 		/// <summary>
 		/// Description: Matrix value in column 1 numeric
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 1 numeric")]
-		public decimal? M3_MVN1 => GetNullableDecimal("MVN1");
+		public decimal? M3MVN1 => GetNullableDecimal("MVN1");
 
 		/// <summary>
 		/// Description: Matrix value in column 2 alpha
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 2 alpha")]
-		public string M3_MVC2 => GetString("MVC2");
+		public string M3MVC2 => GetString("MVC2");
 
 		/// <summary>
 		/// Description: Matrix value in column 2 numeric
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 2 numeric")]
-		public decimal? M3_MVN2 => GetNullableDecimal("MVN2");
+		public decimal? M3MVN2 => GetNullableDecimal("MVN2");
 
 		/// <summary>
 		/// Description: Matrix value in column 3 alpha
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 3 alpha")]
-		public string M3_MVC3 => GetString("MVC3");
+		public string M3MVC3 => GetString("MVC3");
 
 		/// <summary>
 		/// Description: Matrix value in column 3 numeric
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 3 numeric")]
-		public decimal? M3_MVN3 => GetNullableDecimal("MVN3");
+		public decimal? M3MVN3 => GetNullableDecimal("MVN3");
 
 		/// <summary>
 		/// Description: Matrix value in column 4 alpha
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 4 alpha")]
-		public string M3_MVC4 => GetString("MVC4");
+		public string M3MVC4 => GetString("MVC4");
 
 		/// <summary>
 		/// Description: Matrix value in column 4 numeric
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 4 numeric")]
-		public decimal? M3_MVN4 => GetNullableDecimal("MVN4");
+		public decimal? M3MVN4 => GetNullableDecimal("MVN4");
 
 		/// <summary>
 		/// Description: Matrix value in column 5 alpha
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 5 alpha")]
-		public string M3_MVC5 => GetString("MVC5");
+		public string M3MVC5 => GetString("MVC5");
 
 		/// <summary>
 		/// Description: Matrix value in column 5 numeric
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 5 numeric")]
-		public decimal? M3_MVN5 => GetNullableDecimal("MVN5");
+		public decimal? M3MVN5 => GetNullableDecimal("MVN5");
 
 		/// <summary>
 		/// Description: Matrix value in column 6 alpha
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 6 alpha")]
-		public string M3_MVC6 => GetString("MVC6");
+		public string M3MVC6 => GetString("MVC6");
 
 		/// <summary>
 		/// Description: Matrix value in column 6 numeric
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Matrix value in column 6 numeric")]
-		public decimal? M3_MVN6 => GetNullableDecimal("MVN6");
+		public decimal? M3MVN6 => GetNullableDecimal("MVN6");
 
 		/// <summary>
 		/// Description: Result
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result")]
-		public string M3_MRC1 => GetString("MRC1");
+		public string M3MRC1 => GetString("MRC1");
 
 		/// <summary>
 		/// Description: Result numeric column 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result numeric column 1")]
-		public decimal? M3_MNC1 => GetNullableDecimal("MNC1");
+		public decimal? M3MNC1 => GetNullableDecimal("MNC1");
 
 		/// <summary>
 		/// Description: Result numeric column 2
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result numeric column 2")]
-		public decimal? M3_MNC2 => GetNullableDecimal("MNC2");
+		public decimal? M3MNC2 => GetNullableDecimal("MNC2");
 
 		/// <summary>
 		/// Description: Result numeric column 3
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result numeric column 3")]
-		public decimal? M3_MNC3 => GetNullableDecimal("MNC3");
+		public decimal? M3MNC3 => GetNullableDecimal("MNC3");
 
 		/// <summary>
 		/// Description: Text identity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Desciption
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Desciption")]
-		public string M3_TEDS => GetString("TEDS");
+		public string M3TEDS => GetString("TEDS");
 	}
 }
 // EOF

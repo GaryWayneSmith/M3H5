@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS474MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public string M3_DTID => GetString("DTID");
+		public string M3DTID => GetString("DTID");
 
 		/// <summary>
 		/// Description: Field group
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS474MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field group")]
-		public string M3_CFMG => GetString("CFMG");
+		public string M3CFMG => GetString("CFMG");
 
 		/// <summary>
 		/// Description: Field
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS474MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_CFMF => GetString("CFMF");
+		public string M3CFMF => GetString("CFMF");
 
 		/// <summary>
 		/// Description: Field alpha
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS474MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field alpha")]
-		public string M3_CFMA => GetString("CFMA");
+		public string M3CFMA => GetString("CFMA");
 
 		/// <summary>
 		/// Description: Field num
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS474MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field num")]
-		public decimal? M3_CFMN => GetNullableDecimal("CFMN");
+		public decimal? M3CFMN => GetNullableDecimal("CFMN");
 
 		/// <summary>
 		/// Description: Field date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS474MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field date")]
-		public DateTime? M3_CFMD => GetNullableDateTime("CFMD");
+		public DateTime? M3CFMD => GetNullableDateTime("CFMD");
 	}
 }
 // EOF

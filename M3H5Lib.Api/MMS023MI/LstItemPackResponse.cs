@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Fill item
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fill item")]
-		public string M3_PKFI => GetString("PKFI");
+		public string M3PKFI => GetString("PKFI");
 
 		/// <summary>
 		/// Description: Fill quantity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fill quantity")]
-		public decimal? M3_PKFQ => GetNullableDecimal("PKFQ");
+		public decimal? M3PKFQ => GetNullableDecimal("PKFQ");
 
 		/// <summary>
 		/// Description: Fill U/M
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fill U/M")]
-		public string M3_PKFU => GetString("PKFU");
+		public string M3PKFU => GetString("PKFU");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Text identity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

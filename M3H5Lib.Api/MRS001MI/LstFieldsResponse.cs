@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_MINM => GetString("MINM");
+		public string M3MINM => GetString("MINM");
 
 		/// <summary>
 		/// Description: Transaction name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction name")]
-		public string M3_TRNM => GetString("TRNM");
+		public string M3TRNM => GetString("TRNM");
 
 		/// <summary>
 		/// Description: Input/Output
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Input/Output")]
-		public string M3_TRTP => GetString("TRTP");
+		public string M3TRTP => GetString("TRTP");
 
 		/// <summary>
 		/// Description: Field name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field name")]
-		public string M3_FLNM => GetString("FLNM");
+		public string M3FLNM => GetString("FLNM");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_FLDS => GetString("FLDS");
+		public string M3FLDS => GetString("FLDS");
 
 		/// <summary>
 		/// Description: Text ID
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text ID")]
-		public decimal? M3_TXT1 => GetNullableDecimal("TXT1");
+		public decimal? M3TXT1 => GetNullableDecimal("TXT1");
 
 		/// <summary>
 		/// Description: From position
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From position")]
-		public int? M3_FRPO => GetNullableInt("FRPO");
+		public int? M3FRPO => GetNullableInt("FRPO");
 
 		/// <summary>
 		/// Description: To position
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To position")]
-		public int? M3_TOPO => GetNullableInt("TOPO");
+		public int? M3TOPO => GetNullableInt("TOPO");
 
 		/// <summary>
 		/// Description: Length
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length")]
-		public int? M3_LENG => GetNullableInt("LENG");
+		public int? M3LENG => GetNullableInt("LENG");
 
 		/// <summary>
 		/// Description: Field type A=Alphanumeric, N=Numeric
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field type A=Alphanumeric, N=Numeric")]
-		public string M3_TYPE => GetString("TYPE");
+		public string M3TYPE => GetString("TYPE");
 
 		/// <summary>
 		/// Description: Mandatory
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mandatory")]
-		public string M3_MAND => GetString("MAND");
+		public string M3MAND => GetString("MAND");
 
 		/// <summary>
 		/// Description: Entry date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

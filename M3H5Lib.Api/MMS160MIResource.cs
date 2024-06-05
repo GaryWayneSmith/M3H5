@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS160MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,25 +38,25 @@ namespace M3H5Lib.Api
 		/// Description List Put Away Location
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_WHSL">Location</param>
-		/// <param name="m3_SLTP">Stock zone</param>
-		/// <param name="m3_WHLT">Location type</param>
-		/// <param name="m3_DEST">Status proposal</param>
-		/// <param name="m3_SPID">Distribution identity</param>
-		/// <param name="m3_ABFC">ABC class - frequency</param>
-		/// <param name="m3_TRFL">Transportation flow</param>
-		/// <param name="m3_LOCG">Location group</param>
-		/// <param name="m3_PISE">Warehouse equipment</param>
-		/// <param name="m3_NBRL">Number of balance identities</param>
-		/// <param name="m3_NORC">No of records</param>
-		/// <param name="m3_RPQA">Reported quantity in alternative unit</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ALUN">Alternate U/M</param>
-		/// <param name="m3_CAMU">Container</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_SELO">Selection option</param>
-		/// <param name="m3_APQU">Allow Partial Quantity</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3WHSL">Location</param>
+		/// <param name="m3SLTP">Stock zone</param>
+		/// <param name="m3WHLT">Location type</param>
+		/// <param name="m3DEST">Status proposal</param>
+		/// <param name="m3SPID">Distribution identity</param>
+		/// <param name="m3ABFC">ABC class - frequency</param>
+		/// <param name="m3TRFL">Transportation flow</param>
+		/// <param name="m3LOCG">Location group</param>
+		/// <param name="m3PISE">Warehouse equipment</param>
+		/// <param name="m3NBRL">Number of balance identities</param>
+		/// <param name="m3NORC">No of records</param>
+		/// <param name="m3RPQA">Reported quantity in alternative unit</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ALUN">Alternate U/M</param>
+		/// <param name="m3CAMU">Container</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3SELO">Selection option</param>
+		/// <param name="m3APQU">Allow Partial Quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -63,25 +65,25 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPutAwayLocResponse></returns>
 		/// <exception cref="M3Exception<LstPutAwayLocResponse>"></exception>
 		public async Task<M3Response<LstPutAwayLocResponse>> LstPutAwayLoc(
-			string m3_WHLO = null, 
-			string m3_WHSL = null, 
-			string m3_SLTP = null, 
-			string m3_WHLT = null, 
-			string m3_DEST = null, 
-			string m3_SPID = null, 
-			string m3_ABFC = null, 
-			string m3_TRFL = null, 
-			string m3_LOCG = null, 
-			string m3_PISE = null, 
-			int? m3_NBRL = null, 
-			long? m3_NORC = null, 
-			decimal? m3_RPQA = null, 
-			string m3_ITNO = null, 
-			string m3_ALUN = null, 
-			string m3_CAMU = null, 
-			string m3_BANO = null, 
-			int? m3_SELO = null, 
-			int? m3_APQU = null, 
+			string m3WHLO = null, 
+			string m3WHSL = null, 
+			string m3SLTP = null, 
+			string m3WHLT = null, 
+			string m3DEST = null, 
+			string m3SPID = null, 
+			string m3ABFC = null, 
+			string m3TRFL = null, 
+			string m3LOCG = null, 
+			string m3PISE = null, 
+			int? m3NBRL = null, 
+			long? m3NORC = null, 
+			decimal? m3RPQA = null, 
+			string m3ITNO = null, 
+			string m3ALUN = null, 
+			string m3CAMU = null, 
+			string m3BANO = null, 
+			int? m3SELO = null, 
+			int? m3APQU = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -96,44 +98,44 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHSL))
-				request.WithQueryParameter("WHSL", m3_WHSL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SLTP))
-				request.WithQueryParameter("SLTP", m3_SLTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLT))
-				request.WithQueryParameter("WHLT", m3_WHLT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DEST))
-				request.WithQueryParameter("DEST", m3_DEST.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPID))
-				request.WithQueryParameter("SPID", m3_SPID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABFC))
-				request.WithQueryParameter("ABFC", m3_ABFC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRFL))
-				request.WithQueryParameter("TRFL", m3_TRFL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LOCG))
-				request.WithQueryParameter("LOCG", m3_LOCG.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PISE))
-				request.WithQueryParameter("PISE", m3_PISE.Trim());
-			if (m3_NBRL.HasValue)
-				request.WithQueryParameter("NBRL", m3_NBRL.Value.ToString());
-			if (m3_NORC.HasValue)
-				request.WithQueryParameter("NORC", m3_NORC.Value.ToString());
-			if (m3_RPQA.HasValue)
-				request.WithQueryParameter("RPQA", m3_RPQA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ALUN))
-				request.WithQueryParameter("ALUN", m3_ALUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CAMU))
-				request.WithQueryParameter("CAMU", m3_CAMU.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (m3_SELO.HasValue)
-				request.WithQueryParameter("SELO", m3_SELO.Value.ToString());
-			if (m3_APQU.HasValue)
-				request.WithQueryParameter("APQU", m3_APQU.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHSL))
+				request.WithQueryParameter("WHSL", m3WHSL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SLTP))
+				request.WithQueryParameter("SLTP", m3SLTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLT))
+				request.WithQueryParameter("WHLT", m3WHLT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DEST))
+				request.WithQueryParameter("DEST", m3DEST.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPID))
+				request.WithQueryParameter("SPID", m3SPID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABFC))
+				request.WithQueryParameter("ABFC", m3ABFC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRFL))
+				request.WithQueryParameter("TRFL", m3TRFL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LOCG))
+				request.WithQueryParameter("LOCG", m3LOCG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PISE))
+				request.WithQueryParameter("PISE", m3PISE.Trim());
+			if (m3NBRL.HasValue)
+				request.WithQueryParameter("NBRL", m3NBRL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3NORC.HasValue)
+				request.WithQueryParameter("NORC", m3NORC.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RPQA.HasValue)
+				request.WithQueryParameter("RPQA", m3RPQA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ALUN))
+				request.WithQueryParameter("ALUN", m3ALUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CAMU))
+				request.WithQueryParameter("CAMU", m3CAMU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (m3SELO.HasValue)
+				request.WithQueryParameter("SELO", m3SELO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3APQU.HasValue)
+				request.WithQueryParameter("APQU", m3APQU.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPutAwayLocResponse>(
@@ -143,7 +145,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

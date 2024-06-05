@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Component number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component number")]
-		public string M3_MTNO => GetString("MTNO");
+		public string M3MTNO => GetString("MTNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Reserved quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reserved quantity")]
-		public decimal? M3_REQT => GetNullableDecimal("REQT");
+		public decimal? M3REQT => GetNullableDecimal("REQT");
 
 		/// <summary>
 		/// Description: Reservation date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reservation date")]
-		public DateTime? M3_RDAT => GetNullableDateTime("RDAT");
+		public DateTime? M3RDAT => GetNullableDateTime("RDAT");
 
 		/// <summary>
 		/// Description: Material status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material status")]
-		public string M3_WMST => GetString("WMST");
+		public string M3WMST => GetString("WMST");
 
 		/// <summary>
 		/// Description: Program name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Bank Account Identity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank Account Identity")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Bank Account Type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank Account Type")]
-		public int? M3_BKTP => GetNullableInt("BKTP");
+		public int? M3BKTP => GetNullableInt("BKTP");
 
 		/// <summary>
 		/// Description: Account Holder
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account Holder")]
-		public string M3_ACHO => GetString("ACHO");
+		public string M3ACHO => GetString("ACHO");
 
 		/// <summary>
 		/// Description: Code Cost BNL
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Cost BNL")]
-		public int? M3_XBNL => GetNullableInt("XBNL");
+		public int? M3XBNL => GetNullableInt("XBNL");
 
 		/// <summary>
 		/// Description: Code Cost Correspondence
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Cost Correspondence")]
-		public int? M3_XCCC => GetNullableInt("XCCC");
+		public int? M3XCCC => GetNullableInt("XCCC");
 
 		/// <summary>
 		/// Description: Code Kind of Payment Order
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Kind of Payment Order")]
-		public int? M3_XKPO => GetNullableInt("XKPO");
+		public int? M3XKPO => GetNullableInt("XKPO");
 
 		/// <summary>
 		/// Description: Code Kind of Performance
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Kind of Performance")]
-		public int? M3_XKPR => GetNullableInt("XKPR");
+		public int? M3XKPR => GetNullableInt("XKPR");
 
 		/// <summary>
 		/// Description: Code Cheque Cross
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Cheque Cross")]
-		public string M3_XCCR => GetString("XCCR");
+		public string M3XCCR => GetString("XCCR");
 
 		/// <summary>
 		/// Description: Code Send Cheque
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Send Cheque")]
-		public string M3_XCSC => GetString("XCSC");
+		public string M3XCSC => GetString("XCSC");
 
 		/// <summary>
 		/// Description: Code Payment Instruction 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Payment Instruction 1")]
-		public string M3_XPA1 => GetString("XPA1");
+		public string M3XPA1 => GetString("XPA1");
 
 		/// <summary>
 		/// Description: Code Payment Instruction 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Payment Instruction 2")]
-		public string M3_XPA2 => GetString("XPA2");
+		public string M3XPA2 => GetString("XPA2");
 
 		/// <summary>
 		/// Description: Code Payment Instruction 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Payment Instruction 3")]
-		public string M3_XPA3 => GetString("XPA3");
+		public string M3XPA3 => GetString("XPA3");
 
 		/// <summary>
 		/// Description: Code Payment Instruction 4
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Payment Instruction 4")]
-		public string M3_XPA4 => GetString("XPA4");
+		public string M3XPA4 => GetString("XPA4");
 
 		/// <summary>
 		/// Description: Code Kind of Payment
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Kind of Payment")]
-		public string M3_XKPY => GetString("XKPY");
+		public string M3XKPY => GetString("XKPY");
 
 		/// <summary>
 		/// Description: Description Kind of Payment
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description Kind of Payment")]
-		public string M3_XDP1 => GetString("XDP1");
+		public string M3XDP1 => GetString("XDP1");
 
 		/// <summary>
 		/// Description: Description Kind of Payment
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description Kind of Payment")]
-		public string M3_XDP2 => GetString("XDP2");
+		public string M3XDP2 => GetString("XDP2");
 
 		/// <summary>
 		/// Description: Registration Number DNB
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration Number DNB")]
-		public string M3_XDNB => GetString("XDNB");
+		public string M3XDNB => GetString("XDNB");
 
 		/// <summary>
 		/// Description: Code Item
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Item")]
-		public string M3_XCIT => GetString("XCIT");
+		public string M3XCIT => GetString("XCIT");
 
 		/// <summary>
 		/// Description: Item Number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item Number")]
-		public string M3_XITR => GetString("XITR");
+		public string M3XITR => GetString("XITR");
 
 		/// <summary>
 		/// Description: Trader Number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trader Number")]
-		public string M3_XTRN => GetString("XTRN");
+		public string M3XTRN => GetString("XTRN");
 
 		/// <summary>
 		/// Description: Purity of Giro Accounts
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purity of Giro Accounts")]
-		public int? M3_XPUR => GetNullableInt("XPUR");
+		public int? M3XPUR => GetNullableInt("XPUR");
 
 		/// <summary>
 		/// Description: Bank
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank")]
-		public string M3_XBAN => GetString("XBAN");
+		public string M3XBAN => GetString("XBAN");
 
 		/// <summary>
 		/// Description: Prefix Account Number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prefix Account Number")]
-		public int? M3_XPRF => GetNullableInt("XPRF");
+		public int? M3XPRF => GetNullableInt("XPRF");
 
 		/// <summary>
 		/// Description: Code Cost
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Cost")]
-		public string M3_XCST => GetString("XCST");
+		public string M3XCST => GetString("XCST");
 
 		/// <summary>
 		/// Description: Code Payment
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Payment")]
-		public string M3_XCPY => GetString("XCPY");
+		public string M3XCPY => GetString("XCPY");
 
 		/// <summary>
 		/// Description: Code BLIW
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code BLIW")]
-		public string M3_XBLW => GetString("XBLW");
+		public string M3XBLW => GetString("XBLW");
 
 		/// <summary>
 		/// Description: Currency Account
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.XBE692MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency Account")]
-		public int? M3_XCAC => GetNullableInt("XCAC");
+		public int? M3XCAC => GetNullableInt("XCAC");
 	}
 }
 // EOF

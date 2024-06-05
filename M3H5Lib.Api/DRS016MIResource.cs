@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.DRS016MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description List loading platforms
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_LODO">Loading platform</param>
-		/// <param name="m3_SDES">Place of loading</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3LODO">Loading platform</param>
+		/// <param name="m3SDES">Place of loading</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLoadPlatResponse></returns>
 		/// <exception cref="M3Exception<LstLoadPlatResponse>"></exception>
 		public async Task<M3Response<LstLoadPlatResponse>> LstLoadPlat(
-			string m3_WHLO = null, 
-			string m3_LODO = null, 
-			string m3_SDES = null, 
+			string m3WHLO = null, 
+			string m3LODO = null, 
+			string m3SDES = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,12 +66,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LODO))
-				request.WithQueryParameter("LODO", m3_LODO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDES))
-				request.WithQueryParameter("SDES", m3_SDES.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LODO))
+				request.WithQueryParameter("LODO", m3LODO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDES))
+				request.WithQueryParameter("SDES", m3SDES.Trim());
 
 			// Execute the request
 			var result = await Execute<LstLoadPlatResponse>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Responsible
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Acquisition code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition code")]
-		public int? M3_PUIT => GetNullableInt("PUIT");
+		public int? M3PUIT => GetNullableInt("PUIT");
 
 		/// <summary>
 		/// Description: Supply lead time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply lead time")]
-		public int? M3_LEAT => GetNullableInt("LEAT");
+		public int? M3LEAT => GetNullableInt("LEAT");
 
 		/// <summary>
 		/// Description: Supplying warehouse
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplying warehouse")]
-		public string M3_SUWH => GetString("SUWH");
+		public string M3SUWH => GetString("SUWH");
 
 		/// <summary>
 		/// Description: Multiple supply
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiple supply")]
-		public int? M3_SVEI => GetNullableInt("SVEI");
+		public int? M3SVEI => GetNullableInt("SVEI");
 
 		/// <summary>
 		/// Description: Supplier
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Status
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Reorder point
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reorder point")]
-		public decimal? M3_REOP => GetNullableDecimal("REOP");
+		public decimal? M3REOP => GetNullableDecimal("REOP");
 
 		/// <summary>
 		/// Description: Order quantity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order quantity")]
-		public decimal? M3_EOQT => GetNullableDecimal("EOQT");
+		public decimal? M3EOQT => GetNullableDecimal("EOQT");
 
 		/// <summary>
 		/// Description: Seasonal item
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Seasonal item")]
-		public int? M3_SESO => GetNullableInt("SESO");
+		public int? M3SESO => GetNullableInt("SESO");
 
 		/// <summary>
 		/// Description: Planning method
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning method")]
-		public int? M3_OPLC => GetNullableInt("OPLC");
+		public int? M3OPLC => GetNullableInt("OPLC");
 
 		/// <summary>
 		/// Description: Best before time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Best before time")]
-		public int? M3_BBTM => GetNullableInt("BBTM");
+		public int? M3BBTM => GetNullableInt("BBTM");
 
 		/// <summary>
 		/// Description: Supply chain policy
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply chain policy")]
-		public string M3_SCPO => GetString("SCPO");
+		public string M3SCPO => GetString("SCPO");
 	}
 }
 // EOF

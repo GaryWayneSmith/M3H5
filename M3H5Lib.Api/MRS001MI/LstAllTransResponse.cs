@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction name")]
-		public string M3_TRNM => GetString("TRNM");
+		public string M3TRNM => GetString("TRNM");
 
 		/// <summary>
 		/// Description: Program name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_MINM => GetString("MINM");
+		public string M3MINM => GetString("MINM");
 
 		/// <summary>
 		/// Description: Transaction description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction description")]
-		public string M3_TRDS => GetString("TRDS");
+		public string M3TRDS => GetString("TRDS");
 
 		/// <summary>
 		/// Description: Transaction type, Single/Multiple
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type, Single/Multiple")]
-		public string M3_SIMU => GetString("SIMU");
+		public string M3SIMU => GetString("SIMU");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public int? M3_STAT => GetNullableInt("STAT");
+		public int? M3STAT => GetNullableInt("STAT");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Company address 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 1")]
-		public string M3_COA1 => GetString("COA1");
+		public string M3COA1 => GetString("COA1");
 
 		/// <summary>
 		/// Description: Company address 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 2")]
-		public string M3_COA2 => GetString("COA2");
+		public string M3COA2 => GetString("COA2");
 
 		/// <summary>
 		/// Description: Company address 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 3")]
-		public string M3_COA3 => GetString("COA3");
+		public string M3COA3 => GetString("COA3");
 
 		/// <summary>
 		/// Description: Company address 4
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 4")]
-		public string M3_COA4 => GetString("COA4");
+		public string M3COA4 => GetString("COA4");
 
 		/// <summary>
 		/// Description: City
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Postal code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Telephone number 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 2")]
-		public string M3_PHN2 => GetString("PHN2");
+		public string M3PHN2 => GetString("PHN2");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_OVRN => GetString("OVRN");
+		public string M3OVRN => GetString("OVRN");
 
 		/// <summary>
 		/// Description: VAT electronic report number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT electronic report number")]
-		public long? M3_VERN => GetNullableLong("VERN");
+		public long? M3VERN => GetNullableLong("VERN");
 
 		/// <summary>
 		/// Description: Currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Reporting date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting date")]
-		public DateTime? M3_ERCD => GetNullableDateTime("ERCD");
+		public DateTime? M3ERCD => GetNullableDateTime("ERCD");
 
 		/// <summary>
 		/// Description: Base country
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base country")]
-		public string M3_FBSC => GetString("FBSC");
+		public string M3FBSC => GetString("FBSC");
 
 		/// <summary>
 		/// Description: VAT date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT date")]
-		public DateTime? M3_FVTD => GetNullableDateTime("FVTD");
+		public DateTime? M3FVTD => GetNullableDateTime("FVTD");
 
 		/// <summary>
 		/// Description: VAT date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT date")]
-		public DateTime? M3_TVTD => GetNullableDateTime("TVTD");
+		public DateTime? M3TVTD => GetNullableDateTime("TVTD");
 
 		/// <summary>
 		/// Description: Electronic mail address
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Electronic mail address")]
-		public string M3_EMA8 => GetString("EMA8");
+		public string M3EMA8 => GetString("EMA8");
 
 		/// <summary>
 		/// Description: Include already declared transactions
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Include already declared transactions")]
-		public int? M3_PVTR => GetNullableInt("PVTR");
+		public int? M3PVTR => GetNullableInt("PVTR");
 
 		/// <summary>
 		/// Description: Electronic VAT report - status
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Electronic VAT report - status")]
-		public int? M3_EVRS => GetNullableInt("EVRS");
+		public int? M3EVRS => GetNullableInt("EVRS");
 
 		/// <summary>
 		/// Description: Online VAT report
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Online VAT report")]
-		public int? M3_OLVR => GetNullableInt("OLVR");
+		public int? M3OLVR => GetNullableInt("OLVR");
 
 		/// <summary>
 		/// Description: Report process
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report process")]
-		public int? M3_OLRP => GetNullableInt("OLRP");
+		public int? M3OLRP => GetNullableInt("OLRP");
 	}
 }
 // EOF

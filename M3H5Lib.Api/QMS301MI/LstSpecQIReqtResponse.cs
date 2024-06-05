@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Request ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Request ID")]
-		public string M3_QRID => GetString("QRID");
+		public string M3QRID => GetString("QRID");
 
 		/// <summary>
 		/// Description: Specification
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification")]
-		public string M3_SPEC => GetString("SPEC");
+		public string M3SPEC => GetString("SPEC");
 
 		/// <summary>
 		/// Description: Effective date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective date")]
-		public DateTime? M3_QSE1 => GetNullableDateTime("QSE1");
+		public DateTime? M3QSE1 => GetNullableDateTime("QSE1");
 
 		/// <summary>
 		/// Description: Effective time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective time")]
-		public int? M3_QSE2 => GetNullableInt("QSE2");
+		public int? M3QSE2 => GetNullableInt("QSE2");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Inactive date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inactive date")]
-		public DateTime? M3_QSI1 => GetNullableDateTime("QSI1");
+		public DateTime? M3QSI1 => GetNullableDateTime("QSI1");
 
 		/// <summary>
 		/// Description: Inactive time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inactive time")]
-		public int? M3_QSI2 => GetNullableInt("QSI2");
+		public int? M3QSI2 => GetNullableInt("QSI2");
 
 		/// <summary>
 		/// Description: Spec type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Spec type")]
-		public int? M3_SPET => GetNullableInt("SPET");
+		public int? M3SPET => GetNullableInt("SPET");
 
 		/// <summary>
 		/// Description: Description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Specification status
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification status")]
-		public int? M3_QSST => GetNullableInt("QSST");
+		public int? M3QSST => GetNullableInt("QSST");
 
 		/// <summary>
 		/// Description: Number of copies
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of copies")]
-		public int? M3_NBEX => GetNullableInt("NBEX");
+		public int? M3NBEX => GetNullableInt("NBEX");
 
 		/// <summary>
 		/// Description: LI specification manager
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("LI specification manager")]
-		public string M3_SPRE => GetString("SPRE");
+		public string M3SPRE => GetString("SPRE");
 
 		/// <summary>
 		/// Description: Laboratory manager
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Laboratory manager")]
-		public string M3_SPAN => GetString("SPAN");
+		public string M3SPAN => GetString("SPAN");
 
 		/// <summary>
 		/// Description: Prior status
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prior status")]
-		public int? M3_PVST => GetNullableInt("PVST");
+		public int? M3PVST => GetNullableInt("PVST");
 
 		/// <summary>
 		/// Description: Reason
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reason")]
-		public string M3_QRSN => GetString("QRSN");
+		public string M3QRSN => GetString("QRSN");
 
 		/// <summary>
 		/// Description: Comments
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI01 => GetString("SI01");
+		public string M3SI01 => GetString("SI01");
 
 		/// <summary>
 		/// Description: Comments
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI02 => GetString("SI02");
+		public string M3SI02 => GetString("SI02");
 
 		/// <summary>
 		/// Description: Comments
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI03 => GetString("SI03");
+		public string M3SI03 => GetString("SI03");
 
 		/// <summary>
 		/// Description: Comments
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI04 => GetString("SI04");
+		public string M3SI04 => GetString("SI04");
 
 		/// <summary>
 		/// Description: Comments
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comments")]
-		public string M3_SI05 => GetString("SI05");
+		public string M3SI05 => GetString("SI05");
 
 		/// <summary>
 		/// Description: Date approved
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date approved")]
-		public DateTime? M3_APDT => GetNullableDateTime("APDT");
+		public DateTime? M3APDT => GetNullableDateTime("APDT");
 
 		/// <summary>
 		/// Description: Approved time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved time")]
-		public int? M3_APTE => GetNullableInt("APTE");
+		public int? M3APTE => GetNullableInt("APTE");
 
 		/// <summary>
 		/// Description: Approved by
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved by")]
-		public string M3_APUS => GetString("APUS");
+		public string M3APUS => GetString("APUS");
 
 		/// <summary>
 		/// Description: Rejected date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rejected date")]
-		public DateTime? M3_RJDT => GetNullableDateTime("RJDT");
+		public DateTime? M3RJDT => GetNullableDateTime("RJDT");
 
 		/// <summary>
 		/// Description: Rejected time
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rejected time")]
-		public int? M3_RJTE => GetNullableInt("RJTE");
+		public int? M3RJTE => GetNullableInt("RJTE");
 
 		/// <summary>
 		/// Description: Rejected by
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rejected by")]
-		public string M3_RJUS => GetString("RJUS");
+		public string M3RJUS => GetString("RJUS");
 
 		/// <summary>
 		/// Description: Overrided date
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overrided date")]
-		public DateTime? M3_OVDT => GetNullableDateTime("OVDT");
+		public DateTime? M3OVDT => GetNullableDateTime("OVDT");
 
 		/// <summary>
 		/// Description: Overrided time
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overrided time")]
-		public int? M3_OVTE => GetNullableInt("OVTE");
+		public int? M3OVTE => GetNullableInt("OVTE");
 
 		/// <summary>
 		/// Description: Overrided by
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overrided by")]
-		public string M3_OVUS => GetString("OVUS");
+		public string M3OVUS => GetString("OVUS");
 
 		/// <summary>
 		/// Description: Bulk item
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.QMS301MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bulk item")]
-		public string M3_BITN => GetString("BITN");
+		public string M3BITN => GetString("BITN");
 	}
 }
 // EOF

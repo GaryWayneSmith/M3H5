@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS061MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add a Rail station
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RASN">Rail station</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3RASN">Rail station</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddRailStation(
-			string m3_RASN = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			string m3RASN = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,12 +66,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RASN))
-				request.WithQueryParameter("RASN", m3_RASN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RASN))
+				request.WithQueryParameter("RASN", m3RASN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -90,7 +93,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a Rail station
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RASN">Rail station</param>
+		/// <param name="m3RASN">Rail station</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -99,7 +102,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltRailStation(
-			string m3_RASN = null, 
+			string m3RASN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -114,8 +117,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RASN))
-				request.WithQueryParameter("RASN", m3_RASN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RASN))
+				request.WithQueryParameter("RASN", m3RASN.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -136,7 +140,7 @@ namespace M3H5Lib.Api
 		/// Description Get a Rail station
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RASN">Rail station</param>
+		/// <param name="m3RASN">Rail station</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -145,7 +149,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetRailStationResponse></returns>
 		/// <exception cref="M3Exception<GetRailStationResponse>"></exception>
 		public async Task<M3Response<GetRailStationResponse>> GetRailStation(
-			string m3_RASN = null, 
+			string m3RASN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -160,8 +164,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RASN))
-				request.WithQueryParameter("RASN", m3_RASN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RASN))
+				request.WithQueryParameter("RASN", m3RASN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetRailStationResponse>(
@@ -171,7 +175,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -182,7 +187,7 @@ namespace M3H5Lib.Api
 		/// Description List Rail station
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RASN">Rail station</param>
+		/// <param name="m3RASN">Rail station</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -191,7 +196,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstRailStationResponse></returns>
 		/// <exception cref="M3Exception<LstRailStationResponse>"></exception>
 		public async Task<M3Response<LstRailStationResponse>> LstRailStation(
-			string m3_RASN = null, 
+			string m3RASN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -206,8 +211,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RASN))
-				request.WithQueryParameter("RASN", m3_RASN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RASN))
+				request.WithQueryParameter("RASN", m3RASN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstRailStationResponse>(
@@ -217,7 +222,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -228,9 +234,9 @@ namespace M3H5Lib.Api
 		/// Description Update Rail station
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RASN">Rail station</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3RASN">Rail station</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -239,9 +245,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdRailStation(
-			string m3_RASN = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			string m3RASN = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -256,12 +262,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RASN))
-				request.WithQueryParameter("RASN", m3_RASN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RASN))
+				request.WithQueryParameter("RASN", m3RASN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -271,7 +277,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

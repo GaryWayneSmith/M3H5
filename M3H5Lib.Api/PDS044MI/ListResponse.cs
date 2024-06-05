@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Disturbance type")]
-		public string M3_DICE => GetString("DICE");
+		public string M3DICE => GetString("DICE");
 
 		/// <summary>
 		/// Description: Text
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MSG1 => GetString("MSG1");
+		public string M3MSG1 => GetString("MSG1");
 
 		/// <summary>
 		/// Description: Text
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MSG2 => GetString("MSG2");
+		public string M3MSG2 => GetString("MSG2");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MSG3 => GetString("MSG3");
+		public string M3MSG3 => GetString("MSG3");
 
 		/// <summary>
 		/// Description: Production stop
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Production stop")]
-		public int? M3_PRDS => GetNullableInt("PRDS");
+		public int? M3PRDS => GetNullableInt("PRDS");
 
 		/// <summary>
 		/// Description: Send user message
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send user message")]
-		public int? M3_SNUM => GetNullableInt("SNUM");
+		public int? M3SNUM => GetNullableInt("SNUM");
 
 		/// <summary>
 		/// Description: Send user mail
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send user mail")]
-		public int? M3_SMAI => GetNullableInt("SMAI");
+		public int? M3SMAI => GetNullableInt("SMAI");
 
 		/// <summary>
 		/// Description: User
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_LSID => GetString("LSID");
+		public string M3LSID => GetString("LSID");
 
 		/// <summary>
 		/// Description: Address
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address")]
-		public string M3_LSAD => GetString("LSAD");
+		public string M3LSAD => GetString("LSAD");
 
 		/// <summary>
 		/// Description: Distribution list part 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution list part 1")]
-		public string M3_DLI1 => GetString("DLI1");
+		public string M3DLI1 => GetString("DLI1");
 
 		/// <summary>
 		/// Description: Distribution list part 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution list part 2")]
-		public string M3_DLI2 => GetString("DLI2");
+		public string M3DLI2 => GetString("DLI2");
 
 		/// <summary>
 		/// Description: Product
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Text identity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PDS044MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 	}
 }
 // EOF

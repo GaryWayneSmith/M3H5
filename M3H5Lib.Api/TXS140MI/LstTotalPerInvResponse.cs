@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT run")]
-		public string M3_VRUN => GetString("VRUN");
+		public string M3VRUN => GetString("VRUN");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_YVRN => GetString("YVRN");
+		public string M3YVRN => GetString("YVRN");
 
 		/// <summary>
 		/// Description: From/to country
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From/to country")]
-		public string M3_FTCO => GetString("FTCO");
+		public string M3FTCO => GetString("FTCO");
 
 		/// <summary>
 		/// Description: Customer/supplier code
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer/supplier code")]
-		public int? M3_CVOP => GetNullableInt("CVOP");
+		public int? M3CVOP => GetNullableInt("CVOP");
 
 		/// <summary>
 		/// Description: Customer/supplier
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer/supplier")]
-		public string M3_CUSP => GetString("CUSP");
+		public string M3CUSP => GetString("CUSP");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: Invoice year
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice year")]
-		public int? M3_INYR => GetNullableInt("INYR");
+		public int? M3INYR => GetNullableInt("INYR");
 
 		/// <summary>
 		/// Description: Accounting date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting date")]
-		public DateTime? M3_ACDT => GetNullableDateTime("ACDT");
+		public DateTime? M3ACDT => GetNullableDateTime("ACDT");
 
 		/// <summary>
 		/// Description: VAT date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT date")]
-		public DateTime? M3_VATD => GetNullableDateTime("VATD");
+		public DateTime? M3VATD => GetNullableDateTime("VATD");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Year
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Voucher number series
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number series")]
-		public string M3_VSER => GetString("VSER");
+		public string M3VSER => GetString("VSER");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: Name
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Currency
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Foreign currency amount
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign currency amount")]
-		public decimal? M3_CUAM => GetNullableDecimal("CUAM");
+		public decimal? M3CUAM => GetNullableDecimal("CUAM");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACAM => GetNullableDecimal("ACAM");
+		public decimal? M3ACAM => GetNullableDecimal("ACAM");
 
 		/// <summary>
 		/// Description: VAT
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT")]
-		public decimal? M3_VTAM => GetNullableDecimal("VTAM");
+		public decimal? M3VTAM => GetNullableDecimal("VTAM");
 
 		/// <summary>
 		/// Description: Adjusted VAT amount
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adjusted VAT amount")]
-		public decimal? M3_ADVT => GetNullableDecimal("ADVT");
+		public decimal? M3ADVT => GetNullableDecimal("ADVT");
 
 		/// <summary>
 		/// Description: Original - Supplier invoice number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original - Supplier invoice number")]
-		public string M3_SIN2 => GetString("SIN2");
+		public string M3SIN2 => GetString("SIN2");
 
 		/// <summary>
 		/// Description: Original - Invoice year
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original - Invoice year")]
-		public int? M3_OINY => GetNullableInt("OINY");
+		public int? M3OINY => GetNullableInt("OINY");
 
 		/// <summary>
 		/// Description: Original - Accounting date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original - Accounting date")]
-		public DateTime? M3_OACD => GetNullableDateTime("OACD");
+		public DateTime? M3OACD => GetNullableDateTime("OACD");
 
 		/// <summary>
 		/// Description: Original - Invoice date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original - Invoice date")]
-		public DateTime? M3_OIVD => GetNullableDateTime("OIVD");
+		public DateTime? M3OIVD => GetNullableDateTime("OIVD");
 
 		/// <summary>
 		/// Description: Original - VAT date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original - VAT date")]
-		public DateTime? M3_OVTD => GetNullableDateTime("OVTD");
+		public DateTime? M3OVTD => GetNullableDateTime("OVTD");
 
 		/// <summary>
 		/// Description: Original VAT base amount - Recorded amount
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original VAT base amount - Recorded amount")]
-		public decimal? M3_OACA => GetNullableDecimal("OACA");
+		public decimal? M3OACA => GetNullableDecimal("OACA");
 
 		/// <summary>
 		/// Description: Original VATamount - Recorded amount
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.TXS140MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original VATamount - Recorded amount")]
-		public decimal? M3_OVTA => GetNullableDecimal("OVTA");
+		public decimal? M3OVTA => GetNullableDecimal("OVTA");
 	}
 }
 // EOF

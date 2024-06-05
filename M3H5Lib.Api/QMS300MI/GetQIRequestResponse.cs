@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Request status
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Request status")]
-		public int? M3_QSTA => GetNullableInt("QSTA");
+		public int? M3QSTA => GetNullableInt("QSTA");
 
 		/// <summary>
 		/// Description: QI request approval status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request approval status")]
-		public int? M3_QAPR => GetNullableInt("QAPR");
+		public int? M3QAPR => GetNullableInt("QAPR");
 
 		/// <summary>
 		/// Description: QI request reqd date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request reqd date")]
-		public DateTime? M3_QRDT => GetNullableDateTime("QRDT");
+		public DateTime? M3QRDT => GetNullableDateTime("QRDT");
 
 		/// <summary>
 		/// Description: Replaced by QI request
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replaced by QI request")]
-		public string M3_QRRP => GetString("QRRP");
+		public string M3QRRP => GetString("QRRP");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Text identity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Container
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: Receiving number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving number")]
-		public long? M3_REPN => GetNullableLong("REPN");
+		public long? M3REPN => GetNullableLong("REPN");
 
 		/// <summary>
 		/// Description: Order line number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_RELI => GetNullableInt("RELI");
+		public int? M3RELI => GetNullableInt("RELI");
 	}
 }
 // EOF

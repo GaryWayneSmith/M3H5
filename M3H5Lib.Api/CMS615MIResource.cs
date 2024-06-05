@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS615MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Add supplier customer reference
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
-		/// <param name="m3_CSRE">Supplier's customer reference (Required)</param>
-		/// <param name="m3_CSRT">Supplier reference type</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
+		/// <param name="m3CSRE">Supplier's customer reference (Required)</param>
+		/// <param name="m3CSRT">Supplier reference type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSupCustRef(
-			string m3_CUNO, 
-			string m3_SUNO, 
-			string m3_CSRE, 
-			int? m3_CSRT = null, 
+			string m3CUNO, 
+			string m3SUNO, 
+			string m3CSRE, 
+			int? m3CSRT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,22 +68,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
-			if (string.IsNullOrWhiteSpace(m3_CSRE))
-				throw new ArgumentNullException("m3_CSRE");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
+			if (string.IsNullOrWhiteSpace(m3CSRE))
+				throw new ArgumentNullException(nameof(m3CSRE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("CSRE", m3_CSRE.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("CSRE", m3CSRE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CSRT.HasValue)
-				request.WithQueryParameter("CSRT", m3_CSRT.Value.ToString());
+			if (m3CSRT.HasValue)
+				request.WithQueryParameter("CSRT", m3CSRT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -102,8 +105,8 @@ namespace M3H5Lib.Api
 		/// Description Delete supplier customer reference
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -112,8 +115,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelSupCustRef(
-			string m3_CUNO, 
-			string m3_SUNO, 
+			string m3CUNO, 
+			string m3SUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -128,15 +131,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -146,7 +149,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -157,8 +161,8 @@ namespace M3H5Lib.Api
 		/// Description Get supplier customer reference
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -167,8 +171,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSupCustRefResponse></returns>
 		/// <exception cref="M3Exception<GetSupCustRefResponse>"></exception>
 		public async Task<M3Response<GetSupCustRefResponse>> GetSupCustRef(
-			string m3_CUNO, 
-			string m3_SUNO, 
+			string m3CUNO, 
+			string m3SUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -183,15 +187,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSupCustRefResponse>(
@@ -201,7 +205,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -212,7 +217,7 @@ namespace M3H5Lib.Api
 		/// Description List by customer
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CUNO">Customer (Required)</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -221,7 +226,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByCustomerResponse></returns>
 		/// <exception cref="M3Exception<LstByCustomerResponse>"></exception>
 		public async Task<M3Response<LstByCustomerResponse>> LstByCustomer(
-			string m3_CUNO, 
+			string m3CUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -236,12 +241,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByCustomerResponse>(
@@ -251,7 +256,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -262,9 +268,9 @@ namespace M3H5Lib.Api
 		/// Description List by supplier customer reference
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSRE">Supplier's customer reference (Required)</param>
-		/// <param name="m3_CSRT">Supplier reference type</param>
-		/// <param name="m3_SUNO">Supplier</param>
+		/// <param name="m3CSRE">Supplier's customer reference (Required)</param>
+		/// <param name="m3CSRT">Supplier reference type</param>
+		/// <param name="m3SUNO">Supplier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -273,9 +279,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstBySupCustRefResponse></returns>
 		/// <exception cref="M3Exception<LstBySupCustRefResponse>"></exception>
 		public async Task<M3Response<LstBySupCustRefResponse>> LstBySupCustRef(
-			string m3_CSRE, 
-			int? m3_CSRT = null, 
-			string m3_SUNO = null, 
+			string m3CSRE, 
+			int? m3CSRT = null, 
+			string m3SUNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -290,18 +296,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSRE))
-				throw new ArgumentNullException("m3_CSRE");
+			if (string.IsNullOrWhiteSpace(m3CSRE))
+				throw new ArgumentNullException(nameof(m3CSRE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSRE", m3_CSRE.Trim());
+				.WithQueryParameter("CSRE", m3CSRE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CSRT.HasValue)
-				request.WithQueryParameter("CSRT", m3_CSRT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
+			if (m3CSRT.HasValue)
+				request.WithQueryParameter("CSRT", m3CSRT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstBySupCustRefResponse>(
@@ -311,7 +317,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -322,7 +329,7 @@ namespace M3H5Lib.Api
 		/// Description List by supplier
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -331,7 +338,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstBySupplierResponse></returns>
 		/// <exception cref="M3Exception<LstBySupplierResponse>"></exception>
 		public async Task<M3Response<LstBySupplierResponse>> LstBySupplier(
-			string m3_SUNO, 
+			string m3SUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -346,12 +353,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim());
+				.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstBySupplierResponse>(
@@ -361,7 +368,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

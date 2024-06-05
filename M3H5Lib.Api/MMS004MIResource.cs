@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS004MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get Meters from Item master
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_MES0">Meter (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3MES0">Meter (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_ITNO, 
-			string m3_MES0, 
+			string m3ITNO, 
+			string m3MES0, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,15 +64,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_MES0))
-				throw new ArgumentNullException("m3_MES0");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3MES0))
+				throw new ArgumentNullException(nameof(m3MES0));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("MES0", m3_MES0.Trim());
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("MES0", m3MES0.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -80,7 +82,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -91,8 +94,8 @@ namespace M3H5Lib.Api
 		/// Description List Meters connected to Item
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_MES0">Meter</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3MES0">Meter</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -101,8 +104,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListResponse></returns>
 		/// <exception cref="M3Exception<ListResponse>"></exception>
 		public async Task<M3Response<ListResponse>> List(
-			string m3_ITNO = null, 
-			string m3_MES0 = null, 
+			string m3ITNO = null, 
+			string m3MES0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -117,10 +120,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MES0))
-				request.WithQueryParameter("MES0", m3_MES0.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MES0))
+				request.WithQueryParameter("MES0", m3MES0.Trim());
 
 			// Execute the request
 			var result = await Execute<ListResponse>(
@@ -130,7 +133,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -141,8 +145,8 @@ namespace M3H5Lib.Api
 		/// Description Select
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_MES0">Meter</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3MES0">Meter</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -151,8 +155,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectResponse></returns>
 		/// <exception cref="M3Exception<SelectResponse>"></exception>
 		public async Task<M3Response<SelectResponse>> Select(
-			string m3_ITNO, 
-			string m3_MES0 = null, 
+			string m3ITNO, 
+			string m3MES0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -167,16 +171,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MES0))
-				request.WithQueryParameter("MES0", m3_MES0.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MES0))
+				request.WithQueryParameter("MES0", m3MES0.Trim());
 
 			// Execute the request
 			var result = await Execute<SelectResponse>(
@@ -186,7 +190,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

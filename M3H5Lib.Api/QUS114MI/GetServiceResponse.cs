@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Cost price
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public decimal? M3_UCOS => GetNullableDecimal("UCOS");
+		public decimal? M3UCOS => GetNullableDecimal("UCOS");
 
 		/// <summary>
 		/// Description: Responsible
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Text identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Currency
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Costing date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing date")]
-		public DateTime? M3_PCDT => GetNullableDateTime("PCDT");
+		public DateTime? M3PCDT => GetNullableDateTime("PCDT");
 
 		/// <summary>
 		/// Description: Configuration service
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration service")]
-		public int? M3_CSER => GetNullableInt("CSER");
+		public int? M3CSER => GetNullableInt("CSER");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Internal customer
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal customer")]
-		public string M3_ICUN => GetString("ICUN");
+		public string M3ICUN => GetString("ICUN");
 
 		/// <summary>
 		/// Description: Service price list
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price list")]
-		public string M3_SPRL => GetString("SPRL");
+		public string M3SPRL => GetString("SPRL");
 
 		/// <summary>
 		/// Description: Service price list
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price list")]
-		public string M3_SPR2 => GetString("SPR2");
+		public string M3SPR2 => GetString("SPR2");
 
 		/// <summary>
 		/// Description: Entry date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Order type
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.QUS114MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_AOTY => GetString("AOTY");
+		public string M3AOTY => GetString("AOTY");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Message direction
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message direction")]
-		public string M3_E0IO => GetString("E0IO");
+		public string M3E0IO => GetString("E0IO");
 
 		/// <summary>
 		/// Description: Direction
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: TEI Transfer ID
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Transfer ID")]
-		public string M3_TINR => GetString("TINR");
+		public string M3TINR => GetString("TINR");
 
 		/// <summary>
 		/// Description: Packaging
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Packaging type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging type")]
-		public string M3_PACK => GetString("PACK");
+		public string M3PACK => GetString("PACK");
 
 		/// <summary>
 		/// Description: Number of packages
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages")]
-		public int? M3_NUPA => GetNullableInt("NUPA");
+		public int? M3NUPA => GetNullableInt("NUPA");
 
 		/// <summary>
 		/// Description: Net weight
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Volume
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Estimated free unit of assigned goods
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated free unit of assigned goods")]
-		public decimal? M3_FCU1 => GetNullableDecimal("FCU1");
+		public decimal? M3FCU1 => GetNullableDecimal("FCU1");
 
 		/// <summary>
 		/// Description: Packaging length
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging length")]
-		public int? M3_PACL => GetNullableInt("PACL");
+		public int? M3PACL => GetNullableInt("PACL");
 
 		/// <summary>
 		/// Description: Packaging width
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging width")]
-		public int? M3_PACW => GetNullableInt("PACW");
+		public int? M3PACW => GetNullableInt("PACW");
 
 		/// <summary>
 		/// Description: Packaging height
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging height")]
-		public int? M3_PACH => GetNullableInt("PACH");
+		public int? M3PACH => GetNullableInt("PACH");
 
 		/// <summary>
 		/// Description: General item type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("General item type")]
-		public string M3_ITTG => GetString("ITTG");
+		public string M3ITTG => GetString("ITTG");
 
 		/// <summary>
 		/// Description: Remark
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_DLRM => GetString("DLRM");
+		public string M3DLRM => GetString("DLRM");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Purchase order line subnumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line subnumber")]
-		public int? M3_PNLS => GetNullableInt("PNLS");
+		public int? M3PNLS => GetNullableInt("PNLS");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Supplier item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier item number")]
-		public string M3_SITE => GetString("SITE");
+		public string M3SITE => GetString("SITE");
 
 		/// <summary>
 		/// Description: Confirmed delivery date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery date")]
-		public DateTime? M3_CODT => GetNullableDateTime("CODT");
+		public DateTime? M3CODT => GetNullableDateTime("CODT");
 
 		/// <summary>
 		/// Description: Confirmed quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed quantity")]
-		public decimal? M3_CFQA => GetNullableDecimal("CFQA");
+		public decimal? M3CFQA => GetNullableDecimal("CFQA");
 
 		/// <summary>
 		/// Description: Purchase order U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order U/M")]
-		public string M3_PUUN => GetString("PUUN");
+		public string M3PUUN => GetString("PUUN");
 
 		/// <summary>
 		/// Description: Facility
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Warehouse name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse name")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: Purchase order category
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order category")]
-		public string M3_POTC => GetString("POTC");
+		public string M3POTC => GetString("POTC");
 
 		/// <summary>
 		/// Description: Highest status - purchase order
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - purchase order")]
-		public string M3_PUST => GetString("PUST");
+		public string M3PUST => GetString("PUST");
 
 		/// <summary>
 		/// Description: Lowest status - purchase order
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - purchase order")]
-		public string M3_PUSL => GetString("PUSL");
+		public string M3PUSL => GetString("PUSL");
 
 		/// <summary>
 		/// Description: Supplier
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Service process
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service process")]
-		public string M3_PRCS => GetString("PRCS");
+		public string M3PRCS => GetString("PRCS");
 
 		/// <summary>
 		/// Description: Service
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Purchase order item name
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order item name")]
-		public string M3_PITD => GetString("PITD");
+		public string M3PITD => GetString("PITD");
 
 		/// <summary>
 		/// Description: Purchase order item description
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order item description")]
-		public string M3_PITT => GetString("PITT");
+		public string M3PITT => GetString("PITT");
 
 		/// <summary>
 		/// Description: Supplier order number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier order number")]
-		public string M3_SORN => GetString("SORN");
+		public string M3SORN => GetString("SORN");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Discount 1
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 1")]
-		public int? M3_ODI1 => GetNullableInt("ODI1");
+		public int? M3ODI1 => GetNullableInt("ODI1");
 
 		/// <summary>
 		/// Description: Discount 2
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 2")]
-		public int? M3_ODI2 => GetNullableInt("ODI2");
+		public int? M3ODI2 => GetNullableInt("ODI2");
 
 		/// <summary>
 		/// Description: Discount 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 3")]
-		public int? M3_ODI3 => GetNullableInt("ODI3");
+		public int? M3ODI3 => GetNullableInt("ODI3");
 
 		/// <summary>
 		/// Description: Confirmed purchase price
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed purchase price")]
-		public decimal? M3_CPPR => GetNullableDecimal("CPPR");
+		public decimal? M3CPPR => GetNullableDecimal("CPPR");
 
 		/// <summary>
 		/// Description: Confirmed discount 1
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed discount 1")]
-		public int? M3_CFD1 => GetNullableInt("CFD1");
+		public int? M3CFD1 => GetNullableInt("CFD1");
 
 		/// <summary>
 		/// Description: Confirmed discount 2
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed discount 2")]
-		public int? M3_CFD2 => GetNullableInt("CFD2");
+		public int? M3CFD2 => GetNullableInt("CFD2");
 
 		/// <summary>
 		/// Description: Confirmed discount 3
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed discount 3")]
-		public int? M3_CFD3 => GetNullableInt("CFD3");
+		public int? M3CFD3 => GetNullableInt("CFD3");
 
 		/// <summary>
 		/// Description: Purchase price U/M
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price U/M")]
-		public string M3_PPUN => GetString("PPUN");
+		public string M3PPUN => GetString("PPUN");
 
 		/// <summary>
 		/// Description: Purchase price quantity
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price quantity")]
-		public int? M3_PUCD => GetNullableInt("PUCD");
+		public int? M3PUCD => GetNullableInt("PUCD");
 
 		/// <summary>
 		/// Description: Confirmed purchase price quantity
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed purchase price quantity")]
-		public int? M3_CPUC => GetNullableInt("CPUC");
+		public int? M3CPUC => GetNullableInt("CPUC");
 
 		/// <summary>
 		/// Description: Line amount - order currency
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount - order currency")]
-		public decimal? M3_LNAM => GetNullableDecimal("LNAM");
+		public decimal? M3LNAM => GetNullableDecimal("LNAM");
 
 		/// <summary>
 		/// Description: Purchase price text
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price text")]
-		public int? M3_PTCD => GetNullableInt("PTCD");
+		public int? M3PTCD => GetNullableInt("PTCD");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_DWDT => GetNullableDateTime("DWDT");
+		public DateTime? M3DWDT => GetNullableDateTime("DWDT");
 
 		/// <summary>
 		/// Description: Valid delivery date
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid delivery date")]
-		public DateTime? M3_VDDT => GetNullableDateTime("VDDT");
+		public DateTime? M3VDDT => GetNullableDateTime("VDDT");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Advised quantity alternate U/M
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Advised quantity alternate U/M")]
-		public decimal? M3_ADQA => GetNullableDecimal("ADQA");
+		public decimal? M3ADQA => GetNullableDecimal("ADQA");
 
 		/// <summary>
 		/// Description: Transport notified quantity
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transport notified quantity")]
-		public decimal? M3_TNQA => GetNullableDecimal("TNQA");
+		public decimal? M3TNQA => GetNullableDecimal("TNQA");
 
 		/// <summary>
 		/// Description: Received quantity
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity")]
-		public decimal? M3_RVQA => GetNullableDecimal("RVQA");
+		public decimal? M3RVQA => GetNullableDecimal("RVQA");
 
 		/// <summary>
 		/// Description: Receipt date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receipt date")]
-		public DateTime? M3_RCDT => GetNullableDateTime("RCDT");
+		public DateTime? M3RCDT => GetNullableDateTime("RCDT");
 
 		/// <summary>
 		/// Description: Approved quantity - alternate U/M
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approved quantity - alternate U/M")]
-		public decimal? M3_CAQA => GetNullableDecimal("CAQA");
+		public decimal? M3CAQA => GetNullableDecimal("CAQA");
 
 		/// <summary>
 		/// Description: Rejected quantity
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rejected quantity")]
-		public decimal? M3_RJQA => GetNullableDecimal("RJQA");
+		public decimal? M3RJQA => GetNullableDecimal("RJQA");
 
 		/// <summary>
 		/// Description: Stored quantity
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stored quantity")]
-		public decimal? M3_SDQA => GetNullableDecimal("SDQA");
+		public decimal? M3SDQA => GetNullableDecimal("SDQA");
 
 		/// <summary>
 		/// Description: Invoiced quantity - alternate U/M
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity - alternate U/M")]
-		public decimal? M3_IVQA => GetNullableDecimal("IVQA");
+		public decimal? M3IVQA => GetNullableDecimal("IVQA");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IDAT => GetNullableDateTime("IDAT");
+		public DateTime? M3IDAT => GetNullableDateTime("IDAT");
 
 		/// <summary>
 		/// Description: Planned order
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned order")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Subnumber - planned order
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - planned order")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Requisition by
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requisition by")]
-		public string M3_PURC => GetString("PURC");
+		public string M3PURC => GetString("PURC");
 
 		/// <summary>
 		/// Description: Buyer
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buyer")]
-		public string M3_BUYE => GetString("BUYE");
+		public string M3BUYE => GetString("BUYE");
 
 		/// <summary>
 		/// Description: Goods receiving method
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods receiving method")]
-		public string M3_GRMT => GetString("GRMT");
+		public string M3GRMT => GetString("GRMT");
 
 		/// <summary>
 		/// Description: Packaging
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Name of packaging type
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name of packaging type")]
-		public string M3_PANM => GetString("PANM");
+		public string M3PANM => GetString("PANM");
 
 		/// <summary>
 		/// Description: Text identity
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Revision number
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Our reference number
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Our reference number")]
-		public string M3_OURR => GetString("OURR");
+		public string M3OURR => GetString("OURR");
 
 		/// <summary>
 		/// Description: Reference type
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference type")]
-		public string M3_OURT => GetString("OURT");
+		public string M3OURT => GetString("OURT");
 
 		/// <summary>
 		/// Description: VAT code
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Priority
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PRIP => GetString("PRIP");
+		public string M3PRIP => GetString("PRIP");
 
 		/// <summary>
 		/// Description: Recipient
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient")]
-		public string M3_IRCV => GetString("IRCV");
+		public string M3IRCV => GetString("IRCV");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Manufacturer name
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery method Name
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method Name")]
-		public string M3_MOTX => GetString("MOTX");
+		public string M3MOTX => GetString("MOTX");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Delivery terms Name
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms Name")]
-		public string M3_TETX => GetString("TETX");
+		public string M3TETX => GetString("TETX");
 
 		/// <summary>
 		/// Description: Terms text
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Terms text")]
-		public string M3_TEL1 => GetString("TEL1");
+		public string M3TEL1 => GetString("TEL1");
 
 		/// <summary>
 		/// Description: Harbor or airport
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harbor or airport")]
-		public string M3_HAFE => GetString("HAFE");
+		public string M3HAFE => GetString("HAFE");
 
 		/// <summary>
 		/// Description: Harbor Name
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harbor Name")]
-		public string M3_HATX => GetString("HATX");
+		public string M3HATX => GetString("HATX");
 
 		/// <summary>
 		/// Description: Lot numbering method
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot numbering method")]
-		public int? M3_BACD => GetNullableInt("BACD");
+		public int? M3BACD => GetNullableInt("BACD");
 
 		/// <summary>
 		/// Description: Lot control method
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot control method")]
-		public int? M3_INDI => GetNullableInt("INDI");
+		public int? M3INDI => GetNullableInt("INDI");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Number of price decimal places
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of price decimal places")]
-		public int? M3_PDCC => GetNullableInt("PDCC");
+		public int? M3PDCC => GetNullableInt("PDCC");
 
 		/// <summary>
 		/// Description: Project number
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Country of origin
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin")]
-		public string M3_ORCO => GetString("ORCO");
+		public string M3ORCO => GetString("ORCO");
 
 		/// <summary>
 		/// Description: Country Name
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country Name")]
-		public string M3_ORTX => GetString("ORTX");
+		public string M3ORTX => GetString("ORTX");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Rail station
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rail station")]
-		public string M3_RASN => GetString("RASN");
+		public string M3RASN => GetString("RASN");
 	}
 }
 // EOF

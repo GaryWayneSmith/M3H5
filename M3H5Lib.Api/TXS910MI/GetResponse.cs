@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval number")]
-		public string M3_TIAN => GetString("TIAN");
+		public string M3TIAN => GetString("TIAN");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Supplier
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_TIVN => GetString("TIVN");
+		public string M3TIVN => GetString("TIVN");
 
 		/// <summary>
 		/// Description: File name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File name")]
-		public string M3_TIFN => GetString("TIFN");
+		public string M3TIFN => GetString("TIFN");
 
 		/// <summary>
 		/// Description: Supplier contact person
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier contact person")]
-		public string M3_TICP => GetString("TICP");
+		public string M3TICP => GetString("TICP");
 
 		/// <summary>
 		/// Description: Address
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address")]
-		public string M3_TIAD => GetString("TIAD");
+		public string M3TIAD => GetString("TIAD");
 
 		/// <summary>
 		/// Description: Email
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Email")]
-		public string M3_TIEM => GetString("TIEM");
+		public string M3TIEM => GetString("TIEM");
 
 		/// <summary>
 		/// Description: Creation date for tax invoice
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Creation date for tax invoice")]
-		public DateTime? M3_TICR => GetNullableDateTime("TICR");
+		public DateTime? M3TICR => GetNullableDateTime("TICR");
 
 		/// <summary>
 		/// Description: Issue date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue date")]
-		public DateTime? M3_TIID => GetNullableDateTime("TIID");
+		public DateTime? M3TIID => GetNullableDateTime("TIID");
 
 		/// <summary>
 		/// Description: Gross amount
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross amount")]
-		public decimal? M3_GAMT => GetNullableDecimal("GAMT");
+		public decimal? M3GAMT => GetNullableDecimal("GAMT");
 
 		/// <summary>
 		/// Description: VAT
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT")]
-		public decimal? M3_VTAM => GetNullableDecimal("VTAM");
+		public decimal? M3VTAM => GetNullableDecimal("VTAM");
 
 		/// <summary>
 		/// Description: Net amount
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net amount")]
-		public decimal? M3_NAMT => GetNullableDecimal("NAMT");
+		public decimal? M3NAMT => GetNullableDecimal("NAMT");
 
 		/// <summary>
 		/// Description: Type of tax invoice
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Type of tax invoice")]
-		public string M3_TIT1 => GetString("TIT1");
+		public string M3TIT1 => GetString("TIT1");
 
 		/// <summary>
 		/// Description: Type of tax invoice 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Type of tax invoice 2")]
-		public string M3_TIT2 => GetString("TIT2");
+		public string M3TIT2 => GetString("TIT2");
 
 		/// <summary>
 		/// Description: Unpaid/paid
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unpaid/paid")]
-		public string M3_TIRR => GetString("TIRR");
+		public string M3TIRR => GetString("TIRR");
 
 		/// <summary>
 		/// Description: Status
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public int? M3_TISA => GetNullableInt("TISA");
+		public int? M3TISA => GetNullableInt("TISA");
 
 		/// <summary>
 		/// Description: Year
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Voucher number series
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number series")]
-		public string M3_VSER => GetString("VSER");
+		public string M3VSER => GetString("VSER");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: Status: 0=Not in progress, 1=In progress
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status: 0=Not in progress, 1=In progress")]
-		public int? M3_TIIP => GetNullableInt("TIIP");
+		public int? M3TIIP => GetNullableInt("TIIP");
 
 		/// <summary>
 		/// Description: Entry date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

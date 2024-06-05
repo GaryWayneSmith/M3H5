@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Report type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report type")]
-		public int? M3_RGTP => GetNullableInt("RGTP");
+		public int? M3RGTP => GetNullableInt("RGTP");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Price list
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Currency
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Valid from
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Assortment check
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assortment check")]
-		public int? M3_ACHK => GetNullableInt("ACHK");
+		public int? M3ACHK => GetNullableInt("ACHK");
 
 		/// <summary>
 		/// Description: Calculation date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation date")]
-		public DateTime? M3_CALD => GetNullableDateTime("CALD");
+		public DateTime? M3CALD => GetNullableDateTime("CALD");
 
 		/// <summary>
 		/// Description: Status
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Blanket agreement number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blanket agreement number")]
-		public string M3_AGNO => GetString("AGNO");
+		public string M3AGNO => GetString("AGNO");
 
 		/// <summary>
 		/// Description: Start date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Customer number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Assortment
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assortment")]
-		public string M3_ASCD => GetString("ASCD");
+		public string M3ASCD => GetString("ASCD");
 
 		/// <summary>
 		/// Description: Sorting option - item number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting option - item number")]
-		public string M3_SOPI => GetString("SOPI");
+		public string M3SOPI => GetString("SOPI");
 
 		/// <summary>
 		/// Description: Alias category
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias category")]
-		public int? M3_ALWT => GetNullableInt("ALWT");
+		public int? M3ALWT => GetNullableInt("ALWT");
 
 		/// <summary>
 		/// Description: Alias qualifier
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias qualifier")]
-		public string M3_ALWQ => GetString("ALWQ");
+		public string M3ALWQ => GetString("ALWQ");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 	}
 }
 // EOF

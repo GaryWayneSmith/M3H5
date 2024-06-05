@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.BODCSSMI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Retrieve a list of customers with a specific payer
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_PYNO">Payer (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstBillToPartyResponse></returns>
 		/// <exception cref="M3Exception<LstBillToPartyResponse>"></exception>
 		public async Task<M3Response<LstBillToPartyResponse>> LstBillToParty(
-			string m3_PYNO, 
+			string m3PYNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PYNO", m3_PYNO.Trim());
+				.WithQueryParameter("PYNO", m3PYNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstBillToPartyResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Status
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_TPIS => GetString("TPIS");
+		public string M3TPIS => GetString("TPIS");
 
 		/// <summary>
 		/// Description: Responsible
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Valid to
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Bonus generating
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus generating")]
-		public int? M3_BNCD => GetNullableInt("BNCD");
+		public int? M3BNCD => GetNullableInt("BNCD");
 
 		/// <summary>
 		/// Description: Normal call-off quantity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Normal call-off quantity")]
-		public decimal? M3_NAQT => GetNullableDecimal("NAQT");
+		public decimal? M3NAQT => GetNullableDecimal("NAQT");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: On-hand balance approved
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("On-hand balance approved")]
-		public decimal? M3_STQT => GetNullableDecimal("STQT");
+		public decimal? M3STQT => GetNullableDecimal("STQT");
 
 		/// <summary>
 		/// Description: Allocated quantity - basic U/M
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - basic U/M")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Inventory accounting price
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting price")]
-		public decimal? M3_TRPR => GetNullableDecimal("TRPR");
+		public decimal? M3TRPR => GetNullableDecimal("TRPR");
 
 		/// <summary>
 		/// Description: Internal transfer price
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal transfer price")]
-		public decimal? M3_INPR => GetNullableDecimal("INPR");
+		public decimal? M3INPR => GetNullableDecimal("INPR");
 
 		/// <summary>
 		/// Description: Name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Text
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Text
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX70 => GetString("TX70");
+		public string M3TX70 => GetString("TX70");
 
 		/// <summary>
 		/// Description: Description
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX90 => GetString("TX90");
+		public string M3TX90 => GetString("TX90");
 
 		/// <summary>
 		/// Description: Discount amount 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 1")]
-		public decimal? M3_DIA1 => GetNullableDecimal("DIA1");
+		public decimal? M3DIA1 => GetNullableDecimal("DIA1");
 
 		/// <summary>
 		/// Description: Discount amount 2
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 2")]
-		public decimal? M3_DIA2 => GetNullableDecimal("DIA2");
+		public decimal? M3DIA2 => GetNullableDecimal("DIA2");
 
 		/// <summary>
 		/// Description: Discount amount 3
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 3")]
-		public decimal? M3_DIA3 => GetNullableDecimal("DIA3");
+		public decimal? M3DIA3 => GetNullableDecimal("DIA3");
 
 		/// <summary>
 		/// Description: Discount amount 4
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MTS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 4")]
-		public decimal? M3_DIA4 => GetNullableDecimal("DIA4");
+		public decimal? M3DIA4 => GetNullableDecimal("DIA4");
 	}
 }
 // EOF

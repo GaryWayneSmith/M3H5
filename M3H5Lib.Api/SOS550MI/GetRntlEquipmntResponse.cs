@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: Owner
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Owner")]
-		public string M3_CUOW => GetString("CUOW");
+		public string M3CUOW => GetString("CUOW");
 
 		/// <summary>
 		/// Description: Customer site
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Status - individual item
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - individual item")]
-		public string M3_ISTS => GetString("ISTS");
+		public string M3ISTS => GetString("ISTS");
 
 		/// <summary>
 		/// Description: Individual item group
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item group")]
-		public string M3_INGR => GetString("INGR");
+		public string M3INGR => GetString("INGR");
 
 		/// <summary>
 		/// Description: Lot number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Brand
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: Individual item type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item type")]
-		public int? M3_INTY => GetNullableInt("INTY");
+		public int? M3INTY => GetNullableInt("INTY");
 
 		/// <summary>
 		/// Description: Model description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model description")]
-		public string M3_MODE => GetString("MODE");
+		public string M3MODE => GetString("MODE");
 
 		/// <summary>
 		/// Description: Model name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model name")]
-		public string M3_MODC => GetString("MODC");
+		public string M3MODC => GetString("MODC");
 
 		/// <summary>
 		/// Description: Item group
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGR => GetString("ITGR");
+		public string M3ITGR => GetString("ITGR");
 
 		/// <summary>
 		/// Description: Item number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Year model
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year model")]
-		public string M3_MLYR => GetString("MLYR");
+		public string M3MLYR => GetString("MLYR");
 
 		/// <summary>
 		/// Description: Location description
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location description")]
-		public string M3_AREA => GetString("AREA");
+		public string M3AREA => GetString("AREA");
 
 		/// <summary>
 		/// Description: Warranty date sales
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty date sales")]
-		public DateTime? M3_GDT1 => GetNullableDateTime("GDT1");
+		public DateTime? M3GDT1 => GetNullableDateTime("GDT1");
 
 		/// <summary>
 		/// Description: General agent
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("General agent")]
-		public string M3_CUGA => GetString("CUGA");
+		public string M3CUGA => GetString("CUGA");
 
 		/// <summary>
 		/// Description: Warranty date supplier
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty date supplier")]
-		public DateTime? M3_GDT2 => GetNullableDateTime("GDT2");
+		public DateTime? M3GDT2 => GetNullableDateTime("GDT2");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Customer number at the insurance company
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number at the insurance company")]
-		public string M3_CUIC => GetString("CUIC");
+		public string M3CUIC => GetString("CUIC");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNA => GetString("CTNA");
+		public string M3CTNA => GetString("CTNA");
 
 		/// <summary>
 		/// Description: Main individual item code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main individual item code")]
-		public int? M3_MICD => GetNullableInt("MICD");
+		public int? M3MICD => GetNullableInt("MICD");
 
 		/// <summary>
 		/// Description: Main individual item
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main individual item")]
-		public string M3_MINO => GetString("MINO");
+		public string M3MINO => GetString("MINO");
 
 		/// <summary>
 		/// Description: Equipment
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment")]
-		public string M3_CONS => GetString("CONS");
+		public string M3CONS => GetString("CONS");
 
 		/// <summary>
 		/// Description: GUI picture
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("GUI picture")]
-		public string M3_PINO => GetString("PINO");
+		public string M3PINO => GetString("PINO");
 
 		/// <summary>
 		/// Description: Drawing number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing number")]
-		public string M3_DWNO => GetString("DWNO");
+		public string M3DWNO => GetString("DWNO");
 
 		/// <summary>
 		/// Description: Warranty date workshop warranty
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty date workshop warranty")]
-		public DateTime? M3_GDT3 => GetNullableDateTime("GDT3");
+		public DateTime? M3GDT3 => GetNullableDateTime("GDT3");
 
 		/// <summary>
 		/// Description: Update individual item structure
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update individual item structure")]
-		public int? M3_ISTR => GetNullableInt("ISTR");
+		public int? M3ISTR => GetNullableInt("ISTR");
 
 		/// <summary>
 		/// Description: Update individual item history
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update individual item history")]
-		public int? M3_IHIS => GetNullableInt("IHIS");
+		public int? M3IHIS => GetNullableInt("IHIS");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Registration number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number")]
-		public string M3_REBE => GetString("REBE");
+		public string M3REBE => GetString("REBE");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Location
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_LOCS => GetString("LOCS");
+		public string M3LOCS => GetString("LOCS");
 
 		/// <summary>
 		/// Description: Date disposed
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date disposed")]
-		public DateTime? M3_DDAT => GetNullableDateTime("DDAT");
+		public DateTime? M3DDAT => GetNullableDateTime("DDAT");
 
 		/// <summary>
 		/// Description: Fixed asset
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset")]
-		public string M3_ASID => GetString("ASID");
+		public string M3ASID => GetString("ASID");
 
 		/// <summary>
 		/// Description: Subnumber
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber")]
-		public int? M3_SBNO => GetNullableInt("SBNO");
+		public int? M3SBNO => GetNullableInt("SBNO");
 
 		/// <summary>
 		/// Description: Project number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Function area
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function area")]
-		public string M3_FCTN => GetString("FCTN");
+		public string M3FCTN => GetString("FCTN");
 
 		/// <summary>
 		/// Description: Meter item
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter item")]
-		public int? M3_MEIT => GetNullableInt("MEIT");
+		public int? M3MEIT => GetNullableInt("MEIT");
 
 		/// <summary>
 		/// Description: Agreement customer
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement customer")]
-		public string M3_AGCN => GetString("AGCN");
+		public string M3AGCN => GetString("AGCN");
 
 		/// <summary>
 		/// Description: Serial number
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERI => GetString("SERI");
+		public string M3SERI => GetString("SERI");
 
 		/// <summary>
 		/// Description: Change date
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.SOS550MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

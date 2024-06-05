@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total due")]
-		public decimal? M3_TOPA => GetNullableDecimal("TOPA");
+		public decimal? M3TOPA => GetNullableDecimal("TOPA");
 
 		/// <summary>
 		/// Description: Recd cash/Chg to give
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recd cash/Chg to give")]
-		public decimal? M3_TIAM => GetNullableDecimal("TIAM");
+		public decimal? M3TIAM => GetNullableDecimal("TIAM");
 
 		/// <summary>
 		/// Description: Discrepancy
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discrepancy")]
-		public decimal? M3_DSCR => GetNullableDecimal("DSCR");
+		public decimal? M3DSCR => GetNullableDecimal("DSCR");
 
 		/// <summary>
 		/// Description: Change to give
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change to give")]
-		public decimal? M3_CHGI => GetNullableDecimal("CHGI");
+		public decimal? M3CHGI => GetNullableDecimal("CHGI");
 	}
 }
 // EOF

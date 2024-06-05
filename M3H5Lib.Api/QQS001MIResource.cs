@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QQS001MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,20 +38,20 @@ namespace M3H5Lib.Api
 		/// Description Add a tool
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TOOL">Tool number (Required)</param>
-		/// <param name="m3_TOLT">Tool type (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name (Required)</param>
-		/// <param name="m3_USID">User (Required)</param>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_GUDF">Get user defaults</param>
-		/// <param name="m3_PHNO">Telephone number</param>
-		/// <param name="m3_PUPR">Purchase price</param>
-		/// <param name="m3_WHSL">Location</param>
-		/// <param name="m3_MPDT">Purchase date</param>
-		/// <param name="m3_MFDT">Manufacturing date</param>
-		/// <param name="m3_TRTM">Transaction time</param>
-		/// <param name="m3_UTCM">UTC mode</param>
+		/// <param name="m3TOOL">Tool number (Required)</param>
+		/// <param name="m3TOLT">Tool type (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name (Required)</param>
+		/// <param name="m3USID">User (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3GUDF">Get user defaults</param>
+		/// <param name="m3PHNO">Telephone number</param>
+		/// <param name="m3PUPR">Purchase price</param>
+		/// <param name="m3WHSL">Location</param>
+		/// <param name="m3MPDT">Purchase date</param>
+		/// <param name="m3MFDT">Manufacturing date</param>
+		/// <param name="m3TRTM">Transaction time</param>
+		/// <param name="m3UTCM">UTC mode</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -58,20 +60,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddTool(
-			string m3_TOOL, 
-			string m3_TOLT, 
-			string m3_TX40, 
-			string m3_TX15, 
-			string m3_USID, 
-			string m3_WHLO, 
-			int? m3_GUDF = null, 
-			string m3_PHNO = null, 
-			decimal? m3_PUPR = null, 
-			string m3_WHSL = null, 
-			DateTime? m3_MPDT = null, 
-			DateTime? m3_MFDT = null, 
-			int? m3_TRTM = null, 
-			int? m3_UTCM = null, 
+			string m3TOOL, 
+			string m3TOLT, 
+			string m3TX40, 
+			string m3TX15, 
+			string m3USID, 
+			string m3WHLO, 
+			int? m3GUDF = null, 
+			string m3PHNO = null, 
+			decimal? m3PUPR = null, 
+			string m3WHSL = null, 
+			DateTime? m3MPDT = null, 
+			DateTime? m3MFDT = null, 
+			int? m3TRTM = null, 
+			int? m3UTCM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -86,45 +88,45 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TOOL))
-				throw new ArgumentNullException("m3_TOOL");
-			if (string.IsNullOrWhiteSpace(m3_TOLT))
-				throw new ArgumentNullException("m3_TOLT");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_TX15))
-				throw new ArgumentNullException("m3_TX15");
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
+			if (string.IsNullOrWhiteSpace(m3TOOL))
+				throw new ArgumentNullException(nameof(m3TOOL));
+			if (string.IsNullOrWhiteSpace(m3TOLT))
+				throw new ArgumentNullException(nameof(m3TOLT));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3TX15))
+				throw new ArgumentNullException(nameof(m3TX15));
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TOOL", m3_TOOL.Trim())
-				.WithQueryParameter("TOLT", m3_TOLT.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("TX15", m3_TX15.Trim())
-				.WithQueryParameter("USID", m3_USID.Trim())
-				.WithQueryParameter("WHLO", m3_WHLO.Trim());
+				.WithQueryParameter("TOOL", m3TOOL.Trim())
+				.WithQueryParameter("TOLT", m3TOLT.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("TX15", m3TX15.Trim())
+				.WithQueryParameter("USID", m3USID.Trim())
+				.WithQueryParameter("WHLO", m3WHLO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_GUDF.HasValue)
-				request.WithQueryParameter("GUDF", m3_GUDF.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PHNO))
-				request.WithQueryParameter("PHNO", m3_PHNO.Trim());
-			if (m3_PUPR.HasValue)
-				request.WithQueryParameter("PUPR", m3_PUPR.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_WHSL))
-				request.WithQueryParameter("WHSL", m3_WHSL.Trim());
-			if (m3_MPDT.HasValue)
-				request.WithQueryParameter("MPDT", m3_MPDT.Value.ToM3String());
-			if (m3_MFDT.HasValue)
-				request.WithQueryParameter("MFDT", m3_MFDT.Value.ToM3String());
-			if (m3_TRTM.HasValue)
-				request.WithQueryParameter("TRTM", m3_TRTM.Value.ToString());
-			if (m3_UTCM.HasValue)
-				request.WithQueryParameter("UTCM", m3_UTCM.Value.ToString());
+			if (m3GUDF.HasValue)
+				request.WithQueryParameter("GUDF", m3GUDF.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PHNO))
+				request.WithQueryParameter("PHNO", m3PHNO.Trim());
+			if (m3PUPR.HasValue)
+				request.WithQueryParameter("PUPR", m3PUPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3WHSL))
+				request.WithQueryParameter("WHSL", m3WHSL.Trim());
+			if (m3MPDT.HasValue)
+				request.WithQueryParameter("MPDT", m3MPDT.Value.ToM3String());
+			if (m3MFDT.HasValue)
+				request.WithQueryParameter("MFDT", m3MFDT.Value.ToM3String());
+			if (m3TRTM.HasValue)
+				request.WithQueryParameter("TRTM", m3TRTM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3UTCM.HasValue)
+				request.WithQueryParameter("UTCM", m3UTCM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -134,7 +136,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -145,7 +148,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a tool
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TOOL">Tool number (Required)</param>
+		/// <param name="m3TOOL">Tool number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -154,7 +157,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltTool(
-			string m3_TOOL, 
+			string m3TOOL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -169,12 +172,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TOOL))
-				throw new ArgumentNullException("m3_TOOL");
+			if (string.IsNullOrWhiteSpace(m3TOOL))
+				throw new ArgumentNullException(nameof(m3TOOL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TOOL", m3_TOOL.Trim());
+				.WithQueryParameter("TOOL", m3TOOL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -184,7 +187,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -195,8 +199,8 @@ namespace M3H5Lib.Api
 		/// Description Get data for a tool
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TOOL">Tool number (Required)</param>
-		/// <param name="m3_UTCM">UTC mode</param>
+		/// <param name="m3TOOL">Tool number (Required)</param>
+		/// <param name="m3UTCM">UTC mode</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -205,8 +209,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetToolResponse></returns>
 		/// <exception cref="M3Exception<GetToolResponse>"></exception>
 		public async Task<M3Response<GetToolResponse>> GetTool(
-			string m3_TOOL, 
-			int? m3_UTCM = null, 
+			string m3TOOL, 
+			int? m3UTCM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -221,16 +225,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TOOL))
-				throw new ArgumentNullException("m3_TOOL");
+			if (string.IsNullOrWhiteSpace(m3TOOL))
+				throw new ArgumentNullException(nameof(m3TOOL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TOOL", m3_TOOL.Trim());
+				.WithQueryParameter("TOOL", m3TOOL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_UTCM.HasValue)
-				request.WithQueryParameter("UTCM", m3_UTCM.Value.ToString());
+			if (m3UTCM.HasValue)
+				request.WithQueryParameter("UTCM", m3UTCM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetToolResponse>(
@@ -240,7 +244,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -251,8 +256,8 @@ namespace M3H5Lib.Api
 		/// Description List data for tools
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TOOL">Tool number</param>
-		/// <param name="m3_UTCM">UTC mode</param>
+		/// <param name="m3TOOL">Tool number</param>
+		/// <param name="m3UTCM">UTC mode</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -261,8 +266,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstToolsResponse></returns>
 		/// <exception cref="M3Exception<LstToolsResponse>"></exception>
 		public async Task<M3Response<LstToolsResponse>> LstTools(
-			string m3_TOOL = null, 
-			int? m3_UTCM = null, 
+			string m3TOOL = null, 
+			int? m3UTCM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -277,10 +282,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
-			if (m3_UTCM.HasValue)
-				request.WithQueryParameter("UTCM", m3_UTCM.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
+			if (m3UTCM.HasValue)
+				request.WithQueryParameter("UTCM", m3UTCM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstToolsResponse>(
@@ -290,7 +295,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -301,7 +307,7 @@ namespace M3H5Lib.Api
 		/// Description Sets the date of the record(s) to todays date
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TOOL">Tool number</param>
+		/// <param name="m3TOOL">Tool number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -310,7 +316,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SetCurrentDateResponse></returns>
 		/// <exception cref="M3Exception<SetCurrentDateResponse>"></exception>
 		public async Task<M3Response<SetCurrentDateResponse>> SetCurrentDate(
-			string m3_TOOL = null, 
+			string m3TOOL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -325,8 +331,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
 
 			// Execute the request
 			var result = await Execute<SetCurrentDateResponse>(
@@ -336,7 +342,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -347,19 +354,19 @@ namespace M3H5Lib.Api
 		/// Description Update data for a tool
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TOOL">Tool number (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_USID">User</param>
-		/// <param name="m3_GUDF">Get user defaults</param>
-		/// <param name="m3_PHNO">Telephone number</param>
-		/// <param name="m3_PUPR">Purchase price</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_WHSL">Location</param>
-		/// <param name="m3_MPDT">Purchase date</param>
-		/// <param name="m3_MFDT">Manufacturing date</param>
-		/// <param name="m3_TRTM">Transaction time</param>
-		/// <param name="m3_UTCM">UTC mode</param>
+		/// <param name="m3TOOL">Tool number (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3USID">User</param>
+		/// <param name="m3GUDF">Get user defaults</param>
+		/// <param name="m3PHNO">Telephone number</param>
+		/// <param name="m3PUPR">Purchase price</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3WHSL">Location</param>
+		/// <param name="m3MPDT">Purchase date</param>
+		/// <param name="m3MFDT">Manufacturing date</param>
+		/// <param name="m3TRTM">Transaction time</param>
+		/// <param name="m3UTCM">UTC mode</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -368,19 +375,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdTool(
-			string m3_TOOL, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_USID = null, 
-			int? m3_GUDF = null, 
-			string m3_PHNO = null, 
-			decimal? m3_PUPR = null, 
-			string m3_WHLO = null, 
-			string m3_WHSL = null, 
-			DateTime? m3_MPDT = null, 
-			DateTime? m3_MFDT = null, 
-			int? m3_TRTM = null, 
-			int? m3_UTCM = null, 
+			string m3TOOL, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3USID = null, 
+			int? m3GUDF = null, 
+			string m3PHNO = null, 
+			decimal? m3PUPR = null, 
+			string m3WHLO = null, 
+			string m3WHSL = null, 
+			DateTime? m3MPDT = null, 
+			DateTime? m3MFDT = null, 
+			int? m3TRTM = null, 
+			int? m3UTCM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -395,38 +402,38 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TOOL))
-				throw new ArgumentNullException("m3_TOOL");
+			if (string.IsNullOrWhiteSpace(m3TOOL))
+				throw new ArgumentNullException(nameof(m3TOOL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TOOL", m3_TOOL.Trim());
+				.WithQueryParameter("TOOL", m3TOOL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
-			if (m3_GUDF.HasValue)
-				request.WithQueryParameter("GUDF", m3_GUDF.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PHNO))
-				request.WithQueryParameter("PHNO", m3_PHNO.Trim());
-			if (m3_PUPR.HasValue)
-				request.WithQueryParameter("PUPR", m3_PUPR.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHSL))
-				request.WithQueryParameter("WHSL", m3_WHSL.Trim());
-			if (m3_MPDT.HasValue)
-				request.WithQueryParameter("MPDT", m3_MPDT.Value.ToM3String());
-			if (m3_MFDT.HasValue)
-				request.WithQueryParameter("MFDT", m3_MFDT.Value.ToM3String());
-			if (m3_TRTM.HasValue)
-				request.WithQueryParameter("TRTM", m3_TRTM.Value.ToString());
-			if (m3_UTCM.HasValue)
-				request.WithQueryParameter("UTCM", m3_UTCM.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
+			if (m3GUDF.HasValue)
+				request.WithQueryParameter("GUDF", m3GUDF.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PHNO))
+				request.WithQueryParameter("PHNO", m3PHNO.Trim());
+			if (m3PUPR.HasValue)
+				request.WithQueryParameter("PUPR", m3PUPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHSL))
+				request.WithQueryParameter("WHSL", m3WHSL.Trim());
+			if (m3MPDT.HasValue)
+				request.WithQueryParameter("MPDT", m3MPDT.Value.ToM3String());
+			if (m3MFDT.HasValue)
+				request.WithQueryParameter("MFDT", m3MFDT.Value.ToM3String());
+			if (m3TRTM.HasValue)
+				request.WithQueryParameter("TRTM", m3TRTM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3UTCM.HasValue)
+				request.WithQueryParameter("UTCM", m3UTCM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -436,7 +443,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

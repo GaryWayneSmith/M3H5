@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record type")]
-		public string M3_TRQF => GetString("TRQF");
+		public string M3TRQF => GetString("TRQF");
 
 		/// <summary>
 		/// Description: Message standard
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message standard")]
-		public string M3_MSTD => GetString("MSTD");
+		public string M3MSTD => GetString("MSTD");
 
 		/// <summary>
 		/// Description: Message version
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message version")]
-		public string M3_MVRS => GetString("MVRS");
+		public string M3MVRS => GetString("MVRS");
 
 		/// <summary>
 		/// Description: Business message
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business message")]
-		public string M3_BMSG => GetString("BMSG");
+		public string M3BMSG => GetString("BMSG");
 
 		/// <summary>
 		/// Description: Inbound or outbound message
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inbound or outbound message")]
-		public string M3_IBOB => GetString("IBOB");
+		public string M3IBOB => GetString("IBOB");
 
 		/// <summary>
 		/// Description: Parent element(s)
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parent element(s)")]
-		public string M3_ELMP => GetString("ELMP");
+		public string M3ELMP => GetString("ELMP");
 
 		/// <summary>
 		/// Description: Data element
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data element")]
-		public string M3_ELMD => GetString("ELMD");
+		public string M3ELMD => GetString("ELMD");
 
 		/// <summary>
 		/// Description: Conditional element
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conditional element")]
-		public string M3_ELMC => GetString("ELMC");
+		public string M3ELMC => GetString("ELMC");
 
 		/// <summary>
 		/// Description: Conditional data
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conditional data")]
-		public string M3_MBMC => GetString("MBMC");
+		public string M3MBMC => GetString("MBMC");
 
 		/// <summary>
 		/// Description: Business data translation identity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business data translation identity")]
-		public int? M3_IDTR => GetNullableInt("IDTR");
+		public int? M3IDTR => GetNullableInt("IDTR");
 
 		/// <summary>
 		/// Description: File
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Field
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Status
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Entry date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS881MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

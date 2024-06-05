@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field type")]
-		public string M3_TYPE => GetString("TYPE");
+		public string M3TYPE => GetString("TYPE");
 
 		/// <summary>
 		/// Description: Category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Category")]
-		public string M3_CTGY => GetString("CTGY");
+		public string M3CTGY => GetString("CTGY");
 
 		/// <summary>
 		/// Description: Base category
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base category")]
-		public string M3_BCTG => GetString("BCTG");
+		public string M3BCTG => GetString("BCTG");
 
 		/// <summary>
 		/// Description: Length
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length")]
-		public int? M3_LNTH => GetNullableInt("LNTH");
+		public int? M3LNTH => GetNullableInt("LNTH");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Field heading
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field heading")]
-		public string M3_FLHD => GetString("FLHD");
+		public string M3FLHD => GetString("FLHD");
 
 		/// <summary>
 		/// Description: Language file prefix for field heading
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language file prefix for field heading")]
-		public string M3_LNF1 => GetString("LNF1");
+		public string M3LNF1 => GetString("LNF1");
 
 		/// <summary>
 		/// Description: Field help
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field help")]
-		public string M3_HELP => GetString("HELP");
+		public string M3HELP => GetString("HELP");
 
 		/// <summary>
 		/// Description: Language file prefix for field help
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language file prefix for field help")]
-		public string M3_LNF2 => GetString("LNF2");
+		public string M3LNF2 => GetString("LNF2");
 
 		/// <summary>
 		/// Description: Additional info length
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional info length")]
-		public int? M3_AILN => GetNullableInt("AILN");
+		public int? M3AILN => GetNullableInt("AILN");
 
 		/// <summary>
 		/// Description: Additional info short length
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional info short length")]
-		public int? M3_AISL => GetNullableInt("AISL");
+		public int? M3AISL => GetNullableInt("AISL");
 
 		/// <summary>
 		/// Description: Upper case
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Upper case")]
-		public int? M3_UCAS => GetNullableInt("UCAS");
+		public int? M3UCAS => GetNullableInt("UCAS");
 
 		/// <summary>
 		/// Description: Lower limit
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lower limit")]
-		public string M3_LLIM => GetString("LLIM");
+		public string M3LLIM => GetString("LLIM");
 
 		/// <summary>
 		/// Description: Decimals for lower limit
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Decimals for lower limit")]
-		public int? M3_LDCM => GetNullableInt("LDCM");
+		public int? M3LDCM => GetNullableInt("LDCM");
 
 		/// <summary>
 		/// Description: Upper limit
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Upper limit")]
-		public string M3_ULIM => GetString("ULIM");
+		public string M3ULIM => GetString("ULIM");
 
 		/// <summary>
 		/// Description: Decimals for upper limit
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Decimals for upper limit")]
-		public int? M3_UDCM => GetNullableInt("UDCM");
+		public int? M3UDCM => GetNullableInt("UDCM");
 
 		/// <summary>
 		/// Description: Value map
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value map")]
-		public string M3_VMAP => GetString("VMAP");
+		public string M3VMAP => GetString("VMAP");
 
 		/// <summary>
 		/// Description: Name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 	}
 }
 // EOF

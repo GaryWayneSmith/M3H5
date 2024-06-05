@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: QI request ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request ID")]
-		public string M3_QRID => GetString("QRID");
+		public string M3QRID => GetString("QRID");
 
 		/// <summary>
 		/// Description: Test
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test")]
-		public string M3_QTST => GetString("QTST");
+		public string M3QTST => GetString("QTST");
 
 		/// <summary>
 		/// Description: Test type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test type")]
-		public int? M3_TSTY => GetNullableInt("TSTY");
+		public int? M3TSTY => GetNullableInt("TSTY");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_TSEQ => GetNullableInt("TSEQ");
+		public int? M3TSEQ => GetNullableInt("TSEQ");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Test result value
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test result value")]
-		public decimal? M3_QTRS => GetNullableDecimal("QTRS");
+		public decimal? M3QTRS => GetNullableDecimal("QTRS");
 
 		/// <summary>
 		/// Description: Qualitative code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Qualitative code")]
-		public string M3_QLCD => GetString("QLCD");
+		public string M3QLCD => GetString("QLCD");
 
 		/// <summary>
 		/// Description: Tested by
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tested by")]
-		public string M3_TTUS => GetString("TTUS");
+		public string M3TTUS => GetString("TTUS");
 
 		/// <summary>
 		/// Description: Tested date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tested date")]
-		public DateTime? M3_TTDT => GetNullableDateTime("TTDT");
+		public DateTime? M3TTDT => GetNullableDateTime("TTDT");
 
 		/// <summary>
 		/// Description: Tested time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tested time")]
-		public int? M3_TTTE => GetNullableInt("TTTE");
+		public int? M3TTTE => GetNullableInt("TTTE");
 
 		/// <summary>
 		/// Description: Program name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QMS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

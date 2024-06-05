@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Payer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Address number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_IVAD => GetString("IVAD");
+		public string M3IVAD => GetString("IVAD");
 
 		/// <summary>
 		/// Description: Customer site
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_SAID => GetString("SAID");
+		public string M3SAID => GetString("SAID");
 
 		/// <summary>
 		/// Description: Order line number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Valid from
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Qty/Per
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Qty/Per")]
-		public decimal? M3_RIQT => GetNullableDecimal("RIQT");
+		public decimal? M3RIQT => GetNullableDecimal("RIQT");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Price
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price")]
-		public decimal? M3_PNCA => GetNullableDecimal("PNCA");
+		public decimal? M3PNCA => GetNullableDecimal("PNCA");
 
 		/// <summary>
 		/// Description: Rental rate type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental rate type")]
-		public string M3_CCAP => GetString("CCAP");
+		public string M3CCAP => GetString("CCAP");
 
 		/// <summary>
 		/// Description: Total price
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total price")]
-		public decimal? M3_TOPR => GetNullableDecimal("TOPR");
+		public decimal? M3TOPR => GetNullableDecimal("TOPR");
 
 		/// <summary>
 		/// Description: Information type
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information type")]
-		public string M3_IVTP => GetString("IVTP");
+		public string M3IVTP => GetString("IVTP");
 
 		/// <summary>
 		/// Description: Accounting date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting date")]
-		public DateTime? M3_ACDT => GetNullableDateTime("ACDT");
+		public DateTime? M3ACDT => GetNullableDateTime("ACDT");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Contract item
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.STS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contract item")]
-		public string M3_AGRS => GetString("AGRS");
+		public string M3AGRS => GetString("AGRS");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From/to country")]
-		public string M3_FTCO => GetString("FTCO");
+		public string M3FTCO => GetString("FTCO");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_YVRN => GetString("YVRN");
+		public string M3YVRN => GetString("YVRN");
 
 		/// <summary>
 		/// Description: Triangulation
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Triangulation")]
-		public int? M3_TRIA => GetNullableInt("TRIA");
+		public int? M3TRIA => GetNullableInt("TRIA");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACAM => GetNullableDecimal("ACAM");
+		public decimal? M3ACAM => GetNullableDecimal("ACAM");
 
 		/// <summary>
 		/// Description: Currency
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Customer/supplier code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer/supplier code")]
-		public int? M3_CVOP => GetNullableInt("CVOP");
+		public int? M3CVOP => GetNullableInt("CVOP");
 
 		/// <summary>
 		/// Description: Customer number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Correction period
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Correction period")]
-		public int? M3_CORP => GetNullableInt("CORP");
+		public int? M3CORP => GetNullableInt("CORP");
 
 		/// <summary>
 		/// Description: Service indicator
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service indicator")]
-		public int? M3_SERV => GetNullableInt("SERV");
+		public int? M3SERV => GetNullableInt("SERV");
 
 		/// <summary>
 		/// Description: Calculation base
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation base")]
-		public decimal? M3_BACA => GetNullableDecimal("BACA");
+		public decimal? M3BACA => GetNullableDecimal("BACA");
 
 		/// <summary>
 		/// Description: Correct original invoice amount
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Correct original invoice amount")]
-		public decimal? M3_CACA => GetNullableDecimal("CACA");
+		public decimal? M3CACA => GetNullableDecimal("CACA");
 
 		/// <summary>
 		/// Description: Year
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Period
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_PERI => GetNullableInt("PERI");
+		public int? M3PERI => GetNullableInt("PERI");
 
 		/// <summary>
 		/// Description: Quarter of the year
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quarter of the year")]
-		public int? M3_QUAR => GetNullableInt("QUAR");
+		public int? M3QUAR => GetNullableInt("QUAR");
 
 		/// <summary>
 		/// Description: Number of invoices
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of invoices")]
-		public long? M3_NINV => GetNullableLong("NINV");
+		public long? M3NINV => GetNullableLong("NINV");
 	}
 }
 // EOF

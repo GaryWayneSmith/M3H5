@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ad-hoc report")]
-		public string M3_REPO => GetString("REPO");
+		public string M3REPO => GetString("REPO");
 
 		/// <summary>
 		/// Description: Ad-hoc report version
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ad-hoc report version")]
-		public string M3_REPV => GetString("REPV");
+		public string M3REPV => GetString("REPV");
 
 		/// <summary>
 		/// Description: Report text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report text")]
-		public string M3_LITX => GetString("LITX");
+		public string M3LITX => GetString("LITX");
 
 		/// <summary>
 		/// Description: Locked report
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Locked report")]
-		public int? M3_LCKR => GetNullableInt("LCKR");
+		public int? M3LCKR => GetNullableInt("LCKR");
 
 		/// <summary>
 		/// Description: View
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAVR => GetString("PAVR");
+		public string M3PAVR => GetString("PAVR");
 
 		/// <summary>
 		/// Description: Personal view
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Personal view")]
-		public string M3_UPVR => GetString("UPVR");
+		public string M3UPVR => GetString("UPVR");
 
 		/// <summary>
 		/// Description: Object control parameter
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object control parameter")]
-		public string M3_OBK1 => GetString("OBK1");
+		public string M3OBK1 => GetString("OBK1");
 
 		/// <summary>
 		/// Description: Object control parameter
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object control parameter")]
-		public string M3_OBK2 => GetString("OBK2");
+		public string M3OBK2 => GetString("OBK2");
 
 		/// <summary>
 		/// Description: Object control parameter
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object control parameter")]
-		public string M3_OBK3 => GetString("OBK3");
+		public string M3OBK3 => GetString("OBK3");
 
 		/// <summary>
 		/// Description: Object control parameter
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object control parameter")]
-		public string M3_OBK4 => GetString("OBK4");
+		public string M3OBK4 => GetString("OBK4");
 
 		/// <summary>
 		/// Description: Number of filters
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of filters")]
-		public int? M3_NFTR => GetNullableInt("NFTR");
+		public int? M3NFTR => GetNullableInt("NFTR");
 
 		/// <summary>
 		/// Description: Sorting order
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order")]
-		public int? M3_QTTP => GetNullableInt("QTTP");
+		public int? M3QTTP => GetNullableInt("QTTP");
 
 		/// <summary>
 		/// Description: Aggregation
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Aggregation")]
-		public int? M3_AGGR => GetNullableInt("AGGR");
+		public int? M3AGGR => GetNullableInt("AGGR");
 
 		/// <summary>
 		/// Description: Subtotal 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subtotal 1")]
-		public int? M3_SUB1 => GetNullableInt("SUB1");
+		public int? M3SUB1 => GetNullableInt("SUB1");
 
 		/// <summary>
 		/// Description: Subtotal 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subtotal 2")]
-		public int? M3_SUB2 => GetNullableInt("SUB2");
+		public int? M3SUB2 => GetNullableInt("SUB2");
 
 		/// <summary>
 		/// Description: Subtotal 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subtotal 3")]
-		public int? M3_SUB3 => GetNullableInt("SUB3");
+		public int? M3SUB3 => GetNullableInt("SUB3");
 
 		/// <summary>
 		/// Description: Selection field 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection field 1")]
-		public string M3_SLF1 => GetString("SLF1");
+		public string M3SLF1 => GetString("SLF1");
 
 		/// <summary>
 		/// Description: Selection field 2
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection field 2")]
-		public string M3_SLF2 => GetString("SLF2");
+		public string M3SLF2 => GetString("SLF2");
 
 		/// <summary>
 		/// Description: Selection field 3
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection field 3")]
-		public string M3_SLF3 => GetString("SLF3");
+		public string M3SLF3 => GetString("SLF3");
 
 		/// <summary>
 		/// Description: Selection value 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection value 1")]
-		public string M3_FSLT => GetString("FSLT");
+		public string M3FSLT => GetString("FSLT");
 
 		/// <summary>
 		/// Description: Selection value 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection value 1")]
-		public string M3_TSLT => GetString("TSLT");
+		public string M3TSLT => GetString("TSLT");
 
 		/// <summary>
 		/// Description: Selection value 2
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection value 2")]
-		public string M3_FSL2 => GetString("FSL2");
+		public string M3FSL2 => GetString("FSL2");
 
 		/// <summary>
 		/// Description: Selection value 2
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection value 2")]
-		public string M3_TSL2 => GetString("TSL2");
+		public string M3TSL2 => GetString("TSL2");
 
 		/// <summary>
 		/// Description: Selection value 3
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection value 3")]
-		public string M3_FSL3 => GetString("FSL3");
+		public string M3FSL3 => GetString("FSL3");
 
 		/// <summary>
 		/// Description: Selection value 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection value 3")]
-		public string M3_TSL3 => GetString("TSL3");
+		public string M3TSL3 => GetString("TSL3");
 
 		/// <summary>
 		/// Description: Ad-hoc report e-mail
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ad-hoc report e-mail")]
-		public int? M3_REEM => GetNullableInt("REEM");
+		public int? M3REEM => GetNullableInt("REEM");
 
 		/// <summary>
 		/// Description: E-mail type
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("E-mail type")]
-		public string M3_EMTP => GetString("EMTP");
+		public string M3EMTP => GetString("EMTP");
 
 		/// <summary>
 		/// Description: E-mail key value
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("E-mail key value")]
-		public string M3_EMKY => GetString("EMKY");
+		public string M3EMKY => GetString("EMKY");
 
 		/// <summary>
 		/// Description: Subject
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subject")]
-		public string M3_SUBJ => GetString("SUBJ");
+		public string M3SUBJ => GetString("SUBJ");
 
 		/// <summary>
 		/// Description: E-mail text
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("E-mail text")]
-		public string M3_EMTX => GetString("EMTX");
+		public string M3EMTX => GetString("EMTX");
 
 		/// <summary>
 		/// Description: Ad-hoc report location
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ad-hoc report location")]
-		public string M3_RLCT => GetString("RLCT");
+		public string M3RLCT => GetString("RLCT");
 
 		/// <summary>
 		/// Description: Period type
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type")]
-		public int? M3_PETP => GetNullableInt("PETP");
+		public int? M3PETP => GetNullableInt("PETP");
 
 		/// <summary>
 		/// Description: Job schedule allowed
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job schedule allowed")]
-		public int? M3_XSAL => GetNullableInt("XSAL");
+		public int? M3XSAL => GetNullableInt("XSAL");
 
 		/// <summary>
 		/// Description: Job schedule category
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job schedule category")]
-		public string M3_XCAT => GetString("XCAT");
+		public string M3XCAT => GetString("XCAT");
 
 		/// <summary>
 		/// Description: Document location
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document location")]
-		public string M3_DOLO => GetString("DOLO");
+		public string M3DOLO => GetString("DOLO");
 
 		/// <summary>
 		/// Description: Sender e-mail address
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sender e-mail address")]
-		public string M3_SEEA => GetString("SEEA");
+		public string M3SEEA => GetString("SEEA");
 
 		/// <summary>
 		/// Description: Save report run
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Save report run")]
-		public int? M3_RSRR => GetNullableInt("RSRR");
+		public int? M3RSRR => GetNullableInt("RSRR");
 
 		/// <summary>
 		/// Description: Number of days to save report run
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of days to save report run")]
-		public int? M3_RNRR => GetNullableInt("RNRR");
+		public int? M3RNRR => GetNullableInt("RNRR");
 
 		/// <summary>
 		/// Description: Save report lines
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Save report lines")]
-		public int? M3_RSRL => GetNullableInt("RSRL");
+		public int? M3RSRL => GetNullableInt("RSRL");
 
 		/// <summary>
 		/// Description: Number of days to save report lines
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.AHS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of days to save report lines")]
-		public int? M3_RNRL => GetNullableInt("RNRL");
+		public int? M3RNRL => GetNullableInt("RNRL");
 	}
 }
 // EOF

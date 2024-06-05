@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QMS002MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add a numeric qualitative header
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QTCD">Numeric qualitative (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_ACTF">Active</param>
+		/// <param name="m3QTCD">Numeric qualitative (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3ACTF">Active</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddNumericQual(
-			string m3_QTCD, 
-			string m3_TX40, 
-			int? m3_ACTF = null, 
+			string m3QTCD, 
+			string m3TX40, 
+			int? m3ACTF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,19 +66,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QTCD))
-				throw new ArgumentNullException("m3_QTCD");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3QTCD))
+				throw new ArgumentNullException(nameof(m3QTCD));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QTCD", m3_QTCD.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("QTCD", m3QTCD.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -97,7 +100,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a numeric qualitative header
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QTCD">Numeric qualitative</param>
+		/// <param name="m3QTCD">Numeric qualitative</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -106,7 +109,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltNumericQual(
-			string m3_QTCD = null, 
+			string m3QTCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -121,8 +124,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_QTCD))
-				request.WithQueryParameter("QTCD", m3_QTCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QTCD))
+				request.WithQueryParameter("QTCD", m3QTCD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -132,7 +135,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -143,7 +147,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a numeric qualitative header
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QTCD">Numeric qualitative</param>
+		/// <param name="m3QTCD">Numeric qualitative</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -152,7 +156,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetNumericQualResponse></returns>
 		/// <exception cref="M3Exception<GetNumericQualResponse>"></exception>
 		public async Task<M3Response<GetNumericQualResponse>> GetNumericQual(
-			string m3_QTCD = null, 
+			string m3QTCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -167,8 +171,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_QTCD))
-				request.WithQueryParameter("QTCD", m3_QTCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QTCD))
+				request.WithQueryParameter("QTCD", m3QTCD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetNumericQualResponse>(
@@ -178,7 +182,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -189,7 +194,7 @@ namespace M3H5Lib.Api
 		/// Description List data for numeric qualitative headers
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QTCD">Numeric qualitative</param>
+		/// <param name="m3QTCD">Numeric qualitative</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -198,7 +203,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstNumericQualResponse></returns>
 		/// <exception cref="M3Exception<LstNumericQualResponse>"></exception>
 		public async Task<M3Response<LstNumericQualResponse>> LstNumericQual(
-			string m3_QTCD = null, 
+			string m3QTCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -213,8 +218,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_QTCD))
-				request.WithQueryParameter("QTCD", m3_QTCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QTCD))
+				request.WithQueryParameter("QTCD", m3QTCD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstNumericQualResponse>(
@@ -224,7 +229,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -235,9 +241,9 @@ namespace M3H5Lib.Api
 		/// Description Update data for a numeric qualitative header
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QTCD">Numeric qualitative</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_ACTF">Active</param>
+		/// <param name="m3QTCD">Numeric qualitative</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3ACTF">Active</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -246,9 +252,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdNumericQual(
-			string m3_QTCD = null, 
-			string m3_TX40 = null, 
-			int? m3_ACTF = null, 
+			string m3QTCD = null, 
+			string m3TX40 = null, 
+			int? m3ACTF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -263,12 +269,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_QTCD))
-				request.WithQueryParameter("QTCD", m3_QTCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3QTCD))
+				request.WithQueryParameter("QTCD", m3QTCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -278,7 +284,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

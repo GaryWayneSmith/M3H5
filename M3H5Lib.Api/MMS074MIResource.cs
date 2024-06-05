@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS074MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add a composition group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CPGR">Composition group (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3CPGR">Composition group (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCompGroup(
-			string m3_CPGR, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
+			string m3CPGR, 
+			string m3TX40, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,19 +66,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CPGR))
-				throw new ArgumentNullException("m3_CPGR");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3CPGR))
+				throw new ArgumentNullException(nameof(m3CPGR));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CPGR", m3_CPGR.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("CPGR", m3CPGR.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -97,7 +100,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a composition group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CPGR">Composition group (Required)</param>
+		/// <param name="m3CPGR">Composition group (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -106,7 +109,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltCompGroup(
-			string m3_CPGR, 
+			string m3CPGR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -121,12 +124,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CPGR))
-				throw new ArgumentNullException("m3_CPGR");
+			if (string.IsNullOrWhiteSpace(m3CPGR))
+				throw new ArgumentNullException(nameof(m3CPGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CPGR", m3_CPGR.Trim());
+				.WithQueryParameter("CPGR", m3CPGR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -136,7 +139,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -147,7 +151,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a composition group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CPGR">Composition group (Required)</param>
+		/// <param name="m3CPGR">Composition group (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -156,7 +160,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCompGroupResponse></returns>
 		/// <exception cref="M3Exception<GetCompGroupResponse>"></exception>
 		public async Task<M3Response<GetCompGroupResponse>> GetCompGroup(
-			string m3_CPGR, 
+			string m3CPGR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -171,12 +175,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CPGR))
-				throw new ArgumentNullException("m3_CPGR");
+			if (string.IsNullOrWhiteSpace(m3CPGR))
+				throw new ArgumentNullException(nameof(m3CPGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CPGR", m3_CPGR.Trim());
+				.WithQueryParameter("CPGR", m3CPGR.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCompGroupResponse>(
@@ -186,7 +190,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -197,7 +202,7 @@ namespace M3H5Lib.Api
 		/// Description List data for composition groups
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CPGR">Composition group (Required)</param>
+		/// <param name="m3CPGR">Composition group (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -206,7 +211,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCompGroupsResponse></returns>
 		/// <exception cref="M3Exception<LstCompGroupsResponse>"></exception>
 		public async Task<M3Response<LstCompGroupsResponse>> LstCompGroups(
-			string m3_CPGR, 
+			string m3CPGR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -221,12 +226,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CPGR))
-				throw new ArgumentNullException("m3_CPGR");
+			if (string.IsNullOrWhiteSpace(m3CPGR))
+				throw new ArgumentNullException(nameof(m3CPGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CPGR", m3_CPGR.Trim());
+				.WithQueryParameter("CPGR", m3CPGR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCompGroupsResponse>(
@@ -236,7 +241,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -247,9 +253,9 @@ namespace M3H5Lib.Api
 		/// Description Update data for a composition group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CPGR">Composition group (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3CPGR">Composition group (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -258,9 +264,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdCompGroup(
-			string m3_CPGR, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			string m3CPGR, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -275,18 +281,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CPGR))
-				throw new ArgumentNullException("m3_CPGR");
+			if (string.IsNullOrWhiteSpace(m3CPGR))
+				throw new ArgumentNullException(nameof(m3CPGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CPGR", m3_CPGR.Trim());
+				.WithQueryParameter("CPGR", m3CPGR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -296,7 +302,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.GENERAL;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -65,7 +67,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -76,8 +79,8 @@ namespace M3H5Lib.Api
 		/// Description Retrieve descrition for a general word
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_MSI5">General word (Required)</param>
-		/// <param name="m3_SUFF">Suffix (Required)</param>
+		/// <param name="m3MSI5">General word (Required)</param>
+		/// <param name="m3SUFF">Suffix (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetFieldHeadingResponse></returns>
 		/// <exception cref="M3Exception<GetFieldHeadingResponse>"></exception>
 		public async Task<M3Response<GetFieldHeadingResponse>> GetFieldHeading(
-			string m3_MSI5, 
-			string m3_SUFF, 
+			string m3MSI5, 
+			string m3SUFF, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -102,15 +105,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MSI5))
-				throw new ArgumentNullException("m3_MSI5");
-			if (string.IsNullOrWhiteSpace(m3_SUFF))
-				throw new ArgumentNullException("m3_SUFF");
+			if (string.IsNullOrWhiteSpace(m3MSI5))
+				throw new ArgumentNullException(nameof(m3MSI5));
+			if (string.IsNullOrWhiteSpace(m3SUFF))
+				throw new ArgumentNullException(nameof(m3SUFF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MSI5", m3_MSI5.Trim())
-				.WithQueryParameter("SUFF", m3_SUFF.Trim());
+				.WithQueryParameter("MSI5", m3MSI5.Trim())
+				.WithQueryParameter("SUFF", m3SUFF.Trim());
 
 			// Execute the request
 			var result = await Execute<GetFieldHeadingResponse>(
@@ -120,7 +123,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -160,7 +164,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -200,7 +205,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -240,7 +246,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -251,8 +258,8 @@ namespace M3H5Lib.Api
 		/// Description Set date format for conversion
 		/// Version Release: 10
 		/// </summary>
-		/// <param name="m3_DTFM">Date format</param>
-		/// <param name="m3_DSEP">Date separator</param>
+		/// <param name="m3DTFM">Date format</param>
+		/// <param name="m3DSEP">Date separator</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -261,8 +268,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SetDateFormat(
-			string m3_DTFM = null, 
-			string m3_DSEP = null, 
+			string m3DTFM = null, 
+			string m3DSEP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -277,10 +284,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DTFM))
-				request.WithQueryParameter("DTFM", m3_DTFM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DSEP))
-				request.WithQueryParameter("DSEP", m3_DSEP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DTFM))
+				request.WithQueryParameter("DTFM", m3DTFM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DSEP))
+				request.WithQueryParameter("DSEP", m3DSEP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -290,7 +297,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -301,7 +309,7 @@ namespace M3H5Lib.Api
 		/// Description Set max returned records transactions
 		/// Version Release: 10.5
 		/// </summary>
-		/// <param name="m3_MRCD">Max records</param>
+		/// <param name="m3MRCD">Max records</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -310,7 +318,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SetLstMaxRec(
-			int? m3_MRCD = null, 
+			int? m3MRCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -325,8 +333,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_MRCD.HasValue)
-				request.WithQueryParameter("MRCD", m3_MRCD.Value.ToString());
+			if (m3MRCD.HasValue)
+				request.WithQueryParameter("MRCD", m3MRCD.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -336,7 +344,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -376,7 +385,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -416,7 +426,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

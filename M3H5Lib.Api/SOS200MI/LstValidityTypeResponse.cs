@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Validity type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validity type")]
-		public string M3_VLCD => GetString("VLCD");
+		public string M3VLCD => GetString("VLCD");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: New validity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("New validity")]
-		public string M3_VLCN => GetString("VLCN");
+		public string M3VLCN => GetString("VLCN");
 
 		/// <summary>
 		/// Description: Status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Valid agreement
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid agreement")]
-		public int? M3_VLC1 => GetNullableInt("VLC1");
+		public int? M3VLC1 => GetNullableInt("VLC1");
 
 		/// <summary>
 		/// Description: Revoked agreement
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revoked agreement")]
-		public int? M3_VLC2 => GetNullableInt("VLC2");
+		public int? M3VLC2 => GetNullableInt("VLC2");
 
 		/// <summary>
 		/// Description: Automatic change of validity type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic change of validity type")]
-		public int? M3_VLC3 => GetNullableInt("VLC3");
+		public int? M3VLC3 => GetNullableInt("VLC3");
 
 		/// <summary>
 		/// Description: Invoice blocked agreement
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice blocked agreement")]
-		public int? M3_VLC4 => GetNullableInt("VLC4");
+		public int? M3VLC4 => GetNullableInt("VLC4");
 
 		/// <summary>
 		/// Description: Canceled agreement
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Canceled agreement")]
-		public int? M3_VLC5 => GetNullableInt("VLC5");
+		public int? M3VLC5 => GetNullableInt("VLC5");
 
 		/// <summary>
 		/// Description: Catch up invoicing
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch up invoicing")]
-		public int? M3_VLC6 => GetNullableInt("VLC6");
+		public int? M3VLC6 => GetNullableInt("VLC6");
 
 		/// <summary>
 		/// Description: Final crediting
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Final crediting")]
-		public int? M3_VLC7 => GetNullableInt("VLC7");
+		public int? M3VLC7 => GetNullableInt("VLC7");
 
 		/// <summary>
 		/// Description: Change date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

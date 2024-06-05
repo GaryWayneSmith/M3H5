@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document identity")]
-		public string M3_DOID => GetString("DOID");
+		public string M3DOID => GetString("DOID");
 
 		/// <summary>
 		/// Description: Document effectivity 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document effectivity 1")]
-		public int? M3_DSQ1 => GetNullableInt("DSQ1");
+		public int? M3DSQ1 => GetNullableInt("DSQ1");
 
 		/// <summary>
 		/// Description: Document effectivity 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document effectivity 2")]
-		public int? M3_DSQ2 => GetNullableInt("DSQ2");
+		public int? M3DSQ2 => GetNullableInt("DSQ2");
 
 		/// <summary>
 		/// Description: Document effectivity 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document effectivity 3")]
-		public int? M3_DSQ3 => GetNullableInt("DSQ3");
+		public int? M3DSQ3 => GetNullableInt("DSQ3");
 
 		/// <summary>
 		/// Description: Not valid
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Not valid")]
-		public string M3_DNOT => GetString("DNOT");
+		public string M3DNOT => GetString("DNOT");
 
 		/// <summary>
 		/// Description: Value 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value 1")]
-		public string M3_DVA1 => GetString("DVA1");
+		public string M3DVA1 => GetString("DVA1");
 
 		/// <summary>
 		/// Description: Value 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value 2")]
-		public string M3_DVA2 => GetString("DVA2");
+		public string M3DVA2 => GetString("DVA2");
 
 		/// <summary>
 		/// Description: Condition
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Condition")]
-		public string M3_DRAN => GetString("DRAN");
+		public string M3DRAN => GetString("DRAN");
 
 		/// <summary>
 		/// Description: Field
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Number of levels
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of levels")]
-		public int? M3_DNLV => GetNullableInt("DNLV");
+		public int? M3DNLV => GetNullableInt("DNLV");
 
 		/// <summary>
 		/// Description: Number of right brackets
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of right brackets")]
-		public int? M3_DNRB => GetNullableInt("DNRB");
+		public int? M3DNRB => GetNullableInt("DNRB");
 
 		/// <summary>
 		/// Description: Number of left brackets
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of left brackets")]
-		public int? M3_DNLB => GetNullableInt("DNLB");
+		public int? M3DNLB => GetNullableInt("DNLB");
 	}
 }
 // EOF

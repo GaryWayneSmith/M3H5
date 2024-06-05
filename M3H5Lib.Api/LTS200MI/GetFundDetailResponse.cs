@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Model description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model description")]
-		public string M3_MODE => GetString("MODE");
+		public string M3MODE => GetString("MODE");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX25 => GetString("TX25");
+		public string M3TX25 => GetString("TX25");
 
 		/// <summary>
 		/// Description: Individual item type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item type")]
-		public int? M3_INTY => GetNullableInt("INTY");
+		public int? M3INTY => GetNullableInt("INTY");
 
 		/// <summary>
 		/// Description: Subnumber
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber")]
-		public int? M3_SBNO => GetNullableInt("SBNO");
+		public int? M3SBNO => GetNullableInt("SBNO");
 
 		/// <summary>
 		/// Description: Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Number of periods
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of periods")]
-		public int? M3_NOPR => GetNullableInt("NOPR");
+		public int? M3NOPR => GetNullableInt("NOPR");
 
 		/// <summary>
 		/// Description: Valid from
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Months/period
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Months/period")]
-		public int? M3_CMPP => GetNullableInt("CMPP");
+		public int? M3CMPP => GetNullableInt("CMPP");
 
 		/// <summary>
 		/// Description: Invoicing method
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing method")]
-		public string M3_INVM => GetString("INVM");
+		public string M3INVM => GetString("INVM");
 
 		/// <summary>
 		/// Description: Funding price
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Funding price")]
-		public decimal? M3_FUPR => GetNullableDecimal("FUPR");
+		public decimal? M3FUPR => GetNullableDecimal("FUPR");
 
 		/// <summary>
 		/// Description: Residual value
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Residual value")]
-		public decimal? M3_RESV => GetNullableDecimal("RESV");
+		public decimal? M3RESV => GetNullableDecimal("RESV");
 
 		/// <summary>
 		/// Description: Residual %
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Residual %")]
-		public int? M3_REPE => GetNullableInt("REPE");
+		public int? M3REPE => GetNullableInt("REPE");
 
 		/// <summary>
 		/// Description: Interest type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest type")]
-		public string M3_INTT => GetString("INTT");
+		public string M3INTT => GetString("INTT");
 
 		/// <summary>
 		/// Description: Interest rate
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest rate")]
-		public decimal? M3_INPE => GetNullableDecimal("INPE");
+		public decimal? M3INPE => GetNullableDecimal("INPE");
 
 		/// <summary>
 		/// Description: Rent amount
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rent amount")]
-		public decimal? M3_RENT => GetNullableDecimal("RENT");
+		public decimal? M3RENT => GetNullableDecimal("RENT");
 
 		/// <summary>
 		/// Description: Brand
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: Serial number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERI => GetString("SERI");
+		public string M3SERI => GetString("SERI");
 
 		/// <summary>
 		/// Description: Funder number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Funder number")]
-		public string M3_FUND => GetString("FUND");
+		public string M3FUND => GetString("FUND");
 
 		/// <summary>
 		/// Description: Name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public string M3_CINO => GetString("CINO");
+		public string M3CINO => GetString("CINO");
 
 		/// <summary>
 		/// Description: Funder agreement number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Funder agreement number")]
-		public string M3_FUAG => GetString("FUAG");
+		public string M3FUAG => GetString("FUAG");
 
 		/// <summary>
 		/// Description: Currency
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Minimun variable interest rate
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimun variable interest rate")]
-		public decimal? M3_INLL => GetNullableDecimal("INLL");
+		public decimal? M3INLL => GetNullableDecimal("INLL");
 
 		/// <summary>
 		/// Description: Interest threshold value
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest threshold value")]
-		public int? M3_INTH => GetNullableInt("INTH");
+		public int? M3INTH => GetNullableInt("INTH");
 
 		/// <summary>
 		/// Description: Start interest rate
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start interest rate")]
-		public decimal? M3_INSV => GetNullableDecimal("INSV");
+		public decimal? M3INSV => GetNullableDecimal("INSV");
 
 		/// <summary>
 		/// Description: Compare interest
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compare interest")]
-		public decimal? M3_INCM => GetNullableDecimal("INCM");
+		public decimal? M3INCM => GetNullableDecimal("INCM");
 
 		/// <summary>
 		/// Description: Last interest change date
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last interest change date")]
-		public DateTime? M3_ICDT => GetNullableDateTime("ICDT");
+		public DateTime? M3ICDT => GetNullableDateTime("ICDT");
 
 		/// <summary>
 		/// Description: Margin amount
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Margin amount")]
-		public decimal? M3_MARG => GetNullableDecimal("MARG");
+		public decimal? M3MARG => GetNullableDecimal("MARG");
 
 		/// <summary>
 		/// Description: User-defined field 1 alfa
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 alfa")]
-		public string M3_FFA1 => GetString("FFA1");
+		public string M3FFA1 => GetString("FFA1");
 
 		/// <summary>
 		/// Description: User-defined field 2 alfa
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 alfa")]
-		public string M3_FFA2 => GetString("FFA2");
+		public string M3FFA2 => GetString("FFA2");
 
 		/// <summary>
 		/// Description: User-defined field 3 alfa
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 alfa")]
-		public string M3_FFA3 => GetString("FFA3");
+		public string M3FFA3 => GetString("FFA3");
 
 		/// <summary>
 		/// Description: User-defined field 4 alfa
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 alfa")]
-		public string M3_FFA4 => GetString("FFA4");
+		public string M3FFA4 => GetString("FFA4");
 
 		/// <summary>
 		/// Description: User-defined field 5 alfa
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 alfa")]
-		public string M3_FFA5 => GetString("FFA5");
+		public string M3FFA5 => GetString("FFA5");
 
 		/// <summary>
 		/// Description: User-defined field 6 alfa
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 6 alfa")]
-		public string M3_FFA6 => GetString("FFA6");
+		public string M3FFA6 => GetString("FFA6");
 
 		/// <summary>
 		/// Description: User-defined field 7 alfa
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 7 alfa")]
-		public string M3_FFA7 => GetString("FFA7");
+		public string M3FFA7 => GetString("FFA7");
 
 		/// <summary>
 		/// Description: User-defined field 8 alfa
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 8 alfa")]
-		public string M3_FFA8 => GetString("FFA8");
+		public string M3FFA8 => GetString("FFA8");
 
 		/// <summary>
 		/// Description: User-defined field 9 alfa
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 9 alfa")]
-		public string M3_FFA9 => GetString("FFA9");
+		public string M3FFA9 => GetString("FFA9");
 
 		/// <summary>
 		/// Description: User-defined field 0 alfa
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 0 alfa")]
-		public string M3_FFA0 => GetString("FFA0");
+		public string M3FFA0 => GetString("FFA0");
 
 		/// <summary>
 		/// Description: User-defined field 1 numeric
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 numeric")]
-		public decimal? M3_FFN1 => GetNullableDecimal("FFN1");
+		public decimal? M3FFN1 => GetNullableDecimal("FFN1");
 
 		/// <summary>
 		/// Description: User-defined field 2 numeric
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 numeric")]
-		public decimal? M3_FFN2 => GetNullableDecimal("FFN2");
+		public decimal? M3FFN2 => GetNullableDecimal("FFN2");
 
 		/// <summary>
 		/// Description: User-defined field 3 numeric
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 numeric")]
-		public decimal? M3_FFN3 => GetNullableDecimal("FFN3");
+		public decimal? M3FFN3 => GetNullableDecimal("FFN3");
 
 		/// <summary>
 		/// Description: User-defined field 4 numeric
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 numeric")]
-		public decimal? M3_FFN4 => GetNullableDecimal("FFN4");
+		public decimal? M3FFN4 => GetNullableDecimal("FFN4");
 
 		/// <summary>
 		/// Description: User-defined field 5 numeric
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 numeric")]
-		public decimal? M3_FFN5 => GetNullableDecimal("FFN5");
+		public decimal? M3FFN5 => GetNullableDecimal("FFN5");
 
 		/// <summary>
 		/// Description: User-defined field 6 numeric
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 6 numeric")]
-		public decimal? M3_FFN6 => GetNullableDecimal("FFN6");
+		public decimal? M3FFN6 => GetNullableDecimal("FFN6");
 
 		/// <summary>
 		/// Description: User-defined field 7 numeric
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 7 numeric")]
-		public decimal? M3_FFN7 => GetNullableDecimal("FFN7");
+		public decimal? M3FFN7 => GetNullableDecimal("FFN7");
 
 		/// <summary>
 		/// Description: User-defined field 8 numeric
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 8 numeric")]
-		public decimal? M3_FFN8 => GetNullableDecimal("FFN8");
+		public decimal? M3FFN8 => GetNullableDecimal("FFN8");
 
 		/// <summary>
 		/// Description: User-defined field 9 numeric
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 9 numeric")]
-		public decimal? M3_FFN9 => GetNullableDecimal("FFN9");
+		public decimal? M3FFN9 => GetNullableDecimal("FFN9");
 
 		/// <summary>
 		/// Description: User-defined field 0 numeric
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.LTS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 0 numeric")]
-		public decimal? M3_FFN0 => GetNullableDecimal("FFN0");
+		public decimal? M3FFN0 => GetNullableDecimal("FFN0");
 	}
 }
 // EOF

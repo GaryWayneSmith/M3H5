@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Business chain
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain")]
-		public string M3_CHAI => GetString("CHAI");
+		public string M3CHAI => GetString("CHAI");
 
 		/// <summary>
 		/// Description: Superior business chain
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Superior business chain")]
-		public string M3_CHCT => GetString("CHCT");
+		public string M3CHCT => GetString("CHCT");
 
 		/// <summary>
 		/// Description: Business chain - level 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 1")]
-		public string M3_CHL1 => GetString("CHL1");
+		public string M3CHL1 => GetString("CHL1");
 
 		/// <summary>
 		/// Description: Business chain - level 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 2")]
-		public string M3_CHL2 => GetString("CHL2");
+		public string M3CHL2 => GetString("CHL2");
 
 		/// <summary>
 		/// Description: Business chain - level 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 3")]
-		public string M3_CHL3 => GetString("CHL3");
+		public string M3CHL3 => GetString("CHL3");
 
 		/// <summary>
 		/// Description: Business chain - level 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 4")]
-		public string M3_CHL4 => GetString("CHL4");
+		public string M3CHL4 => GetString("CHL4");
 
 		/// <summary>
 		/// Description: Structure level
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure level")]
-		public int? M3_SLVL => GetNullableInt("SLVL");
+		public int? M3SLVL => GetNullableInt("SLVL");
 
 		/// <summary>
 		/// Description: Member number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Member number")]
-		public string M3_CHMB => GetString("CHMB");
+		public string M3CHMB => GetString("CHMB");
 
 		/// <summary>
 		/// Description: Status - member
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS038MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - member")]
-		public int? M3_MBST => GetNullableInt("MBST");
+		public int? M3MBST => GetNullableInt("MBST");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Currency
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Valid from
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Costing model - sales price
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - sales price")]
-		public string M3_SCMO => GetString("SCMO");
+		public string M3SCMO => GetString("SCMO");
 
 		/// <summary>
 		/// Description: Object access group
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object access group")]
-		public string M3_ACGR => GetString("ACGR");
+		public string M3ACGR => GetString("ACGR");
 
 		/// <summary>
 		/// Description: Rounding-off category
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rounding-off category")]
-		public int? M3_ROPP => GetNullableInt("ROPP");
+		public int? M3ROPP => GetNullableInt("ROPP");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Bonus generating
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus generating")]
-		public int? M3_BNCD => GetNullableInt("BNCD");
+		public int? M3BNCD => GetNullableInt("BNCD");
 
 		/// <summary>
 		/// Description: Commission generating
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commission generating")]
-		public int? M3_PRAC => GetNullableInt("PRAC");
+		public int? M3PRAC => GetNullableInt("PRAC");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Meter value 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 1")]
-		public decimal? M3_MVA1 => GetNullableDecimal("MVA1");
+		public decimal? M3MVA1 => GetNullableDecimal("MVA1");
 
 		/// <summary>
 		/// Description: Chg date meter value 1
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chg date meter value 1")]
-		public DateTime? M3_M1DT => GetNullableDateTime("M1DT");
+		public DateTime? M3M1DT => GetNullableDateTime("M1DT");
 
 		/// <summary>
 		/// Description: Meter 2
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 2")]
-		public string M3_MES2 => GetString("MES2");
+		public string M3MES2 => GetString("MES2");
 
 		/// <summary>
 		/// Description: Meter value 2
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 2")]
-		public decimal? M3_MVA2 => GetNullableDecimal("MVA2");
+		public decimal? M3MVA2 => GetNullableDecimal("MVA2");
 
 		/// <summary>
 		/// Description: Chg date meter value 2
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chg date meter value 2")]
-		public DateTime? M3_M2DT => GetNullableDateTime("M2DT");
+		public DateTime? M3M2DT => GetNullableDateTime("M2DT");
 
 		/// <summary>
 		/// Description: Meter 3
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 3")]
-		public string M3_MES3 => GetString("MES3");
+		public string M3MES3 => GetString("MES3");
 
 		/// <summary>
 		/// Description: Meter value 3
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 3")]
-		public decimal? M3_MVA3 => GetNullableDecimal("MVA3");
+		public decimal? M3MVA3 => GetNullableDecimal("MVA3");
 
 		/// <summary>
 		/// Description: Chg date meter value 3
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chg date meter value 3")]
-		public DateTime? M3_M3DT => GetNullableDateTime("M3DT");
+		public DateTime? M3M3DT => GetNullableDateTime("M3DT");
 
 		/// <summary>
 		/// Description: Meter 4
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 4")]
-		public string M3_MES4 => GetString("MES4");
+		public string M3MES4 => GetString("MES4");
 
 		/// <summary>
 		/// Description: Meter value 4
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value 4")]
-		public decimal? M3_MVA4 => GetNullableDecimal("MVA4");
+		public decimal? M3MVA4 => GetNullableDecimal("MVA4");
 
 		/// <summary>
 		/// Description: Chg date meter value 4
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chg date meter value 4")]
-		public DateTime? M3_M4DT => GetNullableDateTime("M4DT");
+		public DateTime? M3M4DT => GetNullableDateTime("M4DT");
 
 		/// <summary>
 		/// Description: Sales price unit of measure
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price unit of measure")]
-		public string M3_SPUN => GetString("SPUN");
+		public string M3SPUN => GetString("SPUN");
 
 		/// <summary>
 		/// Description: Evaluation value
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Evaluation value")]
-		public decimal? M3_EVAV => GetNullableDecimal("EVAV");
+		public decimal? M3EVAV => GetNullableDecimal("EVAV");
 
 		/// <summary>
 		/// Description: Chg date evaluation
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chg date evaluation")]
-		public DateTime? M3_S1DT => GetNullableDateTime("S1DT");
+		public DateTime? M3S1DT => GetNullableDateTime("S1DT");
 
 		/// <summary>
 		/// Description: Evaluation chg by
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Evaluation chg by")]
-		public string M3_S1US => GetString("S1US");
+		public string M3S1US => GetString("S1US");
 
 		/// <summary>
 		/// Description: Fair market price
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fair market price")]
-		public decimal? M3_FMPR => GetNullableDecimal("FMPR");
+		public decimal? M3FMPR => GetNullableDecimal("FMPR");
 
 		/// <summary>
 		/// Description: Fair mrkt price
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fair mrkt price")]
-		public DateTime? M3_S2DT => GetNullableDateTime("S2DT");
+		public DateTime? M3S2DT => GetNullableDateTime("S2DT");
 
 		/// <summary>
 		/// Description: Fair market price chg by
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fair market price chg by")]
-		public string M3_S2US => GetString("S2US");
+		public string M3S2US => GetString("S2US");
 
 		/// <summary>
 		/// Description: Replacement cost
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement cost")]
-		public decimal? M3_RPVA => GetNullableDecimal("RPVA");
+		public decimal? M3RPVA => GetNullableDecimal("RPVA");
 
 		/// <summary>
 		/// Description: Replace cost date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replace cost date")]
-		public DateTime? M3_S3DT => GetNullableDateTime("S3DT");
+		public DateTime? M3S3DT => GetNullableDateTime("S3DT");
 
 		/// <summary>
 		/// Description: Replacement chg by
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement chg by")]
-		public string M3_S3US => GetString("S3US");
+		public string M3S3US => GetString("S3US");
 
 		/// <summary>
 		/// Description: Trade in value
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trade in value")]
-		public decimal? M3_TRAV => GetNullableDecimal("TRAV");
+		public decimal? M3TRAV => GetNullableDecimal("TRAV");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Trade in change date
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trade in change date")]
-		public DateTime? M3_S4DT => GetNullableDateTime("S4DT");
+		public DateTime? M3S4DT => GetNullableDateTime("S4DT");
 
 		/// <summary>
 		/// Description: Trade in change by
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trade in change by")]
-		public string M3_S4US => GetString("S4US");
+		public string M3S4US => GetString("S4US");
 
 		/// <summary>
 		/// Description: Net price used
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price used")]
-		public int? M3_NTCD => GetNullableInt("NTCD");
+		public int? M3NTCD => GetNullableInt("NTCD");
 
 		/// <summary>
 		/// Description: Calculation base value
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation base value")]
-		public decimal? M3_BVAL => GetNullableDecimal("BVAL");
+		public decimal? M3BVAL => GetNullableDecimal("BVAL");
 
 		/// <summary>
 		/// Description: Chg date base value
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chg date base value")]
-		public DateTime? M3_BVDT => GetNullableDateTime("BVDT");
+		public DateTime? M3BVDT => GetNullableDateTime("BVDT");
 
 		/// <summary>
 		/// Description: Base value chg by
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base value chg by")]
-		public string M3_BVUS => GetString("BVUS");
+		public string M3BVUS => GetString("BVUS");
 
 		/// <summary>
 		/// Description: Sales price
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price - not rounded off
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price - not rounded off")]
-		public decimal? M3_SPNR => GetNullableDecimal("SPNR");
+		public decimal? M3SPNR => GetNullableDecimal("SPNR");
 
 		/// <summary>
 		/// Description: Sales price date
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price date")]
-		public DateTime? M3_SPDT => GetNullableDateTime("SPDT");
+		public DateTime? M3SPDT => GetNullableDateTime("SPDT");
 
 		/// <summary>
 		/// Description: Sales price chg by
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price chg by")]
-		public string M3_SPUS => GetString("SPUS");
+		public string M3SPUS => GetString("SPUS");
 
 		/// <summary>
 		/// Description: Text identity
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MMS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

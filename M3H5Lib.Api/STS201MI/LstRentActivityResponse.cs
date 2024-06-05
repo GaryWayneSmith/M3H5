@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Line number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Version
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_VERS => GetNullableInt("VERS");
+		public int? M3VERS => GetNullableInt("VERS");
 
 		/// <summary>
 		/// Description: From warehouse
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From warehouse")]
-		public string M3_FWHL => GetString("FWHL");
+		public string M3FWHL => GetString("FWHL");
 
 		/// <summary>
 		/// Description: To warehouse
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To warehouse")]
-		public string M3_TWHL => GetString("TWHL");
+		public string M3TWHL => GetString("TWHL");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: Return date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return date")]
-		public DateTime? M3_RTDT => GetNullableDateTime("RTDT");
+		public DateTime? M3RTDT => GetNullableDateTime("RTDT");
 
 		/// <summary>
 		/// Description: Customer site
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_SAID => GetString("SAID");
+		public string M3SAID => GetString("SAID");
 
 		/// <summary>
 		/// Description: Name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_SCNM => GetString("SCNM");
+		public string M3SCNM => GetString("SCNM");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_SAD1 => GetString("SAD1");
+		public string M3SAD1 => GetString("SAD1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_SAD2 => GetString("SAD2");
+		public string M3SAD2 => GetString("SAD2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_SAD3 => GetString("SAD3");
+		public string M3SAD3 => GetString("SAD3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_SAD4 => GetString("SAD4");
+		public string M3SAD4 => GetString("SAD4");
 
 		/// <summary>
 		/// Description: City
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Postal code
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Item number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Delivery freight agreement number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery freight agreement number")]
-		public string M3_DEFA => GetString("DEFA");
+		public string M3DEFA => GetString("DEFA");
 
 		/// <summary>
 		/// Description: Delivery ordered by
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery ordered by")]
-		public string M3_DEFO => GetString("DEFO");
+		public string M3DEFO => GetString("DEFO");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_SPHN => GetString("SPHN");
+		public string M3SPHN => GetString("SPHN");
 
 		/// <summary>
 		/// Description: Lot number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Name
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Delivery DO number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery DO number")]
-		public string M3_DOND => GetString("DOND");
+		public string M3DOND => GetString("DOND");
 
 		/// <summary>
 		/// Description: Delivery DO Line number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery DO Line number")]
-		public int? M3_DOLD => GetNullableInt("DOLD");
+		public int? M3DOLD => GetNullableInt("DOLD");
 
 		/// <summary>
 		/// Description: Order line
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: Picking list suffix
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list suffix")]
-		public int? M3_PLSX => GetNullableInt("PLSX");
+		public int? M3PLSX => GetNullableInt("PLSX");
 
 		/// <summary>
 		/// Description: Return DO number
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return DO number")]
-		public string M3_DONR => GetString("DONR");
+		public string M3DONR => GetString("DONR");
 
 		/// <summary>
 		/// Description: Return DO Line number
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return DO Line number")]
-		public int? M3_DOLR => GetNullableInt("DOLR");
+		public int? M3DOLR => GetNullableInt("DOLR");
 
 		/// <summary>
 		/// Description: Status - agreement line
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - agreement line")]
-		public string M3_ASTH => GetString("ASTH");
+		public string M3ASTH => GetString("ASTH");
 
 		/// <summary>
 		/// Description: Highest DO line status
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest DO line status")]
-		public string M3_HSTH => GetString("HSTH");
+		public string M3HSTH => GetString("HSTH");
 
 		/// <summary>
 		/// Description: Lowest DO line status
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest DO line status")]
-		public string M3_LSTH => GetString("LSTH");
+		public string M3LSTH => GetString("LSTH");
 
 		/// <summary>
 		/// Description: Customer name
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Meter item
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter item")]
-		public int? M3_MEIT => GetNullableInt("MEIT");
+		public int? M3MEIT => GetNullableInt("MEIT");
 
 		/// <summary>
 		/// Description: Consumption meter
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consumption meter")]
-		public string M3_CMET => GetString("CMET");
+		public string M3CMET => GetString("CMET");
 
 		/// <summary>
 		/// Description: Warehouse On hire
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse On hire")]
-		public string M3_ONWH => GetString("ONWH");
+		public string M3ONWH => GetString("ONWH");
 
 		/// <summary>
 		/// Description: Service order number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Location
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: County ID
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.STS201MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 	}
 }
 // EOF

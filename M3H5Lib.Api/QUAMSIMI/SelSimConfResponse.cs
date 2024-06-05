@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Operation number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Work center/Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center/Item number")]
-		public string M3_MTPL => GetString("MTPL");
+		public string M3MTPL => GetString("MTPL");
 
 		/// <summary>
 		/// Description: Quantity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_QTQT => GetNullableDecimal("QTQT");
+		public decimal? M3QTQT => GetNullableDecimal("QTQT");
 
 		/// <summary>
 		/// Description: Setup time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup time")]
-		public int? M3_SETI => GetNullableInt("SETI");
+		public int? M3SETI => GetNullableInt("SETI");
 
 		/// <summary>
 		/// Description: Product engineering U/M
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product engineering U/M")]
-		public string M3_PEUN => GetString("PEUN");
+		public string M3PEUN => GetString("PEUN");
 
 		/// <summary>
 		/// Description: Sales price
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Cost Price
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost Price")]
-		public decimal? M3_ESBU => GetNullableDecimal("ESBU");
+		public decimal? M3ESBU => GetNullableDecimal("ESBU");
 
 		/// <summary>
 		/// Description: Currency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Attribute value Alpha
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value Alpha")]
-		public string M3_ATVA => GetString("ATVA");
+		public string M3ATVA => GetString("ATVA");
 
 		/// <summary>
 		/// Description: Attribute value Numeric
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QUAMSIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value Numeric")]
-		public decimal? M3_ATVN => GetNullableDecimal("ATVN");
+		public decimal? M3ATVN => GetNullableDecimal("ATVN");
 	}
 }
 // EOF

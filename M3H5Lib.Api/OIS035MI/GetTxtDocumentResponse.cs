@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text type")]
-		public int? M3_TXCD => GetNullableInt("TXCD");
+		public int? M3TXCD => GetNullableInt("TXCD");
 
 		/// <summary>
 		/// Description: Text identity
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public string M3_TXKY => GetString("TXKY");
+		public string M3TXKY => GetString("TXKY");
 
 		/// <summary>
 		/// Description: Language
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Start date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Text description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text description")]
-		public string M3_TXDE => GetString("TXDE");
+		public string M3TXDE => GetString("TXDE");
 
 		/// <summary>
 		/// Description: Print code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print code")]
-		public int? M3_TXDO => GetNullableInt("TXDO");
+		public int? M3TXDO => GetNullableInt("TXDO");
 
 		/// <summary>
 		/// Description: Text place
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text place")]
-		public int? M3_TXPR => GetNullableInt("TXPR");
+		public int? M3TXPR => GetNullableInt("TXPR");
 
 		/// <summary>
 		/// Description: Finish date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_ENDT => GetNullableDateTime("ENDT");
+		public DateTime? M3ENDT => GetNullableDateTime("ENDT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

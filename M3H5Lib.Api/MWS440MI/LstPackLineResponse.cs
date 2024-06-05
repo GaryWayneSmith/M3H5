@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Package number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Order number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Order Line suffix
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Item number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Location
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Receipt quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receipt quantity")]
-		public decimal? M3_RCQT => GetNullableDecimal("RCQT");
+		public decimal? M3RCQT => GetNullableDecimal("RCQT");
 
 		/// <summary>
 		/// Description: Container
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Complete flag
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Complete flag")]
-		public int? M3_OEND => GetNullableInt("OEND");
+		public int? M3OEND => GetNullableInt("OEND");
 
 		/// <summary>
 		/// Description: Catch weight
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight")]
-		public decimal? M3_CAWE => GetNullableDecimal("CAWE");
+		public decimal? M3CAWE => GetNullableDecimal("CAWE");
 
 		/// <summary>
 		/// Description: Packaging
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Included in package number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in package number")]
-		public string M3_PAII => GetString("PAII");
+		public string M3PAII => GetString("PAII");
 
 		/// <summary>
 		/// Description: Lot number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Item description
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item description")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Alias number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: Consignee
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignee")]
-		public string M3_CONA => GetString("CONA");
+		public string M3CONA => GetString("CONA");
 
 		/// <summary>
 		/// Description: Delivered quantity - basic U/M
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity - basic U/M")]
-		public decimal? M3_DLQT => GetNullableDecimal("DLQT");
+		public decimal? M3DLQT => GetNullableDecimal("DLQT");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Net weight
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Volume
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MWS440MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 	}
 }
 // EOF

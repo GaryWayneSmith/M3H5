@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Partner
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Alias category
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias category")]
-		public int? M3_ALWT => GetNullableInt("ALWT");
+		public int? M3ALWT => GetNullableInt("ALWT");
 
 		/// <summary>
 		/// Description: Alias qualifier
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias qualifier")]
-		public string M3_ALWQ => GetString("ALWQ");
+		public string M3ALWQ => GetString("ALWQ");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Primary Alias number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary Alias number")]
-		public string M3_PPOP => GetString("PPOP");
+		public string M3PPOP => GetString("PPOP");
 
 		/// <summary>
 		/// Description: Alias number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: Partner ID
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner ID")]
-		public string M3_E0PB => GetString("E0PB");
+		public string M3E0PB => GetString("E0PB");
 
 		/// <summary>
 		/// Description: Valid from
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VFDT => GetNullableDateTime("VFDT");
+		public DateTime? M3VFDT => GetNullableDateTime("VFDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Quantity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_CNQT => GetNullableDecimal("CNQT");
+		public decimal? M3CNQT => GetNullableDecimal("CNQT");
 
 		/// <summary>
 		/// Description: Alternate U/M
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 
 		/// <summary>
 		/// Description: Country of origin
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin")]
-		public string M3_ORCO => GetString("ORCO");
+		public string M3ORCO => GetString("ORCO");
 
 		/// <summary>
 		/// Description: Sequence
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Remark
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Old CFIN
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Old CFIN")]
-		public int? M3_CFXX => GetNullableInt("CFXX");
+		public int? M3CFXX => GetNullableInt("CFXX");
 
 		/// <summary>
 		/// Description: Text identity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Season
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Season")]
-		public string M3_SEA1 => GetString("SEA1");
+		public string M3SEA1 => GetString("SEA1");
 
 		/// <summary>
 		/// Description: Alias type
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias type")]
-		public string M3_ATPE => GetString("ATPE");
+		public string M3ATPE => GetString("ATPE");
 
 		/// <summary>
 		/// Description: Command
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Command")]
-		public string M3_CMND => GetString("CMND");
+		public string M3CMND => GetString("CMND");
 
 		/// <summary>
 		/// Description: 0/blank=Unprocessed, 1=Processed
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("0/blank=Unprocessed, 1=Processed")]
-		public int? M3_DOWN => GetNullableInt("DOWN");
+		public int? M3DOWN => GetNullableInt("DOWN");
 
 		/// <summary>
 		/// Description: Entry date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Configuration number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MHS635MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration number")]
-		public long? M3_CFIN => GetNullableLong("CFIN");
+		public long? M3CFIN => GetNullableLong("CFIN");
 	}
 }
 // EOF

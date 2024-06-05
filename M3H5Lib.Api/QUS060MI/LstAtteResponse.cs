@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute template")]
-		public string M3_ATTE => GetString("ATTE");
+		public string M3ATTE => GetString("ATTE");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Attribute value
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value")]
-		public string M3_ATVA => GetString("ATVA");
+		public string M3ATVA => GetString("ATVA");
 
 		/// <summary>
 		/// Description: Product
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QUS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 	}
 }
 // EOF

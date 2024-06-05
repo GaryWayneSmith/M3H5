@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Price list
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Currency
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Customer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Valid from
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Item number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lowest quantity limit
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest quantity limit")]
-		public decimal? M3_QTYL => GetNullableDecimal("QTYL");
+		public decimal? M3QTYL => GetNullableDecimal("QTYL");
 
 		/// <summary>
 		/// Description: Lowest quantity limit - basic U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest quantity limit - basic U/M")]
-		public decimal? M3_QTLB => GetNullableDecimal("QTLB");
+		public decimal? M3QTLB => GetNullableDecimal("QTLB");
 
 		/// <summary>
 		/// Description: Price adjustment factor
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price adjustment factor")]
-		public decimal? M3_PCOF => GetNullableDecimal("PCOF");
+		public decimal? M3PCOF => GetNullableDecimal("PCOF");
 
 		/// <summary>
 		/// Description: Sales price
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Sales price unit of measure
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price unit of measure")]
-		public string M3_SPUN => GetString("SPUN");
+		public string M3SPUN => GetString("SPUN");
 
 		/// <summary>
 		/// Description: Conversion factor - sales price U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion factor - sales price U/M")]
-		public decimal? M3_COFS => GetNullableDecimal("COFS");
+		public decimal? M3COFS => GetNullableDecimal("COFS");
 
 		/// <summary>
 		/// Description: Conversion method - sales prices U/M
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion method - sales prices U/M")]
-		public int? M3_DMCS => GetNullableInt("DMCS");
+		public int? M3DMCS => GetNullableInt("DMCS");
 
 		/// <summary>
 		/// Description: Net price used
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price used")]
-		public int? M3_NTCD => GetNullableInt("NTCD");
+		public int? M3NTCD => GetNullableInt("NTCD");
 
 		/// <summary>
 		/// Description: VAT included
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT included")]
-		public int? M3_TINC => GetNullableInt("TINC");
+		public int? M3TINC => GetNullableInt("TINC");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: Start value 5
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 5")]
-		public string M3_OBV5 => GetString("OBV5");
+		public string M3OBV5 => GetString("OBV5");
 	}
 }
 // EOF

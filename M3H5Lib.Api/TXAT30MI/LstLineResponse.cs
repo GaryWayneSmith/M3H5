@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Tax declaration number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax declaration number")]
-		public string M3_VRNL => GetString("VRNL");
+		public string M3VRNL => GetString("VRNL");
 
 		/// <summary>
 		/// Description: Report reference line
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report reference line")]
-		public int? M3_RRLN => GetNullableInt("RRLN");
+		public int? M3RRLN => GetNullableInt("RRLN");
 
 		/// <summary>
 		/// Description: Customs statistical number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customs statistical number")]
-		public string M3_CSNO => GetString("CSNO");
+		public string M3CSNO => GetString("CSNO");
 
 		/// <summary>
 		/// Description: Country
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Country code ISO
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country code ISO")]
-		public string M3_IISO => GetString("IISO");
+		public string M3IISO => GetString("IISO");
 
 		/// <summary>
 		/// Description: Fiscal value
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fiscal value")]
-		public decimal? M3_FSVL => GetNullableDecimal("FSVL");
+		public decimal? M3FSVL => GetNullableDecimal("FSVL");
 
 		/// <summary>
 		/// Description: Fiscal currency code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fiscal currency code")]
-		public string M3_FSCU => GetString("FSCU");
+		public string M3FSCU => GetString("FSCU");
 
 		/// <summary>
 		/// Description: Business type - trade statistics (TST)
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business type - trade statistics (TST)")]
-		public string M3_VRCD => GetString("VRCD");
+		public string M3VRCD => GetString("VRCD");
 
 		/// <summary>
 		/// Description: Statistic value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistic value")]
-		public decimal? M3_SSVL => GetNullableDecimal("SSVL");
+		public decimal? M3SSVL => GetNullableDecimal("SSVL");
 
 		/// <summary>
 		/// Description: Net weight
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_ECNW => GetNullableDecimal("ECNW");
+		public decimal? M3ECNW => GetNullableDecimal("ECNW");
 
 		/// <summary>
 		/// Description: Supplementary U/M
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplementary U/M")]
-		public string M3_SUPL => GetString("SUPL");
+		public string M3SUPL => GetString("SUPL");
 
 		/// <summary>
 		/// Description: Labor code - trade statistics (TST)
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor code - trade statistics (TST)")]
-		public string M3_ECLC => GetString("ECLC");
+		public string M3ECLC => GetString("ECLC");
 
 		/// <summary>
 		/// Description: Delivery terms - INTRASTAT
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms - INTRASTAT")]
-		public string M3_ECDT => GetString("ECDT");
+		public string M3ECDT => GetString("ECDT");
 
 		/// <summary>
 		/// Description: Transport method - trade stat (TST)
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transport method - trade stat (TST)")]
-		public int? M3_VRDL => GetNullableInt("VRDL");
+		public int? M3VRDL => GetNullableInt("VRDL");
 
 		/// <summary>
 		/// Description: Country of origin - trade stat (TST)
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin - trade stat (TST)")]
-		public int? M3_EUOR => GetNullableInt("EUOR");
+		public int? M3EUOR => GetNullableInt("EUOR");
 
 		/// <summary>
 		/// Description: Country of origin - ISO code
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin - ISO code")]
-		public string M3_IIS2 => GetString("IIS2");
+		public string M3IIS2 => GetString("IIS2");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Customs quantity
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customs quantity")]
-		public decimal? M3_ECQT => GetNullableDecimal("ECQT");
+		public decimal? M3ECQT => GetNullableDecimal("ECQT");
 
 		/// <summary>
 		/// Description: Information type
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information type")]
-		public int? M3_ECTP => GetNullableInt("ECTP");
+		public int? M3ECTP => GetNullableInt("ECTP");
 
 		/// <summary>
 		/// Description: Country of origin
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin")]
-		public string M3_ORCO => GetString("ORCO");
+		public string M3ORCO => GetString("ORCO");
 
 		/// <summary>
 		/// Description: Description Intrastat AT
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description Intrastat AT")]
-		public string M3_XDES => GetString("XDES");
+		public string M3XDES => GetString("XDES");
 
 		/// <summary>
 		/// Description: Procedure Intrastat AT
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.TXAT30MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Procedure Intrastat AT")]
-		public string M3_XPRO => GetString("XPRO");
+		public string M3XPRO => GetString("XPRO");
 	}
 }
 // EOF

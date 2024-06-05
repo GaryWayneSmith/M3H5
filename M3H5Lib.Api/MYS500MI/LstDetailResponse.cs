@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Message direction
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message direction")]
-		public string M3_E0IO => GetString("E0IO");
+		public string M3E0IO => GetString("E0IO");
 
 		/// <summary>
 		/// Description: Direction
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: TEI Transfer ID
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Transfer ID")]
-		public string M3_TINR => GetString("TINR");
+		public string M3TINR => GetString("TINR");
 
 		/// <summary>
 		/// Description: Detail type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detail type")]
-		public int? M3_DETP => GetNullableInt("DETP");
+		public int? M3DETP => GetNullableInt("DETP");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Export/Import
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Export/Import")]
-		public int? M3_EXIM => GetNullableInt("EXIM");
+		public int? M3EXIM => GetNullableInt("EXIM");
 
 		/// <summary>
 		/// Description: Package alias external ID
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package alias external ID")]
-		public string M3_PAEI => GetString("PAEI");
+		public string M3PAEI => GetString("PAEI");
 
 		/// <summary>
 		/// Description: TEI Detail object 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Detail object 1")]
-		public string M3_TDO1 => GetString("TDO1");
+		public string M3TDO1 => GetString("TDO1");
 
 		/// <summary>
 		/// Description: TEI detail object value 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI detail object value 1")]
-		public string M3_TDV1 => GetString("TDV1");
+		public string M3TDV1 => GetString("TDV1");
 
 		/// <summary>
 		/// Description: TEI Detail object 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Detail object 2")]
-		public string M3_TDO2 => GetString("TDO2");
+		public string M3TDO2 => GetString("TDO2");
 
 		/// <summary>
 		/// Description: TEI detail object value 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI detail object value 2")]
-		public string M3_TDV2 => GetString("TDV2");
+		public string M3TDV2 => GetString("TDV2");
 
 		/// <summary>
 		/// Description: TEI Detail object 3
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Detail object 3")]
-		public string M3_TDO3 => GetString("TDO3");
+		public string M3TDO3 => GetString("TDO3");
 
 		/// <summary>
 		/// Description: TEI detail object value 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI detail object value 3")]
-		public string M3_TDV3 => GetString("TDV3");
+		public string M3TDV3 => GetString("TDV3");
 
 		/// <summary>
 		/// Description: Text identity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

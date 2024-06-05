@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS406MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service stop")]
-		public int? M3_LSCD => GetNullableInt("LSCD");
+		public int? M3LSCD => GetNullableInt("LSCD");
 
 		/// <summary>
 		/// Description: Invoice block
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS406MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice block")]
-		public int? M3_ILCD => GetNullableInt("ILCD");
+		public int? M3ILCD => GetNullableInt("ILCD");
 
 		/// <summary>
 		/// Description: Invoicing interval - years
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS406MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - years")]
-		public int? M3_IIYR => GetNullableInt("IIYR");
+		public int? M3IIYR => GetNullableInt("IIYR");
 
 		/// <summary>
 		/// Description: Invoicing interval - months
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS406MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - months")]
-		public int? M3_IIMO => GetNullableInt("IIMO");
+		public int? M3IIMO => GetNullableInt("IIMO");
 
 		/// <summary>
 		/// Description: Invoicing interval - days
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS406MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - days")]
-		public int? M3_IIDA => GetNullableInt("IIDA");
+		public int? M3IIDA => GetNullableInt("IIDA");
 
 		/// <summary>
 		/// Description: Invoicing method
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS406MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing method")]
-		public string M3_INVM => GetString("INVM");
+		public string M3INVM => GetString("INVM");
 	}
 }
 // EOF

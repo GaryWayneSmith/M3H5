@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Role")]
-		public string M3_ROLL => GetString("ROLL");
+		public string M3ROLL => GetString("ROLL");
 
 		/// <summary>
 		/// Description: Function
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function")]
-		public string M3_FNID => GetString("FNID");
+		public string M3FNID => GetString("FNID");
 
 		/// <summary>
 		/// Description: Company
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Alpha field 1 positions
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 1 positions")]
-		public string M3_AL01 => GetString("AL01");
+		public string M3AL01 => GetString("AL01");
 
 		/// <summary>
 		/// Description: Alpha field 2 positions
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 2 positions")]
-		public string M3_AL02 => GetString("AL02");
+		public string M3AL02 => GetString("AL02");
 
 		/// <summary>
 		/// Description: Alpha field 3 positions
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 3 positions")]
-		public string M3_AL03 => GetString("AL03");
+		public string M3AL03 => GetString("AL03");
 
 		/// <summary>
 		/// Description: Alpha field 4 positions
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 4 positions")]
-		public string M3_AL04 => GetString("AL04");
+		public string M3AL04 => GetString("AL04");
 
 		/// <summary>
 		/// Description: Alpha field 5 positions
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 5 positions")]
-		public string M3_AL05 => GetString("AL05");
+		public string M3AL05 => GetString("AL05");
 
 		/// <summary>
 		/// Description: Alpha field 6 positions
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 6 positions")]
-		public string M3_AL06 => GetString("AL06");
+		public string M3AL06 => GetString("AL06");
 
 		/// <summary>
 		/// Description: Alpha field 7 positions
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 7 positions")]
-		public string M3_AL07 => GetString("AL07");
+		public string M3AL07 => GetString("AL07");
 
 		/// <summary>
 		/// Description: Alpha field 8 positions
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 8 positions")]
-		public string M3_AL08 => GetString("AL08");
+		public string M3AL08 => GetString("AL08");
 
 		/// <summary>
 		/// Description: Alpha field 9 positions
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SES400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 9 positions")]
-		public string M3_AL09 => GetString("AL09");
+		public string M3AL09 => GetString("AL09");
 	}
 }
 // EOF

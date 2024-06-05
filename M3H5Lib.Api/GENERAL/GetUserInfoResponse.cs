@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_ZZUSID => GetString("ZZUSID");
+		public string M3ZZUSID => GetString("ZZUSID");
 
 		/// <summary>
 		/// Description: Company
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_ZDCONO => GetNullableInt("ZDCONO");
+		public int? M3ZDCONO => GetNullableInt("ZDCONO");
 
 		/// <summary>
 		/// Description: Division
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_ZDDIVI => GetString("ZDDIVI");
+		public string M3ZDDIVI => GetString("ZDDIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_ZDFACI => GetString("ZDFACI");
+		public string M3ZDFACI => GetString("ZDFACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_ZZWHLO => GetString("ZZWHLO");
+		public string M3ZZWHLO => GetString("ZZWHLO");
 
 		/// <summary>
 		/// Description: User group-function access
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("User group-function access")]
-		public string M3_ZDAUPF => GetString("ZDAUPF");
+		public string M3ZDAUPF => GetString("ZDAUPF");
 
 		/// <summary>
 		/// Description: Display item name in own language
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Display item name in own language")]
-		public string M3_ZDREPF => GetString("ZDREPF");
+		public string M3ZDREPF => GetString("ZDREPF");
 
 		/// <summary>
 		/// Description: System language
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("System language")]
-		public string M3_ZDLANC => GetString("ZDLANC");
+		public string M3ZDLANC => GetString("ZDLANC");
 
 		/// <summary>
 		/// Description: Date format
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date format")]
-		public string M3_ZDDTFM => GetString("ZDDTFM");
+		public string M3ZDDTFM => GetString("ZDDTFM");
 
 		/// <summary>
 		/// Description: Date separator
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date separator")]
-		public string M3_DSEP => GetString("DSEP");
+		public string M3DSEP => GetString("DSEP");
 
 		/// <summary>
 		/// Description: Time separator
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time separator")]
-		public string M3_TSEP => GetString("TSEP");
+		public string M3TSEP => GetString("TSEP");
 
 		/// <summary>
 		/// Description: Time zone
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 
 		/// <summary>
 		/// Description: User full name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.GENERAL
 		/// </summary>
 		[JsonIgnore]
 		[Description("User full name")]
-		public string M3_USFN => GetString("USFN");
+		public string M3USFN => GetString("USFN");
 	}
 }
 // EOF

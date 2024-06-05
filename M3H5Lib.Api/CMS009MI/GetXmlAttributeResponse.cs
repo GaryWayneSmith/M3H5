@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute name")]
-		public string M3_ATN1 => GetString("ATN1");
+		public string M3ATN1 => GetString("ATN1");
 
 		/// <summary>
 		/// Description: Source of data
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Source of data")]
-		public int? M3_BDA1 => GetNullableInt("BDA1");
+		public int? M3BDA1 => GetNullableInt("BDA1");
 
 		/// <summary>
 		/// Description: Field
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ1 => GetString("OBJ1");
+		public string M3OBJ1 => GetString("OBJ1");
 
 		/// <summary>
 		/// Description: Specific value
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specific value")]
-		public string M3_SPV1 => GetString("SPV1");
+		public string M3SPV1 => GetString("SPV1");
 	}
 }
 // EOF

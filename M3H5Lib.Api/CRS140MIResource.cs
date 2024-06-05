@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS140MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description List District information
 		/// Version Release: 12.2
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FRSD">From district</param>
-		/// <param name="m3_TOSD">To district</param>
-		/// <param name="m3_LMTS">Last import´s timestamp</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FRSD">From district</param>
+		/// <param name="m3TOSD">To district</param>
+		/// <param name="m3LMTS">Last import´s timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDistrictResponse></returns>
 		/// <exception cref="M3Exception<LstDistrictResponse>"></exception>
 		public async Task<M3Response<LstDistrictResponse>> LstDistrict(
-			int? m3_CONO = null, 
-			string m3_FRSD = null, 
-			string m3_TOSD = null, 
-			decimal? m3_LMTS = null, 
+			int? m3CONO = null, 
+			string m3FRSD = null, 
+			string m3TOSD = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,14 +68,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FRSD))
-				request.WithQueryParameter("FRSD", m3_FRSD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOSD))
-				request.WithQueryParameter("TOSD", m3_TOSD.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FRSD))
+				request.WithQueryParameter("FRSD", m3FRSD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOSD))
+				request.WithQueryParameter("TOSD", m3TOSD.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstDistrictResponse>(
@@ -83,7 +85,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

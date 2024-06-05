@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: From date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: From time
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From time")]
-		public string M3_FRTM => GetString("FRTM");
+		public string M3FRTM => GetString("FRTM");
 
 		/// <summary>
 		/// Description: From reference
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From reference")]
-		public string M3_FRTB => GetString("FRTB");
+		public string M3FRTB => GetString("FRTB");
 
 		/// <summary>
 		/// Description: From ID
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From ID")]
-		public string M3_FRIA => GetString("FRIA");
+		public string M3FRIA => GetString("FRIA");
 
 		/// <summary>
 		/// Description: From time zone
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From time zone")]
-		public string M3_FRTZ => GetString("FRTZ");
+		public string M3FRTZ => GetString("FRTZ");
 
 		/// <summary>
 		/// Description: To date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 
 		/// <summary>
 		/// Description: To time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To time")]
-		public string M3_TOTM => GetString("TOTM");
+		public string M3TOTM => GetString("TOTM");
 
 		/// <summary>
 		/// Description: To reference
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To reference")]
-		public string M3_TOTB => GetString("TOTB");
+		public string M3TOTB => GetString("TOTB");
 
 		/// <summary>
 		/// Description: To ID
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To ID")]
-		public string M3_TOIA => GetString("TOIA");
+		public string M3TOIA => GetString("TOIA");
 
 		/// <summary>
 		/// Description: To time zone
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To time zone")]
-		public string M3_TOTZ => GetString("TOTZ");
+		public string M3TOTZ => GetString("TOTZ");
 	}
 }
 // EOF

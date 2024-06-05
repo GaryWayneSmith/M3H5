@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Acquistion order category
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquistion order category")]
-		public string M3_AOCA => GetString("AOCA");
+		public string M3AOCA => GetString("AOCA");
 
 		/// <summary>
 		/// Description: Acquisition order line
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition order line")]
-		public int? M3_ARDL => GetNullableInt("ARDL");
+		public int? M3ARDL => GetNullableInt("ARDL");
 
 		/// <summary>
 		/// Description: Acquisition order number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition order number")]
-		public string M3_ARDN => GetString("ARDN");
+		public string M3ARDN => GetString("ARDN");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_ARDX => GetNullableInt("ARDX");
+		public int? M3ARDX => GetNullableInt("ARDX");
 
 		/// <summary>
 		/// Description: Item number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Supplier
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier order number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier order number")]
-		public string M3_SORN => GetString("SORN");
+		public string M3SORN => GetString("SORN");
 
 		/// <summary>
 		/// Description: Sourcing warehouse
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sourcing warehouse")]
-		public string M3_SWHL => GetString("SWHL");
+		public string M3SWHL => GetString("SWHL");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Order date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Order time
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order time")]
-		public int? M3_ORTM => GetNullableInt("ORTM");
+		public int? M3ORTM => GetNullableInt("ORTM");
 
 		/// <summary>
 		/// Description: Availability date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Availability date")]
-		public DateTime? M3_AVDT => GetNullableDateTime("AVDT");
+		public DateTime? M3AVDT => GetNullableDateTime("AVDT");
 
 		/// <summary>
 		/// Description: Available time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Available time")]
-		public int? M3_AVTM => GetNullableInt("AVTM");
+		public int? M3AVTM => GetNullableInt("AVTM");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public int? M3_TGMT => GetNullableInt("TGMT");
+		public int? M3TGMT => GetNullableInt("TGMT");
 
 		/// <summary>
 		/// Description: Time zone
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Supplier
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier type")]
-		public int? M3_XSTI => GetNullableInt("XSTI");
+		public int? M3XSTI => GetNullableInt("XSTI");
 
 		/// <summary>
 		/// Description: VAT tax number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT tax number")]
-		public string M3_XTAN => GetString("XTAN");
+		public string M3XTAN => GetString("XTAN");
 
 		/// <summary>
 		/// Description: Fiscal code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fiscal code")]
-		public string M3_XFCO => GetString("XFCO");
+		public string M3XFCO => GetString("XFCO");
 
 		/// <summary>
 		/// Description: Ancipated Instalment
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ancipated Instalment")]
-		public string M3_XSAT => GetString("XSAT");
+		public string M3XSAT => GetString("XSAT");
 
 		/// <summary>
 		/// Description: Date of birth
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date of birth")]
-		public DateTime? M3_XBDA => GetNullableDateTime("XBDA");
+		public DateTime? M3XBDA => GetNullableDateTime("XBDA");
 
 		/// <summary>
 		/// Description: Sex
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sex")]
-		public string M3_XSEX => GetString("XSEX");
+		public string M3XSEX => GetString("XSEX");
 
 		/// <summary>
 		/// Description: Birthplace/state
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Birthplace/state")]
-		public string M3_XBPL => GetString("XBPL");
+		public string M3XBPL => GetString("XBPL");
 
 		/// <summary>
 		/// Description: Birtharea/state
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Birtharea/state")]
-		public string M3_XBCO => GetString("XBCO");
+		public string M3XBCO => GetString("XBCO");
 
 		/// <summary>
 		/// Description: Change period
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change period")]
-		public int? M3_XCPE => GetNullableInt("XCPE");
+		public int? M3XCPE => GetNullableInt("XCPE");
 
 		/// <summary>
 		/// Description: City
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_PLAC => GetString("PLAC");
+		public string M3PLAC => GetString("PLAC");
 
 		/// <summary>
 		/// Description: State
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Postal code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Registration number - Extrastat (Extra)
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number - Extrastat (Extra)")]
-		public string M3_FIRM => GetString("FIRM");
+		public string M3FIRM => GetString("FIRM");
 
 		/// <summary>
 		/// Description: Prefix number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prefix number")]
-		public string M3_XPTN => GetString("XPTN");
+		public string M3XPTN => GetString("XPTN");
 
 		/// <summary>
 		/// Description: Telephone number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number")]
-		public string M3_XTEN => GetString("XTEN");
+		public string M3XTEN => GetString("XTEN");
 
 		/// <summary>
 		/// Description: Payment tax identification Mod.770
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment tax identification Mod.770")]
-		public string M3_XPTI => GetString("XPTI");
+		public string M3XPTI => GetString("XPTI");
 
 		/// <summary>
 		/// Description: Surname
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Surname")]
-		public string M3_XCOG => GetString("XCOG");
+		public string M3XCOG => GetString("XCOG");
 
 		/// <summary>
 		/// Description: Name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRIT24MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_XNAM => GetString("XNAM");
+		public string M3XNAM => GetString("XNAM");
 	}
 }
 // EOF

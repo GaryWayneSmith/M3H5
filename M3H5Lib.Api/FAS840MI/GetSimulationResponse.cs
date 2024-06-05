@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset type")]
-		public string M3_FATP => GetString("FATP");
+		public string M3FATP => GetString("FATP");
 
 		/// <summary>
 		/// Description: Fixed asset group
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset group")]
-		public string M3_ACAT => GetString("ACAT");
+		public string M3ACAT => GetString("ACAT");
 
 		/// <summary>
 		/// Description: Depreciation plan simulation date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation plan simulation date")]
-		public DateTime? M3_DPSD => GetNullableDateTime("DPSD");
+		public DateTime? M3DPSD => GetNullableDateTime("DPSD");
 
 		/// <summary>
 		/// Description: Depreciation plan simulation status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation plan simulation status")]
-		public string M3_DPSS => GetString("DPSS");
+		public string M3DPSS => GetString("DPSS");
 
 		/// <summary>
 		/// Description: Depreciation plan simulation difference
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation plan simulation difference")]
-		public int? M3_DPSB => GetNullableInt("DPSB");
+		public int? M3DPSB => GetNullableInt("DPSB");
 
 		/// <summary>
 		/// Description: Entry date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Change date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.FAS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

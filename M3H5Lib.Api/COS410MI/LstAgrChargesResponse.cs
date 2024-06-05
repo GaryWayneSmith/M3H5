@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Charge
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public string M3_CRID => GetString("CRID");
+		public string M3CRID => GetString("CRID");
 
 		/// <summary>
 		/// Description: Charge
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public decimal? M3_CRAM => GetNullableDecimal("CRAM");
+		public decimal? M3CRAM => GetNullableDecimal("CRAM");
 
 		/// <summary>
 		/// Description: VAT code
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Debit frequency
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debit frequency")]
-		public int? M3_HACD => GetNullableInt("HACD");
+		public int? M3HACD => GetNullableInt("HACD");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_CRD0 => GetString("CRD0");
+		public string M3CRD0 => GetString("CRD0");
 
 		/// <summary>
 		/// Description: Cumulative release/accrual
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative release/accrual")]
-		public decimal? M3_CRAA => GetNullableDecimal("CRAA");
+		public decimal? M3CRAA => GetNullableDecimal("CRAA");
 
 		/// <summary>
 		/// Description: Tax code customer/address
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code customer/address")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 	}
 }
 // EOF

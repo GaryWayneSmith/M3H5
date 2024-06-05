@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.FCS366MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description List forecast pacing
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_WHGR">Warehouse group</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_APIP">APS - policy</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_POOT">Point of time table</param>
-		/// <param name="m3_STDT">Start date</param>
-		/// <param name="m3_ENDT">Finish date</param>
-		/// <param name="m3_LMTS">Timestamp</param>
+		/// <param name="m3WHGR">Warehouse group</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3APIP">APS - policy</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3POOT">Point of time table</param>
+		/// <param name="m3STDT">Start date</param>
+		/// <param name="m3ENDT">Finish date</param>
+		/// <param name="m3LMTS">Timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstForPacingResponse></returns>
 		/// <exception cref="M3Exception<LstForPacingResponse>"></exception>
 		public async Task<M3Response<LstForPacingResponse>> LstForPacing(
-			string m3_WHGR = null, 
-			string m3_WHLO = null, 
-			string m3_APIP = null, 
-			string m3_ITNO = null, 
-			string m3_POOT = null, 
-			DateTime? m3_STDT = null, 
-			DateTime? m3_ENDT = null, 
-			decimal? m3_LMTS = null, 
+			string m3WHGR = null, 
+			string m3WHLO = null, 
+			string m3APIP = null, 
+			string m3ITNO = null, 
+			string m3POOT = null, 
+			DateTime? m3STDT = null, 
+			DateTime? m3ENDT = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,22 +76,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WHGR))
-				request.WithQueryParameter("WHGR", m3_WHGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_APIP))
-				request.WithQueryParameter("APIP", m3_APIP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POOT))
-				request.WithQueryParameter("POOT", m3_POOT.Trim());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (m3_ENDT.HasValue)
-				request.WithQueryParameter("ENDT", m3_ENDT.Value.ToM3String());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WHGR))
+				request.WithQueryParameter("WHGR", m3WHGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3APIP))
+				request.WithQueryParameter("APIP", m3APIP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POOT))
+				request.WithQueryParameter("POOT", m3POOT.Trim());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (m3ENDT.HasValue)
+				request.WithQueryParameter("ENDT", m3ENDT.Value.ToM3String());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstForPacingResponse>(
@@ -99,7 +101,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

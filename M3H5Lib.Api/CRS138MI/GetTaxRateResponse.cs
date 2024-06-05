@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographical code")]
-		public int? M3_GEOC => GetNullableInt("GEOC");
+		public int? M3GEOC => GetNullableInt("GEOC");
 
 		/// <summary>
 		/// Description: Tax type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax type")]
-		public int? M3_TAXT => GetNullableInt("TAXT");
+		public int? M3TAXT => GetNullableInt("TAXT");
 
 		/// <summary>
 		/// Description: From date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Limit amount 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit amount 1")]
-		public decimal? M3_TAA1 => GetNullableDecimal("TAA1");
+		public decimal? M3TAA1 => GetNullableDecimal("TAA1");
 
 		/// <summary>
 		/// Description: Tax rate 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 1")]
-		public int? M3_TAR1 => GetNullableInt("TAR1");
+		public int? M3TAR1 => GetNullableInt("TAR1");
 
 		/// <summary>
 		/// Description: Limit type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit type")]
-		public int? M3_TAD1 => GetNullableInt("TAD1");
+		public int? M3TAD1 => GetNullableInt("TAD1");
 
 		/// <summary>
 		/// Description: Tax type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax type")]
-		public int? M3_TXT1 => GetNullableInt("TXT1");
+		public int? M3TXT1 => GetNullableInt("TXT1");
 
 		/// <summary>
 		/// Description: Limit amount 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit amount 2")]
-		public decimal? M3_TAA2 => GetNullableDecimal("TAA2");
+		public decimal? M3TAA2 => GetNullableDecimal("TAA2");
 
 		/// <summary>
 		/// Description: Tax rate 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 2")]
-		public int? M3_TAR2 => GetNullableInt("TAR2");
+		public int? M3TAR2 => GetNullableInt("TAR2");
 
 		/// <summary>
 		/// Description: Limit type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit type")]
-		public int? M3_TAD2 => GetNullableInt("TAD2");
+		public int? M3TAD2 => GetNullableInt("TAD2");
 
 		/// <summary>
 		/// Description: Tax type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax type")]
-		public int? M3_TXT2 => GetNullableInt("TXT2");
+		public int? M3TXT2 => GetNullableInt("TXT2");
 
 		/// <summary>
 		/// Description: Limit amount 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit amount 3")]
-		public decimal? M3_TAA3 => GetNullableDecimal("TAA3");
+		public decimal? M3TAA3 => GetNullableDecimal("TAA3");
 
 		/// <summary>
 		/// Description: Tax rate 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 3")]
-		public int? M3_TAR3 => GetNullableInt("TAR3");
+		public int? M3TAR3 => GetNullableInt("TAR3");
 
 		/// <summary>
 		/// Description: Limit type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit type")]
-		public int? M3_TAD3 => GetNullableInt("TAD3");
+		public int? M3TAD3 => GetNullableInt("TAD3");
 
 		/// <summary>
 		/// Description: Tax type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax type")]
-		public int? M3_TXT3 => GetNullableInt("TXT3");
+		public int? M3TXT3 => GetNullableInt("TXT3");
 
 		/// <summary>
 		/// Description: Limit amount 4
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit amount 4")]
-		public decimal? M3_TAA4 => GetNullableDecimal("TAA4");
+		public decimal? M3TAA4 => GetNullableDecimal("TAA4");
 
 		/// <summary>
 		/// Description: Tax rate 4
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 4")]
-		public int? M3_TAR4 => GetNullableInt("TAR4");
+		public int? M3TAR4 => GetNullableInt("TAR4");
 
 		/// <summary>
 		/// Description: Limit type
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit type")]
-		public int? M3_TAD4 => GetNullableInt("TAD4");
+		public int? M3TAD4 => GetNullableInt("TAD4");
 
 		/// <summary>
 		/// Description: Tax type
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax type")]
-		public int? M3_TXT4 => GetNullableInt("TXT4");
+		public int? M3TXT4 => GetNullableInt("TXT4");
 
 		/// <summary>
 		/// Description: Limit amount 5
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit amount 5")]
-		public decimal? M3_TAA5 => GetNullableDecimal("TAA5");
+		public decimal? M3TAA5 => GetNullableDecimal("TAA5");
 
 		/// <summary>
 		/// Description: Tax rate 5
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 5")]
-		public int? M3_TAR5 => GetNullableInt("TAR5");
+		public int? M3TAR5 => GetNullableInt("TAR5");
 
 		/// <summary>
 		/// Description: Limit type
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit type")]
-		public int? M3_TAD5 => GetNullableInt("TAD5");
+		public int? M3TAD5 => GetNullableInt("TAD5");
 
 		/// <summary>
 		/// Description: Tax type
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax type")]
-		public int? M3_TXT5 => GetNullableInt("TXT5");
+		public int? M3TXT5 => GetNullableInt("TXT5");
 
 		/// <summary>
 		/// Description: Text identity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS138MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

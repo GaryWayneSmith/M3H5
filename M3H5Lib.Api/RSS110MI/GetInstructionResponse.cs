@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_RLDT => GetNullableDateTime("RLDT");
+		public DateTime? M3RLDT => GetNullableDateTime("RLDT");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_RLTM => GetNullableInt("RLTM");
+		public int? M3RLTM => GetNullableInt("RLTM");
 
 		/// <summary>
 		/// Description: Requested quantity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested quantity")]
-		public decimal? M3_DEMQ => GetNullableDecimal("DEMQ");
+		public decimal? M3DEMQ => GetNullableDecimal("DEMQ");
 
 		/// <summary>
 		/// Description: Delivery status indicator
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery status indicator")]
-		public int? M3_RSIN => GetNullableInt("RSIN");
+		public int? M3RSIN => GetNullableInt("RSIN");
 
 		/// <summary>
 		/// Description: Quantity qualifier
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity qualifier")]
-		public int? M3_QTQL => GetNullableInt("QTQL");
+		public int? M3QTQL => GetNullableInt("QTQL");
 
 		/// <summary>
 		/// Description: Instruction reason
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Instruction reason")]
-		public int? M3_INRA => GetNullableInt("INRA");
+		public int? M3INRA => GetNullableInt("INRA");
 
 		/// <summary>
 		/// Description: Instruction activity code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Instruction activity code")]
-		public int? M3_INSA => GetNullableInt("INSA");
+		public int? M3INSA => GetNullableInt("INSA");
 
 		/// <summary>
 		/// Description: Customers order number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Customer´s purchase order date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer´s purchase order date")]
-		public DateTime? M3_CUDT => GetNullableDateTime("CUDT");
+		public DateTime? M3CUDT => GetNullableDateTime("CUDT");
 
 		/// <summary>
 		/// Description: Delivery contract number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery contract number")]
-		public string M3_RSAG => GetString("RSAG");
+		public string M3RSAG => GetString("RSAG");
 
 		/// <summary>
 		/// Description: Update method
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update method")]
-		public int? M3_RSAC => GetNullableInt("RSAC");
+		public int? M3RSAC => GetNullableInt("RSAC");
 
 		/// <summary>
 		/// Description: Period to date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period to date")]
-		public DateTime? M3_RTDT => GetNullableDateTime("RTDT");
+		public DateTime? M3RTDT => GetNullableDateTime("RTDT");
 
 		/// <summary>
 		/// Description: Period to time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period to time")]
-		public int? M3_RTTM => GetNullableInt("RTTM");
+		public int? M3RTTM => GetNullableInt("RTTM");
 
 		/// <summary>
 		/// Description: Cumulative quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cumulative quantity")]
-		public decimal? M3_CQCF => GetNullableDecimal("CQCF");
+		public decimal? M3CQCF => GetNullableDecimal("CQCF");
 
 		/// <summary>
 		/// Description: Production sequence number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Production sequence number")]
-		public string M3_PDSQ => GetString("PDSQ");
+		public string M3PDSQ => GetString("PDSQ");
 
 		/// <summary>
 		/// Description: Kanban card number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kanban card number")]
-		public string M3_RSKN => GetString("RSKN");
+		public string M3RSKN => GetString("RSKN");
 
 		/// <summary>
 		/// Description: Chassi number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chassi number")]
-		public string M3_CHAS => GetString("CHAS");
+		public string M3CHAS => GetString("CHAS");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 	}
 }
 // EOF

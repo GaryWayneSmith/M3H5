@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PPS095MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Lists Purchase Order Type
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORTY">Order type</param>
-		/// <param name="m3_POTC">Purchase order category</param>
+		/// <param name="m3ORTY">Order type</param>
+		/// <param name="m3POTC">Purchase order category</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOrderTypeResponse></returns>
 		/// <exception cref="M3Exception<LstOrderTypeResponse>"></exception>
 		public async Task<M3Response<LstOrderTypeResponse>> LstOrderType(
-			string m3_ORTY = null, 
-			string m3_POTC = null, 
+			string m3ORTY = null, 
+			string m3POTC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORTY))
-				request.WithQueryParameter("ORTY", m3_ORTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POTC))
-				request.WithQueryParameter("POTC", m3_POTC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTY))
+				request.WithQueryParameter("ORTY", m3ORTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POTC))
+				request.WithQueryParameter("POTC", m3POTC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstOrderTypeResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

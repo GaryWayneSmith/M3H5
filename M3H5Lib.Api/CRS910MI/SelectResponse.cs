@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Period Type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period Type")]
-		public int? M3_PETP => GetNullableInt("PETP");
+		public int? M3PETP => GetNullableInt("PETP");
 
 		/// <summary>
 		/// Description: Year
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Period
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_PERI => GetNullableInt("PERI");
+		public int? M3PERI => GetNullableInt("PERI");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_NAME => GetString("NAME");
+		public string M3NAME => GetString("NAME");
 
 		/// <summary>
 		/// Description: From Date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From Date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To Date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To Date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 	}
 }
 // EOF

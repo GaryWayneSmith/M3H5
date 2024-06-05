@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,28 +37,28 @@ namespace M3H5Lib.Api
 		/// Description Prints Labels
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_FITN">From Item number</param>
-		/// <param name="m3_TITN">To Item number</param>
-		/// <param name="m3_FITG">From item group</param>
-		/// <param name="m3_TITG">To item group</param>
-		/// <param name="m3_FICL">From Product group</param>
-		/// <param name="m3_TICL">To Product group</param>
-		/// <param name="m3_FSUN">From main supplier</param>
-		/// <param name="m3_TSUN">To main supplier</param>
-		/// <param name="m3_FWHS">From Location</param>
-		/// <param name="m3_TWHS">To Location</param>
-		/// <param name="m3_FOPL">From Planning method</param>
-		/// <param name="m3_TOPL">To Planning method</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_SPDT">Sales price date</param>
-		/// <param name="m3_PRRF">Price list</param>
-		/// <param name="m3_PSTQ">Physical stock</param>
-		/// <param name="m3_PLSI">Label type</param>
-		/// <param name="m3_POVL">Override label type</param>
-		/// <param name="m3_PAUT">Auto gen label</param>
-		/// <param name="m3_CUNO">Customer number</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_CHID">Changed by</param>
+		/// <param name="m3FITN">From Item number</param>
+		/// <param name="m3TITN">To Item number</param>
+		/// <param name="m3FITG">From item group</param>
+		/// <param name="m3TITG">To item group</param>
+		/// <param name="m3FICL">From Product group</param>
+		/// <param name="m3TICL">To Product group</param>
+		/// <param name="m3FSUN">From main supplier</param>
+		/// <param name="m3TSUN">To main supplier</param>
+		/// <param name="m3FWHS">From Location</param>
+		/// <param name="m3TWHS">To Location</param>
+		/// <param name="m3FOPL">From Planning method</param>
+		/// <param name="m3TOPL">To Planning method</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3SPDT">Sales price date</param>
+		/// <param name="m3PRRF">Price list</param>
+		/// <param name="m3PSTQ">Physical stock</param>
+		/// <param name="m3PLSI">Label type</param>
+		/// <param name="m3POVL">Override label type</param>
+		/// <param name="m3PAUT">Auto gen label</param>
+		/// <param name="m3CUNO">Customer number</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3CHID">Changed by</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -65,28 +67,28 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> PrintLabel(
-			string m3_FITN = null, 
-			string m3_TITN = null, 
-			string m3_FITG = null, 
-			string m3_TITG = null, 
-			string m3_FICL = null, 
-			string m3_TICL = null, 
-			string m3_FSUN = null, 
-			string m3_TSUN = null, 
-			string m3_FWHS = null, 
-			string m3_TWHS = null, 
-			int? m3_FOPL = null, 
-			int? m3_TOPL = null, 
-			string m3_WHLO = null, 
-			DateTime? m3_SPDT = null, 
-			string m3_PRRF = null, 
-			int? m3_PSTQ = null, 
-			string m3_PLSI = null, 
-			string m3_POVL = null, 
-			int? m3_PAUT = null, 
-			string m3_CUNO = null, 
-			string m3_CUCD = null, 
-			string m3_CHID = null, 
+			string m3FITN = null, 
+			string m3TITN = null, 
+			string m3FITG = null, 
+			string m3TITG = null, 
+			string m3FICL = null, 
+			string m3TICL = null, 
+			string m3FSUN = null, 
+			string m3TSUN = null, 
+			string m3FWHS = null, 
+			string m3TWHS = null, 
+			int? m3FOPL = null, 
+			int? m3TOPL = null, 
+			string m3WHLO = null, 
+			DateTime? m3SPDT = null, 
+			string m3PRRF = null, 
+			int? m3PSTQ = null, 
+			string m3PLSI = null, 
+			string m3POVL = null, 
+			int? m3PAUT = null, 
+			string m3CUNO = null, 
+			string m3CUCD = null, 
+			string m3CHID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -101,50 +103,50 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FITN))
-				request.WithQueryParameter("FITN", m3_FITN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TITN))
-				request.WithQueryParameter("TITN", m3_TITN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FITG))
-				request.WithQueryParameter("FITG", m3_FITG.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TITG))
-				request.WithQueryParameter("TITG", m3_TITG.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FICL))
-				request.WithQueryParameter("FICL", m3_FICL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TICL))
-				request.WithQueryParameter("TICL", m3_TICL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FSUN))
-				request.WithQueryParameter("FSUN", m3_FSUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TSUN))
-				request.WithQueryParameter("TSUN", m3_TSUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FWHS))
-				request.WithQueryParameter("FWHS", m3_FWHS.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TWHS))
-				request.WithQueryParameter("TWHS", m3_TWHS.Trim());
-			if (m3_FOPL.HasValue)
-				request.WithQueryParameter("FOPL", m3_FOPL.Value.ToString());
-			if (m3_TOPL.HasValue)
-				request.WithQueryParameter("TOPL", m3_TOPL.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (m3_SPDT.HasValue)
-				request.WithQueryParameter("SPDT", m3_SPDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_PRRF))
-				request.WithQueryParameter("PRRF", m3_PRRF.Trim());
-			if (m3_PSTQ.HasValue)
-				request.WithQueryParameter("PSTQ", m3_PSTQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLSI))
-				request.WithQueryParameter("PLSI", m3_PLSI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POVL))
-				request.WithQueryParameter("POVL", m3_POVL.Trim());
-			if (m3_PAUT.HasValue)
-				request.WithQueryParameter("PAUT", m3_PAUT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CHID))
-				request.WithQueryParameter("CHID", m3_CHID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FITN))
+				request.WithQueryParameter("FITN", m3FITN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TITN))
+				request.WithQueryParameter("TITN", m3TITN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FITG))
+				request.WithQueryParameter("FITG", m3FITG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TITG))
+				request.WithQueryParameter("TITG", m3TITG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FICL))
+				request.WithQueryParameter("FICL", m3FICL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TICL))
+				request.WithQueryParameter("TICL", m3TICL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FSUN))
+				request.WithQueryParameter("FSUN", m3FSUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TSUN))
+				request.WithQueryParameter("TSUN", m3TSUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FWHS))
+				request.WithQueryParameter("FWHS", m3FWHS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TWHS))
+				request.WithQueryParameter("TWHS", m3TWHS.Trim());
+			if (m3FOPL.HasValue)
+				request.WithQueryParameter("FOPL", m3FOPL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TOPL.HasValue)
+				request.WithQueryParameter("TOPL", m3TOPL.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (m3SPDT.HasValue)
+				request.WithQueryParameter("SPDT", m3SPDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3PRRF))
+				request.WithQueryParameter("PRRF", m3PRRF.Trim());
+			if (m3PSTQ.HasValue)
+				request.WithQueryParameter("PSTQ", m3PSTQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLSI))
+				request.WithQueryParameter("PLSI", m3PLSI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POVL))
+				request.WithQueryParameter("POVL", m3POVL.Trim());
+			if (m3PAUT.HasValue)
+				request.WithQueryParameter("PAUT", m3PAUT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CHID))
+				request.WithQueryParameter("CHID", m3CHID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -154,7 +156,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

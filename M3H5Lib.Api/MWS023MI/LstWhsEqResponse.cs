@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse equipment
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse equipment")]
-		public string M3_PISE => GetString("PISE");
+		public string M3PISE => GetString("PISE");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Item name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Serial number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Data identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Send picking lists
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send picking lists")]
-		public int? M3_PIDL => GetNullableInt("PIDL");
+		public int? M3PIDL => GetNullableInt("PIDL");
 
 		/// <summary>
 		/// Description: Entry date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Packing adjustment factor
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS023MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packing adjustment factor")]
-		public int? M3_PADF => GetNullableInt("PADF");
+		public int? M3PADF => GetNullableInt("PADF");
 	}
 }
 // EOF

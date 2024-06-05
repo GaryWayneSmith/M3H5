@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: ID generation
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ID generation")]
-		public int? M3_GENF => GetNullableInt("GENF");
+		public int? M3GENF => GetNullableInt("GENF");
 
 		/// <summary>
 		/// Description: Starting number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Starting number")]
-		public int? M3_STNM => GetNullableInt("STNM");
+		public int? M3STNM => GetNullableInt("STNM");
 
 		/// <summary>
 		/// Description: Sample action
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sample action")]
-		public int? M3_SMAC => GetNullableInt("SMAC");
+		public int? M3SMAC => GetNullableInt("SMAC");
 
 		/// <summary>
 		/// Description: Number of copies
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of copies")]
-		public int? M3_NBEX => GetNullableInt("NBEX");
+		public int? M3NBEX => GetNullableInt("NBEX");
 
 		/// <summary>
 		/// Description: Active
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active")]
-		public int? M3_ACTF => GetNullableInt("ACTF");
+		public int? M3ACTF => GetNullableInt("ACTF");
 
 		/// <summary>
 		/// Description: Text identity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

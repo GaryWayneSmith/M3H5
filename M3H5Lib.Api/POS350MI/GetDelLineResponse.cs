@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Competitor
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Competitor")]
-		public string M3_CUN2 => GetString("CUN2");
+		public string M3CUN2 => GetString("CUN2");
 
 		/// <summary>
 		/// Description: Project number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Order line number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Description
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: Line type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public string M3_LTYP => GetString("LTYP");
+		public string M3LTYP => GetString("LTYP");
 
 		/// <summary>
 		/// Description: Reference element
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference element")]
-		public string M3_RFEL => GetString("RFEL");
+		public string M3RFEL => GetString("RFEL");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Cost price
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public decimal? M3_UCOS => GetNullableDecimal("UCOS");
+		public decimal? M3UCOS => GetNullableDecimal("UCOS");
 
 		/// <summary>
 		/// Description: VAT code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Pricing method
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricing method")]
-		public int? M3_PSET => GetNullableInt("PSET");
+		public int? M3PSET => GetNullableInt("PSET");
 
 		/// <summary>
 		/// Description: Item number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Fixed price
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed price")]
-		public int? M3_FPCD => GetNullableInt("FPCD");
+		public int? M3FPCD => GetNullableInt("FPCD");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Sales price
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Ref field invoiced amount
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field invoiced amount")]
-		public decimal? M3_OALC => GetNullableDecimal("OALC");
+		public decimal? M3OALC => GetNullableDecimal("OALC");
 
 		/// <summary>
 		/// Description: Ref field invoice amount
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field invoice amount")]
-		public decimal? M3_AIGA => GetNullableDecimal("AIGA");
+		public decimal? M3AIGA => GetNullableDecimal("AIGA");
 
 		/// <summary>
 		/// Description: Ref field invoice amount
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field invoice amount")]
-		public decimal? M3_AALC => GetNullableDecimal("AALC");
+		public decimal? M3AALC => GetNullableDecimal("AALC");
 
 		/// <summary>
 		/// Description: Business type - trade statistics (TST)
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business type - trade statistics (TST)")]
-		public string M3_VRCD => GetString("VRCD");
+		public string M3VRCD => GetString("VRCD");
 
 		/// <summary>
 		/// Description: Labor code - trade statistics (TST)
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor code - trade statistics (TST)")]
-		public string M3_ECLC => GetString("ECLC");
+		public string M3ECLC => GetString("ECLC");
 
 		/// <summary>
 		/// Description: Country of origin
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin")]
-		public string M3_ORCO => GetString("ORCO");
+		public string M3ORCO => GetString("ORCO");
 
 		/// <summary>
 		/// Description: Discount amount 1
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 1")]
-		public decimal? M3_DIA1 => GetNullableDecimal("DIA1");
+		public decimal? M3DIA1 => GetNullableDecimal("DIA1");
 
 		/// <summary>
 		/// Description: Tax code customer/address
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code customer/address")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Service expense category
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service expense category")]
-		public int? M3_SCOD => GetNullableInt("SCOD");
+		public int? M3SCOD => GetNullableInt("SCOD");
 
 		/// <summary>
 		/// Description: Record type
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record type")]
-		public string M3_RTYP => GetString("RTYP");
+		public string M3RTYP => GetString("RTYP");
 
 		/// <summary>
 		/// Description: Lot number
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Currency
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 	}
 }
 // EOF

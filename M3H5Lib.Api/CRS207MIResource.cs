@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS207MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description List matrix by CO
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_STYN">Style number</param>
-		/// <param name="m3_CODT">Confirmed delivery date</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_CODZ">Confirmed delivery date in date zone</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3STYN">Style number</param>
+		/// <param name="m3CODT">Confirmed delivery date</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3CODZ">Confirmed delivery date in date zone</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstStyleDetByCOResponse></returns>
 		/// <exception cref="M3Exception<LstStyleDetByCOResponse>"></exception>
 		public async Task<M3Response<LstStyleDetByCOResponse>> LstStyleDetByCO(
-			string m3_ORNO = null, 
-			string m3_STYN = null, 
-			DateTime? m3_CODT = null, 
-			string m3_ADID = null, 
-			string m3_WHLO = null, 
-			DateTime? m3_CODZ = null, 
+			string m3ORNO = null, 
+			string m3STYN = null, 
+			DateTime? m3CODT = null, 
+			string m3ADID = null, 
+			string m3WHLO = null, 
+			DateTime? m3CODZ = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,18 +72,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STYN))
-				request.WithQueryParameter("STYN", m3_STYN.Trim());
-			if (m3_CODT.HasValue)
-				request.WithQueryParameter("CODT", m3_CODT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (m3_CODZ.HasValue)
-				request.WithQueryParameter("CODZ", m3_CODZ.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STYN))
+				request.WithQueryParameter("STYN", m3STYN.Trim());
+			if (m3CODT.HasValue)
+				request.WithQueryParameter("CODT", m3CODT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (m3CODZ.HasValue)
+				request.WithQueryParameter("CODZ", m3CODZ.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstStyleDetByCOResponse>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -102,10 +105,10 @@ namespace M3H5Lib.Api
 		/// Description List matrix by DO
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_TRNR">Order number (Required)</param>
-		/// <param name="m3_STYN">Style number</param>
-		/// <param name="m3_TRDT">Transaction date</param>
-		/// <param name="m3_WHLO">Warehouse</param>
+		/// <param name="m3TRNR">Order number (Required)</param>
+		/// <param name="m3STYN">Style number</param>
+		/// <param name="m3TRDT">Transaction date</param>
+		/// <param name="m3WHLO">Warehouse</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -114,10 +117,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstStyleDetByDOResponse></returns>
 		/// <exception cref="M3Exception<LstStyleDetByDOResponse>"></exception>
 		public async Task<M3Response<LstStyleDetByDOResponse>> LstStyleDetByDO(
-			string m3_TRNR, 
-			string m3_STYN = null, 
-			DateTime? m3_TRDT = null, 
-			string m3_WHLO = null, 
+			string m3TRNR, 
+			string m3STYN = null, 
+			DateTime? m3TRDT = null, 
+			string m3WHLO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -132,20 +135,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRNR))
-				throw new ArgumentNullException("m3_TRNR");
+			if (string.IsNullOrWhiteSpace(m3TRNR))
+				throw new ArgumentNullException(nameof(m3TRNR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRNR", m3_TRNR.Trim());
+				.WithQueryParameter("TRNR", m3TRNR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_STYN))
-				request.WithQueryParameter("STYN", m3_STYN.Trim());
-			if (m3_TRDT.HasValue)
-				request.WithQueryParameter("TRDT", m3_TRDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STYN))
+				request.WithQueryParameter("STYN", m3STYN.Trim());
+			if (m3TRDT.HasValue)
+				request.WithQueryParameter("TRDT", m3TRDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstStyleDetByDOResponse>(
@@ -155,7 +158,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -166,9 +170,9 @@ namespace M3H5Lib.Api
 		/// Description List matrix by MO
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SCHN">Schedule number (Required)</param>
-		/// <param name="m3_STYN">Style number</param>
-		/// <param name="m3_WHLO">Warehouse</param>
+		/// <param name="m3SCHN">Schedule number (Required)</param>
+		/// <param name="m3STYN">Style number</param>
+		/// <param name="m3WHLO">Warehouse</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -177,9 +181,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstStyleDetByMOResponse></returns>
 		/// <exception cref="M3Exception<LstStyleDetByMOResponse>"></exception>
 		public async Task<M3Response<LstStyleDetByMOResponse>> LstStyleDetByMO(
-			decimal m3_SCHN, 
-			string m3_STYN = null, 
-			string m3_WHLO = null, 
+			decimal m3SCHN, 
+			string m3STYN = null, 
+			string m3WHLO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -197,13 +201,13 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SCHN", m3_SCHN.ToString());
+				.WithQueryParameter("SCHN", m3SCHN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_STYN))
-				request.WithQueryParameter("STYN", m3_STYN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STYN))
+				request.WithQueryParameter("STYN", m3STYN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstStyleDetByMOResponse>(
@@ -213,7 +217,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -224,11 +229,11 @@ namespace M3H5Lib.Api
 		/// Description List matrix by PO
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PUNO">Purchase order number</param>
-		/// <param name="m3_STYN">Style number</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_DWDT">Requested delivery date</param>
-		/// <param name="m3_PLDT">Planning date</param>
+		/// <param name="m3PUNO">Purchase order number</param>
+		/// <param name="m3STYN">Style number</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3DWDT">Requested delivery date</param>
+		/// <param name="m3PLDT">Planning date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -237,11 +242,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstStyleDetByPOResponse></returns>
 		/// <exception cref="M3Exception<LstStyleDetByPOResponse>"></exception>
 		public async Task<M3Response<LstStyleDetByPOResponse>> LstStyleDetByPO(
-			string m3_PUNO = null, 
-			string m3_STYN = null, 
-			string m3_WHLO = null, 
-			DateTime? m3_DWDT = null, 
-			DateTime? m3_PLDT = null, 
+			string m3PUNO = null, 
+			string m3STYN = null, 
+			string m3WHLO = null, 
+			DateTime? m3DWDT = null, 
+			DateTime? m3PLDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -256,16 +261,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PUNO))
-				request.WithQueryParameter("PUNO", m3_PUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STYN))
-				request.WithQueryParameter("STYN", m3_STYN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (m3_DWDT.HasValue)
-				request.WithQueryParameter("DWDT", m3_DWDT.Value.ToM3String());
-			if (m3_PLDT.HasValue)
-				request.WithQueryParameter("PLDT", m3_PLDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3PUNO))
+				request.WithQueryParameter("PUNO", m3PUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STYN))
+				request.WithQueryParameter("STYN", m3STYN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (m3DWDT.HasValue)
+				request.WithQueryParameter("DWDT", m3DWDT.Value.ToM3String());
+			if (m3PLDT.HasValue)
+				request.WithQueryParameter("PLDT", m3PLDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstStyleDetByPOResponse>(
@@ -275,7 +280,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

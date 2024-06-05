@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SOS550MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Get Rental Equipment
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INTY">Individual item type (Required)</param>
-		/// <param name="m3_INNO">Individual item number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3INTY">Individual item type (Required)</param>
+		/// <param name="m3INNO">Individual item number (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetRntlEquipmntResponse></returns>
 		/// <exception cref="M3Exception<GetRntlEquipmntResponse>"></exception>
 		public async Task<M3Response<GetRntlEquipmntResponse>> GetRntlEquipmnt(
-			int m3_INTY, 
-			string m3_INNO, 
-			int? m3_CONO = null, 
+			int m3INTY, 
+			string m3INNO, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,17 +66,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_INNO))
-				throw new ArgumentNullException("m3_INNO");
+			if (string.IsNullOrWhiteSpace(m3INNO))
+				throw new ArgumentNullException(nameof(m3INNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INTY", m3_INTY.ToString())
-				.WithQueryParameter("INNO", m3_INNO.Trim());
+				.WithQueryParameter("INTY", m3INTY.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("INNO", m3INNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetRntlEquipmntResponse>(
@@ -84,7 +86,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -95,22 +98,22 @@ namespace M3H5Lib.Api
 		/// Description Api: List Rental Equipment
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_INTY">Individual item type (Required)</param>
-		/// <param name="m3_ISTS">Status - individual item (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_ISTE">Status - individual item</param>
-		/// <param name="m3_INGR">Individual item group</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_WHLF">Warehouse</param>
-		/// <param name="m3_WHLT">Warehouse</param>
-		/// <param name="m3_BRAN">Brand</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_MODE">Model description</param>
-		/// <param name="m3_CUOW">Owner</param>
-		/// <param name="m3_FVDT">Valid from</param>
-		/// <param name="m3_LVDT">Valid to</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_INNO">Individual item number</param>
+		/// <param name="m3INTY">Individual item type (Required)</param>
+		/// <param name="m3ISTS">Status - individual item (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3ISTE">Status - individual item</param>
+		/// <param name="m3INGR">Individual item group</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3WHLF">Warehouse</param>
+		/// <param name="m3WHLT">Warehouse</param>
+		/// <param name="m3BRAN">Brand</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3MODE">Model description</param>
+		/// <param name="m3CUOW">Owner</param>
+		/// <param name="m3FVDT">Valid from</param>
+		/// <param name="m3LVDT">Valid to</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3INNO">Individual item number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -119,22 +122,22 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstRntlEquipmntResponse></returns>
 		/// <exception cref="M3Exception<LstRntlEquipmntResponse>"></exception>
 		public async Task<M3Response<LstRntlEquipmntResponse>> LstRntlEquipmnt(
-			int m3_INTY, 
-			string m3_ISTS, 
-			int? m3_CONO = null, 
-			string m3_ISTE = null, 
-			string m3_INGR = null, 
-			string m3_ITGR = null, 
-			string m3_WHLF = null, 
-			string m3_WHLT = null, 
-			string m3_BRAN = null, 
-			string m3_ITNO = null, 
-			string m3_MODE = null, 
-			string m3_CUOW = null, 
-			DateTime? m3_FVDT = null, 
-			DateTime? m3_LVDT = null, 
-			string m3_ITCL = null, 
-			string m3_INNO = null, 
+			int m3INTY, 
+			string m3ISTS, 
+			int? m3CONO = null, 
+			string m3ISTE = null, 
+			string m3INGR = null, 
+			string m3ITGR = null, 
+			string m3WHLF = null, 
+			string m3WHLT = null, 
+			string m3BRAN = null, 
+			string m3ITNO = null, 
+			string m3MODE = null, 
+			string m3CUOW = null, 
+			DateTime? m3FVDT = null, 
+			DateTime? m3LVDT = null, 
+			string m3ITCL = null, 
+			string m3INNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -149,43 +152,43 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ISTS))
-				throw new ArgumentNullException("m3_ISTS");
+			if (string.IsNullOrWhiteSpace(m3ISTS))
+				throw new ArgumentNullException(nameof(m3ISTS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INTY", m3_INTY.ToString())
-				.WithQueryParameter("ISTS", m3_ISTS.Trim());
+				.WithQueryParameter("INTY", m3INTY.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ISTS", m3ISTS.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ISTE))
-				request.WithQueryParameter("ISTE", m3_ISTE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INGR))
-				request.WithQueryParameter("INGR", m3_INGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLF))
-				request.WithQueryParameter("WHLF", m3_WHLF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLT))
-				request.WithQueryParameter("WHLT", m3_WHLT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BRAN))
-				request.WithQueryParameter("BRAN", m3_BRAN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MODE))
-				request.WithQueryParameter("MODE", m3_MODE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUOW))
-				request.WithQueryParameter("CUOW", m3_CUOW.Trim());
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
-			if (m3_LVDT.HasValue)
-				request.WithQueryParameter("LVDT", m3_LVDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INNO))
-				request.WithQueryParameter("INNO", m3_INNO.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ISTE))
+				request.WithQueryParameter("ISTE", m3ISTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INGR))
+				request.WithQueryParameter("INGR", m3INGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLF))
+				request.WithQueryParameter("WHLF", m3WHLF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLT))
+				request.WithQueryParameter("WHLT", m3WHLT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BRAN))
+				request.WithQueryParameter("BRAN", m3BRAN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MODE))
+				request.WithQueryParameter("MODE", m3MODE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUOW))
+				request.WithQueryParameter("CUOW", m3CUOW.Trim());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
+			if (m3LVDT.HasValue)
+				request.WithQueryParameter("LVDT", m3LVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INNO))
+				request.WithQueryParameter("INNO", m3INNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstRntlEquipmntResponse>(
@@ -195,7 +198,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

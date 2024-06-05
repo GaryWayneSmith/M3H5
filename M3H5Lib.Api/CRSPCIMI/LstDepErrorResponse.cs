@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Target value
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target value")]
-		public string M3_ATAV => GetString("ATAV");
+		public string M3ATAV => GetString("ATAV");
 
 		/// <summary>
 		/// Description: Target value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target value")]
-		public decimal? M3_ATAN => GetNullableDecimal("ATAN");
+		public decimal? M3ATAN => GetNullableDecimal("ATAN");
 
 		/// <summary>
 		/// Description: Result attribute value fr
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result attribute value fr")]
-		public string M3_RAVF => GetString("RAVF");
+		public string M3RAVF => GetString("RAVF");
 
 		/// <summary>
 		/// Description: Result attribute value to
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result attribute value to")]
-		public string M3_RAVT => GetString("RAVT");
+		public string M3RAVT => GetString("RAVT");
 
 		/// <summary>
 		/// Description: Result attribute value fr
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result attribute value fr")]
-		public string M3_NAVF => GetString("NAVF");
+		public string M3NAVF => GetString("NAVF");
 
 		/// <summary>
 		/// Description: Result attribute value to
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result attribute value to")]
-		public string M3_NAVT => GetString("NAVT");
+		public string M3NAVT => GetString("NAVT");
 
 		/// <summary>
 		/// Description: Mandatory attribute
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mandatory attribute")]
-		public int? M3_MANA => GetNullableInt("MANA");
+		public int? M3MANA => GetNullableInt("MANA");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Text
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX61 => GetString("TX61");
+		public string M3TX61 => GetString("TX61");
 
 		/// <summary>
 		/// Description: Display group
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Display group")]
-		public string M3_DSPG => GetString("DSPG");
+		public string M3DSPG => GetString("DSPG");
 
 		/// <summary>
 		/// Description: Attribute value sequence number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value sequence number")]
-		public int? M3_AVSQ => GetNullableInt("AVSQ");
+		public int? M3AVSQ => GetNullableInt("AVSQ");
 	}
 }
 // EOF

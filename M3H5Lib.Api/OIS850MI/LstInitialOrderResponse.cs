@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Initial order type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Initial order type")]
-		public int? M3_INOT => GetNullableInt("INOT");
+		public int? M3INOT => GetNullableInt("INOT");
 
 		/// <summary>
 		/// Description: Initial order qualifier
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Initial order qualifier")]
-		public string M3_INOQ => GetString("INOQ");
+		public string M3INOQ => GetString("INOQ");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Requested quantity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested quantity")]
-		public decimal? M3_DEMQ => GetNullableDecimal("DEMQ");
+		public decimal? M3DEMQ => GetNullableDecimal("DEMQ");
 
 		/// <summary>
 		/// Description: Sourced quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sourced quantity")]
-		public decimal? M3_SUQT => GetNullableDecimal("SUQT");
+		public decimal? M3SUQT => GetNullableDecimal("SUQT");
 
 		/// <summary>
 		/// Description: Planning date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Planned quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned quantity")]
-		public decimal? M3_PPQT => GetNullableDecimal("PPQT");
+		public decimal? M3PPQT => GetNullableDecimal("PPQT");
 
 		/// <summary>
 		/// Description: Acquisition code
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition code")]
-		public int? M3_PUIT => GetNullableInt("PUIT");
+		public int? M3PUIT => GetNullableInt("PUIT");
 
 		/// <summary>
 		/// Description: Source
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Source")]
-		public string M3_RPLS => GetString("RPLS");
+		public string M3RPLS => GetString("RPLS");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Order number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_DENO => GetString("DENO");
+		public string M3DENO => GetString("DENO");
 
 		/// <summary>
 		/// Description: Manual completion flag
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual completion flag")]
-		public int? M3_REND => GetNullableInt("REND");
+		public int? M3REND => GetNullableInt("REND");
 	}
 }
 // EOF

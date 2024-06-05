@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place of load")]
-		public string M3_EDES => GetString("EDES");
+		public string M3EDES => GetString("EDES");
 
 		/// <summary>
 		/// Description: Priority
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PREX => GetString("PREX");
+		public string M3PREX => GetString("PREX");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: Route
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route")]
-		public string M3_ROUT => GetString("ROUT");
+		public string M3ROUT => GetString("ROUT");
 
 		/// <summary>
 		/// Description: Route departure
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route departure")]
-		public int? M3_RODN => GetNullableInt("RODN");
+		public int? M3RODN => GetNullableInt("RODN");
 
 		/// <summary>
 		/// Description: Selection method for departures
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection method for departures")]
-		public int? M3_SEFB => GetNullableInt("SEFB");
+		public int? M3SEFB => GetNullableInt("SEFB");
 
 		/// <summary>
 		/// Description: Try lower priority
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Try lower priority")]
-		public int? M3_SELP => GetNullableInt("SELP");
+		public int? M3SELP => GetNullableInt("SELP");
 
 		/// <summary>
 		/// Description: Departure days
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure days")]
-		public string M3_DDOW => GetString("DDOW");
+		public string M3DDOW => GetString("DDOW");
 
 		/// <summary>
 		/// Description: Forwarding agent
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarding agent")]
-		public string M3_FWNO => GetString("FWNO");
+		public string M3FWNO => GetString("FWNO");
 
 		/// <summary>
 		/// Description: Transportation equipment
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation equipment")]
-		public string M3_TRCA => GetString("TRCA");
+		public string M3TRCA => GetString("TRCA");
 
 		/// <summary>
 		/// Description: Reference
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference")]
-		public string M3_RFID => GetString("RFID");
+		public string M3RFID => GetString("RFID");
 
 		/// <summary>
 		/// Description: Pallet registration number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pallet registration number")]
-		public string M3_PAL1 => GetString("PAL1");
+		public string M3PAL1 => GetString("PAL1");
 
 		/// <summary>
 		/// Description: Preliminary route selection
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Preliminary route selection")]
-		public int? M3_PRRO => GetNullableInt("PRRO");
+		public int? M3PRRO => GetNullableInt("PRRO");
 
 		/// <summary>
 		/// Description: Local transportation lead time - days
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local transportation lead time - days")]
-		public int? M3_LOLD => GetNullableInt("LOLD");
+		public int? M3LOLD => GetNullableInt("LOLD");
 
 		/// <summary>
 		/// Description: Local transportation lead time - hours
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local transportation lead time - hours")]
-		public int? M3_LOLH => GetNullableInt("LOLH");
+		public int? M3LOLH => GetNullableInt("LOLH");
 
 		/// <summary>
 		/// Description: Local transportation lead time - minutes
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local transportation lead time - minutes")]
-		public int? M3_LOLM => GetNullableInt("LOLM");
+		public int? M3LOLM => GetNullableInt("LOLM");
 
 		/// <summary>
 		/// Description: Entry date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.DRS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

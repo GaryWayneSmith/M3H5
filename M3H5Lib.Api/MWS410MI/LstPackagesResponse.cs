@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Packaging
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Number of packages
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages")]
-		public int? M3_NUPA => GetNullableInt("NUPA");
+		public int? M3NUPA => GetNullableInt("NUPA");
 
 		/// <summary>
 		/// Description: Packaging code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging code")]
-		public string M3_GRTP => GetString("GRTP");
+		public string M3GRTP => GetString("GRTP");
 
 		/// <summary>
 		/// Description: Remark
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_DLRM => GetString("DLRM");
+		public string M3DLRM => GetString("DLRM");
 
 		/// <summary>
 		/// Description: Goods mark Odette standard
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods mark Odette standard")]
-		public string M3_DLMO => GetString("DLMO");
+		public string M3DLMO => GetString("DLMO");
 
 		/// <summary>
 		/// Description: Package content
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package content")]
-		public int? M3_PCON => GetNullableInt("PCON");
+		public int? M3PCON => GetNullableInt("PCON");
 	}
 }
 // EOF

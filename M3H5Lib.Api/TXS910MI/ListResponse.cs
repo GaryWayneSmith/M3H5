@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval number")]
-		public string M3_TIAN => GetString("TIAN");
+		public string M3TIAN => GetString("TIAN");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Supplier
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS910MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_TIVN => GetString("TIVN");
+		public string M3TIVN => GetString("TIVN");
 	}
 }
 // EOF

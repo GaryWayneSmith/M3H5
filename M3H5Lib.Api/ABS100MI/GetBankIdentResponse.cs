@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Bank identifier
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank identifier")]
-		public string M3_BSID => GetString("BSID");
+		public string M3BSID => GetString("BSID");
 
 		/// <summary>
 		/// Description: Bank account id
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account id")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: FAM function
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM function")]
-		public int? M3_FNCN => GetNullableInt("FNCN");
+		public int? M3FNCN => GetNullableInt("FNCN");
 
 		/// <summary>
 		/// Description: FAM function - GL
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM function - GL")]
-		public int? M3_BSFG => GetNullableInt("BSFG");
+		public int? M3BSFG => GetNullableInt("BSFG");
 
 		/// <summary>
 		/// Description: FAM function - AR
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM function - AR")]
-		public int? M3_BSFR => GetNullableInt("BSFR");
+		public int? M3BSFR => GetNullableInt("BSFR");
 
 		/// <summary>
 		/// Description: FAM function - AP
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM function - AP")]
-		public int? M3_BSFP => GetNullableInt("BSFP");
+		public int? M3BSFP => GetNullableInt("BSFP");
 
 		/// <summary>
 		/// Description: Bank statement no
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank statement no")]
-		public int? M3_BSJD => GetNullableInt("BSJD");
+		public int? M3BSJD => GetNullableInt("BSJD");
 
 		/// <summary>
 		/// Description: Last bank statement nu used
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last bank statement nu used")]
-		public string M3_BSLN => GetString("BSLN");
+		public string M3BSLN => GetString("BSLN");
 
 		/// <summary>
 		/// Description: Separate voucher number per line
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Separate voucher number per line")]
-		public int? M3_BSSV => GetNullableInt("BSSV");
+		public int? M3BSSV => GetNullableInt("BSSV");
 
 		/// <summary>
 		/// Description: Accounting date used
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting date used")]
-		public int? M3_BSAU => GetNullableInt("BSAU");
+		public int? M3BSAU => GetNullableInt("BSAU");
 
 		/// <summary>
 		/// Description: Payment date used
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment date used")]
-		public int? M3_BSPU => GetNullableInt("BSPU");
+		public int? M3BSPU => GetNullableInt("BSPU");
 
 		/// <summary>
 		/// Description: Exchange rate date used
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate date used")]
-		public int? M3_BSEU => GetNullableInt("BSEU");
+		public int? M3BSEU => GetNullableInt("BSEU");
 
 		/// <summary>
 		/// Description: Voucher text for bank transaction
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher text for bank transaction")]
-		public int? M3_BSVT => GetNullableInt("BSVT");
+		public int? M3BSVT => GetNullableInt("BSVT");
 
 		/// <summary>
 		/// Description: Bank format
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank format")]
-		public string M3_BSBF => GetString("BSBF");
+		public string M3BSBF => GetString("BSBF");
 
 		/// <summary>
 		/// Description: Enter statement manually
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Enter statement manually")]
-		public int? M3_BSEM => GetNullableInt("BSEM");
+		public int? M3BSEM => GetNullableInt("BSEM");
 
 		/// <summary>
 		/// Description: Variance check
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Variance check")]
-		public int? M3_BSVC => GetNullableInt("BSVC");
+		public int? M3BSVC => GetNullableInt("BSVC");
 
 		/// <summary>
 		/// Description: User defined field 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 1")]
-		public string M3_BSU1 => GetString("BSU1");
+		public string M3BSU1 => GetString("BSU1");
 
 		/// <summary>
 		/// Description: User defined field 2
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 2")]
-		public string M3_BSU2 => GetString("BSU2");
+		public string M3BSU2 => GetString("BSU2");
 
 		/// <summary>
 		/// Description: User defined field 3
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 3")]
-		public string M3_BSU3 => GetString("BSU3");
+		public string M3BSU3 => GetString("BSU3");
 
 		/// <summary>
 		/// Description: User defined field 4
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 4")]
-		public string M3_BSU4 => GetString("BSU4");
+		public string M3BSU4 => GetString("BSU4");
 
 		/// <summary>
 		/// Description: User defined field 5
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 5")]
-		public string M3_BSU5 => GetString("BSU5");
+		public string M3BSU5 => GetString("BSU5");
 
 		/// <summary>
 		/// Description: User defined field 6
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 6")]
-		public string M3_BSU6 => GetString("BSU6");
+		public string M3BSU6 => GetString("BSU6");
 
 		/// <summary>
 		/// Description: Next manual step - bank
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next manual step - bank")]
-		public int? M3_NXST => GetNullableInt("NXST");
+		public int? M3NXST => GetNullableInt("NXST");
 
 		/// <summary>
 		/// Description: Update log file
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update log file")]
-		public int? M3_UPLO => GetNullableInt("UPLO");
+		public int? M3UPLO => GetNullableInt("UPLO");
 
 		/// <summary>
 		/// Description: Customer bank account
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer bank account")]
-		public int? M3_UPBA => GetNullableInt("UPBA");
+		public int? M3UPBA => GetNullableInt("UPBA");
 
 		/// <summary>
 		/// Description: Supplier bank account
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier bank account")]
-		public int? M3_UPBS => GetNullableInt("UPBS");
+		public int? M3UPBS => GetNullableInt("UPBS");
 
 		/// <summary>
 		/// Description: Bank account indicator
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account indicator")]
-		public int? M3_BKIN => GetNullableInt("BKIN");
+		public int? M3BKIN => GetNullableInt("BKIN");
 
 		/// <summary>
 		/// Description: Bank account balance
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account balance")]
-		public int? M3_BSP1 => GetNullableInt("BSP1");
+		public int? M3BSP1 => GetNullableInt("BSP1");
 
 		/// <summary>
 		/// Description: Structured
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structured")]
-		public int? M3_BSUC => GetNullableInt("BSUC");
+		public int? M3BSUC => GetNullableInt("BSUC");
 
 		/// <summary>
 		/// Description: Qualifier sign
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Qualifier sign")]
-		public string M3_BSQS => GetString("BSQS");
+		public string M3BSQS => GetString("BSQS");
 
 		/// <summary>
 		/// Description: Transaction type
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public int? M3_BSV1 => GetNullableInt("BSV1");
+		public int? M3BSV1 => GetNullableInt("BSV1");
 
 		/// <summary>
 		/// Description: Business transaction code
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business transaction code")]
-		public int? M3_BSV2 => GetNullableInt("BSV2");
+		public int? M3BSV2 => GetNullableInt("BSV2");
 
 		/// <summary>
 		/// Description: Free field 1
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free field 1")]
-		public int? M3_BSF1 => GetNullableInt("BSF1");
+		public int? M3BSF1 => GetNullableInt("BSF1");
 
 		/// <summary>
 		/// Description: Free field 2
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free field 2")]
-		public int? M3_BSF2 => GetNullableInt("BSF2");
+		public int? M3BSF2 => GetNullableInt("BSF2");
 
 		/// <summary>
 		/// Description: Free field 3
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free field 3")]
-		public string M3_BSF3 => GetString("BSF3");
+		public string M3BSF3 => GetString("BSF3");
 
 		/// <summary>
 		/// Description: Free field 4
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free field 4")]
-		public string M3_BSF4 => GetString("BSF4");
+		public string M3BSF4 => GetString("BSF4");
 
 		/// <summary>
 		/// Description: Bank statement type
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank statement type")]
-		public int? M3_BSTY => GetNullableInt("BSTY");
+		public int? M3BSTY => GetNullableInt("BSTY");
 
 		/// <summary>
 		/// Description: Reverse sign
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reverse sign")]
-		public int? M3_LTCS => GetNullableInt("LTCS");
+		public int? M3LTCS => GetNullableInt("LTCS");
 
 		/// <summary>
 		/// Description: User-defined field 7 - bank stmnt lines
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.ABS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 7 - bank stmnt lines")]
-		public string M3_BSU7 => GetString("BSU7");
+		public string M3BSU7 => GetString("BSU7");
 	}
 }
 // EOF

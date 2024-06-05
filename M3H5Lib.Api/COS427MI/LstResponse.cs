@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Service price method
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price method")]
-		public int? M3_SRVP => GetNullableInt("SRVP");
+		public int? M3SRVP => GetNullableInt("SRVP");
 
 		/// <summary>
 		/// Description: Product
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Start date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Payer
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Labor
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor")]
-		public decimal? M3_TIAM => GetNullableDecimal("TIAM");
+		public decimal? M3TIAM => GetNullableDecimal("TIAM");
 
 		/// <summary>
 		/// Description: Material
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material")]
-		public decimal? M3_MAA1 => GetNullableDecimal("MAA1");
+		public decimal? M3MAA1 => GetNullableDecimal("MAA1");
 
 		/// <summary>
 		/// Description: Subcontract
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract")]
-		public decimal? M3_SUAM => GetNullableDecimal("SUAM");
+		public decimal? M3SUAM => GetNullableDecimal("SUAM");
 
 		/// <summary>
 		/// Description: Miscellaneous
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous")]
-		public decimal? M3_MIA1 => GetNullableDecimal("MIA1");
+		public decimal? M3MIA1 => GetNullableDecimal("MIA1");
 
 		/// <summary>
 		/// Description: Loan
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loan")]
-		public decimal? M3_LOA3 => GetNullableDecimal("LOA3");
+		public decimal? M3LOA3 => GetNullableDecimal("LOA3");
 
 		/// <summary>
 		/// Description: Labor %
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor %")]
-		public int? M3_TIP1 => GetNullableInt("TIP1");
+		public int? M3TIP1 => GetNullableInt("TIP1");
 
 		/// <summary>
 		/// Description: Material %
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material %")]
-		public int? M3_MAP1 => GetNullableInt("MAP1");
+		public int? M3MAP1 => GetNullableInt("MAP1");
 
 		/// <summary>
 		/// Description: Subcontract %
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subcontract %")]
-		public int? M3_SUP1 => GetNullableInt("SUP1");
+		public int? M3SUP1 => GetNullableInt("SUP1");
 
 		/// <summary>
 		/// Description: Miscellaneous %
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous %")]
-		public int? M3_MIP1 => GetNullableInt("MIP1");
+		public int? M3MIP1 => GetNullableInt("MIP1");
 
 		/// <summary>
 		/// Description: Loan percent
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loan percent")]
-		public int? M3_LOP1 => GetNullableInt("LOP1");
+		public int? M3LOP1 => GetNullableInt("LOP1");
 
 		/// <summary>
 		/// Description: Service bill of material
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service bill of material")]
-		public int? M3_ASBO => GetNullableInt("ASBO");
+		public int? M3ASBO => GetNullableInt("ASBO");
 
 		/// <summary>
 		/// Description: Claim warranty
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim warranty")]
-		public int? M3_ACWA => GetNullableInt("ACWA");
+		public int? M3ACWA => GetNullableInt("ACWA");
 
 		/// <summary>
 		/// Description: Text identity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS427MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

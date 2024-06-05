@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item identity - discount matrix type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item identity - discount matrix type")]
-		public int? M3_DXIT => GetNullableInt("DXIT");
+		public int? M3DXIT => GetNullableInt("DXIT");
 
 		/// <summary>
 		/// Description: Packaging terms
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging terms")]
-		public string M3_TEPA => GetString("TEPA");
+		public string M3TEPA => GetString("TEPA");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Customer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Address number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Packaging
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_PANM => GetString("PANM");
+		public string M3PANM => GetString("PANM");
 
 		/// <summary>
 		/// Description: Customers packaging identity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers packaging identity")]
-		public string M3_CUPA => GetString("CUPA");
+		public string M3CUPA => GetString("CUPA");
 
 		/// <summary>
 		/// Description: Packaging code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging code")]
-		public string M3_GRTP => GetString("GRTP");
+		public string M3GRTP => GetString("GRTP");
 
 		/// <summary>
 		/// Description: Standard quantity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard quantity")]
-		public decimal? M3_D1QT => GetNullableDecimal("D1QT");
+		public decimal? M3D1QT => GetNullableDecimal("D1QT");
 
 		/// <summary>
 		/// Description: Minimum quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum quantity")]
-		public decimal? M3_D2QT => GetNullableDecimal("D2QT");
+		public decimal? M3D2QT => GetNullableDecimal("D2QT");
 
 		/// <summary>
 		/// Description: Maximum quantity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS053MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum quantity")]
-		public decimal? M3_D3QT => GetNullableDecimal("D3QT");
+		public decimal? M3D3QT => GetNullableDecimal("D3QT");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Message direction
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message direction")]
-		public string M3_E0IO => GetString("E0IO");
+		public string M3E0IO => GetString("E0IO");
 
 		/// <summary>
 		/// Description: Direction
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: TEI Transfer ID
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Transfer ID")]
-		public string M3_TINR => GetString("TINR");
+		public string M3TINR => GetString("TINR");
 
 		/// <summary>
 		/// Description: TEI partner
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI partner")]
-		public string M3_TIPI => GetString("TIPI");
+		public string M3TIPI => GetString("TIPI");
 
 		/// <summary>
 		/// Description: Event
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event")]
-		public string M3_EVNT => GetString("EVNT");
+		public string M3EVNT => GetString("EVNT");
 
 		/// <summary>
 		/// Description: Event key object 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event key object 1")]
-		public string M3_EVO1 => GetString("EVO1");
+		public string M3EVO1 => GetString("EVO1");
 
 		/// <summary>
 		/// Description: Event key object 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event key object 2")]
-		public string M3_EVO2 => GetString("EVO2");
+		public string M3EVO2 => GetString("EVO2");
 
 		/// <summary>
 		/// Description: Event key object 3
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event key object 3")]
-		public string M3_EVO3 => GetString("EVO3");
+		public string M3EVO3 => GetString("EVO3");
 
 		/// <summary>
 		/// Description: Event key 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event key 1")]
-		public string M3_EVK1 => GetString("EVK1");
+		public string M3EVK1 => GetString("EVK1");
 
 		/// <summary>
 		/// Description: Event key 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event key 2")]
-		public string M3_EVK2 => GetString("EVK2");
+		public string M3EVK2 => GetString("EVK2");
 
 		/// <summary>
 		/// Description: Event key 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event key 3")]
-		public string M3_EVK3 => GetString("EVK3");
+		public string M3EVK3 => GetString("EVK3");
 
 		/// <summary>
 		/// Description: Detail type
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detail type")]
-		public int? M3_DETP => GetNullableInt("DETP");
+		public int? M3DETP => GetNullableInt("DETP");
 
 		/// <summary>
 		/// Description: Document number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document number")]
-		public string M3_DONR => GetString("DONR");
+		public string M3DONR => GetString("DONR");
 
 		/// <summary>
 		/// Description: Document variant
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document variant")]
-		public string M3_DOVA => GetString("DOVA");
+		public string M3DOVA => GetString("DOVA");
 
 		/// <summary>
 		/// Description: Status
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: TEI Transfer origin
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Transfer origin")]
-		public int? M3_TORI => GetNullableInt("TORI");
+		public int? M3TORI => GetNullableInt("TORI");
 
 		/// <summary>
 		/// Description: Complementary transaction
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Complementary transaction")]
-		public int? M3_CTRA => GetNullableInt("CTRA");
+		public int? M3CTRA => GetNullableInt("CTRA");
 
 		/// <summary>
 		/// Description: Allow duplicate
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allow duplicate")]
-		public int? M3_DUDE => GetNullableInt("DUDE");
+		public int? M3DUDE => GetNullableInt("DUDE");
 
 		/// <summary>
 		/// Description: Send TEI transfers automatically
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send TEI transfers automatically")]
-		public int? M3_AUTR => GetNullableInt("AUTR");
+		public int? M3AUTR => GetNullableInt("AUTR");
 
 		/// <summary>
 		/// Description: Export/Import
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Export/Import")]
-		public int? M3_EXIM => GetNullableInt("EXIM");
+		public int? M3EXIM => GetNullableInt("EXIM");
 
 		/// <summary>
 		/// Description: Transaction alias external ID
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction alias external ID")]
-		public string M3_TAEI => GetString("TAEI");
+		public string M3TAEI => GetString("TAEI");
 
 		/// <summary>
 		/// Description: Country
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Job number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public string M3_BJNO => GetString("BJNO");
+		public string M3BJNO => GetString("BJNO");
 
 		/// <summary>
 		/// Description: Via address
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via address")]
-		public string M3_ADVI => GetString("ADVI");
+		public string M3ADVI => GetString("ADVI");
 
 		/// <summary>
 		/// Description: Report version
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report version")]
-		public string M3_LIVR => GetString("LIVR");
+		public string M3LIVR => GetString("LIVR");
 
 		/// <summary>
 		/// Description: Report type
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report type")]
-		public int? M3_RPTP => GetNullableInt("RPTP");
+		public int? M3RPTP => GetNullableInt("RPTP");
 
 		/// <summary>
 		/// Description: Selection object 1
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection object 1")]
-		public string M3_SE01 => GetString("SE01");
+		public string M3SE01 => GetString("SE01");
 
 		/// <summary>
 		/// Description: Selection from value 1
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection from value 1")]
-		public string M3_SFV1 => GetString("SFV1");
+		public string M3SFV1 => GetString("SFV1");
 
 		/// <summary>
 		/// Description: Selection to value 1
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection to value 1")]
-		public string M3_STV1 => GetString("STV1");
+		public string M3STV1 => GetString("STV1");
 
 		/// <summary>
 		/// Description: Selection object 1
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection object 1")]
-		public string M3_SE02 => GetString("SE02");
+		public string M3SE02 => GetString("SE02");
 
 		/// <summary>
 		/// Description: Selection from value 2
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection from value 2")]
-		public string M3_SFV2 => GetString("SFV2");
+		public string M3SFV2 => GetString("SFV2");
 
 		/// <summary>
 		/// Description: Selection to value 2
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection to value 2")]
-		public string M3_STV2 => GetString("STV2");
+		public string M3STV2 => GetString("STV2");
 
 		/// <summary>
 		/// Description: Selection object 1
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection object 1")]
-		public string M3_SE03 => GetString("SE03");
+		public string M3SE03 => GetString("SE03");
 
 		/// <summary>
 		/// Description: Selection from value 3
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection from value 3")]
-		public string M3_SFV3 => GetString("SFV3");
+		public string M3SFV3 => GetString("SFV3");
 
 		/// <summary>
 		/// Description: Selection to value 3
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection to value 3")]
-		public string M3_STV3 => GetString("STV3");
+		public string M3STV3 => GetString("STV3");
 
 		/// <summary>
 		/// Description: Selection object 1
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection object 1")]
-		public string M3_SE04 => GetString("SE04");
+		public string M3SE04 => GetString("SE04");
 
 		/// <summary>
 		/// Description: Selection from value 4
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection from value 4")]
-		public string M3_SFV4 => GetString("SFV4");
+		public string M3SFV4 => GetString("SFV4");
 
 		/// <summary>
 		/// Description: Selection to value 4
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection to value 4")]
-		public string M3_STV4 => GetString("STV4");
+		public string M3STV4 => GetString("STV4");
 
 		/// <summary>
 		/// Description: Sorting object 1
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting object 1")]
-		public string M3_SOR1 => GetString("SOR1");
+		public string M3SOR1 => GetString("SOR1");
 
 		/// <summary>
 		/// Description: Sorting object 2
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting object 2")]
-		public string M3_SOR2 => GetString("SOR2");
+		public string M3SOR2 => GetString("SOR2");
 
 		/// <summary>
 		/// Description: Sorting object 3
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting object 3")]
-		public string M3_SOR3 => GetString("SOR3");
+		public string M3SOR3 => GetString("SOR3");
 
 		/// <summary>
 		/// Description: Selection break level 1
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection break level 1")]
-		public string M3_SBL1 => GetString("SBL1");
+		public string M3SBL1 => GetString("SBL1");
 
 		/// <summary>
 		/// Description: Selection break level 2
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection break level 2")]
-		public string M3_SBL2 => GetString("SBL2");
+		public string M3SBL2 => GetString("SBL2");
 
 		/// <summary>
 		/// Description: Selection break level 3
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection break level 3")]
-		public string M3_SBL3 => GetString("SBL3");
+		public string M3SBL3 => GetString("SBL3");
 
 		/// <summary>
 		/// Description: Selection break value 1
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection break value 1")]
-		public string M3_SBV1 => GetString("SBV1");
+		public string M3SBV1 => GetString("SBV1");
 
 		/// <summary>
 		/// Description: Selection break value 2
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection break value 2")]
-		public string M3_SBV2 => GetString("SBV2");
+		public string M3SBV2 => GetString("SBV2");
 
 		/// <summary>
 		/// Description: Selection break value 3
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection break value 3")]
-		public string M3_SBV3 => GetString("SBV3");
+		public string M3SBV3 => GetString("SBV3");
 
 		/// <summary>
 		/// Description: Fixed break - Place of loading
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed break - Place of loading")]
-		public string M3_FBSD => GetString("FBSD");
+		public string M3FBSD => GetString("FBSD");
 
 		/// <summary>
 		/// Description: Fixed break - via address
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed break - via address")]
-		public string M3_FBAD => GetString("FBAD");
+		public string M3FBAD => GetString("FBAD");
 
 		/// <summary>
 		/// Description: Fixed break - warehouse
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed break - warehouse")]
-		public string M3_FBWH => GetString("FBWH");
+		public string M3FBWH => GetString("FBWH");
 
 		/// <summary>
 		/// Description: Transaction reference 1
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction reference 1")]
-		public string M3_TRR1 => GetString("TRR1");
+		public string M3TRR1 => GetString("TRR1");
 
 		/// <summary>
 		/// Description: Transaction reference 2
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction reference 2")]
-		public string M3_TRR2 => GetString("TRR2");
+		public string M3TRR2 => GetString("TRR2");
 
 		/// <summary>
 		/// Description: Date generated
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date generated")]
-		public DateTime? M3_GEDT => GetNullableDateTime("GEDT");
+		public DateTime? M3GEDT => GetNullableDateTime("GEDT");
 
 		/// <summary>
 		/// Description: Time generated
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time generated")]
-		public int? M3_GETM => GetNullableInt("GETM");
+		public int? M3GETM => GetNullableInt("GETM");
 
 		/// <summary>
 		/// Description: Message broker date
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message broker date")]
-		public DateTime? M3_MBDT => GetNullableDateTime("MBDT");
+		public DateTime? M3MBDT => GetNullableDateTime("MBDT");
 
 		/// <summary>
 		/// Description: Message broker time
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message broker time")]
-		public int? M3_MBTM => GetNullableInt("MBTM");
+		public int? M3MBTM => GetNullableInt("MBTM");
 
 		/// <summary>
 		/// Description: Text identity
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

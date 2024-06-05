@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS103MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Add Finance reason
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FRSC">Finance Reason Code (Required)</param>
-		/// <param name="m3_RTPF">Reason type (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3FRSC">Finance Reason Code (Required)</param>
+		/// <param name="m3RTPF">Reason type (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddFinReason(
-			string m3_FRSC, 
-			int m3_RTPF, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
+			string m3FRSC, 
+			int m3RTPF, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,19 +68,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FRSC))
-				throw new ArgumentNullException("m3_FRSC");
+			if (string.IsNullOrWhiteSpace(m3FRSC))
+				throw new ArgumentNullException(nameof(m3FRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FRSC", m3_FRSC.Trim())
-				.WithQueryParameter("RTPF", m3_RTPF.ToString());
+				.WithQueryParameter("FRSC", m3FRSC.Trim())
+				.WithQueryParameter("RTPF", m3RTPF.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -88,7 +90,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -99,10 +102,10 @@ namespace M3H5Lib.Api
 		/// Description AddFinRsnText
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_FRSC">Finance reason code (Required)</param>
-		/// <param name="m3_LNCD">Language</param>
-		/// <param name="m3_TXVR">Text block</param>
-		/// <param name="m3_PARM">Text</param>
+		/// <param name="m3FRSC">Finance reason code (Required)</param>
+		/// <param name="m3LNCD">Language</param>
+		/// <param name="m3TXVR">Text block</param>
+		/// <param name="m3PARM">Text</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -111,10 +114,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddFinRsnText(
-			string m3_FRSC, 
-			string m3_LNCD = null, 
-			string m3_TXVR = null, 
-			string m3_PARM = null, 
+			string m3FRSC, 
+			string m3LNCD = null, 
+			string m3TXVR = null, 
+			string m3PARM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -129,20 +132,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FRSC))
-				throw new ArgumentNullException("m3_FRSC");
+			if (string.IsNullOrWhiteSpace(m3FRSC))
+				throw new ArgumentNullException(nameof(m3FRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FRSC", m3_FRSC.Trim());
+				.WithQueryParameter("FRSC", m3FRSC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TXVR))
-				request.WithQueryParameter("TXVR", m3_TXVR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PARM))
-				request.WithQueryParameter("PARM", m3_PARM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TXVR))
+				request.WithQueryParameter("TXVR", m3TXVR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PARM))
+				request.WithQueryParameter("PARM", m3PARM.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -152,7 +155,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -163,7 +167,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Finance reason
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FRSC">Finance Reason Code (Required)</param>
+		/// <param name="m3FRSC">Finance Reason Code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -172,7 +176,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltFinReason(
-			string m3_FRSC, 
+			string m3FRSC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -187,12 +191,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FRSC))
-				throw new ArgumentNullException("m3_FRSC");
+			if (string.IsNullOrWhiteSpace(m3FRSC))
+				throw new ArgumentNullException(nameof(m3FRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FRSC", m3_FRSC.Trim());
+				.WithQueryParameter("FRSC", m3FRSC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -202,7 +206,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -213,7 +218,7 @@ namespace M3H5Lib.Api
 		/// Description Get Finance reason
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FRSC">Finance Reason Code (Required)</param>
+		/// <param name="m3FRSC">Finance Reason Code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -222,7 +227,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetFinReasonResponse></returns>
 		/// <exception cref="M3Exception<GetFinReasonResponse>"></exception>
 		public async Task<M3Response<GetFinReasonResponse>> GetFinReason(
-			string m3_FRSC, 
+			string m3FRSC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -237,12 +242,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FRSC))
-				throw new ArgumentNullException("m3_FRSC");
+			if (string.IsNullOrWhiteSpace(m3FRSC))
+				throw new ArgumentNullException(nameof(m3FRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FRSC", m3_FRSC.Trim());
+				.WithQueryParameter("FRSC", m3FRSC.Trim());
 
 			// Execute the request
 			var result = await Execute<GetFinReasonResponse>(
@@ -252,7 +257,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -263,9 +269,9 @@ namespace M3H5Lib.Api
 		/// Description GetFinRsnText
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_FRSC">Finance reason code (Required)</param>
-		/// <param name="m3_LNCD">Language</param>
-		/// <param name="m3_TYTX">Type of text</param>
+		/// <param name="m3FRSC">Finance reason code (Required)</param>
+		/// <param name="m3LNCD">Language</param>
+		/// <param name="m3TYTX">Type of text</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -274,9 +280,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetFinRsnTextResponse></returns>
 		/// <exception cref="M3Exception<GetFinRsnTextResponse>"></exception>
 		public async Task<M3Response<GetFinRsnTextResponse>> GetFinRsnText(
-			string m3_FRSC, 
-			string m3_LNCD = null, 
-			string m3_TYTX = null, 
+			string m3FRSC, 
+			string m3LNCD = null, 
+			string m3TYTX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -291,18 +297,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FRSC))
-				throw new ArgumentNullException("m3_FRSC");
+			if (string.IsNullOrWhiteSpace(m3FRSC))
+				throw new ArgumentNullException(nameof(m3FRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FRSC", m3_FRSC.Trim());
+				.WithQueryParameter("FRSC", m3FRSC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TYTX))
-				request.WithQueryParameter("TYTX", m3_TYTX.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TYTX))
+				request.WithQueryParameter("TYTX", m3TYTX.Trim());
 
 			// Execute the request
 			var result = await Execute<GetFinRsnTextResponse>(
@@ -312,7 +318,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -323,7 +330,7 @@ namespace M3H5Lib.Api
 		/// Description List finance reason
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FRSC">Finance Reason Code</param>
+		/// <param name="m3FRSC">Finance Reason Code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -332,7 +339,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFinReasonResponse></returns>
 		/// <exception cref="M3Exception<LstFinReasonResponse>"></exception>
 		public async Task<M3Response<LstFinReasonResponse>> LstFinReason(
-			string m3_FRSC = null, 
+			string m3FRSC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -347,8 +354,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FRSC))
-				request.WithQueryParameter("FRSC", m3_FRSC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRSC))
+				request.WithQueryParameter("FRSC", m3FRSC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstFinReasonResponse>(
@@ -358,7 +365,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -369,10 +377,10 @@ namespace M3H5Lib.Api
 		/// Description Upd finance reason
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FRSC">Finance Reason Code</param>
-		/// <param name="m3_RTPF">Reason type</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3FRSC">Finance Reason Code</param>
+		/// <param name="m3RTPF">Reason type</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -381,10 +389,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdFinReason(
-			string m3_FRSC = null, 
-			int? m3_RTPF = null, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
+			string m3FRSC = null, 
+			int? m3RTPF = null, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -399,14 +407,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FRSC))
-				request.WithQueryParameter("FRSC", m3_FRSC.Trim());
-			if (m3_RTPF.HasValue)
-				request.WithQueryParameter("RTPF", m3_RTPF.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRSC))
+				request.WithQueryParameter("FRSC", m3FRSC.Trim());
+			if (m3RTPF.HasValue)
+				request.WithQueryParameter("RTPF", m3RTPF.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -416,7 +424,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

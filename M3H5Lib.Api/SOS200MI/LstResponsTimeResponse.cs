@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Contract item
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contract item")]
-		public string M3_AGRS => GetString("AGRS");
+		public string M3AGRS => GetString("AGRS");
 
 		/// <summary>
 		/// Description: Assignment type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment type")]
-		public string M3_ASST => GetString("ASST");
+		public string M3ASST => GetString("ASST");
 
 		/// <summary>
 		/// Description: Priority
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_OPRI => GetNullableInt("OPRI");
+		public int? M3OPRI => GetNullableInt("OPRI");
 
 		/// <summary>
 		/// Description: Response time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Response time")]
-		public int? M3_APTM => GetNullableInt("APTM");
+		public int? M3APTM => GetNullableInt("APTM");
 
 		/// <summary>
 		/// Description: Change permitted
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change permitted")]
-		public int? M3_CHAL => GetNullableInt("CHAL");
+		public int? M3CHAL => GetNullableInt("CHAL");
 
 		/// <summary>
 		/// Description: Downtime
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Downtime")]
-		public int? M3_DOWT => GetNullableInt("DOWT");
+		public int? M3DOWT => GetNullableInt("DOWT");
 
 		/// <summary>
 		/// Description: Change date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

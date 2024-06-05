@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CSS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,19 +38,19 @@ namespace M3H5Lib.Api
 		/// Description Get Delaer Code
 		/// Version Release: 14.1
 		/// </summary>
-		/// <param name="m3_ITTY">Item type</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_EQTP">Equipment type</param>
-		/// <param name="m3_EQGR">Equipment group</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_CSCD">Country</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_ECAR">State</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_ORTP">Customer order type</param>
-		/// <param name="m3_CSRE">Supplier's customer reference</param>
+		/// <param name="m3ITTY">Item type</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3EQTP">Equipment type</param>
+		/// <param name="m3EQGR">Equipment group</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3CSCD">Country</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3ECAR">State</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3ORTP">Customer order type</param>
+		/// <param name="m3CSRE">Supplier's customer reference</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -57,19 +59,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDealerCodeResponse></returns>
 		/// <exception cref="M3Exception<GetDealerCodeResponse>"></exception>
 		public async Task<M3Response<GetDealerCodeResponse>> GetDealerCode(
-			string m3_ITTY = null, 
-			string m3_ITGR = null, 
-			string m3_ITCL = null, 
-			string m3_EQTP = null, 
-			string m3_EQGR = null, 
-			string m3_CUNO = null, 
-			string m3_CSCD = null, 
-			string m3_DIVI = null, 
-			string m3_FACI = null, 
-			string m3_ECAR = null, 
-			string m3_WHLO = null, 
-			string m3_ORTP = null, 
-			string m3_CSRE = null, 
+			string m3ITTY = null, 
+			string m3ITGR = null, 
+			string m3ITCL = null, 
+			string m3EQTP = null, 
+			string m3EQGR = null, 
+			string m3CUNO = null, 
+			string m3CSCD = null, 
+			string m3DIVI = null, 
+			string m3FACI = null, 
+			string m3ECAR = null, 
+			string m3WHLO = null, 
+			string m3ORTP = null, 
+			string m3CSRE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -84,32 +86,32 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ITTY))
-				request.WithQueryParameter("ITTY", m3_ITTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EQTP))
-				request.WithQueryParameter("EQTP", m3_EQTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EQGR))
-				request.WithQueryParameter("EQGR", m3_EQGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CSCD))
-				request.WithQueryParameter("CSCD", m3_CSCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ECAR))
-				request.WithQueryParameter("ECAR", m3_ECAR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CSRE))
-				request.WithQueryParameter("CSRE", m3_CSRE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITTY))
+				request.WithQueryParameter("ITTY", m3ITTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EQTP))
+				request.WithQueryParameter("EQTP", m3EQTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EQGR))
+				request.WithQueryParameter("EQGR", m3EQGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSCD))
+				request.WithQueryParameter("CSCD", m3CSCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ECAR))
+				request.WithQueryParameter("ECAR", m3ECAR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSRE))
+				request.WithQueryParameter("CSRE", m3CSRE.Trim());
 
 			// Execute the request
 			var result = await Execute<GetDealerCodeResponse>(
@@ -119,7 +121,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

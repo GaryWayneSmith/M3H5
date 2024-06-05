@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Production lot number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Production lot number")]
-		public long? M3_PLNO => GetNullableLong("PLNO");
+		public long? M3PLNO => GetNullableLong("PLNO");
 
 		/// <summary>
 		/// Description: Element number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element number")]
-		public int? M3_ACTS => GetNullableInt("ACTS");
+		public int? M3ACTS => GetNullableInt("ACTS");
 
 		/// <summary>
 		/// Description: Inspection identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection identity")]
-		public string M3_INSI => GetString("INSI");
+		public string M3INSI => GetString("INSI");
 
 		/// <summary>
 		/// Description: Line number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_SPOS => GetNullableInt("SPOS");
+		public int? M3SPOS => GetNullableInt("SPOS");
 
 		/// <summary>
 		/// Description: Name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX10 => GetString("TX10");
+		public string M3TX10 => GetString("TX10");
 
 		/// <summary>
 		/// Description: Name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Reported value
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported value")]
-		public string M3_RVAL => GetString("RVAL");
+		public string M3RVAL => GetString("RVAL");
 
 		/// <summary>
 		/// Description: Result identity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result identity")]
-		public string M3_RSIY => GetString("RSIY");
+		public string M3RSIY => GetString("RSIY");
 
 		/// <summary>
 		/// Description: U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("U/M")]
-		public string M3_RUOM => GetString("RUOM");
+		public string M3RUOM => GetString("RUOM");
 
 		/// <summary>
 		/// Description: Report date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report date")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: Report time
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report time")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: Expected value
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expected value")]
-		public string M3_EVAL => GetString("EVAL");
+		public string M3EVAL => GetString("EVAL");
 
 		/// <summary>
 		/// Description: Operator
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE1 => GetString("OPE1");
+		public string M3OPE1 => GetString("OPE1");
 
 		/// <summary>
 		/// Description: Range value
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Range value")]
-		public string M3_RBFR => GetString("RBFR");
+		public string M3RBFR => GetString("RBFR");
 
 		/// <summary>
 		/// Description: Operator
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE2 => GetString("OPE2");
+		public string M3OPE2 => GetString("OPE2");
 
 		/// <summary>
 		/// Description: Range value
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Range value")]
-		public string M3_RBTO => GetString("RBTO");
+		public string M3RBTO => GetString("RBTO");
 
 		/// <summary>
 		/// Description: Operator
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE3 => GetString("OPE3");
+		public string M3OPE3 => GetString("OPE3");
 
 		/// <summary>
 		/// Description: External limit
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External limit")]
-		public string M3_EAFR => GetString("EAFR");
+		public string M3EAFR => GetString("EAFR");
 
 		/// <summary>
 		/// Description: Operator
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE4 => GetString("OPE4");
+		public string M3OPE4 => GetString("OPE4");
 
 		/// <summary>
 		/// Description: External limit
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External limit")]
-		public string M3_EATO => GetString("EATO");
+		public string M3EATO => GetString("EATO");
 
 		/// <summary>
 		/// Description: Operator
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE5 => GetString("OPE5");
+		public string M3OPE5 => GetString("OPE5");
 
 		/// <summary>
 		/// Description: Alarm limit
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alarm limit")]
-		public string M3_AAFR => GetString("AAFR");
+		public string M3AAFR => GetString("AAFR");
 
 		/// <summary>
 		/// Description: Operator
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operator")]
-		public string M3_OPE6 => GetString("OPE6");
+		public string M3OPE6 => GetString("OPE6");
 
 		/// <summary>
 		/// Description: Alarm limit
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alarm limit")]
-		public string M3_AATO => GetString("AATO");
+		public string M3AATO => GetString("AATO");
 
 		/// <summary>
 		/// Description: Remark
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Name
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PMS085MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TY15 => GetString("TY15");
+		public string M3TY15 => GetString("TY15");
 	}
 }
 // EOF

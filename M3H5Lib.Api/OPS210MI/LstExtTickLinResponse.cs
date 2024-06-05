@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public string M3_TRTP => GetString("TRTP");
+		public string M3TRTP => GetString("TRTP");
 
 		/// <summary>
 		/// Description: Reference
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference")]
-		public string M3_REFE => GetString("REFE");
+		public string M3REFE => GetString("REFE");
 
 		/// <summary>
 		/// Description: Transaction date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction date")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: Record status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record status")]
-		public string M3_RDST => GetString("RDST");
+		public string M3RDST => GetString("RDST");
 
 		/// <summary>
 		/// Description: Customer number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Net daily rate
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net daily rate")]
-		public decimal? M3_PDAN => GetNullableDecimal("PDAN");
+		public decimal? M3PDAN => GetNullableDecimal("PDAN");
 
 		/// <summary>
 		/// Description: Line number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Item number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_QTYA => GetNullableDecimal("QTYA");
+		public decimal? M3QTYA => GetNullableDecimal("QTYA");
 
 		/// <summary>
 		/// Description: Alternate U/M
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 
 		/// <summary>
 		/// Description: Sales price
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price unit of measure
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price unit of measure")]
-		public string M3_SPUN => GetString("SPUN");
+		public string M3SPUN => GetString("SPUN");
 
 		/// <summary>
 		/// Description: Discount amount 1
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 1")]
-		public decimal? M3_DIA1 => GetNullableDecimal("DIA1");
+		public decimal? M3DIA1 => GetNullableDecimal("DIA1");
 
 		/// <summary>
 		/// Description: User-defined field 1 - customer
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - customer")]
-		public string M3_CFC1 => GetString("CFC1");
+		public string M3CFC1 => GetString("CFC1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - customer
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - customer")]
-		public decimal? M3_CFC2 => GetNullableDecimal("CFC2");
+		public decimal? M3CFC2 => GetNullableDecimal("CFC2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - customer
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - customer")]
-		public string M3_CFC3 => GetString("CFC3");
+		public string M3CFC3 => GetString("CFC3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - customer
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - customer")]
-		public string M3_CFC4 => GetString("CFC4");
+		public string M3CFC4 => GetString("CFC4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - customer
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - customer")]
-		public string M3_CFC5 => GetString("CFC5");
+		public string M3CFC5 => GetString("CFC5");
 
 		/// <summary>
 		/// Description: Name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OPS210MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 	}
 }
 // EOF

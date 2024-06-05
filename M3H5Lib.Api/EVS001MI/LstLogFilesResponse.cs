@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Names of found files")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Host name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Host name")]
-		public string M3_HOST => GetString("HOST");
+		public string M3HOST => GetString("HOST");
 
 		/// <summary>
 		/// Description: Folder
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Folder")]
-		public string M3_A120 => GetString("A120");
+		public string M3A120 => GetString("A120");
 
 		/// <summary>
 		/// Description: Entry date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Actual length
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual length")]
-		public decimal? M3_ACTU => GetNullableDecimal("ACTU");
+		public decimal? M3ACTU => GetNullableDecimal("ACTU");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.AHS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description List Ad hoc reports per user
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_USID">User (Required)</param>
+		/// <param name="m3USID">User (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByUserResponse></returns>
 		/// <exception cref="M3Exception<LstByUserResponse>"></exception>
 		public async Task<M3Response<LstByUserResponse>> LstByUser(
-			string m3_USID, 
+			string m3USID, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("USID", m3_USID.Trim());
+				.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByUserResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

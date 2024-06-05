@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Panel
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel")]
-		public string M3_PIC1 => GetString("PIC1");
+		public string M3PIC1 => GetString("PIC1");
 
 		/// <summary>
 		/// Description: Sort
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sort")]
-		public int? M3_SRTU => GetNullableInt("SRTU");
+		public int? M3SRTU => GetNullableInt("SRTU");
 
 		/// <summary>
 		/// Description: Sum
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sum")]
-		public int? M3_SUMA => GetNullableInt("SUMA");
+		public int? M3SUMA => GetNullableInt("SUMA");
 
 		/// <summary>
 		/// Description: Max value used
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max value used")]
-		public int? M3_MAXU => GetNullableInt("MAXU");
+		public int? M3MAXU => GetNullableInt("MAXU");
 
 		/// <summary>
 		/// Description: Override used
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Override used")]
-		public int? M3_OVRR => GetNullableInt("OVRR");
+		public int? M3OVRR => GetNullableInt("OVRR");
 
 		/// <summary>
 		/// Description: Responsible active for panel versions
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible active for panel versions")]
-		public int? M3_REAC => GetNullableInt("REAC");
+		public int? M3REAC => GetNullableInt("REAC");
 
 		/// <summary>
 		/// Description: Max panel version length
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max panel version length")]
-		public int? M3_MPVL => GetNullableInt("MPVL");
+		public int? M3MPVL => GetNullableInt("MPVL");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MNS105MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Add System languages
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_LANC">System language (Required)</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3LANC">System language (Required)</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddLng(
-			string m3_LANC, 
-			string m3_TX40 = null, 
+			string m3LANC, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,16 +64,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LANC))
-				throw new ArgumentNullException("m3_LANC");
+			if (string.IsNullOrWhiteSpace(m3LANC))
+				throw new ArgumentNullException(nameof(m3LANC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LANC", m3_LANC.Trim());
+				.WithQueryParameter("LANC", m3LANC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -81,7 +83,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -92,8 +95,8 @@ namespace M3H5Lib.Api
 		/// Description Change System languages
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_LANC">System language (Required)</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3LANC">System language (Required)</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -102,8 +105,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgLng(
-			string m3_LANC, 
-			string m3_TX40 = null, 
+			string m3LANC, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -118,16 +121,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LANC))
-				throw new ArgumentNullException("m3_LANC");
+			if (string.IsNullOrWhiteSpace(m3LANC))
+				throw new ArgumentNullException(nameof(m3LANC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LANC", m3_LANC.Trim());
+				.WithQueryParameter("LANC", m3LANC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -137,7 +140,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -148,8 +152,8 @@ namespace M3H5Lib.Api
 		/// Description Copy System language
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_LANC">System language (Required)</param>
-		/// <param name="m3_CLNG">System language (Required)</param>
+		/// <param name="m3LANC">System language (Required)</param>
+		/// <param name="m3CLNG">System language (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -158,8 +162,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> CpyLng(
-			string m3_LANC, 
-			string m3_CLNG, 
+			string m3LANC, 
+			string m3CLNG, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -174,15 +178,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LANC))
-				throw new ArgumentNullException("m3_LANC");
-			if (string.IsNullOrWhiteSpace(m3_CLNG))
-				throw new ArgumentNullException("m3_CLNG");
+			if (string.IsNullOrWhiteSpace(m3LANC))
+				throw new ArgumentNullException(nameof(m3LANC));
+			if (string.IsNullOrWhiteSpace(m3CLNG))
+				throw new ArgumentNullException(nameof(m3CLNG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LANC", m3_LANC.Trim())
-				.WithQueryParameter("CLNG", m3_CLNG.Trim());
+				.WithQueryParameter("LANC", m3LANC.Trim())
+				.WithQueryParameter("CLNG", m3CLNG.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -192,7 +196,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -203,7 +208,7 @@ namespace M3H5Lib.Api
 		/// Description Delete System languages
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_LANC">System language (Required)</param>
+		/// <param name="m3LANC">System language (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -212,7 +217,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelLng(
-			string m3_LANC, 
+			string m3LANC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -227,12 +232,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LANC))
-				throw new ArgumentNullException("m3_LANC");
+			if (string.IsNullOrWhiteSpace(m3LANC))
+				throw new ArgumentNullException(nameof(m3LANC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LANC", m3_LANC.Trim());
+				.WithQueryParameter("LANC", m3LANC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -242,7 +247,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -253,7 +259,7 @@ namespace M3H5Lib.Api
 		/// Description Get System languages
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_LANC">System language (Required)</param>
+		/// <param name="m3LANC">System language (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -262,7 +268,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetLngResponse></returns>
 		/// <exception cref="M3Exception<GetLngResponse>"></exception>
 		public async Task<M3Response<GetLngResponse>> GetLng(
-			string m3_LANC, 
+			string m3LANC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -277,12 +283,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LANC))
-				throw new ArgumentNullException("m3_LANC");
+			if (string.IsNullOrWhiteSpace(m3LANC))
+				throw new ArgumentNullException(nameof(m3LANC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LANC", m3_LANC.Trim());
+				.WithQueryParameter("LANC", m3LANC.Trim());
 
 			// Execute the request
 			var result = await Execute<GetLngResponse>(
@@ -292,7 +298,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -303,7 +310,7 @@ namespace M3H5Lib.Api
 		/// Description List System languages
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_LANC">System language (Required)</param>
+		/// <param name="m3LANC">System language (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -312,7 +319,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLngResponse></returns>
 		/// <exception cref="M3Exception<LstLngResponse>"></exception>
 		public async Task<M3Response<LstLngResponse>> LstLng(
-			string m3_LANC, 
+			string m3LANC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -327,12 +334,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_LANC))
-				throw new ArgumentNullException("m3_LANC");
+			if (string.IsNullOrWhiteSpace(m3LANC))
+				throw new ArgumentNullException(nameof(m3LANC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("LANC", m3_LANC.Trim());
+				.WithQueryParameter("LANC", m3LANC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstLngResponse>(
@@ -342,7 +349,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

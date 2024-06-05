@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning template")]
-		public string M3_PLNT => GetString("PLNT");
+		public string M3PLNT => GetString("PLNT");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Generate messages
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Generate messages")]
-		public int? M3_GMSG => GetNullableInt("GMSG");
+		public int? M3GMSG => GetNullableInt("GMSG");
 
 		/// <summary>
 		/// Description: Acquisition code
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition code")]
-		public int? M3_PUIT => GetNullableInt("PUIT");
+		public int? M3PUIT => GetNullableInt("PUIT");
 
 		/// <summary>
 		/// Description: Period frame
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period frame")]
-		public int? M3_DPID => GetNullableInt("DPID");
+		public int? M3DPID => GetNullableInt("DPID");
 
 		/// <summary>
 		/// Description: Planning method
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning method")]
-		public int? M3_OPLC => GetNullableInt("OPLC");
+		public int? M3OPLC => GetNullableInt("OPLC");
 
 		/// <summary>
 		/// Description: Planning policy
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning policy")]
-		public string M3_PLCD => GetString("PLCD");
+		public string M3PLCD => GetString("PLCD");
 
 		/// <summary>
 		/// Description: Master scheduled
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Master scheduled")]
-		public int? M3_MSCH => GetNullableInt("MSCH");
+		public int? M3MSCH => GetNullableInt("MSCH");
 
 		/// <summary>
 		/// Description: Supply chain policy
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply chain policy")]
-		public string M3_SCPO => GetString("SCPO");
+		public string M3SCPO => GetString("SCPO");
 
 		/// <summary>
 		/// Description: Inventory planned
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory planned")]
-		public string M3_IPLA => GetString("IPLA");
+		public string M3IPLA => GetString("IPLA");
 
 		/// <summary>
 		/// Description: Status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Continuous net change
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Continuous net change")]
-		public int? M3_CONC => GetNullableInt("CONC");
+		public int? M3CONC => GetNullableInt("CONC");
 
 		/// <summary>
 		/// Description: Order type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Forecast method
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast method")]
-		public string M3_PRCD => GetString("PRCD");
+		public string M3PRCD => GetString("PRCD");
 
 		/// <summary>
 		/// Description: Forecast logic
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast logic")]
-		public string M3_FCCM => GetString("FCCM");
+		public string M3FCCM => GetString("FCCM");
 
 		/// <summary>
 		/// Description: Multiple supply
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiple supply")]
-		public int? M3_SVEI => GetNullableInt("SVEI");
+		public int? M3SVEI => GetNullableInt("SVEI");
 
 		/// <summary>
 		/// Description: Safety stock method
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Safety stock method")]
-		public int? M3_SSMT => GetNullableInt("SSMT");
+		public int? M3SSMT => GetNullableInt("SSMT");
 
 		/// <summary>
 		/// Description: Safety stock unit
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Safety stock unit")]
-		public int? M3_SSDA => GetNullableInt("SSDA");
+		public int? M3SSDA => GetNullableInt("SSDA");
 
 		/// <summary>
 		/// Description: Service level
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service level")]
-		public int? M3_SCGR => GetNullableInt("SCGR");
+		public int? M3SCGR => GetNullableInt("SCGR");
 
 		/// <summary>
 		/// Description: Reorder point method
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reorder point method")]
-		public int? M3_OPOM => GetNullableInt("OPOM");
+		public int? M3OPOM => GetNullableInt("OPOM");
 
 		/// <summary>
 		/// Description: Order policy
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order policy")]
-		public int? M3_EOQM => GetNullableInt("EOQM");
+		public int? M3EOQM => GetNullableInt("EOQM");
 
 		/// <summary>
 		/// Description: Sales item
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales item")]
-		public int? M3_SALE => GetNullableInt("SALE");
+		public int? M3SALE => GetNullableInt("SALE");
 
 		/// <summary>
 		/// Description: Clear demand
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clear demand")]
-		public int? M3_CLDM => GetNullableInt("CLDM");
+		public int? M3CLDM => GetNullableInt("CLDM");
 
 		/// <summary>
 		/// Description: Clear order quantities
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.RPS180MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clear order quantities")]
-		public int? M3_CLOR => GetNullableInt("CLOR");
+		public int? M3CLOR => GetNullableInt("CLOR");
 	}
 }
 // EOF

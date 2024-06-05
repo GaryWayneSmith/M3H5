@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public string M3_AALF => GetString("AALF");
+		public string M3AALF => GetString("AALF");
 
 		/// <summary>
 		/// Description: To attribute value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To attribute value")]
-		public string M3_AALT => GetString("AALT");
+		public string M3AALT => GetString("AALT");
 
 		/// <summary>
 		/// Description: Numeric range multiple
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric range multiple")]
-		public decimal? M3_NRMU => GetNullableDecimal("NRMU");
+		public decimal? M3NRMU => GetNullableDecimal("NRMU");
 
 		/// <summary>
 		/// Description: Default code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default code")]
-		public int? M3_DFCD => GetNullableInt("DFCD");
+		public int? M3DFCD => GetNullableInt("DFCD");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Default value
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default value")]
-		public int? M3_DEFV => GetNullableInt("DEFV");
+		public int? M3DEFV => GetNullableInt("DEFV");
 	}
 }
 // EOF

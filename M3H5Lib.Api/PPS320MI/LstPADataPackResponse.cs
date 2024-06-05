@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PACN => GetString("PACN");
+		public string M3PACN => GetString("PACN");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Delivery note number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note number")]
-		public string M3_SUDO => GetString("SUDO");
+		public string M3SUDO => GetString("SUDO");
 
 		/// <summary>
 		/// Description: Delivery note date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note date")]
-		public DateTime? M3_DNDT => GetNullableDateTime("DNDT");
+		public DateTime? M3DNDT => GetNullableDateTime("DNDT");
 
 		/// <summary>
 		/// Description: Location
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Package level
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package level")]
-		public int? M3_PACO => GetNullableInt("PACO");
+		public int? M3PACO => GetNullableInt("PACO");
 
 		/// <summary>
 		/// Description: Included in package number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in package number")]
-		public string M3_PACC => GetString("PACC");
+		public string M3PACC => GetString("PACC");
 	}
 }
 // EOF

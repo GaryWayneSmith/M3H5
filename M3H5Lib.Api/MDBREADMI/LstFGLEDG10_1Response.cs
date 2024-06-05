@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Journal no
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal no")]
-		public int? M3_JRNO => GetNullableInt("JRNO");
+		public int? M3JRNO => GetNullableInt("JRNO");
 
 		/// <summary>
 		/// Description: Journal seq no
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal seq no")]
-		public int? M3_JSNO => GetNullableInt("JSNO");
+		public int? M3JSNO => GetNullableInt("JSNO");
 
 		/// <summary>
 		/// Description: Trans code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trans code")]
-		public int? M3_TRCD => GetNullableInt("TRCD");
+		public int? M3TRCD => GetNullableInt("TRCD");
 
 		/// <summary>
 		/// Description: Voucher no
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher no")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: FAM function
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM function")]
-		public string M3_FEID => GetString("FEID");
+		public string M3FEID => GetString("FEID");
 
 		/// <summary>
 		/// Description: FAM function
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("FAM function")]
-		public int? M3_FNCN => GetNullableInt("FNCN");
+		public int? M3FNCN => GetNullableInt("FNCN");
 
 		/// <summary>
 		/// Description: Trans descr
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trans descr")]
-		public string M3_TDSC => GetString("TDSC");
+		public string M3TDSC => GetString("TDSC");
 
 		/// <summary>
 		/// Description: Voucher name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher name")]
-		public string M3_VDSC => GetString("VDSC");
+		public string M3VDSC => GetString("VDSC");
 
 		/// <summary>
 		/// Description: Ext/int trans
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ext/int trans")]
-		public int? M3_EICD => GetNullableInt("EICD");
+		public int? M3EICD => GetNullableInt("EICD");
 	}
 }
 // EOF

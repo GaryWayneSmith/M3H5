@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Eco tracking number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eco tracking number")]
-		public decimal? M3_ECTR => GetNullableDecimal("ECTR");
+		public decimal? M3ECTR => GetNullableDecimal("ECTR");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_ALI1 => GetNullableInt("ALI1");
+		public int? M3ALI1 => GetNullableInt("ALI1");
 
 		/// <summary>
 		/// Description: Division
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Year
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Facility
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Charge
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public string M3_CRID => GetString("CRID");
+		public string M3CRID => GetString("CRID");
 
 		/// <summary>
 		/// Description: Customer
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Supplier
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: External status
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External status")]
-		public string M3_EIST => GetString("EIST");
+		public string M3EIST => GetString("EIST");
 
 		/// <summary>
 		/// Description: Submit date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Submit date")]
-		public DateTime? M3_SBDT => GetNullableDateTime("SBDT");
+		public DateTime? M3SBDT => GetNullableDateTime("SBDT");
 
 		/// <summary>
 		/// Description: Submit time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Submit time")]
-		public int? M3_SBHM => GetNullableInt("SBHM");
+		public int? M3SBHM => GetNullableInt("SBHM");
 
 		/// <summary>
 		/// Description: Job number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public string M3_BJNO => GetString("BJNO");
+		public string M3BJNO => GetString("BJNO");
 
 		/// <summary>
 		/// Description: Item number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Invoiced quantity - basic U/M
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity - basic U/M")]
-		public decimal? M3_IVQT => GetNullableDecimal("IVQT");
+		public decimal? M3IVQT => GetNullableDecimal("IVQT");
 
 		/// <summary>
 		/// Description: Eco-product code
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eco-product code")]
-		public string M3_ECOP => GetString("ECOP");
+		public string M3ECOP => GetString("ECOP");
 
 		/// <summary>
 		/// Description: Eco-contribution code
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eco-contribution code")]
-		public string M3_ECOC => GetString("ECOC");
+		public string M3ECOC => GetString("ECOC");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Eco-organization
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eco-organization")]
-		public string M3_ECRG => GetString("ECRG");
+		public string M3ECRG => GetString("ECRG");
 
 		/// <summary>
 		/// Description: Country of organization
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of organization")]
-		public string M3_CSOR => GetString("CSOR");
+		public string M3CSOR => GetString("CSOR");
 
 		/// <summary>
 		/// Description: Supplier of organization
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier of organization")]
-		public string M3_SUEC => GetString("SUEC");
+		public string M3SUEC => GetString("SUEC");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Net weight
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Invoice amount - foreign currency
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - foreign currency")]
-		public decimal? M3_IVAM => GetNullableDecimal("IVAM");
+		public decimal? M3IVAM => GetNullableDecimal("IVAM");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVLA => GetNullableDecimal("IVLA");
+		public decimal? M3IVLA => GetNullableDecimal("IVLA");
 
 		/// <summary>
 		/// Description: VAT code
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: VAT
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT")]
-		public decimal? M3_VTAM => GetNullableDecimal("VTAM");
+		public decimal? M3VTAM => GetNullableDecimal("VTAM");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Payer
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Charge origin
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge origin")]
-		public string M3_CHPM => GetString("CHPM");
+		public string M3CHPM => GetString("CHPM");
 
 		/// <summary>
 		/// Description: Charge amount in currency of Eco-org
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge amount in currency of Eco-org")]
-		public decimal? M3_ECHA => GetNullableDecimal("ECHA");
+		public decimal? M3ECHA => GetNullableDecimal("ECHA");
 
 		/// <summary>
 		/// Description: Currency of Eco-organization
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency of Eco-organization")]
-		public string M3_ECUR => GetString("ECUR");
+		public string M3ECUR => GetString("ECUR");
 
 		/// <summary>
 		/// Description: Curr rate for ECHA based on invoice date
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Curr rate for ECHA based on invoice date")]
-		public decimal? M3_ECRA => GetNullableDecimal("ECRA");
+		public decimal? M3ECRA => GetNullableDecimal("ECRA");
 
 		/// <summary>
 		/// Description: Eco-transaction type
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eco-transaction type")]
-		public int? M3_ECOT => GetNullableInt("ECOT");
+		public int? M3ECOT => GetNullableInt("ECOT");
 
 		/// <summary>
 		/// Description: Payee
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payee")]
-		public string M3_SPYN => GetString("SPYN");
+		public string M3SPYN => GetString("SPYN");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 	}
 }
 // EOF

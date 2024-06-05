@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Year
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Payer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Status - invoice
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - invoice")]
-		public string M3_INST => GetString("INST");
+		public string M3INST => GetString("INST");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVAM => GetNullableDecimal("IVAM");
+		public decimal? M3IVAM => GetNullableDecimal("IVAM");
 
 		/// <summary>
 		/// Description: Invoice amount - local currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount - local currency")]
-		public decimal? M3_IVLA => GetNullableDecimal("IVLA");
+		public decimal? M3IVLA => GetNullableDecimal("IVLA");
 
 		/// <summary>
 		/// Description: Currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Invoice rate
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice rate")]
-		public decimal? M3_RAIN => GetNullableDecimal("RAIN");
+		public decimal? M3RAIN => GetNullableDecimal("RAIN");
 
 		/// <summary>
 		/// Description: Due date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Due date")]
-		public DateTime? M3_DUDT => GetNullableDateTime("DUDT");
+		public DateTime? M3DUDT => GetNullableDateTime("DUDT");
 
 		/// <summary>
 		/// Description: Voucher number series
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number series")]
-		public string M3_VSER => GetString("VSER");
+		public string M3VSER => GetString("VSER");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IDAT => GetNullableDateTime("IDAT");
+		public DateTime? M3IDAT => GetNullableDateTime("IDAT");
 
 		/// <summary>
 		/// Description: Accounting date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting date")]
-		public DateTime? M3_ACDT => GetNullableDateTime("ACDT");
+		public DateTime? M3ACDT => GetNullableDateTime("ACDT");
 
 		/// <summary>
 		/// Description: Information type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information type")]
-		public string M3_IVTP => GetString("IVTP");
+		public string M3IVTP => GetString("IVTP");
 
 		/// <summary>
 		/// Description: Update EU sales
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update EU sales")]
-		public int? M3_UPEC => GetNullableInt("UPEC");
+		public int? M3UPEC => GetNullableInt("UPEC");
 
 		/// <summary>
 		/// Description: Update bonus/commission agreements
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update bonus/commission agreements")]
-		public int? M3_UPBC => GetNullableInt("UPBC");
+		public int? M3UPBC => GetNullableInt("UPBC");
 
 		/// <summary>
 		/// Description: Update account entry
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update account entry")]
-		public int? M3_UPAC => GetNullableInt("UPAC");
+		public int? M3UPAC => GetNullableInt("UPAC");
 
 		/// <summary>
 		/// Description: Invoice recipient
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice recipient")]
-		public string M3_INRC => GetString("INRC");
+		public string M3INRC => GetString("INRC");
 
 		/// <summary>
 		/// Description: Cash desk sales
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash desk sales")]
-		public int? M3_CASH => GetNullableInt("CASH");
+		public int? M3CASH => GetNullableInt("CASH");
 
 		/// <summary>
 		/// Description: Remaining amount to pay - foreign curr
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining amount to pay - foreign curr")]
-		public decimal? M3_RAFC => GetNullableDecimal("RAFC");
+		public decimal? M3RAFC => GetNullableDecimal("RAFC");
 
 		/// <summary>
 		/// Description: Remaining amount to pay - local curr
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining amount to pay - local curr")]
-		public decimal? M3_RALC => GetNullableDecimal("RALC");
+		public decimal? M3RALC => GetNullableDecimal("RALC");
 
 		/// <summary>
 		/// Description: Facility
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FAC2 => GetString("FAC2");
+		public string M3FAC2 => GetString("FAC2");
 
 		/// <summary>
 		/// Description: Origin
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin")]
-		public int? M3_ORIG => GetNullableInt("ORIG");
+		public int? M3ORIG => GetNullableInt("ORIG");
 
 		/// <summary>
 		/// Description: Reference number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference number")]
-		public string M3_NREF => GetString("NREF");
+		public string M3NREF => GetString("NREF");
 
 		/// <summary>
 		/// Description: 3rd party provider
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("3rd party provider")]
-		public string M3_3RDP => GetString("3RDP");
+		public string M33RDP => GetString("3RDP");
 
 		/// <summary>
 		/// Description: Year
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_RYEA => GetNullableInt("RYEA");
+		public int? M3RYEA => GetNullableInt("RYEA");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_RIVN => GetNullableInt("RIVN");
+		public int? M3RIVN => GetNullableInt("RIVN");
 	}
 }
 // EOF

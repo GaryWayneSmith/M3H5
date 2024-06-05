@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_TRNO => GetNullableInt("TRNO");
+		public int? M3TRNO => GetNullableInt("TRNO");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Work order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Miscellaneous cost types
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous cost types")]
-		public string M3_AMTY => GetString("AMTY");
+		public string M3AMTY => GetString("AMTY");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Sales price
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_ASP1 => GetNullableDecimal("ASP1");
+		public decimal? M3ASP1 => GetNullableDecimal("ASP1");
 
 		/// <summary>
 		/// Description: Agreement currency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement currency")]
-		public string M3_AACU => GetString("AACU");
+		public string M3AACU => GetString("AACU");
 
 		/// <summary>
 		/// Description: WIP debit
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("WIP debit")]
-		public decimal? M3_AWCO => GetNullableDecimal("AWCO");
+		public decimal? M3AWCO => GetNullableDecimal("AWCO");
 
 		/// <summary>
 		/// Description: Local currency
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Update General Ledger
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update General Ledger")]
-		public int? M3_UPGL => GetNullableInt("UPGL");
+		public int? M3UPGL => GetNullableInt("UPGL");
 
 		/// <summary>
 		/// Description: Remark
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Transaction date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction date")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: Manually updated
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually updated")]
-		public int? M3_MAUP => GetNullableInt("MAUP");
+		public int? M3MAUP => GetNullableInt("MAUP");
 
 		/// <summary>
 		/// Description: Transaction status
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction status")]
-		public string M3_AIST => GetString("AIST");
+		public string M3AIST => GetString("AIST");
 
 		/// <summary>
 		/// Description: Employee number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Registration number/site
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.COS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number/site")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 	}
 }
 // EOF

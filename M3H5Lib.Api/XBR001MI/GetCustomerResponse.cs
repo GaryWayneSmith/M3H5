@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Customer number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Customer address 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 1")]
-		public string M3_CUA1 => GetString("CUA1");
+		public string M3CUA1 => GetString("CUA1");
 
 		/// <summary>
 		/// Description: Customer address 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 2")]
-		public string M3_CUA2 => GetString("CUA2");
+		public string M3CUA2 => GetString("CUA2");
 
 		/// <summary>
 		/// Description: Customer address 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 3")]
-		public string M3_CUA3 => GetString("CUA3");
+		public string M3CUA3 => GetString("CUA3");
 
 		/// <summary>
 		/// Description: Customer address 4
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 4")]
-		public string M3_CUA4 => GetString("CUA4");
+		public string M3CUA4 => GetString("CUA4");
 
 		/// <summary>
 		/// Description: Telephone
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: City
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Postal code
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Inscr Estadual
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inscr Estadual")]
-		public string M3_XIES => GetString("XIES");
+		public string M3XIES => GetString("XIES");
 
 		/// <summary>
 		/// Description: CNPJ / CPF
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CNPJ / CPF")]
-		public decimal? M3_CNPJ => GetNullableDecimal("CNPJ");
+		public decimal? M3CNPJ => GetNullableDecimal("CNPJ");
 
 		/// <summary>
 		/// Description: Juridica / Fisica
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Juridica / Fisica")]
-		public string M3_JUFI => GetString("JUFI");
+		public string M3JUFI => GetString("JUFI");
 
 		/// <summary>
 		/// Description: SUFRAMA Reg no.
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SUFRAMA Reg no.")]
-		public string M3_SURE => GetString("SURE");
+		public string M3SURE => GetString("SURE");
 
 		/// <summary>
 		/// Description: Federation unit
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Federation unit")]
-		public string M3_FEDA => GetString("FEDA");
+		public string M3FEDA => GetString("FEDA");
 
 		/// <summary>
 		/// Description: Internal CFOP Code
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal CFOP Code")]
-		public string M3_ICFO => GetString("ICFO");
+		public string M3ICFO => GetString("ICFO");
 
 		/// <summary>
 		/// Description: Final consumer
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Final consumer")]
-		public int? M3_XFIC => GetNullableInt("XFIC");
+		public int? M3XFIC => GetNullableInt("XFIC");
 
 		/// <summary>
 		/// Description: Contribuinte
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contribuinte")]
-		public string M3_XCON => GetString("XCON");
+		public string M3XCON => GetString("XCON");
 
 		/// <summary>
 		/// Description: Forwarding agent
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarding agent")]
-		public string M3_FWNO => GetString("FWNO");
+		public string M3FWNO => GetString("FWNO");
 
 		/// <summary>
 		/// Description: Supplier Invoice Line
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier Invoice Line")]
-		public string M3_CEEP => GetString("CEEP");
+		public string M3CEEP => GetString("CEEP");
 
 		/// <summary>
 		/// Description: CEE Instruction
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CEE Instruction")]
-		public string M3_CEEI => GetString("CEEI");
+		public string M3CEEI => GetString("CEEI");
 
 		/// <summary>
 		/// Description: CEE Interest %
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CEE Interest %")]
-		public int? M3_CEER => GetNullableInt("CEER");
+		public int? M3CEER => GetNullableInt("CEER");
 
 		/// <summary>
 		/// Description: Address number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: IBGE City code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("IBGE City code")]
-		public string M3_IBCD => GetString("IBCD");
+		public string M3IBCD => GetString("IBCD");
 
 		/// <summary>
 		/// Description: City tax registration
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City tax registration")]
-		public string M3_IMUN => GetString("IMUN");
+		public string M3IMUN => GetString("IMUN");
 
 		/// <summary>
 		/// Description: CNAE code
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CNAE code")]
-		public string M3_CNAE => GetString("CNAE");
+		public string M3CNAE => GetString("CNAE");
 	}
 }
 // EOF

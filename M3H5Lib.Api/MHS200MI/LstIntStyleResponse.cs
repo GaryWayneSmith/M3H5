@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Message type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message type")]
-		public string M3_E065 => GetString("E065");
+		public string M3E065 => GetString("E065");
 
 		/// <summary>
 		/// Description: Interface item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface item number")]
-		public string M3_IFIN => GetString("IFIN");
+		public string M3IFIN => GetString("IFIN");
 
 		/// <summary>
 		/// Description: User-defined field heading 1 - style
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 1 - style")]
-		public string M3_FM01 => GetString("FM01");
+		public string M3FM01 => GetString("FM01");
 
 		/// <summary>
 		/// Description: User-defined field heading 2 - style
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 2 - style")]
-		public string M3_FM02 => GetString("FM02");
+		public string M3FM02 => GetString("FM02");
 
 		/// <summary>
 		/// Description: User-defined field heading 3 - style
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 3 - style")]
-		public string M3_FM03 => GetString("FM03");
+		public string M3FM03 => GetString("FM03");
 
 		/// <summary>
 		/// Description: User-defined field heading 4 - style
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 4 - style")]
-		public string M3_FM04 => GetString("FM04");
+		public string M3FM04 => GetString("FM04");
 
 		/// <summary>
 		/// Description: User-defined field heading 5 - style
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 5 - style")]
-		public string M3_FM05 => GetString("FM05");
+		public string M3FM05 => GetString("FM05");
 
 		/// <summary>
 		/// Description: User-defined field heading 6 - style
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 6 - style")]
-		public string M3_FM06 => GetString("FM06");
+		public string M3FM06 => GetString("FM06");
 
 		/// <summary>
 		/// Description: User-defined field heading 7 - style
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 7 - style")]
-		public string M3_FM07 => GetString("FM07");
+		public string M3FM07 => GetString("FM07");
 
 		/// <summary>
 		/// Description: User-defined field heading 8 - style
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 8 - style")]
-		public string M3_FM08 => GetString("FM08");
+		public string M3FM08 => GetString("FM08");
 
 		/// <summary>
 		/// Description: User-defined field heading 9 - style
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 9 - style")]
-		public string M3_FM09 => GetString("FM09");
+		public string M3FM09 => GetString("FM09");
 
 		/// <summary>
 		/// Description: User-defined field heading 10 - style
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 10 - style")]
-		public string M3_FM10 => GetString("FM10");
+		public string M3FM10 => GetString("FM10");
 
 		/// <summary>
 		/// Description: User-defined field heading 11 - style
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 11 - style")]
-		public string M3_FM11 => GetString("FM11");
+		public string M3FM11 => GetString("FM11");
 
 		/// <summary>
 		/// Description: User-defined field heading 12 - style
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 12 - style")]
-		public string M3_FM12 => GetString("FM12");
+		public string M3FM12 => GetString("FM12");
 
 		/// <summary>
 		/// Description: User-defined field heading 13 - style
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 13 - style")]
-		public string M3_FM13 => GetString("FM13");
+		public string M3FM13 => GetString("FM13");
 
 		/// <summary>
 		/// Description: User-defined field heading 14 - style
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 14 - style")]
-		public string M3_FM14 => GetString("FM14");
+		public string M3FM14 => GetString("FM14");
 
 		/// <summary>
 		/// Description: User-defined field heading 15 - style
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 15 - style")]
-		public string M3_FM15 => GetString("FM15");
+		public string M3FM15 => GetString("FM15");
 
 		/// <summary>
 		/// Description: User-defined field heading 16 - style
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 16 - style")]
-		public string M3_FM16 => GetString("FM16");
+		public string M3FM16 => GetString("FM16");
 
 		/// <summary>
 		/// Description: User-defined field heading 17 - style
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 17 - style")]
-		public string M3_FM17 => GetString("FM17");
+		public string M3FM17 => GetString("FM17");
 
 		/// <summary>
 		/// Description: User-defined field heading 18 - style
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 18 - style")]
-		public string M3_FM18 => GetString("FM18");
+		public string M3FM18 => GetString("FM18");
 
 		/// <summary>
 		/// Description: User-defined field heading 19 - style
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 19 - style")]
-		public string M3_FM19 => GetString("FM19");
+		public string M3FM19 => GetString("FM19");
 
 		/// <summary>
 		/// Description: User-defined field heading 20 - style
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MHS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field heading 20 - style")]
-		public string M3_FM20 => GetString("FM20");
+		public string M3FM20 => GetString("FM20");
 	}
 }
 // EOF

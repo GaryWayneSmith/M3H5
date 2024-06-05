@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement customer")]
-		public string M3_AGCN => GetString("AGCN");
+		public string M3AGCN => GetString("AGCN");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Valid from
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Agreement order type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order type")]
-		public string M3_AOTP => GetString("AOTP");
+		public string M3AOTP => GetString("AOTP");
 
 		/// <summary>
 		/// Description: Rental depot
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental depot")]
-		public string M3_DPOT => GetString("DPOT");
+		public string M3DPOT => GetString("DPOT");
 
 		/// <summary>
 		/// Description: Facility
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Line type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public string M3_LTYP => GetString("LTYP");
+		public string M3LTYP => GetString("LTYP");
 
 		/// <summary>
 		/// Description: Rental rate type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental rate type")]
-		public string M3_CCAP => GetString("CCAP");
+		public string M3CCAP => GetString("CCAP");
 
 		/// <summary>
 		/// Description: Price list
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Rate factor
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rate factor")]
-		public int? M3_RAFA => GetNullableInt("RAFA");
+		public int? M3RAFA => GetNullableInt("RAFA");
 
 		/// <summary>
 		/// Description: Days per week
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days per week")]
-		public int? M3_ADPW => GetNullableInt("ADPW");
+		public int? M3ADPW => GetNullableInt("ADPW");
 
 		/// <summary>
 		/// Description: Currency
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Rate
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rate")]
-		public decimal? M3_PPCA => GetNullableDecimal("PPCA");
+		public decimal? M3PPCA => GetNullableDecimal("PPCA");
 
 		/// <summary>
 		/// Description: Net rate/rental rate type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net rate/rental rate type")]
-		public decimal? M3_PNCA => GetNullableDecimal("PNCA");
+		public decimal? M3PNCA => GetNullableDecimal("PNCA");
 
 		/// <summary>
 		/// Description: Gross weekly price
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weekly price")]
-		public decimal? M3_GRWP => GetNullableDecimal("GRWP");
+		public decimal? M3GRWP => GetNullableDecimal("GRWP");
 
 		/// <summary>
 		/// Description: Net weekly price
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weekly price")]
-		public decimal? M3_NEWP => GetNullableDecimal("NEWP");
+		public decimal? M3NEWP => GetNullableDecimal("NEWP");
 
 		/// <summary>
 		/// Description: Daily rate
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Daily rate")]
-		public decimal? M3_PDAP => GetNullableDecimal("PDAP");
+		public decimal? M3PDAP => GetNullableDecimal("PDAP");
 
 		/// <summary>
 		/// Description: Net daily rate
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net daily rate")]
-		public decimal? M3_PDAN => GetNullableDecimal("PDAN");
+		public decimal? M3PDAN => GetNullableDecimal("PDAN");
 
 		/// <summary>
 		/// Description: Hourly rate
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly rate")]
-		public decimal? M3_PHOR => GetNullableDecimal("PHOR");
+		public decimal? M3PHOR => GetNullableDecimal("PHOR");
 
 		/// <summary>
 		/// Description: Net hourly rate
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net hourly rate")]
-		public decimal? M3_PHON => GetNullableDecimal("PHON");
+		public decimal? M3PHON => GetNullableDecimal("PHON");
 
 		/// <summary>
 		/// Description: Cost price
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public decimal? M3_UCOS => GetNullableDecimal("UCOS");
+		public decimal? M3UCOS => GetNullableDecimal("UCOS");
 
 		/// <summary>
 		/// Description: Sales price
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Total rental price
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total rental price")]
-		public decimal? M3_RTTA => GetNullableDecimal("RTTA");
+		public decimal? M3RTTA => GetNullableDecimal("RTTA");
 
 		/// <summary>
 		/// Description: Sales of item
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.STS107MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales of item")]
-		public decimal? M3_SLIT => GetNullableDecimal("SLIT");
+		public decimal? M3SLIT => GetNullableDecimal("SLIT");
 	}
 }
 // EOF

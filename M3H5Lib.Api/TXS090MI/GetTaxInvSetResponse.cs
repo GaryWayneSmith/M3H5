@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Include in tax invoice")]
-		public int? M3_ARTX => GetNullableInt("ARTX");
+		public int? M3ARTX => GetNullableInt("ARTX");
 
 		/// <summary>
 		/// Description: Group frequency
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group frequency")]
-		public int? M3_GRFQ => GetNullableInt("GRFQ");
+		public int? M3GRFQ => GetNullableInt("GRFQ");
 
 		/// <summary>
 		/// Description: Group debit/credit
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group debit/credit")]
-		public int? M3_GRDC => GetNullableInt("GRDC");
+		public int? M3GRDC => GetNullableInt("GRDC");
 
 		/// <summary>
 		/// Description: Invoice class
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice class")]
-		public string M3_IVCL => GetString("IVCL");
+		public string M3IVCL => GetString("IVCL");
 
 		/// <summary>
 		/// Description: Payment stop rule
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment stop rule")]
-		public int? M3_APBL => GetNullableInt("APBL");
+		public int? M3APBL => GetNullableInt("APBL");
 
 		/// <summary>
 		/// Description: Payment stop
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment stop")]
-		public int? M3_IVBL => GetNullableInt("IVBL");
+		public int? M3IVBL => GetNullableInt("IVBL");
 
 		/// <summary>
 		/// Description: Stopped by
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS090MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stopped by")]
-		public string M3_BLBY => GetString("BLBY");
+		public string M3BLBY => GetString("BLBY");
 	}
 }
 // EOF

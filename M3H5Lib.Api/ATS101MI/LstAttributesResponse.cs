@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Attribute sequence number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute sequence number")]
-		public int? M3_ANSQ => GetNullableInt("ANSQ");
+		public int? M3ANSQ => GetNullableInt("ANSQ");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Attribute type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute type")]
-		public string M3_ATVC => GetString("ATVC");
+		public string M3ATVC => GetString("ATVC");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_ATDS => GetString("ATDS");
+		public string M3ATDS => GetString("ATDS");
 
 		/// <summary>
 		/// Description: Operation description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Item number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Attribute value
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value")]
-		public string M3_ATVA => GetString("ATVA");
+		public string M3ATVA => GetString("ATVA");
 
 		/// <summary>
 		/// Description: Attribute value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value")]
-		public decimal? M3_ATVN => GetNullableDecimal("ATVN");
+		public decimal? M3ATVN => GetNullableDecimal("ATVN");
 
 		/// <summary>
 		/// Description: Controlling object
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Controlling object")]
-		public int? M3_COBT => GetNullableInt("COBT");
+		public int? M3COBT => GetNullableInt("COBT");
 
 		/// <summary>
 		/// Description: Use CAGE code
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Use CAGE code")]
-		public decimal? M3_CANR => GetNullableDecimal("CANR");
+		public decimal? M3CANR => GetNullableDecimal("CANR");
 
 		/// <summary>
 		/// Description: Controlling attribute identity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Controlling attribute identity")]
-		public string M3_CATI => GetString("CATI");
+		public string M3CATI => GetString("CATI");
 
 		/// <summary>
 		/// Description: Generation reference
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Generation reference")]
-		public string M3_AGET => GetString("AGET");
+		public string M3AGET => GetString("AGET");
 
 		/// <summary>
 		/// Description: Main attribute
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main attribute")]
-		public int? M3_MAAT => GetNullableInt("MAAT");
+		public int? M3MAAT => GetNullableInt("MAAT");
 
 		/// <summary>
 		/// Description: Order statistic accumulator
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order statistic accumulator")]
-		public int? M3_OSAA => GetNullableInt("OSAA");
+		public int? M3OSAA => GetNullableInt("OSAA");
 
 		/// <summary>
 		/// Description: Order statistic key
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order statistic key")]
-		public int? M3_OSAK => GetNullableInt("OSAK");
+		public int? M3OSAK => GetNullableInt("OSAK");
 
 		/// <summary>
 		/// Description: Status
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_ATTS => GetString("ATTS");
+		public string M3ATTS => GetString("ATTS");
 
 		/// <summary>
 		/// Description: Order category
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public string M3_AALF => GetString("AALF");
+		public string M3AALF => GetString("AALF");
 
 		/// <summary>
 		/// Description: To attribute value
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To attribute value")]
-		public string M3_AALT => GetString("AALT");
+		public string M3AALT => GetString("AALT");
 
 		/// <summary>
 		/// Description: From attribute value
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From attribute value")]
-		public decimal? M3_ANUF => GetNullableDecimal("ANUF");
+		public decimal? M3ANUF => GetNullableDecimal("ANUF");
 
 		/// <summary>
 		/// Description: To attribute value
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To attribute value")]
-		public decimal? M3_ANUT => GetNullableDecimal("ANUT");
+		public decimal? M3ANUT => GetNullableDecimal("ANUT");
 
 		/// <summary>
 		/// Description: Target value
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target value")]
-		public string M3_ATAV => GetString("ATAV");
+		public string M3ATAV => GetString("ATAV");
 
 		/// <summary>
 		/// Description: Target value
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target value")]
-		public decimal? M3_ATAN => GetNullableDecimal("ATAN");
+		public decimal? M3ATAN => GetNullableDecimal("ATAN");
 
 		/// <summary>
 		/// Description: Allocation attribute
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocation attribute")]
-		public int? M3_AATT => GetNullableInt("AATT");
+		public int? M3AATT => GetNullableInt("AATT");
 
 		/// <summary>
 		/// Description: Search sequence
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search sequence")]
-		public int? M3_SESQ => GetNullableInt("SESQ");
+		public int? M3SESQ => GetNullableInt("SESQ");
 
 		/// <summary>
 		/// Description: Attribute model
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute model")]
-		public string M3_ATMO => GetString("ATMO");
+		public string M3ATMO => GetString("ATMO");
 
 		/// <summary>
 		/// Description: Formula
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula")]
-		public string M3_FMID => GetString("FMID");
+		public string M3FMID => GetString("FMID");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FORI => GetString("FORI");
+		public string M3FORI => GetString("FORI");
 
 		/// <summary>
 		/// Description: Reference attribute number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference attribute number")]
-		public decimal? M3_RANR => GetNullableDecimal("RANR");
+		public decimal? M3RANR => GetNullableDecimal("RANR");
 
 		/// <summary>
 		/// Description: Reference attribute identity
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference attribute identity")]
-		public string M3_RATI => GetString("RATI");
+		public string M3RATI => GetString("RATI");
 
 		/// <summary>
 		/// Description: Reference attribute sequence number
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference attribute sequence number")]
-		public int? M3_RASQ => GetNullableInt("RASQ");
+		public int? M3RASQ => GetNullableInt("RASQ");
 
 		/// <summary>
 		/// Description: Error
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error")]
-		public string M3_ATER => GetString("ATER");
+		public string M3ATER => GetString("ATER");
 
 		/// <summary>
 		/// Description: Text identity
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Item attribute
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item attribute")]
-		public int? M3_IATT => GetNullableInt("IATT");
+		public int? M3IATT => GetNullableInt("IATT");
 
 		/// <summary>
 		/// Description: Attribute value
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value")]
-		public string M3_ATVL => GetString("ATVL");
+		public string M3ATVL => GetString("ATVL");
 
 		/// <summary>
 		/// Description: Ref attribute value sequence number
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref attribute value sequence number")]
-		public int? M3_RAVS => GetNullableInt("RAVS");
+		public int? M3RAVS => GetNullableInt("RAVS");
 
 		/// <summary>
 		/// Description: Attribute value sequence number
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value sequence number")]
-		public int? M3_AVSQ => GetNullableInt("AVSQ");
+		public int? M3AVSQ => GetNullableInt("AVSQ");
 
 		/// <summary>
 		/// Description: Attachment indicator
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attachment indicator")]
-		public int? M3_ATCI => GetNullableInt("ATCI");
+		public int? M3ATCI => GetNullableInt("ATCI");
 
 		/// <summary>
 		/// Description: Shipless indicator
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipless indicator")]
-		public int? M3_SHIP => GetNullableInt("SHIP");
+		public int? M3SHIP => GetNullableInt("SHIP");
 
 		/// <summary>
 		/// Description: Allow blank
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allow blank")]
-		public int? M3_ALBA => GetNullableInt("ALBA");
+		public int? M3ALBA => GetNullableInt("ALBA");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Manual change allowed
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual change allowed")]
-		public int? M3_MCAL => GetNullableInt("MCAL");
+		public int? M3MCAL => GetNullableInt("MCAL");
 
 		/// <summary>
 		/// Description: Multiple attribute values
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.ATS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiple attribute values")]
-		public int? M3_MUAV => GetNullableInt("MUAV");
+		public int? M3MUAV => GetNullableInt("MUAV");
 	}
 }
 // EOF

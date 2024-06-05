@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Automatic implementation
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic implementation")]
-		public int? M3_AUIM => GetNullableInt("AUIM");
+		public int? M3AUIM => GetNullableInt("AUIM");
 
 		/// <summary>
 		/// Description: Forward order update material plan
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forward order update material plan")]
-		public int? M3_FWUP => GetNullableInt("FWUP");
+		public int? M3FWUP => GetNullableInt("FWUP");
 
 		/// <summary>
 		/// Description: Replenishment order
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replenishment order")]
-		public int? M3_REOD => GetNullableInt("REOD");
+		public int? M3REOD => GetNullableInt("REOD");
 
 		/// <summary>
 		/// Description: Allocate at reciept
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocate at reciept")]
-		public int? M3_ALAR => GetNullableInt("ALAR");
+		public int? M3ALAR => GetNullableInt("ALAR");
 
 		/// <summary>
 		/// Description: Purchase date type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase date type")]
-		public int? M3_DTDP => GetNullableInt("DTDP");
+		public int? M3DTDP => GetNullableInt("DTDP");
 	}
 }
 // EOF

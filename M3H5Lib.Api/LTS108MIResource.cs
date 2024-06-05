@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.LTS108MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description This transaction lists leasing - curves
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_SBNO">Subnumber (Required)</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_FVDT">Valid from</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3SBNO">Subnumber (Required)</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3FVDT">Valid from</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstBothCurveResponse></returns>
 		/// <exception cref="M3Exception<LstBothCurveResponse>"></exception>
 		public async Task<M3Response<LstBothCurveResponse>> LstBothCurve(
-			string m3_AGNB, 
-			string m3_ITNO, 
-			int m3_PONR, 
-			int m3_SBNO, 
-			string m3_BANO = null, 
-			DateTime? m3_FVDT = null, 
+			string m3AGNB, 
+			string m3ITNO, 
+			int m3PONR, 
+			int m3SBNO, 
+			string m3BANO = null, 
+			DateTime? m3FVDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,23 +72,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("SBNO", m3_SBNO.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SBNO", m3SBNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstBothCurveResponse>(
@@ -96,7 +98,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -107,12 +110,12 @@ namespace M3H5Lib.Api
 		/// Description This transaction lists leasing - curves
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_SBNO">Subnumber (Required)</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_FVDT">Valid from</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3SBNO">Subnumber (Required)</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3FVDT">Valid from</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -121,12 +124,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCustCurveResponse></returns>
 		/// <exception cref="M3Exception<LstCustCurveResponse>"></exception>
 		public async Task<M3Response<LstCustCurveResponse>> LstCustCurve(
-			string m3_AGNB, 
-			string m3_ITNO, 
-			int m3_PONR, 
-			int m3_SBNO, 
-			string m3_BANO = null, 
-			DateTime? m3_FVDT = null, 
+			string m3AGNB, 
+			string m3ITNO, 
+			int m3PONR, 
+			int m3SBNO, 
+			string m3BANO = null, 
+			DateTime? m3FVDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -141,23 +144,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("SBNO", m3_SBNO.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SBNO", m3SBNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstCustCurveResponse>(
@@ -167,7 +170,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -178,10 +182,10 @@ namespace M3H5Lib.Api
 		/// Description This transaction lists leasing - curves
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_SBNO">Subnumber (Required)</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_FVDT">Valid from</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3SBNO">Subnumber (Required)</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3FVDT">Valid from</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -190,10 +194,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFundCurveResponse></returns>
 		/// <exception cref="M3Exception<LstFundCurveResponse>"></exception>
 		public async Task<M3Response<LstFundCurveResponse>> LstFundCurve(
-			string m3_ITNO, 
-			int m3_SBNO, 
-			string m3_BANO = null, 
-			DateTime? m3_FVDT = null, 
+			string m3ITNO, 
+			int m3SBNO, 
+			string m3BANO = null, 
+			DateTime? m3FVDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -208,19 +212,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("SBNO", m3_SBNO.ToString());
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("SBNO", m3SBNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstFundCurveResponse>(
@@ -230,7 +234,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

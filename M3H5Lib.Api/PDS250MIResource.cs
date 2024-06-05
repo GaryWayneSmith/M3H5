@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PDS250MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description List Learning curve models
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_PREX">Priority</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3PREX">Priority</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLearnCurModResponse></returns>
 		/// <exception cref="M3Exception<LstLearnCurModResponse>"></exception>
 		public async Task<M3Response<LstLearnCurModResponse>> LstLearnCurMod(
-			string m3_PREX = null, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			DateTime? m3_FDAT = null, 
+			string m3PREX = null, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,16 +70,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PREX))
-				request.WithQueryParameter("PREX", m3_PREX.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3PREX))
+				request.WithQueryParameter("PREX", m3PREX.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstLearnCurModResponse>(
@@ -87,7 +89,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -98,7 +101,7 @@ namespace M3H5Lib.Api
 		/// Description List Learning curves
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_LECU">Learning curve</param>
+		/// <param name="m3LECU">Learning curve</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,7 +110,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLearnIDResponse></returns>
 		/// <exception cref="M3Exception<LstLearnIDResponse>"></exception>
 		public async Task<M3Response<LstLearnIDResponse>> LstLearnID(
-			string m3_LECU = null, 
+			string m3LECU = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,8 +125,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LECU))
-				request.WithQueryParameter("LECU", m3_LECU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LECU))
+				request.WithQueryParameter("LECU", m3LECU.Trim());
 
 			// Execute the request
 			var result = await Execute<LstLearnIDResponse>(
@@ -133,7 +136,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -144,13 +148,13 @@ namespace M3H5Lib.Api
 		/// Description Select Learning curve history
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_HDPR">Main product</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_LECU">Learning curve</param>
-		/// <param name="m3_PLHZ">Horizon</param>
-		/// <param name="m3_WHGR">Warehouse group</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3HDPR">Main product</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3LECU">Learning curve</param>
+		/// <param name="m3PLHZ">Horizon</param>
+		/// <param name="m3WHGR">Warehouse group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -159,13 +163,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelLearnHistoryResponse></returns>
 		/// <exception cref="M3Exception<SelLearnHistoryResponse>"></exception>
 		public async Task<M3Response<SelLearnHistoryResponse>> SelLearnHistory(
-			string m3_FACI = null, 
-			string m3_PLGR = null, 
-			string m3_HDPR = null, 
-			string m3_ITNO = null, 
-			string m3_LECU = null, 
-			int? m3_PLHZ = null, 
-			string m3_WHGR = null, 
+			string m3FACI = null, 
+			string m3PLGR = null, 
+			string m3HDPR = null, 
+			string m3ITNO = null, 
+			string m3LECU = null, 
+			int? m3PLHZ = null, 
+			string m3WHGR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -180,20 +184,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_HDPR))
-				request.WithQueryParameter("HDPR", m3_HDPR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LECU))
-				request.WithQueryParameter("LECU", m3_LECU.Trim());
-			if (m3_PLHZ.HasValue)
-				request.WithQueryParameter("PLHZ", m3_PLHZ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_WHGR))
-				request.WithQueryParameter("WHGR", m3_WHGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3HDPR))
+				request.WithQueryParameter("HDPR", m3HDPR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LECU))
+				request.WithQueryParameter("LECU", m3LECU.Trim());
+			if (m3PLHZ.HasValue)
+				request.WithQueryParameter("PLHZ", m3PLHZ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3WHGR))
+				request.WithQueryParameter("WHGR", m3WHGR.Trim());
 
 			// Execute the request
 			var result = await Execute<SelLearnHistoryResponse>(
@@ -203,7 +207,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Revision number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: User defined field 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 1")]
-		public string M3_SMC0 => GetString("SMC0");
+		public string M3SMC0 => GetString("SMC0");
 
 		/// <summary>
 		/// Description: User defined field 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 2")]
-		public string M3_SMC1 => GetString("SMC1");
+		public string M3SMC1 => GetString("SMC1");
 
 		/// <summary>
 		/// Description: User defined field 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 3")]
-		public string M3_SMC2 => GetString("SMC2");
+		public string M3SMC2 => GetString("SMC2");
 
 		/// <summary>
 		/// Description: User defined field 4
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 4")]
-		public string M3_SMC3 => GetString("SMC3");
+		public string M3SMC3 => GetString("SMC3");
 
 		/// <summary>
 		/// Description: User defined field 5
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 5")]
-		public string M3_SMC4 => GetString("SMC4");
+		public string M3SMC4 => GetString("SMC4");
 
 		/// <summary>
 		/// Description: User defined field 6
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 6")]
-		public string M3_SMC5 => GetString("SMC5");
+		public string M3SMC5 => GetString("SMC5");
 
 		/// <summary>
 		/// Description: User defined field 7
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 7")]
-		public string M3_SMC6 => GetString("SMC6");
+		public string M3SMC6 => GetString("SMC6");
 
 		/// <summary>
 		/// Description: User defined field 8
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 8")]
-		public string M3_SMC7 => GetString("SMC7");
+		public string M3SMC7 => GetString("SMC7");
 
 		/// <summary>
 		/// Description: User defined field 9
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 9")]
-		public string M3_SMC8 => GetString("SMC8");
+		public string M3SMC8 => GetString("SMC8");
 
 		/// <summary>
 		/// Description: User defined field 10
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 10")]
-		public string M3_SMC9 => GetString("SMC9");
+		public string M3SMC9 => GetString("SMC9");
 	}
 }
 // EOF

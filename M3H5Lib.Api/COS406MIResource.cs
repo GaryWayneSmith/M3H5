@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.COS406MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description AddAgrType
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGTP">Agreement type (Required)</param>
-		/// <param name="m3_LSCD">Service stop</param>
-		/// <param name="m3_ILCD">Invoice block</param>
-		/// <param name="m3_IIYR">Invoicing interval - years</param>
-		/// <param name="m3_IIMO">Invoicing interval - months</param>
-		/// <param name="m3_IIDA">Invoicing interval - days</param>
-		/// <param name="m3_INVM">Invoicing method</param>
+		/// <param name="m3AGTP">Agreement type (Required)</param>
+		/// <param name="m3LSCD">Service stop</param>
+		/// <param name="m3ILCD">Invoice block</param>
+		/// <param name="m3IIYR">Invoicing interval - years</param>
+		/// <param name="m3IIMO">Invoicing interval - months</param>
+		/// <param name="m3IIDA">Invoicing interval - days</param>
+		/// <param name="m3INVM">Invoicing method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAgrType(
-			string m3_AGTP, 
-			int? m3_LSCD = null, 
-			int? m3_ILCD = null, 
-			int? m3_IIYR = null, 
-			int? m3_IIMO = null, 
-			int? m3_IIDA = null, 
-			string m3_INVM = null, 
+			string m3AGTP, 
+			int? m3LSCD = null, 
+			int? m3ILCD = null, 
+			int? m3IIYR = null, 
+			int? m3IIMO = null, 
+			int? m3IIDA = null, 
+			string m3INVM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,26 +74,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGTP))
-				throw new ArgumentNullException("m3_AGTP");
+			if (string.IsNullOrWhiteSpace(m3AGTP))
+				throw new ArgumentNullException(nameof(m3AGTP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGTP", m3_AGTP.Trim());
+				.WithQueryParameter("AGTP", m3AGTP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_LSCD.HasValue)
-				request.WithQueryParameter("LSCD", m3_LSCD.Value.ToString());
-			if (m3_ILCD.HasValue)
-				request.WithQueryParameter("ILCD", m3_ILCD.Value.ToString());
-			if (m3_IIYR.HasValue)
-				request.WithQueryParameter("IIYR", m3_IIYR.Value.ToString());
-			if (m3_IIMO.HasValue)
-				request.WithQueryParameter("IIMO", m3_IIMO.Value.ToString());
-			if (m3_IIDA.HasValue)
-				request.WithQueryParameter("IIDA", m3_IIDA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_INVM))
-				request.WithQueryParameter("INVM", m3_INVM.Trim());
+			if (m3LSCD.HasValue)
+				request.WithQueryParameter("LSCD", m3LSCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ILCD.HasValue)
+				request.WithQueryParameter("ILCD", m3ILCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIYR.HasValue)
+				request.WithQueryParameter("IIYR", m3IIYR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIMO.HasValue)
+				request.WithQueryParameter("IIMO", m3IIMO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIDA.HasValue)
+				request.WithQueryParameter("IIDA", m3IIDA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3INVM))
+				request.WithQueryParameter("INVM", m3INVM.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -101,7 +103,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -112,7 +115,7 @@ namespace M3H5Lib.Api
 		/// Description DltAgrType
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGTP">Agreement type (Required)</param>
+		/// <param name="m3AGTP">Agreement type (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -121,7 +124,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltAgrType(
-			string m3_AGTP, 
+			string m3AGTP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -136,12 +139,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGTP))
-				throw new ArgumentNullException("m3_AGTP");
+			if (string.IsNullOrWhiteSpace(m3AGTP))
+				throw new ArgumentNullException(nameof(m3AGTP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGTP", m3_AGTP.Trim());
+				.WithQueryParameter("AGTP", m3AGTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -151,7 +154,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -162,7 +166,7 @@ namespace M3H5Lib.Api
 		/// Description GetAgrType
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGTP">Agreement type (Required)</param>
+		/// <param name="m3AGTP">Agreement type (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -171,7 +175,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAgrTypeResponse></returns>
 		/// <exception cref="M3Exception<GetAgrTypeResponse>"></exception>
 		public async Task<M3Response<GetAgrTypeResponse>> GetAgrType(
-			string m3_AGTP, 
+			string m3AGTP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -186,12 +190,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGTP))
-				throw new ArgumentNullException("m3_AGTP");
+			if (string.IsNullOrWhiteSpace(m3AGTP))
+				throw new ArgumentNullException(nameof(m3AGTP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGTP", m3_AGTP.Trim());
+				.WithQueryParameter("AGTP", m3AGTP.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAgrTypeResponse>(
@@ -201,7 +205,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -212,7 +217,7 @@ namespace M3H5Lib.Api
 		/// Description LstAgrType
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGTP">Agreement type</param>
+		/// <param name="m3AGTP">Agreement type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -221,7 +226,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAgrTypeResponse></returns>
 		/// <exception cref="M3Exception<LstAgrTypeResponse>"></exception>
 		public async Task<M3Response<LstAgrTypeResponse>> LstAgrType(
-			string m3_AGTP = null, 
+			string m3AGTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -236,8 +241,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AGTP))
-				request.WithQueryParameter("AGTP", m3_AGTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGTP))
+				request.WithQueryParameter("AGTP", m3AGTP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAgrTypeResponse>(
@@ -247,7 +252,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -258,13 +264,13 @@ namespace M3H5Lib.Api
 		/// Description UpdAgrType
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGTP">Agreement type</param>
-		/// <param name="m3_LSCD">Service stop</param>
-		/// <param name="m3_ILCD">Invoice block</param>
-		/// <param name="m3_IIYR">Invoicing interval - years</param>
-		/// <param name="m3_IIMO">Invoicing interval - months</param>
-		/// <param name="m3_IIDA">Invoicing interval - days</param>
-		/// <param name="m3_INVM">Invoicing method</param>
+		/// <param name="m3AGTP">Agreement type</param>
+		/// <param name="m3LSCD">Service stop</param>
+		/// <param name="m3ILCD">Invoice block</param>
+		/// <param name="m3IIYR">Invoicing interval - years</param>
+		/// <param name="m3IIMO">Invoicing interval - months</param>
+		/// <param name="m3IIDA">Invoicing interval - days</param>
+		/// <param name="m3INVM">Invoicing method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -273,13 +279,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAgrType(
-			string m3_AGTP = null, 
-			int? m3_LSCD = null, 
-			int? m3_ILCD = null, 
-			int? m3_IIYR = null, 
-			int? m3_IIMO = null, 
-			int? m3_IIDA = null, 
-			string m3_INVM = null, 
+			string m3AGTP = null, 
+			int? m3LSCD = null, 
+			int? m3ILCD = null, 
+			int? m3IIYR = null, 
+			int? m3IIMO = null, 
+			int? m3IIDA = null, 
+			string m3INVM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -294,20 +300,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AGTP))
-				request.WithQueryParameter("AGTP", m3_AGTP.Trim());
-			if (m3_LSCD.HasValue)
-				request.WithQueryParameter("LSCD", m3_LSCD.Value.ToString());
-			if (m3_ILCD.HasValue)
-				request.WithQueryParameter("ILCD", m3_ILCD.Value.ToString());
-			if (m3_IIYR.HasValue)
-				request.WithQueryParameter("IIYR", m3_IIYR.Value.ToString());
-			if (m3_IIMO.HasValue)
-				request.WithQueryParameter("IIMO", m3_IIMO.Value.ToString());
-			if (m3_IIDA.HasValue)
-				request.WithQueryParameter("IIDA", m3_IIDA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_INVM))
-				request.WithQueryParameter("INVM", m3_INVM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGTP))
+				request.WithQueryParameter("AGTP", m3AGTP.Trim());
+			if (m3LSCD.HasValue)
+				request.WithQueryParameter("LSCD", m3LSCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ILCD.HasValue)
+				request.WithQueryParameter("ILCD", m3ILCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIYR.HasValue)
+				request.WithQueryParameter("IIYR", m3IIYR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIMO.HasValue)
+				request.WithQueryParameter("IIMO", m3IIMO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIDA.HasValue)
+				request.WithQueryParameter("IIDA", m3IIDA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3INVM))
+				request.WithQueryParameter("INVM", m3INVM.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -317,7 +323,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

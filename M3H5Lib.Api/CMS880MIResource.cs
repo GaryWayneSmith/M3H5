@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS880MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Add Business Message Mapping Detail
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_MVLF">M3 value From (Required)</param>
-		/// <param name="m3_MVLT">M3 value To (Required)</param>
-		/// <param name="m3_DELV">Data element value (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3MVLF">M3 value From (Required)</param>
+		/// <param name="m3MVLT">M3 value To (Required)</param>
+		/// <param name="m3DELV">Data element value (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddMsgMapDet(
-			string m3_BMSG, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_BSCD, 
-			string m3_MVLF, 
-			string m3_MVLT, 
-			string m3_DELV, 
+			string m3BMSG, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3BSCD, 
+			string m3MVLF, 
+			string m3MVLT, 
+			string m3DELV, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,30 +74,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
-			if (string.IsNullOrWhiteSpace(m3_MVLF))
-				throw new ArgumentNullException("m3_MVLF");
-			if (string.IsNullOrWhiteSpace(m3_MVLT))
-				throw new ArgumentNullException("m3_MVLT");
-			if (string.IsNullOrWhiteSpace(m3_DELV))
-				throw new ArgumentNullException("m3_DELV");
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
+			if (string.IsNullOrWhiteSpace(m3MVLF))
+				throw new ArgumentNullException(nameof(m3MVLF));
+			if (string.IsNullOrWhiteSpace(m3MVLT))
+				throw new ArgumentNullException(nameof(m3MVLT));
+			if (string.IsNullOrWhiteSpace(m3DELV))
+				throw new ArgumentNullException(nameof(m3DELV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("MVLF", m3_MVLF.Trim())
-				.WithQueryParameter("MVLT", m3_MVLT.Trim())
-				.WithQueryParameter("DELV", m3_DELV.Trim());
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("MVLF", m3MVLF.Trim())
+				.WithQueryParameter("MVLT", m3MVLT.Trim())
+				.WithQueryParameter("DELV", m3DELV.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -105,7 +107,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -116,11 +119,11 @@ namespace M3H5Lib.Api
 		/// Description Delete Business Message Mapping Detail
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_MVLF">M3 value From (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3MVLF">M3 value From (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -129,11 +132,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltMsgMapDet(
-			string m3_BMSG, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_BSCD, 
-			string m3_MVLF, 
+			string m3BMSG, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3BSCD, 
+			string m3MVLF, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -148,24 +151,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
-			if (string.IsNullOrWhiteSpace(m3_MVLF))
-				throw new ArgumentNullException("m3_MVLF");
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
+			if (string.IsNullOrWhiteSpace(m3MVLF))
+				throw new ArgumentNullException(nameof(m3MVLF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("MVLF", m3_MVLF.Trim());
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("MVLF", m3MVLF.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -175,7 +178,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -186,11 +190,11 @@ namespace M3H5Lib.Api
 		/// Description Get Business Message Mapping Detail
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_MVLF">M3 value From (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3MVLF">M3 value From (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -199,11 +203,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetMsgMapDetResponse></returns>
 		/// <exception cref="M3Exception<GetMsgMapDetResponse>"></exception>
 		public async Task<M3Response<GetMsgMapDetResponse>> GetMsgMapDet(
-			string m3_BMSG, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_BSCD, 
-			string m3_MVLF, 
+			string m3BMSG, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3BSCD, 
+			string m3MVLF, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -218,24 +222,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
-			if (string.IsNullOrWhiteSpace(m3_MVLF))
-				throw new ArgumentNullException("m3_MVLF");
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
+			if (string.IsNullOrWhiteSpace(m3MVLF))
+				throw new ArgumentNullException(nameof(m3MVLF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("MVLF", m3_MVLF.Trim());
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("MVLF", m3MVLF.Trim());
 
 			// Execute the request
 			var result = await Execute<GetMsgMapDetResponse>(
@@ -245,7 +249,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -256,11 +261,11 @@ namespace M3H5Lib.Api
 		/// Description List Business Message Mapping Detail
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_MVLF">M3 value From</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3MVLF">M3 value From</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -269,11 +274,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstMsgMapDetResponse></returns>
 		/// <exception cref="M3Exception<LstMsgMapDetResponse>"></exception>
 		public async Task<M3Response<LstMsgMapDetResponse>> LstMsgMapDet(
-			string m3_BMSG, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_BSCD, 
-			string m3_MVLF = null, 
+			string m3BMSG, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3BSCD, 
+			string m3MVLF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -288,25 +293,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim());
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MVLF))
-				request.WithQueryParameter("MVLF", m3_MVLF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVLF))
+				request.WithQueryParameter("MVLF", m3MVLF.Trim());
 
 			// Execute the request
 			var result = await Execute<LstMsgMapDetResponse>(
@@ -316,7 +321,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -327,13 +333,13 @@ namespace M3H5Lib.Api
 		/// Description Update Business Message Mapping Detail
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_MVLF">M3 value From (Required)</param>
-		/// <param name="m3_MVLT">M3 value To (Required)</param>
-		/// <param name="m3_DELV">Data element value (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3MVLF">M3 value From (Required)</param>
+		/// <param name="m3MVLT">M3 value To (Required)</param>
+		/// <param name="m3DELV">Data element value (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -342,13 +348,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdMsgMapDet(
-			string m3_BMSG, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_BSCD, 
-			string m3_MVLF, 
-			string m3_MVLT, 
-			string m3_DELV, 
+			string m3BMSG, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3BSCD, 
+			string m3MVLF, 
+			string m3MVLT, 
+			string m3DELV, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -363,30 +369,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
-			if (string.IsNullOrWhiteSpace(m3_MVLF))
-				throw new ArgumentNullException("m3_MVLF");
-			if (string.IsNullOrWhiteSpace(m3_MVLT))
-				throw new ArgumentNullException("m3_MVLT");
-			if (string.IsNullOrWhiteSpace(m3_DELV))
-				throw new ArgumentNullException("m3_DELV");
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
+			if (string.IsNullOrWhiteSpace(m3MVLF))
+				throw new ArgumentNullException(nameof(m3MVLF));
+			if (string.IsNullOrWhiteSpace(m3MVLT))
+				throw new ArgumentNullException(nameof(m3MVLT));
+			if (string.IsNullOrWhiteSpace(m3DELV))
+				throw new ArgumentNullException(nameof(m3DELV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim())
-				.WithQueryParameter("MVLF", m3_MVLF.Trim())
-				.WithQueryParameter("MVLT", m3_MVLT.Trim())
-				.WithQueryParameter("DELV", m3_DELV.Trim());
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim())
+				.WithQueryParameter("MVLF", m3MVLF.Trim())
+				.WithQueryParameter("MVLT", m3MVLT.Trim())
+				.WithQueryParameter("DELV", m3DELV.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -396,7 +402,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -407,12 +414,12 @@ namespace M3H5Lib.Api
 		/// Description Update Business Message Mapping Header
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_BSCD">Base country (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3BSCD">Base country (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -421,12 +428,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdMsgMapHead(
-			string m3_BMSG, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_BSCD, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
+			string m3BMSG, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3BSCD, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -441,27 +448,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_BSCD))
-				throw new ArgumentNullException("m3_BSCD");
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3BSCD))
+				throw new ArgumentNullException(nameof(m3BSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("BSCD", m3_BSCD.Trim());
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("BSCD", m3BSCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -471,7 +478,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

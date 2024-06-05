@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Service process
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service process")]
-		public string M3_PRCS => GetString("PRCS");
+		public string M3PRCS => GetString("PRCS");
 
 		/// <summary>
 		/// Description: Service
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Supplier
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Record type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record type")]
-		public string M3_RTYP => GetString("RTYP");
+		public string M3RTYP => GetString("RTYP");
 
 		/// <summary>
 		/// Description: Status item/sup
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status item/sup")]
-		public string M3_ISRS => GetString("ISRS");
+		public string M3ISRS => GetString("ISRS");
 
 		/// <summary>
 		/// Description: Std of approval
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Std of approval")]
-		public string M3_STAP => GetString("STAP");
+		public string M3STAP => GetString("STAP");
 
 		/// <summary>
 		/// Description: Date approved
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date approved")]
-		public DateTime? M3_APDT => GetNullableDateTime("APDT");
+		public DateTime? M3APDT => GetNullableDateTime("APDT");
 
 		/// <summary>
 		/// Description: Suppl item no
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppl item no")]
-		public string M3_SITE => GetString("SITE");
+		public string M3SITE => GetString("SITE");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Program/Table name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program/Table name")]
-		public string M3_PTNM => GetString("PTNM");
+		public string M3PTNM => GetString("PTNM");
 
 		/// <summary>
 		/// Description: Message ID
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message ID")]
-		public string M3_MESI => GetString("MESI");
+		public string M3MESI => GetString("MESI");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Subscriber status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subscriber status")]
-		public string M3_SSBS => GetString("SSBS");
+		public string M3SSBS => GetString("SSBS");
 
 		/// <summary>
 		/// Description: Remote server identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remote server identity")]
-		public string M3_RSID => GetString("RSID");
+		public string M3RSID => GetString("RSID");
 
 		/// <summary>
 		/// Description: Alternate server
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate server")]
-		public string M3_RSI2 => GetString("RSI2");
+		public string M3RSI2 => GetString("RSI2");
 
 		/// <summary>
 		/// Description: Reserved field
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reserved field")]
-		public string M3_RSVF => GetString("RSVF");
+		public string M3RSVF => GetString("RSVF");
 
 		/// <summary>
 		/// Description: Delivery confirmation flag
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery confirmation flag")]
-		public int? M3_DLVF => GetNullableInt("DLVF");
+		public int? M3DLVF => GetNullableInt("DLVF");
 
 		/// <summary>
 		/// Description: Entry date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.EVS002MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

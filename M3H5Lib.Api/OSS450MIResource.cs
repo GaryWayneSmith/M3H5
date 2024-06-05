@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OSS450MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,20 +38,20 @@ namespace M3H5Lib.Api
 		/// Description Add Lost Sales
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ORQA">Order qty (Required)</param>
-		/// <param name="m3_DWDT">Requested delivery date (Required)</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_ORTP">Customer order type</param>
-		/// <param name="m3_DEFC">Demand factor</param>
-		/// <param name="m3_ALUN">Alternate U/M</param>
-		/// <param name="m3_SAPR">Sales price</param>
-		/// <param name="m3_SPUN">Sales price unit of measure</param>
-		/// <param name="m3_RSCD">Transaction reason</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ORQA">Order qty (Required)</param>
+		/// <param name="m3DWDT">Requested delivery date (Required)</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3ORTP">Customer order type</param>
+		/// <param name="m3DEFC">Demand factor</param>
+		/// <param name="m3ALUN">Alternate U/M</param>
+		/// <param name="m3SAPR">Sales price</param>
+		/// <param name="m3SPUN">Sales price unit of measure</param>
+		/// <param name="m3RSCD">Transaction reason</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -58,20 +60,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddLostSalesResponse></returns>
 		/// <exception cref="M3Exception<AddLostSalesResponse>"></exception>
 		public async Task<M3Response<AddLostSalesResponse>> AddLostSales(
-			string m3_FACI, 
-			string m3_ITNO, 
-			string m3_WHLO, 
-			string m3_ORQA, 
-			DateTime m3_DWDT, 
-			string m3_ORNO = null, 
-			string m3_CUNO = null, 
-			string m3_ADID = null, 
-			string m3_ORTP = null, 
-			int? m3_DEFC = null, 
-			string m3_ALUN = null, 
-			string m3_SAPR = null, 
-			string m3_SPUN = null, 
-			string m3_RSCD = null, 
+			string m3FACI, 
+			string m3ITNO, 
+			string m3WHLO, 
+			string m3ORQA, 
+			DateTime m3DWDT, 
+			string m3ORNO = null, 
+			string m3CUNO = null, 
+			string m3ADID = null, 
+			string m3ORTP = null, 
+			int? m3DEFC = null, 
+			string m3ALUN = null, 
+			string m3SAPR = null, 
+			string m3SPUN = null, 
+			string m3RSCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -86,42 +88,42 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ORQA))
-				throw new ArgumentNullException("m3_ORQA");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ORQA))
+				throw new ArgumentNullException(nameof(m3ORQA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ORQA", m3_ORQA.Trim())
-				.WithQueryParameter("DWDT", m3_DWDT.ToM3String());
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ORQA", m3ORQA.Trim())
+				.WithQueryParameter("DWDT", m3DWDT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
-			if (m3_DEFC.HasValue)
-				request.WithQueryParameter("DEFC", m3_DEFC.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ALUN))
-				request.WithQueryParameter("ALUN", m3_ALUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SAPR))
-				request.WithQueryParameter("SAPR", m3_SAPR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPUN))
-				request.WithQueryParameter("SPUN", m3_SPUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RSCD))
-				request.WithQueryParameter("RSCD", m3_RSCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
+			if (m3DEFC.HasValue)
+				request.WithQueryParameter("DEFC", m3DEFC.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ALUN))
+				request.WithQueryParameter("ALUN", m3ALUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SAPR))
+				request.WithQueryParameter("SAPR", m3SAPR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPUN))
+				request.WithQueryParameter("SPUN", m3SPUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RSCD))
+				request.WithQueryParameter("RSCD", m3RSCD.Trim());
 
 			// Execute the request
 			var result = await Execute<AddLostSalesResponse>(
@@ -131,7 +133,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PPS197MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description AddPriorityRule
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_RULE">Rule</param>
-		/// <param name="m3_VALA">Value alpha-numerical</param>
-		/// <param name="m3_ANDO">AND operator</param>
-		/// <param name="m3_PPRN">Priority</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3RULE">Rule</param>
+		/// <param name="m3VALA">Value alpha-numerical</param>
+		/// <param name="m3ANDO">AND operator</param>
+		/// <param name="m3PPRN">Priority</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPriorityRule(
-			int? m3_SEQN = null, 
-			string m3_RULE = null, 
-			string m3_VALA = null, 
-			int? m3_ANDO = null, 
-			int? m3_PPRN = null, 
+			int? m3SEQN = null, 
+			string m3RULE = null, 
+			string m3VALA = null, 
+			int? m3ANDO = null, 
+			int? m3PPRN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,16 +70,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RULE))
-				request.WithQueryParameter("RULE", m3_RULE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VALA))
-				request.WithQueryParameter("VALA", m3_VALA.Trim());
-			if (m3_ANDO.HasValue)
-				request.WithQueryParameter("ANDO", m3_ANDO.Value.ToString());
-			if (m3_PPRN.HasValue)
-				request.WithQueryParameter("PPRN", m3_PPRN.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RULE))
+				request.WithQueryParameter("RULE", m3RULE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VALA))
+				request.WithQueryParameter("VALA", m3VALA.Trim());
+			if (m3ANDO.HasValue)
+				request.WithQueryParameter("ANDO", m3ANDO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PPRN.HasValue)
+				request.WithQueryParameter("PPRN", m3PPRN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -87,7 +89,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -98,7 +101,7 @@ namespace M3H5Lib.Api
 		/// Description DltPriorityRule
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,7 +110,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltPriorityRule(
-			int? m3_SEQN = null, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,8 +125,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -133,7 +136,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -144,7 +148,7 @@ namespace M3H5Lib.Api
 		/// Description GetPriorityRule
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -153,7 +157,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPriorityRuleResponse></returns>
 		/// <exception cref="M3Exception<GetPriorityRuleResponse>"></exception>
 		public async Task<M3Response<GetPriorityRuleResponse>> GetPriorityRule(
-			int? m3_SEQN = null, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -168,8 +172,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetPriorityRuleResponse>(
@@ -179,7 +183,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -190,7 +195,7 @@ namespace M3H5Lib.Api
 		/// Description LstPriorityRule
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -199,7 +204,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPriorityRuleResponse></returns>
 		/// <exception cref="M3Exception<LstPriorityRuleResponse>"></exception>
 		public async Task<M3Response<LstPriorityRuleResponse>> LstPriorityRule(
-			int? m3_SEQN = null, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -214,8 +219,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPriorityRuleResponse>(
@@ -225,7 +230,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -236,11 +242,11 @@ namespace M3H5Lib.Api
 		/// Description UpdPriorityRule
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_RULE">Rule</param>
-		/// <param name="m3_VALA">Value alpha-numerical</param>
-		/// <param name="m3_ANDO">AND operator</param>
-		/// <param name="m3_PPRN">Priority</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3RULE">Rule</param>
+		/// <param name="m3VALA">Value alpha-numerical</param>
+		/// <param name="m3ANDO">AND operator</param>
+		/// <param name="m3PPRN">Priority</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -249,11 +255,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdPriorityRule(
-			int? m3_SEQN = null, 
-			string m3_RULE = null, 
-			string m3_VALA = null, 
-			int? m3_ANDO = null, 
-			int? m3_PPRN = null, 
+			int? m3SEQN = null, 
+			string m3RULE = null, 
+			string m3VALA = null, 
+			int? m3ANDO = null, 
+			int? m3PPRN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -268,16 +274,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RULE))
-				request.WithQueryParameter("RULE", m3_RULE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VALA))
-				request.WithQueryParameter("VALA", m3_VALA.Trim());
-			if (m3_ANDO.HasValue)
-				request.WithQueryParameter("ANDO", m3_ANDO.Value.ToString());
-			if (m3_PPRN.HasValue)
-				request.WithQueryParameter("PPRN", m3_PPRN.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RULE))
+				request.WithQueryParameter("RULE", m3RULE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VALA))
+				request.WithQueryParameter("VALA", m3VALA.Trim());
+			if (m3ANDO.HasValue)
+				request.WithQueryParameter("ANDO", m3ANDO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PPRN.HasValue)
+				request.WithQueryParameter("PPRN", m3PPRN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -287,7 +293,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

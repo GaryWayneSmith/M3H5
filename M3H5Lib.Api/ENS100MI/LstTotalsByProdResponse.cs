@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Job number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public string M3_BJNO => GetString("BJNO");
+		public string M3BJNO => GetString("BJNO");
 
 		/// <summary>
 		/// Description: Eco-organization
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eco-organization")]
-		public string M3_ECRG => GetString("ECRG");
+		public string M3ECRG => GetString("ECRG");
 
 		/// <summary>
 		/// Description: Country of organization
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of organization")]
-		public string M3_CSOR => GetString("CSOR");
+		public string M3CSOR => GetString("CSOR");
 
 		/// <summary>
 		/// Description: Supplier of organization
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier of organization")]
-		public string M3_SUEC => GetString("SUEC");
+		public string M3SUEC => GetString("SUEC");
 
 		/// <summary>
 		/// Description: Eco-product code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eco-product code")]
-		public string M3_ECOP => GetString("ECOP");
+		public string M3ECOP => GetString("ECOP");
 
 		/// <summary>
 		/// Description: Total quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total quantity")]
-		public decimal? M3_TOQT => GetNullableDecimal("TOQT");
+		public decimal? M3TOQT => GetNullableDecimal("TOQT");
 
 		/// <summary>
 		/// Description: Total amount
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total amount")]
-		public decimal? M3_TOTC => GetNullableDecimal("TOTC");
+		public decimal? M3TOTC => GetNullableDecimal("TOTC");
 
 		/// <summary>
 		/// Description: Total gross weight
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total gross weight")]
-		public decimal? M3_TOTG => GetNullableDecimal("TOTG");
+		public decimal? M3TOTG => GetNullableDecimal("TOTG");
 
 		/// <summary>
 		/// Description: Total net weight
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total net weight")]
-		public decimal? M3_TOTN => GetNullableDecimal("TOTN");
+		public decimal? M3TOTN => GetNullableDecimal("TOTN");
 
 		/// <summary>
 		/// Description: Total package weight
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ENS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total package weight")]
-		public decimal? M3_TOTP => GetNullableDecimal("TOTP");
+		public decimal? M3TOTP => GetNullableDecimal("TOTP");
 	}
 }
 // EOF

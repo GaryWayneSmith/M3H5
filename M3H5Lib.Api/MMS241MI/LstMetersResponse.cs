@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Configuration position
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration position")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: Meter
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Since new
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Since new")]
-		public decimal? M3_MVA0 => GetNullableDecimal("MVA0");
+		public decimal? M3MVA0 => GetNullableDecimal("MVA0");
 
 		/// <summary>
 		/// Description: Meter value at installation of component
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value at installation of component")]
-		public decimal? M3_MVAI => GetNullableDecimal("MVAI");
+		public decimal? M3MVAI => GetNullableDecimal("MVAI");
 
 		/// <summary>
 		/// Description: Installation date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Installation date")]
-		public DateTime? M3_INDA => GetNullableDateTime("INDA");
+		public DateTime? M3INDA => GetNullableDateTime("INDA");
 
 		/// <summary>
 		/// Description: Estimated meter value
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated meter value")]
-		public int? M3_KNOW => GetNullableInt("KNOW");
+		public int? M3KNOW => GetNullableInt("KNOW");
 
 		/// <summary>
 		/// Description: Meter value at installation of op unit
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter value at installation of op unit")]
-		public decimal? M3_MV0M => GetNullableDecimal("MV0M");
+		public decimal? M3MV0M => GetNullableDecimal("MV0M");
 
 		/// <summary>
 		/// Description: Report type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report type")]
-		public int? M3_RPTP => GetNullableInt("RPTP");
+		public int? M3RPTP => GetNullableInt("RPTP");
 
 		/// <summary>
 		/// Description: Change date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS241MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

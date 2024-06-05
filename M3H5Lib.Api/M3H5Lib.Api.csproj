@@ -3,7 +3,40 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<LangVersion>7.3</LangVersion>
+
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>M3 Client</Title>
+		<Authors>Gary Wayne Smith</Authors>
+		<RepositoryUrl>https://github.com/GaryWayneSmith/M3H5</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<AnalysisLevel>latest-all</AnalysisLevel>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+		<PackageTags>Lawson;M3;Infor;Movex</PackageTags>
+		<AssemblyVersion>1.0.2</AssemblyVersion>
+		<Version>$(AssemblyVersion)</Version>
+		<FileVersion>$(Version)</FileVersion>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+		<NoWarn>1701;1702;CA1711;CA1707;CA2227;CA1056;CA1054;CA1030;CA1002</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+		<NoWarn>1701;1702;CA1711;CA1707;CA2227;CA1056;CA1054;CA1030;CA1002</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\M3H5Lib\M3H5Lib.csproj" />

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tool number")]
-		public string M3_TOOL => GetString("TOOL");
+		public string M3TOOL => GetString("TOOL");
 
 		/// <summary>
 		/// Description: Tool type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tool type")]
-		public string M3_TOLT => GetString("TOLT");
+		public string M3TOLT => GetString("TOLT");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: User
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Telephone number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Warehouse description
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse description")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: Location
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Stock location description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock location description")]
-		public string M3_SLDS => GetString("SLDS");
+		public string M3SLDS => GetString("SLDS");
 
 		/// <summary>
 		/// Description: Purchase date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase date")]
-		public DateTime? M3_MPDT => GetNullableDateTime("MPDT");
+		public DateTime? M3MPDT => GetNullableDateTime("MPDT");
 
 		/// <summary>
 		/// Description: Manufacturing date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing date")]
-		public DateTime? M3_MFDT => GetNullableDateTime("MFDT");
+		public DateTime? M3MFDT => GetNullableDateTime("MFDT");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: Text identity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QQS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

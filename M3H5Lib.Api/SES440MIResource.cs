@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SES440MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get data for an eSign Record
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ESID">Esign number (Required)</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3ESID">Esign number (Required)</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetEsignRecordResponse></returns>
 		/// <exception cref="M3Exception<GetEsignRecordResponse>"></exception>
 		public async Task<M3Response<GetEsignRecordResponse>> GetEsignRecord(
-			string m3_ESID, 
-			string m3_FLDI = null, 
+			string m3ESID, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,16 +64,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ESID))
-				throw new ArgumentNullException("m3_ESID");
+			if (string.IsNullOrWhiteSpace(m3ESID))
+				throw new ArgumentNullException(nameof(m3ESID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ESID", m3_ESID.Trim());
+				.WithQueryParameter("ESID", m3ESID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetEsignRecordResponse>(
@@ -81,7 +83,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -92,8 +95,8 @@ namespace M3H5Lib.Api
 		/// Description List data for eSign Records
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ESID">Esign number</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3ESID">Esign number</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -102,8 +105,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstEsignRecordsResponse></returns>
 		/// <exception cref="M3Exception<LstEsignRecordsResponse>"></exception>
 		public async Task<M3Response<LstEsignRecordsResponse>> LstEsignRecords(
-			string m3_ESID = null, 
-			string m3_FLDI = null, 
+			string m3ESID = null, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -118,10 +121,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ESID))
-				request.WithQueryParameter("ESID", m3_ESID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ESID))
+				request.WithQueryParameter("ESID", m3ESID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstEsignRecordsResponse>(
@@ -131,7 +134,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

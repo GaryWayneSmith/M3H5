@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route")]
-		public string M3_ROUT => GetString("ROUT");
+		public string M3ROUT => GetString("ROUT");
 
 		/// <summary>
 		/// Description: Route type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route type")]
-		public int? M3_RUTP => GetNullableInt("RUTP");
+		public int? M3RUTP => GetNullableInt("RUTP");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Responsible
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Place of loading
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place of loading")]
-		public string M3_SDES => GetString("SDES");
+		public string M3SDES => GetString("SDES");
 
 		/// <summary>
 		/// Description: Place
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place")]
-		public string M3_EDES => GetString("EDES");
+		public string M3EDES => GetString("EDES");
 
 		/// <summary>
 		/// Description: Stipulated internal lead time - days
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stipulated internal lead time - days")]
-		public int? M3_SILD => GetNullableInt("SILD");
+		public int? M3SILD => GetNullableInt("SILD");
 
 		/// <summary>
 		/// Description: Stipulated internal lead time - hours
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stipulated internal lead time - hours")]
-		public int? M3_SILH => GetNullableInt("SILH");
+		public int? M3SILH => GetNullableInt("SILH");
 
 		/// <summary>
 		/// Description: Stipulated internal lead time - minutes
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stipulated internal lead time - minutes")]
-		public int? M3_SILM => GetNullableInt("SILM");
+		public int? M3SILM => GetNullableInt("SILM");
 
 		/// <summary>
 		/// Description: Manual shipment scheduling allowed
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual shipment scheduling allowed")]
-		public int? M3_DLMC => GetNullableInt("DLMC");
+		public int? M3DLMC => GetNullableInt("DLMC");
 
 		/// <summary>
 		/// Description: Ignore deadline when connecting dely no
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ignore deadline when connecting dely no")]
-		public int? M3_DLAC => GetNullableInt("DLAC");
+		public int? M3DLAC => GetNullableInt("DLAC");
 
 		/// <summary>
 		/// Description: Automatic connection to shipment
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic connection to shipment")]
-		public int? M3_ACNC => GetNullableInt("ACNC");
+		public int? M3ACNC => GetNullableInt("ACNC");
 
 		/// <summary>
 		/// Description: Responsible must be entered
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible must be entered")]
-		public int? M3_MARE => GetNullableInt("MARE");
+		public int? M3MARE => GetNullableInt("MARE");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public int? M3_MALP => GetNullableInt("MALP");
+		public int? M3MALP => GetNullableInt("MALP");
 
 		/// <summary>
 		/// Description: Transportation equipment
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation equipment")]
-		public int? M3_MACA => GetNullableInt("MACA");
+		public int? M3MACA => GetNullableInt("MACA");
 
 		/// <summary>
 		/// Description: Forwarding agent
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarding agent")]
-		public string M3_FWNO => GetString("FWNO");
+		public string M3FWNO => GetString("FWNO");
 
 		/// <summary>
 		/// Description: Transportation equipment
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation equipment")]
-		public string M3_TRCA => GetString("TRCA");
+		public string M3TRCA => GetString("TRCA");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Transportation service ID
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation service ID")]
-		public string M3_TSID => GetString("TSID");
+		public string M3TSID => GetString("TSID");
 
 		/// <summary>
 		/// Description: Number of kilometer
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of kilometer")]
-		public int? M3_DIST => GetNullableInt("DIST");
+		public int? M3DIST => GetNullableInt("DIST");
 
 		/// <summary>
 		/// Description: Load building
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Load building")]
-		public int? M3_LOBL => GetNullableInt("LOBL");
+		public int? M3LOBL => GetNullableInt("LOBL");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public string M3_LODO => GetString("LODO");
+		public string M3LODO => GetString("LODO");
 
 		/// <summary>
 		/// Description: Direction
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.DRS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 	}
 }
 // EOF

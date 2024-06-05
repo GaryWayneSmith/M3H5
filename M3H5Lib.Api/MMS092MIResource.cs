@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS092MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description AddSSReasonCode
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SSRE">SS reason code (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3SSRE">SS reason code (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSSReasonCode(
-			string m3_SSRE, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
+			string m3SSRE, 
+			string m3TX40, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,19 +66,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SSRE))
-				throw new ArgumentNullException("m3_SSRE");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3SSRE))
+				throw new ArgumentNullException(nameof(m3SSRE));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SSRE", m3_SSRE.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("SSRE", m3SSRE.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -97,7 +100,7 @@ namespace M3H5Lib.Api
 		/// Description DltSSReasonCode
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SSRE">SS reason code</param>
+		/// <param name="m3SSRE">SS reason code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -106,7 +109,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltSSReasonCode(
-			string m3_SSRE = null, 
+			string m3SSRE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -121,8 +124,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SSRE))
-				request.WithQueryParameter("SSRE", m3_SSRE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SSRE))
+				request.WithQueryParameter("SSRE", m3SSRE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -132,7 +135,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -143,7 +147,7 @@ namespace M3H5Lib.Api
 		/// Description GetSSReasonCode
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SSRE">SS reason code (Required)</param>
+		/// <param name="m3SSRE">SS reason code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -152,7 +156,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSSReasonCodeResponse></returns>
 		/// <exception cref="M3Exception<GetSSReasonCodeResponse>"></exception>
 		public async Task<M3Response<GetSSReasonCodeResponse>> GetSSReasonCode(
-			string m3_SSRE, 
+			string m3SSRE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -167,12 +171,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SSRE))
-				throw new ArgumentNullException("m3_SSRE");
+			if (string.IsNullOrWhiteSpace(m3SSRE))
+				throw new ArgumentNullException(nameof(m3SSRE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SSRE", m3_SSRE.Trim());
+				.WithQueryParameter("SSRE", m3SSRE.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSSReasonCodeResponse>(
@@ -182,7 +186,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -193,7 +198,7 @@ namespace M3H5Lib.Api
 		/// Description LstSSReasonCode
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SSRE">SS reason code (Required)</param>
+		/// <param name="m3SSRE">SS reason code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -202,7 +207,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSSReasonCodeResponse></returns>
 		/// <exception cref="M3Exception<LstSSReasonCodeResponse>"></exception>
 		public async Task<M3Response<LstSSReasonCodeResponse>> LstSSReasonCode(
-			string m3_SSRE, 
+			string m3SSRE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -217,12 +222,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SSRE))
-				throw new ArgumentNullException("m3_SSRE");
+			if (string.IsNullOrWhiteSpace(m3SSRE))
+				throw new ArgumentNullException(nameof(m3SSRE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SSRE", m3_SSRE.Trim());
+				.WithQueryParameter("SSRE", m3SSRE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSSReasonCodeResponse>(
@@ -232,7 +237,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -243,9 +249,9 @@ namespace M3H5Lib.Api
 		/// Description UpdSSReasonCode
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_SSRE">SS reason code (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3SSRE">SS reason code (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -254,9 +260,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSSReasonCode(
-			string m3_SSRE, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			string m3SSRE, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -271,18 +277,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SSRE))
-				throw new ArgumentNullException("m3_SSRE");
+			if (string.IsNullOrWhiteSpace(m3SSRE))
+				throw new ArgumentNullException(nameof(m3SSRE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SSRE", m3_SSRE.Trim());
+				.WithQueryParameter("SSRE", m3SSRE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -292,7 +298,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS881MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,21 +38,21 @@ namespace M3H5Lib.Api
 		/// Description Add Translation Data
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_TRQF">Record type (Required)</param>
-		/// <param name="m3_MSTD">Message standard (Required)</param>
-		/// <param name="m3_MVRS">Message version (Required)</param>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_IBOB">Inbound or outbound message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_TX15">Name (Required)</param>
-		/// <param name="m3_ELMC">Conditional element</param>
-		/// <param name="m3_MBMC">Conditional data</param>
-		/// <param name="m3_MVXP">Movex partner address</param>
-		/// <param name="m3_EXTP">External partner address</param>
-		/// <param name="m3_MVXD">Movex data</param>
-		/// <param name="m3_MBMD">Message data</param>
-		/// <param name="m3_TX40">Description</param>
+		/// <param name="m3TRQF">Record type (Required)</param>
+		/// <param name="m3MSTD">Message standard (Required)</param>
+		/// <param name="m3MVRS">Message version (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3IBOB">Inbound or outbound message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3TX15">Name (Required)</param>
+		/// <param name="m3ELMC">Conditional element</param>
+		/// <param name="m3MBMC">Conditional data</param>
+		/// <param name="m3MVXP">Movex partner address</param>
+		/// <param name="m3EXTP">External partner address</param>
+		/// <param name="m3MVXD">Movex data</param>
+		/// <param name="m3MBMD">Message data</param>
+		/// <param name="m3TX40">Description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -59,21 +61,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddTranslData(
-			string m3_TRQF, 
-			string m3_MSTD, 
-			string m3_MVRS, 
-			string m3_BMSG, 
-			string m3_IBOB, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_TX15, 
-			string m3_ELMC = null, 
-			string m3_MBMC = null, 
-			string m3_MVXP = null, 
-			string m3_EXTP = null, 
-			string m3_MVXD = null, 
-			string m3_MBMD = null, 
-			string m3_TX40 = null, 
+			string m3TRQF, 
+			string m3MSTD, 
+			string m3MVRS, 
+			string m3BMSG, 
+			string m3IBOB, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3TX15, 
+			string m3ELMC = null, 
+			string m3MBMC = null, 
+			string m3MVXP = null, 
+			string m3EXTP = null, 
+			string m3MVXD = null, 
+			string m3MBMD = null, 
+			string m3TX40 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -88,49 +90,49 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRQF))
-				throw new ArgumentNullException("m3_TRQF");
-			if (string.IsNullOrWhiteSpace(m3_MSTD))
-				throw new ArgumentNullException("m3_MSTD");
-			if (string.IsNullOrWhiteSpace(m3_MVRS))
-				throw new ArgumentNullException("m3_MVRS");
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_IBOB))
-				throw new ArgumentNullException("m3_IBOB");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_TX15))
-				throw new ArgumentNullException("m3_TX15");
+			if (string.IsNullOrWhiteSpace(m3TRQF))
+				throw new ArgumentNullException(nameof(m3TRQF));
+			if (string.IsNullOrWhiteSpace(m3MSTD))
+				throw new ArgumentNullException(nameof(m3MSTD));
+			if (string.IsNullOrWhiteSpace(m3MVRS))
+				throw new ArgumentNullException(nameof(m3MVRS));
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3IBOB))
+				throw new ArgumentNullException(nameof(m3IBOB));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3TX15))
+				throw new ArgumentNullException(nameof(m3TX15));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRQF", m3_TRQF.Trim())
-				.WithQueryParameter("MSTD", m3_MSTD.Trim())
-				.WithQueryParameter("MVRS", m3_MVRS.Trim())
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("IBOB", m3_IBOB.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("TX15", m3_TX15.Trim());
+				.WithQueryParameter("TRQF", m3TRQF.Trim())
+				.WithQueryParameter("MSTD", m3MSTD.Trim())
+				.WithQueryParameter("MVRS", m3MVRS.Trim())
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("IBOB", m3IBOB.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ELMC))
-				request.WithQueryParameter("ELMC", m3_ELMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMC))
-				request.WithQueryParameter("MBMC", m3_MBMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVXP))
-				request.WithQueryParameter("MVXP", m3_MVXP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EXTP))
-				request.WithQueryParameter("EXTP", m3_EXTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVXD))
-				request.WithQueryParameter("MVXD", m3_MVXD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMD))
-				request.WithQueryParameter("MBMD", m3_MBMD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELMC))
+				request.WithQueryParameter("ELMC", m3ELMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMC))
+				request.WithQueryParameter("MBMC", m3MBMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVXP))
+				request.WithQueryParameter("MVXP", m3MVXP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EXTP))
+				request.WithQueryParameter("EXTP", m3EXTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVXD))
+				request.WithQueryParameter("MVXD", m3MVXD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMD))
+				request.WithQueryParameter("MBMD", m3MBMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -140,7 +142,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -151,18 +154,18 @@ namespace M3H5Lib.Api
 		/// Description Add Translation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TRQF">Record type (Required)</param>
-		/// <param name="m3_MSTD">Message standard (Required)</param>
-		/// <param name="m3_MVRS">Message version (Required)</param>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_IBOB">Inbound or outbound message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_IDTR">Business data translation identity (Required)</param>
-		/// <param name="m3_ELMC">Conditional element</param>
-		/// <param name="m3_MBMC">Conditional data</param>
-		/// <param name="m3_FILE">File</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3TRQF">Record type (Required)</param>
+		/// <param name="m3MSTD">Message standard (Required)</param>
+		/// <param name="m3MVRS">Message version (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3IBOB">Inbound or outbound message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3IDTR">Business data translation identity (Required)</param>
+		/// <param name="m3ELMC">Conditional element</param>
+		/// <param name="m3MBMC">Conditional data</param>
+		/// <param name="m3FILE">File</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -171,18 +174,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddTranslation(
-			string m3_TRQF, 
-			string m3_MSTD, 
-			string m3_MVRS, 
-			string m3_BMSG, 
-			string m3_IBOB, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			int m3_IDTR, 
-			string m3_ELMC = null, 
-			string m3_MBMC = null, 
-			string m3_FILE = null, 
-			string m3_FLDI = null, 
+			string m3TRQF, 
+			string m3MSTD, 
+			string m3MVRS, 
+			string m3BMSG, 
+			string m3IBOB, 
+			string m3ELMP, 
+			string m3ELMD, 
+			int m3IDTR, 
+			string m3ELMC = null, 
+			string m3MBMC = null, 
+			string m3FILE = null, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -197,41 +200,41 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRQF))
-				throw new ArgumentNullException("m3_TRQF");
-			if (string.IsNullOrWhiteSpace(m3_MSTD))
-				throw new ArgumentNullException("m3_MSTD");
-			if (string.IsNullOrWhiteSpace(m3_MVRS))
-				throw new ArgumentNullException("m3_MVRS");
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_IBOB))
-				throw new ArgumentNullException("m3_IBOB");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
+			if (string.IsNullOrWhiteSpace(m3TRQF))
+				throw new ArgumentNullException(nameof(m3TRQF));
+			if (string.IsNullOrWhiteSpace(m3MSTD))
+				throw new ArgumentNullException(nameof(m3MSTD));
+			if (string.IsNullOrWhiteSpace(m3MVRS))
+				throw new ArgumentNullException(nameof(m3MVRS));
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3IBOB))
+				throw new ArgumentNullException(nameof(m3IBOB));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRQF", m3_TRQF.Trim())
-				.WithQueryParameter("MSTD", m3_MSTD.Trim())
-				.WithQueryParameter("MVRS", m3_MVRS.Trim())
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("IBOB", m3_IBOB.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("IDTR", m3_IDTR.ToString());
+				.WithQueryParameter("TRQF", m3TRQF.Trim())
+				.WithQueryParameter("MSTD", m3MSTD.Trim())
+				.WithQueryParameter("MVRS", m3MVRS.Trim())
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("IBOB", m3IBOB.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("IDTR", m3IDTR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ELMC))
-				request.WithQueryParameter("ELMC", m3_ELMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMC))
-				request.WithQueryParameter("MBMC", m3_MBMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELMC))
+				request.WithQueryParameter("ELMC", m3ELMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMC))
+				request.WithQueryParameter("MBMC", m3MBMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -241,7 +244,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -281,7 +285,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -292,19 +297,19 @@ namespace M3H5Lib.Api
 		/// Description Delete Transalation Data
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_TRQF">Record type (Required)</param>
-		/// <param name="m3_MSTD">Message standard (Required)</param>
-		/// <param name="m3_MVRS">Message version (Required)</param>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_IBOB">Inbound or outbound message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_ELMC">Conditional element</param>
-		/// <param name="m3_MBMC">Conditional data</param>
-		/// <param name="m3_MVXP">Movex partner address</param>
-		/// <param name="m3_EXTP">External partner address</param>
-		/// <param name="m3_MVXD">Movex data</param>
-		/// <param name="m3_MBMD">Message data</param>
+		/// <param name="m3TRQF">Record type (Required)</param>
+		/// <param name="m3MSTD">Message standard (Required)</param>
+		/// <param name="m3MVRS">Message version (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3IBOB">Inbound or outbound message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3ELMC">Conditional element</param>
+		/// <param name="m3MBMC">Conditional data</param>
+		/// <param name="m3MVXP">Movex partner address</param>
+		/// <param name="m3EXTP">External partner address</param>
+		/// <param name="m3MVXD">Movex data</param>
+		/// <param name="m3MBMD">Message data</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -313,19 +318,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelTranslData(
-			string m3_TRQF, 
-			string m3_MSTD, 
-			string m3_MVRS, 
-			string m3_BMSG, 
-			string m3_IBOB, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_ELMC = null, 
-			string m3_MBMC = null, 
-			string m3_MVXP = null, 
-			string m3_EXTP = null, 
-			string m3_MVXD = null, 
-			string m3_MBMD = null, 
+			string m3TRQF, 
+			string m3MSTD, 
+			string m3MVRS, 
+			string m3BMSG, 
+			string m3IBOB, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3ELMC = null, 
+			string m3MBMC = null, 
+			string m3MVXP = null, 
+			string m3EXTP = null, 
+			string m3MVXD = null, 
+			string m3MBMD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -340,44 +345,44 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRQF))
-				throw new ArgumentNullException("m3_TRQF");
-			if (string.IsNullOrWhiteSpace(m3_MSTD))
-				throw new ArgumentNullException("m3_MSTD");
-			if (string.IsNullOrWhiteSpace(m3_MVRS))
-				throw new ArgumentNullException("m3_MVRS");
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_IBOB))
-				throw new ArgumentNullException("m3_IBOB");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
+			if (string.IsNullOrWhiteSpace(m3TRQF))
+				throw new ArgumentNullException(nameof(m3TRQF));
+			if (string.IsNullOrWhiteSpace(m3MSTD))
+				throw new ArgumentNullException(nameof(m3MSTD));
+			if (string.IsNullOrWhiteSpace(m3MVRS))
+				throw new ArgumentNullException(nameof(m3MVRS));
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3IBOB))
+				throw new ArgumentNullException(nameof(m3IBOB));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRQF", m3_TRQF.Trim())
-				.WithQueryParameter("MSTD", m3_MSTD.Trim())
-				.WithQueryParameter("MVRS", m3_MVRS.Trim())
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("IBOB", m3_IBOB.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim());
+				.WithQueryParameter("TRQF", m3TRQF.Trim())
+				.WithQueryParameter("MSTD", m3MSTD.Trim())
+				.WithQueryParameter("MVRS", m3MVRS.Trim())
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("IBOB", m3IBOB.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ELMC))
-				request.WithQueryParameter("ELMC", m3_ELMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMC))
-				request.WithQueryParameter("MBMC", m3_MBMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVXP))
-				request.WithQueryParameter("MVXP", m3_MVXP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EXTP))
-				request.WithQueryParameter("EXTP", m3_EXTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVXD))
-				request.WithQueryParameter("MVXD", m3_MVXD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMD))
-				request.WithQueryParameter("MBMD", m3_MBMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELMC))
+				request.WithQueryParameter("ELMC", m3ELMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMC))
+				request.WithQueryParameter("MBMC", m3MBMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVXP))
+				request.WithQueryParameter("MVXP", m3MVXP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EXTP))
+				request.WithQueryParameter("EXTP", m3EXTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVXD))
+				request.WithQueryParameter("MVXD", m3MVXD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMD))
+				request.WithQueryParameter("MBMD", m3MBMD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -387,7 +392,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -398,15 +404,15 @@ namespace M3H5Lib.Api
 		/// Description Delete Translation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TRQF">Record type (Required)</param>
-		/// <param name="m3_MSTD">Message standard (Required)</param>
-		/// <param name="m3_MVRS">Message version (Required)</param>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_IBOB">Inbound or outbound message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_ELMC">Conditional element</param>
-		/// <param name="m3_MBMC">Conditional data</param>
+		/// <param name="m3TRQF">Record type (Required)</param>
+		/// <param name="m3MSTD">Message standard (Required)</param>
+		/// <param name="m3MVRS">Message version (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3IBOB">Inbound or outbound message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3ELMC">Conditional element</param>
+		/// <param name="m3MBMC">Conditional data</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -415,15 +421,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelTranslation(
-			string m3_TRQF, 
-			string m3_MSTD, 
-			string m3_MVRS, 
-			string m3_BMSG, 
-			string m3_IBOB, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_ELMC = null, 
-			string m3_MBMC = null, 
+			string m3TRQF, 
+			string m3MSTD, 
+			string m3MVRS, 
+			string m3BMSG, 
+			string m3IBOB, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3ELMC = null, 
+			string m3MBMC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -438,36 +444,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRQF))
-				throw new ArgumentNullException("m3_TRQF");
-			if (string.IsNullOrWhiteSpace(m3_MSTD))
-				throw new ArgumentNullException("m3_MSTD");
-			if (string.IsNullOrWhiteSpace(m3_MVRS))
-				throw new ArgumentNullException("m3_MVRS");
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_IBOB))
-				throw new ArgumentNullException("m3_IBOB");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
+			if (string.IsNullOrWhiteSpace(m3TRQF))
+				throw new ArgumentNullException(nameof(m3TRQF));
+			if (string.IsNullOrWhiteSpace(m3MSTD))
+				throw new ArgumentNullException(nameof(m3MSTD));
+			if (string.IsNullOrWhiteSpace(m3MVRS))
+				throw new ArgumentNullException(nameof(m3MVRS));
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3IBOB))
+				throw new ArgumentNullException(nameof(m3IBOB));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRQF", m3_TRQF.Trim())
-				.WithQueryParameter("MSTD", m3_MSTD.Trim())
-				.WithQueryParameter("MVRS", m3_MVRS.Trim())
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("IBOB", m3_IBOB.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim());
+				.WithQueryParameter("TRQF", m3TRQF.Trim())
+				.WithQueryParameter("MSTD", m3MSTD.Trim())
+				.WithQueryParameter("MVRS", m3MVRS.Trim())
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("IBOB", m3IBOB.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ELMC))
-				request.WithQueryParameter("ELMC", m3_ELMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMC))
-				request.WithQueryParameter("MBMC", m3_MBMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELMC))
+				request.WithQueryParameter("ELMC", m3ELMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMC))
+				request.WithQueryParameter("MBMC", m3MBMC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -477,7 +483,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -517,7 +524,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -557,7 +565,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -568,19 +577,19 @@ namespace M3H5Lib.Api
 		/// Description Get Translation Data
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TRQF">Record type (Required)</param>
-		/// <param name="m3_MSTD">Message standard (Required)</param>
-		/// <param name="m3_MVRS">Message version (Required)</param>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_IBOB">Inbound or outbound message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_ELMC">Conditional element</param>
-		/// <param name="m3_MBMC">Conditional data</param>
-		/// <param name="m3_MVXP">Movex partner address</param>
-		/// <param name="m3_EXTP">External partner address</param>
-		/// <param name="m3_MVXD">Movex data</param>
-		/// <param name="m3_MBMD">Message data</param>
+		/// <param name="m3TRQF">Record type (Required)</param>
+		/// <param name="m3MSTD">Message standard (Required)</param>
+		/// <param name="m3MVRS">Message version (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3IBOB">Inbound or outbound message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3ELMC">Conditional element</param>
+		/// <param name="m3MBMC">Conditional data</param>
+		/// <param name="m3MVXP">Movex partner address</param>
+		/// <param name="m3EXTP">External partner address</param>
+		/// <param name="m3MVXD">Movex data</param>
+		/// <param name="m3MBMD">Message data</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -589,19 +598,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTranslDataResponse></returns>
 		/// <exception cref="M3Exception<GetTranslDataResponse>"></exception>
 		public async Task<M3Response<GetTranslDataResponse>> GetTranslData(
-			string m3_TRQF, 
-			string m3_MSTD, 
-			string m3_MVRS, 
-			string m3_BMSG, 
-			string m3_IBOB, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_ELMC = null, 
-			string m3_MBMC = null, 
-			string m3_MVXP = null, 
-			string m3_EXTP = null, 
-			string m3_MVXD = null, 
-			string m3_MBMD = null, 
+			string m3TRQF, 
+			string m3MSTD, 
+			string m3MVRS, 
+			string m3BMSG, 
+			string m3IBOB, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3ELMC = null, 
+			string m3MBMC = null, 
+			string m3MVXP = null, 
+			string m3EXTP = null, 
+			string m3MVXD = null, 
+			string m3MBMD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -616,44 +625,44 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRQF))
-				throw new ArgumentNullException("m3_TRQF");
-			if (string.IsNullOrWhiteSpace(m3_MSTD))
-				throw new ArgumentNullException("m3_MSTD");
-			if (string.IsNullOrWhiteSpace(m3_MVRS))
-				throw new ArgumentNullException("m3_MVRS");
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_IBOB))
-				throw new ArgumentNullException("m3_IBOB");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
+			if (string.IsNullOrWhiteSpace(m3TRQF))
+				throw new ArgumentNullException(nameof(m3TRQF));
+			if (string.IsNullOrWhiteSpace(m3MSTD))
+				throw new ArgumentNullException(nameof(m3MSTD));
+			if (string.IsNullOrWhiteSpace(m3MVRS))
+				throw new ArgumentNullException(nameof(m3MVRS));
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3IBOB))
+				throw new ArgumentNullException(nameof(m3IBOB));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRQF", m3_TRQF.Trim())
-				.WithQueryParameter("MSTD", m3_MSTD.Trim())
-				.WithQueryParameter("MVRS", m3_MVRS.Trim())
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("IBOB", m3_IBOB.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim());
+				.WithQueryParameter("TRQF", m3TRQF.Trim())
+				.WithQueryParameter("MSTD", m3MSTD.Trim())
+				.WithQueryParameter("MVRS", m3MVRS.Trim())
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("IBOB", m3IBOB.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ELMC))
-				request.WithQueryParameter("ELMC", m3_ELMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMC))
-				request.WithQueryParameter("MBMC", m3_MBMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVXP))
-				request.WithQueryParameter("MVXP", m3_MVXP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EXTP))
-				request.WithQueryParameter("EXTP", m3_EXTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MVXD))
-				request.WithQueryParameter("MVXD", m3_MVXD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMD))
-				request.WithQueryParameter("MBMD", m3_MBMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELMC))
+				request.WithQueryParameter("ELMC", m3ELMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMC))
+				request.WithQueryParameter("MBMC", m3MBMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVXP))
+				request.WithQueryParameter("MVXP", m3MVXP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EXTP))
+				request.WithQueryParameter("EXTP", m3EXTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MVXD))
+				request.WithQueryParameter("MVXD", m3MVXD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMD))
+				request.WithQueryParameter("MBMD", m3MBMD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetTranslDataResponse>(
@@ -663,7 +672,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -674,15 +684,15 @@ namespace M3H5Lib.Api
 		/// Description Get Translation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TRQF">Record type (Required)</param>
-		/// <param name="m3_MSTD">Message standard (Required)</param>
-		/// <param name="m3_MVRS">Message version (Required)</param>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_IBOB">Inbound or outbound message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_ELMC">Conditional element</param>
-		/// <param name="m3_MBMC">Conditional data</param>
+		/// <param name="m3TRQF">Record type (Required)</param>
+		/// <param name="m3MSTD">Message standard (Required)</param>
+		/// <param name="m3MVRS">Message version (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3IBOB">Inbound or outbound message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3ELMC">Conditional element</param>
+		/// <param name="m3MBMC">Conditional data</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -691,15 +701,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTranslationResponse></returns>
 		/// <exception cref="M3Exception<GetTranslationResponse>"></exception>
 		public async Task<M3Response<GetTranslationResponse>> GetTranslation(
-			string m3_TRQF, 
-			string m3_MSTD, 
-			string m3_MVRS, 
-			string m3_BMSG, 
-			string m3_IBOB, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_ELMC = null, 
-			string m3_MBMC = null, 
+			string m3TRQF, 
+			string m3MSTD, 
+			string m3MVRS, 
+			string m3BMSG, 
+			string m3IBOB, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3ELMC = null, 
+			string m3MBMC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -714,36 +724,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRQF))
-				throw new ArgumentNullException("m3_TRQF");
-			if (string.IsNullOrWhiteSpace(m3_MSTD))
-				throw new ArgumentNullException("m3_MSTD");
-			if (string.IsNullOrWhiteSpace(m3_MVRS))
-				throw new ArgumentNullException("m3_MVRS");
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_IBOB))
-				throw new ArgumentNullException("m3_IBOB");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
+			if (string.IsNullOrWhiteSpace(m3TRQF))
+				throw new ArgumentNullException(nameof(m3TRQF));
+			if (string.IsNullOrWhiteSpace(m3MSTD))
+				throw new ArgumentNullException(nameof(m3MSTD));
+			if (string.IsNullOrWhiteSpace(m3MVRS))
+				throw new ArgumentNullException(nameof(m3MVRS));
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3IBOB))
+				throw new ArgumentNullException(nameof(m3IBOB));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRQF", m3_TRQF.Trim())
-				.WithQueryParameter("MSTD", m3_MSTD.Trim())
-				.WithQueryParameter("MVRS", m3_MVRS.Trim())
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("IBOB", m3_IBOB.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim());
+				.WithQueryParameter("TRQF", m3TRQF.Trim())
+				.WithQueryParameter("MSTD", m3MSTD.Trim())
+				.WithQueryParameter("MVRS", m3MVRS.Trim())
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("IBOB", m3IBOB.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ELMC))
-				request.WithQueryParameter("ELMC", m3_ELMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMC))
-				request.WithQueryParameter("MBMC", m3_MBMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELMC))
+				request.WithQueryParameter("ELMC", m3ELMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMC))
+				request.WithQueryParameter("MBMC", m3MBMC.Trim());
 
 			// Execute the request
 			var result = await Execute<GetTranslationResponse>(
@@ -753,7 +763,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -764,7 +775,7 @@ namespace M3H5Lib.Api
 		/// Description List Translation Data
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TRQF">Record type</param>
+		/// <param name="m3TRQF">Record type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -773,7 +784,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTranslDataResponse></returns>
 		/// <exception cref="M3Exception<LstTranslDataResponse>"></exception>
 		public async Task<M3Response<LstTranslDataResponse>> LstTranslData(
-			string m3_TRQF = null, 
+			string m3TRQF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -788,8 +799,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRQF))
-				request.WithQueryParameter("TRQF", m3_TRQF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRQF))
+				request.WithQueryParameter("TRQF", m3TRQF.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTranslDataResponse>(
@@ -799,7 +810,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -810,8 +822,8 @@ namespace M3H5Lib.Api
 		/// Description Update All Statuses
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SLFR">From status</param>
-		/// <param name="m3_SLTO">To status</param>
+		/// <param name="m3SLFR">From status</param>
+		/// <param name="m3SLTO">To status</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -820,8 +832,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAllStatuses(
-			string m3_SLFR = null, 
-			string m3_SLTO = null, 
+			string m3SLFR = null, 
+			string m3SLTO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -836,10 +848,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SLFR))
-				request.WithQueryParameter("SLFR", m3_SLFR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SLTO))
-				request.WithQueryParameter("SLTO", m3_SLTO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SLFR))
+				request.WithQueryParameter("SLFR", m3SLFR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SLTO))
+				request.WithQueryParameter("SLTO", m3SLTO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -849,7 +861,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -860,18 +873,18 @@ namespace M3H5Lib.Api
 		/// Description Update Translation
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TRQF">Record type (Required)</param>
-		/// <param name="m3_MSTD">Message standard (Required)</param>
-		/// <param name="m3_MVRS">Message version (Required)</param>
-		/// <param name="m3_BMSG">Business message (Required)</param>
-		/// <param name="m3_IBOB">Inbound or outbound message (Required)</param>
-		/// <param name="m3_ELMP">Parent element(s) (Required)</param>
-		/// <param name="m3_ELMD">Data element (Required)</param>
-		/// <param name="m3_STAT">Status (Required)</param>
-		/// <param name="m3_ELMC">Conditional element</param>
-		/// <param name="m3_MBMC">Conditional data</param>
-		/// <param name="m3_FILE">File</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3TRQF">Record type (Required)</param>
+		/// <param name="m3MSTD">Message standard (Required)</param>
+		/// <param name="m3MVRS">Message version (Required)</param>
+		/// <param name="m3BMSG">Business message (Required)</param>
+		/// <param name="m3IBOB">Inbound or outbound message (Required)</param>
+		/// <param name="m3ELMP">Parent element(s) (Required)</param>
+		/// <param name="m3ELMD">Data element (Required)</param>
+		/// <param name="m3STAT">Status (Required)</param>
+		/// <param name="m3ELMC">Conditional element</param>
+		/// <param name="m3MBMC">Conditional data</param>
+		/// <param name="m3FILE">File</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -880,18 +893,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdTranslation(
-			string m3_TRQF, 
-			string m3_MSTD, 
-			string m3_MVRS, 
-			string m3_BMSG, 
-			string m3_IBOB, 
-			string m3_ELMP, 
-			string m3_ELMD, 
-			string m3_STAT, 
-			string m3_ELMC = null, 
-			string m3_MBMC = null, 
-			string m3_FILE = null, 
-			string m3_FLDI = null, 
+			string m3TRQF, 
+			string m3MSTD, 
+			string m3MVRS, 
+			string m3BMSG, 
+			string m3IBOB, 
+			string m3ELMP, 
+			string m3ELMD, 
+			string m3STAT, 
+			string m3ELMC = null, 
+			string m3MBMC = null, 
+			string m3FILE = null, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -906,43 +919,43 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRQF))
-				throw new ArgumentNullException("m3_TRQF");
-			if (string.IsNullOrWhiteSpace(m3_MSTD))
-				throw new ArgumentNullException("m3_MSTD");
-			if (string.IsNullOrWhiteSpace(m3_MVRS))
-				throw new ArgumentNullException("m3_MVRS");
-			if (string.IsNullOrWhiteSpace(m3_BMSG))
-				throw new ArgumentNullException("m3_BMSG");
-			if (string.IsNullOrWhiteSpace(m3_IBOB))
-				throw new ArgumentNullException("m3_IBOB");
-			if (string.IsNullOrWhiteSpace(m3_ELMP))
-				throw new ArgumentNullException("m3_ELMP");
-			if (string.IsNullOrWhiteSpace(m3_ELMD))
-				throw new ArgumentNullException("m3_ELMD");
-			if (string.IsNullOrWhiteSpace(m3_STAT))
-				throw new ArgumentNullException("m3_STAT");
+			if (string.IsNullOrWhiteSpace(m3TRQF))
+				throw new ArgumentNullException(nameof(m3TRQF));
+			if (string.IsNullOrWhiteSpace(m3MSTD))
+				throw new ArgumentNullException(nameof(m3MSTD));
+			if (string.IsNullOrWhiteSpace(m3MVRS))
+				throw new ArgumentNullException(nameof(m3MVRS));
+			if (string.IsNullOrWhiteSpace(m3BMSG))
+				throw new ArgumentNullException(nameof(m3BMSG));
+			if (string.IsNullOrWhiteSpace(m3IBOB))
+				throw new ArgumentNullException(nameof(m3IBOB));
+			if (string.IsNullOrWhiteSpace(m3ELMP))
+				throw new ArgumentNullException(nameof(m3ELMP));
+			if (string.IsNullOrWhiteSpace(m3ELMD))
+				throw new ArgumentNullException(nameof(m3ELMD));
+			if (string.IsNullOrWhiteSpace(m3STAT))
+				throw new ArgumentNullException(nameof(m3STAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRQF", m3_TRQF.Trim())
-				.WithQueryParameter("MSTD", m3_MSTD.Trim())
-				.WithQueryParameter("MVRS", m3_MVRS.Trim())
-				.WithQueryParameter("BMSG", m3_BMSG.Trim())
-				.WithQueryParameter("IBOB", m3_IBOB.Trim())
-				.WithQueryParameter("ELMP", m3_ELMP.Trim())
-				.WithQueryParameter("ELMD", m3_ELMD.Trim())
-				.WithQueryParameter("STAT", m3_STAT.Trim());
+				.WithQueryParameter("TRQF", m3TRQF.Trim())
+				.WithQueryParameter("MSTD", m3MSTD.Trim())
+				.WithQueryParameter("MVRS", m3MVRS.Trim())
+				.WithQueryParameter("BMSG", m3BMSG.Trim())
+				.WithQueryParameter("IBOB", m3IBOB.Trim())
+				.WithQueryParameter("ELMP", m3ELMP.Trim())
+				.WithQueryParameter("ELMD", m3ELMD.Trim())
+				.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ELMC))
-				request.WithQueryParameter("ELMC", m3_ELMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MBMC))
-				request.WithQueryParameter("MBMC", m3_MBMC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELMC))
+				request.WithQueryParameter("ELMC", m3ELMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MBMC))
+				request.WithQueryParameter("MBMC", m3MBMC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -952,7 +965,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

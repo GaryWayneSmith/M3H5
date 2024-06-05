@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SAS110MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,57 +38,57 @@ namespace M3H5Lib.Api
 		/// Description This transaction adds agreement customer site
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CTNO">Agreement number (Required)</param>
-		/// <param name="m3_CUPL">Customer site (Required)</param>
-		/// <param name="m3_AGTP">Agreement type (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_SRES">Service manager</param>
-		/// <param name="m3_WOSC">Work schedule</param>
-		/// <param name="m3_TEC1">Technician 1</param>
-		/// <param name="m3_TEC2">Technician 2</param>
-		/// <param name="m3_DIST">Number of kilometer</param>
-		/// <param name="m3_LZON">Service zone</param>
-		/// <param name="m3_TRTI">Planned travel time</param>
-		/// <param name="m3_TVCD">Travel type</param>
-		/// <param name="m3_LSCD">Service stop</param>
-		/// <param name="m3_ILCD">Invoice block</param>
-		/// <param name="m3_DBCO">Payer control</param>
-		/// <param name="m3_INCU">Internal customer number</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_VLCD">Validity type</param>
-		/// <param name="m3_VADF">Valid from</param>
-		/// <param name="m3_VADT">Valid to</param>
-		/// <param name="m3_IIDF">Start date - invoicing range</param>
-		/// <param name="m3_IIDT">End date - invoicing range</param>
-		/// <param name="m3_IIYR">Invoicing interval - years</param>
-		/// <param name="m3_IIMO">Invoicing interval - months</param>
-		/// <param name="m3_IIDA">Invoicing interval - days</param>
-		/// <param name="m3_NODT">Next order date</param>
-		/// <param name="m3_INVM">Invoicing method</param>
-		/// <param name="m3_APTM">Response time</param>
-		/// <param name="m3_AIT1">Accounting dimension 1</param>
-		/// <param name="m3_AIT2">Accounting dimension 2</param>
-		/// <param name="m3_AIT3">Accounting dimension 3</param>
-		/// <param name="m3_AIT4">Accounting dimension 4</param>
-		/// <param name="m3_AIT5">Accounting dimension 5</param>
-		/// <param name="m3_AIT6">Accounting dimension 6</param>
-		/// <param name="m3_AIT7">Accounting dimension 7</param>
-		/// <param name="m3_PROJ">Project number</param>
-		/// <param name="m3_RORN">Reference order number</param>
-		/// <param name="m3_ELNO">Project element</param>
-		/// <param name="m3_RORL">Reference order line</param>
-		/// <param name="m3_RORX">Line suffix</param>
-		/// <param name="m3_ACRF">User-defined accounting control object</param>
-		/// <param name="m3_CFJ1">User-defined field 1 - serv agreement</param>
-		/// <param name="m3_CFJ2">User-defined field 2 - serv agreement</param>
-		/// <param name="m3_CFJ3">User-defined field 3 - serv agreement</param>
-		/// <param name="m3_CFJ4">User-defined field 4 - serv agreement</param>
-		/// <param name="m3_CFJ5">User-defined field 5 - serv agreement</param>
-		/// <param name="m3_CFJ6">User-defined field 6 - serv agreement</param>
-		/// <param name="m3_CFJ7">User-defined field 7 - serv agreement</param>
-		/// <param name="m3_CFJ8">User-defined field 8 - serv agreement</param>
-		/// <param name="m3_CFJ9">User-defined field 9 - serv agreement</param>
-		/// <param name="m3_CFJ0">User-defined field 10 - serv agreement</param>
+		/// <param name="m3CTNO">Agreement number (Required)</param>
+		/// <param name="m3CUPL">Customer site (Required)</param>
+		/// <param name="m3AGTP">Agreement type (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3SRES">Service manager</param>
+		/// <param name="m3WOSC">Work schedule</param>
+		/// <param name="m3TEC1">Technician 1</param>
+		/// <param name="m3TEC2">Technician 2</param>
+		/// <param name="m3DIST">Number of kilometer</param>
+		/// <param name="m3LZON">Service zone</param>
+		/// <param name="m3TRTI">Planned travel time</param>
+		/// <param name="m3TVCD">Travel type</param>
+		/// <param name="m3LSCD">Service stop</param>
+		/// <param name="m3ILCD">Invoice block</param>
+		/// <param name="m3DBCO">Payer control</param>
+		/// <param name="m3INCU">Internal customer number</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3VLCD">Validity type</param>
+		/// <param name="m3VADF">Valid from</param>
+		/// <param name="m3VADT">Valid to</param>
+		/// <param name="m3IIDF">Start date - invoicing range</param>
+		/// <param name="m3IIDT">End date - invoicing range</param>
+		/// <param name="m3IIYR">Invoicing interval - years</param>
+		/// <param name="m3IIMO">Invoicing interval - months</param>
+		/// <param name="m3IIDA">Invoicing interval - days</param>
+		/// <param name="m3NODT">Next order date</param>
+		/// <param name="m3INVM">Invoicing method</param>
+		/// <param name="m3APTM">Response time</param>
+		/// <param name="m3AIT1">Accounting dimension 1</param>
+		/// <param name="m3AIT2">Accounting dimension 2</param>
+		/// <param name="m3AIT3">Accounting dimension 3</param>
+		/// <param name="m3AIT4">Accounting dimension 4</param>
+		/// <param name="m3AIT5">Accounting dimension 5</param>
+		/// <param name="m3AIT6">Accounting dimension 6</param>
+		/// <param name="m3AIT7">Accounting dimension 7</param>
+		/// <param name="m3PROJ">Project number</param>
+		/// <param name="m3RORN">Reference order number</param>
+		/// <param name="m3ELNO">Project element</param>
+		/// <param name="m3RORL">Reference order line</param>
+		/// <param name="m3RORX">Line suffix</param>
+		/// <param name="m3ACRF">User-defined accounting control object</param>
+		/// <param name="m3CFJ1">User-defined field 1 - serv agreement</param>
+		/// <param name="m3CFJ2">User-defined field 2 - serv agreement</param>
+		/// <param name="m3CFJ3">User-defined field 3 - serv agreement</param>
+		/// <param name="m3CFJ4">User-defined field 4 - serv agreement</param>
+		/// <param name="m3CFJ5">User-defined field 5 - serv agreement</param>
+		/// <param name="m3CFJ6">User-defined field 6 - serv agreement</param>
+		/// <param name="m3CFJ7">User-defined field 7 - serv agreement</param>
+		/// <param name="m3CFJ8">User-defined field 8 - serv agreement</param>
+		/// <param name="m3CFJ9">User-defined field 9 - serv agreement</param>
+		/// <param name="m3CFJ0">User-defined field 10 - serv agreement</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -95,57 +97,57 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAgrmtCusSite(
-			string m3_CTNO, 
-			string m3_CUPL, 
-			string m3_AGTP, 
-			string m3_ADID = null, 
-			string m3_SRES = null, 
-			int? m3_WOSC = null, 
-			string m3_TEC1 = null, 
-			string m3_TEC2 = null, 
-			int? m3_DIST = null, 
-			int? m3_LZON = null, 
-			int? m3_TRTI = null, 
-			string m3_TVCD = null, 
-			int? m3_LSCD = null, 
-			int? m3_ILCD = null, 
-			string m3_DBCO = null, 
-			string m3_INCU = null, 
-			string m3_PYNO = null, 
-			string m3_VLCD = null, 
-			DateTime? m3_VADF = null, 
-			DateTime? m3_VADT = null, 
-			DateTime? m3_IIDF = null, 
-			DateTime? m3_IIDT = null, 
-			int? m3_IIYR = null, 
-			int? m3_IIMO = null, 
-			int? m3_IIDA = null, 
-			DateTime? m3_NODT = null, 
-			string m3_INVM = null, 
-			int? m3_APTM = null, 
-			string m3_AIT1 = null, 
-			string m3_AIT2 = null, 
-			string m3_AIT3 = null, 
-			string m3_AIT4 = null, 
-			string m3_AIT5 = null, 
-			string m3_AIT6 = null, 
-			string m3_AIT7 = null, 
-			string m3_PROJ = null, 
-			string m3_RORN = null, 
-			string m3_ELNO = null, 
-			int? m3_RORL = null, 
-			int? m3_RORX = null, 
-			string m3_ACRF = null, 
-			string m3_CFJ1 = null, 
-			decimal? m3_CFJ2 = null, 
-			string m3_CFJ3 = null, 
-			string m3_CFJ4 = null, 
-			string m3_CFJ5 = null, 
-			string m3_CFJ6 = null, 
-			decimal? m3_CFJ7 = null, 
-			string m3_CFJ8 = null, 
-			string m3_CFJ9 = null, 
-			string m3_CFJ0 = null, 
+			string m3CTNO, 
+			string m3CUPL, 
+			string m3AGTP, 
+			string m3ADID = null, 
+			string m3SRES = null, 
+			int? m3WOSC = null, 
+			string m3TEC1 = null, 
+			string m3TEC2 = null, 
+			int? m3DIST = null, 
+			int? m3LZON = null, 
+			int? m3TRTI = null, 
+			string m3TVCD = null, 
+			int? m3LSCD = null, 
+			int? m3ILCD = null, 
+			string m3DBCO = null, 
+			string m3INCU = null, 
+			string m3PYNO = null, 
+			string m3VLCD = null, 
+			DateTime? m3VADF = null, 
+			DateTime? m3VADT = null, 
+			DateTime? m3IIDF = null, 
+			DateTime? m3IIDT = null, 
+			int? m3IIYR = null, 
+			int? m3IIMO = null, 
+			int? m3IIDA = null, 
+			DateTime? m3NODT = null, 
+			string m3INVM = null, 
+			int? m3APTM = null, 
+			string m3AIT1 = null, 
+			string m3AIT2 = null, 
+			string m3AIT3 = null, 
+			string m3AIT4 = null, 
+			string m3AIT5 = null, 
+			string m3AIT6 = null, 
+			string m3AIT7 = null, 
+			string m3PROJ = null, 
+			string m3RORN = null, 
+			string m3ELNO = null, 
+			int? m3RORL = null, 
+			int? m3RORX = null, 
+			string m3ACRF = null, 
+			string m3CFJ1 = null, 
+			decimal? m3CFJ2 = null, 
+			string m3CFJ3 = null, 
+			string m3CFJ4 = null, 
+			string m3CFJ5 = null, 
+			string m3CFJ6 = null, 
+			decimal? m3CFJ7 = null, 
+			string m3CFJ8 = null, 
+			string m3CFJ9 = null, 
+			string m3CFJ0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -160,116 +162,116 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CTNO))
-				throw new ArgumentNullException("m3_CTNO");
-			if (string.IsNullOrWhiteSpace(m3_CUPL))
-				throw new ArgumentNullException("m3_CUPL");
-			if (string.IsNullOrWhiteSpace(m3_AGTP))
-				throw new ArgumentNullException("m3_AGTP");
+			if (string.IsNullOrWhiteSpace(m3CTNO))
+				throw new ArgumentNullException(nameof(m3CTNO));
+			if (string.IsNullOrWhiteSpace(m3CUPL))
+				throw new ArgumentNullException(nameof(m3CUPL));
+			if (string.IsNullOrWhiteSpace(m3AGTP))
+				throw new ArgumentNullException(nameof(m3AGTP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CTNO", m3_CTNO.Trim())
-				.WithQueryParameter("CUPL", m3_CUPL.Trim())
-				.WithQueryParameter("AGTP", m3_AGTP.Trim());
+				.WithQueryParameter("CTNO", m3CTNO.Trim())
+				.WithQueryParameter("CUPL", m3CUPL.Trim())
+				.WithQueryParameter("AGTP", m3AGTP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SRES))
-				request.WithQueryParameter("SRES", m3_SRES.Trim());
-			if (m3_WOSC.HasValue)
-				request.WithQueryParameter("WOSC", m3_WOSC.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TEC1))
-				request.WithQueryParameter("TEC1", m3_TEC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEC2))
-				request.WithQueryParameter("TEC2", m3_TEC2.Trim());
-			if (m3_DIST.HasValue)
-				request.WithQueryParameter("DIST", m3_DIST.Value.ToString());
-			if (m3_LZON.HasValue)
-				request.WithQueryParameter("LZON", m3_LZON.Value.ToString());
-			if (m3_TRTI.HasValue)
-				request.WithQueryParameter("TRTI", m3_TRTI.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TVCD))
-				request.WithQueryParameter("TVCD", m3_TVCD.Trim());
-			if (m3_LSCD.HasValue)
-				request.WithQueryParameter("LSCD", m3_LSCD.Value.ToString());
-			if (m3_ILCD.HasValue)
-				request.WithQueryParameter("ILCD", m3_ILCD.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DBCO))
-				request.WithQueryParameter("DBCO", m3_DBCO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INCU))
-				request.WithQueryParameter("INCU", m3_INCU.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VLCD))
-				request.WithQueryParameter("VLCD", m3_VLCD.Trim());
-			if (m3_VADF.HasValue)
-				request.WithQueryParameter("VADF", m3_VADF.Value.ToM3String());
-			if (m3_VADT.HasValue)
-				request.WithQueryParameter("VADT", m3_VADT.Value.ToM3String());
-			if (m3_IIDF.HasValue)
-				request.WithQueryParameter("IIDF", m3_IIDF.Value.ToM3String());
-			if (m3_IIDT.HasValue)
-				request.WithQueryParameter("IIDT", m3_IIDT.Value.ToM3String());
-			if (m3_IIYR.HasValue)
-				request.WithQueryParameter("IIYR", m3_IIYR.Value.ToString());
-			if (m3_IIMO.HasValue)
-				request.WithQueryParameter("IIMO", m3_IIMO.Value.ToString());
-			if (m3_IIDA.HasValue)
-				request.WithQueryParameter("IIDA", m3_IIDA.Value.ToString());
-			if (m3_NODT.HasValue)
-				request.WithQueryParameter("NODT", m3_NODT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_INVM))
-				request.WithQueryParameter("INVM", m3_INVM.Trim());
-			if (m3_APTM.HasValue)
-				request.WithQueryParameter("APTM", m3_APTM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_AIT1))
-				request.WithQueryParameter("AIT1", m3_AIT1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT2))
-				request.WithQueryParameter("AIT2", m3_AIT2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT3))
-				request.WithQueryParameter("AIT3", m3_AIT3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT4))
-				request.WithQueryParameter("AIT4", m3_AIT4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT5))
-				request.WithQueryParameter("AIT5", m3_AIT5.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT6))
-				request.WithQueryParameter("AIT6", m3_AIT6.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT7))
-				request.WithQueryParameter("AIT7", m3_AIT7.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PROJ))
-				request.WithQueryParameter("PROJ", m3_PROJ.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RORN))
-				request.WithQueryParameter("RORN", m3_RORN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ELNO))
-				request.WithQueryParameter("ELNO", m3_ELNO.Trim());
-			if (m3_RORL.HasValue)
-				request.WithQueryParameter("RORL", m3_RORL.Value.ToString());
-			if (m3_RORX.HasValue)
-				request.WithQueryParameter("RORX", m3_RORX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ACRF))
-				request.WithQueryParameter("ACRF", m3_ACRF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ1))
-				request.WithQueryParameter("CFJ1", m3_CFJ1.Trim());
-			if (m3_CFJ2.HasValue)
-				request.WithQueryParameter("CFJ2", m3_CFJ2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ3))
-				request.WithQueryParameter("CFJ3", m3_CFJ3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ4))
-				request.WithQueryParameter("CFJ4", m3_CFJ4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ5))
-				request.WithQueryParameter("CFJ5", m3_CFJ5.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ6))
-				request.WithQueryParameter("CFJ6", m3_CFJ6.Trim());
-			if (m3_CFJ7.HasValue)
-				request.WithQueryParameter("CFJ7", m3_CFJ7.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ8))
-				request.WithQueryParameter("CFJ8", m3_CFJ8.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ9))
-				request.WithQueryParameter("CFJ9", m3_CFJ9.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ0))
-				request.WithQueryParameter("CFJ0", m3_CFJ0.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SRES))
+				request.WithQueryParameter("SRES", m3SRES.Trim());
+			if (m3WOSC.HasValue)
+				request.WithQueryParameter("WOSC", m3WOSC.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TEC1))
+				request.WithQueryParameter("TEC1", m3TEC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEC2))
+				request.WithQueryParameter("TEC2", m3TEC2.Trim());
+			if (m3DIST.HasValue)
+				request.WithQueryParameter("DIST", m3DIST.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3LZON.HasValue)
+				request.WithQueryParameter("LZON", m3LZON.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TRTI.HasValue)
+				request.WithQueryParameter("TRTI", m3TRTI.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TVCD))
+				request.WithQueryParameter("TVCD", m3TVCD.Trim());
+			if (m3LSCD.HasValue)
+				request.WithQueryParameter("LSCD", m3LSCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ILCD.HasValue)
+				request.WithQueryParameter("ILCD", m3ILCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DBCO))
+				request.WithQueryParameter("DBCO", m3DBCO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INCU))
+				request.WithQueryParameter("INCU", m3INCU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VLCD))
+				request.WithQueryParameter("VLCD", m3VLCD.Trim());
+			if (m3VADF.HasValue)
+				request.WithQueryParameter("VADF", m3VADF.Value.ToM3String());
+			if (m3VADT.HasValue)
+				request.WithQueryParameter("VADT", m3VADT.Value.ToM3String());
+			if (m3IIDF.HasValue)
+				request.WithQueryParameter("IIDF", m3IIDF.Value.ToM3String());
+			if (m3IIDT.HasValue)
+				request.WithQueryParameter("IIDT", m3IIDT.Value.ToM3String());
+			if (m3IIYR.HasValue)
+				request.WithQueryParameter("IIYR", m3IIYR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIMO.HasValue)
+				request.WithQueryParameter("IIMO", m3IIMO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIDA.HasValue)
+				request.WithQueryParameter("IIDA", m3IIDA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3NODT.HasValue)
+				request.WithQueryParameter("NODT", m3NODT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3INVM))
+				request.WithQueryParameter("INVM", m3INVM.Trim());
+			if (m3APTM.HasValue)
+				request.WithQueryParameter("APTM", m3APTM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3AIT1))
+				request.WithQueryParameter("AIT1", m3AIT1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT2))
+				request.WithQueryParameter("AIT2", m3AIT2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT3))
+				request.WithQueryParameter("AIT3", m3AIT3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT4))
+				request.WithQueryParameter("AIT4", m3AIT4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT5))
+				request.WithQueryParameter("AIT5", m3AIT5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT6))
+				request.WithQueryParameter("AIT6", m3AIT6.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT7))
+				request.WithQueryParameter("AIT7", m3AIT7.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PROJ))
+				request.WithQueryParameter("PROJ", m3PROJ.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RORN))
+				request.WithQueryParameter("RORN", m3RORN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELNO))
+				request.WithQueryParameter("ELNO", m3ELNO.Trim());
+			if (m3RORL.HasValue)
+				request.WithQueryParameter("RORL", m3RORL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RORX.HasValue)
+				request.WithQueryParameter("RORX", m3RORX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ACRF))
+				request.WithQueryParameter("ACRF", m3ACRF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ1))
+				request.WithQueryParameter("CFJ1", m3CFJ1.Trim());
+			if (m3CFJ2.HasValue)
+				request.WithQueryParameter("CFJ2", m3CFJ2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CFJ3))
+				request.WithQueryParameter("CFJ3", m3CFJ3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ4))
+				request.WithQueryParameter("CFJ4", m3CFJ4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ5))
+				request.WithQueryParameter("CFJ5", m3CFJ5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ6))
+				request.WithQueryParameter("CFJ6", m3CFJ6.Trim());
+			if (m3CFJ7.HasValue)
+				request.WithQueryParameter("CFJ7", m3CFJ7.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CFJ8))
+				request.WithQueryParameter("CFJ8", m3CFJ8.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ9))
+				request.WithQueryParameter("CFJ9", m3CFJ9.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ0))
+				request.WithQueryParameter("CFJ0", m3CFJ0.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -279,7 +281,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -290,9 +293,9 @@ namespace M3H5Lib.Api
 		/// Description This transaction deletes agreement customer site
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CTNO">Agreement number (Required)</param>
-		/// <param name="m3_CUPL">Customer site (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
+		/// <param name="m3CTNO">Agreement number (Required)</param>
+		/// <param name="m3CUPL">Customer site (Required)</param>
+		/// <param name="m3ADID">Address number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -301,9 +304,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelAgrmtCusSite(
-			string m3_CTNO, 
-			string m3_CUPL, 
-			string m3_ADID = null, 
+			string m3CTNO, 
+			string m3CUPL, 
+			string m3ADID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -318,19 +321,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CTNO))
-				throw new ArgumentNullException("m3_CTNO");
-			if (string.IsNullOrWhiteSpace(m3_CUPL))
-				throw new ArgumentNullException("m3_CUPL");
+			if (string.IsNullOrWhiteSpace(m3CTNO))
+				throw new ArgumentNullException(nameof(m3CTNO));
+			if (string.IsNullOrWhiteSpace(m3CUPL))
+				throw new ArgumentNullException(nameof(m3CUPL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CTNO", m3_CTNO.Trim())
-				.WithQueryParameter("CUPL", m3_CUPL.Trim());
+				.WithQueryParameter("CTNO", m3CTNO.Trim())
+				.WithQueryParameter("CUPL", m3CUPL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -340,7 +343,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -351,9 +355,9 @@ namespace M3H5Lib.Api
 		/// Description This transaction displays agreement customer site
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CTNO">Agreement number (Required)</param>
-		/// <param name="m3_CUPL">Customer site (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
+		/// <param name="m3CTNO">Agreement number (Required)</param>
+		/// <param name="m3CUPL">Customer site (Required)</param>
+		/// <param name="m3ADID">Address number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -362,9 +366,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAgrmtCusSiteResponse></returns>
 		/// <exception cref="M3Exception<GetAgrmtCusSiteResponse>"></exception>
 		public async Task<M3Response<GetAgrmtCusSiteResponse>> GetAgrmtCusSite(
-			string m3_CTNO, 
-			string m3_CUPL, 
-			string m3_ADID = null, 
+			string m3CTNO, 
+			string m3CUPL, 
+			string m3ADID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -379,19 +383,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CTNO))
-				throw new ArgumentNullException("m3_CTNO");
-			if (string.IsNullOrWhiteSpace(m3_CUPL))
-				throw new ArgumentNullException("m3_CUPL");
+			if (string.IsNullOrWhiteSpace(m3CTNO))
+				throw new ArgumentNullException(nameof(m3CTNO));
+			if (string.IsNullOrWhiteSpace(m3CUPL))
+				throw new ArgumentNullException(nameof(m3CUPL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CTNO", m3_CTNO.Trim())
-				.WithQueryParameter("CUPL", m3_CUPL.Trim());
+				.WithQueryParameter("CTNO", m3CTNO.Trim())
+				.WithQueryParameter("CUPL", m3CUPL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAgrmtCusSiteResponse>(
@@ -401,7 +405,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -412,9 +417,9 @@ namespace M3H5Lib.Api
 		/// Description This transaction lists agreement customer site
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CTNO">Agreement number (Required)</param>
-		/// <param name="m3_AGTP">Agreement type</param>
-		/// <param name="m3_CUPL">Customer site</param>
+		/// <param name="m3CTNO">Agreement number (Required)</param>
+		/// <param name="m3AGTP">Agreement type</param>
+		/// <param name="m3CUPL">Customer site</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -423,9 +428,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAgrmtCusSiteResponse></returns>
 		/// <exception cref="M3Exception<LstAgrmtCusSiteResponse>"></exception>
 		public async Task<M3Response<LstAgrmtCusSiteResponse>> LstAgrmtCusSite(
-			string m3_CTNO, 
-			string m3_AGTP = null, 
-			string m3_CUPL = null, 
+			string m3CTNO, 
+			string m3AGTP = null, 
+			string m3CUPL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -440,18 +445,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CTNO))
-				throw new ArgumentNullException("m3_CTNO");
+			if (string.IsNullOrWhiteSpace(m3CTNO))
+				throw new ArgumentNullException(nameof(m3CTNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CTNO", m3_CTNO.Trim());
+				.WithQueryParameter("CTNO", m3CTNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AGTP))
-				request.WithQueryParameter("AGTP", m3_AGTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUPL))
-				request.WithQueryParameter("CUPL", m3_CUPL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGTP))
+				request.WithQueryParameter("AGTP", m3AGTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUPL))
+				request.WithQueryParameter("CUPL", m3CUPL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAgrmtCusSiteResponse>(
@@ -461,7 +466,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -472,57 +478,57 @@ namespace M3H5Lib.Api
 		/// Description This transaction updates agreement customer site
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CTNO">Agreement number (Required)</param>
-		/// <param name="m3_CUPL">Customer site (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_AGTP">Agreement type</param>
-		/// <param name="m3_SRES">Service manager</param>
-		/// <param name="m3_WOSC">Work schedule</param>
-		/// <param name="m3_TEC1">Technician 1</param>
-		/// <param name="m3_TEC2">Technician 2</param>
-		/// <param name="m3_DIST">Number of kilometer</param>
-		/// <param name="m3_LZON">Service zone</param>
-		/// <param name="m3_TRTI">Planned travel time</param>
-		/// <param name="m3_TVCD">Travel type</param>
-		/// <param name="m3_LSCD">Service stop</param>
-		/// <param name="m3_ILCD">Invoice block</param>
-		/// <param name="m3_DBCO">Payer control</param>
-		/// <param name="m3_INCU">Internal customer number</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_VLCD">Validity type</param>
-		/// <param name="m3_VADF">Valid from</param>
-		/// <param name="m3_VADT">Valid to</param>
-		/// <param name="m3_IIDF">Start date - invoicing range</param>
-		/// <param name="m3_IIDT">End date - invoicing range</param>
-		/// <param name="m3_IIYR">Invoicing interval - years</param>
-		/// <param name="m3_IIMO">Invoicing interval - months</param>
-		/// <param name="m3_IIDA">Invoicing interval - days</param>
-		/// <param name="m3_NODT">Next order date</param>
-		/// <param name="m3_INVM">Invoicing method</param>
-		/// <param name="m3_APTM">Response time</param>
-		/// <param name="m3_AIT1">Accounting dimension 1</param>
-		/// <param name="m3_AIT2">Accounting dimension 2</param>
-		/// <param name="m3_AIT3">Accounting dimension 3</param>
-		/// <param name="m3_AIT4">Accounting dimension 4</param>
-		/// <param name="m3_AIT5">Accounting dimension 5</param>
-		/// <param name="m3_AIT6">Accounting dimension 6</param>
-		/// <param name="m3_AIT7">Accounting dimension 7</param>
-		/// <param name="m3_PROJ">Project number</param>
-		/// <param name="m3_RORN">Reference order number</param>
-		/// <param name="m3_ELNO">Project element</param>
-		/// <param name="m3_RORL">Reference order line</param>
-		/// <param name="m3_RORX">Line suffix</param>
-		/// <param name="m3_ACRF">User-defined accounting control object</param>
-		/// <param name="m3_CFJ1">User-defined field 1 - serv agreement</param>
-		/// <param name="m3_CFJ2">User-defined field 2 - serv agreement</param>
-		/// <param name="m3_CFJ3">User-defined field 3 - serv agreement</param>
-		/// <param name="m3_CFJ4">User-defined field 4 - serv agreement</param>
-		/// <param name="m3_CFJ5">User-defined field 5 - serv agreement</param>
-		/// <param name="m3_CFJ6">User-defined field 6 - serv agreement</param>
-		/// <param name="m3_CFJ7">User-defined field 7 - serv agreement</param>
-		/// <param name="m3_CFJ8">User-defined field 8 - serv agreement</param>
-		/// <param name="m3_CFJ9">User-defined field 9 - serv agreement</param>
-		/// <param name="m3_CFJ0">User-defined field 10 - serv agreement</param>
+		/// <param name="m3CTNO">Agreement number (Required)</param>
+		/// <param name="m3CUPL">Customer site (Required)</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3AGTP">Agreement type</param>
+		/// <param name="m3SRES">Service manager</param>
+		/// <param name="m3WOSC">Work schedule</param>
+		/// <param name="m3TEC1">Technician 1</param>
+		/// <param name="m3TEC2">Technician 2</param>
+		/// <param name="m3DIST">Number of kilometer</param>
+		/// <param name="m3LZON">Service zone</param>
+		/// <param name="m3TRTI">Planned travel time</param>
+		/// <param name="m3TVCD">Travel type</param>
+		/// <param name="m3LSCD">Service stop</param>
+		/// <param name="m3ILCD">Invoice block</param>
+		/// <param name="m3DBCO">Payer control</param>
+		/// <param name="m3INCU">Internal customer number</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3VLCD">Validity type</param>
+		/// <param name="m3VADF">Valid from</param>
+		/// <param name="m3VADT">Valid to</param>
+		/// <param name="m3IIDF">Start date - invoicing range</param>
+		/// <param name="m3IIDT">End date - invoicing range</param>
+		/// <param name="m3IIYR">Invoicing interval - years</param>
+		/// <param name="m3IIMO">Invoicing interval - months</param>
+		/// <param name="m3IIDA">Invoicing interval - days</param>
+		/// <param name="m3NODT">Next order date</param>
+		/// <param name="m3INVM">Invoicing method</param>
+		/// <param name="m3APTM">Response time</param>
+		/// <param name="m3AIT1">Accounting dimension 1</param>
+		/// <param name="m3AIT2">Accounting dimension 2</param>
+		/// <param name="m3AIT3">Accounting dimension 3</param>
+		/// <param name="m3AIT4">Accounting dimension 4</param>
+		/// <param name="m3AIT5">Accounting dimension 5</param>
+		/// <param name="m3AIT6">Accounting dimension 6</param>
+		/// <param name="m3AIT7">Accounting dimension 7</param>
+		/// <param name="m3PROJ">Project number</param>
+		/// <param name="m3RORN">Reference order number</param>
+		/// <param name="m3ELNO">Project element</param>
+		/// <param name="m3RORL">Reference order line</param>
+		/// <param name="m3RORX">Line suffix</param>
+		/// <param name="m3ACRF">User-defined accounting control object</param>
+		/// <param name="m3CFJ1">User-defined field 1 - serv agreement</param>
+		/// <param name="m3CFJ2">User-defined field 2 - serv agreement</param>
+		/// <param name="m3CFJ3">User-defined field 3 - serv agreement</param>
+		/// <param name="m3CFJ4">User-defined field 4 - serv agreement</param>
+		/// <param name="m3CFJ5">User-defined field 5 - serv agreement</param>
+		/// <param name="m3CFJ6">User-defined field 6 - serv agreement</param>
+		/// <param name="m3CFJ7">User-defined field 7 - serv agreement</param>
+		/// <param name="m3CFJ8">User-defined field 8 - serv agreement</param>
+		/// <param name="m3CFJ9">User-defined field 9 - serv agreement</param>
+		/// <param name="m3CFJ0">User-defined field 10 - serv agreement</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -531,57 +537,57 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAgrmtCusSite(
-			string m3_CTNO, 
-			string m3_CUPL, 
-			string m3_ADID = null, 
-			string m3_AGTP = null, 
-			string m3_SRES = null, 
-			int? m3_WOSC = null, 
-			string m3_TEC1 = null, 
-			string m3_TEC2 = null, 
-			int? m3_DIST = null, 
-			int? m3_LZON = null, 
-			int? m3_TRTI = null, 
-			string m3_TVCD = null, 
-			int? m3_LSCD = null, 
-			int? m3_ILCD = null, 
-			string m3_DBCO = null, 
-			string m3_INCU = null, 
-			string m3_PYNO = null, 
-			string m3_VLCD = null, 
-			DateTime? m3_VADF = null, 
-			DateTime? m3_VADT = null, 
-			DateTime? m3_IIDF = null, 
-			DateTime? m3_IIDT = null, 
-			int? m3_IIYR = null, 
-			int? m3_IIMO = null, 
-			int? m3_IIDA = null, 
-			DateTime? m3_NODT = null, 
-			string m3_INVM = null, 
-			int? m3_APTM = null, 
-			string m3_AIT1 = null, 
-			string m3_AIT2 = null, 
-			string m3_AIT3 = null, 
-			string m3_AIT4 = null, 
-			string m3_AIT5 = null, 
-			string m3_AIT6 = null, 
-			string m3_AIT7 = null, 
-			string m3_PROJ = null, 
-			string m3_RORN = null, 
-			string m3_ELNO = null, 
-			int? m3_RORL = null, 
-			int? m3_RORX = null, 
-			string m3_ACRF = null, 
-			string m3_CFJ1 = null, 
-			decimal? m3_CFJ2 = null, 
-			string m3_CFJ3 = null, 
-			string m3_CFJ4 = null, 
-			string m3_CFJ5 = null, 
-			string m3_CFJ6 = null, 
-			decimal? m3_CFJ7 = null, 
-			string m3_CFJ8 = null, 
-			string m3_CFJ9 = null, 
-			string m3_CFJ0 = null, 
+			string m3CTNO, 
+			string m3CUPL, 
+			string m3ADID = null, 
+			string m3AGTP = null, 
+			string m3SRES = null, 
+			int? m3WOSC = null, 
+			string m3TEC1 = null, 
+			string m3TEC2 = null, 
+			int? m3DIST = null, 
+			int? m3LZON = null, 
+			int? m3TRTI = null, 
+			string m3TVCD = null, 
+			int? m3LSCD = null, 
+			int? m3ILCD = null, 
+			string m3DBCO = null, 
+			string m3INCU = null, 
+			string m3PYNO = null, 
+			string m3VLCD = null, 
+			DateTime? m3VADF = null, 
+			DateTime? m3VADT = null, 
+			DateTime? m3IIDF = null, 
+			DateTime? m3IIDT = null, 
+			int? m3IIYR = null, 
+			int? m3IIMO = null, 
+			int? m3IIDA = null, 
+			DateTime? m3NODT = null, 
+			string m3INVM = null, 
+			int? m3APTM = null, 
+			string m3AIT1 = null, 
+			string m3AIT2 = null, 
+			string m3AIT3 = null, 
+			string m3AIT4 = null, 
+			string m3AIT5 = null, 
+			string m3AIT6 = null, 
+			string m3AIT7 = null, 
+			string m3PROJ = null, 
+			string m3RORN = null, 
+			string m3ELNO = null, 
+			int? m3RORL = null, 
+			int? m3RORX = null, 
+			string m3ACRF = null, 
+			string m3CFJ1 = null, 
+			decimal? m3CFJ2 = null, 
+			string m3CFJ3 = null, 
+			string m3CFJ4 = null, 
+			string m3CFJ5 = null, 
+			string m3CFJ6 = null, 
+			decimal? m3CFJ7 = null, 
+			string m3CFJ8 = null, 
+			string m3CFJ9 = null, 
+			string m3CFJ0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -596,115 +602,115 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CTNO))
-				throw new ArgumentNullException("m3_CTNO");
-			if (string.IsNullOrWhiteSpace(m3_CUPL))
-				throw new ArgumentNullException("m3_CUPL");
+			if (string.IsNullOrWhiteSpace(m3CTNO))
+				throw new ArgumentNullException(nameof(m3CTNO));
+			if (string.IsNullOrWhiteSpace(m3CUPL))
+				throw new ArgumentNullException(nameof(m3CUPL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CTNO", m3_CTNO.Trim())
-				.WithQueryParameter("CUPL", m3_CUPL.Trim());
+				.WithQueryParameter("CTNO", m3CTNO.Trim())
+				.WithQueryParameter("CUPL", m3CUPL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AGTP))
-				request.WithQueryParameter("AGTP", m3_AGTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SRES))
-				request.WithQueryParameter("SRES", m3_SRES.Trim());
-			if (m3_WOSC.HasValue)
-				request.WithQueryParameter("WOSC", m3_WOSC.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TEC1))
-				request.WithQueryParameter("TEC1", m3_TEC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TEC2))
-				request.WithQueryParameter("TEC2", m3_TEC2.Trim());
-			if (m3_DIST.HasValue)
-				request.WithQueryParameter("DIST", m3_DIST.Value.ToString());
-			if (m3_LZON.HasValue)
-				request.WithQueryParameter("LZON", m3_LZON.Value.ToString());
-			if (m3_TRTI.HasValue)
-				request.WithQueryParameter("TRTI", m3_TRTI.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TVCD))
-				request.WithQueryParameter("TVCD", m3_TVCD.Trim());
-			if (m3_LSCD.HasValue)
-				request.WithQueryParameter("LSCD", m3_LSCD.Value.ToString());
-			if (m3_ILCD.HasValue)
-				request.WithQueryParameter("ILCD", m3_ILCD.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DBCO))
-				request.WithQueryParameter("DBCO", m3_DBCO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INCU))
-				request.WithQueryParameter("INCU", m3_INCU.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VLCD))
-				request.WithQueryParameter("VLCD", m3_VLCD.Trim());
-			if (m3_VADF.HasValue)
-				request.WithQueryParameter("VADF", m3_VADF.Value.ToM3String());
-			if (m3_VADT.HasValue)
-				request.WithQueryParameter("VADT", m3_VADT.Value.ToM3String());
-			if (m3_IIDF.HasValue)
-				request.WithQueryParameter("IIDF", m3_IIDF.Value.ToM3String());
-			if (m3_IIDT.HasValue)
-				request.WithQueryParameter("IIDT", m3_IIDT.Value.ToM3String());
-			if (m3_IIYR.HasValue)
-				request.WithQueryParameter("IIYR", m3_IIYR.Value.ToString());
-			if (m3_IIMO.HasValue)
-				request.WithQueryParameter("IIMO", m3_IIMO.Value.ToString());
-			if (m3_IIDA.HasValue)
-				request.WithQueryParameter("IIDA", m3_IIDA.Value.ToString());
-			if (m3_NODT.HasValue)
-				request.WithQueryParameter("NODT", m3_NODT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_INVM))
-				request.WithQueryParameter("INVM", m3_INVM.Trim());
-			if (m3_APTM.HasValue)
-				request.WithQueryParameter("APTM", m3_APTM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_AIT1))
-				request.WithQueryParameter("AIT1", m3_AIT1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT2))
-				request.WithQueryParameter("AIT2", m3_AIT2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT3))
-				request.WithQueryParameter("AIT3", m3_AIT3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT4))
-				request.WithQueryParameter("AIT4", m3_AIT4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT5))
-				request.WithQueryParameter("AIT5", m3_AIT5.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT6))
-				request.WithQueryParameter("AIT6", m3_AIT6.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AIT7))
-				request.WithQueryParameter("AIT7", m3_AIT7.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PROJ))
-				request.WithQueryParameter("PROJ", m3_PROJ.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RORN))
-				request.WithQueryParameter("RORN", m3_RORN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ELNO))
-				request.WithQueryParameter("ELNO", m3_ELNO.Trim());
-			if (m3_RORL.HasValue)
-				request.WithQueryParameter("RORL", m3_RORL.Value.ToString());
-			if (m3_RORX.HasValue)
-				request.WithQueryParameter("RORX", m3_RORX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ACRF))
-				request.WithQueryParameter("ACRF", m3_ACRF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ1))
-				request.WithQueryParameter("CFJ1", m3_CFJ1.Trim());
-			if (m3_CFJ2.HasValue)
-				request.WithQueryParameter("CFJ2", m3_CFJ2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ3))
-				request.WithQueryParameter("CFJ3", m3_CFJ3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ4))
-				request.WithQueryParameter("CFJ4", m3_CFJ4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ5))
-				request.WithQueryParameter("CFJ5", m3_CFJ5.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ6))
-				request.WithQueryParameter("CFJ6", m3_CFJ6.Trim());
-			if (m3_CFJ7.HasValue)
-				request.WithQueryParameter("CFJ7", m3_CFJ7.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ8))
-				request.WithQueryParameter("CFJ8", m3_CFJ8.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ9))
-				request.WithQueryParameter("CFJ9", m3_CFJ9.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFJ0))
-				request.WithQueryParameter("CFJ0", m3_CFJ0.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGTP))
+				request.WithQueryParameter("AGTP", m3AGTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SRES))
+				request.WithQueryParameter("SRES", m3SRES.Trim());
+			if (m3WOSC.HasValue)
+				request.WithQueryParameter("WOSC", m3WOSC.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TEC1))
+				request.WithQueryParameter("TEC1", m3TEC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TEC2))
+				request.WithQueryParameter("TEC2", m3TEC2.Trim());
+			if (m3DIST.HasValue)
+				request.WithQueryParameter("DIST", m3DIST.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3LZON.HasValue)
+				request.WithQueryParameter("LZON", m3LZON.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TRTI.HasValue)
+				request.WithQueryParameter("TRTI", m3TRTI.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TVCD))
+				request.WithQueryParameter("TVCD", m3TVCD.Trim());
+			if (m3LSCD.HasValue)
+				request.WithQueryParameter("LSCD", m3LSCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ILCD.HasValue)
+				request.WithQueryParameter("ILCD", m3ILCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DBCO))
+				request.WithQueryParameter("DBCO", m3DBCO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INCU))
+				request.WithQueryParameter("INCU", m3INCU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VLCD))
+				request.WithQueryParameter("VLCD", m3VLCD.Trim());
+			if (m3VADF.HasValue)
+				request.WithQueryParameter("VADF", m3VADF.Value.ToM3String());
+			if (m3VADT.HasValue)
+				request.WithQueryParameter("VADT", m3VADT.Value.ToM3String());
+			if (m3IIDF.HasValue)
+				request.WithQueryParameter("IIDF", m3IIDF.Value.ToM3String());
+			if (m3IIDT.HasValue)
+				request.WithQueryParameter("IIDT", m3IIDT.Value.ToM3String());
+			if (m3IIYR.HasValue)
+				request.WithQueryParameter("IIYR", m3IIYR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIMO.HasValue)
+				request.WithQueryParameter("IIMO", m3IIMO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3IIDA.HasValue)
+				request.WithQueryParameter("IIDA", m3IIDA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3NODT.HasValue)
+				request.WithQueryParameter("NODT", m3NODT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3INVM))
+				request.WithQueryParameter("INVM", m3INVM.Trim());
+			if (m3APTM.HasValue)
+				request.WithQueryParameter("APTM", m3APTM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3AIT1))
+				request.WithQueryParameter("AIT1", m3AIT1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT2))
+				request.WithQueryParameter("AIT2", m3AIT2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT3))
+				request.WithQueryParameter("AIT3", m3AIT3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT4))
+				request.WithQueryParameter("AIT4", m3AIT4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT5))
+				request.WithQueryParameter("AIT5", m3AIT5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT6))
+				request.WithQueryParameter("AIT6", m3AIT6.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AIT7))
+				request.WithQueryParameter("AIT7", m3AIT7.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PROJ))
+				request.WithQueryParameter("PROJ", m3PROJ.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RORN))
+				request.WithQueryParameter("RORN", m3RORN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ELNO))
+				request.WithQueryParameter("ELNO", m3ELNO.Trim());
+			if (m3RORL.HasValue)
+				request.WithQueryParameter("RORL", m3RORL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RORX.HasValue)
+				request.WithQueryParameter("RORX", m3RORX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ACRF))
+				request.WithQueryParameter("ACRF", m3ACRF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ1))
+				request.WithQueryParameter("CFJ1", m3CFJ1.Trim());
+			if (m3CFJ2.HasValue)
+				request.WithQueryParameter("CFJ2", m3CFJ2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CFJ3))
+				request.WithQueryParameter("CFJ3", m3CFJ3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ4))
+				request.WithQueryParameter("CFJ4", m3CFJ4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ5))
+				request.WithQueryParameter("CFJ5", m3CFJ5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ6))
+				request.WithQueryParameter("CFJ6", m3CFJ6.Trim());
+			if (m3CFJ7.HasValue)
+				request.WithQueryParameter("CFJ7", m3CFJ7.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CFJ8))
+				request.WithQueryParameter("CFJ8", m3CFJ8.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ9))
+				request.WithQueryParameter("CFJ9", m3CFJ9.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFJ0))
+				request.WithQueryParameter("CFJ0", m3CFJ0.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -714,7 +720,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

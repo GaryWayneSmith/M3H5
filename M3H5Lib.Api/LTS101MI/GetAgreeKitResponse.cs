@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kit number")]
-		public string M3_KTNO => GetString("KTNO");
+		public string M3KTNO => GetString("KTNO");
 
 		/// <summary>
 		/// Description: Index adjustment line
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index adjustment line")]
-		public int? M3_INAL => GetNullableInt("INAL");
+		public int? M3INAL => GetNullableInt("INAL");
 
 		/// <summary>
 		/// Description: Price type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price type")]
-		public int? M3_AFPT => GetNullableInt("AFPT");
+		public int? M3AFPT => GetNullableInt("AFPT");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_KTDS => GetString("KTDS");
+		public string M3KTDS => GetString("KTDS");
 
 		/// <summary>
 		/// Description: Feature 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 1")]
-		public string M3_FT01 => GetString("FT01");
+		public string M3FT01 => GetString("FT01");
 
 		/// <summary>
 		/// Description: Feature 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 2")]
-		public string M3_FT02 => GetString("FT02");
+		public string M3FT02 => GetString("FT02");
 
 		/// <summary>
 		/// Description: Feature 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 3")]
-		public string M3_FT03 => GetString("FT03");
+		public string M3FT03 => GetString("FT03");
 
 		/// <summary>
 		/// Description: Feature 4
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 4")]
-		public string M3_FT04 => GetString("FT04");
+		public string M3FT04 => GetString("FT04");
 
 		/// <summary>
 		/// Description: Feature 5
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 5")]
-		public string M3_FT05 => GetString("FT05");
+		public string M3FT05 => GetString("FT05");
 
 		/// <summary>
 		/// Description: Feature 6
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 6")]
-		public string M3_FT06 => GetString("FT06");
+		public string M3FT06 => GetString("FT06");
 
 		/// <summary>
 		/// Description: Feature 7
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 7")]
-		public string M3_FT07 => GetString("FT07");
+		public string M3FT07 => GetString("FT07");
 
 		/// <summary>
 		/// Description: Feature 8
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 8")]
-		public string M3_FT08 => GetString("FT08");
+		public string M3FT08 => GetString("FT08");
 
 		/// <summary>
 		/// Description: Feature 9
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 9")]
-		public string M3_FT09 => GetString("FT09");
+		public string M3FT09 => GetString("FT09");
 
 		/// <summary>
 		/// Description: Feature 10
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 10")]
-		public string M3_FT10 => GetString("FT10");
+		public string M3FT10 => GetString("FT10");
 
 		/// <summary>
 		/// Description: Feature 11
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 11")]
-		public string M3_FT11 => GetString("FT11");
+		public string M3FT11 => GetString("FT11");
 
 		/// <summary>
 		/// Description: Feature 12
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 12")]
-		public string M3_FT12 => GetString("FT12");
+		public string M3FT12 => GetString("FT12");
 
 		/// <summary>
 		/// Description: Feature 13
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 13")]
-		public string M3_FT13 => GetString("FT13");
+		public string M3FT13 => GetString("FT13");
 
 		/// <summary>
 		/// Description: Feature 14
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature 14")]
-		public string M3_FT14 => GetString("FT14");
+		public string M3FT14 => GetString("FT14");
 	}
 }
 // EOF

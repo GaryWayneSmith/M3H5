@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS460MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add Kit Package Definition
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PPNB">Pre-pack number</param>
-		/// <param name="m3_PRNO">Product number</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PPNB">Pre-pack number</param>
+		/// <param name="m3PRNO">Product number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddKitPackDefResponse></returns>
 		/// <exception cref="M3Exception<AddKitPackDefResponse>"></exception>
 		public async Task<M3Response<AddKitPackDefResponse>> AddKitPackDef(
-			string m3_FACI, 
-			string m3_PPNB = null, 
-			string m3_PRNO = null, 
+			string m3FACI, 
+			string m3PPNB = null, 
+			string m3PRNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim());
+				.WithQueryParameter("FACI", m3FACI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PPNB))
-				request.WithQueryParameter("PPNB", m3_PPNB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PPNB))
+				request.WithQueryParameter("PPNB", m3PPNB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
 
 			// Execute the request
 			var result = await Execute<AddKitPackDefResponse>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,10 +99,10 @@ namespace M3H5Lib.Api
 		/// Description Add Package Definition Head
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
-		/// <param name="m3_DSCR">Description</param>
-		/// <param name="m3_PACT">Packaging</param>
-		/// <param name="m3_PPSA">Pre-pack status</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3DSCR">Description</param>
+		/// <param name="m3PACT">Packaging</param>
+		/// <param name="m3PPSA">Pre-pack status</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -108,10 +111,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPackDefHead(
-			string m3_PPNB, 
-			string m3_DSCR = null, 
-			string m3_PACT = null, 
-			string m3_PPSA = null, 
+			string m3PPNB, 
+			string m3DSCR = null, 
+			string m3PACT = null, 
+			string m3PPSA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -126,20 +129,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DSCR))
-				request.WithQueryParameter("DSCR", m3_DSCR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PACT))
-				request.WithQueryParameter("PACT", m3_PACT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PPSA))
-				request.WithQueryParameter("PPSA", m3_PPSA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DSCR))
+				request.WithQueryParameter("DSCR", m3DSCR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PACT))
+				request.WithQueryParameter("PACT", m3PACT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PPSA))
+				request.WithQueryParameter("PPSA", m3PPSA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -149,7 +152,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -160,12 +164,12 @@ namespace M3H5Lib.Api
 		/// Description Add Package Definition Line
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_TRQT">Transaction quantity - basic U/M</param>
-		/// <param name="m3_D1QT">Standard quantity</param>
-		/// <param name="m3_D2QT">Minimum quantity</param>
-		/// <param name="m3_D3QT">Maximum quantity</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3TRQT">Transaction quantity - basic U/M</param>
+		/// <param name="m3D1QT">Standard quantity</param>
+		/// <param name="m3D2QT">Minimum quantity</param>
+		/// <param name="m3D3QT">Maximum quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -174,12 +178,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPackDefLine(
-			string m3_PPNB, 
-			string m3_ITNO, 
-			decimal? m3_TRQT = null, 
-			decimal? m3_D1QT = null, 
-			decimal? m3_D2QT = null, 
-			decimal? m3_D3QT = null, 
+			string m3PPNB, 
+			string m3ITNO, 
+			decimal? m3TRQT = null, 
+			decimal? m3D1QT = null, 
+			decimal? m3D2QT = null, 
+			decimal? m3D3QT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -194,25 +198,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_TRQT.HasValue)
-				request.WithQueryParameter("TRQT", m3_TRQT.Value.ToString());
-			if (m3_D1QT.HasValue)
-				request.WithQueryParameter("D1QT", m3_D1QT.Value.ToString());
-			if (m3_D2QT.HasValue)
-				request.WithQueryParameter("D2QT", m3_D2QT.Value.ToString());
-			if (m3_D3QT.HasValue)
-				request.WithQueryParameter("D3QT", m3_D3QT.Value.ToString());
+			if (m3TRQT.HasValue)
+				request.WithQueryParameter("TRQT", m3TRQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3D1QT.HasValue)
+				request.WithQueryParameter("D1QT", m3D1QT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3D2QT.HasValue)
+				request.WithQueryParameter("D2QT", m3D2QT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3D3QT.HasValue)
+				request.WithQueryParameter("D3QT", m3D3QT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -222,7 +226,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -233,10 +238,10 @@ namespace M3H5Lib.Api
 		/// Description Change Package Definition Head
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
-		/// <param name="m3_DSCR">Description</param>
-		/// <param name="m3_PACT">Packaging</param>
-		/// <param name="m3_PPSA">Pre-pack status</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3DSCR">Description</param>
+		/// <param name="m3PACT">Packaging</param>
+		/// <param name="m3PPSA">Pre-pack status</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -245,10 +250,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgPackDefHead(
-			string m3_PPNB, 
-			string m3_DSCR = null, 
-			string m3_PACT = null, 
-			string m3_PPSA = null, 
+			string m3PPNB, 
+			string m3DSCR = null, 
+			string m3PACT = null, 
+			string m3PPSA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -263,20 +268,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DSCR))
-				request.WithQueryParameter("DSCR", m3_DSCR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PACT))
-				request.WithQueryParameter("PACT", m3_PACT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PPSA))
-				request.WithQueryParameter("PPSA", m3_PPSA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DSCR))
+				request.WithQueryParameter("DSCR", m3DSCR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PACT))
+				request.WithQueryParameter("PACT", m3PACT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PPSA))
+				request.WithQueryParameter("PPSA", m3PPSA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -286,7 +291,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -297,11 +303,11 @@ namespace M3H5Lib.Api
 		/// Description Change Pack Definition Line
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_TRQT">Transaction quantity - basic U/M</param>
-		/// <param name="m3_D1QT">Standard quantity</param>
-		/// <param name="m3_D2QT">Minimum quantity</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3TRQT">Transaction quantity - basic U/M</param>
+		/// <param name="m3D1QT">Standard quantity</param>
+		/// <param name="m3D2QT">Minimum quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -310,11 +316,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgPackDefLine(
-			string m3_PPNB, 
-			string m3_ITNO, 
-			decimal? m3_TRQT = null, 
-			decimal? m3_D1QT = null, 
-			decimal? m3_D2QT = null, 
+			string m3PPNB, 
+			string m3ITNO, 
+			decimal? m3TRQT = null, 
+			decimal? m3D1QT = null, 
+			decimal? m3D2QT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -329,23 +335,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_TRQT.HasValue)
-				request.WithQueryParameter("TRQT", m3_TRQT.Value.ToString());
-			if (m3_D1QT.HasValue)
-				request.WithQueryParameter("D1QT", m3_D1QT.Value.ToString());
-			if (m3_D2QT.HasValue)
-				request.WithQueryParameter("D2QT", m3_D2QT.Value.ToString());
+			if (m3TRQT.HasValue)
+				request.WithQueryParameter("TRQT", m3TRQT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3D1QT.HasValue)
+				request.WithQueryParameter("D1QT", m3D1QT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3D2QT.HasValue)
+				request.WithQueryParameter("D2QT", m3D2QT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -355,7 +361,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -366,7 +373,7 @@ namespace M3H5Lib.Api
 		/// Description Del Package Definition Head
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -375,7 +382,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelPackDef(
-			string m3_PPNB, 
+			string m3PPNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -390,12 +397,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -405,7 +412,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -416,8 +424,8 @@ namespace M3H5Lib.Api
 		/// Description Delete Package Definition Line
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -426,8 +434,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelPackDefLine(
-			string m3_PPNB, 
-			string m3_ITNO, 
+			string m3PPNB, 
+			string m3ITNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -442,15 +450,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -460,7 +468,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -471,7 +480,7 @@ namespace M3H5Lib.Api
 		/// Description Get Package Definition Head
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -480,7 +489,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPackDefHeadResponse></returns>
 		/// <exception cref="M3Exception<GetPackDefHeadResponse>"></exception>
 		public async Task<M3Response<GetPackDefHeadResponse>> GetPackDefHead(
-			string m3_PPNB, 
+			string m3PPNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -495,12 +504,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim());
 
 			// Execute the request
 			var result = await Execute<GetPackDefHeadResponse>(
@@ -510,7 +519,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -521,8 +531,8 @@ namespace M3H5Lib.Api
 		/// Description List Package Definition Line
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
-		/// <param name="m3_ITNO">Item number</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3ITNO">Item number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -531,8 +541,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPackDefLineResponse></returns>
 		/// <exception cref="M3Exception<LstPackDefLineResponse>"></exception>
 		public async Task<M3Response<LstPackDefLineResponse>> LstPackDefLine(
-			string m3_PPNB, 
-			string m3_ITNO = null, 
+			string m3PPNB, 
+			string m3ITNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -547,16 +557,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PPNB", m3_PPNB.Trim());
+				.WithQueryParameter("PPNB", m3PPNB.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPackDefLineResponse>(
@@ -566,7 +576,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

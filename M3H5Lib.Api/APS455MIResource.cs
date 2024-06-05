@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,8 +37,8 @@ namespace M3H5Lib.Api
 		/// Description Validate by batch number
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_INBN">Invoice batch number (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3INBN">Invoice batch number (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,8 +47,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ValidByBatchNo(
-			long m3_INBN, 
-			string m3_DIVI = null, 
+			long m3INBN, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,11 +66,11 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("INBN", m3_INBN.ToString());
+				.WithQueryParameter("INBN", m3INBN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -78,7 +80,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -89,25 +92,25 @@ namespace M3H5Lib.Api
 		/// Description Validate by selection
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_FSIN">Supplier invoice number</param>
-		/// <param name="m3_TSIN">Supplier invoice number</param>
-		/// <param name="m3_FINB">Invoice batch number</param>
-		/// <param name="m3_TINB">Invoice batch number</param>
-		/// <param name="m3_FIBT">Invoice batch type</param>
-		/// <param name="m3_TIBT">Invoice batch type</param>
-		/// <param name="m3_FSUP">Invoice status</param>
-		/// <param name="m3_TSUP">Invoice status</param>
-		/// <param name="m3_FSUN">Supplier</param>
-		/// <param name="m3_TSUN">Supplier</param>
-		/// <param name="m3_FIVD">Invoice date</param>
-		/// <param name="m3_TIVD">Invoice date</param>
-		/// <param name="m3_FAPC">Authorized user</param>
-		/// <param name="m3_TAPC">Authorized user</param>
-		/// <param name="m3_FIBH">Invoice batch head error</param>
-		/// <param name="m3_TIBH">Invoice batch head error</param>
-		/// <param name="m3_FIBL">Invoice batch line error</param>
-		/// <param name="m3_TIBL">Invoice batch line error</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3FSIN">Supplier invoice number</param>
+		/// <param name="m3TSIN">Supplier invoice number</param>
+		/// <param name="m3FINB">Invoice batch number</param>
+		/// <param name="m3TINB">Invoice batch number</param>
+		/// <param name="m3FIBT">Invoice batch type</param>
+		/// <param name="m3TIBT">Invoice batch type</param>
+		/// <param name="m3FSUP">Invoice status</param>
+		/// <param name="m3TSUP">Invoice status</param>
+		/// <param name="m3FSUN">Supplier</param>
+		/// <param name="m3TSUN">Supplier</param>
+		/// <param name="m3FIVD">Invoice date</param>
+		/// <param name="m3TIVD">Invoice date</param>
+		/// <param name="m3FAPC">Authorized user</param>
+		/// <param name="m3TAPC">Authorized user</param>
+		/// <param name="m3FIBH">Invoice batch head error</param>
+		/// <param name="m3TIBH">Invoice batch head error</param>
+		/// <param name="m3FIBL">Invoice batch line error</param>
+		/// <param name="m3TIBL">Invoice batch line error</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -116,25 +119,25 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ValidBySelect(
-			string m3_DIVI = null, 
-			string m3_FSIN = null, 
-			string m3_TSIN = null, 
-			long? m3_FINB = null, 
-			long? m3_TINB = null, 
-			string m3_FIBT = null, 
-			string m3_TIBT = null, 
-			int? m3_FSUP = null, 
-			int? m3_TSUP = null, 
-			string m3_FSUN = null, 
-			string m3_TSUN = null, 
-			DateTime? m3_FIVD = null, 
-			DateTime? m3_TIVD = null, 
-			string m3_FAPC = null, 
-			string m3_TAPC = null, 
-			int? m3_FIBH = null, 
-			int? m3_TIBH = null, 
-			int? m3_FIBL = null, 
-			int? m3_TIBL = null, 
+			string m3DIVI = null, 
+			string m3FSIN = null, 
+			string m3TSIN = null, 
+			long? m3FINB = null, 
+			long? m3TINB = null, 
+			string m3FIBT = null, 
+			string m3TIBT = null, 
+			int? m3FSUP = null, 
+			int? m3TSUP = null, 
+			string m3FSUN = null, 
+			string m3TSUN = null, 
+			DateTime? m3FIVD = null, 
+			DateTime? m3TIVD = null, 
+			string m3FAPC = null, 
+			string m3TAPC = null, 
+			int? m3FIBH = null, 
+			int? m3TIBH = null, 
+			int? m3FIBL = null, 
+			int? m3TIBL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -149,44 +152,44 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FSIN))
-				request.WithQueryParameter("FSIN", m3_FSIN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TSIN))
-				request.WithQueryParameter("TSIN", m3_TSIN.Trim());
-			if (m3_FINB.HasValue)
-				request.WithQueryParameter("FINB", m3_FINB.Value.ToString());
-			if (m3_TINB.HasValue)
-				request.WithQueryParameter("TINB", m3_TINB.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FIBT))
-				request.WithQueryParameter("FIBT", m3_FIBT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIBT))
-				request.WithQueryParameter("TIBT", m3_TIBT.Trim());
-			if (m3_FSUP.HasValue)
-				request.WithQueryParameter("FSUP", m3_FSUP.Value.ToString());
-			if (m3_TSUP.HasValue)
-				request.WithQueryParameter("TSUP", m3_TSUP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FSUN))
-				request.WithQueryParameter("FSUN", m3_FSUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TSUN))
-				request.WithQueryParameter("TSUN", m3_TSUN.Trim());
-			if (m3_FIVD.HasValue)
-				request.WithQueryParameter("FIVD", m3_FIVD.Value.ToM3String());
-			if (m3_TIVD.HasValue)
-				request.WithQueryParameter("TIVD", m3_TIVD.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_FAPC))
-				request.WithQueryParameter("FAPC", m3_FAPC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAPC))
-				request.WithQueryParameter("TAPC", m3_TAPC.Trim());
-			if (m3_FIBH.HasValue)
-				request.WithQueryParameter("FIBH", m3_FIBH.Value.ToString());
-			if (m3_TIBH.HasValue)
-				request.WithQueryParameter("TIBH", m3_TIBH.Value.ToString());
-			if (m3_FIBL.HasValue)
-				request.WithQueryParameter("FIBL", m3_FIBL.Value.ToString());
-			if (m3_TIBL.HasValue)
-				request.WithQueryParameter("TIBL", m3_TIBL.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FSIN))
+				request.WithQueryParameter("FSIN", m3FSIN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TSIN))
+				request.WithQueryParameter("TSIN", m3TSIN.Trim());
+			if (m3FINB.HasValue)
+				request.WithQueryParameter("FINB", m3FINB.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TINB.HasValue)
+				request.WithQueryParameter("TINB", m3TINB.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FIBT))
+				request.WithQueryParameter("FIBT", m3FIBT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIBT))
+				request.WithQueryParameter("TIBT", m3TIBT.Trim());
+			if (m3FSUP.HasValue)
+				request.WithQueryParameter("FSUP", m3FSUP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TSUP.HasValue)
+				request.WithQueryParameter("TSUP", m3TSUP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FSUN))
+				request.WithQueryParameter("FSUN", m3FSUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TSUN))
+				request.WithQueryParameter("TSUN", m3TSUN.Trim());
+			if (m3FIVD.HasValue)
+				request.WithQueryParameter("FIVD", m3FIVD.Value.ToM3String());
+			if (m3TIVD.HasValue)
+				request.WithQueryParameter("TIVD", m3TIVD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3FAPC))
+				request.WithQueryParameter("FAPC", m3FAPC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAPC))
+				request.WithQueryParameter("TAPC", m3TAPC.Trim());
+			if (m3FIBH.HasValue)
+				request.WithQueryParameter("FIBH", m3FIBH.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TIBH.HasValue)
+				request.WithQueryParameter("TIBH", m3TIBH.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FIBL.HasValue)
+				request.WithQueryParameter("FIBL", m3FIBL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TIBL.HasValue)
+				request.WithQueryParameter("TIBL", m3TIBL.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -196,7 +199,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

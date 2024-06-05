@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document identity")]
-		public string M3_DOID => GetString("DOID");
+		public string M3DOID => GetString("DOID");
 
 		/// <summary>
 		/// Description: Document effectivity 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document effectivity 1")]
-		public int? M3_DSQ1 => GetNullableInt("DSQ1");
+		public int? M3DSQ1 => GetNullableInt("DSQ1");
 
 		/// <summary>
 		/// Description: Document effectivity 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document effectivity 2")]
-		public int? M3_DSQ2 => GetNullableInt("DSQ2");
+		public int? M3DSQ2 => GetNullableInt("DSQ2");
 
 		/// <summary>
 		/// Description: Document effectivity 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document effectivity 3")]
-		public int? M3_DSQ3 => GetNullableInt("DSQ3");
+		public int? M3DSQ3 => GetNullableInt("DSQ3");
 	}
 }
 // EOF

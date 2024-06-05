@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OSBSTDMI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,16 +38,16 @@ namespace M3H5Lib.Api
 		/// Description Select Sales Statistic Details
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_FRDT">From Invoice date (Required)</param>
-		/// <param name="m3_TODT">To Invoice date (Required)</param>
-		/// <param name="m3_YEA4">Year</param>
-		/// <param name="m3_ITFR">Item type from</param>
-		/// <param name="m3_ITTO">Item type to</param>
-		/// <param name="m3_ORFR">Origin from</param>
-		/// <param name="m3_ORTO">Origin to</param>
-		/// <param name="m3_SUNO">Supplier number</param>
-		/// <param name="m3_DLNI">Delivered/not invoiced statistics</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3FRDT">From Invoice date (Required)</param>
+		/// <param name="m3TODT">To Invoice date (Required)</param>
+		/// <param name="m3YEA4">Year</param>
+		/// <param name="m3ITFR">Item type from</param>
+		/// <param name="m3ITTO">Item type to</param>
+		/// <param name="m3ORFR">Origin from</param>
+		/// <param name="m3ORTO">Origin to</param>
+		/// <param name="m3SUNO">Supplier number</param>
+		/// <param name="m3DLNI">Delivered/not invoiced statistics</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -54,16 +56,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelDetailsResponse></returns>
 		/// <exception cref="M3Exception<SelDetailsResponse>"></exception>
 		public async Task<M3Response<SelDetailsResponse>> SelDetails(
-			string m3_DIVI, 
-			DateTime m3_FRDT, 
-			DateTime m3_TODT, 
-			int? m3_YEA4 = null, 
-			string m3_ITFR = null, 
-			string m3_ITTO = null, 
-			int? m3_ORFR = null, 
-			int? m3_ORTO = null, 
-			string m3_SUNO = null, 
-			int? m3_DLNI = null, 
+			string m3DIVI, 
+			DateTime m3FRDT, 
+			DateTime m3TODT, 
+			int? m3YEA4 = null, 
+			string m3ITFR = null, 
+			string m3ITTO = null, 
+			int? m3ORFR = null, 
+			int? m3ORTO = null, 
+			string m3SUNO = null, 
+			int? m3DLNI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -78,30 +80,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("FRDT", m3_FRDT.ToM3String())
-				.WithQueryParameter("TODT", m3_TODT.ToM3String());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("FRDT", m3FRDT.ToM3String())
+				.WithQueryParameter("TODT", m3TODT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_YEA4.HasValue)
-				request.WithQueryParameter("YEA4", m3_YEA4.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITFR))
-				request.WithQueryParameter("ITFR", m3_ITFR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITTO))
-				request.WithQueryParameter("ITTO", m3_ITTO.Trim());
-			if (m3_ORFR.HasValue)
-				request.WithQueryParameter("ORFR", m3_ORFR.Value.ToString());
-			if (m3_ORTO.HasValue)
-				request.WithQueryParameter("ORTO", m3_ORTO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (m3_DLNI.HasValue)
-				request.WithQueryParameter("DLNI", m3_DLNI.Value.ToString());
+			if (m3YEA4.HasValue)
+				request.WithQueryParameter("YEA4", m3YEA4.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITFR))
+				request.WithQueryParameter("ITFR", m3ITFR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITTO))
+				request.WithQueryParameter("ITTO", m3ITTO.Trim());
+			if (m3ORFR.HasValue)
+				request.WithQueryParameter("ORFR", m3ORFR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ORTO.HasValue)
+				request.WithQueryParameter("ORTO", m3ORTO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (m3DLNI.HasValue)
+				request.WithQueryParameter("DLNI", m3DLNI.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelDetailsResponse>(
@@ -111,7 +113,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Document number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document number")]
-		public string M3_DONR => GetString("DONR");
+		public string M3DONR => GetString("DONR");
 
 		/// <summary>
 		/// Description: Document variant
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document variant")]
-		public string M3_DOVA => GetString("DOVA");
+		public string M3DOVA => GetString("DOVA");
 
 		/// <summary>
 		/// Description: Media profile
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Media profile")]
-		public string M3_MEPF => GetString("MEPF");
+		public string M3MEPF => GetString("MEPF");
 
 		/// <summary>
 		/// Description: Document/media controlling object 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document/media controlling object 1")]
-		public string M3_PRF1 => GetString("PRF1");
+		public string M3PRF1 => GetString("PRF1");
 
 		/// <summary>
 		/// Description: Document/media control object 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document/media control object 2")]
-		public string M3_PRF2 => GetString("PRF2");
+		public string M3PRF2 => GetString("PRF2");
 
 		/// <summary>
 		/// Description: Name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS945MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 	}
 }
 // EOF

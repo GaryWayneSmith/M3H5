@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Planned order
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned order")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Pl order sub no
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pl order sub no")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Sub no
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sub no")]
-		public int? M3_PLP2 => GetNullableInt("PLP2");
+		public int? M3PLP2 => GetNullableInt("PLP2");
 
 		/// <summary>
 		/// Description: Shortage date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shortage date")]
-		public DateTime? M3_RPLD => GetNullableDateTime("RPLD");
+		public DateTime? M3RPLD => GetNullableDateTime("RPLD");
 
 		/// <summary>
 		/// Description: Plan qty
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Plan qty")]
-		public decimal? M3_PPQT => GetNullableDecimal("PPQT");
+		public decimal? M3PPQT => GetNullableDecimal("PPQT");
 
 		/// <summary>
 		/// Description: Status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_PSTS => GetString("PSTS");
+		public string M3PSTS => GetString("PSTS");
 
 		/// <summary>
 		/// Description: Buyer
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buyer")]
-		public string M3_BUYE => GetString("BUYE");
+		public string M3BUYE => GetString("BUYE");
 	}
 }
 // EOF

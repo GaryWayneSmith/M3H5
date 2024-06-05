@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Remittance number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remittance number")]
-		public int? M3_RMNB => GetNullableInt("RMNB");
+		public int? M3RMNB => GetNullableInt("RMNB");
 
 		/// <summary>
 		/// Description: Payer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Bank account field 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 1")]
-		public string M3_BAF1 => GetString("BAF1");
+		public string M3BAF1 => GetString("BAF1");
 
 		/// <summary>
 		/// Description: Bank account field 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 2")]
-		public string M3_BAF2 => GetString("BAF2");
+		public string M3BAF2 => GetString("BAF2");
 
 		/// <summary>
 		/// Description: Bank account field 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 3")]
-		public string M3_BAF3 => GetString("BAF3");
+		public string M3BAF3 => GetString("BAF3");
 
 		/// <summary>
 		/// Description: Bank account field 4
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 4")]
-		public string M3_BAF4 => GetString("BAF4");
+		public string M3BAF4 => GetString("BAF4");
 
 		/// <summary>
 		/// Description: Bank account field 5
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 5")]
-		public string M3_BAF5 => GetString("BAF5");
+		public string M3BAF5 => GetString("BAF5");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 1")]
-		public int? M3_BIL1 => GetNullableInt("BIL1");
+		public int? M3BIL1 => GetNullableInt("BIL1");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 2")]
-		public int? M3_BIL2 => GetNullableInt("BIL2");
+		public int? M3BIL2 => GetNullableInt("BIL2");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 3
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 3")]
-		public int? M3_BIL3 => GetNullableInt("BIL3");
+		public int? M3BIL3 => GetNullableInt("BIL3");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 4
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 4")]
-		public int? M3_BIL4 => GetNullableInt("BIL4");
+		public int? M3BIL4 => GetNullableInt("BIL4");
 
 		/// <summary>
 		/// Description: Length - bank account identity field 5
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - bank account identity field 5")]
-		public int? M3_BIL5 => GetNullableInt("BIL5");
+		public int? M3BIL5 => GetNullableInt("BIL5");
 
 		/// <summary>
 		/// Description: Numeric field 1 position
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 1 position")]
-		public int? M3_NUM1 => GetNullableInt("NUM1");
+		public int? M3NUM1 => GetNullableInt("NUM1");
 
 		/// <summary>
 		/// Description: Number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number")]
-		public int? M3_NUM2 => GetNullableInt("NUM2");
+		public int? M3NUM2 => GetNullableInt("NUM2");
 
 		/// <summary>
 		/// Description: Numeric field 3 positions
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 3 positions")]
-		public int? M3_NUM3 => GetNullableInt("NUM3");
+		public int? M3NUM3 => GetNullableInt("NUM3");
 
 		/// <summary>
 		/// Description: Numeric field 4 positions
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 4 positions")]
-		public int? M3_NUM4 => GetNullableInt("NUM4");
+		public int? M3NUM4 => GetNullableInt("NUM4");
 
 		/// <summary>
 		/// Description: Numeric field 5 positions
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 5 positions")]
-		public int? M3_NUM5 => GetNullableInt("NUM5");
+		public int? M3NUM5 => GetNullableInt("NUM5");
 
 		/// <summary>
 		/// Description: Customer name
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Country
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Postal code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Bank name
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank name")]
-		public string M3_BKNM => GetString("BKNM");
+		public string M3BKNM => GetString("BKNM");
 
 		/// <summary>
 		/// Description: Bank address 1
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 1")]
-		public string M3_BKA1 => GetString("BKA1");
+		public string M3BKA1 => GetString("BKA1");
 
 		/// <summary>
 		/// Description: Bank address 2
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 2")]
-		public string M3_BKA2 => GetString("BKA2");
+		public string M3BKA2 => GetString("BKA2");
 
 		/// <summary>
 		/// Description: Bank address 3
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 3")]
-		public string M3_BKA3 => GetString("BKA3");
+		public string M3BKA3 => GetString("BKA3");
 
 		/// <summary>
 		/// Description: Bank address 4
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 4")]
-		public string M3_BKA4 => GetString("BKA4");
+		public string M3BKA4 => GetString("BKA4");
 
 		/// <summary>
 		/// Description: Juridica / Fisica
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Juridica / Fisica")]
-		public string M3_JUFI => GetString("JUFI");
+		public string M3JUFI => GetString("JUFI");
 
 		/// <summary>
 		/// Description: CNPJ / CPF
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CNPJ / CPF")]
-		public decimal? M3_CNPJ => GetNullableDecimal("CNPJ");
+		public decimal? M3CNPJ => GetNullableDecimal("CNPJ");
 
 		/// <summary>
 		/// Description: Federation Unit
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.ARBR01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Federation Unit")]
-		public string M3_FEDA => GetString("FEDA");
+		public string M3FEDA => GetString("FEDA");
 	}
 }
 // EOF

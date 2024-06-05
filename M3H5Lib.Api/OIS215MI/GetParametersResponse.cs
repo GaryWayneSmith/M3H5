@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Permit on-account payments")]
-		public int? M3_ACCA => GetNullableInt("ACCA");
+		public int? M3ACCA => GetNullableInt("ACCA");
 
 		/// <summary>
 		/// Description: Permit creation of checks
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Permit creation of checks")]
-		public int? M3_CHKA => GetNullableInt("CHKA");
+		public int? M3CHKA => GetNullableInt("CHKA");
 
 		/// <summary>
 		/// Description: Allow petty cash
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allow petty cash")]
-		public int? M3_ALPC => GetNullableInt("ALPC");
+		public int? M3ALPC => GetNullableInt("ALPC");
 
 		/// <summary>
 		/// Description: Allow cash movement
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allow cash movement")]
-		public int? M3_ALCT => GetNullableInt("ALCT");
+		public int? M3ALCT => GetNullableInt("ALCT");
 
 		/// <summary>
 		/// Description: Allow validation
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allow validation")]
-		public int? M3_ALVA => GetNullableInt("ALVA");
+		public int? M3ALVA => GetNullableInt("ALVA");
 
 		/// <summary>
 		/// Description: Print receipt
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print receipt")]
-		public int? M3_PRCT => GetNullableInt("PRCT");
+		public int? M3PRCT => GetNullableInt("PRCT");
 
 		/// <summary>
 		/// Description: Externally managed credit card payments
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Externally managed credit card payments")]
-		public int? M3_CRCI => GetNullableInt("CRCI");
+		public int? M3CRCI => GetNullableInt("CRCI");
 	}
 }
 // EOF

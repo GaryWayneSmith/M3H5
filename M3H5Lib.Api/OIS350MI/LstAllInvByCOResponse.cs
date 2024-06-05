@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Information type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information type")]
-		public string M3_IVTP => GetString("IVTP");
+		public string M3IVTP => GetString("IVTP");
 
 		/// <summary>
 		/// Description: Alpha field 20 positions
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 20 positions")]
-		public string M3_IVT1 => GetString("IVT1");
+		public string M3IVT1 => GetString("IVT1");
 
 		/// <summary>
 		/// Description: Year
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IDAT => GetNullableDateTime("IDAT");
+		public DateTime? M3IDAT => GetNullableDateTime("IDAT");
 
 		/// <summary>
 		/// Description: Payer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Alpha field 36 positions
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 36 positions")]
-		public string M3_PYN1 => GetString("PYN1");
+		public string M3PYN1 => GetString("PYN1");
 
 		/// <summary>
 		/// Description: Customer number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Alpha field 36 positions
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 36 positions")]
-		public string M3_CUN1 => GetString("CUN1");
+		public string M3CUN1 => GetString("CUN1");
 
 		/// <summary>
 		/// Description: Invoice recipient
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice recipient")]
-		public string M3_INRC => GetString("INRC");
+		public string M3INRC => GetString("INRC");
 
 		/// <summary>
 		/// Description: Alpha field 36 positions
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 36 positions")]
-		public string M3_INR1 => GetString("INR1");
+		public string M3INR1 => GetString("INR1");
 
 		/// <summary>
 		/// Description: Invoice amount including VAT
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice amount including VAT")]
-		public decimal? M3_IVAV => GetNullableDecimal("IVAV");
+		public decimal? M3IVAV => GetNullableDecimal("IVAV");
 
 		/// <summary>
 		/// Description: Remaining amount to pay - foreign curr
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining amount to pay - foreign curr")]
-		public decimal? M3_RAFC => GetNullableDecimal("RAFC");
+		public decimal? M3RAFC => GetNullableDecimal("RAFC");
 
 		/// <summary>
 		/// Description: Currency
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Invoice Prefix
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Due date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Due date")]
-		public DateTime? M3_DUDT => GetNullableDateTime("DUDT");
+		public DateTime? M3DUDT => GetNullableDateTime("DUDT");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Reference - extended invoice number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference - extended invoice number")]
-		public string M3_RXIN => GetString("RXIN");
+		public string M3RXIN => GetString("RXIN");
 
 		/// <summary>
 		/// Description: Cash desk sales
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash desk sales")]
-		public int? M3_CASH => GetNullableInt("CASH");
+		public int? M3CASH => GetNullableInt("CASH");
 	}
 }
 // EOF

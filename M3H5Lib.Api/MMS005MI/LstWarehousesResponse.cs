@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Warehouse name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse name")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: Shop info
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shop info")]
-		public int? M3_STOF => GetNullableInt("STOF");
+		public int? M3STOF => GetNullableInt("STOF");
 
 		/// <summary>
 		/// Description: DC info
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("DC info")]
-		public int? M3_DCIN => GetNullableInt("DCIN");
+		public int? M3DCIN => GetNullableInt("DCIN");
 
 		/// <summary>
 		/// Description: Warehouse alias
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse alias")]
-		public string M3_RSTN => GetString("RSTN");
+		public string M3RSTN => GetString("RSTN");
 
 		/// <summary>
 		/// Description: Phone Number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Phone Number")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Company name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Country
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Postal code (Zip code)
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code (Zip code)")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Area/State
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Town/City
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Town/City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Planning Node
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning Node")]
-		public string M3_PNOD => GetString("PNOD");
+		public string M3PNOD => GetString("PNOD");
 
 		/// <summary>
 		/// Description: Geographic cod X
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod X")]
-		public decimal? M3_GEOX => GetNullableDecimal("GEOX");
+		public decimal? M3GEOX => GetNullableDecimal("GEOX");
 
 		/// <summary>
 		/// Description: Geographic code Y
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic code Y")]
-		public decimal? M3_GEOY => GetNullableDecimal("GEOY");
+		public decimal? M3GEOY => GetNullableDecimal("GEOY");
 
 		/// <summary>
 		/// Description: Geographic cod  Z
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod  Z")]
-		public decimal? M3_GEOZ => GetNullableDecimal("GEOZ");
+		public decimal? M3GEOZ => GetNullableDecimal("GEOZ");
 
 		/// <summary>
 		/// Description: Geographic cod X
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod X")]
-		public decimal? M3_AGEX => GetNullableDecimal("AGEX");
+		public decimal? M3AGEX => GetNullableDecimal("AGEX");
 
 		/// <summary>
 		/// Description: Geographic code Y
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic code Y")]
-		public decimal? M3_AGEY => GetNullableDecimal("AGEY");
+		public decimal? M3AGEY => GetNullableDecimal("AGEY");
 
 		/// <summary>
 		/// Description: Geographic cod  Z
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod  Z")]
-		public decimal? M3_AGEZ => GetNullableDecimal("AGEZ");
+		public decimal? M3AGEZ => GetNullableDecimal("AGEZ");
 
 		/// <summary>
 		/// Description: Time zone
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 
 		/// <summary>
 		/// Description: Description of timezone
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description of timezone")]
-		public string M3_T40X => GetString("T40X");
+		public string M3T40X => GetString("T40X");
 
 		/// <summary>
 		/// Description: Name of timezone
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name of timezone")]
-		public string M3_T15X => GetString("T15X");
+		public string M3T15X => GetString("T15X");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public int? M3_TGMT => GetNullableInt("TGMT");
+		public int? M3TGMT => GetNullableInt("TGMT");
 
 		/// <summary>
 		/// Description: Daylight savings time
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Daylight savings time")]
-		public int? M3_DLST => GetNullableInt("DLST");
+		public int? M3DLST => GetNullableInt("DLST");
 
 		/// <summary>
 		/// Description: Valid from
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VFDT => GetNullableDateTime("VFDT");
+		public DateTime? M3VFDT => GetNullableDateTime("VFDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_VTDT => GetNullableDateTime("VTDT");
+		public DateTime? M3VTDT => GetNullableDateTime("VTDT");
 
 		/// <summary>
 		/// Description: Main warehouse
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main warehouse")]
-		public string M3_MAWH => GetString("MAWH");
+		public string M3MAWH => GetString("MAWH");
 
 		/// <summary>
 		/// Description: Put away task grouping
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Put away task grouping")]
-		public int? M3_PWGR => GetNullableInt("PWGR");
+		public int? M3PWGR => GetNullableInt("PWGR");
 
 		/// <summary>
 		/// Description: County ID
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 
 		/// <summary>
 		/// Description: Warehouse type
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse type")]
-		public string M3_WHTY => GetString("WHTY");
+		public string M3WHTY => GetString("WHTY");
 
 		/// <summary>
 		/// Description: Mobile warehouse
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mobile warehouse")]
-		public int? M3_MWHL => GetNullableInt("MWHL");
+		public int? M3MWHL => GetNullableInt("MWHL");
 
 		/// <summary>
 		/// Description: Redistribution location
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Redistribution location")]
-		public string M3_RDIL => GetString("RDIL");
+		public string M3RDIL => GetString("RDIL");
 
 		/// <summary>
 		/// Description: Warehouse subtype
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS005MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse subtype")]
-		public string M3_WHSY => GetString("WHSY");
+		public string M3WHSY => GetString("WHSY");
 	}
 }
 // EOF

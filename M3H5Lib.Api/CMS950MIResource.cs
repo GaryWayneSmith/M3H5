@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS950MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a program
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PGNM">Program name (Required)</param>
+		/// <param name="m3PGNM">Program name (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltProgram(
-			string m3_PGNM, 
+			string m3PGNM, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,7 +89,7 @@ namespace M3H5Lib.Api
 		/// Description Generate Programs
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_FRVE">From version (Required)</param>
+		/// <param name="m3FRVE">From version (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -95,7 +98,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> GenPrograms(
-			int m3_FRVE, 
+			int m3FRVE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -113,7 +116,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FRVE", m3_FRVE.ToString());
+				.WithQueryParameter("FRVE", m3FRVE.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -123,7 +126,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -134,7 +138,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a program
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PGNM">Program name (Required)</param>
+		/// <param name="m3PGNM">Program name (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -143,7 +147,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetProgramResponse></returns>
 		/// <exception cref="M3Exception<GetProgramResponse>"></exception>
 		public async Task<M3Response<GetProgramResponse>> GetProgram(
-			string m3_PGNM, 
+			string m3PGNM, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -158,12 +162,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim());
 
 			// Execute the request
 			var result = await Execute<GetProgramResponse>(
@@ -173,7 +177,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -184,9 +189,9 @@ namespace M3H5Lib.Api
 		/// Description LstPrograms
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_BEVE">Version</param>
-		/// <param name="m3_SYCO">System component</param>
-		/// <param name="m3_MIST">Migration status</param>
+		/// <param name="m3BEVE">Version</param>
+		/// <param name="m3SYCO">System component</param>
+		/// <param name="m3MIST">Migration status</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -195,9 +200,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstProgramsResponse></returns>
 		/// <exception cref="M3Exception<LstProgramsResponse>"></exception>
 		public async Task<M3Response<LstProgramsResponse>> LstPrograms(
-			int? m3_BEVE = null, 
-			string m3_SYCO = null, 
-			string m3_MIST = null, 
+			int? m3BEVE = null, 
+			string m3SYCO = null, 
+			string m3MIST = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -212,12 +217,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_BEVE.HasValue)
-				request.WithQueryParameter("BEVE", m3_BEVE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SYCO))
-				request.WithQueryParameter("SYCO", m3_SYCO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MIST))
-				request.WithQueryParameter("MIST", m3_MIST.Trim());
+			if (m3BEVE.HasValue)
+				request.WithQueryParameter("BEVE", m3BEVE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SYCO))
+				request.WithQueryParameter("SYCO", m3SYCO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MIST))
+				request.WithQueryParameter("MIST", m3MIST.Trim());
 
 			// Execute the request
 			var result = await Execute<LstProgramsResponse>(
@@ -227,7 +232,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -238,8 +244,8 @@ namespace M3H5Lib.Api
 		/// Description Run all programs in a business engine version
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_BEVE">Business engine version (Required)</param>
-		/// <param name="m3_SYNC">Synchronous execution</param>
+		/// <param name="m3BEVE">Business engine version (Required)</param>
+		/// <param name="m3SYNC">Synchronous execution</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -248,8 +254,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> RunAllPrograms(
-			int m3_BEVE, 
-			int? m3_SYNC = null, 
+			int m3BEVE, 
+			int? m3SYNC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -267,11 +273,11 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BEVE", m3_BEVE.ToString());
+				.WithQueryParameter("BEVE", m3BEVE.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SYNC.HasValue)
-				request.WithQueryParameter("SYNC", m3_SYNC.Value.ToString());
+			if (m3SYNC.HasValue)
+				request.WithQueryParameter("SYNC", m3SYNC.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -281,7 +287,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -292,7 +299,7 @@ namespace M3H5Lib.Api
 		/// Description Run a program
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PGNM">Program name (Required)</param>
+		/// <param name="m3PGNM">Program name (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -301,7 +308,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> RunProgram(
-			string m3_PGNM, 
+			string m3PGNM, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -316,12 +323,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -331,7 +338,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -342,10 +350,10 @@ namespace M3H5Lib.Api
 		/// Description SetStatus
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CRMIST">Current Migration status (Required)</param>
-		/// <param name="m3_NWMIST">New Migration status (Required)</param>
-		/// <param name="m3_BEVE">Version</param>
-		/// <param name="m3_SYCO">System component</param>
+		/// <param name="m3CRMIST">Current Migration status (Required)</param>
+		/// <param name="m3NWMIST">New Migration status (Required)</param>
+		/// <param name="m3BEVE">Version</param>
+		/// <param name="m3SYCO">System component</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -354,10 +362,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SetStatus(
-			string m3_CRMIST, 
-			string m3_NWMIST, 
-			int? m3_BEVE = null, 
-			string m3_SYCO = null, 
+			string m3CRMIST, 
+			string m3NWMIST, 
+			int? m3BEVE = null, 
+			string m3SYCO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -372,21 +380,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CRMIST))
-				throw new ArgumentNullException("m3_CRMIST");
-			if (string.IsNullOrWhiteSpace(m3_NWMIST))
-				throw new ArgumentNullException("m3_NWMIST");
+			if (string.IsNullOrWhiteSpace(m3CRMIST))
+				throw new ArgumentNullException(nameof(m3CRMIST));
+			if (string.IsNullOrWhiteSpace(m3NWMIST))
+				throw new ArgumentNullException(nameof(m3NWMIST));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CRMIST", m3_CRMIST.Trim())
-				.WithQueryParameter("NWMIST", m3_NWMIST.Trim());
+				.WithQueryParameter("CRMIST", m3CRMIST.Trim())
+				.WithQueryParameter("NWMIST", m3NWMIST.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_BEVE.HasValue)
-				request.WithQueryParameter("BEVE", m3_BEVE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SYCO))
-				request.WithQueryParameter("SYCO", m3_SYCO.Trim());
+			if (m3BEVE.HasValue)
+				request.WithQueryParameter("BEVE", m3BEVE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SYCO))
+				request.WithQueryParameter("SYCO", m3SYCO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -396,7 +404,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -407,10 +416,10 @@ namespace M3H5Lib.Api
 		/// Description Update data for a program
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PGNM">Program name (Required)</param>
-		/// <param name="m3_SQCE">Sequence number</param>
-		/// <param name="m3_MIST">Migration status</param>
-		/// <param name="m3_MLOG">Migration log</param>
+		/// <param name="m3PGNM">Program name (Required)</param>
+		/// <param name="m3SQCE">Sequence number</param>
+		/// <param name="m3MIST">Migration status</param>
+		/// <param name="m3MLOG">Migration log</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -419,10 +428,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdProgram(
-			string m3_PGNM, 
-			int? m3_SQCE = null, 
-			string m3_MIST = null, 
-			int? m3_MLOG = null, 
+			string m3PGNM, 
+			int? m3SQCE = null, 
+			string m3MIST = null, 
+			int? m3MLOG = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -437,20 +446,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PGNM))
-				throw new ArgumentNullException("m3_PGNM");
+			if (string.IsNullOrWhiteSpace(m3PGNM))
+				throw new ArgumentNullException(nameof(m3PGNM));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PGNM", m3_PGNM.Trim());
+				.WithQueryParameter("PGNM", m3PGNM.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SQCE.HasValue)
-				request.WithQueryParameter("SQCE", m3_SQCE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MIST))
-				request.WithQueryParameter("MIST", m3_MIST.Trim());
-			if (m3_MLOG.HasValue)
-				request.WithQueryParameter("MLOG", m3_MLOG.Value.ToString());
+			if (m3SQCE.HasValue)
+				request.WithQueryParameter("SQCE", m3SQCE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MIST))
+				request.WithQueryParameter("MIST", m3MIST.Trim());
+			if (m3MLOG.HasValue)
+				request.WithQueryParameter("MLOG", m3MLOG.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -460,7 +469,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

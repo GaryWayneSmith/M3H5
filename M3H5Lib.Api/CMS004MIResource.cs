@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS004MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get data for XML variant
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_XMLT">XML variant (Required)</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3XMLT">XML variant (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetXmlVariantResponse></returns>
 		/// <exception cref="M3Exception<GetXmlVariantResponse>"></exception>
 		public async Task<M3Response<GetXmlVariantResponse>> GetXmlVariant(
-			string m3_PRTF, 
-			int m3_XMLT, 
+			string m3PRTF, 
+			int m3XMLT, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,13 +64,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("XMLT", m3_XMLT.ToString());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("XMLT", m3XMLT.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetXmlVariantResponse>(
@@ -78,7 +80,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -89,8 +92,8 @@ namespace M3H5Lib.Api
 		/// Description List data for XML variants
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file</param>
-		/// <param name="m3_XMLT">XML variant</param>
+		/// <param name="m3PRTF">Printer file</param>
+		/// <param name="m3XMLT">XML variant</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -99,8 +102,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstXmlVariantsResponse></returns>
 		/// <exception cref="M3Exception<LstXmlVariantsResponse>"></exception>
 		public async Task<M3Response<LstXmlVariantsResponse>> LstXmlVariants(
-			string m3_PRTF = null, 
-			int? m3_XMLT = null, 
+			string m3PRTF = null, 
+			int? m3XMLT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -115,10 +118,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRTF))
-				request.WithQueryParameter("PRTF", m3_PRTF.Trim());
-			if (m3_XMLT.HasValue)
-				request.WithQueryParameter("XMLT", m3_XMLT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRTF))
+				request.WithQueryParameter("PRTF", m3PRTF.Trim());
+			if (m3XMLT.HasValue)
+				request.WithQueryParameter("XMLT", m3XMLT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstXmlVariantsResponse>(
@@ -128,7 +131,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -139,9 +143,9 @@ namespace M3H5Lib.Api
 		/// Description Update data for XML variant
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRTF">Printer file (Required)</param>
-		/// <param name="m3_XMLT">XML variant (Required)</param>
-		/// <param name="m3_RLAY">Report layout</param>
+		/// <param name="m3PRTF">Printer file (Required)</param>
+		/// <param name="m3XMLT">XML variant (Required)</param>
+		/// <param name="m3RLAY">Report layout</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -150,9 +154,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdXmlVariant(
-			string m3_PRTF, 
-			int m3_XMLT, 
-			string m3_RLAY = null, 
+			string m3PRTF, 
+			int m3XMLT, 
+			string m3RLAY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -167,17 +171,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRTF))
-				throw new ArgumentNullException("m3_PRTF");
+			if (string.IsNullOrWhiteSpace(m3PRTF))
+				throw new ArgumentNullException(nameof(m3PRTF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRTF", m3_PRTF.Trim())
-				.WithQueryParameter("XMLT", m3_XMLT.ToString());
+				.WithQueryParameter("PRTF", m3PRTF.Trim())
+				.WithQueryParameter("XMLT", m3XMLT.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RLAY))
-				request.WithQueryParameter("RLAY", m3_RLAY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RLAY))
+				request.WithQueryParameter("RLAY", m3RLAY.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -187,7 +191,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

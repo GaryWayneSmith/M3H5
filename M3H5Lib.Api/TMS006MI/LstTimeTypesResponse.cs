@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Time type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type")]
-		public string M3_TTPE => GetString("TTPE");
+		public string M3TTPE => GetString("TTPE");
 
 		/// <summary>
 		/// Description: Pay element
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pay element")]
-		public int? M3_KIWA => GetNullableInt("KIWA");
+		public int? M3KIWA => GetNullableInt("KIWA");
 
 		/// <summary>
 		/// Description: Time category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time category")]
-		public int? M3_GLCD => GetNullableInt("GLCD");
+		public int? M3GLCD => GetNullableInt("GLCD");
 
 		/// <summary>
 		/// Description: Time type overtime to time off
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type overtime to time off")]
-		public string M3_TTOF => GetString("TTOF");
+		public string M3TTOF => GetString("TTOF");
 
 		/// <summary>
 		/// Description: Time type remaining time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type remaining time")]
-		public string M3_RTBL => GetString("RTBL");
+		public string M3RTBL => GetString("RTBL");
 
 		/// <summary>
 		/// Description: Automatic generation time type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic generation time type")]
-		public string M3_AUTT => GetString("AUTT");
+		public string M3AUTT => GetString("AUTT");
 
 		/// <summary>
 		/// Description: Time factor
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time factor")]
-		public int? M3_TMAU => GetNullableInt("TMAU");
+		public int? M3TMAU => GetNullableInt("TMAU");
 
 		/// <summary>
 		/// Description: Balance
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance")]
-		public string M3_STFD => GetString("STFD");
+		public string M3STFD => GetString("STFD");
 
 		/// <summary>
 		/// Description: Balance time factor
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance time factor")]
-		public int? M3_TMCF => GetNullableInt("TMCF");
+		public int? M3TMCF => GetNullableInt("TMCF");
 
 		/// <summary>
 		/// Description: Minimum number of hours
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum number of hours")]
-		public int? M3_MNTM => GetNullableInt("MNTM");
+		public int? M3MNTM => GetNullableInt("MNTM");
 
 		/// <summary>
 		/// Description: Maximum number of hours
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum number of hours")]
-		public int? M3_MXHO => GetNullableInt("MXHO");
+		public int? M3MXHO => GetNullableInt("MXHO");
 
 		/// <summary>
 		/// Description: Name
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TMS006MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 	}
 }
 // EOF

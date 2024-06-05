@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Avail 1 (Allocable on-hand - Allocated)
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Avail 1 (Allocable on-hand - Allocated)")]
-		public string M3_AV01 => GetString("AV01");
+		public string M3AV01 => GetString("AV01");
 
 		/// <summary>
 		/// Description: Avail 2 (On-hand -Reserved)
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Avail 2 (On-hand -Reserved)")]
-		public string M3_AV02 => GetString("AV02");
+		public string M3AV02 => GetString("AV02");
 
 		/// <summary>
 		/// Description: Lead time date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time date")]
-		public DateTime? M3_LTDT => GetNullableDateTime("LTDT");
+		public DateTime? M3LTDT => GetNullableDateTime("LTDT");
 
 		/// <summary>
 		/// Description: Planning fence date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning fence date")]
-		public DateTime? M3_PFDT => GetNullableDateTime("PFDT");
+		public DateTime? M3PFDT => GetNullableDateTime("PFDT");
 
 		/// <summary>
 		/// Description: Change date for balance information
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date for balance information")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MOS250MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Select work center relationships
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FFAC">From facility (Required)</param>
-		/// <param name="m3_TFAC">To facility (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_PLTP">Resource type</param>
+		/// <param name="m3FFAC">From facility (Required)</param>
+		/// <param name="m3TFAC">To facility (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3PLTP">Resource type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelRelationsResponse></returns>
 		/// <exception cref="M3Exception<SelRelationsResponse>"></exception>
 		public async Task<M3Response<SelRelationsResponse>> SelRelations(
-			string m3_FFAC, 
-			string m3_TFAC, 
-			int? m3_CONO = null, 
-			int? m3_PLTP = null, 
+			string m3FFAC, 
+			string m3TFAC, 
+			int? m3CONO = null, 
+			int? m3PLTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,21 +68,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FFAC))
-				throw new ArgumentNullException("m3_FFAC");
-			if (string.IsNullOrWhiteSpace(m3_TFAC))
-				throw new ArgumentNullException("m3_TFAC");
+			if (string.IsNullOrWhiteSpace(m3FFAC))
+				throw new ArgumentNullException(nameof(m3FFAC));
+			if (string.IsNullOrWhiteSpace(m3TFAC))
+				throw new ArgumentNullException(nameof(m3TFAC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FFAC", m3_FFAC.Trim())
-				.WithQueryParameter("TFAC", m3_TFAC.Trim());
+				.WithQueryParameter("FFAC", m3FFAC.Trim())
+				.WithQueryParameter("TFAC", m3TFAC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_PLTP.HasValue)
-				request.WithQueryParameter("PLTP", m3_PLTP.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PLTP.HasValue)
+				request.WithQueryParameter("PLTP", m3PLTP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelRelationsResponse>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -101,10 +104,10 @@ namespace M3H5Lib.Api
 		/// Description Select work center - shift records
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FFAC">From facility (Required)</param>
-		/// <param name="m3_TFAC">To facility (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_PLTP">Resource type</param>
+		/// <param name="m3FFAC">From facility (Required)</param>
+		/// <param name="m3TFAC">To facility (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3PLTP">Resource type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -113,10 +116,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelShiftInfoResponse></returns>
 		/// <exception cref="M3Exception<SelShiftInfoResponse>"></exception>
 		public async Task<M3Response<SelShiftInfoResponse>> SelShiftInfo(
-			string m3_FFAC, 
-			string m3_TFAC, 
-			int? m3_CONO = null, 
-			int? m3_PLTP = null, 
+			string m3FFAC, 
+			string m3TFAC, 
+			int? m3CONO = null, 
+			int? m3PLTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -131,21 +134,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FFAC))
-				throw new ArgumentNullException("m3_FFAC");
-			if (string.IsNullOrWhiteSpace(m3_TFAC))
-				throw new ArgumentNullException("m3_TFAC");
+			if (string.IsNullOrWhiteSpace(m3FFAC))
+				throw new ArgumentNullException(nameof(m3FFAC));
+			if (string.IsNullOrWhiteSpace(m3TFAC))
+				throw new ArgumentNullException(nameof(m3TFAC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FFAC", m3_FFAC.Trim())
-				.WithQueryParameter("TFAC", m3_TFAC.Trim());
+				.WithQueryParameter("FFAC", m3FFAC.Trim())
+				.WithQueryParameter("TFAC", m3TFAC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_PLTP.HasValue)
-				request.WithQueryParameter("PLTP", m3_PLTP.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PLTP.HasValue)
+				request.WithQueryParameter("PLTP", m3PLTP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelShiftInfoResponse>(
@@ -155,7 +158,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -166,10 +170,10 @@ namespace M3H5Lib.Api
 		/// Description Select work centers
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_FFAC">From facility (Required)</param>
-		/// <param name="m3_TFAC">To facility (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_PLTP">Resource type</param>
+		/// <param name="m3FFAC">From facility (Required)</param>
+		/// <param name="m3TFAC">To facility (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3PLTP">Resource type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -178,10 +182,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectResponse></returns>
 		/// <exception cref="M3Exception<SelectResponse>"></exception>
 		public async Task<M3Response<SelectResponse>> Select(
-			string m3_FFAC, 
-			string m3_TFAC, 
-			int? m3_CONO = null, 
-			string m3_PLTP = null, 
+			string m3FFAC, 
+			string m3TFAC, 
+			int? m3CONO = null, 
+			string m3PLTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -196,21 +200,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FFAC))
-				throw new ArgumentNullException("m3_FFAC");
-			if (string.IsNullOrWhiteSpace(m3_TFAC))
-				throw new ArgumentNullException("m3_TFAC");
+			if (string.IsNullOrWhiteSpace(m3FFAC))
+				throw new ArgumentNullException(nameof(m3FFAC));
+			if (string.IsNullOrWhiteSpace(m3TFAC))
+				throw new ArgumentNullException(nameof(m3TFAC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FFAC", m3_FFAC.Trim())
-				.WithQueryParameter("TFAC", m3_TFAC.Trim());
+				.WithQueryParameter("FFAC", m3FFAC.Trim())
+				.WithQueryParameter("TFAC", m3TFAC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLTP))
-				request.WithQueryParameter("PLTP", m3_PLTP.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLTP))
+				request.WithQueryParameter("PLTP", m3PLTP.Trim());
 
 			// Execute the request
 			var result = await Execute<SelectResponse>(
@@ -220,7 +224,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

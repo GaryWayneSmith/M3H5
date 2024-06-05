@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logical file index name")]
-		public string M3_FLIX => GetString("FLIX");
+		public string M3FLIX => GetString("FLIX");
 
 		/// <summary>
 		/// Description: First key field
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("First key field")]
-		public string M3_FLD1 => GetString("FLD1");
+		public string M3FLD1 => GetString("FLD1");
 
 		/// <summary>
 		/// Description: Second key field
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Second key field")]
-		public string M3_FLD2 => GetString("FLD2");
+		public string M3FLD2 => GetString("FLD2");
 
 		/// <summary>
 		/// Description: Third key field
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Third key field")]
-		public string M3_FLD3 => GetString("FLD3");
+		public string M3FLD3 => GetString("FLD3");
 
 		/// <summary>
 		/// Description: Fourth key field
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fourth key field")]
-		public string M3_FLD4 => GetString("FLD4");
+		public string M3FLD4 => GetString("FLD4");
 
 		/// <summary>
 		/// Description: Fifth key field
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fifth key field")]
-		public string M3_FLD5 => GetString("FLD5");
+		public string M3FLD5 => GetString("FLD5");
 
 		/// <summary>
 		/// Description: Sixth key field
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sixth key field")]
-		public string M3_FLD6 => GetString("FLD6");
+		public string M3FLD6 => GetString("FLD6");
 
 		/// <summary>
 		/// Description: Seventh key field
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Seventh key field")]
-		public string M3_FLD7 => GetString("FLD7");
+		public string M3FLD7 => GetString("FLD7");
 
 		/// <summary>
 		/// Description: Eight key field
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eight key field")]
-		public string M3_FLD8 => GetString("FLD8");
+		public string M3FLD8 => GetString("FLD8");
 
 		/// <summary>
 		/// Description: Ninth key field
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ninth key field")]
-		public string M3_FLD9 => GetString("FLD9");
+		public string M3FLD9 => GetString("FLD9");
 
 		/// <summary>
 		/// Description: Tenth key field
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tenth key field")]
-		public string M3_FL10 => GetString("FL10");
+		public string M3FL10 => GetString("FL10");
 
 		/// <summary>
 		/// Description: Eleventh key field
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Eleventh key field")]
-		public string M3_FL11 => GetString("FL11");
+		public string M3FL11 => GetString("FL11");
 
 		/// <summary>
 		/// Description: Twelfth key field
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Twelfth key field")]
-		public string M3_FL12 => GetString("FL12");
+		public string M3FL12 => GetString("FL12");
 
 		/// <summary>
 		/// Description: Thirteenth key field
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Thirteenth key field")]
-		public string M3_FL13 => GetString("FL13");
+		public string M3FL13 => GetString("FL13");
 
 		/// <summary>
 		/// Description: Fourteenth key field
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fourteenth key field")]
-		public string M3_FL14 => GetString("FL14");
+		public string M3FL14 => GetString("FL14");
 
 		/// <summary>
 		/// Description: Fifteenth key field
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fifteenth key field")]
-		public string M3_FL15 => GetString("FL15");
+		public string M3FL15 => GetString("FL15");
 
 		/// <summary>
 		/// Description: Sixteenth key field
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sixteenth key field")]
-		public string M3_FL16 => GetString("FL16");
+		public string M3FL16 => GetString("FL16");
 	}
 }
 // EOF

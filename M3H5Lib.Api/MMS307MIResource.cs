@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS307MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Get Physcial Inventory Variance record
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_STNB">Physical inventory number (Required)</param>
-		/// <param name="m3_STRN">Physical inventory line (Required)</param>
+		/// <param name="m3STNB">Physical inventory number (Required)</param>
+		/// <param name="m3STRN">Physical inventory line (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPhysInvVarResponse></returns>
 		/// <exception cref="M3Exception<GetPhysInvVarResponse>"></exception>
 		public async Task<M3Response<GetPhysInvVarResponse>> GetPhysInvVar(
-			long m3_STNB, 
-			int m3_STRN, 
+			long m3STNB, 
+			int m3STRN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -65,8 +67,8 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STNB", m3_STNB.ToString())
-				.WithQueryParameter("STRN", m3_STRN.ToString());
+				.WithQueryParameter("STNB", m3STNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("STRN", m3STRN.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetPhysInvVarResponse>(
@@ -76,7 +78,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -87,8 +90,8 @@ namespace M3H5Lib.Api
 		/// Description List Physcial Inventory Variance records
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_STNB">Physical inventory number (Required)</param>
-		/// <param name="m3_STRN">Physical inventory line</param>
+		/// <param name="m3STNB">Physical inventory number (Required)</param>
+		/// <param name="m3STRN">Physical inventory line</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -97,8 +100,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPhysInvVarResponse></returns>
 		/// <exception cref="M3Exception<LstPhysInvVarResponse>"></exception>
 		public async Task<M3Response<LstPhysInvVarResponse>> LstPhysInvVar(
-			long m3_STNB, 
-			int? m3_STRN = null, 
+			long m3STNB, 
+			int? m3STRN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -116,11 +119,11 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("STNB", m3_STNB.ToString());
+				.WithQueryParameter("STNB", m3STNB.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_STRN.HasValue)
-				request.WithQueryParameter("STRN", m3_STRN.Value.ToString());
+			if (m3STRN.HasValue)
+				request.WithQueryParameter("STRN", m3STRN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPhysInvVarResponse>(
@@ -130,7 +133,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

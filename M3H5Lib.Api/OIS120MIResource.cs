@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS120MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,7 +38,7 @@ namespace M3H5Lib.Api
 		/// Description Get Customer Order Stop Information
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,7 +47,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCOStopInfoResponse></returns>
 		/// <exception cref="M3Exception<GetCOStopInfoResponse>"></exception>
 		public async Task<M3Response<GetCOStopInfoResponse>> GetCOStopInfo(
-			string m3_ORNO, 
+			string m3ORNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -60,12 +62,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim());
+				.WithQueryParameter("ORNO", m3ORNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCOStopInfoResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,11 +89,11 @@ namespace M3H5Lib.Api
 		/// Description List Customer Order Stop Info by Customer Order Number
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_CUOR">Customer's order number</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_NFTR">Number of filters</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3CUOR">Customer's order number</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3NFTR">Number of filters</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -99,11 +102,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCOStopByCUORResponse></returns>
 		/// <exception cref="M3Exception<LstCOStopByCUORResponse>"></exception>
 		public async Task<M3Response<LstCOStopByCUORResponse>> LstCOStopByCUOR(
-			string m3_FACI = null, 
-			string m3_CUOR = null, 
-			string m3_CUNO = null, 
-			string m3_ORNO = null, 
-			int? m3_NFTR = null, 
+			string m3FACI = null, 
+			string m3CUOR = null, 
+			string m3CUNO = null, 
+			string m3ORNO = null, 
+			int? m3NFTR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -118,16 +121,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUOR))
-				request.WithQueryParameter("CUOR", m3_CUOR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_NFTR.HasValue)
-				request.WithQueryParameter("NFTR", m3_NFTR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUOR))
+				request.WithQueryParameter("CUOR", m3CUOR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3NFTR.HasValue)
+				request.WithQueryParameter("NFTR", m3NFTR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstCOStopByCUORResponse>(
@@ -137,7 +140,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -148,9 +152,9 @@ namespace M3H5Lib.Api
 		/// Description List Customer Order Stop Info by Customer Order
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_NFTR">Number of filters</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3NFTR">Number of filters</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -159,9 +163,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCOStopByORNOResponse></returns>
 		/// <exception cref="M3Exception<LstCOStopByORNOResponse>"></exception>
 		public async Task<M3Response<LstCOStopByORNOResponse>> LstCOStopByORNO(
-			string m3_FACI = null, 
-			string m3_ORNO = null, 
-			int? m3_NFTR = null, 
+			string m3FACI = null, 
+			string m3ORNO = null, 
+			int? m3NFTR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -176,12 +180,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_NFTR.HasValue)
-				request.WithQueryParameter("NFTR", m3_NFTR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3NFTR.HasValue)
+				request.WithQueryParameter("NFTR", m3NFTR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstCOStopByORNOResponse>(
@@ -191,7 +195,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -202,12 +207,12 @@ namespace M3H5Lib.Api
 		/// Description List Customer Order Stop Info by Payer
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_OBLC">Customer order stop</param>
-		/// <param name="m3_ORDT">Order date</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_NFTR">Number of filters</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3OBLC">Customer order stop</param>
+		/// <param name="m3ORDT">Order date</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3NFTR">Number of filters</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -216,12 +221,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCOStopByPYNOResponse></returns>
 		/// <exception cref="M3Exception<LstCOStopByPYNOResponse>"></exception>
 		public async Task<M3Response<LstCOStopByPYNOResponse>> LstCOStopByPYNO(
-			string m3_FACI = null, 
-			string m3_PYNO = null, 
-			int? m3_OBLC = null, 
-			DateTime? m3_ORDT = null, 
-			string m3_ORNO = null, 
-			int? m3_NFTR = null, 
+			string m3FACI = null, 
+			string m3PYNO = null, 
+			int? m3OBLC = null, 
+			DateTime? m3ORDT = null, 
+			string m3ORNO = null, 
+			int? m3NFTR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -236,18 +241,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (m3_OBLC.HasValue)
-				request.WithQueryParameter("OBLC", m3_OBLC.Value.ToString());
-			if (m3_ORDT.HasValue)
-				request.WithQueryParameter("ORDT", m3_ORDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_NFTR.HasValue)
-				request.WithQueryParameter("NFTR", m3_NFTR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (m3OBLC.HasValue)
+				request.WithQueryParameter("OBLC", m3OBLC.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ORDT.HasValue)
+				request.WithQueryParameter("ORDT", m3ORDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3NFTR.HasValue)
+				request.WithQueryParameter("NFTR", m3NFTR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstCOStopByPYNOResponse>(
@@ -257,7 +262,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -268,9 +274,9 @@ namespace M3H5Lib.Api
 		/// Description Update Customer Order Stop
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_OBLC">Customer order stop</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3OBLC">Customer order stop</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -279,9 +285,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdCOStop(
-			string m3_ORNO, 
-			string m3_FACI = null, 
-			int? m3_OBLC = null, 
+			string m3ORNO, 
+			string m3FACI = null, 
+			int? m3OBLC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -296,18 +302,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim());
+				.WithQueryParameter("ORNO", m3ORNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (m3_OBLC.HasValue)
-				request.WithQueryParameter("OBLC", m3_OBLC.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (m3OBLC.HasValue)
+				request.WithQueryParameter("OBLC", m3OBLC.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -317,7 +323,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

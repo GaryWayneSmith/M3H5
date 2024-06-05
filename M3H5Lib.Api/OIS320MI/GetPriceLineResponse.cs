@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse location")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Sales price
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Line amount
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount")]
-		public decimal? M3_LNAM => GetNullableDecimal("LNAM");
+		public decimal? M3LNAM => GetNullableDecimal("LNAM");
 
 		/// <summary>
 		/// Description: Order date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Ordered quantity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Ordered quantity - sales price
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - sales price")]
-		public decimal? M3_ORQS => GetNullableDecimal("ORQS");
+		public decimal? M3ORQS => GetNullableDecimal("ORQS");
 
 		/// <summary>
 		/// Description: Pricelist
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricelist")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Sales person
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales person")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Order type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Blanket agreement number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blanket agreement number")]
-		public string M3_BAGN => GetString("BAGN");
+		public string M3BAGN => GetString("BAGN");
 
 		/// <summary>
 		/// Description: Discount model
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Currency
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Alternative unit
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternative unit")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 
 		/// <summary>
 		/// Description: Price origin
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price origin")]
-		public string M3_PRMO => GetString("PRMO");
+		public string M3PRMO => GetString("PRMO");
 
 		/// <summary>
 		/// Description: Sales price unit of measure
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price unit of measure")]
-		public string M3_SPUN => GetString("SPUN");
+		public string M3SPUN => GetString("SPUN");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public string M3_SACD => GetString("SACD");
+		public string M3SACD => GetString("SACD");
 
 		/// <summary>
 		/// Description: Pricelist
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricelist")]
-		public string M3_PRRO => GetString("PRRO");
+		public string M3PRRO => GetString("PRRO");
 
 		/// <summary>
 		/// Description: Sales campaign ID
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales campaign ID")]
-		public string M3_CMNO => GetString("CMNO");
+		public string M3CMNO => GetString("CMNO");
 
 		/// <summary>
 		/// Description: Discount amount 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 1")]
-		public string M3_DIA1 => GetString("DIA1");
+		public string M3DIA1 => GetString("DIA1");
 
 		/// <summary>
 		/// Description: Discount amount 2
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 2")]
-		public string M3_DIA2 => GetString("DIA2");
+		public string M3DIA2 => GetString("DIA2");
 
 		/// <summary>
 		/// Description: Discount amount 3
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 3")]
-		public string M3_DIA3 => GetString("DIA3");
+		public string M3DIA3 => GetString("DIA3");
 
 		/// <summary>
 		/// Description: Discount amount 4
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 4")]
-		public string M3_DIA4 => GetString("DIA4");
+		public string M3DIA4 => GetString("DIA4");
 
 		/// <summary>
 		/// Description: Discount amount 5
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 5")]
-		public string M3_DIA5 => GetString("DIA5");
+		public string M3DIA5 => GetString("DIA5");
 
 		/// <summary>
 		/// Description: Discount amount 6
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 6")]
-		public string M3_DIA6 => GetString("DIA6");
+		public string M3DIA6 => GetString("DIA6");
 
 		/// <summary>
 		/// Description: Status discount 1 - origin
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status discount 1 - origin")]
-		public int? M3_DIC1 => GetNullableInt("DIC1");
+		public int? M3DIC1 => GetNullableInt("DIC1");
 
 		/// <summary>
 		/// Description: Status discount 2 - origin
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status discount 2 - origin")]
-		public int? M3_DIC2 => GetNullableInt("DIC2");
+		public int? M3DIC2 => GetNullableInt("DIC2");
 
 		/// <summary>
 		/// Description: Status discount 3 - origin
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status discount 3 - origin")]
-		public int? M3_DIC3 => GetNullableInt("DIC3");
+		public int? M3DIC3 => GetNullableInt("DIC3");
 
 		/// <summary>
 		/// Description: Status discount 4 - origin
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status discount 4 - origin")]
-		public int? M3_DIC4 => GetNullableInt("DIC4");
+		public int? M3DIC4 => GetNullableInt("DIC4");
 
 		/// <summary>
 		/// Description: Status discount 5 - origin
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status discount 5 - origin")]
-		public int? M3_DIC5 => GetNullableInt("DIC5");
+		public int? M3DIC5 => GetNullableInt("DIC5");
 
 		/// <summary>
 		/// Description: Status discount 6 - origin
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status discount 6 - origin")]
-		public int? M3_DIC6 => GetNullableInt("DIC6");
+		public int? M3DIC6 => GetNullableInt("DIC6");
 
 		/// <summary>
 		/// Description: Statistics identity 1 - Discount
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 1 - Discount")]
-		public string M3_CMP1 => GetString("CMP1");
+		public string M3CMP1 => GetString("CMP1");
 
 		/// <summary>
 		/// Description: Statistics identity 2 - Discount
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 2 - Discount")]
-		public string M3_CMP2 => GetString("CMP2");
+		public string M3CMP2 => GetString("CMP2");
 
 		/// <summary>
 		/// Description: Statistics identity 3 - Discount
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 3 - Discount")]
-		public string M3_CMP3 => GetString("CMP3");
+		public string M3CMP3 => GetString("CMP3");
 
 		/// <summary>
 		/// Description: Statistics identity 4 - Discount
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 4 - Discount")]
-		public string M3_CMP4 => GetString("CMP4");
+		public string M3CMP4 => GetString("CMP4");
 
 		/// <summary>
 		/// Description: Statistics identity 4 - Discount
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 4 - Discount")]
-		public string M3_CMP5 => GetString("CMP5");
+		public string M3CMP5 => GetString("CMP5");
 
 		/// <summary>
 		/// Description: Statistics identity 6 - Discount
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 6 - Discount")]
-		public string M3_CMP6 => GetString("CMP6");
+		public string M3CMP6 => GetString("CMP6");
 
 		/// <summary>
 		/// Description: Discount text 1
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount text 1")]
-		public string M3_TX81 => GetString("TX81");
+		public string M3TX81 => GetString("TX81");
 
 		/// <summary>
 		/// Description: Discount text 2
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount text 2")]
-		public string M3_TX82 => GetString("TX82");
+		public string M3TX82 => GetString("TX82");
 
 		/// <summary>
 		/// Description: Discount text 3
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount text 3")]
-		public string M3_TX83 => GetString("TX83");
+		public string M3TX83 => GetString("TX83");
 
 		/// <summary>
 		/// Description: Discount text 4
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount text 4")]
-		public string M3_TX84 => GetString("TX84");
+		public string M3TX84 => GetString("TX84");
 
 		/// <summary>
 		/// Description: Discount text 5
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount text 5")]
-		public string M3_TX85 => GetString("TX85");
+		public string M3TX85 => GetString("TX85");
 
 		/// <summary>
 		/// Description: Discount text 6
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount text 6")]
-		public string M3_TX86 => GetString("TX86");
+		public string M3TX86 => GetString("TX86");
 
 		/// <summary>
 		/// Description: Business chain - level 1
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 1")]
-		public string M3_CHL1 => GetString("CHL1");
+		public string M3CHL1 => GetString("CHL1");
 
 		/// <summary>
 		/// Description: Business chain - level 2
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 2")]
-		public string M3_CHL2 => GetString("CHL2");
+		public string M3CHL2 => GetString("CHL2");
 
 		/// <summary>
 		/// Description: Business chain - level 3
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 3")]
-		public string M3_CHL3 => GetString("CHL3");
+		public string M3CHL3 => GetString("CHL3");
 
 		/// <summary>
 		/// Description: Business chain - level 4
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain - level 4")]
-		public string M3_CHL4 => GetString("CHL4");
+		public string M3CHL4 => GetString("CHL4");
 
 		/// <summary>
 		/// Description: VAT included
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT included")]
-		public int? M3_TINC => GetNullableInt("TINC");
+		public int? M3TINC => GetNullableInt("TINC");
 
 		/// <summary>
 		/// Description: Net price used
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price used")]
-		public int? M3_NTCD => GetNullableInt("NTCD");
+		public int? M3NTCD => GetNullableInt("NTCD");
 
 		/// <summary>
 		/// Description: Promotion
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_PIDE => GetString("PIDE");
+		public string M3PIDE => GetString("PIDE");
 
 		/// <summary>
 		/// Description: Item number
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_KIT1 => GetString("KIT1");
+		public string M3KIT1 => GetString("KIT1");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_KQT1 => GetNullableDecimal("KQT1");
+		public decimal? M3KQT1 => GetNullableDecimal("KQT1");
 
 		/// <summary>
 		/// Description: Sales price
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_KSP1 => GetNullableDecimal("KSP1");
+		public decimal? M3KSP1 => GetNullableDecimal("KSP1");
 
 		/// <summary>
 		/// Description: Name
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_KDS1 => GetString("KDS1");
+		public string M3KDS1 => GetString("KDS1");
 
 		/// <summary>
 		/// Description: Item number
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_KIT2 => GetString("KIT2");
+		public string M3KIT2 => GetString("KIT2");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_KQT2 => GetNullableDecimal("KQT2");
+		public decimal? M3KQT2 => GetNullableDecimal("KQT2");
 
 		/// <summary>
 		/// Description: Sales price
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_KSP2 => GetNullableDecimal("KSP2");
+		public decimal? M3KSP2 => GetNullableDecimal("KSP2");
 
 		/// <summary>
 		/// Description: Name
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_KDS2 => GetString("KDS2");
+		public string M3KDS2 => GetString("KDS2");
 
 		/// <summary>
 		/// Description: Item number
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_KIT3 => GetString("KIT3");
+		public string M3KIT3 => GetString("KIT3");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_KQT3 => GetNullableDecimal("KQT3");
+		public decimal? M3KQT3 => GetNullableDecimal("KQT3");
 
 		/// <summary>
 		/// Description: Sales price
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_KSP3 => GetNullableDecimal("KSP3");
+		public decimal? M3KSP3 => GetNullableDecimal("KSP3");
 
 		/// <summary>
 		/// Description: Name
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_KDS3 => GetString("KDS3");
+		public string M3KDS3 => GetString("KDS3");
 
 		/// <summary>
 		/// Description: Discount 1
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 1")]
-		public int? M3_DIP1 => GetNullableInt("DIP1");
+		public int? M3DIP1 => GetNullableInt("DIP1");
 
 		/// <summary>
 		/// Description: Discount 2
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 2")]
-		public int? M3_DIP2 => GetNullableInt("DIP2");
+		public int? M3DIP2 => GetNullableInt("DIP2");
 
 		/// <summary>
 		/// Description: Discount 3
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 3")]
-		public int? M3_DIP3 => GetNullableInt("DIP3");
+		public int? M3DIP3 => GetNullableInt("DIP3");
 
 		/// <summary>
 		/// Description: Discount 4
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 4")]
-		public int? M3_DIP4 => GetNullableInt("DIP4");
+		public int? M3DIP4 => GetNullableInt("DIP4");
 
 		/// <summary>
 		/// Description: Discount 5
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 5")]
-		public int? M3_DIP5 => GetNullableInt("DIP5");
+		public int? M3DIP5 => GetNullableInt("DIP5");
 
 		/// <summary>
 		/// Description: Discount 6
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 6")]
-		public int? M3_DIP6 => GetNullableInt("DIP6");
+		public int? M3DIP6 => GetNullableInt("DIP6");
 
 		/// <summary>
 		/// Description: Sales price
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAP1 => GetNullableDecimal("SAP1");
+		public decimal? M3SAP1 => GetNullableDecimal("SAP1");
 
 		/// <summary>
 		/// Description: Sales price
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAP2 => GetNullableDecimal("SAP2");
+		public decimal? M3SAP2 => GetNullableDecimal("SAP2");
 
 		/// <summary>
 		/// Description: Sales price
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAP3 => GetNullableDecimal("SAP3");
+		public decimal? M3SAP3 => GetNullableDecimal("SAP3");
 
 		/// <summary>
 		/// Description: Sales price
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAP4 => GetNullableDecimal("SAP4");
+		public decimal? M3SAP4 => GetNullableDecimal("SAP4");
 
 		/// <summary>
 		/// Description: Sales price
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAP5 => GetNullableDecimal("SAP5");
+		public decimal? M3SAP5 => GetNullableDecimal("SAP5");
 
 		/// <summary>
 		/// Description: Sales price
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAP6 => GetNullableDecimal("SAP6");
+		public decimal? M3SAP6 => GetNullableDecimal("SAP6");
 
 		/// <summary>
 		/// Description: Discount amount per unit
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount per unit")]
-		public decimal? M3_DPR1 => GetNullableDecimal("DPR1");
+		public decimal? M3DPR1 => GetNullableDecimal("DPR1");
 
 		/// <summary>
 		/// Description: Discount amount per unit
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount per unit")]
-		public decimal? M3_DPR2 => GetNullableDecimal("DPR2");
+		public decimal? M3DPR2 => GetNullableDecimal("DPR2");
 
 		/// <summary>
 		/// Description: Discount amount per unit
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount per unit")]
-		public decimal? M3_DPR3 => GetNullableDecimal("DPR3");
+		public decimal? M3DPR3 => GetNullableDecimal("DPR3");
 
 		/// <summary>
 		/// Description: Discount amount per unit
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount per unit")]
-		public decimal? M3_DPR4 => GetNullableDecimal("DPR4");
+		public decimal? M3DPR4 => GetNullableDecimal("DPR4");
 
 		/// <summary>
 		/// Description: Discount amount per unit
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount per unit")]
-		public decimal? M3_DPR5 => GetNullableDecimal("DPR5");
+		public decimal? M3DPR5 => GetNullableDecimal("DPR5");
 
 		/// <summary>
 		/// Description: Discount amount per unit
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount per unit")]
-		public decimal? M3_DPR6 => GetNullableDecimal("DPR6");
+		public decimal? M3DPR6 => GetNullableDecimal("DPR6");
 
 		/// <summary>
 		/// Description: Net price
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price")]
-		public decimal? M3_NETP => GetNullableDecimal("NETP");
+		public decimal? M3NETP => GetNullableDecimal("NETP");
 
 		/// <summary>
 		/// Description: Order total discount
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order total discount")]
-		public decimal? M3_ODAM => GetNullableDecimal("ODAM");
+		public decimal? M3ODAM => GetNullableDecimal("ODAM");
 
 		/// <summary>
 		/// Description: Core charge item number
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Core charge item number")]
-		public string M3_CCI1 => GetString("CCI1");
+		public string M3CCI1 => GetString("CCI1");
 
 		/// <summary>
 		/// Description: Sales price - core charge
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price - core charge")]
-		public decimal? M3_CCSA => GetNullableDecimal("CCSA");
+		public decimal? M3CCSA => GetNullableDecimal("CCSA");
 
 		/// <summary>
 		/// Description: Margin percent
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Margin percent")]
-		public int? M3_TBPR => GetNullableInt("TBPR");
+		public int? M3TBPR => GetNullableInt("TBPR");
 
 		/// <summary>
 		/// Description: Margin amount
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Margin amount")]
-		public decimal? M3_TBAM => GetNullableDecimal("TBAM");
+		public decimal? M3TBAM => GetNullableDecimal("TBAM");
 
 		/// <summary>
 		/// Description: Cost price
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public decimal? M3_UCOS => GetNullableDecimal("UCOS");
+		public decimal? M3UCOS => GetNullableDecimal("UCOS");
 
 		/// <summary>
 		/// Description: Average cost
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Average cost")]
-		public decimal? M3_APPR => GetNullableDecimal("APPR");
+		public decimal? M3APPR => GetNullableDecimal("APPR");
 
 		/// <summary>
 		/// Description: Inventory accounting method
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting method")]
-		public int? M3_VAMT => GetNullableInt("VAMT");
+		public int? M3VAMT => GetNullableInt("VAMT");
 
 		/// <summary>
 		/// Description: Costing decimal places
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing decimal places")]
-		public int? M3_CPDC => GetNullableInt("CPDC");
+		public int? M3CPDC => GetNullableInt("CPDC");
 
 		/// <summary>
 		/// Description: Item cost quantity
@@ -1024,7 +1024,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item cost quantity")]
-		public int? M3_COCD => GetNullableInt("COCD");
+		public int? M3COCD => GetNullableInt("COCD");
 
 		/// <summary>
 		/// Description: Cost unit of measure
@@ -1035,7 +1035,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost unit of measure")]
-		public string M3_CPUN => GetString("CPUN");
+		public string M3CPUN => GetString("CPUN");
 
 		/// <summary>
 		/// Description: Local currency
@@ -1046,7 +1046,7 @@ namespace M3H5Lib.Api.OIS320MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 	}
 }
 // EOF

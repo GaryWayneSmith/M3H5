@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OPS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public string M3_TRTP => GetString("TRTP");
+		public string M3TRTP => GetString("TRTP");
 
 		/// <summary>
 		/// Description: Action code
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OPS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action code")]
-		public string M3_ACCT => GetString("ACCT");
+		public string M3ACCT => GetString("ACCT");
 
 		/// <summary>
 		/// Description: Data
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OPS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data")]
-		public string M3_RDDA => GetString("RDDA");
+		public string M3RDDA => GetString("RDDA");
 
 		/// <summary>
 		/// Description: Distribution key 2 - resource driver
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OPS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution key 2 - resource driver")]
-		public string M3_RDD2 => GetString("RDD2");
+		public string M3RDD2 => GetString("RDD2");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Individual item management
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item management")]
-		public int? M3_INDC => GetNullableInt("INDC");
+		public int? M3INDC => GetNullableInt("INDC");
 
 		/// <summary>
 		/// Description: Response time
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Response time")]
-		public int? M3_APTM => GetNullableInt("APTM");
+		public int? M3APTM => GetNullableInt("APTM");
 
 		/// <summary>
 		/// Description: Service expense type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service expense type")]
-		public string M3_SETP => GetString("SETP");
+		public string M3SETP => GetString("SETP");
 
 		/// <summary>
 		/// Description: Supplier warranty time method
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier warranty time method")]
-		public int? M3_DGTC => GetNullableInt("DGTC");
+		public int? M3DGTC => GetNullableInt("DGTC");
 
 		/// <summary>
 		/// Description: Sales warranty time method
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales warranty time method")]
-		public int? M3_SGTC => GetNullableInt("SGTC");
+		public int? M3SGTC => GetNullableInt("SGTC");
 
 		/// <summary>
 		/// Description: Supplier warranty time years
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier warranty time years")]
-		public int? M3_DGYR => GetNullableInt("DGYR");
+		public int? M3DGYR => GetNullableInt("DGYR");
 
 		/// <summary>
 		/// Description: Supplier warranty time months
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier warranty time months")]
-		public int? M3_DGMO => GetNullableInt("DGMO");
+		public int? M3DGMO => GetNullableInt("DGMO");
 
 		/// <summary>
 		/// Description: Supplier warranty time days
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier warranty time days")]
-		public int? M3_DGDA => GetNullableInt("DGDA");
+		public int? M3DGDA => GetNullableInt("DGDA");
 
 		/// <summary>
 		/// Description: Sales warranty time years
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales warranty time years")]
-		public int? M3_SGYR => GetNullableInt("SGYR");
+		public int? M3SGYR => GetNullableInt("SGYR");
 
 		/// <summary>
 		/// Description: Sales warranty time months
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales warranty time months")]
-		public int? M3_SGMO => GetNullableInt("SGMO");
+		public int? M3SGMO => GetNullableInt("SGMO");
 
 		/// <summary>
 		/// Description: Sales warranty time days
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales warranty time days")]
-		public int? M3_SGDA => GetNullableInt("SGDA");
+		public int? M3SGDA => GetNullableInt("SGDA");
 
 		/// <summary>
 		/// Description: Individual item template
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item template")]
-		public string M3_TIND => GetString("TIND");
+		public string M3TIND => GetString("TIND");
 
 		/// <summary>
 		/// Description: Agreement order type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order type")]
-		public string M3_AOTP => GetString("AOTP");
+		public string M3AOTP => GetString("AOTP");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Preventive service order
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Preventive service order")]
-		public int? M3_PSCO => GetNullableInt("PSCO");
+		public int? M3PSCO => GetNullableInt("PSCO");
 
 		/// <summary>
 		/// Description: Meter item
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter item")]
-		public int? M3_MEIT => GetNullableInt("MEIT");
+		public int? M3MEIT => GetNullableInt("MEIT");
 
 		/// <summary>
 		/// Description: Downtime
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Downtime")]
-		public int? M3_DOWT => GetNullableInt("DOWT");
+		public int? M3DOWT => GetNullableInt("DOWT");
 
 		/// <summary>
 		/// Description: Change date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Actual meter 1 in use
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter 1 in use")]
-		public int? M3_AM1U => GetNullableInt("AM1U");
+		public int? M3AM1U => GetNullableInt("AM1U");
 
 		/// <summary>
 		/// Description: Actual meter 2 in use
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter 2 in use")]
-		public int? M3_AM2U => GetNullableInt("AM2U");
+		public int? M3AM2U => GetNullableInt("AM2U");
 
 		/// <summary>
 		/// Description: Actual meter 3 in use
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter 3 in use")]
-		public int? M3_AM3U => GetNullableInt("AM3U");
+		public int? M3AM3U => GetNullableInt("AM3U");
 
 		/// <summary>
 		/// Description: Actual meter 4 in use
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter 4 in use")]
-		public int? M3_AM4U => GetNullableInt("AM4U");
+		public int? M3AM4U => GetNullableInt("AM4U");
 
 		/// <summary>
 		/// Description: Actual meter 5 in use
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter 5 in use")]
-		public int? M3_AM5U => GetNullableInt("AM5U");
+		public int? M3AM5U => GetNullableInt("AM5U");
 
 		/// <summary>
 		/// Description: Actual meter 6 in use
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual meter 6 in use")]
-		public int? M3_AM6U => GetNullableInt("AM6U");
+		public int? M3AM6U => GetNullableInt("AM6U");
 
 		/// <summary>
 		/// Description: Logical meter 1 in use
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logical meter 1 in use")]
-		public int? M3_LM1U => GetNullableInt("LM1U");
+		public int? M3LM1U => GetNullableInt("LM1U");
 
 		/// <summary>
 		/// Description: Logical meter 2 in use
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logical meter 2 in use")]
-		public int? M3_LM2U => GetNullableInt("LM2U");
+		public int? M3LM2U => GetNullableInt("LM2U");
 
 		/// <summary>
 		/// Description: Logical meter 3 in use
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logical meter 3 in use")]
-		public int? M3_LM3U => GetNullableInt("LM3U");
+		public int? M3LM3U => GetNullableInt("LM3U");
 
 		/// <summary>
 		/// Description: Logical meter 4 in use
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logical meter 4 in use")]
-		public int? M3_LM4U => GetNullableInt("LM4U");
+		public int? M3LM4U => GetNullableInt("LM4U");
 
 		/// <summary>
 		/// Description: Logical meter 5 in use
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logical meter 5 in use")]
-		public int? M3_LM5U => GetNullableInt("LM5U");
+		public int? M3LM5U => GetNullableInt("LM5U");
 
 		/// <summary>
 		/// Description: Logical meter 6 in use
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Logical meter 6 in use")]
-		public int? M3_LM6U => GetNullableInt("LM6U");
+		public int? M3LM6U => GetNullableInt("LM6U");
 
 		/// <summary>
 		/// Description: Invoice meter 1 in use
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice meter 1 in use")]
-		public int? M3_IM1U => GetNullableInt("IM1U");
+		public int? M3IM1U => GetNullableInt("IM1U");
 
 		/// <summary>
 		/// Description: Invoice meter 2 in use
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice meter 2 in use")]
-		public int? M3_IM2U => GetNullableInt("IM2U");
+		public int? M3IM2U => GetNullableInt("IM2U");
 
 		/// <summary>
 		/// Description: Invoice meter 3 in use
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice meter 3 in use")]
-		public int? M3_IM3U => GetNullableInt("IM3U");
+		public int? M3IM3U => GetNullableInt("IM3U");
 
 		/// <summary>
 		/// Description: Invoice meter 4 in use
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice meter 4 in use")]
-		public int? M3_IM4U => GetNullableInt("IM4U");
+		public int? M3IM4U => GetNullableInt("IM4U");
 
 		/// <summary>
 		/// Description: Invoice meter 5 in use
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice meter 5 in use")]
-		public int? M3_IM5U => GetNullableInt("IM5U");
+		public int? M3IM5U => GetNullableInt("IM5U");
 
 		/// <summary>
 		/// Description: Invoice meter 6 in use
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice meter 6 in use")]
-		public int? M3_IM6U => GetNullableInt("IM6U");
+		public int? M3IM6U => GetNullableInt("IM6U");
 	}
 }
 // EOF

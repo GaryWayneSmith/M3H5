@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.FCS350MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,15 +38,15 @@ namespace M3H5Lib.Api
 		/// Description List Forecast quantity
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_WHGR">Warehouse group</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_MDVR">Master demand schedule version</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_TDAT">To date</param>
-		/// <param name="m3_SULF">Summary level</param>
-		/// <param name="m3_SWHG">Sum warehousegroup</param>
-		/// <param name="m3_APIP">APS - policy</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3WHGR">Warehouse group</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3MDVR">Master demand schedule version</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3TDAT">To date</param>
+		/// <param name="m3SULF">Summary level</param>
+		/// <param name="m3SWHG">Sum warehousegroup</param>
+		/// <param name="m3APIP">APS - policy</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -53,15 +55,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstForQtyResponse></returns>
 		/// <exception cref="M3Exception<LstForQtyResponse>"></exception>
 		public async Task<M3Response<LstForQtyResponse>> LstForQty(
-			string m3_WHLO = null, 
-			string m3_WHGR = null, 
-			string m3_ITNO = null, 
-			string m3_MDVR = null, 
-			DateTime? m3_FDAT = null, 
-			DateTime? m3_TDAT = null, 
-			int? m3_SULF = null, 
-			int? m3_SWHG = null, 
-			string m3_APIP = null, 
+			string m3WHLO = null, 
+			string m3WHGR = null, 
+			string m3ITNO = null, 
+			string m3MDVR = null, 
+			DateTime? m3FDAT = null, 
+			DateTime? m3TDAT = null, 
+			int? m3SULF = null, 
+			int? m3SWHG = null, 
+			string m3APIP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -76,24 +78,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHGR))
-				request.WithQueryParameter("WHGR", m3_WHGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MDVR))
-				request.WithQueryParameter("MDVR", m3_MDVR.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_TDAT.HasValue)
-				request.WithQueryParameter("TDAT", m3_TDAT.Value.ToM3String());
-			if (m3_SULF.HasValue)
-				request.WithQueryParameter("SULF", m3_SULF.Value.ToString());
-			if (m3_SWHG.HasValue)
-				request.WithQueryParameter("SWHG", m3_SWHG.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_APIP))
-				request.WithQueryParameter("APIP", m3_APIP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHGR))
+				request.WithQueryParameter("WHGR", m3WHGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MDVR))
+				request.WithQueryParameter("MDVR", m3MDVR.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3TDAT.HasValue)
+				request.WithQueryParameter("TDAT", m3TDAT.Value.ToM3String());
+			if (m3SULF.HasValue)
+				request.WithQueryParameter("SULF", m3SULF.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SWHG.HasValue)
+				request.WithQueryParameter("SWHG", m3SWHG.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3APIP))
+				request.WithQueryParameter("APIP", m3APIP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstForQtyResponse>(
@@ -103,7 +105,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -114,12 +117,12 @@ namespace M3H5Lib.Api
 		/// Description Update Forecast quantity
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_TDAT">To date</param>
-		/// <param name="m3_MDVR">Master demand schedule version</param>
-		/// <param name="m3_FOQT">Forecast quantity</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3TDAT">To date</param>
+		/// <param name="m3MDVR">Master demand schedule version</param>
+		/// <param name="m3FOQT">Forecast quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -128,12 +131,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdForQty(
-			string m3_WHLO = null, 
-			string m3_ITNO = null, 
-			DateTime? m3_FDAT = null, 
-			DateTime? m3_TDAT = null, 
-			string m3_MDVR = null, 
-			decimal? m3_FOQT = null, 
+			string m3WHLO = null, 
+			string m3ITNO = null, 
+			DateTime? m3FDAT = null, 
+			DateTime? m3TDAT = null, 
+			string m3MDVR = null, 
+			decimal? m3FOQT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -148,18 +151,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_TDAT.HasValue)
-				request.WithQueryParameter("TDAT", m3_TDAT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_MDVR))
-				request.WithQueryParameter("MDVR", m3_MDVR.Trim());
-			if (m3_FOQT.HasValue)
-				request.WithQueryParameter("FOQT", m3_FOQT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3TDAT.HasValue)
+				request.WithQueryParameter("TDAT", m3TDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3MDVR))
+				request.WithQueryParameter("MDVR", m3MDVR.Trim());
+			if (m3FOQT.HasValue)
+				request.WithQueryParameter("FOQT", m3FOQT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -169,7 +172,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Issue reporting status
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue reporting status")]
-		public string M3_IRPS => GetString("IRPS");
+		public string M3IRPS => GetString("IRPS");
 
 		/// <summary>
 		/// Description: Delivery value check amount
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery value check amount")]
-		public decimal? M3_DVCA => GetNullableDecimal("DVCA");
+		public decimal? M3DVCA => GetNullableDecimal("DVCA");
 
 		/// <summary>
 		/// Description: Delivery value variance
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery value variance")]
-		public decimal? M3_DVDA => GetNullableDecimal("DVDA");
+		public decimal? M3DVDA => GetNullableDecimal("DVDA");
 
 		/// <summary>
 		/// Description: Currency of payer used in delivery value
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency of payer used in delivery value")]
-		public string M3_DVCU => GetString("DVCU");
+		public string M3DVCU => GetString("DVCU");
 	}
 }
 // EOF

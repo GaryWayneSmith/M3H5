@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Start date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: To date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 
 		/// <summary>
 		/// Description: Responsible
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Description
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Process type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Process type")]
-		public string M3_TOFP => GetString("TOFP");
+		public string M3TOFP => GetString("TOFP");
 
 		/// <summary>
 		/// Description: Service group
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service group")]
-		public string M3_SRGP => GetString("SRGP");
+		public string M3SRGP => GetString("SRGP");
 
 		/// <summary>
 		/// Description: Service level
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service level")]
-		public int? M3_ZSET => GetNullableInt("ZSET");
+		public int? M3ZSET => GetNullableInt("ZSET");
 
 		/// <summary>
 		/// Description: Scheduled maintenance service
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scheduled maintenance service")]
-		public int? M3_SCHD => GetNullableInt("SCHD");
+		public int? M3SCHD => GetNullableInt("SCHD");
 
 		/// <summary>
 		/// Description: Event type
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event type")]
-		public string M3_EVTY => GetString("EVTY");
+		public string M3EVTY => GetString("EVTY");
 
 		/// <summary>
 		/// Description: Event sequence
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event sequence")]
-		public int? M3_EVTS => GetNullableInt("EVTS");
+		public int? M3EVTS => GetNullableInt("EVTS");
 
 		/// <summary>
 		/// Description: Shutdown
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shutdown")]
-		public int? M3_NSTP => GetNullableInt("NSTP");
+		public int? M3NSTP => GetNullableInt("NSTP");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Facility
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Planning policy
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning policy")]
-		public string M3_PLCD => GetString("PLCD");
+		public string M3PLCD => GetString("PLCD");
 
 		/// <summary>
 		/// Description: Order type
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Repeat interval
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Repeat interval")]
-		public decimal? M3_REIN => GetNullableDecimal("REIN");
+		public decimal? M3REIN => GetNullableDecimal("REIN");
 
 		/// <summary>
 		/// Description: Work center
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Run time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run time")]
-		public int? M3_PITI => GetNullableInt("PITI");
+		public int? M3PITI => GetNullableInt("PITI");
 
 		/// <summary>
 		/// Description: Planned number of workers - run time
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of workers - run time")]
-		public int? M3_PRNP => GetNullableInt("PRNP");
+		public int? M3PRNP => GetNullableInt("PRNP");
 
 		/// <summary>
 		/// Description: Operation description
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Alarm limit
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alarm limit")]
-		public string M3_AAFR => GetString("AAFR");
+		public string M3AAFR => GetString("AAFR");
 
 		/// <summary>
 		/// Description: Alarm limit
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alarm limit")]
-		public string M3_AATO => GetString("AATO");
+		public string M3AATO => GetString("AATO");
 
 		/// <summary>
 		/// Description: Trend limit
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trend limit")]
-		public string M3_AATR => GetString("AATR");
+		public string M3AATR => GetString("AATR");
 
 		/// <summary>
 		/// Description: Meter
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Result unit of measure
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result unit of measure")]
-		public string M3_RUOM => GetString("RUOM");
+		public string M3RUOM => GetString("RUOM");
 
 		/// <summary>
 		/// Description: Document identity
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document identity")]
-		public string M3_DOID => GetString("DOID");
+		public string M3DOID => GetString("DOID");
 
 		/// <summary>
 		/// Description: Number of put-away cards
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of put-away cards")]
-		public int? M3_NUC1 => GetNullableInt("NUC1");
+		public int? M3NUC1 => GetNullableInt("NUC1");
 
 		/// <summary>
 		/// Description: Number of material requisitions
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of material requisitions")]
-		public int? M3_NUC2 => GetNullableInt("NUC2");
+		public int? M3NUC2 => GetNullableInt("NUC2");
 
 		/// <summary>
 		/// Description: Number of labor tickets
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of labor tickets")]
-		public int? M3_NUC3 => GetNullableInt("NUC3");
+		public int? M3NUC3 => GetNullableInt("NUC3");
 
 		/// <summary>
 		/// Description: Number of shop travelers
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of shop travelers")]
-		public int? M3_NUC4 => GetNullableInt("NUC4");
+		public int? M3NUC4 => GetNullableInt("NUC4");
 
 		/// <summary>
 		/// Description: Number of routing cards
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of routing cards")]
-		public int? M3_NUC5 => GetNullableInt("NUC5");
+		public int? M3NUC5 => GetNullableInt("NUC5");
 
 		/// <summary>
 		/// Description: Number of picking lists
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of picking lists")]
-		public int? M3_NUC6 => GetNullableInt("NUC6");
+		public int? M3NUC6 => GetNullableInt("NUC6");
 
 		/// <summary>
 		/// Description: Number of design documents
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of design documents")]
-		public int? M3_NUC7 => GetNullableInt("NUC7");
+		public int? M3NUC7 => GetNullableInt("NUC7");
 
 		/// <summary>
 		/// Description: Text
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL1 => GetString("TXL1");
+		public string M3TXL1 => GetString("TXL1");
 
 		/// <summary>
 		/// Description: Text
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL2 => GetString("TXL2");
+		public string M3TXL2 => GetString("TXL2");
 
 		/// <summary>
 		/// Description: Text
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL3 => GetString("TXL3");
+		public string M3TXL3 => GetString("TXL3");
 
 		/// <summary>
 		/// Description: Text
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL4 => GetString("TXL4");
+		public string M3TXL4 => GetString("TXL4");
 
 		/// <summary>
 		/// Description: Text
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL5 => GetString("TXL5");
+		public string M3TXL5 => GetString("TXL5");
 
 		/// <summary>
 		/// Description: Text
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL6 => GetString("TXL6");
+		public string M3TXL6 => GetString("TXL6");
 
 		/// <summary>
 		/// Description: Text
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL7 => GetString("TXL7");
+		public string M3TXL7 => GetString("TXL7");
 
 		/// <summary>
 		/// Description: Text
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL8 => GetString("TXL8");
+		public string M3TXL8 => GetString("TXL8");
 
 		/// <summary>
 		/// Description: Text
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL9 => GetString("TXL9");
+		public string M3TXL9 => GetString("TXL9");
 
 		/// <summary>
 		/// Description: Text
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL0 => GetString("TXL0");
+		public string M3TXL0 => GetString("TXL0");
 
 		/// <summary>
 		/// Description: Estimated downtime
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated downtime")]
-		public int? M3_EDWT => GetNullableInt("EDWT");
+		public int? M3EDWT => GetNullableInt("EDWT");
 
 		/// <summary>
 		/// Description: Scheduling logic
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scheduling logic")]
-		public int? M3_SCHL => GetNullableInt("SCHL");
+		public int? M3SCHL => GetNullableInt("SCHL");
 
 		/// <summary>
 		/// Description: Service Type
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service Type")]
-		public string M3_STYP => GetString("STYP");
+		public string M3STYP => GetString("STYP");
 
 		/// <summary>
 		/// Description: ECO managed
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ECO managed")]
-		public int? M3_ECMA => GetNullableInt("ECMA");
+		public int? M3ECMA => GetNullableInt("ECMA");
 
 		/// <summary>
 		/// Description: OEM hours
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM hours")]
-		public int? M3_RUNO => GetNullableInt("RUNO");
+		public int? M3RUNO => GetNullableInt("RUNO");
 
 		/// <summary>
 		/// Description: Price hours
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price hours")]
-		public int? M3_RUNP => GetNullableInt("RUNP");
+		public int? M3RUNP => GetNullableInt("RUNP");
 
 		/// <summary>
 		/// Description: Target hours
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target hours")]
-		public int? M3_RUNT => GetNullableInt("RUNT");
+		public int? M3RUNT => GetNullableInt("RUNT");
 
 		/// <summary>
 		/// Description: Claim warranty
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MOS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim warranty")]
-		public int? M3_ACWA => GetNullableInt("ACWA");
+		public int? M3ACWA => GetNullableInt("ACWA");
 	}
 }
 // EOF

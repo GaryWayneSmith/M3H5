@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event publisher")]
-		public string M3_EVPB => GetString("EVPB");
+		public string M3EVPB => GetString("EVPB");
 
 		/// <summary>
 		/// Description: Event name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event name")]
-		public string M3_EVNM => GetString("EVNM");
+		public string M3EVNM => GetString("EVNM");
 
 		/// <summary>
 		/// Description: Event name operation
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event name operation")]
-		public string M3_EVNO => GetString("EVNO");
+		public string M3EVNO => GetString("EVNO");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Include/exclude in event mapping
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Include/exclude in event mapping")]
-		public int? M3_INEM => GetNullableInt("INEM");
+		public int? M3INEM => GetNullableInt("INEM");
 
 		/// <summary>
 		/// Description: Include/exclude in event alerts
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Include/exclude in event alerts")]
-		public int? M3_INEA => GetNullableInt("INEA");
+		public int? M3INEA => GetNullableInt("INEA");
 
 		/// <summary>
 		/// Description: Include in event Db changes
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Include in event Db changes")]
-		public int? M3_INEC => GetNullableInt("INEC");
+		public int? M3INEC => GetNullableInt("INEC");
 	}
 }
 // EOF

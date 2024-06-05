@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS473MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add connections with custom field groups
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_CFMG">Custom field group (Required)</param>
-		/// <param name="m3_CPGR">Composition group</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_SUCL">Supplier group</param>
-		/// <param name="m3_POCA">Position group</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3CFMG">Custom field group (Required)</param>
+		/// <param name="m3CPGR">Composition group</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3SUCL">Supplier group</param>
+		/// <param name="m3POCA">Position group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddConnection(
-			int m3_SQNR, 
-			string m3_CFMG, 
-			string m3_CPGR = null, 
-			string m3_ITGR = null, 
-			string m3_SUCL = null, 
-			string m3_POCA = null, 
+			int m3SQNR, 
+			string m3CFMG, 
+			string m3CPGR = null, 
+			string m3ITGR = null, 
+			string m3SUCL = null, 
+			string m3POCA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,23 +72,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMG))
-				throw new ArgumentNullException("m3_CFMG");
+			if (string.IsNullOrWhiteSpace(m3CFMG))
+				throw new ArgumentNullException(nameof(m3CFMG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SQNR", m3_SQNR.ToString())
-				.WithQueryParameter("CFMG", m3_CFMG.Trim());
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CFMG", m3CFMG.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CPGR))
-				request.WithQueryParameter("CPGR", m3_CPGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUCL))
-				request.WithQueryParameter("SUCL", m3_SUCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POCA))
-				request.WithQueryParameter("POCA", m3_POCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CPGR))
+				request.WithQueryParameter("CPGR", m3CPGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUCL))
+				request.WithQueryParameter("SUCL", m3SUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POCA))
+				request.WithQueryParameter("POCA", m3POCA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -96,7 +98,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -107,11 +110,11 @@ namespace M3H5Lib.Api
 		/// Description Delete connections with custom field groups
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_CPGR">Composition group</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_SUCL">Supplier group</param>
-		/// <param name="m3_POCA">Position group</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3CPGR">Composition group</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3SUCL">Supplier group</param>
+		/// <param name="m3POCA">Position group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -120,11 +123,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltConnection(
-			int m3_SQNR, 
-			string m3_CPGR = null, 
-			string m3_ITGR = null, 
-			string m3_SUCL = null, 
-			string m3_POCA = null, 
+			int m3SQNR, 
+			string m3CPGR = null, 
+			string m3ITGR = null, 
+			string m3SUCL = null, 
+			string m3POCA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -142,17 +145,17 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CPGR))
-				request.WithQueryParameter("CPGR", m3_CPGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUCL))
-				request.WithQueryParameter("SUCL", m3_SUCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POCA))
-				request.WithQueryParameter("POCA", m3_POCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CPGR))
+				request.WithQueryParameter("CPGR", m3CPGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUCL))
+				request.WithQueryParameter("SUCL", m3SUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POCA))
+				request.WithQueryParameter("POCA", m3POCA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -162,7 +165,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -173,11 +177,11 @@ namespace M3H5Lib.Api
 		/// Description Get connections with custom field groups
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_CPGR">Composition group</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_SUCL">Supplier group</param>
-		/// <param name="m3_POCA">Position group</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3CPGR">Composition group</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3SUCL">Supplier group</param>
+		/// <param name="m3POCA">Position group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -186,11 +190,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetConnectionResponse></returns>
 		/// <exception cref="M3Exception<GetConnectionResponse>"></exception>
 		public async Task<M3Response<GetConnectionResponse>> GetConnection(
-			int m3_SQNR, 
-			string m3_CPGR = null, 
-			string m3_ITGR = null, 
-			string m3_SUCL = null, 
-			string m3_POCA = null, 
+			int m3SQNR, 
+			string m3CPGR = null, 
+			string m3ITGR = null, 
+			string m3SUCL = null, 
+			string m3POCA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -208,17 +212,17 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CPGR))
-				request.WithQueryParameter("CPGR", m3_CPGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUCL))
-				request.WithQueryParameter("SUCL", m3_SUCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POCA))
-				request.WithQueryParameter("POCA", m3_POCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CPGR))
+				request.WithQueryParameter("CPGR", m3CPGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUCL))
+				request.WithQueryParameter("SUCL", m3SUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POCA))
+				request.WithQueryParameter("POCA", m3POCA.Trim());
 
 			// Execute the request
 			var result = await Execute<GetConnectionResponse>(
@@ -228,7 +232,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -239,11 +244,11 @@ namespace M3H5Lib.Api
 		/// Description List connections with custom field groups
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CPGR">Composition group</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_SUCL">Supplier group</param>
-		/// <param name="m3_POCA">Position group</param>
-		/// <param name="m3_SQNR">Sequence number</param>
+		/// <param name="m3CPGR">Composition group</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3SUCL">Supplier group</param>
+		/// <param name="m3POCA">Position group</param>
+		/// <param name="m3SQNR">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -252,11 +257,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstConnectionResponse></returns>
 		/// <exception cref="M3Exception<LstConnectionResponse>"></exception>
 		public async Task<M3Response<LstConnectionResponse>> LstConnection(
-			string m3_CPGR = null, 
-			string m3_ITGR = null, 
-			string m3_SUCL = null, 
-			string m3_POCA = null, 
-			int? m3_SQNR = null, 
+			string m3CPGR = null, 
+			string m3ITGR = null, 
+			string m3SUCL = null, 
+			string m3POCA = null, 
+			int? m3SQNR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -271,16 +276,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CPGR))
-				request.WithQueryParameter("CPGR", m3_CPGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUCL))
-				request.WithQueryParameter("SUCL", m3_SUCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POCA))
-				request.WithQueryParameter("POCA", m3_POCA.Trim());
-			if (m3_SQNR.HasValue)
-				request.WithQueryParameter("SQNR", m3_SQNR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CPGR))
+				request.WithQueryParameter("CPGR", m3CPGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUCL))
+				request.WithQueryParameter("SUCL", m3SUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POCA))
+				request.WithQueryParameter("POCA", m3POCA.Trim());
+			if (m3SQNR.HasValue)
+				request.WithQueryParameter("SQNR", m3SQNR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstConnectionResponse>(
@@ -290,7 +295,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -301,12 +307,12 @@ namespace M3H5Lib.Api
 		/// Description Update connections with custom field groups
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_CFMG">Custom field group (Required)</param>
-		/// <param name="m3_CPGR">Composition group</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_SUCL">Supplier group</param>
-		/// <param name="m3_POCA">Position group</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3CFMG">Custom field group (Required)</param>
+		/// <param name="m3CPGR">Composition group</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3SUCL">Supplier group</param>
+		/// <param name="m3POCA">Position group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -315,12 +321,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdConnection(
-			int m3_SQNR, 
-			string m3_CFMG, 
-			string m3_CPGR = null, 
-			string m3_ITGR = null, 
-			string m3_SUCL = null, 
-			string m3_POCA = null, 
+			int m3SQNR, 
+			string m3CFMG, 
+			string m3CPGR = null, 
+			string m3ITGR = null, 
+			string m3SUCL = null, 
+			string m3POCA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -335,23 +341,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMG))
-				throw new ArgumentNullException("m3_CFMG");
+			if (string.IsNullOrWhiteSpace(m3CFMG))
+				throw new ArgumentNullException(nameof(m3CFMG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SQNR", m3_SQNR.ToString())
-				.WithQueryParameter("CFMG", m3_CFMG.Trim());
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CFMG", m3CFMG.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CPGR))
-				request.WithQueryParameter("CPGR", m3_CPGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUCL))
-				request.WithQueryParameter("SUCL", m3_SUCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POCA))
-				request.WithQueryParameter("POCA", m3_POCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CPGR))
+				request.WithQueryParameter("CPGR", m3CPGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUCL))
+				request.WithQueryParameter("SUCL", m3SUCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POCA))
+				request.WithQueryParameter("POCA", m3POCA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -361,7 +367,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

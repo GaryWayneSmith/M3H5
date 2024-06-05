@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: APP work center
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("APP work center")]
-		public string M3_PLG1 => GetString("PLG1");
+		public string M3PLG1 => GetString("PLG1");
 
 		/// <summary>
 		/// Description: Resource
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Resource")]
-		public string M3_PLG6 => GetString("PLG6");
+		public string M3PLG6 => GetString("PLG6");
 
 		/// <summary>
 		/// Description: Priority
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PRIR => GetString("PRIR");
+		public string M3PRIR => GetString("PRIR");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DSCR => GetString("DSCR");
+		public string M3DSCR => GetString("DSCR");
 
 		/// <summary>
 		/// Description: Replacement code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement code")]
-		public string M3_RPLF => GetString("RPLF");
+		public string M3RPLF => GetString("RPLF");
 
 		/// <summary>
 		/// Description: Effectivity factor
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effectivity factor")]
-		public string M3_EFFA => GetString("EFFA");
+		public string M3EFFA => GetString("EFFA");
 
 		/// <summary>
 		/// Description: Change date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Forced resource
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forced resource")]
-		public string M3_PLGF => GetString("PLGF");
+		public string M3PLGF => GetString("PLGF");
 
 		/// <summary>
 		/// Description: Norm resource
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Norm resource")]
-		public string M3_PLGN => GetString("PLGN");
+		public string M3PLGN => GetString("PLGN");
 
 		/// <summary>
 		/// Description: Preferred resource
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Preferred resource")]
-		public string M3_SECR => GetString("SECR");
+		public string M3SECR => GetString("SECR");
 
 		/// <summary>
 		/// Description: Forced resource used (y/n)
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forced resource used (y/n)")]
-		public string M3_CHKF => GetString("CHKF");
+		public string M3CHKF => GetString("CHKF");
 	}
 }
 // EOF

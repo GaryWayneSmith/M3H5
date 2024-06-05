@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT report line sequence number")]
-		public decimal? M3_VRLS => GetNullableDecimal("VRLS");
+		public decimal? M3VRLS => GetNullableDecimal("VRLS");
 
 		/// <summary>
 		/// Description: On hold
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("On hold")]
-		public int? M3_UDBL => GetNullableInt("UDBL");
+		public int? M3UDBL => GetNullableInt("UDBL");
 
 		/// <summary>
 		/// Description: Changed line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed line")]
-		public int? M3_CHGL => GetNullableInt("CHGL");
+		public int? M3CHGL => GetNullableInt("CHGL");
 
 		/// <summary>
 		/// Description: Primary key 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 1")]
-		public string M3_UK01 => GetString("UK01");
+		public string M3UK01 => GetString("UK01");
 
 		/// <summary>
 		/// Description: Primary key 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 2")]
-		public string M3_UK02 => GetString("UK02");
+		public string M3UK02 => GetString("UK02");
 
 		/// <summary>
 		/// Description: Primary key 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 3")]
-		public string M3_UK03 => GetString("UK03");
+		public string M3UK03 => GetString("UK03");
 
 		/// <summary>
 		/// Description: Primary key 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 4")]
-		public string M3_UK04 => GetString("UK04");
+		public string M3UK04 => GetString("UK04");
 
 		/// <summary>
 		/// Description: Primary key 5
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 5")]
-		public string M3_UK05 => GetString("UK05");
+		public string M3UK05 => GetString("UK05");
 
 		/// <summary>
 		/// Description: Primary key 6
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 6")]
-		public string M3_UK06 => GetString("UK06");
+		public string M3UK06 => GetString("UK06");
 
 		/// <summary>
 		/// Description: Primary key 7
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 7")]
-		public string M3_UK07 => GetString("UK07");
+		public string M3UK07 => GetString("UK07");
 
 		/// <summary>
 		/// Description: Primary key 8
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 8")]
-		public string M3_UK08 => GetString("UK08");
+		public string M3UK08 => GetString("UK08");
 
 		/// <summary>
 		/// Description: Primary key 9
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 9")]
-		public string M3_UK09 => GetString("UK09");
+		public string M3UK09 => GetString("UK09");
 
 		/// <summary>
 		/// Description: Primary key 10
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 10")]
-		public string M3_UK10 => GetString("UK10");
+		public string M3UK10 => GetString("UK10");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL01 => GetString("AL01");
+		public string M3AL01 => GetString("AL01");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL02 => GetString("AL02");
+		public string M3AL02 => GetString("AL02");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL03 => GetString("AL03");
+		public string M3AL03 => GetString("AL03");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL04 => GetString("AL04");
+		public string M3AL04 => GetString("AL04");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL05 => GetString("AL05");
+		public string M3AL05 => GetString("AL05");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL06 => GetString("AL06");
+		public string M3AL06 => GetString("AL06");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL07 => GetString("AL07");
+		public string M3AL07 => GetString("AL07");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL08 => GetString("AL08");
+		public string M3AL08 => GetString("AL08");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL09 => GetString("AL09");
+		public string M3AL09 => GetString("AL09");
 
 		/// <summary>
 		/// Description: Alphanumeric data
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric data")]
-		public string M3_AL10 => GetString("AL10");
+		public string M3AL10 => GetString("AL10");
 
 		/// <summary>
 		/// Description: Numeric data
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric data")]
-		public decimal? M3_NU01 => GetNullableDecimal("NU01");
+		public decimal? M3NU01 => GetNullableDecimal("NU01");
 
 		/// <summary>
 		/// Description: Numeric data
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric data")]
-		public decimal? M3_NU02 => GetNullableDecimal("NU02");
+		public decimal? M3NU02 => GetNullableDecimal("NU02");
 
 		/// <summary>
 		/// Description: Numeric data
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric data")]
-		public decimal? M3_NU03 => GetNullableDecimal("NU03");
+		public decimal? M3NU03 => GetNullableDecimal("NU03");
 
 		/// <summary>
 		/// Description: Numeric data
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric data")]
-		public decimal? M3_NU04 => GetNullableDecimal("NU04");
+		public decimal? M3NU04 => GetNullableDecimal("NU04");
 
 		/// <summary>
 		/// Description: Numeric data
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric data")]
-		public decimal? M3_NU05 => GetNullableDecimal("NU05");
+		public decimal? M3NU05 => GetNullableDecimal("NU05");
 
 		/// <summary>
 		/// Description: Numeric data
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric data")]
-		public decimal? M3_NU06 => GetNullableDecimal("NU06");
+		public decimal? M3NU06 => GetNullableDecimal("NU06");
 
 		/// <summary>
 		/// Description: Numeric data
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric data")]
-		public decimal? M3_NU07 => GetNullableDecimal("NU07");
+		public decimal? M3NU07 => GetNullableDecimal("NU07");
 
 		/// <summary>
 		/// Description: Date
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DT01 => GetNullableDateTime("DT01");
+		public DateTime? M3DT01 => GetNullableDateTime("DT01");
 
 		/// <summary>
 		/// Description: Date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DT02 => GetNullableDateTime("DT02");
+		public DateTime? M3DT02 => GetNullableDateTime("DT02");
 
 		/// <summary>
 		/// Description: Date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DT03 => GetNullableDateTime("DT03");
+		public DateTime? M3DT03 => GetNullableDateTime("DT03");
 
 		/// <summary>
 		/// Description: Date
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DT04 => GetNullableDateTime("DT04");
+		public DateTime? M3DT04 => GetNullableDateTime("DT04");
 
 		/// <summary>
 		/// Description: Date
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DT05 => GetNullableDateTime("DT05");
+		public DateTime? M3DT05 => GetNullableDateTime("DT05");
 
 		/// <summary>
 		/// Description: Date
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DT06 => GetNullableDateTime("DT06");
+		public DateTime? M3DT06 => GetNullableDateTime("DT06");
 
 		/// <summary>
 		/// Description: Date
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DT07 => GetNullableDateTime("DT07");
+		public DateTime? M3DT07 => GetNullableDateTime("DT07");
 
 		/// <summary>
 		/// Description: Amount column
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC01 => GetNullableDecimal("AC01");
+		public decimal? M3AC01 => GetNullableDecimal("AC01");
 
 		/// <summary>
 		/// Description: Amount column
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC02 => GetNullableDecimal("AC02");
+		public decimal? M3AC02 => GetNullableDecimal("AC02");
 
 		/// <summary>
 		/// Description: Amount column
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC03 => GetNullableDecimal("AC03");
+		public decimal? M3AC03 => GetNullableDecimal("AC03");
 
 		/// <summary>
 		/// Description: Amount column
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC04 => GetNullableDecimal("AC04");
+		public decimal? M3AC04 => GetNullableDecimal("AC04");
 
 		/// <summary>
 		/// Description: Amount column
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC05 => GetNullableDecimal("AC05");
+		public decimal? M3AC05 => GetNullableDecimal("AC05");
 
 		/// <summary>
 		/// Description: Amount column
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC06 => GetNullableDecimal("AC06");
+		public decimal? M3AC06 => GetNullableDecimal("AC06");
 
 		/// <summary>
 		/// Description: Amount column
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC07 => GetNullableDecimal("AC07");
+		public decimal? M3AC07 => GetNullableDecimal("AC07");
 
 		/// <summary>
 		/// Description: Amount column
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC08 => GetNullableDecimal("AC08");
+		public decimal? M3AC08 => GetNullableDecimal("AC08");
 
 		/// <summary>
 		/// Description: Amount column
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC09 => GetNullableDecimal("AC09");
+		public decimal? M3AC09 => GetNullableDecimal("AC09");
 
 		/// <summary>
 		/// Description: Amount column
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC10 => GetNullableDecimal("AC10");
+		public decimal? M3AC10 => GetNullableDecimal("AC10");
 
 		/// <summary>
 		/// Description: Amount column
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC11 => GetNullableDecimal("AC11");
+		public decimal? M3AC11 => GetNullableDecimal("AC11");
 
 		/// <summary>
 		/// Description: Amount column
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC12 => GetNullableDecimal("AC12");
+		public decimal? M3AC12 => GetNullableDecimal("AC12");
 
 		/// <summary>
 		/// Description: Amount column
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC13 => GetNullableDecimal("AC13");
+		public decimal? M3AC13 => GetNullableDecimal("AC13");
 
 		/// <summary>
 		/// Description: Amount column
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC14 => GetNullableDecimal("AC14");
+		public decimal? M3AC14 => GetNullableDecimal("AC14");
 
 		/// <summary>
 		/// Description: Amount column
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.TXS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount column")]
-		public decimal? M3_AC15 => GetNullableDecimal("AC15");
+		public decimal? M3AC15 => GetNullableDecimal("AC15");
 	}
 }
 // EOF

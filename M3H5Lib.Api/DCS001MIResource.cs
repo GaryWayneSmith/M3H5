@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.DCS001MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Change/connect/disconnect to workgroup
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TMNO">Workgroup (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TMNO">Workgroup (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChangeTeam(
-			string m3_CANO, 
-			string m3_TMNO, 
-			string m3_TENR = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TMNO, 
+			string m3TENR = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,23 +70,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_TMNO))
-				throw new ArgumentNullException("m3_TMNO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3TMNO))
+				throw new ArgumentNullException(nameof(m3TMNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("TMNO", m3_TMNO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("TMNO", m3TMNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -94,7 +96,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -105,11 +108,11 @@ namespace M3H5Lib.Api
 		/// Description Change cost center of attendance time
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_SHNO">Reference number for cost center (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3SHNO">Reference number for cost center (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -118,11 +121,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgCostCenter(
-			string m3_CANO, 
-			string m3_SHNO, 
-			string m3_TENR = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3SHNO, 
+			string m3TENR = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -137,23 +140,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_SHNO))
-				throw new ArgumentNullException("m3_SHNO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3SHNO))
+				throw new ArgumentNullException(nameof(m3SHNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("SHNO", m3_SHNO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("SHNO", m3SHNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -163,7 +166,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -174,11 +178,11 @@ namespace M3H5Lib.Api
 		/// Description Fixed time, transaction type U0
 		/// Version Release: 11.5
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_TTPE">Time type</param>
-		/// <param name="m3_SDAT">Clock date</param>
-		/// <param name="m3_STTE">Clock time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3TTPE">Time type</param>
+		/// <param name="m3SDAT">Clock date</param>
+		/// <param name="m3STTE">Clock time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -187,11 +191,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> FixedTime(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_TTPE = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3TTPE = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -206,22 +210,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TTPE))
-				request.WithQueryParameter("TTPE", m3_TTPE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TTPE))
+				request.WithQueryParameter("TTPE", m3TTPE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -231,7 +235,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -242,9 +247,9 @@ namespace M3H5Lib.Api
 		/// Description Retrieve Status of Operation By Card Number
 		/// Version Release: 12.6
 		/// </summary>
-		/// <param name="m3_CANO">Card Number (Required)</param>
-		/// <param name="m3_WOSQ">Operations reporting number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3CANO">Card Number (Required)</param>
+		/// <param name="m3WOSQ">Operations reporting number (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -253,9 +258,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetStatusByCardResponse></returns>
 		/// <exception cref="M3Exception<GetStatusByCardResponse>"></exception>
 		public async Task<M3Response<GetStatusByCardResponse>> GetStatusByCard(
-			long m3_CANO, 
-			int m3_WOSQ, 
-			int? m3_CONO = null, 
+			long m3CANO, 
+			int m3WOSQ, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -273,12 +278,12 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.ToString())
-				.WithQueryParameter("WOSQ", m3_WOSQ.ToString());
+				.WithQueryParameter("CANO", m3CANO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("WOSQ", m3WOSQ.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetStatusByCardResponse>(
@@ -288,7 +293,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -299,12 +305,12 @@ namespace M3H5Lib.Api
 		/// Description In normal
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -313,12 +319,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> In(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -333,24 +339,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -360,7 +366,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -371,12 +378,12 @@ namespace M3H5Lib.Api
 		/// Description In overtime compensation time
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -385,12 +392,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> InOverTimeComp(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -405,24 +412,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -432,7 +439,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -443,12 +451,12 @@ namespace M3H5Lib.Api
 		/// Description In overtime paid
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -457,12 +465,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> InOverTimePaid(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -477,24 +485,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -504,7 +512,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -515,12 +524,12 @@ namespace M3H5Lib.Api
 		/// Description In overtime user defined
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -529,12 +538,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> InOverTimeUD2(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -549,24 +558,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -576,7 +585,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -587,12 +597,12 @@ namespace M3H5Lib.Api
 		/// Description In overtime user defined
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -601,12 +611,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> InOverTimeUD3(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -621,24 +631,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -648,7 +658,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -659,12 +670,12 @@ namespace M3H5Lib.Api
 		/// Description In overtime user defined
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -673,12 +684,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> InOverTimeUDef(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -693,24 +704,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -720,7 +731,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -731,12 +743,12 @@ namespace M3H5Lib.Api
 		/// Description Out normal
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -745,12 +757,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Out(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -765,24 +777,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -792,7 +804,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -803,12 +816,12 @@ namespace M3H5Lib.Api
 		/// Description Out overtime compensation time
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -817,12 +830,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> OutOverTimeComp(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -837,24 +850,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -864,7 +877,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -875,12 +889,12 @@ namespace M3H5Lib.Api
 		/// Description Out overtime paid
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -889,12 +903,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> OutOverTimePaid(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -909,24 +923,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -936,7 +950,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -947,12 +962,12 @@ namespace M3H5Lib.Api
 		/// Description Out overtime user defined
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -961,12 +976,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> OutOverTimeUD2(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -981,24 +996,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1008,7 +1023,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1019,12 +1035,12 @@ namespace M3H5Lib.Api
 		/// Description Out overtime user defined
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1033,12 +1049,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> OutOverTimeUD3(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1053,24 +1069,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1080,7 +1096,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1091,12 +1108,12 @@ namespace M3H5Lib.Api
 		/// Description Out overtime user defined
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_ABCD">Absence reason</param>
-		/// <param name="m3_SHNO">Reference number for cost center</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3ABCD">Absence reason</param>
+		/// <param name="m3SHNO">Reference number for cost center</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1105,12 +1122,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> OutOverTimeUDef(
-			string m3_CANO, 
-			string m3_TENR = null, 
-			string m3_ABCD = null, 
-			string m3_SHNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3TENR = null, 
+			string m3ABCD = null, 
+			string m3SHNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1125,24 +1142,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ABCD))
-				request.WithQueryParameter("ABCD", m3_ABCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SHNO))
-				request.WithQueryParameter("SHNO", m3_SHNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ABCD))
+				request.WithQueryParameter("ABCD", m3ABCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SHNO))
+				request.WithQueryParameter("SHNO", m3SHNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1152,7 +1169,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1163,11 +1181,11 @@ namespace M3H5Lib.Api
 		/// Description Planned absence
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_ABCD">Absence reason (Required)</param>
-		/// <param name="m3_FRSD">Planned absence from schedule date (Required)</param>
-		/// <param name="m3_TOSD">Planned absence to schedule date (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3ABCD">Absence reason (Required)</param>
+		/// <param name="m3FRSD">Planned absence from schedule date (Required)</param>
+		/// <param name="m3TOSD">Planned absence to schedule date (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1176,11 +1194,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> PlannedAbsence(
-			string m3_CANO, 
-			string m3_ABCD, 
-			string m3_FRSD, 
-			string m3_TOSD, 
-			string m3_TENR = null, 
+			string m3CANO, 
+			string m3ABCD, 
+			string m3FRSD, 
+			string m3TOSD, 
+			string m3TENR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1195,25 +1213,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_ABCD))
-				throw new ArgumentNullException("m3_ABCD");
-			if (string.IsNullOrWhiteSpace(m3_FRSD))
-				throw new ArgumentNullException("m3_FRSD");
-			if (string.IsNullOrWhiteSpace(m3_TOSD))
-				throw new ArgumentNullException("m3_TOSD");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3ABCD))
+				throw new ArgumentNullException(nameof(m3ABCD));
+			if (string.IsNullOrWhiteSpace(m3FRSD))
+				throw new ArgumentNullException(nameof(m3FRSD));
+			if (string.IsNullOrWhiteSpace(m3TOSD))
+				throw new ArgumentNullException(nameof(m3TOSD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("ABCD", m3_ABCD.Trim())
-				.WithQueryParameter("FRSD", m3_FRSD.Trim())
-				.WithQueryParameter("TOSD", m3_TOSD.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("ABCD", m3ABCD.Trim())
+				.WithQueryParameter("FRSD", m3FRSD.Trim())
+				.WithQueryParameter("TOSD", m3TOSD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1223,7 +1241,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1234,18 +1253,18 @@ namespace M3H5Lib.Api
 		/// Description Put-away on working order
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_MAQA">Produced quantity (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_WHSL">Location</param>
-		/// <param name="m3_POCY">Potency</param>
-		/// <param name="m3_REND">Completion flag</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
-		/// <param name="m3_CAMU">Container</param>
-		/// <param name="m3_PLNO">Production lot number</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3MAQA">Produced quantity (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3WHSL">Location</param>
+		/// <param name="m3POCY">Potency</param>
+		/// <param name="m3REND">Completion flag</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
+		/// <param name="m3CAMU">Container</param>
+		/// <param name="m3PLNO">Production lot number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1254,18 +1273,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> PutAwayMO(
-			string m3_CANO, 
-			string m3_WOSQ, 
-			string m3_MAQA, 
-			string m3_TENR = null, 
-			string m3_BANO = null, 
-			string m3_WHSL = null, 
-			string m3_POCY = null, 
-			string m3_REND = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
-			string m3_CAMU = null, 
-			long? m3_PLNO = null, 
+			string m3CANO, 
+			string m3WOSQ, 
+			string m3MAQA, 
+			string m3TENR = null, 
+			string m3BANO = null, 
+			string m3WHSL = null, 
+			string m3POCY = null, 
+			string m3REND = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
+			string m3CAMU = null, 
+			long? m3PLNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1280,38 +1299,38 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
-			if (string.IsNullOrWhiteSpace(m3_MAQA))
-				throw new ArgumentNullException("m3_MAQA");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
+			if (string.IsNullOrWhiteSpace(m3MAQA))
+				throw new ArgumentNullException(nameof(m3MAQA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim())
-				.WithQueryParameter("MAQA", m3_MAQA.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim())
+				.WithQueryParameter("MAQA", m3MAQA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHSL))
-				request.WithQueryParameter("WHSL", m3_WHSL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_POCY))
-				request.WithQueryParameter("POCY", m3_POCY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REND))
-				request.WithQueryParameter("REND", m3_REND.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CAMU))
-				request.WithQueryParameter("CAMU", m3_CAMU.Trim());
-			if (m3_PLNO.HasValue)
-				request.WithQueryParameter("PLNO", m3_PLNO.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHSL))
+				request.WithQueryParameter("WHSL", m3WHSL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3POCY))
+				request.WithQueryParameter("POCY", m3POCY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REND))
+				request.WithQueryParameter("REND", m3REND.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CAMU))
+				request.WithQueryParameter("CAMU", m3CAMU.Trim());
+			if (m3PLNO.HasValue)
+				request.WithQueryParameter("PLNO", m3PLNO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1321,7 +1340,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1332,9 +1352,9 @@ namespace M3H5Lib.Api
 		/// Description Balance inquiry
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_TTPE">Balance identity (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3TTPE">Balance identity (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1343,9 +1363,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<QueryBalanceResponse></returns>
 		/// <exception cref="M3Exception<QueryBalanceResponse>"></exception>
 		public async Task<M3Response<QueryBalanceResponse>> QueryBalance(
-			string m3_CANO, 
-			string m3_TTPE, 
-			string m3_TENR = null, 
+			string m3CANO, 
+			string m3TTPE, 
+			string m3TENR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1360,19 +1380,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_TTPE))
-				throw new ArgumentNullException("m3_TTPE");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3TTPE))
+				throw new ArgumentNullException(nameof(m3TTPE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("TTPE", m3_TTPE.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("TTPE", m3TTPE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
 
 			// Execute the request
 			var result = await Execute<QueryBalanceResponse>(
@@ -1382,7 +1402,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1393,11 +1414,11 @@ namespace M3H5Lib.Api
 		/// Description Start activity time
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_PJID">Activity number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3PJID">Activity number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1406,11 +1427,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StartActivity(
-			string m3_CANO, 
-			string m3_PJID, 
-			string m3_TENR = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3PJID, 
+			string m3TENR = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1425,23 +1446,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_PJID))
-				throw new ArgumentNullException("m3_PJID");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3PJID))
+				throw new ArgumentNullException(nameof(m3PJID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("PJID", m3_PJID.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("PJID", m3PJID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1451,7 +1472,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1462,12 +1484,12 @@ namespace M3H5Lib.Api
 		/// Description Report start of disturbance
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_DISE">Disturbance code (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3DISE">Disturbance code (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1476,12 +1498,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StartDisturb(
-			string m3_CANO, 
-			string m3_WOSQ, 
-			string m3_DISE, 
-			string m3_TENR = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3WOSQ, 
+			string m3DISE, 
+			string m3TENR = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1496,26 +1518,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
-			if (string.IsNullOrWhiteSpace(m3_DISE))
-				throw new ArgumentNullException("m3_DISE");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
+			if (string.IsNullOrWhiteSpace(m3DISE))
+				throw new ArgumentNullException(nameof(m3DISE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim())
-				.WithQueryParameter("DISE", m3_DISE.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim())
+				.WithQueryParameter("DISE", m3DISE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1525,7 +1547,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1536,13 +1559,13 @@ namespace M3H5Lib.Api
 		/// Description Start work on operation
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_TMNO">Work group</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
-		/// <param name="m3_PLNO">Production lot number</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3TMNO">Work group</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
+		/// <param name="m3PLNO">Production lot number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1551,13 +1574,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StartWorkOp(
-			long m3_CANO, 
-			string m3_WOSQ, 
-			string m3_TENR = null, 
-			string m3_TMNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
-			long? m3_PLNO = null, 
+			long m3CANO, 
+			string m3WOSQ, 
+			string m3TENR = null, 
+			string m3TMNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
+			long? m3PLNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1572,25 +1595,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.ToString())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim());
+				.WithQueryParameter("CANO", m3CANO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TMNO))
-				request.WithQueryParameter("TMNO", m3_TMNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
-			if (m3_PLNO.HasValue)
-				request.WithQueryParameter("PLNO", m3_PLNO.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TMNO))
+				request.WithQueryParameter("TMNO", m3TMNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
+			if (m3PLNO.HasValue)
+				request.WithQueryParameter("PLNO", m3PLNO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1600,7 +1623,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1611,13 +1635,13 @@ namespace M3H5Lib.Api
 		/// Description Start work on setup
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_TMNO">Work group</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Repoting time</param>
-		/// <param name="m3_PLNO">Production lot number</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3TMNO">Work group</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Repoting time</param>
+		/// <param name="m3PLNO">Production lot number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1626,13 +1650,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StartWorkSetup(
-			string m3_CANO, 
-			string m3_WOSQ, 
-			string m3_TENR = null, 
-			string m3_TMNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
-			long? m3_PLNO = null, 
+			string m3CANO, 
+			string m3WOSQ, 
+			string m3TENR = null, 
+			string m3TMNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
+			long? m3PLNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1647,27 +1671,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TMNO))
-				request.WithQueryParameter("TMNO", m3_TMNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
-			if (m3_PLNO.HasValue)
-				request.WithQueryParameter("PLNO", m3_PLNO.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TMNO))
+				request.WithQueryParameter("TMNO", m3TMNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
+			if (m3PLNO.HasValue)
+				request.WithQueryParameter("PLNO", m3PLNO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1677,7 +1701,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1688,16 +1713,16 @@ namespace M3H5Lib.Api
 		/// Description Stock issue on working order
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_RPQA">Issued quantity (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_REND">Completion flag</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
-		/// <param name="m3_WHSL">Location</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_CAMU">Container</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3RPQA">Issued quantity (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3REND">Completion flag</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
+		/// <param name="m3WHSL">Location</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3CAMU">Container</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1706,16 +1731,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StockIssueMO(
-			string m3_CANO, 
-			string m3_WOSQ, 
-			string m3_RPQA, 
-			string m3_TENR = null, 
-			string m3_REND = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
-			string m3_WHSL = null, 
-			string m3_BANO = null, 
-			string m3_CAMU = null, 
+			string m3CANO, 
+			string m3WOSQ, 
+			string m3RPQA, 
+			string m3TENR = null, 
+			string m3REND = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
+			string m3WHSL = null, 
+			string m3BANO = null, 
+			string m3CAMU = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1730,34 +1755,34 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
-			if (string.IsNullOrWhiteSpace(m3_RPQA))
-				throw new ArgumentNullException("m3_RPQA");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
+			if (string.IsNullOrWhiteSpace(m3RPQA))
+				throw new ArgumentNullException(nameof(m3RPQA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim())
-				.WithQueryParameter("RPQA", m3_RPQA.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim())
+				.WithQueryParameter("RPQA", m3RPQA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REND))
-				request.WithQueryParameter("REND", m3_REND.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHSL))
-				request.WithQueryParameter("WHSL", m3_WHSL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CAMU))
-				request.WithQueryParameter("CAMU", m3_CAMU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REND))
+				request.WithQueryParameter("REND", m3REND.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHSL))
+				request.WithQueryParameter("WHSL", m3WHSL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CAMU))
+				request.WithQueryParameter("CAMU", m3CAMU.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1767,7 +1792,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1778,11 +1804,11 @@ namespace M3H5Lib.Api
 		/// Description Stop activity time
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_PJID">Activity number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3PJID">Activity number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1791,11 +1817,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StopActivity(
-			string m3_CANO, 
-			string m3_PJID, 
-			string m3_TENR = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3PJID, 
+			string m3TENR = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1810,23 +1836,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_PJID))
-				throw new ArgumentNullException("m3_PJID");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3PJID))
+				throw new ArgumentNullException(nameof(m3PJID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("PJID", m3_PJID.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("PJID", m3PJID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1836,7 +1862,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1847,12 +1874,12 @@ namespace M3H5Lib.Api
 		/// Description Report stop of disturbance
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_DISE">Disturbance code (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3DISE">Disturbance code (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1861,12 +1888,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StopDisturb(
-			string m3_CANO, 
-			string m3_WOSQ, 
-			string m3_DISE, 
-			string m3_TENR = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3WOSQ, 
+			string m3DISE, 
+			string m3TENR = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1881,26 +1908,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
-			if (string.IsNullOrWhiteSpace(m3_DISE))
-				throw new ArgumentNullException("m3_DISE");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
+			if (string.IsNullOrWhiteSpace(m3DISE))
+				throw new ArgumentNullException(nameof(m3DISE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim())
-				.WithQueryParameter("DISE", m3_DISE.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim())
+				.WithQueryParameter("DISE", m3DISE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1910,7 +1937,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1921,16 +1949,16 @@ namespace M3H5Lib.Api
 		/// Description Stop work on operation
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_MAQA">Produced quantity</param>
-		/// <param name="m3_SCQA">Rejected quantity</param>
-		/// <param name="m3_SCRE">Rejected reason</param>
-		/// <param name="m3_TMNO">Work group</param>
-		/// <param name="m3_REND">Completion flag</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Reporting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3MAQA">Produced quantity</param>
+		/// <param name="m3SCQA">Rejected quantity</param>
+		/// <param name="m3SCRE">Rejected reason</param>
+		/// <param name="m3TMNO">Work group</param>
+		/// <param name="m3REND">Completion flag</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Reporting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1939,16 +1967,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StopWorkOp(
-			long m3_CANO, 
-			string m3_WOSQ, 
-			string m3_TENR = null, 
-			string m3_MAQA = null, 
-			string m3_SCQA = null, 
-			string m3_SCRE = null, 
-			string m3_TMNO = null, 
-			string m3_REND = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			long m3CANO, 
+			string m3WOSQ, 
+			string m3TENR = null, 
+			string m3MAQA = null, 
+			string m3SCQA = null, 
+			string m3SCRE = null, 
+			string m3TMNO = null, 
+			string m3REND = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1963,31 +1991,31 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.ToString())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim());
+				.WithQueryParameter("CANO", m3CANO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAQA))
-				request.WithQueryParameter("MAQA", m3_MAQA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SCQA))
-				request.WithQueryParameter("SCQA", m3_SCQA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SCRE))
-				request.WithQueryParameter("SCRE", m3_SCRE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TMNO))
-				request.WithQueryParameter("TMNO", m3_TMNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REND))
-				request.WithQueryParameter("REND", m3_REND.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAQA))
+				request.WithQueryParameter("MAQA", m3MAQA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SCQA))
+				request.WithQueryParameter("SCQA", m3SCQA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SCRE))
+				request.WithQueryParameter("SCRE", m3SCRE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TMNO))
+				request.WithQueryParameter("TMNO", m3TMNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REND))
+				request.WithQueryParameter("REND", m3REND.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1997,7 +2025,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -2008,12 +2037,12 @@ namespace M3H5Lib.Api
 		/// Description Stop work on setup
 		/// Version Release: 10.6
 		/// </summary>
-		/// <param name="m3_CANO">Card number (Required)</param>
-		/// <param name="m3_WOSQ">Reporting number (Required)</param>
-		/// <param name="m3_TENR">Terminal number</param>
-		/// <param name="m3_TMNO">Work group</param>
-		/// <param name="m3_SDAT">Reporting date</param>
-		/// <param name="m3_STTE">Repoting time</param>
+		/// <param name="m3CANO">Card number (Required)</param>
+		/// <param name="m3WOSQ">Reporting number (Required)</param>
+		/// <param name="m3TENR">Terminal number</param>
+		/// <param name="m3TMNO">Work group</param>
+		/// <param name="m3SDAT">Reporting date</param>
+		/// <param name="m3STTE">Repoting time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -2022,12 +2051,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StopWorkSetup(
-			string m3_CANO, 
-			string m3_WOSQ, 
-			string m3_TENR = null, 
-			string m3_TMNO = null, 
-			string m3_SDAT = null, 
-			string m3_STTE = null, 
+			string m3CANO, 
+			string m3WOSQ, 
+			string m3TENR = null, 
+			string m3TMNO = null, 
+			string m3SDAT = null, 
+			string m3STTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -2042,25 +2071,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CANO))
-				throw new ArgumentNullException("m3_CANO");
-			if (string.IsNullOrWhiteSpace(m3_WOSQ))
-				throw new ArgumentNullException("m3_WOSQ");
+			if (string.IsNullOrWhiteSpace(m3CANO))
+				throw new ArgumentNullException(nameof(m3CANO));
+			if (string.IsNullOrWhiteSpace(m3WOSQ))
+				throw new ArgumentNullException(nameof(m3WOSQ));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CANO", m3_CANO.Trim())
-				.WithQueryParameter("WOSQ", m3_WOSQ.Trim());
+				.WithQueryParameter("CANO", m3CANO.Trim())
+				.WithQueryParameter("WOSQ", m3WOSQ.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TENR))
-				request.WithQueryParameter("TENR", m3_TENR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TMNO))
-				request.WithQueryParameter("TMNO", m3_TMNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SDAT))
-				request.WithQueryParameter("SDAT", m3_SDAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STTE))
-				request.WithQueryParameter("STTE", m3_STTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TENR))
+				request.WithQueryParameter("TENR", m3TENR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TMNO))
+				request.WithQueryParameter("TMNO", m3TMNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SDAT))
+				request.WithQueryParameter("SDAT", m3SDAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STTE))
+				request.WithQueryParameter("STTE", m3STTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -2070,7 +2099,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS038MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Add Business Chain
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CHAI">Business chain (Required)</param>
-		/// <param name="m3_CHCT">Superior business chain</param>
-		/// <param name="m3_CHMB">Member number</param>
-		/// <param name="m3_MBST">Status - member</param>
+		/// <param name="m3CHAI">Business chain (Required)</param>
+		/// <param name="m3CHCT">Superior business chain</param>
+		/// <param name="m3CHMB">Member number</param>
+		/// <param name="m3MBST">Status - member</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddBusChain(
-			string m3_CHAI, 
-			string m3_CHCT = null, 
-			string m3_CHMB = null, 
-			int? m3_MBST = null, 
+			string m3CHAI, 
+			string m3CHCT = null, 
+			string m3CHMB = null, 
+			int? m3MBST = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,20 +68,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CHAI))
-				throw new ArgumentNullException("m3_CHAI");
+			if (string.IsNullOrWhiteSpace(m3CHAI))
+				throw new ArgumentNullException(nameof(m3CHAI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CHAI", m3_CHAI.Trim());
+				.WithQueryParameter("CHAI", m3CHAI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CHCT))
-				request.WithQueryParameter("CHCT", m3_CHCT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CHMB))
-				request.WithQueryParameter("CHMB", m3_CHMB.Trim());
-			if (m3_MBST.HasValue)
-				request.WithQueryParameter("MBST", m3_MBST.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CHCT))
+				request.WithQueryParameter("CHCT", m3CHCT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CHMB))
+				request.WithQueryParameter("CHMB", m3CHMB.Trim());
+			if (m3MBST.HasValue)
+				request.WithQueryParameter("MBST", m3MBST.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -89,7 +91,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -100,12 +103,12 @@ namespace M3H5Lib.Api
 		/// Description Add Customer in Business Chain
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CHCT">Superior business chain (Required)</param>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_FVDT">Valid from</param>
-		/// <param name="m3_LVDT">Valid to</param>
-		/// <param name="m3_CHMB">Member number</param>
-		/// <param name="m3_MBST">Status - member</param>
+		/// <param name="m3CHCT">Superior business chain (Required)</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3FVDT">Valid from</param>
+		/// <param name="m3LVDT">Valid to</param>
+		/// <param name="m3CHMB">Member number</param>
+		/// <param name="m3MBST">Status - member</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -114,12 +117,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddBusChainCust(
-			string m3_CHCT, 
-			string m3_CUNO, 
-			DateTime? m3_FVDT = null, 
-			DateTime? m3_LVDT = null, 
-			string m3_CHMB = null, 
-			int? m3_MBST = null, 
+			string m3CHCT, 
+			string m3CUNO, 
+			DateTime? m3FVDT = null, 
+			DateTime? m3LVDT = null, 
+			string m3CHMB = null, 
+			int? m3MBST = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -134,25 +137,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CHCT))
-				throw new ArgumentNullException("m3_CHCT");
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CHCT))
+				throw new ArgumentNullException(nameof(m3CHCT));
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CHCT", m3_CHCT.Trim())
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CHCT", m3CHCT.Trim())
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
-			if (m3_LVDT.HasValue)
-				request.WithQueryParameter("LVDT", m3_LVDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_CHMB))
-				request.WithQueryParameter("CHMB", m3_CHMB.Trim());
-			if (m3_MBST.HasValue)
-				request.WithQueryParameter("MBST", m3_MBST.Value.ToString());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
+			if (m3LVDT.HasValue)
+				request.WithQueryParameter("LVDT", m3LVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3CHMB))
+				request.WithQueryParameter("CHMB", m3CHMB.Trim());
+			if (m3MBST.HasValue)
+				request.WithQueryParameter("MBST", m3MBST.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -162,7 +165,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -173,7 +177,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Business Chain
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CHAI">Business chain (Required)</param>
+		/// <param name="m3CHAI">Business chain (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -182,7 +186,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelBusChain(
-			string m3_CHAI, 
+			string m3CHAI, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -197,12 +201,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CHAI))
-				throw new ArgumentNullException("m3_CHAI");
+			if (string.IsNullOrWhiteSpace(m3CHAI))
+				throw new ArgumentNullException(nameof(m3CHAI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CHAI", m3_CHAI.Trim());
+				.WithQueryParameter("CHAI", m3CHAI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -212,7 +216,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -223,9 +228,9 @@ namespace M3H5Lib.Api
 		/// Description Delete Customer in Business Chain
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CHCT">Superior business chain (Required)</param>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_FVDT">Valid from</param>
+		/// <param name="m3CHCT">Superior business chain (Required)</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3FVDT">Valid from</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -234,9 +239,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelBusChainCust(
-			string m3_CHCT, 
-			string m3_CUNO, 
-			DateTime? m3_FVDT = null, 
+			string m3CHCT, 
+			string m3CUNO, 
+			DateTime? m3FVDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -251,19 +256,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CHCT))
-				throw new ArgumentNullException("m3_CHCT");
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CHCT))
+				throw new ArgumentNullException(nameof(m3CHCT));
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CHCT", m3_CHCT.Trim())
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CHCT", m3CHCT.Trim())
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -284,10 +290,10 @@ namespace M3H5Lib.Api
 		/// Description List business chain to customer relations
 		/// Version Release: 12
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CHCT">Superior business chain</param>
-		/// <param name="m3_CUNO">Customer number</param>
-		/// <param name="m3_DATE">Entry date</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CHCT">Superior business chain</param>
+		/// <param name="m3CUNO">Customer number</param>
+		/// <param name="m3DATE">Entry date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -296,10 +302,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstBusChainCustResponse></returns>
 		/// <exception cref="M3Exception<LstBusChainCustResponse>"></exception>
 		public async Task<M3Response<LstBusChainCustResponse>> LstBusChainCust(
-			int? m3_CONO = null, 
-			string m3_CHCT = null, 
-			string m3_CUNO = null, 
-			DateTime? m3_DATE = null, 
+			int? m3CONO = null, 
+			string m3CHCT = null, 
+			string m3CUNO = null, 
+			DateTime? m3DATE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -314,14 +320,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CHCT))
-				request.WithQueryParameter("CHCT", m3_CHCT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_DATE.HasValue)
-				request.WithQueryParameter("DATE", m3_DATE.Value.ToM3String());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CHCT))
+				request.WithQueryParameter("CHCT", m3CHCT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3DATE.HasValue)
+				request.WithQueryParameter("DATE", m3DATE.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstBusChainCustResponse>(
@@ -331,7 +337,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -342,8 +349,8 @@ namespace M3H5Lib.Api
 		/// Description List business chain structure
 		/// Version Release: 12
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CHAI">Business chain</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CHAI">Business chain</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -352,8 +359,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstBusChainStrResponse></returns>
 		/// <exception cref="M3Exception<LstBusChainStrResponse>"></exception>
 		public async Task<M3Response<LstBusChainStrResponse>> LstBusChainStr(
-			int? m3_CONO = null, 
-			string m3_CHAI = null, 
+			int? m3CONO = null, 
+			string m3CHAI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -368,10 +375,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CHAI))
-				request.WithQueryParameter("CHAI", m3_CHAI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CHAI))
+				request.WithQueryParameter("CHAI", m3CHAI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstBusChainStrResponse>(
@@ -381,7 +388,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -392,10 +400,10 @@ namespace M3H5Lib.Api
 		/// Description Update Business Chain
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CHAI">Business chain (Required)</param>
-		/// <param name="m3_CHCT">Superior business chain</param>
-		/// <param name="m3_CHMB">Member number</param>
-		/// <param name="m3_MBST">Status - member</param>
+		/// <param name="m3CHAI">Business chain (Required)</param>
+		/// <param name="m3CHCT">Superior business chain</param>
+		/// <param name="m3CHMB">Member number</param>
+		/// <param name="m3MBST">Status - member</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -404,10 +412,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdBusChain(
-			string m3_CHAI, 
-			string m3_CHCT = null, 
-			string m3_CHMB = null, 
-			int? m3_MBST = null, 
+			string m3CHAI, 
+			string m3CHCT = null, 
+			string m3CHMB = null, 
+			int? m3MBST = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -422,20 +430,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CHAI))
-				throw new ArgumentNullException("m3_CHAI");
+			if (string.IsNullOrWhiteSpace(m3CHAI))
+				throw new ArgumentNullException(nameof(m3CHAI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CHAI", m3_CHAI.Trim());
+				.WithQueryParameter("CHAI", m3CHAI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CHCT))
-				request.WithQueryParameter("CHCT", m3_CHCT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CHMB))
-				request.WithQueryParameter("CHMB", m3_CHMB.Trim());
-			if (m3_MBST.HasValue)
-				request.WithQueryParameter("MBST", m3_MBST.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CHCT))
+				request.WithQueryParameter("CHCT", m3CHCT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CHMB))
+				request.WithQueryParameter("CHMB", m3CHMB.Trim());
+			if (m3MBST.HasValue)
+				request.WithQueryParameter("MBST", m3MBST.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -445,7 +453,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -456,12 +465,12 @@ namespace M3H5Lib.Api
 		/// Description Update Customer in Business Chain
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CHCT">Superior business chain (Required)</param>
-		/// <param name="m3_CUNO">Customer (Required)</param>
-		/// <param name="m3_FVDT">Valid from</param>
-		/// <param name="m3_LVDT">Valid to</param>
-		/// <param name="m3_CHMB">Member number</param>
-		/// <param name="m3_MBST">Status - member</param>
+		/// <param name="m3CHCT">Superior business chain (Required)</param>
+		/// <param name="m3CUNO">Customer (Required)</param>
+		/// <param name="m3FVDT">Valid from</param>
+		/// <param name="m3LVDT">Valid to</param>
+		/// <param name="m3CHMB">Member number</param>
+		/// <param name="m3MBST">Status - member</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -470,12 +479,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdBusChainCust(
-			string m3_CHCT, 
-			string m3_CUNO, 
-			DateTime? m3_FVDT = null, 
-			DateTime? m3_LVDT = null, 
-			string m3_CHMB = null, 
-			int? m3_MBST = null, 
+			string m3CHCT, 
+			string m3CUNO, 
+			DateTime? m3FVDT = null, 
+			DateTime? m3LVDT = null, 
+			string m3CHMB = null, 
+			int? m3MBST = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -490,25 +499,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CHCT))
-				throw new ArgumentNullException("m3_CHCT");
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CHCT))
+				throw new ArgumentNullException(nameof(m3CHCT));
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CHCT", m3_CHCT.Trim())
-				.WithQueryParameter("CUNO", m3_CUNO.Trim());
+				.WithQueryParameter("CHCT", m3CHCT.Trim())
+				.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
-			if (m3_LVDT.HasValue)
-				request.WithQueryParameter("LVDT", m3_LVDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_CHMB))
-				request.WithQueryParameter("CHMB", m3_CHMB.Trim());
-			if (m3_MBST.HasValue)
-				request.WithQueryParameter("MBST", m3_MBST.Value.ToString());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
+			if (m3LVDT.HasValue)
+				request.WithQueryParameter("LVDT", m3LVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3CHMB))
+				request.WithQueryParameter("CHMB", m3CHMB.Trim());
+			if (m3MBST.HasValue)
+				request.WithQueryParameter("MBST", m3MBST.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -518,7 +527,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

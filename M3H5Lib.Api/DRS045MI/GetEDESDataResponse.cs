@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 
 		/// <summary>
 		/// Description: Date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DATE => GetNullableDateTime("DATE");
+		public DateTime? M3DATE => GetNullableDateTime("DATE");
 
 		/// <summary>
 		/// Description: Time
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time")]
-		public string M3_TIME => GetString("TIME");
+		public string M3TIME => GetString("TIME");
 
 		/// <summary>
 		/// Description: Milli seconds
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Milli seconds")]
-		public string M3_MILI => GetString("MILI");
+		public string M3MILI => GetString("MILI");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public string M3_TGMT => GetString("TGMT");
+		public string M3TGMT => GetString("TGMT");
 	}
 }
 // EOF

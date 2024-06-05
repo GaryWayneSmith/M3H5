@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Bank number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank number")]
-		public string M3_BKNO => GetString("BKNO");
+		public string M3BKNO => GetString("BKNO");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Bank name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank name")]
-		public string M3_BKNM => GetString("BKNM");
+		public string M3BKNM => GetString("BKNM");
 
 		/// <summary>
 		/// Description: Search key
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search key")]
-		public string M3_ALBK => GetString("ALBK");
+		public string M3ALBK => GetString("ALBK");
 
 		/// <summary>
 		/// Description: Bank address 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 1")]
-		public string M3_BKA1 => GetString("BKA1");
+		public string M3BKA1 => GetString("BKA1");
 
 		/// <summary>
 		/// Description: Bank address 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 2")]
-		public string M3_BKA2 => GetString("BKA2");
+		public string M3BKA2 => GetString("BKA2");
 
 		/// <summary>
 		/// Description: Bank address 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 3")]
-		public string M3_BKA3 => GetString("BKA3");
+		public string M3BKA3 => GetString("BKA3");
 
 		/// <summary>
 		/// Description: Bank address 4
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 4")]
-		public string M3_BKA4 => GetString("BKA4");
+		public string M3BKA4 => GetString("BKA4");
 
 		/// <summary>
 		/// Description: Country
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Postal code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Telephone number 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 2")]
-		public string M3_PHN2 => GetString("PHN2");
+		public string M3PHN2 => GetString("PHN2");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 
 		/// <summary>
 		/// Description: Your reference 2
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 2")]
-		public string M3_YRE2 => GetString("YRE2");
+		public string M3YRE2 => GetString("YRE2");
 
 		/// <summary>
 		/// Description: Our reference
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Our reference")]
-		public string M3_OREF => GetString("OREF");
+		public string M3OREF => GetString("OREF");
 
 		/// <summary>
 		/// Description: Fixed discount charge
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed discount charge")]
-		public decimal? M3_FCDC => GetNullableDecimal("FCDC");
+		public decimal? M3FCDC => GetNullableDecimal("FCDC");
 
 		/// <summary>
 		/// Description: Discount rate
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount rate")]
-		public int? M3_BIDC => GetNullableInt("BIDC");
+		public int? M3BIDC => GetNullableInt("BIDC");
 
 		/// <summary>
 		/// Description: Minimum number of days for interest
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum number of days for interest")]
-		public int? M3_BMDI => GetNullableInt("BMDI");
+		public int? M3BMDI => GetNullableInt("BMDI");
 
 		/// <summary>
 		/// Description: Fixed collection charges
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed collection charges")]
-		public decimal? M3_FCCO => GetNullableDecimal("FCCO");
+		public decimal? M3FCCO => GetNullableDecimal("FCCO");
 
 		/// <summary>
 		/// Description: Bank group
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank group")]
-		public string M3_BAGR => GetString("BAGR");
+		public string M3BAGR => GetString("BAGR");
 
 		/// <summary>
 		/// Description: Electronic mail address
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Electronic mail address")]
-		public string M3_EMAL => GetString("EMAL");
+		public string M3EMAL => GetString("EMAL");
 
 		/// <summary>
 		/// Description: Web site address
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Web site address")]
-		public string M3_WESI => GetString("WESI");
+		public string M3WESI => GetString("WESI");
 
 		/// <summary>
 		/// Description: Area/state
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/state")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Swift code
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Swift code")]
-		public string M3_SWIC => GetString("SWIC");
+		public string M3SWIC => GetString("SWIC");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Text identity
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: City
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: County ID
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 
 		/// <summary>
 		/// Description: VAT registration number with Country prefix
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS690MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number with Country prefix")]
-		public string M3_VRN2 => GetString("VRN2");
+		public string M3VRN2 => GetString("VRN2");
 	}
 }
 // EOF

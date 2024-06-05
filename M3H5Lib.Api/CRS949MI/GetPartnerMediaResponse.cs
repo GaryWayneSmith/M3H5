@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Document number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document number")]
-		public string M3_DONR => GetString("DONR");
+		public string M3DONR => GetString("DONR");
 
 		/// <summary>
 		/// Description: Document variant
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document variant")]
-		public string M3_DOVA => GetString("DOVA");
+		public string M3DOVA => GetString("DOVA");
 
 		/// <summary>
 		/// Description: Media profile
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Media profile")]
-		public string M3_MEPF => GetString("MEPF");
+		public string M3MEPF => GetString("MEPF");
 
 		/// <summary>
 		/// Description: Document/media controlling object 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document/media controlling object 1")]
-		public string M3_PRF1 => GetString("PRF1");
+		public string M3PRF1 => GetString("PRF1");
 
 		/// <summary>
 		/// Description: Document/media control object 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document/media control object 2")]
-		public string M3_PRF2 => GetString("PRF2");
+		public string M3PRF2 => GetString("PRF2");
 
 		/// <summary>
 		/// Description: Media
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Media")]
-		public string M3_MEDC => GetString("MEDC");
+		public string M3MEDC => GetString("MEDC");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Service identity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service identity")]
-		public string M3_SIID => GetString("SIID");
+		public string M3SIID => GetString("SIID");
 
 		/// <summary>
 		/// Description: Interface - media
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface - media")]
-		public string M3_MVIF => GetString("MVIF");
+		public string M3MVIF => GetString("MVIF");
 
 		/// <summary>
 		/// Description: Media category
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Media category")]
-		public string M3_METY => GetString("METY");
+		public string M3METY => GetString("METY");
 
 		/// <summary>
 		/// Description: Form
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Form")]
-		public string M3_FMTP => GetString("FMTP");
+		public string M3FMTP => GetString("FMTP");
 
 		/// <summary>
 		/// Description: Number of copies
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of copies")]
-		public int? M3_COPY => GetNullableInt("COPY");
+		public int? M3COPY => GetNullableInt("COPY");
 
 		/// <summary>
 		/// Description: Priority
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_OUTP => GetString("OUTP");
+		public string M3OUTP => GetString("OUTP");
 
 		/// <summary>
 		/// Description: User data
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User data")]
-		public string M3_UDTA => GetString("UDTA");
+		public string M3UDTA => GetString("UDTA");
 
 		/// <summary>
 		/// Description: Field selection
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field selection")]
-		public string M3_1UDT => GetString("1UDT");
+		public string M31UDT => GetString("1UDT");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Fax text 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fax text 1")]
-		public string M3_TFT1 => GetString("TFT1");
+		public string M3TFT1 => GetString("TFT1");
 
 		/// <summary>
 		/// Description: Field selection
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field selection")]
-		public string M3_1TFT => GetString("1TFT");
+		public string M31TFT => GetString("1TFT");
 
 		/// <summary>
 		/// Description: Folder name
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Folder name")]
-		public string M3_FLRN => GetString("FLRN");
+		public string M3FLRN => GetString("FLRN");
 
 		/// <summary>
 		/// Description: File path
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File path")]
-		public string M3_PAFD => GetString("PAFD");
+		public string M3PAFD => GetString("PAFD");
 
 		/// <summary>
 		/// Description: File suffix
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File suffix")]
-		public string M3_FSUX => GetString("FSUX");
+		public string M3FSUX => GetString("FSUX");
 
 		/// <summary>
 		/// Description: Generic name method
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Generic name method")]
-		public int? M3_GNNM => GetNullableInt("GNNM");
+		public int? M3GNNM => GetNullableInt("GNNM");
 
 		/// <summary>
 		/// Description: Printer
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Printer")]
-		public string M3_DEV => GetString("DEV");
+		public string M3DEV => GetString("DEV");
 
 		/// <summary>
 		/// Description: Overlay front page name
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overlay front page name")]
-		public string M3_FOVR => GetString("FOVR");
+		public string M3FOVR => GetString("FOVR");
 
 		/// <summary>
 		/// Description: Bin
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bin")]
-		public string M3_BINX => GetString("BINX");
+		public string M3BINX => GetString("BINX");
 
 		/// <summary>
 		/// Description: To email address
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To email address")]
-		public string M3_TOMA => GetString("TOMA");
+		public string M3TOMA => GetString("TOMA");
 
 		/// <summary>
 		/// Description: From email address
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From email address")]
-		public string M3_FRMA => GetString("FRMA");
+		public string M3FRMA => GetString("FRMA");
 
 		/// <summary>
 		/// Description: Copy to email address
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Copy to email address")]
-		public string M3_CCMA => GetString("CCMA");
+		public string M3CCMA => GetString("CCMA");
 
 		/// <summary>
 		/// Description: Send time - fax
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send time - fax")]
-		public int? M3_FAXT => GetNullableInt("FAXT");
+		public int? M3FAXT => GetNullableInt("FAXT");
 
 		/// <summary>
 		/// Description: Subject
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subject")]
-		public string M3_SUBJ => GetString("SUBJ");
+		public string M3SUBJ => GetString("SUBJ");
 
 		/// <summary>
 		/// Description: Note
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Note")]
-		public string M3_NOTE => GetString("NOTE");
+		public string M3NOTE => GetString("NOTE");
 
 		/// <summary>
 		/// Description: Copy
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Copy")]
-		public int? M3_CPPL => GetNullableInt("CPPL");
+		public int? M3CPPL => GetNullableInt("CPPL");
 
 		/// <summary>
 		/// Description: User
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_LSID => GetString("LSID");
+		public string M3LSID => GetString("LSID");
 
 		/// <summary>
 		/// Description: Address
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address")]
-		public string M3_LSAD => GetString("LSAD");
+		public string M3LSAD => GetString("LSAD");
 
 		/// <summary>
 		/// Description: Test flag
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test flag")]
-		public int? M3_TEME => GetNullableInt("TEME");
+		public int? M3TEME => GetNullableInt("TEME");
 
 		/// <summary>
 		/// Description: Message type
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message type")]
-		public string M3_E065 => GetString("E065");
+		public string M3E065 => GetString("E065");
 
 		/// <summary>
 		/// Description: Sender reference data 1
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sender reference data 1")]
-		public string M3_SRD1 => GetString("SRD1");
+		public string M3SRD1 => GetString("SRD1");
 
 		/// <summary>
 		/// Description: Sender reference data 2
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sender reference data 2")]
-		public string M3_SRD2 => GetString("SRD2");
+		public string M3SRD2 => GetString("SRD2");
 
 		/// <summary>
 		/// Description: Receiver reference data 1
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiver reference data 1")]
-		public string M3_RRD1 => GetString("RRD1");
+		public string M3RRD1 => GetString("RRD1");
 
 		/// <summary>
 		/// Description: Receiver reference data 2
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiver reference data 2")]
-		public string M3_RRD2 => GetString("RRD2");
+		public string M3RRD2 => GetString("RRD2");
 
 		/// <summary>
 		/// Description: Receiver reference data 3
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiver reference data 3")]
-		public string M3_RRD3 => GetString("RRD3");
+		public string M3RRD3 => GetString("RRD3");
 
 		/// <summary>
 		/// Description: Tray
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tray")]
-		public string M3_TRAY => GetString("TRAY");
+		public string M3TRAY => GetString("TRAY");
 
 		/// <summary>
 		/// Description: Layout
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Layout")]
-		public string M3_LAYC => GetString("LAYC");
+		public string M3LAYC => GetString("LAYC");
 
 		/// <summary>
 		/// Description: Country
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_MARI => GetString("MARI");
+		public string M3MARI => GetString("MARI");
 
 		/// <summary>
 		/// Description: Archive
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Archive")]
-		public int? M3_ARCH => GetNullableInt("ARCH");
+		public int? M3ARCH => GetNullableInt("ARCH");
 
 		/// <summary>
 		/// Description: Connector ID
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Connector ID")]
-		public int? M3_CNID => GetNullableInt("CNID");
+		public int? M3CNID => GetNullableInt("CNID");
 
 		/// <summary>
 		/// Description: Event priority
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event priority")]
-		public int? M3_EVPR => GetNullableInt("EVPR");
+		public int? M3EVPR => GetNullableInt("EVPR");
 
 		/// <summary>
 		/// Description: Business object name
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business object name")]
-		public string M3_BONM => GetString("BONM");
+		public string M3BONM => GetString("BONM");
 
 		/// <summary>
 		/// Description: Event verb
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.CRS949MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Event verb")]
-		public string M3_BOVB => GetString("BOVB");
+		public string M3BOVB => GetString("BOVB");
 	}
 }
 // EOF

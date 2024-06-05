@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Contract item
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contract item")]
-		public string M3_AGRS => GetString("AGRS");
+		public string M3AGRS => GetString("AGRS");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Description 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 1")]
-		public string M3_TEDS => GetString("TEDS");
+		public string M3TEDS => GetString("TEDS");
 
 		/// <summary>
 		/// Description: Description 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 2")]
-		public string M3_FUDS => GetString("FUDS");
+		public string M3FUDS => GetString("FUDS");
 
 		/// <summary>
 		/// Description: Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: No of dec places
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("No of dec places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Item group
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGR => GetString("ITGR");
+		public string M3ITGR => GetString("ITGR");
 
 		/// <summary>
 		/// Description: Product group
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product group")]
-		public string M3_ITCL => GetString("ITCL");
+		public string M3ITCL => GetString("ITCL");
 
 		/// <summary>
 		/// Description: Service expense type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service expense type")]
-		public string M3_SETP => GetString("SETP");
+		public string M3SETP => GetString("SETP");
 
 		/// <summary>
 		/// Description: Service exp category
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service exp category")]
-		public int? M3_SCOD => GetNullableInt("SCOD");
+		public int? M3SCOD => GetNullableInt("SCOD");
 
 		/// <summary>
 		/// Description: VAT code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Sales price
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Pricing code
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricing code")]
-		public int? M3_AFPM => GetNullableInt("AFPM");
+		public int? M3AFPM => GetNullableInt("AFPM");
 
 		/// <summary>
 		/// Description: Price type
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price type")]
-		public int? M3_AFPT => GetNullableInt("AFPT");
+		public int? M3AFPT => GetNullableInt("AFPT");
 
 		/// <summary>
 		/// Description: Currency - sales price
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency - sales price")]
-		public string M3_CUCS => GetString("CUCS");
+		public string M3CUCS => GetString("CUCS");
 
 		/// <summary>
 		/// Description: Standard cost
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard cost")]
-		public decimal? M3_STDC => GetNullableDecimal("STDC");
+		public decimal? M3STDC => GetNullableDecimal("STDC");
 
 		/// <summary>
 		/// Description: Standard cost quantity
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard cost quantity")]
-		public int? M3_SPCD => GetNullableInt("SPCD");
+		public int? M3SPCD => GetNullableInt("SPCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Only agreement type
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Only agreement type")]
-		public string M3_ALAT => GetString("ALAT");
+		public string M3ALAT => GetString("ALAT");
 
 		/// <summary>
 		/// Description: Not agreement type
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Not agreement type")]
-		public string M3_NAAT => GetString("NAAT");
+		public string M3NAAT => GetString("NAAT");
 
 		/// <summary>
 		/// Description: User-def field 1 - contract item
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-def field 1 - contract item")]
-		public string M3_CFG1 => GetString("CFG1");
+		public string M3CFG1 => GetString("CFG1");
 
 		/// <summary>
 		/// Description: User-def field 2 - contract item
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-def field 2 - contract item")]
-		public decimal? M3_CFG2 => GetNullableDecimal("CFG2");
+		public decimal? M3CFG2 => GetNullableDecimal("CFG2");
 
 		/// <summary>
 		/// Description: User-def field 3 - contract item
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-def field 3 - contract item")]
-		public string M3_CFG3 => GetString("CFG3");
+		public string M3CFG3 => GetString("CFG3");
 
 		/// <summary>
 		/// Description: User-def field 4 - contract item
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-def field 4 - contract item")]
-		public string M3_CFG4 => GetString("CFG4");
+		public string M3CFG4 => GetString("CFG4");
 
 		/// <summary>
 		/// Description: User-def field 5 - contract item
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-def field 5 - contract item")]
-		public string M3_CFG5 => GetString("CFG5");
+		public string M3CFG5 => GetString("CFG5");
 
 		/// <summary>
 		/// Description: No of dec places - meter pricing
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("No of dec places - meter pricing")]
-		public int? M3_MPDP => GetNullableInt("MPDP");
+		public int? M3MPDP => GetNullableInt("MPDP");
 
 		/// <summary>
 		/// Description: Tax code cust/addr
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code cust/addr")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Change date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

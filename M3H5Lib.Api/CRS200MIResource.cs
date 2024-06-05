@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Lists GST Order Types
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_TRTP">Order type</param>
-		/// <param name="m3_TTYP">Stock transaction type</param>
-		/// <param name="m3_FSQ3">Next manual function</param>
+		/// <param name="m3TRTP">Order type</param>
+		/// <param name="m3TTYP">Stock transaction type</param>
+		/// <param name="m3FSQ3">Next manual function</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOrderTypeResponse></returns>
 		/// <exception cref="M3Exception<LstOrderTypeResponse>"></exception>
 		public async Task<M3Response<LstOrderTypeResponse>> LstOrderType(
-			string m3_TRTP = null, 
-			int? m3_TTYP = null, 
-			string m3_FSQ3 = null, 
+			string m3TRTP = null, 
+			int? m3TTYP = null, 
+			string m3FSQ3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,12 +66,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRTP))
-				request.WithQueryParameter("TRTP", m3_TRTP.Trim());
-			if (m3_TTYP.HasValue)
-				request.WithQueryParameter("TTYP", m3_TTYP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FSQ3))
-				request.WithQueryParameter("FSQ3", m3_FSQ3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRTP))
+				request.WithQueryParameter("TRTP", m3TRTP.Trim());
+			if (m3TTYP.HasValue)
+				request.WithQueryParameter("TTYP", m3TTYP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FSQ3))
+				request.WithQueryParameter("FSQ3", m3FSQ3.Trim());
 
 			// Execute the request
 			var result = await Execute<LstOrderTypeResponse>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

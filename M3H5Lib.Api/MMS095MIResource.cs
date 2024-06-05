@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS095MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Add item statistics relation
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_FWHL">From warehouse (Required)</param>
-		/// <param name="m3_FITN">From item number (Required)</param>
-		/// <param name="m3_CUCO">Replace statistics (Required)</param>
-		/// <param name="m3_FPER">Period</param>
-		/// <param name="m3_TPER">Period</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3FWHL">From warehouse (Required)</param>
+		/// <param name="m3FITN">From item number (Required)</param>
+		/// <param name="m3CUCO">Replace statistics (Required)</param>
+		/// <param name="m3FPER">Period</param>
+		/// <param name="m3TPER">Period</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_WHLO, 
-			string m3_ITNO, 
-			string m3_FWHL, 
-			string m3_FITN, 
-			int m3_CUCO, 
-			int? m3_FPER = null, 
-			int? m3_TPER = null, 
+			string m3WHLO, 
+			string m3ITNO, 
+			string m3FWHL, 
+			string m3FITN, 
+			int m3CUCO, 
+			int? m3FPER = null, 
+			int? m3TPER = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,28 +74,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_FWHL))
-				throw new ArgumentNullException("m3_FWHL");
-			if (string.IsNullOrWhiteSpace(m3_FITN))
-				throw new ArgumentNullException("m3_FITN");
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3FWHL))
+				throw new ArgumentNullException(nameof(m3FWHL));
+			if (string.IsNullOrWhiteSpace(m3FITN))
+				throw new ArgumentNullException(nameof(m3FITN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("FWHL", m3_FWHL.Trim())
-				.WithQueryParameter("FITN", m3_FITN.Trim())
-				.WithQueryParameter("CUCO", m3_CUCO.ToString());
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("FWHL", m3FWHL.Trim())
+				.WithQueryParameter("FITN", m3FITN.Trim())
+				.WithQueryParameter("CUCO", m3CUCO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FPER.HasValue)
-				request.WithQueryParameter("FPER", m3_FPER.Value.ToString());
-			if (m3_TPER.HasValue)
-				request.WithQueryParameter("TPER", m3_TPER.Value.ToString());
+			if (m3FPER.HasValue)
+				request.WithQueryParameter("FPER", m3FPER.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TPER.HasValue)
+				request.WithQueryParameter("TPER", m3TPER.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -103,7 +105,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -114,10 +117,10 @@ namespace M3H5Lib.Api
 		/// Description Delete item statistics relation
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_FWHL">From warehouse (Required)</param>
-		/// <param name="m3_FITN">From item number (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3FWHL">From warehouse (Required)</param>
+		/// <param name="m3FITN">From item number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -126,10 +129,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<DelResponse></returns>
 		/// <exception cref="M3Exception<DelResponse>"></exception>
 		public async Task<M3Response<DelResponse>> Del(
-			string m3_WHLO, 
-			string m3_ITNO, 
-			string m3_FWHL, 
-			string m3_FITN, 
+			string m3WHLO, 
+			string m3ITNO, 
+			string m3FWHL, 
+			string m3FITN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -144,21 +147,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_FWHL))
-				throw new ArgumentNullException("m3_FWHL");
-			if (string.IsNullOrWhiteSpace(m3_FITN))
-				throw new ArgumentNullException("m3_FITN");
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3FWHL))
+				throw new ArgumentNullException(nameof(m3FWHL));
+			if (string.IsNullOrWhiteSpace(m3FITN))
+				throw new ArgumentNullException(nameof(m3FITN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("FWHL", m3_FWHL.Trim())
-				.WithQueryParameter("FITN", m3_FITN.Trim());
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("FWHL", m3FWHL.Trim())
+				.WithQueryParameter("FITN", m3FITN.Trim());
 
 			// Execute the request
 			var result = await Execute<DelResponse>(
@@ -168,7 +171,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -179,10 +183,10 @@ namespace M3H5Lib.Api
 		/// Description Implement item statistics relation
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_FWHL">From warehouse (Required)</param>
-		/// <param name="m3_FITN">From item number (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3FWHL">From warehouse (Required)</param>
+		/// <param name="m3FITN">From item number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -191,10 +195,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ImpResponse></returns>
 		/// <exception cref="M3Exception<ImpResponse>"></exception>
 		public async Task<M3Response<ImpResponse>> Imp(
-			string m3_WHLO, 
-			string m3_ITNO, 
-			string m3_FWHL, 
-			string m3_FITN, 
+			string m3WHLO, 
+			string m3ITNO, 
+			string m3FWHL, 
+			string m3FITN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -209,21 +213,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_FWHL))
-				throw new ArgumentNullException("m3_FWHL");
-			if (string.IsNullOrWhiteSpace(m3_FITN))
-				throw new ArgumentNullException("m3_FITN");
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3FWHL))
+				throw new ArgumentNullException(nameof(m3FWHL));
+			if (string.IsNullOrWhiteSpace(m3FITN))
+				throw new ArgumentNullException(nameof(m3FITN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("FWHL", m3_FWHL.Trim())
-				.WithQueryParameter("FITN", m3_FITN.Trim());
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("FWHL", m3FWHL.Trim())
+				.WithQueryParameter("FITN", m3FITN.Trim());
 
 			// Execute the request
 			var result = await Execute<ImpResponse>(
@@ -233,7 +237,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

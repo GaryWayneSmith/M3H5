@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Partner
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Division
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Stock transaction type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock transaction type")]
-		public int? M3_TTYP => GetNullableInt("TTYP");
+		public int? M3TTYP => GetNullableInt("TTYP");
 
 		/// <summary>
 		/// Description: Order number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Order operation
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order operation")]
-		public int? M3_RIDO => GetNullableInt("RIDO");
+		public int? M3RIDO => GetNullableInt("RIDO");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Picking list suffix
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list suffix")]
-		public int? M3_PLSX => GetNullableInt("PLSX");
+		public int? M3PLSX => GetNullableInt("PLSX");
 
 		/// <summary>
 		/// Description: Text identity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Line number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_LINO => GetNullableInt("LINO");
+		public int? M3LINO => GetNullableInt("LINO");
 
 		/// <summary>
 		/// Description: Language
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Text block
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text block")]
-		public string M3_TXVR => GetString("TXVR");
+		public string M3TXVR => GetString("TXVR");
 
 		/// <summary>
 		/// Description: Description
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Text control code
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text control code")]
-		public string M3_TXCC => GetString("TXCC");
+		public string M3TXCC => GetString("TXCC");
 
 		/// <summary>
 		/// Description: Text
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Command
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Command")]
-		public string M3_CMND => GetString("CMND");
+		public string M3CMND => GetString("CMND");
 
 		/// <summary>
 		/// Description: Download
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Download")]
-		public int? M3_DOWN => GetNullableInt("DOWN");
+		public int? M3DOWN => GetNullableInt("DOWN");
 
 		/// <summary>
 		/// Description: Entry date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MHS810MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

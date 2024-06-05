@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_DENO => GetString("DENO");
+		public string M3DENO => GetString("DENO");
 
 		/// <summary>
 		/// Description: Reference number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference number")]
-		public string M3_NREF => GetString("NREF");
+		public string M3NREF => GetString("NREF");
 
 		/// <summary>
 		/// Description: Responsible
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Acquisition code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition code")]
-		public int? M3_PUIT => GetNullableInt("PUIT");
+		public int? M3PUIT => GetNullableInt("PUIT");
 
 		/// <summary>
 		/// Description: Replenishment order
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replenishment order")]
-		public int? M3_REOD => GetNullableInt("REOD");
+		public int? M3REOD => GetNullableInt("REOD");
 
 		/// <summary>
 		/// Description: Status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Need date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Need date")]
-		public DateTime? M3_RQDT => GetNullableDateTime("RQDT");
+		public DateTime? M3RQDT => GetNullableDateTime("RQDT");
 
 		/// <summary>
 		/// Description: Planned quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned quantity")]
-		public decimal? M3_PPQT => GetNullableDecimal("PPQT");
+		public decimal? M3PPQT => GetNullableDecimal("PPQT");
 
 		/// <summary>
 		/// Description: Planning date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Confirmed quantity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed quantity")]
-		public decimal? M3_CFQA => GetNullableDecimal("CFQA");
+		public decimal? M3CFQA => GetNullableDecimal("CFQA");
 
 		/// <summary>
 		/// Description: Confirmed delivery date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery date")]
-		public DateTime? M3_CODT => GetNullableDateTime("CODT");
+		public DateTime? M3CODT => GetNullableDateTime("CODT");
 
 		/// <summary>
 		/// Description: Reported quantity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported quantity")]
-		public decimal? M3_RPQT => GetNullableDecimal("RPQT");
+		public decimal? M3RPQT => GetNullableDecimal("RPQT");
 
 		/// <summary>
 		/// Description: Agreed quantity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed quantity")]
-		public decimal? M3_AGQT => GetNullableDecimal("AGQT");
+		public decimal? M3AGQT => GetNullableDecimal("AGQT");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Purchase price quantity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price quantity")]
-		public int? M3_PUCD => GetNullableInt("PUCD");
+		public int? M3PUCD => GetNullableInt("PUCD");
 
 		/// <summary>
 		/// Description: Confirmed purchase price
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed purchase price")]
-		public decimal? M3_CPPR => GetNullableDecimal("CPPR");
+		public decimal? M3CPPR => GetNullableDecimal("CPPR");
 
 		/// <summary>
 		/// Description: Confirmed purchase price quantity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed purchase price quantity")]
-		public int? M3_CPUC => GetNullableInt("CPUC");
+		public int? M3CPUC => GetNullableInt("CPUC");
 
 		/// <summary>
 		/// Description: Currency
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Acquistion order category
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquistion order category")]
-		public string M3_AOCA => GetString("AOCA");
+		public string M3AOCA => GetString("AOCA");
 
 		/// <summary>
 		/// Description: Acquisition order number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition order number")]
-		public string M3_ARDN => GetString("ARDN");
+		public string M3ARDN => GetString("ARDN");
 
 		/// <summary>
 		/// Description: Acquisition order line
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition order line")]
-		public int? M3_ARDL => GetNullableInt("ARDL");
+		public int? M3ARDL => GetNullableInt("ARDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_ARDX => GetNullableInt("ARDX");
+		public int? M3ARDX => GetNullableInt("ARDX");
 
 		/// <summary>
 		/// Description: Reporting date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting date")]
-		public DateTime? M3_RPDT => GetNullableDateTime("RPDT");
+		public DateTime? M3RPDT => GetNullableDateTime("RPDT");
 
 		/// <summary>
 		/// Description: Allocated quantity - basic U/M
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - basic U/M")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Dispatched quantity
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.RPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dispatched quantity")]
-		public decimal? M3_DPQT => GetNullableDecimal("DPQT");
+		public decimal? M3DPQT => GetNullableDecimal("DPQT");
 	}
 }
 // EOF

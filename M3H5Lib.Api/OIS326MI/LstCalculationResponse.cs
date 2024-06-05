@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Costing model - sales price
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - sales price")]
-		public string M3_SCMO => GetString("SCMO");
+		public string M3SCMO => GetString("SCMO");
 
 		/// <summary>
 		/// Description: Calculation base
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation base")]
-		public int? M3_CABA => GetNullableInt("CABA");
+		public int? M3CABA => GetNullableInt("CABA");
 
 		/// <summary>
 		/// Description: Basic price list
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic price list")]
-		public string M3_BAPL => GetString("BAPL");
+		public string M3BAPL => GetString("BAPL");
 
 		/// <summary>
 		/// Description: Currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_E0CB => GetString("E0CB");
+		public string M3E0CB => GetString("E0CB");
 
 		/// <summary>
 		/// Description: Costing model - purchasing
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - purchasing")]
-		public string M3_WSCA => GetString("WSCA");
+		public string M3WSCA => GetString("WSCA");
 
 		/// <summary>
 		/// Description: Base
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base")]
-		public int? M3_BASE => GetNullableInt("BASE");
+		public int? M3BASE => GetNullableInt("BASE");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Costing type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing type")]
-		public string M3_PCTP => GetString("PCTP");
+		public string M3PCTP => GetString("PCTP");
 
 		/// <summary>
 		/// Description: Sales price
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Work1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work1")]
-		public decimal? M3_WRK1 => GetNullableDecimal("WRK1");
+		public decimal? M3WRK1 => GetNullableDecimal("WRK1");
 
 		/// <summary>
 		/// Description: Obsolescence price
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Obsolescence price")]
-		public decimal? M3_NAPR => GetNullableDecimal("NAPR");
+		public decimal? M3NAPR => GetNullableDecimal("NAPR");
 
 		/// <summary>
 		/// Description: Work3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work3")]
-		public decimal? M3_WRK3 => GetNullableDecimal("WRK3");
+		public decimal? M3WRK3 => GetNullableDecimal("WRK3");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Element - sales price costing
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element - sales price costing")]
-		public string M3_SCEL => GetString("SCEL");
+		public string M3SCEL => GetString("SCEL");
 
 		/// <summary>
 		/// Description: Name
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Costing markup
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing markup")]
-		public decimal? M3_OVHE => GetNullableDecimal("OVHE");
+		public decimal? M3OVHE => GetNullableDecimal("OVHE");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Markup
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Markup")]
-		public decimal? M3_POOV => GetNullableDecimal("POOV");
+		public decimal? M3POOV => GetNullableDecimal("POOV");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNI1 => GetString("UNI1");
+		public string M3UNI1 => GetString("UNI1");
 
 		/// <summary>
 		/// Description: Amount
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount")]
-		public string M3_AMON => GetString("AMON");
+		public string M3AMON => GetString("AMON");
 
 		/// <summary>
 		/// Description: Currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Costing operator
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing operator")]
-		public string M3_WSOP => GetString("WSOP");
+		public string M3WSOP => GetString("WSOP");
 
 		/// <summary>
 		/// Description: Field
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_PC01 => GetString("PC01");
+		public string M3PC01 => GetString("PC01");
 
 		/// <summary>
 		/// Description: Field
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_PC02 => GetString("PC02");
+		public string M3PC02 => GetString("PC02");
 
 		/// <summary>
 		/// Description: Field
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_PC03 => GetString("PC03");
+		public string M3PC03 => GetString("PC03");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI1 => GetString("ATI1");
+		public string M3ATI1 => GetString("ATI1");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI2 => GetString("ATI2");
+		public string M3ATI2 => GetString("ATI2");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI3 => GetString("ATI3");
+		public string M3ATI3 => GetString("ATI3");
 
 		/// <summary>
 		/// Description: Feature
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTI1 => GetString("FTI1");
+		public string M3FTI1 => GetString("FTI1");
 
 		/// <summary>
 		/// Description: Feature
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTI2 => GetString("FTI2");
+		public string M3FTI2 => GetString("FTI2");
 
 		/// <summary>
 		/// Description: Feature
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTI3 => GetString("FTI3");
+		public string M3FTI3 => GetString("FTI3");
 
 		/// <summary>
 		/// Description: Drawing measurement
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing measurement")]
-		public string M3_DMI1 => GetString("DMI1");
+		public string M3DMI1 => GetString("DMI1");
 
 		/// <summary>
 		/// Description: Drawing measurement
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing measurement")]
-		public string M3_DMI2 => GetString("DMI2");
+		public string M3DMI2 => GetString("DMI2");
 
 		/// <summary>
 		/// Description: Drawing measurement
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing measurement")]
-		public string M3_DMI3 => GetString("DMI3");
+		public string M3DMI3 => GetString("DMI3");
 
 		/// <summary>
 		/// Description: Field
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_PC04 => GetString("PC04");
+		public string M3PC04 => GetString("PC04");
 
 		/// <summary>
 		/// Description: Field
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_PC05 => GetString("PC05");
+		public string M3PC05 => GetString("PC05");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: Start value 5
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 5")]
-		public string M3_OBV5 => GetString("OBV5");
+		public string M3OBV5 => GetString("OBV5");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI4 => GetString("ATI4");
+		public string M3ATI4 => GetString("ATI4");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATI5 => GetString("ATI5");
+		public string M3ATI5 => GetString("ATI5");
 
 		/// <summary>
 		/// Description: Feature
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTI4 => GetString("FTI4");
+		public string M3FTI4 => GetString("FTI4");
 
 		/// <summary>
 		/// Description: Feature
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTI5 => GetString("FTI5");
+		public string M3FTI5 => GetString("FTI5");
 
 		/// <summary>
 		/// Description: Drawing measurement
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing measurement")]
-		public string M3_DMI4 => GetString("DMI4");
+		public string M3DMI4 => GetString("DMI4");
 
 		/// <summary>
 		/// Description: Drawing measurement
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OIS326MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawing measurement")]
-		public string M3_DMI5 => GetString("DMI5");
+		public string M3DMI5 => GetString("DMI5");
 	}
 }
 // EOF

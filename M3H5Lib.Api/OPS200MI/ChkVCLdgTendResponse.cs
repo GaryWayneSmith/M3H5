@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record status")]
-		public string M3_RDST => GetString("RDST");
+		public string M3RDST => GetString("RDST");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public DateTime? M3_STDE => GetNullableDateTime("STDE");
+		public DateTime? M3STDE => GetNullableDateTime("STDE");
 
 		/// <summary>
 		/// Description: Valid code
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid code")]
-		public int? M3_VCVC => GetNullableInt("VCVC");
+		public int? M3VCVC => GetNullableInt("VCVC");
 
 		/// <summary>
 		/// Description: Amount due - local currency
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount due - local currency")]
-		public decimal? M3_REAM => GetNullableDecimal("REAM");
+		public decimal? M3REAM => GetNullableDecimal("REAM");
 
 		/// <summary>
 		/// Description: Due date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Due date")]
-		public DateTime? M3_DUDT => GetNullableDateTime("DUDT");
+		public DateTime? M3DUDT => GetNullableDateTime("DUDT");
 
 		/// <summary>
 		/// Description: Comment
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OPS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comment")]
-		public string M3_COME => GetString("COME");
+		public string M3COME => GetString("COME");
 	}
 }
 // EOF

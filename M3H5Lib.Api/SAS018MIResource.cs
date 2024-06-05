@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.SAS018MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,17 +38,17 @@ namespace M3H5Lib.Api
 		/// Description AddServPrcList
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PRS1">Price list SO (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_AGRS">Contract item (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_QTYL">Lowest quantity limit</param>
-		/// <param name="m3_NTCD">Net price used</param>
-		/// <param name="m3_SAPR">Sales price</param>
-		/// <param name="m3_SACD">Sales price quantity</param>
-		/// <param name="m3_DIPR">Discount amount per unit</param>
-		/// <param name="m3_DIPC">Discount</param>
+		/// <param name="m3PRS1">Price list SO (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3AGRS">Contract item (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3QTYL">Lowest quantity limit</param>
+		/// <param name="m3NTCD">Net price used</param>
+		/// <param name="m3SAPR">Sales price</param>
+		/// <param name="m3SACD">Sales price quantity</param>
+		/// <param name="m3DIPR">Discount amount per unit</param>
+		/// <param name="m3DIPC">Discount</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -55,17 +57,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddServPrcList(
-			string m3_PRS1, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_AGRS, 
-			string m3_CUNO = null, 
-			decimal? m3_QTYL = null, 
-			int? m3_NTCD = null, 
-			decimal? m3_SAPR = null, 
-			int? m3_SACD = null, 
-			decimal? m3_DIPR = null, 
-			int? m3_DIPC = null, 
+			string m3PRS1, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3AGRS, 
+			string m3CUNO = null, 
+			decimal? m3QTYL = null, 
+			int? m3NTCD = null, 
+			decimal? m3SAPR = null, 
+			int? m3SACD = null, 
+			decimal? m3DIPR = null, 
+			int? m3DIPC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -80,35 +82,35 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRS1))
-				throw new ArgumentNullException("m3_PRS1");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_AGRS))
-				throw new ArgumentNullException("m3_AGRS");
+			if (string.IsNullOrWhiteSpace(m3PRS1))
+				throw new ArgumentNullException(nameof(m3PRS1));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3AGRS))
+				throw new ArgumentNullException(nameof(m3AGRS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRS1", m3_PRS1.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("AGRS", m3_AGRS.Trim());
+				.WithQueryParameter("PRS1", m3PRS1.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("AGRS", m3AGRS.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_QTYL.HasValue)
-				request.WithQueryParameter("QTYL", m3_QTYL.Value.ToString());
-			if (m3_NTCD.HasValue)
-				request.WithQueryParameter("NTCD", m3_NTCD.Value.ToString());
-			if (m3_SAPR.HasValue)
-				request.WithQueryParameter("SAPR", m3_SAPR.Value.ToString());
-			if (m3_SACD.HasValue)
-				request.WithQueryParameter("SACD", m3_SACD.Value.ToString());
-			if (m3_DIPR.HasValue)
-				request.WithQueryParameter("DIPR", m3_DIPR.Value.ToString());
-			if (m3_DIPC.HasValue)
-				request.WithQueryParameter("DIPC", m3_DIPC.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3QTYL.HasValue)
+				request.WithQueryParameter("QTYL", m3QTYL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3NTCD.HasValue)
+				request.WithQueryParameter("NTCD", m3NTCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SAPR.HasValue)
+				request.WithQueryParameter("SAPR", m3SAPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SACD.HasValue)
+				request.WithQueryParameter("SACD", m3SACD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DIPR.HasValue)
+				request.WithQueryParameter("DIPR", m3DIPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DIPC.HasValue)
+				request.WithQueryParameter("DIPC", m3DIPC.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -118,7 +120,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -129,11 +132,11 @@ namespace M3H5Lib.Api
 		/// Description DelServPrcList
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PRS1">Price list SO (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_AGRS">Contract item (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
+		/// <param name="m3PRS1">Price list SO (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3AGRS">Contract item (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -142,11 +145,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelServPrcList(
-			string m3_PRS1, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_AGRS, 
-			string m3_CUNO = null, 
+			string m3PRS1, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3AGRS, 
+			string m3CUNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -161,23 +164,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRS1))
-				throw new ArgumentNullException("m3_PRS1");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_AGRS))
-				throw new ArgumentNullException("m3_AGRS");
+			if (string.IsNullOrWhiteSpace(m3PRS1))
+				throw new ArgumentNullException(nameof(m3PRS1));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3AGRS))
+				throw new ArgumentNullException(nameof(m3AGRS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRS1", m3_PRS1.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("AGRS", m3_AGRS.Trim());
+				.WithQueryParameter("PRS1", m3PRS1.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("AGRS", m3AGRS.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -187,7 +190,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -198,11 +202,11 @@ namespace M3H5Lib.Api
 		/// Description GetServPrcList
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PRS1">Price list SO (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_AGRS">Contract item (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
+		/// <param name="m3PRS1">Price list SO (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3AGRS">Contract item (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -211,11 +215,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetServPrcListResponse></returns>
 		/// <exception cref="M3Exception<GetServPrcListResponse>"></exception>
 		public async Task<M3Response<GetServPrcListResponse>> GetServPrcList(
-			string m3_PRS1, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_AGRS, 
-			string m3_CUNO = null, 
+			string m3PRS1, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3AGRS, 
+			string m3CUNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -230,23 +234,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRS1))
-				throw new ArgumentNullException("m3_PRS1");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_AGRS))
-				throw new ArgumentNullException("m3_AGRS");
+			if (string.IsNullOrWhiteSpace(m3PRS1))
+				throw new ArgumentNullException(nameof(m3PRS1));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3AGRS))
+				throw new ArgumentNullException(nameof(m3AGRS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRS1", m3_PRS1.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("AGRS", m3_AGRS.Trim());
+				.WithQueryParameter("PRS1", m3PRS1.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("AGRS", m3AGRS.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetServPrcListResponse>(
@@ -256,7 +260,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -267,11 +272,11 @@ namespace M3H5Lib.Api
 		/// Description LstServPrcList
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PRS1">Price list SO (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_AGRS">Contract item</param>
+		/// <param name="m3PRS1">Price list SO (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3AGRS">Contract item</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -280,11 +285,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstServPrcListResponse></returns>
 		/// <exception cref="M3Exception<LstServPrcListResponse>"></exception>
 		public async Task<M3Response<LstServPrcListResponse>> LstServPrcList(
-			string m3_PRS1, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_CUNO = null, 
-			string m3_AGRS = null, 
+			string m3PRS1, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3CUNO = null, 
+			string m3AGRS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -299,22 +304,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRS1))
-				throw new ArgumentNullException("m3_PRS1");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3PRS1))
+				throw new ArgumentNullException(nameof(m3PRS1));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRS1", m3_PRS1.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String());
+				.WithQueryParameter("PRS1", m3PRS1.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AGRS))
-				request.WithQueryParameter("AGRS", m3_AGRS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGRS))
+				request.WithQueryParameter("AGRS", m3AGRS.Trim());
 
 			// Execute the request
 			var result = await Execute<LstServPrcListResponse>(
@@ -324,7 +329,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -335,18 +341,18 @@ namespace M3H5Lib.Api
 		/// Description UpdServPrcList
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PRS1">Price list SO (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_AGRS">Contract item (Required)</param>
-		/// <param name="m3_QTYL">Lowest quantity limit (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_NQTY">New lowest quantity limit</param>
-		/// <param name="m3_NTCD">Net price used</param>
-		/// <param name="m3_SAPR">Sales price</param>
-		/// <param name="m3_SACD">Sales price quantity</param>
-		/// <param name="m3_DIPR">Discount amount per unit</param>
-		/// <param name="m3_DIPC">Discount</param>
+		/// <param name="m3PRS1">Price list SO (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3AGRS">Contract item (Required)</param>
+		/// <param name="m3QTYL">Lowest quantity limit (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3NQTY">New lowest quantity limit</param>
+		/// <param name="m3NTCD">Net price used</param>
+		/// <param name="m3SAPR">Sales price</param>
+		/// <param name="m3SACD">Sales price quantity</param>
+		/// <param name="m3DIPR">Discount amount per unit</param>
+		/// <param name="m3DIPC">Discount</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -355,18 +361,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdServPrcList(
-			string m3_PRS1, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_AGRS, 
-			decimal m3_QTYL, 
-			string m3_CUNO = null, 
-			decimal? m3_NQTY = null, 
-			int? m3_NTCD = null, 
-			decimal? m3_SAPR = null, 
-			int? m3_SACD = null, 
-			decimal? m3_DIPR = null, 
-			int? m3_DIPC = null, 
+			string m3PRS1, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3AGRS, 
+			decimal m3QTYL, 
+			string m3CUNO = null, 
+			decimal? m3NQTY = null, 
+			int? m3NTCD = null, 
+			decimal? m3SAPR = null, 
+			int? m3SACD = null, 
+			decimal? m3DIPR = null, 
+			int? m3DIPC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -381,36 +387,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRS1))
-				throw new ArgumentNullException("m3_PRS1");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_AGRS))
-				throw new ArgumentNullException("m3_AGRS");
+			if (string.IsNullOrWhiteSpace(m3PRS1))
+				throw new ArgumentNullException(nameof(m3PRS1));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3AGRS))
+				throw new ArgumentNullException(nameof(m3AGRS));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRS1", m3_PRS1.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("AGRS", m3_AGRS.Trim())
-				.WithQueryParameter("QTYL", m3_QTYL.ToString());
+				.WithQueryParameter("PRS1", m3PRS1.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("AGRS", m3AGRS.Trim())
+				.WithQueryParameter("QTYL", m3QTYL.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_NQTY.HasValue)
-				request.WithQueryParameter("NQTY", m3_NQTY.Value.ToString());
-			if (m3_NTCD.HasValue)
-				request.WithQueryParameter("NTCD", m3_NTCD.Value.ToString());
-			if (m3_SAPR.HasValue)
-				request.WithQueryParameter("SAPR", m3_SAPR.Value.ToString());
-			if (m3_SACD.HasValue)
-				request.WithQueryParameter("SACD", m3_SACD.Value.ToString());
-			if (m3_DIPR.HasValue)
-				request.WithQueryParameter("DIPR", m3_DIPR.Value.ToString());
-			if (m3_DIPC.HasValue)
-				request.WithQueryParameter("DIPC", m3_DIPC.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3NQTY.HasValue)
+				request.WithQueryParameter("NQTY", m3NQTY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3NTCD.HasValue)
+				request.WithQueryParameter("NTCD", m3NTCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SAPR.HasValue)
+				request.WithQueryParameter("SAPR", m3SAPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SACD.HasValue)
+				request.WithQueryParameter("SACD", m3SACD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DIPR.HasValue)
+				request.WithQueryParameter("DIPR", m3DIPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DIPC.HasValue)
+				request.WithQueryParameter("DIPC", m3DIPC.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -420,7 +426,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

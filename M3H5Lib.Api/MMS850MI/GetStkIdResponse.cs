@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Message number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message number")]
-		public string M3_MSNR => GetString("MSNR");
+		public string M3MSNR => GetString("MSNR");
 
 		/// <summary>
 		/// Description: Message line number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message line number")]
-		public int? M3_MSLN => GetNullableInt("MSLN");
+		public int? M3MSLN => GetNullableInt("MSLN");
 
 		/// <summary>
 		/// Description: External message number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External message number")]
-		public string M3_PMSN => GetString("PMSN");
+		public string M3PMSN => GetString("PMSN");
 
 		/// <summary>
 		/// Description: External message line number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External message line number")]
-		public int? M3_PMSL => GetNullableInt("PMSL");
+		public int? M3PMSL => GetNullableInt("PMSL");
 
 		/// <summary>
 		/// Description: Date generated
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date generated")]
-		public DateTime? M3_GEDT => GetNullableDateTime("GEDT");
+		public DateTime? M3GEDT => GetNullableDateTime("GEDT");
 
 		/// <summary>
 		/// Description: Time generated
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time generated")]
-		public int? M3_GETM => GetNullableInt("GETM");
+		public int? M3GETM => GetNullableInt("GETM");
 
 		/// <summary>
 		/// Description: Date changed
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date changed")]
-		public DateTime? M3_CHGD => GetNullableDateTime("CHGD");
+		public DateTime? M3CHGD => GetNullableDateTime("CHGD");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Location
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Container
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Receiving number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving number")]
-		public long? M3_REPN => GetNullableLong("REPN");
+		public long? M3REPN => GetNullableLong("REPN");
 
 		/// <summary>
 		/// Description: Facility
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Alias number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias number")]
-		public string M3_POPN => GetString("POPN");
+		public string M3POPN => GetString("POPN");
 
 		/// <summary>
 		/// Description: Alias qualifier
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias qualifier")]
-		public string M3_ALWQ => GetString("ALWQ");
+		public string M3ALWQ => GetString("ALWQ");
 
 		/// <summary>
 		/// Description: Alias type
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alias type")]
-		public int? M3_ALWT => GetNullableInt("ALWT");
+		public int? M3ALWT => GetNullableInt("ALWT");
 
 		/// <summary>
 		/// Description: Name
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Description 2
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 2")]
-		public string M3_FUDS => GetString("FUDS");
+		public string M3FUDS => GetString("FUDS");
 
 		/// <summary>
 		/// Description: Lot reference 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 1")]
-		public string M3_BREF => GetString("BREF");
+		public string M3BREF => GetString("BREF");
 
 		/// <summary>
 		/// Description: Lot reference 2
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 2")]
-		public string M3_BRE2 => GetString("BRE2");
+		public string M3BRE2 => GetString("BRE2");
 
 		/// <summary>
 		/// Description: Remark
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_BREM => GetString("BREM");
+		public string M3BREM => GetString("BREM");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Lowest status
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status")]
-		public string M3_STLO => GetString("STLO");
+		public string M3STLO => GetString("STLO");
 
 		/// <summary>
 		/// Description: Status
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Highest status
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status")]
-		public string M3_STHI => GetString("STHI");
+		public string M3STHI => GetString("STHI");
 
 		/// <summary>
 		/// Description: Text identity
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Responsible
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Responsible
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RES2 => GetString("RES2");
+		public string M3RES2 => GetString("RES2");
 
 		/// <summary>
 		/// Description: Responsible
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RES3 => GetString("RES3");
+		public string M3RES3 => GetString("RES3");
 
 		/// <summary>
 		/// Description: Responsible
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RES4 => GetString("RES4");
+		public string M3RES4 => GetString("RES4");
 
 		/// <summary>
 		/// Description: EDI reference
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EDI reference")]
-		public string M3_EDFR => GetString("EDFR");
+		public string M3EDFR => GetString("EDFR");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD3 => GetString("USD3");
+		public string M3USD3 => GetString("USD3");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD4 => GetString("USD4");
+		public string M3USD4 => GetString("USD4");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD5 => GetString("USD5");
+		public string M3USD5 => GetString("USD5");
 
 		/// <summary>
 		/// Description: Entry date
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

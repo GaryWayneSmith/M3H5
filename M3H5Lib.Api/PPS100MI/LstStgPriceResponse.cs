@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Group identity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group identity")]
-		public int? M3_GRPI => GetNullableInt("GRPI");
+		public int? M3GRPI => GetNullableInt("GRPI");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: Valid from
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: From quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From quantity")]
-		public decimal? M3_FRQT => GetNullableDecimal("FRQT");
+		public decimal? M3FRQT => GetNullableDecimal("FRQT");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Discount 3
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 3")]
-		public int? M3_DIP3 => GetNullableInt("DIP3");
+		public int? M3DIP3 => GetNullableInt("DIP3");
 
 		/// <summary>
 		/// Description: Normal price
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Normal price")]
-		public int? M3_MAPR => GetNullableInt("MAPR");
+		public int? M3MAPR => GetNullableInt("MAPR");
 	}
 }
 // EOF

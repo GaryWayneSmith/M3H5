@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MHS003MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,25 +38,25 @@ namespace M3H5Lib.Api
 		/// Description Add Interface Item Facility
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
-		/// <param name="m3_PRMD">Process flag</param>
-		/// <param name="m3_CSNO">Customs statistical number</param>
-		/// <param name="m3_ORCO">Country of origin</param>
-		/// <param name="m3_LEA4">Administrative lead time</param>
-		/// <param name="m3_REWH">Main warehouse</param>
-		/// <param name="m3_VAMT">Inventory accounting method</param>
-		/// <param name="m3_USD1">User-defined field</param>
-		/// <param name="m3_USD2">User-defined field</param>
-		/// <param name="m3_USD3">User-defined field</param>
-		/// <param name="m3_USD4">User-defined field</param>
-		/// <param name="m3_USD5">User-defined field</param>
-		/// <param name="m3_TXID">Text identity</param>
-		/// <param name="m3_FATM">On-hand balance method - facility</param>
-		/// <param name="m3_ITFL">Item number flag</param>
-		/// <param name="m3_ITAB">Item selection table</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
+		/// <param name="m3PRMD">Process flag</param>
+		/// <param name="m3CSNO">Customs statistical number</param>
+		/// <param name="m3ORCO">Country of origin</param>
+		/// <param name="m3LEA4">Administrative lead time</param>
+		/// <param name="m3REWH">Main warehouse</param>
+		/// <param name="m3VAMT">Inventory accounting method</param>
+		/// <param name="m3USD1">User-defined field</param>
+		/// <param name="m3USD2">User-defined field</param>
+		/// <param name="m3USD3">User-defined field</param>
+		/// <param name="m3USD4">User-defined field</param>
+		/// <param name="m3USD5">User-defined field</param>
+		/// <param name="m3TXID">Text identity</param>
+		/// <param name="m3FATM">On-hand balance method - facility</param>
+		/// <param name="m3ITFL">Item number flag</param>
+		/// <param name="m3ITAB">Item selection table</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -63,25 +65,25 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddIntItmFac(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_FACI, 
-			string m3_IFIN, 
-			string m3_PRMD = null, 
-			string m3_CSNO = null, 
-			string m3_ORCO = null, 
-			int? m3_LEA4 = null, 
-			string m3_REWH = null, 
-			int? m3_VAMT = null, 
-			string m3_USD1 = null, 
-			string m3_USD2 = null, 
-			string m3_USD3 = null, 
-			string m3_USD4 = null, 
-			string m3_USD5 = null, 
-			decimal? m3_TXID = null, 
-			int? m3_FATM = null, 
-			int? m3_ITFL = null, 
-			string m3_ITAB = null, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3FACI, 
+			string m3IFIN, 
+			string m3PRMD = null, 
+			string m3CSNO = null, 
+			string m3ORCO = null, 
+			int? m3LEA4 = null, 
+			string m3REWH = null, 
+			int? m3VAMT = null, 
+			string m3USD1 = null, 
+			string m3USD2 = null, 
+			string m3USD3 = null, 
+			string m3USD4 = null, 
+			string m3USD5 = null, 
+			decimal? m3TXID = null, 
+			int? m3FATM = null, 
+			int? m3ITFL = null, 
+			string m3ITAB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -96,53 +98,53 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRMD))
-				request.WithQueryParameter("PRMD", m3_PRMD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CSNO))
-				request.WithQueryParameter("CSNO", m3_CSNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORCO))
-				request.WithQueryParameter("ORCO", m3_ORCO.Trim());
-			if (m3_LEA4.HasValue)
-				request.WithQueryParameter("LEA4", m3_LEA4.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_REWH))
-				request.WithQueryParameter("REWH", m3_REWH.Trim());
-			if (m3_VAMT.HasValue)
-				request.WithQueryParameter("VAMT", m3_VAMT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_USD1))
-				request.WithQueryParameter("USD1", m3_USD1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD2))
-				request.WithQueryParameter("USD2", m3_USD2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD3))
-				request.WithQueryParameter("USD3", m3_USD3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD4))
-				request.WithQueryParameter("USD4", m3_USD4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD5))
-				request.WithQueryParameter("USD5", m3_USD5.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
-			if (m3_FATM.HasValue)
-				request.WithQueryParameter("FATM", m3_FATM.Value.ToString());
-			if (m3_ITFL.HasValue)
-				request.WithQueryParameter("ITFL", m3_ITFL.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITAB))
-				request.WithQueryParameter("ITAB", m3_ITAB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRMD))
+				request.WithQueryParameter("PRMD", m3PRMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSNO))
+				request.WithQueryParameter("CSNO", m3CSNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCO))
+				request.WithQueryParameter("ORCO", m3ORCO.Trim());
+			if (m3LEA4.HasValue)
+				request.WithQueryParameter("LEA4", m3LEA4.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3REWH))
+				request.WithQueryParameter("REWH", m3REWH.Trim());
+			if (m3VAMT.HasValue)
+				request.WithQueryParameter("VAMT", m3VAMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3USD1))
+				request.WithQueryParameter("USD1", m3USD1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD2))
+				request.WithQueryParameter("USD2", m3USD2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD3))
+				request.WithQueryParameter("USD3", m3USD3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD4))
+				request.WithQueryParameter("USD4", m3USD4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD5))
+				request.WithQueryParameter("USD5", m3USD5.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FATM.HasValue)
+				request.WithQueryParameter("FATM", m3FATM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ITFL.HasValue)
+				request.WithQueryParameter("ITFL", m3ITFL.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITAB))
+				request.WithQueryParameter("ITAB", m3ITAB.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -152,7 +154,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -163,28 +166,28 @@ namespace M3H5Lib.Api
 		/// Description Change Interface Item facility
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
-		/// <param name="m3_PRMD">Process flag</param>
-		/// <param name="m3_CSNO">Customs statistical number</param>
-		/// <param name="m3_ORCO">Country of origin</param>
-		/// <param name="m3_LEA4">Administrative lead time</param>
-		/// <param name="m3_REWH">Main warehouse</param>
-		/// <param name="m3_VAMT">Inventory accounting method</param>
-		/// <param name="m3_USD1">User-defined field</param>
-		/// <param name="m3_USD2">User-defined field</param>
-		/// <param name="m3_USD3">User-defined field</param>
-		/// <param name="m3_USD4">User-defined field</param>
-		/// <param name="m3_USD5">User-defined field</param>
-		/// <param name="m3_TXID">Text identity</param>
-		/// <param name="m3_FATM">On-hand balance method - facility</param>
-		/// <param name="m3_STDT">Start date</param>
-		/// <param name="m3_STIM">Start time</param>
-		/// <param name="m3_ITFL">Item number flag</param>
-		/// <param name="m3_ACFL">Add/change flag</param>
-		/// <param name="m3_ITAB">Item selection table</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
+		/// <param name="m3PRMD">Process flag</param>
+		/// <param name="m3CSNO">Customs statistical number</param>
+		/// <param name="m3ORCO">Country of origin</param>
+		/// <param name="m3LEA4">Administrative lead time</param>
+		/// <param name="m3REWH">Main warehouse</param>
+		/// <param name="m3VAMT">Inventory accounting method</param>
+		/// <param name="m3USD1">User-defined field</param>
+		/// <param name="m3USD2">User-defined field</param>
+		/// <param name="m3USD3">User-defined field</param>
+		/// <param name="m3USD4">User-defined field</param>
+		/// <param name="m3USD5">User-defined field</param>
+		/// <param name="m3TXID">Text identity</param>
+		/// <param name="m3FATM">On-hand balance method - facility</param>
+		/// <param name="m3STDT">Start date</param>
+		/// <param name="m3STIM">Start time</param>
+		/// <param name="m3ITFL">Item number flag</param>
+		/// <param name="m3ACFL">Add/change flag</param>
+		/// <param name="m3ITAB">Item selection table</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -193,28 +196,28 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgIntItmFac(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_FACI, 
-			string m3_IFIN, 
-			string m3_PRMD = null, 
-			string m3_CSNO = null, 
-			string m3_ORCO = null, 
-			int? m3_LEA4 = null, 
-			string m3_REWH = null, 
-			int? m3_VAMT = null, 
-			string m3_USD1 = null, 
-			string m3_USD2 = null, 
-			string m3_USD3 = null, 
-			string m3_USD4 = null, 
-			string m3_USD5 = null, 
-			decimal? m3_TXID = null, 
-			int? m3_FATM = null, 
-			DateTime? m3_STDT = null, 
-			int? m3_STIM = null, 
-			int? m3_ITFL = null, 
-			int? m3_ACFL = null, 
-			string m3_ITAB = null, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3FACI, 
+			string m3IFIN, 
+			string m3PRMD = null, 
+			string m3CSNO = null, 
+			string m3ORCO = null, 
+			int? m3LEA4 = null, 
+			string m3REWH = null, 
+			int? m3VAMT = null, 
+			string m3USD1 = null, 
+			string m3USD2 = null, 
+			string m3USD3 = null, 
+			string m3USD4 = null, 
+			string m3USD5 = null, 
+			decimal? m3TXID = null, 
+			int? m3FATM = null, 
+			DateTime? m3STDT = null, 
+			int? m3STIM = null, 
+			int? m3ITFL = null, 
+			int? m3ACFL = null, 
+			string m3ITAB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -229,59 +232,59 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRMD))
-				request.WithQueryParameter("PRMD", m3_PRMD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CSNO))
-				request.WithQueryParameter("CSNO", m3_CSNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORCO))
-				request.WithQueryParameter("ORCO", m3_ORCO.Trim());
-			if (m3_LEA4.HasValue)
-				request.WithQueryParameter("LEA4", m3_LEA4.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_REWH))
-				request.WithQueryParameter("REWH", m3_REWH.Trim());
-			if (m3_VAMT.HasValue)
-				request.WithQueryParameter("VAMT", m3_VAMT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_USD1))
-				request.WithQueryParameter("USD1", m3_USD1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD2))
-				request.WithQueryParameter("USD2", m3_USD2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD3))
-				request.WithQueryParameter("USD3", m3_USD3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD4))
-				request.WithQueryParameter("USD4", m3_USD4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD5))
-				request.WithQueryParameter("USD5", m3_USD5.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
-			if (m3_FATM.HasValue)
-				request.WithQueryParameter("FATM", m3_FATM.Value.ToString());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (m3_STIM.HasValue)
-				request.WithQueryParameter("STIM", m3_STIM.Value.ToString());
-			if (m3_ITFL.HasValue)
-				request.WithQueryParameter("ITFL", m3_ITFL.Value.ToString());
-			if (m3_ACFL.HasValue)
-				request.WithQueryParameter("ACFL", m3_ACFL.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITAB))
-				request.WithQueryParameter("ITAB", m3_ITAB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRMD))
+				request.WithQueryParameter("PRMD", m3PRMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSNO))
+				request.WithQueryParameter("CSNO", m3CSNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCO))
+				request.WithQueryParameter("ORCO", m3ORCO.Trim());
+			if (m3LEA4.HasValue)
+				request.WithQueryParameter("LEA4", m3LEA4.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3REWH))
+				request.WithQueryParameter("REWH", m3REWH.Trim());
+			if (m3VAMT.HasValue)
+				request.WithQueryParameter("VAMT", m3VAMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3USD1))
+				request.WithQueryParameter("USD1", m3USD1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD2))
+				request.WithQueryParameter("USD2", m3USD2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD3))
+				request.WithQueryParameter("USD3", m3USD3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD4))
+				request.WithQueryParameter("USD4", m3USD4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD5))
+				request.WithQueryParameter("USD5", m3USD5.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FATM.HasValue)
+				request.WithQueryParameter("FATM", m3FATM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (m3STIM.HasValue)
+				request.WithQueryParameter("STIM", m3STIM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ITFL.HasValue)
+				request.WithQueryParameter("ITFL", m3ITFL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ACFL.HasValue)
+				request.WithQueryParameter("ACFL", m3ACFL.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITAB))
+				request.WithQueryParameter("ITAB", m3ITAB.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -291,7 +294,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -302,15 +306,15 @@ namespace M3H5Lib.Api
 		/// Description Copy Interface Item Facility
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
-		/// <param name="m3_TE0P">Partner (Required)</param>
-		/// <param name="m3_TE06">Message type (Required)</param>
-		/// <param name="m3_TFAC">Facility (Required)</param>
-		/// <param name="m3_TFIN">Interface item number (Required)</param>
-		/// <param name="m3_PRMD">Process flag</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
+		/// <param name="m3TE0P">Partner (Required)</param>
+		/// <param name="m3TE06">Message type (Required)</param>
+		/// <param name="m3TFAC">Facility (Required)</param>
+		/// <param name="m3TFIN">Interface item number (Required)</param>
+		/// <param name="m3PRMD">Process flag</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -319,15 +323,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> CpyIntItmFac(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_FACI, 
-			string m3_IFIN, 
-			string m3_TE0P, 
-			string m3_TE06, 
-			string m3_TFAC, 
-			string m3_TFIN, 
-			string m3_PRMD = null, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3FACI, 
+			string m3IFIN, 
+			string m3TE0P, 
+			string m3TE06, 
+			string m3TFAC, 
+			string m3TFIN, 
+			string m3PRMD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -342,37 +346,37 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
-			if (string.IsNullOrWhiteSpace(m3_TE0P))
-				throw new ArgumentNullException("m3_TE0P");
-			if (string.IsNullOrWhiteSpace(m3_TE06))
-				throw new ArgumentNullException("m3_TE06");
-			if (string.IsNullOrWhiteSpace(m3_TFAC))
-				throw new ArgumentNullException("m3_TFAC");
-			if (string.IsNullOrWhiteSpace(m3_TFIN))
-				throw new ArgumentNullException("m3_TFIN");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
+			if (string.IsNullOrWhiteSpace(m3TE0P))
+				throw new ArgumentNullException(nameof(m3TE0P));
+			if (string.IsNullOrWhiteSpace(m3TE06))
+				throw new ArgumentNullException(nameof(m3TE06));
+			if (string.IsNullOrWhiteSpace(m3TFAC))
+				throw new ArgumentNullException(nameof(m3TFAC));
+			if (string.IsNullOrWhiteSpace(m3TFIN))
+				throw new ArgumentNullException(nameof(m3TFIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim())
-				.WithQueryParameter("TE0P", m3_TE0P.Trim())
-				.WithQueryParameter("TE06", m3_TE06.Trim())
-				.WithQueryParameter("TFAC", m3_TFAC.Trim())
-				.WithQueryParameter("TFIN", m3_TFIN.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim())
+				.WithQueryParameter("TE0P", m3TE0P.Trim())
+				.WithQueryParameter("TE06", m3TE06.Trim())
+				.WithQueryParameter("TFAC", m3TFAC.Trim())
+				.WithQueryParameter("TFIN", m3TFIN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRMD))
-				request.WithQueryParameter("PRMD", m3_PRMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRMD))
+				request.WithQueryParameter("PRMD", m3PRMD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -382,7 +386,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -393,10 +398,10 @@ namespace M3H5Lib.Api
 		/// Description Delete Interface Item Facility
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -405,10 +410,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelIntItmFac(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_FACI, 
-			string m3_IFIN, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3FACI, 
+			string m3IFIN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -423,21 +428,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -447,7 +452,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -458,10 +464,10 @@ namespace M3H5Lib.Api
 		/// Description Get Interface Item Facility
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -470,10 +476,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetIntItmFacResponse></returns>
 		/// <exception cref="M3Exception<GetIntItmFacResponse>"></exception>
 		public async Task<M3Response<GetIntItmFacResponse>> GetIntItmFac(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_FACI, 
-			string m3_IFIN, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3FACI, 
+			string m3IFIN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -488,21 +494,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetIntItmFacResponse>(
@@ -512,7 +518,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -523,10 +530,10 @@ namespace M3H5Lib.Api
 		/// Description List Interface Item Facility
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_E0PA">Partner</param>
-		/// <param name="m3_E065">Message type</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_IFIN">Interface item number</param>
+		/// <param name="m3E0PA">Partner</param>
+		/// <param name="m3E065">Message type</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3IFIN">Interface item number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -535,10 +542,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstIntItmFacResponse></returns>
 		/// <exception cref="M3Exception<LstIntItmFacResponse>"></exception>
 		public async Task<M3Response<LstIntItmFacResponse>> LstIntItmFac(
-			string m3_E0PA = null, 
-			string m3_E065 = null, 
-			string m3_FACI = null, 
-			string m3_IFIN = null, 
+			string m3E0PA = null, 
+			string m3E065 = null, 
+			string m3FACI = null, 
+			string m3IFIN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -553,14 +560,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_E0PA))
-				request.WithQueryParameter("E0PA", m3_E0PA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_E065))
-				request.WithQueryParameter("E065", m3_E065.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_IFIN))
-				request.WithQueryParameter("IFIN", m3_IFIN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3E0PA))
+				request.WithQueryParameter("E0PA", m3E0PA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3E065))
+				request.WithQueryParameter("E065", m3E065.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3IFIN))
+				request.WithQueryParameter("IFIN", m3IFIN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstIntItmFacResponse>(
@@ -570,7 +577,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -581,24 +589,24 @@ namespace M3H5Lib.Api
 		/// Description Send Add Interface Item Facility
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
-		/// <param name="m3_PRMD">Process flag</param>
-		/// <param name="m3_CSNO">Customs statistical number</param>
-		/// <param name="m3_ORCO">Country of origin</param>
-		/// <param name="m3_LEA4">Administrative lead time</param>
-		/// <param name="m3_REWH">Main warehouse</param>
-		/// <param name="m3_VAMT">Inventory accounting method</param>
-		/// <param name="m3_USD1">User-defined field</param>
-		/// <param name="m3_USD2">User-defined field</param>
-		/// <param name="m3_USD3">User-defined field</param>
-		/// <param name="m3_USD4">User-defined field</param>
-		/// <param name="m3_USD5">User-defined field</param>
-		/// <param name="m3_TXID">Text identity</param>
-		/// <param name="m3_FATM">On-hand balance method - facility</param>
-		/// <param name="m3_ITFL">Item number flag</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
+		/// <param name="m3PRMD">Process flag</param>
+		/// <param name="m3CSNO">Customs statistical number</param>
+		/// <param name="m3ORCO">Country of origin</param>
+		/// <param name="m3LEA4">Administrative lead time</param>
+		/// <param name="m3REWH">Main warehouse</param>
+		/// <param name="m3VAMT">Inventory accounting method</param>
+		/// <param name="m3USD1">User-defined field</param>
+		/// <param name="m3USD2">User-defined field</param>
+		/// <param name="m3USD3">User-defined field</param>
+		/// <param name="m3USD4">User-defined field</param>
+		/// <param name="m3USD5">User-defined field</param>
+		/// <param name="m3TXID">Text identity</param>
+		/// <param name="m3FATM">On-hand balance method - facility</param>
+		/// <param name="m3ITFL">Item number flag</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -607,24 +615,24 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndAddIntItmFac(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_FACI, 
-			string m3_IFIN, 
-			string m3_PRMD = null, 
-			string m3_CSNO = null, 
-			string m3_ORCO = null, 
-			int? m3_LEA4 = null, 
-			string m3_REWH = null, 
-			int? m3_VAMT = null, 
-			string m3_USD1 = null, 
-			string m3_USD2 = null, 
-			string m3_USD3 = null, 
-			string m3_USD4 = null, 
-			string m3_USD5 = null, 
-			decimal? m3_TXID = null, 
-			int? m3_FATM = null, 
-			int? m3_ITFL = null, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3FACI, 
+			string m3IFIN, 
+			string m3PRMD = null, 
+			string m3CSNO = null, 
+			string m3ORCO = null, 
+			int? m3LEA4 = null, 
+			string m3REWH = null, 
+			int? m3VAMT = null, 
+			string m3USD1 = null, 
+			string m3USD2 = null, 
+			string m3USD3 = null, 
+			string m3USD4 = null, 
+			string m3USD5 = null, 
+			decimal? m3TXID = null, 
+			int? m3FATM = null, 
+			int? m3ITFL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -639,51 +647,51 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRMD))
-				request.WithQueryParameter("PRMD", m3_PRMD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CSNO))
-				request.WithQueryParameter("CSNO", m3_CSNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORCO))
-				request.WithQueryParameter("ORCO", m3_ORCO.Trim());
-			if (m3_LEA4.HasValue)
-				request.WithQueryParameter("LEA4", m3_LEA4.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_REWH))
-				request.WithQueryParameter("REWH", m3_REWH.Trim());
-			if (m3_VAMT.HasValue)
-				request.WithQueryParameter("VAMT", m3_VAMT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_USD1))
-				request.WithQueryParameter("USD1", m3_USD1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD2))
-				request.WithQueryParameter("USD2", m3_USD2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD3))
-				request.WithQueryParameter("USD3", m3_USD3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD4))
-				request.WithQueryParameter("USD4", m3_USD4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD5))
-				request.WithQueryParameter("USD5", m3_USD5.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
-			if (m3_FATM.HasValue)
-				request.WithQueryParameter("FATM", m3_FATM.Value.ToString());
-			if (m3_ITFL.HasValue)
-				request.WithQueryParameter("ITFL", m3_ITFL.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRMD))
+				request.WithQueryParameter("PRMD", m3PRMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSNO))
+				request.WithQueryParameter("CSNO", m3CSNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCO))
+				request.WithQueryParameter("ORCO", m3ORCO.Trim());
+			if (m3LEA4.HasValue)
+				request.WithQueryParameter("LEA4", m3LEA4.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3REWH))
+				request.WithQueryParameter("REWH", m3REWH.Trim());
+			if (m3VAMT.HasValue)
+				request.WithQueryParameter("VAMT", m3VAMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3USD1))
+				request.WithQueryParameter("USD1", m3USD1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD2))
+				request.WithQueryParameter("USD2", m3USD2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD3))
+				request.WithQueryParameter("USD3", m3USD3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD4))
+				request.WithQueryParameter("USD4", m3USD4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD5))
+				request.WithQueryParameter("USD5", m3USD5.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FATM.HasValue)
+				request.WithQueryParameter("FATM", m3FATM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ITFL.HasValue)
+				request.WithQueryParameter("ITFL", m3ITFL.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -693,7 +701,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -704,28 +713,28 @@ namespace M3H5Lib.Api
 		/// Description Send Change Interface Item facility
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_E065">Message type (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_IFIN">Interface item number (Required)</param>
-		/// <param name="m3_PRMD">Process flag</param>
-		/// <param name="m3_CSNO">Customs statistical number</param>
-		/// <param name="m3_ORCO">Country of origin</param>
-		/// <param name="m3_LEA4">Administrative lead time</param>
-		/// <param name="m3_REWH">Main warehouse</param>
-		/// <param name="m3_VAMT">Inventory accounting method</param>
-		/// <param name="m3_USD1">User-defined field</param>
-		/// <param name="m3_USD2">User-defined field</param>
-		/// <param name="m3_USD3">User-defined field</param>
-		/// <param name="m3_USD4">User-defined field</param>
-		/// <param name="m3_USD5">User-defined field</param>
-		/// <param name="m3_TXID">Text identity</param>
-		/// <param name="m3_FATM">On-hand balance method - facility</param>
-		/// <param name="m3_STDT">Start date</param>
-		/// <param name="m3_STIM">Start time</param>
-		/// <param name="m3_ITFL">Item number flag</param>
-		/// <param name="m3_ACFL">Add/change flag</param>
-		/// <param name="m3_ITAB">Item selection table</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3E065">Message type (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3IFIN">Interface item number (Required)</param>
+		/// <param name="m3PRMD">Process flag</param>
+		/// <param name="m3CSNO">Customs statistical number</param>
+		/// <param name="m3ORCO">Country of origin</param>
+		/// <param name="m3LEA4">Administrative lead time</param>
+		/// <param name="m3REWH">Main warehouse</param>
+		/// <param name="m3VAMT">Inventory accounting method</param>
+		/// <param name="m3USD1">User-defined field</param>
+		/// <param name="m3USD2">User-defined field</param>
+		/// <param name="m3USD3">User-defined field</param>
+		/// <param name="m3USD4">User-defined field</param>
+		/// <param name="m3USD5">User-defined field</param>
+		/// <param name="m3TXID">Text identity</param>
+		/// <param name="m3FATM">On-hand balance method - facility</param>
+		/// <param name="m3STDT">Start date</param>
+		/// <param name="m3STIM">Start time</param>
+		/// <param name="m3ITFL">Item number flag</param>
+		/// <param name="m3ACFL">Add/change flag</param>
+		/// <param name="m3ITAB">Item selection table</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -734,28 +743,28 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndChgIntItmFac(
-			string m3_E0PA, 
-			string m3_E065, 
-			string m3_FACI, 
-			string m3_IFIN, 
-			string m3_PRMD = null, 
-			string m3_CSNO = null, 
-			string m3_ORCO = null, 
-			int? m3_LEA4 = null, 
-			string m3_REWH = null, 
-			int? m3_VAMT = null, 
-			string m3_USD1 = null, 
-			string m3_USD2 = null, 
-			string m3_USD3 = null, 
-			string m3_USD4 = null, 
-			string m3_USD5 = null, 
-			decimal? m3_TXID = null, 
-			int? m3_FATM = null, 
-			DateTime? m3_STDT = null, 
-			int? m3_STIM = null, 
-			int? m3_ITFL = null, 
-			int? m3_ACFL = null, 
-			string m3_ITAB = null, 
+			string m3E0PA, 
+			string m3E065, 
+			string m3FACI, 
+			string m3IFIN, 
+			string m3PRMD = null, 
+			string m3CSNO = null, 
+			string m3ORCO = null, 
+			int? m3LEA4 = null, 
+			string m3REWH = null, 
+			int? m3VAMT = null, 
+			string m3USD1 = null, 
+			string m3USD2 = null, 
+			string m3USD3 = null, 
+			string m3USD4 = null, 
+			string m3USD5 = null, 
+			decimal? m3TXID = null, 
+			int? m3FATM = null, 
+			DateTime? m3STDT = null, 
+			int? m3STIM = null, 
+			int? m3ITFL = null, 
+			int? m3ACFL = null, 
+			string m3ITAB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -770,59 +779,59 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
-			if (string.IsNullOrWhiteSpace(m3_E065))
-				throw new ArgumentNullException("m3_E065");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_IFIN))
-				throw new ArgumentNullException("m3_IFIN");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
+			if (string.IsNullOrWhiteSpace(m3E065))
+				throw new ArgumentNullException(nameof(m3E065));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3IFIN))
+				throw new ArgumentNullException(nameof(m3IFIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim())
-				.WithQueryParameter("E065", m3_E065.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("IFIN", m3_IFIN.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim())
+				.WithQueryParameter("E065", m3E065.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("IFIN", m3IFIN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRMD))
-				request.WithQueryParameter("PRMD", m3_PRMD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CSNO))
-				request.WithQueryParameter("CSNO", m3_CSNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORCO))
-				request.WithQueryParameter("ORCO", m3_ORCO.Trim());
-			if (m3_LEA4.HasValue)
-				request.WithQueryParameter("LEA4", m3_LEA4.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_REWH))
-				request.WithQueryParameter("REWH", m3_REWH.Trim());
-			if (m3_VAMT.HasValue)
-				request.WithQueryParameter("VAMT", m3_VAMT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_USD1))
-				request.WithQueryParameter("USD1", m3_USD1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD2))
-				request.WithQueryParameter("USD2", m3_USD2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD3))
-				request.WithQueryParameter("USD3", m3_USD3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD4))
-				request.WithQueryParameter("USD4", m3_USD4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USD5))
-				request.WithQueryParameter("USD5", m3_USD5.Trim());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
-			if (m3_FATM.HasValue)
-				request.WithQueryParameter("FATM", m3_FATM.Value.ToString());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (m3_STIM.HasValue)
-				request.WithQueryParameter("STIM", m3_STIM.Value.ToString());
-			if (m3_ITFL.HasValue)
-				request.WithQueryParameter("ITFL", m3_ITFL.Value.ToString());
-			if (m3_ACFL.HasValue)
-				request.WithQueryParameter("ACFL", m3_ACFL.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITAB))
-				request.WithQueryParameter("ITAB", m3_ITAB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRMD))
+				request.WithQueryParameter("PRMD", m3PRMD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSNO))
+				request.WithQueryParameter("CSNO", m3CSNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCO))
+				request.WithQueryParameter("ORCO", m3ORCO.Trim());
+			if (m3LEA4.HasValue)
+				request.WithQueryParameter("LEA4", m3LEA4.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3REWH))
+				request.WithQueryParameter("REWH", m3REWH.Trim());
+			if (m3VAMT.HasValue)
+				request.WithQueryParameter("VAMT", m3VAMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3USD1))
+				request.WithQueryParameter("USD1", m3USD1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD2))
+				request.WithQueryParameter("USD2", m3USD2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD3))
+				request.WithQueryParameter("USD3", m3USD3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD4))
+				request.WithQueryParameter("USD4", m3USD4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USD5))
+				request.WithQueryParameter("USD5", m3USD5.Trim());
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FATM.HasValue)
+				request.WithQueryParameter("FATM", m3FATM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (m3STIM.HasValue)
+				request.WithQueryParameter("STIM", m3STIM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ITFL.HasValue)
+				request.WithQueryParameter("ITFL", m3ITFL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ACFL.HasValue)
+				request.WithQueryParameter("ACFL", m3ACFL.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITAB))
+				request.WithQueryParameter("ITAB", m3ITAB.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -832,7 +841,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

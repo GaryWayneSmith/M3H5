@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS476MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add a Sublot policy
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SUMP">Sublot policy (Required)</param>
-		/// <param name="m3_ABNS">Auto populate reference sublot ID</param>
-		/// <param name="m3_PBNS">Protect reference sublot ID</param>
+		/// <param name="m3SUMP">Sublot policy (Required)</param>
+		/// <param name="m3ABNS">Auto populate reference sublot ID</param>
+		/// <param name="m3PBNS">Protect reference sublot ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_SUMP, 
-			int? m3_ABNS = null, 
-			int? m3_PBNS = null, 
+			string m3SUMP, 
+			int? m3ABNS = null, 
+			int? m3PBNS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUMP))
-				throw new ArgumentNullException("m3_SUMP");
+			if (string.IsNullOrWhiteSpace(m3SUMP))
+				throw new ArgumentNullException(nameof(m3SUMP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUMP", m3_SUMP.Trim());
+				.WithQueryParameter("SUMP", m3SUMP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_ABNS.HasValue)
-				request.WithQueryParameter("ABNS", m3_ABNS.Value.ToString());
-			if (m3_PBNS.HasValue)
-				request.WithQueryParameter("PBNS", m3_PBNS.Value.ToString());
+			if (m3ABNS.HasValue)
+				request.WithQueryParameter("ABNS", m3ABNS.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PBNS.HasValue)
+				request.WithQueryParameter("PBNS", m3PBNS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,7 +99,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a Sublot policy
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SUMP">Sublot policy (Required)</param>
+		/// <param name="m3SUMP">Sublot policy (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -105,7 +108,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Dlt(
-			string m3_SUMP, 
+			string m3SUMP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,12 +123,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUMP))
-				throw new ArgumentNullException("m3_SUMP");
+			if (string.IsNullOrWhiteSpace(m3SUMP))
+				throw new ArgumentNullException(nameof(m3SUMP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUMP", m3_SUMP.Trim());
+				.WithQueryParameter("SUMP", m3SUMP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -135,7 +138,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -146,7 +150,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a Sublot policy
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SUMP">Sublot policy (Required)</param>
+		/// <param name="m3SUMP">Sublot policy (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -155,7 +159,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_SUMP, 
+			string m3SUMP, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -170,12 +174,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUMP))
-				throw new ArgumentNullException("m3_SUMP");
+			if (string.IsNullOrWhiteSpace(m3SUMP))
+				throw new ArgumentNullException(nameof(m3SUMP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUMP", m3_SUMP.Trim());
+				.WithQueryParameter("SUMP", m3SUMP.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -185,7 +189,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -196,7 +201,7 @@ namespace M3H5Lib.Api
 		/// Description List data for Sublot policy
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SUMP">Sublot policy</param>
+		/// <param name="m3SUMP">Sublot policy</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -205,7 +210,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_SUMP = null, 
+			string m3SUMP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -220,8 +225,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SUMP))
-				request.WithQueryParameter("SUMP", m3_SUMP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUMP))
+				request.WithQueryParameter("SUMP", m3SUMP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -231,7 +236,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -242,9 +248,9 @@ namespace M3H5Lib.Api
 		/// Description Update data for a Sublot policy
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SUMP">Sublot policy (Required)</param>
-		/// <param name="m3_ABNS">Auto populate reference sublot ID</param>
-		/// <param name="m3_PBNS">Protect reference sublot ID</param>
+		/// <param name="m3SUMP">Sublot policy (Required)</param>
+		/// <param name="m3ABNS">Auto populate reference sublot ID</param>
+		/// <param name="m3PBNS">Protect reference sublot ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -253,9 +259,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_SUMP, 
-			int? m3_ABNS = null, 
-			int? m3_PBNS = null, 
+			string m3SUMP, 
+			int? m3ABNS = null, 
+			int? m3PBNS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -270,18 +276,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUMP))
-				throw new ArgumentNullException("m3_SUMP");
+			if (string.IsNullOrWhiteSpace(m3SUMP))
+				throw new ArgumentNullException(nameof(m3SUMP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUMP", m3_SUMP.Trim());
+				.WithQueryParameter("SUMP", m3SUMP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_ABNS.HasValue)
-				request.WithQueryParameter("ABNS", m3_ABNS.Value.ToString());
-			if (m3_PBNS.HasValue)
-				request.WithQueryParameter("PBNS", m3_PBNS.Value.ToString());
+			if (m3ABNS.HasValue)
+				request.WithQueryParameter("ABNS", m3ABNS.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PBNS.HasValue)
+				request.WithQueryParameter("PBNS", m3PBNS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -291,7 +297,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

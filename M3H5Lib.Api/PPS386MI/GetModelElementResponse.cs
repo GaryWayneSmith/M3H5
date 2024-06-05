@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model")]
-		public string M3_WSCA => GetString("WSCA");
+		public string M3WSCA => GetString("WSCA");
 
 		/// <summary>
 		/// Description: From date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: Attribute sequence number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute sequence number")]
-		public int? M3_ANSQ => GetNullableInt("ANSQ");
+		public int? M3ANSQ => GetNullableInt("ANSQ");
 
 		/// <summary>
 		/// Description: Element type - sales price costing
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element type - sales price costing")]
-		public int? M3_SCET => GetNullableInt("SCET");
+		public int? M3SCET => GetNullableInt("SCET");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Print on settlement
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print on settlement")]
-		public int? M3_POSE => GetNullableInt("POSE");
+		public int? M3POSE => GetNullableInt("POSE");
 
 		/// <summary>
 		/// Description: Entry date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS386MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

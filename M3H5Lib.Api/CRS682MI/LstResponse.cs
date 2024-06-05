@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Insurance type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance type")]
-		public int? M3_ITRQ => GetNullableInt("ITRQ");
+		public int? M3ITRQ => GetNullableInt("ITRQ");
 
 		/// <summary>
 		/// Description: Insurance ID
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance ID")]
-		public string M3_CIID => GetString("CIID");
+		public string M3CIID => GetString("CIID");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Insurance required
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance required")]
-		public int? M3_INRQ => GetNullableInt("INRQ");
+		public int? M3INRQ => GetNullableInt("INRQ");
 
 		/// <summary>
 		/// Description: Insured from date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insured from date")]
-		public DateTime? M3_INFD => GetNullableDateTime("INFD");
+		public DateTime? M3INFD => GetNullableDateTime("INFD");
 
 		/// <summary>
 		/// Description: Insured to date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insured to date")]
-		public DateTime? M3_INTD => GetNullableDateTime("INTD");
+		public DateTime? M3INTD => GetNullableDateTime("INTD");
 
 		/// <summary>
 		/// Description: Insured for amount
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insured for amount")]
-		public decimal? M3_INFA => GetNullableDecimal("INFA");
+		public decimal? M3INFA => GetNullableDecimal("INFA");
 
 		/// <summary>
 		/// Description: Insurance policy no
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance policy no")]
-		public string M3_IPOL => GetString("IPOL");
+		public string M3IPOL => GetString("IPOL");
 
 		/// <summary>
 		/// Description: Insurance vendor
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance vendor")]
-		public string M3_IVEN => GetString("IVEN");
+		public string M3IVEN => GetString("IVEN");
 
 		/// <summary>
 		/// Description: Note
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Note")]
-		public string M3_NOT1 => GetString("NOT1");
+		public string M3NOT1 => GetString("NOT1");
 
 		/// <summary>
 		/// Description: Note
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS682MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Note")]
-		public string M3_NOT2 => GetString("NOT2");
+		public string M3NOT2 => GetString("NOT2");
 	}
 }
 // EOF

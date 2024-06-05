@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Interface status
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interface status")]
-		public string M3_STAI => GetString("STAI");
+		public string M3STAI => GetString("STAI");
 
 		/// <summary>
 		/// Description: Lowest status child table
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status child table")]
-		public string M3_STOT => GetString("STOT");
+		public string M3STOT => GetString("STOT");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Fleet number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fleet number")]
-		public string M3_FLNO => GetString("FLNO");
+		public string M3FLNO => GetString("FLNO");
 
 		/// <summary>
 		/// Description: Registration number/site
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number/site")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 
 		/// <summary>
 		/// Description: Search key for equipment
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search key for equipment")]
-		public string M3_SKEY => GetString("SKEY");
+		public string M3SKEY => GetString("SKEY");
 
 		/// <summary>
 		/// Description: Process
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Process")]
-		public string M3_PRSS => GetString("PRSS");
+		public string M3PRSS => GetString("PRSS");
 
 		/// <summary>
 		/// Description: Asset tag
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Asset tag")]
-		public string M3_RFIA => GetString("RFIA");
+		public string M3RFIA => GetString("RFIA");
 
 		/// <summary>
 		/// Description: Brand
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: Remark
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Text identity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.AEMAPIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MWS023MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description List Warehouse Equipment
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PISE">Warehouse equipment</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_SERN">Serial number</param>
+		/// <param name="m3PISE">Warehouse equipment</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3SERN">Serial number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstWhsEqResponse></returns>
 		/// <exception cref="M3Exception<LstWhsEqResponse>"></exception>
 		public async Task<M3Response<LstWhsEqResponse>> LstWhsEq(
-			string m3_PISE = null, 
-			string m3_ITNO = null, 
-			string m3_SERN = null, 
+			string m3PISE = null, 
+			string m3ITNO = null, 
+			string m3SERN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,12 +66,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PISE))
-				request.WithQueryParameter("PISE", m3_PISE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SERN))
-				request.WithQueryParameter("SERN", m3_SERN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PISE))
+				request.WithQueryParameter("PISE", m3PISE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SERN))
+				request.WithQueryParameter("SERN", m3SERN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstWhsEqResponse>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

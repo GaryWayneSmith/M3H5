@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Agreement proposal number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement proposal number")]
-		public long? M3_DDAN => GetNullableLong("DDAN");
+		public long? M3DDAN => GetNullableLong("DDAN");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKI2 => GetString("BKI2");
+		public string M3BKI2 => GetString("BKI2");
 
 		/// <summary>
 		/// Description: Agreement indicator
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement indicator")]
-		public string M3_AGIN => GetString("AGIN");
+		public string M3AGIN => GetString("AGIN");
 
 		/// <summary>
 		/// Description: Customer number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Bank EDI agreement number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank EDI agreement number")]
-		public string M3_BKAG => GetString("BKAG");
+		public string M3BKAG => GetString("BKAG");
 
 		/// <summary>
 		/// Description: Customer stop
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer stop")]
-		public int? M3_BLCD => GetNullableInt("BLCD");
+		public int? M3BLCD => GetNullableInt("BLCD");
 
 		/// <summary>
 		/// Description: Status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Valid from
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VFDT => GetNullableDateTime("VFDT");
+		public DateTime? M3VFDT => GetNullableDateTime("VFDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_VTDT => GetNullableDateTime("VTDT");
+		public DateTime? M3VTDT => GetNullableDateTime("VTDT");
 
 		/// <summary>
 		/// Description: Maximum invoice amount
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum invoice amount")]
-		public decimal? M3_MAXA => GetNullableDecimal("MAXA");
+		public decimal? M3MAXA => GetNullableDecimal("MAXA");
 
 		/// <summary>
 		/// Description: Maximum total amount
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum total amount")]
-		public decimal? M3_MTAM => GetNullableDecimal("MTAM");
+		public decimal? M3MTAM => GetNullableDecimal("MTAM");
 
 		/// <summary>
 		/// Description: Currency
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Agreement 1
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement 1")]
-		public string M3_AGR1 => GetString("AGR1");
+		public string M3AGR1 => GetString("AGR1");
 
 		/// <summary>
 		/// Description: Agreement 1
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement 1")]
-		public string M3_AGR2 => GetString("AGR2");
+		public string M3AGR2 => GetString("AGR2");
 
 		/// <summary>
 		/// Description: Agreement 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement 1")]
-		public string M3_AGR3 => GetString("AGR3");
+		public string M3AGR3 => GetString("AGR3");
 
 		/// <summary>
 		/// Description: Agreement 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement 1")]
-		public string M3_AGR4 => GetString("AGR4");
+		public string M3AGR4 => GetString("AGR4");
 
 		/// <summary>
 		/// Description: Agreement 1
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement 1")]
-		public string M3_AGR5 => GetString("AGR5");
+		public string M3AGR5 => GetString("AGR5");
 
 		/// <summary>
 		/// Description: Agreement 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement 1")]
-		public string M3_AGR6 => GetString("AGR6");
+		public string M3AGR6 => GetString("AGR6");
 
 		/// <summary>
 		/// Description: Agreement 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement 1")]
-		public string M3_AGR7 => GetString("AGR7");
+		public string M3AGR7 => GetString("AGR7");
 
 		/// <summary>
 		/// Description: Length - agreement ID field 1
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - agreement ID field 1")]
-		public int? M3_DIL1 => GetNullableInt("DIL1");
+		public int? M3DIL1 => GetNullableInt("DIL1");
 
 		/// <summary>
 		/// Description: Length - agreement ID field 2
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - agreement ID field 2")]
-		public int? M3_DIL2 => GetNullableInt("DIL2");
+		public int? M3DIL2 => GetNullableInt("DIL2");
 
 		/// <summary>
 		/// Description: Length - agreement ID field 3
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - agreement ID field 3")]
-		public int? M3_DIL3 => GetNullableInt("DIL3");
+		public int? M3DIL3 => GetNullableInt("DIL3");
 
 		/// <summary>
 		/// Description: Length - agreement ID field 4
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - agreement ID field 4")]
-		public int? M3_DIL4 => GetNullableInt("DIL4");
+		public int? M3DIL4 => GetNullableInt("DIL4");
 
 		/// <summary>
 		/// Description: Length - agreement ID field 5
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - agreement ID field 5")]
-		public int? M3_DIL5 => GetNullableInt("DIL5");
+		public int? M3DIL5 => GetNullableInt("DIL5");
 
 		/// <summary>
 		/// Description: Length - agreement ID field 6
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - agreement ID field 6")]
-		public int? M3_DIL6 => GetNullableInt("DIL6");
+		public int? M3DIL6 => GetNullableInt("DIL6");
 
 		/// <summary>
 		/// Description: Length - agreement ID field 7
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Length - agreement ID field 7")]
-		public int? M3_DIL7 => GetNullableInt("DIL7");
+		public int? M3DIL7 => GetNullableInt("DIL7");
 
 		/// <summary>
 		/// Description: Company
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 	}
 }
 // EOF

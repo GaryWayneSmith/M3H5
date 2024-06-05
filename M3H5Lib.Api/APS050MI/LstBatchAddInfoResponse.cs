@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Payee
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payee")]
-		public string M3_SPYN => GetString("SPYN");
+		public string M3SPYN => GetString("SPYN");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: AP information category
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AP information category")]
-		public int? M3_PEXN => GetNullableInt("PEXN");
+		public int? M3PEXN => GetNullableInt("PEXN");
 
 		/// <summary>
 		/// Description: AP additional information
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AP additional information")]
-		public string M3_PEXI => GetString("PEXI");
+		public string M3PEXI => GetString("PEXI");
 
 		/// <summary>
 		/// Description: AP information sequence number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AP information sequence number")]
-		public int? M3_PEXS => GetNullableInt("PEXS");
+		public int? M3PEXS => GetNullableInt("PEXS");
 	}
 }
 // EOF

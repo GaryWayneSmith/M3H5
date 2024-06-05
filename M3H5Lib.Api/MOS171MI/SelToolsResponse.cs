@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Manufacturing order proposal number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order proposal number")]
-		public long? M3_RIDN => GetNullableLong("RIDN");
+		public long? M3RIDN => GetNullableLong("RIDN");
 
 		/// <summary>
 		/// Description: Material sequence number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material sequence number")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Component number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Component description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component description")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Operation number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Transaction quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Planning date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Acquisition code
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition code")]
-		public int? M3_PUIT => GetNullableInt("PUIT");
+		public int? M3PUIT => GetNullableInt("PUIT");
 
 		/// <summary>
 		/// Description: By-product code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("By-product code")]
-		public int? M3_BYPR => GetNullableInt("BYPR");
+		public int? M3BYPR => GetNullableInt("BYPR");
 
 		/// <summary>
 		/// Description: APP record type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("APP record type")]
-		public int? M3_RTYP => GetNullableInt("RTYP");
+		public int? M3RTYP => GetNullableInt("RTYP");
 
 		/// <summary>
 		/// Description: Supplying order number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplying order number")]
-		public int? M3_SPPL => GetNullableInt("SPPL");
+		public int? M3SPPL => GetNullableInt("SPPL");
 
 		/// <summary>
 		/// Description: Network status
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Network status")]
-		public string M3_NWST => GetString("NWST");
+		public string M3NWST => GetString("NWST");
 
 		/// <summary>
 		/// Description: Safety time (days)
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS171MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Safety time (days)")]
-		public int? M3_SATD => GetNullableInt("SATD");
+		public int? M3SATD => GetNullableInt("SATD");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Parts return number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parts return number")]
-		public string M3_PRAN => GetString("PRAN");
+		public string M3PRAN => GetString("PRAN");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Return type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return type")]
-		public string M3_RETT => GetString("RETT");
+		public string M3RETT => GetString("RETT");
 
 		/// <summary>
 		/// Description: Return status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return status")]
-		public string M3_RUST => GetString("RUST");
+		public string M3RUST => GetString("RUST");
 
 		/// <summary>
 		/// Description: Surplus quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Surplus quantity")]
-		public decimal? M3_SPQT => GetNullableDecimal("SPQT");
+		public decimal? M3SPQT => GetNullableDecimal("SPQT");
 
 		/// <summary>
 		/// Description: Authorized quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authorized quantity")]
-		public decimal? M3_AHQT => GetNullableDecimal("AHQT");
+		public decimal? M3AHQT => GetNullableDecimal("AHQT");
 
 		/// <summary>
 		/// Description: Authorized return type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authorized return type")]
-		public string M3_RETA => GetString("RETA");
+		public string M3RETA => GetString("RETA");
 
 		/// <summary>
 		/// Description: Quantity to pack - basic U/M
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity to pack - basic U/M")]
-		public decimal? M3_QTPB => GetNullableDecimal("QTPB");
+		public decimal? M3QTPB => GetNullableDecimal("QTPB");
 
 		/// <summary>
 		/// Description: Claim quantity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim quantity")]
-		public decimal? M3_CLQT => GetNullableDecimal("CLQT");
+		public decimal? M3CLQT => GetNullableDecimal("CLQT");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Issue multiple
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue multiple")]
-		public decimal? M3_TOMU => GetNullableDecimal("TOMU");
+		public decimal? M3TOMU => GetNullableDecimal("TOMU");
 
 		/// <summary>
 		/// Description: Text identity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RPS675MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

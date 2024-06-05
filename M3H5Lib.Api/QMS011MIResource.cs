@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QMS011MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add a laboratory code
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_LABO">Laboratory</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_ACTF">Active</param>
-		/// <param name="m3_SUNO">Supplier</param>
-		/// <param name="m3_EXLB">External Lab</param>
-		/// <param name="m3_RESP">Responsible</param>
+		/// <param name="m3LABO">Laboratory</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3ACTF">Active</param>
+		/// <param name="m3SUNO">Supplier</param>
+		/// <param name="m3EXLB">External Lab</param>
+		/// <param name="m3RESP">Responsible</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddLabCode(
-			string m3_LABO = null, 
-			string m3_TX40 = null, 
-			int? m3_ACTF = null, 
-			string m3_SUNO = null, 
-			int? m3_EXLB = null, 
-			string m3_RESP = null, 
+			string m3LABO = null, 
+			string m3TX40 = null, 
+			int? m3ACTF = null, 
+			string m3SUNO = null, 
+			int? m3EXLB = null, 
+			string m3RESP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,18 +72,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LABO))
-				request.WithQueryParameter("LABO", m3_LABO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (m3_EXLB.HasValue)
-				request.WithQueryParameter("EXLB", m3_EXLB.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RESP))
-				request.WithQueryParameter("RESP", m3_RESP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LABO))
+				request.WithQueryParameter("LABO", m3LABO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (m3EXLB.HasValue)
+				request.WithQueryParameter("EXLB", m3EXLB.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RESP))
+				request.WithQueryParameter("RESP", m3RESP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -102,7 +105,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a laboratory code
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_LABO">Laboratory</param>
+		/// <param name="m3LABO">Laboratory</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -111,7 +114,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltLabCode(
-			string m3_LABO = null, 
+			string m3LABO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -126,8 +129,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LABO))
-				request.WithQueryParameter("LABO", m3_LABO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LABO))
+				request.WithQueryParameter("LABO", m3LABO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -137,7 +140,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -148,7 +152,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a laboratory code
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_LABO">Laboratory</param>
+		/// <param name="m3LABO">Laboratory</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -157,7 +161,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetLabCodeResponse></returns>
 		/// <exception cref="M3Exception<GetLabCodeResponse>"></exception>
 		public async Task<M3Response<GetLabCodeResponse>> GetLabCode(
-			string m3_LABO = null, 
+			string m3LABO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -172,8 +176,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LABO))
-				request.WithQueryParameter("LABO", m3_LABO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LABO))
+				request.WithQueryParameter("LABO", m3LABO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetLabCodeResponse>(
@@ -183,7 +187,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -194,7 +199,7 @@ namespace M3H5Lib.Api
 		/// Description List data for a laboratory codes
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_LABO">Laboratory</param>
+		/// <param name="m3LABO">Laboratory</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -203,7 +208,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLabCodesResponse></returns>
 		/// <exception cref="M3Exception<LstLabCodesResponse>"></exception>
 		public async Task<M3Response<LstLabCodesResponse>> LstLabCodes(
-			string m3_LABO = null, 
+			string m3LABO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -218,8 +223,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LABO))
-				request.WithQueryParameter("LABO", m3_LABO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LABO))
+				request.WithQueryParameter("LABO", m3LABO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstLabCodesResponse>(
@@ -229,7 +234,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -240,12 +246,12 @@ namespace M3H5Lib.Api
 		/// Description Update data for laboratory codes
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_LABO">Laboratory</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_ACTF">Active</param>
-		/// <param name="m3_SUNO">Supplier</param>
-		/// <param name="m3_EXLB">External Lab</param>
-		/// <param name="m3_RESP">Responsible</param>
+		/// <param name="m3LABO">Laboratory</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3ACTF">Active</param>
+		/// <param name="m3SUNO">Supplier</param>
+		/// <param name="m3EXLB">External Lab</param>
+		/// <param name="m3RESP">Responsible</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -254,12 +260,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdLabCode(
-			string m3_LABO = null, 
-			string m3_TX40 = null, 
-			int? m3_ACTF = null, 
-			string m3_SUNO = null, 
-			int? m3_EXLB = null, 
-			string m3_RESP = null, 
+			string m3LABO = null, 
+			string m3TX40 = null, 
+			int? m3ACTF = null, 
+			string m3SUNO = null, 
+			int? m3EXLB = null, 
+			string m3RESP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -274,18 +280,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LABO))
-				request.WithQueryParameter("LABO", m3_LABO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (m3_EXLB.HasValue)
-				request.WithQueryParameter("EXLB", m3_EXLB.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RESP))
-				request.WithQueryParameter("RESP", m3_RESP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LABO))
+				request.WithQueryParameter("LABO", m3LABO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (m3EXLB.HasValue)
+				request.WithQueryParameter("EXLB", m3EXLB.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RESP))
+				request.WithQueryParameter("RESP", m3RESP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -295,7 +301,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

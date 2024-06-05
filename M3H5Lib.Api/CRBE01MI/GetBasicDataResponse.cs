@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Local FAM Parameter ID
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local FAM Parameter ID")]
-		public string M3_STCO => GetString("STCO");
+		public string M3STCO => GetString("STCO");
 
 		/// <summary>
 		/// Description: Payment Code
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment Code")]
-		public string M3_XCPM => GetString("XCPM");
+		public string M3XCPM => GetString("XCPM");
 
 		/// <summary>
 		/// Description: Code Kost
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code Kost")]
-		public string M3_XCST => GetString("XCST");
+		public string M3XCST => GetString("XCST");
 
 		/// <summary>
 		/// Description: Code BLIW
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code BLIW")]
-		public string M3_XBLW => GetString("XBLW");
+		public string M3XBLW => GetString("XBLW");
 
 		/// <summary>
 		/// Description: Period Type Quartal List
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period Type Quartal List")]
-		public int? M3_XPTQ => GetNullableInt("XPTQ");
+		public int? M3XPTQ => GetNullableInt("XPTQ");
 
 		/// <summary>
 		/// Description: Category
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Category")]
-		public string M3_XCTQ => GetString("XCTQ");
+		public string M3XCTQ => GetString("XCTQ");
 
 		/// <summary>
 		/// Description: Address Code 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address Code 1")]
-		public string M3_XCD1 => GetString("XCD1");
+		public string M3XCD1 => GetString("XCD1");
 
 		/// <summary>
 		/// Description: Address Code 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address Code 2")]
-		public string M3_XCD2 => GetString("XCD2");
+		public string M3XCD2 => GetString("XCD2");
 
 		/// <summary>
 		/// Description: Address Code 3
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address Code 3")]
-		public string M3_XCD3 => GetString("XCD3");
+		public string M3XCD3 => GetString("XCD3");
 
 		/// <summary>
 		/// Description: Local FAM
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local FAM")]
-		public string M3_XLFM => GetString("XLFM");
+		public string M3XLFM => GetString("XLFM");
 
 		/// <summary>
 		/// Description: Company Name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company Name")]
-		public string M3_XCNM => GetString("XCNM");
+		public string M3XCNM => GetString("XCNM");
 
 		/// <summary>
 		/// Description: Address Line 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address Line 1")]
-		public string M3_ZAD1 => GetString("ZAD1");
+		public string M3ZAD1 => GetString("ZAD1");
 
 		/// <summary>
 		/// Description: Postal Code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal Code")]
-		public int? M3_XPCD => GetNullableInt("XPCD");
+		public int? M3XPCD => GetNullableInt("XPCD");
 
 		/// <summary>
 		/// Description: Country Code ISO
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country Code ISO")]
-		public string M3_XPCP => GetString("XPCP");
+		public string M3XPCP => GetString("XPCP");
 
 		/// <summary>
 		/// Description: Address Line 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address Line 1")]
-		public string M3_XCIL => GetString("XCIL");
+		public string M3XCIL => GetString("XCIL");
 
 		/// <summary>
 		/// Description: Country
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_XCTY => GetString("XCTY");
+		public string M3XCTY => GetString("XCTY");
 
 		/// <summary>
 		/// Description: Document Type
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document Type")]
-		public string M3_XPDT => GetString("XPDT");
+		public string M3XPDT => GetString("XPDT");
 
 		/// <summary>
 		/// Description: Document Type
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document Type")]
-		public string M3_XNDT => GetString("XNDT");
+		public string M3XNDT => GetString("XNDT");
 
 		/// <summary>
 		/// Description: Labor Code - Trade Statistic
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor Code - Trade Statistic")]
-		public string M3_XPLC => GetString("XPLC");
+		public string M3XPLC => GetString("XPLC");
 
 		/// <summary>
 		/// Description: Labor Code - Trade Statistic
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor Code - Trade Statistic")]
-		public string M3_XNLC => GetString("XNLC");
+		public string M3XNLC => GetString("XNLC");
 
 		/// <summary>
 		/// Description: Accounting Dimension
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting Dimension")]
-		public int? M3_AITP => GetNullableInt("AITP");
+		public int? M3AITP => GetNullableInt("AITP");
 
 		/// <summary>
 		/// Description: File Extension
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File Extension")]
-		public string M3_XFLE => GetString("XFLE");
+		public string M3XFLE => GetString("XFLE");
 
 		/// <summary>
 		/// Description: Create Member for Disk File
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Create Member for Disk File")]
-		public string M3_XMBR => GetString("XMBR");
+		public string M3XMBR => GetString("XMBR");
 
 		/// <summary>
 		/// Description: Number of Invoice Payments
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of Invoice Payments")]
-		public int? M3_XNIV => GetNullableInt("XNIV");
+		public int? M3XNIV => GetNullableInt("XNIV");
 
 		/// <summary>
 		/// Description: VAT Number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT Number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Country Code
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRBE01MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country Code")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 	}
 }
 // EOF

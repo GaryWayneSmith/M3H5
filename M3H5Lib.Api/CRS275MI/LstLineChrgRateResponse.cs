@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Charge
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public string M3_CRID => GetString("CRID");
+		public string M3CRID => GetString("CRID");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Valid from
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VFDT => GetNullableDateTime("VFDT");
+		public DateTime? M3VFDT => GetNullableDateTime("VFDT");
 
 		/// <summary>
 		/// Description: Calculation factor
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation factor")]
-		public decimal? M3_CRFA => GetNullableDecimal("CRFA");
+		public decimal? M3CRFA => GetNullableDecimal("CRFA");
 
 		/// <summary>
 		/// Description: Charge
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public decimal? M3_CRAM => GetNullableDecimal("CRAM");
+		public decimal? M3CRAM => GetNullableDecimal("CRAM");
 
 		/// <summary>
 		/// Description: Charge quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge quantity")]
-		public int? M3_CHPD => GetNullableInt("CHPD");
+		public int? M3CHPD => GetNullableInt("CHPD");
 
 		/// <summary>
 		/// Description: Currency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS275MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 	}
 }
 // EOF

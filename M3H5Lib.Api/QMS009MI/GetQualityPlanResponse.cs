@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quality plan")]
-		public string M3_QLPN => GetString("QLPN");
+		public string M3QLPN => GetString("QLPN");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Active
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active")]
-		public int? M3_ACTF => GetNullableInt("ACTF");
+		public int? M3ACTF => GetNullableInt("ACTF");
 
 		/// <summary>
 		/// Description: Changing QI request
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changing QI request")]
-		public int? M3_QIMD => GetNullableInt("QIMD");
+		public int? M3QIMD => GetNullableInt("QIMD");
 
 		/// <summary>
 		/// Description: Adding test to QI req
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adding test to QI req")]
-		public int? M3_QIAT => GetNullableInt("QIAT");
+		public int? M3QIAT => GetNullableInt("QIAT");
 
 		/// <summary>
 		/// Description: Spec approval basis
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Spec approval basis")]
-		public int? M3_QPLN => GetNullableInt("QPLN");
+		public int? M3QPLN => GetNullableInt("QPLN");
 
 		/// <summary>
 		/// Description: QI req appr basis
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI req appr basis")]
-		public int? M3_QPLT => GetNullableInt("QPLT");
+		public int? M3QPLT => GetNullableInt("QPLT");
 
 		/// <summary>
 		/// Description: Approval passed/passed
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval passed/passed")]
-		public int? M3_QAPP => GetNullableInt("QAPP");
+		public int? M3QAPP => GetNullableInt("QAPP");
 
 		/// <summary>
 		/// Description: Approval passed/failed
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval passed/failed")]
-		public int? M3_QAPF => GetNullableInt("QAPF");
+		public int? M3QAPF => GetNullableInt("QAPF");
 
 		/// <summary>
 		/// Description: Approval passed/not tested
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval passed/not tested")]
-		public int? M3_QAPN => GetNullableInt("QAPN");
+		public int? M3QAPN => GetNullableInt("QAPN");
 
 		/// <summary>
 		/// Description: Approval passed/none
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval passed/none")]
-		public int? M3_QAPE => GetNullableInt("QAPE");
+		public int? M3QAPE => GetNullableInt("QAPE");
 
 		/// <summary>
 		/// Description: Approval failed/passed
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval failed/passed")]
-		public int? M3_QAFP => GetNullableInt("QAFP");
+		public int? M3QAFP => GetNullableInt("QAFP");
 
 		/// <summary>
 		/// Description: Approval failed/failed
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval failed/failed")]
-		public int? M3_QAFF => GetNullableInt("QAFF");
+		public int? M3QAFF => GetNullableInt("QAFF");
 
 		/// <summary>
 		/// Description: Approval failed/not tested
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval failed/not tested")]
-		public int? M3_QAFN => GetNullableInt("QAFN");
+		public int? M3QAFN => GetNullableInt("QAFN");
 
 		/// <summary>
 		/// Description: Approval failed/none
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval failed/none")]
-		public int? M3_QAFE => GetNullableInt("QAFE");
+		public int? M3QAFE => GetNullableInt("QAFE");
 
 		/// <summary>
 		/// Description: Approval not tested/passed
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval not tested/passed")]
-		public int? M3_QANP => GetNullableInt("QANP");
+		public int? M3QANP => GetNullableInt("QANP");
 
 		/// <summary>
 		/// Description: Approval not tested/failed
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval not tested/failed")]
-		public int? M3_QANF => GetNullableInt("QANF");
+		public int? M3QANF => GetNullableInt("QANF");
 
 		/// <summary>
 		/// Description: Approval not tested/not tested
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval not tested/not tested")]
-		public int? M3_QANN => GetNullableInt("QANN");
+		public int? M3QANN => GetNullableInt("QANN");
 
 		/// <summary>
 		/// Description: Approval not tested/none
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval not tested/none")]
-		public int? M3_QANE => GetNullableInt("QANE");
+		public int? M3QANE => GetNullableInt("QANE");
 
 		/// <summary>
 		/// Description: Approval none/passed
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval none/passed")]
-		public int? M3_QAEP => GetNullableInt("QAEP");
+		public int? M3QAEP => GetNullableInt("QAEP");
 
 		/// <summary>
 		/// Description: Approval none/failed
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval none/failed")]
-		public int? M3_QAEF => GetNullableInt("QAEF");
+		public int? M3QAEF => GetNullableInt("QAEF");
 
 		/// <summary>
 		/// Description: Approval none/not tested
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval none/not tested")]
-		public int? M3_QAEN => GetNullableInt("QAEN");
+		public int? M3QAEN => GetNullableInt("QAEN");
 
 		/// <summary>
 		/// Description: Lot auto-approval
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot auto-approval")]
-		public int? M3_QLTA => GetNullableInt("QLTA");
+		public int? M3QLTA => GetNullableInt("QLTA");
 
 		/// <summary>
 		/// Description: Spec auto-approval
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Spec auto-approval")]
-		public int? M3_QSPA => GetNullableInt("QSPA");
+		public int? M3QSPA => GetNullableInt("QSPA");
 
 		/// <summary>
 		/// Description: QI request auto-approval
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request auto-approval")]
-		public int? M3_QIRA => GetNullableInt("QIRA");
+		public int? M3QIRA => GetNullableInt("QIRA");
 
 		/// <summary>
 		/// Description: QI request level
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request level")]
-		public int? M3_QRLV => GetNullableInt("QRLV");
+		public int? M3QRLV => GetNullableInt("QRLV");
 
 		/// <summary>
 		/// Description: Max quantity per QI req
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max quantity per QI req")]
-		public decimal? M3_QMQT => GetNullableDecimal("QMQT");
+		public decimal? M3QMQT => GetNullableDecimal("QMQT");
 
 		/// <summary>
 		/// Description: Maximum quantity per QI req U/M
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum quantity per QI req U/M")]
-		public string M3_QMUM => GetString("QMUM");
+		public string M3QMUM => GetString("QMUM");
 
 		/// <summary>
 		/// Description: Manual QI req status
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual QI req status")]
-		public int? M3_QST1 => GetNullableInt("QST1");
+		public int? M3QST1 => GetNullableInt("QST1");
 
 		/// <summary>
 		/// Description: Default QI req as test at pre-ship
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default QI req as test at pre-ship")]
-		public int? M3_TPS2 => GetNullableInt("TPS2");
+		public int? M3TPS2 => GetNullableInt("TPS2");
 
 		/// <summary>
 		/// Description: Test freq basis for PO
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test freq basis for PO")]
-		public int? M3_QIFR => GetNullableInt("QIFR");
+		public int? M3QIFR => GetNullableInt("QIFR");
 
 		/// <summary>
 		/// Description: Replace PO QI request
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replace PO QI request")]
-		public int? M3_QIRP => GetNullableInt("QIRP");
+		public int? M3QIRP => GetNullableInt("QIRP");
 
 		/// <summary>
 		/// Description: Test freq basis for MO
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test freq basis for MO")]
-		public int? M3_QIF1 => GetNullableInt("QIF1");
+		public int? M3QIF1 => GetNullableInt("QIF1");
 
 		/// <summary>
 		/// Description: Replace MO QI request
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replace MO QI request")]
-		public int? M3_QIPF => GetNullableInt("QIPF");
+		public int? M3QIPF => GetNullableInt("QIPF");
 
 		/// <summary>
 		/// Description: Create QI request on CO returns
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Create QI request on CO returns")]
-		public int? M3_QCRF => GetNullableInt("QCRF");
+		public int? M3QCRF => GetNullableInt("QCRF");
 
 		/// <summary>
 		/// Description: Copy QI request for New Lot
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Copy QI request for New Lot")]
-		public int? M3_QCRO => GetNullableInt("QCRO");
+		public int? M3QCRO => GetNullableInt("QCRO");
 
 		/// <summary>
 		/// Description: Auto-reinspection of lots
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Auto-reinspection of lots")]
-		public int? M3_QARE => GetNullableInt("QARE");
+		public int? M3QARE => GetNullableInt("QARE");
 
 		/// <summary>
 		/// Description: QI reinspection level
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI reinspection level")]
-		public int? M3_QARL => GetNullableInt("QARL");
+		public int? M3QARL => GetNullableInt("QARL");
 
 		/// <summary>
 		/// Description: Reinspection generation basis
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reinspection generation basis")]
-		public int? M3_QARB => GetNullableInt("QARB");
+		public int? M3QARB => GetNullableInt("QARB");
 
 		/// <summary>
 		/// Description: Reinspection calculation date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.QMS009MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reinspection calculation date")]
-		public int? M3_QARD => GetNullableInt("QARD");
+		public int? M3QARD => GetNullableInt("QARD");
 	}
 }
 // EOF

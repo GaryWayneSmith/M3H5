@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Country
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Country description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Country name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Create Intrastat or Extrastat
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Create Intrastat or Extrastat")]
-		public int? M3_ECYN => GetNullableInt("ECYN");
+		public int? M3ECYN => GetNullableInt("ECYN");
 
 		/// <summary>
 		/// Description: Country code - trade statistics (TST)
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country code - trade statistics (TST)")]
-		public int? M3_CSEC => GetNullableInt("CSEC");
+		public int? M3CSEC => GetNullableInt("CSEC");
 
 		/// <summary>
 		/// Description: Country code ISO
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country code ISO")]
-		public string M3_IISO => GetString("IISO");
+		public string M3IISO => GetString("IISO");
 
 		/// <summary>
 		/// Description: Free trade association
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free trade association")]
-		public string M3_TRUN => GetString("TRUN");
+		public string M3TRUN => GetString("TRUN");
 
 		/// <summary>
 		/// Description: EU VAT registration number internal
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EU VAT registration number internal")]
-		public string M3_VRIN => GetString("VRIN");
+		public string M3VRIN => GetString("VRIN");
 
 		/// <summary>
 		/// Description: Price list
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Currency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Check digit method - organization
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check digit method - organization")]
-		public string M3_CMOR => GetString("CMOR");
+		public string M3CMOR => GetString("CMOR");
 
 		/// <summary>
 		/// Description: Check digit method - VAT reg number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check digit method - VAT reg number")]
-		public string M3_CMVR => GetString("CMVR");
+		public string M3CMVR => GetString("CMVR");
 
 		/// <summary>
 		/// Description: VAT calculation on cash discount
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT calculation on cash discount")]
-		public int? M3_VTDI => GetNullableInt("VTDI");
+		public int? M3VTDI => GetNullableInt("VTDI");
 
 		/// <summary>
 		/// Description: Text identity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: SEPA country
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS045MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SEPA country")]
-		public int? M3_SEPB => GetNullableInt("SEPB");
+		public int? M3SEPB => GetNullableInt("SEPB");
 	}
 }
 // EOF

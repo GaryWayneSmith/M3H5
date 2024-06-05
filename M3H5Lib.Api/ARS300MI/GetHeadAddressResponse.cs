@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Remittance number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remittance number")]
-		public int? M3_RMNB => GetNullableInt("RMNB");
+		public int? M3RMNB => GetNullableInt("RMNB");
 
 		/// <summary>
 		/// Description: Bank name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank name")]
-		public string M3_BKNM => GetString("BKNM");
+		public string M3BKNM => GetString("BKNM");
 
 		/// <summary>
 		/// Description: Bank address 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 1")]
-		public string M3_BKA1 => GetString("BKA1");
+		public string M3BKA1 => GetString("BKA1");
 
 		/// <summary>
 		/// Description: Bank address 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 2")]
-		public string M3_BKA2 => GetString("BKA2");
+		public string M3BKA2 => GetString("BKA2");
 
 		/// <summary>
 		/// Description: Bank address 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 3")]
-		public string M3_BKA3 => GetString("BKA3");
+		public string M3BKA3 => GetString("BKA3");
 
 		/// <summary>
 		/// Description: Bank address 4
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 4")]
-		public string M3_BKA4 => GetString("BKA4");
+		public string M3BKA4 => GetString("BKA4");
 
 		/// <summary>
 		/// Description: Company name
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Company address 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 1")]
-		public string M3_COA1 => GetString("COA1");
+		public string M3COA1 => GetString("COA1");
 
 		/// <summary>
 		/// Description: Company address 2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 2")]
-		public string M3_COA2 => GetString("COA2");
+		public string M3COA2 => GetString("COA2");
 
 		/// <summary>
 		/// Description: Company address 3
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 3")]
-		public string M3_COA3 => GetString("COA3");
+		public string M3COA3 => GetString("COA3");
 
 		/// <summary>
 		/// Description: Company address 4
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 4")]
-		public string M3_COA4 => GetString("COA4");
+		public string M3COA4 => GetString("COA4");
 
 		/// <summary>
 		/// Description: Country
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: State
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Postal code
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: City
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: VAT reg no with Country prefix
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT reg no with Country prefix")]
-		public string M3_VRN2 => GetString("VRN2");
+		public string M3VRN2 => GetString("VRN2");
 
 		/// <summary>
 		/// Description: Organization number 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 1")]
-		public string M3_CORG => GetString("CORG");
+		public string M3CORG => GetString("CORG");
 
 		/// <summary>
 		/// Description: Organization number 2
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 2")]
-		public string M3_COR2 => GetString("COR2");
+		public string M3COR2 => GetString("COR2");
 
 		/// <summary>
 		/// Description: Tax declaration number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax declaration number")]
-		public string M3_VRNL => GetString("VRNL");
+		public string M3VRNL => GetString("VRNL");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner ID")]
-		public string M3_PAID => GetString("PAID");
+		public string M3PAID => GetString("PAID");
 
 		/// <summary>
 		/// Description: Partner ID sublevel 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner ID sublevel 1")]
-		public string M3_PAI1 => GetString("PAI1");
+		public string M3PAI1 => GetString("PAI1");
 
 		/// <summary>
 		/// Description: Partner ID sublevel 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner ID sublevel 2")]
-		public string M3_PAI2 => GetString("PAI2");
+		public string M3PAI2 => GetString("PAI2");
 
 		/// <summary>
 		/// Description: Partner category
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner category")]
-		public int? M3_PCTG => GetNullableInt("PCTG");
+		public int? M3PCTG => GetNullableInt("PCTG");
 
 		/// <summary>
 		/// Description: Partner qualifier
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner qualifier")]
-		public string M3_PAQU => GetString("PAQU");
+		public string M3PAQU => GetString("PAQU");
 
 		/// <summary>
 		/// Description: Partner ID higher level
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner ID higher level")]
-		public string M3_PAIH => GetString("PAIH");
+		public string M3PAIH => GetString("PAIH");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS615MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier's customer reference")]
-		public string M3_CSRE => GetString("CSRE");
+		public string M3CSRE => GetString("CSRE");
 
 		/// <summary>
 		/// Description: Supplier reference type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS615MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier reference type")]
-		public int? M3_CSRT => GetNullableInt("CSRT");
+		public int? M3CSRT => GetNullableInt("CSRT");
 
 		/// <summary>
 		/// Description: Supplier
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS615MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Customer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS615MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 	}
 }
 // EOF

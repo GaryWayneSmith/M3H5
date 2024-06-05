@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Date YYYYMMDD
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date YYYYMMDD")]
-		public DateTime? M3_YMD8 => GetNullableDateTime("YMD8");
+		public DateTime? M3YMD8 => GetNullableDateTime("YMD8");
 
 		/// <summary>
 		/// Description: Date user defined 8
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date user defined 8")]
-		public DateTime? M3_UDF8 => GetNullableDateTime("UDF8");
+		public DateTime? M3UDF8 => GetNullableDateTime("UDF8");
 
 		/// <summary>
 		/// Description: Date YYMMDD
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date YYMMDD")]
-		public int? M3_YMD6 => GetNullableInt("YMD6");
+		public int? M3YMD6 => GetNullableInt("YMD6");
 
 		/// <summary>
 		/// Description: Date user-defined 6
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date user-defined 6")]
-		public int? M3_UDF6 => GetNullableInt("UDF6");
+		public int? M3UDF6 => GetNullableInt("UDF6");
 
 		/// <summary>
 		/// Description: Date DDMMYY
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date DDMMYY")]
-		public int? M3_DMY6 => GetNullableInt("DMY6");
+		public int? M3DMY6 => GetNullableInt("DMY6");
 
 		/// <summary>
 		/// Description: Date MMDDYY
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date MMDDYY")]
-		public int? M3_MDY6 => GetNullableInt("MDY6");
+		public int? M3MDY6 => GetNullableInt("MDY6");
 
 		/// <summary>
 		/// Description: DAte YYWWD
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("DAte YYWWD")]
-		public int? M3_YWD5 => GetNullableInt("YWD5");
+		public int? M3YWD5 => GetNullableInt("YWD5");
 
 		/// <summary>
 		/// Description: Day number YYYYNNN
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day number YYYYNNN")]
-		public int? M3_CDNO => GetNullableInt("CDNO");
+		public int? M3CDNO => GetNullableInt("CDNO");
 
 		/// <summary>
 		/// Description: Working day serial number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Working day serial number")]
-		public int? M3_WDNO => GetNullableInt("WDNO");
+		public int? M3WDNO => GetNullableInt("WDNO");
 
 		/// <summary>
 		/// Description: Goods receiving day
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods receiving day")]
-		public int? M3_GDAY => GetNullableInt("GDAY");
+		public int? M3GDAY => GetNullableInt("GDAY");
 
 		/// <summary>
 		/// Description: Goods receiving day serial number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Goods receiving day serial number")]
-		public int? M3_GDNO => GetNullableInt("GDNO");
+		public int? M3GDNO => GetNullableInt("GDNO");
 
 		/// <summary>
 		/// Description: Delivery day
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery day")]
-		public int? M3_DDAY => GetNullableInt("DDAY");
+		public int? M3DDAY => GetNullableInt("DDAY");
 
 		/// <summary>
 		/// Description: Delivery day serial number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery day serial number")]
-		public int? M3_DDNO => GetNullableInt("DDNO");
+		public int? M3DDNO => GetNullableInt("DDNO");
 
 		/// <summary>
 		/// Description: Bank day
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank day")]
-		public int? M3_BDAY => GetNullableInt("BDAY");
+		public int? M3BDAY => GetNullableInt("BDAY");
 
 		/// <summary>
 		/// Description: Bank day serial number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank day serial number")]
-		public int? M3_BDNO => GetNullableInt("BDNO");
+		public int? M3BDNO => GetNullableInt("BDNO");
 
 		/// <summary>
 		/// Description: Production day
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Production day")]
-		public int? M3_PODY => GetNullableInt("PODY");
+		public int? M3PODY => GetNullableInt("PODY");
 
 		/// <summary>
 		/// Description: Working day percentage
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Working day percentage")]
-		public int? M3_WDPC => GetNullableInt("WDPC");
+		public int? M3WDPC => GetNullableInt("WDPC");
 
 		/// <summary>
 		/// Description: Day number YYYYNNN
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day number YYYYNNN")]
-		public int? M3_YDNO => GetNullableInt("YDNO");
+		public int? M3YDNO => GetNullableInt("YDNO");
 
 		/// <summary>
 		/// Description: Period type 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type 1")]
-		public int? M3_CYP1 => GetNullableInt("CYP1");
+		public int? M3CYP1 => GetNullableInt("CYP1");
 
 		/// <summary>
 		/// Description: Period type 2
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type 2")]
-		public int? M3_CYP2 => GetNullableInt("CYP2");
+		public int? M3CYP2 => GetNullableInt("CYP2");
 
 		/// <summary>
 		/// Description: Period type 3
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type 3")]
-		public int? M3_CYP3 => GetNullableInt("CYP3");
+		public int? M3CYP3 => GetNullableInt("CYP3");
 
 		/// <summary>
 		/// Description: Period type 4
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type 4")]
-		public int? M3_CYP4 => GetNullableInt("CYP4");
+		public int? M3CYP4 => GetNullableInt("CYP4");
 
 		/// <summary>
 		/// Description: Period type 5
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS900MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type 5")]
-		public int? M3_CYP5 => GetNullableInt("CYP5");
+		public int? M3CYP5 => GetNullableInt("CYP5");
 	}
 }
 // EOF

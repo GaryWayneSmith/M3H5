@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PMS230MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Select
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_PLGR">Work Center (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FRDT">From Date</param>
-		/// <param name="m3_TODT">To Date</param>
-		/// <param name="m3_PLHZ">Planning horizon</param>
-		/// <param name="m3_CLHM">Include held MOs</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3PLGR">Work Center (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FRDT">From Date</param>
+		/// <param name="m3TODT">To Date</param>
+		/// <param name="m3PLHZ">Planning horizon</param>
+		/// <param name="m3CLHM">Include held MOs</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelectResponse></returns>
 		/// <exception cref="M3Exception<SelectResponse>"></exception>
 		public async Task<M3Response<SelectResponse>> Select(
-			string m3_FACI, 
-			string m3_PLGR, 
-			int? m3_CONO = null, 
-			DateTime? m3_FRDT = null, 
-			DateTime? m3_TODT = null, 
-			int? m3_PLHZ = null, 
-			int? m3_CLHM = null, 
+			string m3FACI, 
+			string m3PLGR, 
+			int? m3CONO = null, 
+			DateTime? m3FRDT = null, 
+			DateTime? m3TODT = null, 
+			int? m3PLHZ = null, 
+			int? m3CLHM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,27 +74,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_PLGR))
-				throw new ArgumentNullException("m3_PLGR");
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3PLGR))
+				throw new ArgumentNullException(nameof(m3PLGR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("PLGR", m3_PLGR.Trim());
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("PLGR", m3PLGR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_FRDT.HasValue)
-				request.WithQueryParameter("FRDT", m3_FRDT.Value.ToM3String());
-			if (m3_TODT.HasValue)
-				request.WithQueryParameter("TODT", m3_TODT.Value.ToM3String());
-			if (m3_PLHZ.HasValue)
-				request.WithQueryParameter("PLHZ", m3_PLHZ.Value.ToString());
-			if (m3_CLHM.HasValue)
-				request.WithQueryParameter("CLHM", m3_CLHM.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FRDT.HasValue)
+				request.WithQueryParameter("FRDT", m3FRDT.Value.ToM3String());
+			if (m3TODT.HasValue)
+				request.WithQueryParameter("TODT", m3TODT.Value.ToM3String());
+			if (m3PLHZ.HasValue)
+				request.WithQueryParameter("PLHZ", m3PLHZ.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CLHM.HasValue)
+				request.WithQueryParameter("CLHM", m3CLHM.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelectResponse>(
@@ -102,7 +104,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

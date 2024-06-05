@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Requisition by
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requisition by")]
-		public string M3_PURC => GetString("PURC");
+		public string M3PURC => GetString("PURC");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Buyer
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buyer")]
-		public string M3_BUYE => GetString("BUYE");
+		public string M3BUYE => GetString("BUYE");
 
 		/// <summary>
 		/// Description: Accounting control object
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Cost center
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost center")]
-		public string M3_COCE => GetString("COCE");
+		public string M3COCE => GetString("COCE");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Recipient
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recipient")]
-		public string M3_IRCV => GetString("IRCV");
+		public string M3IRCV => GetString("IRCV");
 
 		/// <summary>
 		/// Description: Supplier item number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier item number")]
-		public string M3_SITE => GetString("SITE");
+		public string M3SITE => GetString("SITE");
 
 		/// <summary>
 		/// Description: PO item name
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO item name")]
-		public string M3_PITD => GetString("PITD");
+		public string M3PITD => GetString("PITD");
 
 		/// <summary>
 		/// Description: PO item description
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PO item description")]
-		public string M3_PITT => GetString("PITT");
+		public string M3PITT => GetString("PITT");
 
 		/// <summary>
 		/// Description: Planned quantity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned quantity")]
-		public decimal? M3_PPQT => GetNullableDecimal("PPQT");
+		public decimal? M3PPQT => GetNullableDecimal("PPQT");
 
 		/// <summary>
 		/// Description: Purchase order U/M
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order U/M")]
-		public string M3_PUUN => GetString("PUUN");
+		public string M3PUUN => GetString("PUUN");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Currency
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Discount 1
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 1")]
-		public int? M3_ODI1 => GetNullableInt("ODI1");
+		public int? M3ODI1 => GetNullableInt("ODI1");
 
 		/// <summary>
 		/// Description: Discount 2
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 2")]
-		public int? M3_ODI2 => GetNullableInt("ODI2");
+		public int? M3ODI2 => GetNullableInt("ODI2");
 
 		/// <summary>
 		/// Description: Discount 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 3")]
-		public int? M3_ODI3 => GetNullableInt("ODI3");
+		public int? M3ODI3 => GetNullableInt("ODI3");
 
 		/// <summary>
 		/// Description: Order proposal number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order proposal number")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Sub number - order proposal
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sub number - order proposal")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Status - planned order
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - planned order")]
-		public string M3_PSTS => GetString("PSTS");
+		public string M3PSTS => GetString("PSTS");
 
 		/// <summary>
 		/// Description: Note
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Note")]
-		public string M3_PTXT => GetString("PTXT");
+		public string M3PTXT => GetString("PTXT");
 
 		/// <summary>
 		/// Description: Telephone order
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone order")]
-		public int? M3_TEOR => GetNullableInt("TEOR");
+		public int? M3TEOR => GetNullableInt("TEOR");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Entry date
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Local currency
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Purchase price in local currency
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price in local currency")]
-		public decimal? M3_CUPR => GetNullableDecimal("CUPR");
+		public decimal? M3CUPR => GetNullableDecimal("CUPR");
 	}
 }
 // EOF

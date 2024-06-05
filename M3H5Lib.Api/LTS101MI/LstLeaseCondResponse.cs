@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Line number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Subnumber
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber")]
-		public int? M3_SBNO => GetNullableInt("SBNO");
+		public int? M3SBNO => GetNullableInt("SBNO");
 
 		/// <summary>
 		/// Description: Agreement customer
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement customer")]
-		public string M3_AGCN => GetString("AGCN");
+		public string M3AGCN => GetString("AGCN");
 
 		/// <summary>
 		/// Description: Model description
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model description")]
-		public string M3_MODE => GetString("MODE");
+		public string M3MODE => GetString("MODE");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX25 => GetString("TX25");
+		public string M3TX25 => GetString("TX25");
 
 		/// <summary>
 		/// Description: Individual item type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item type")]
-		public int? M3_INTY => GetNullableInt("INTY");
+		public int? M3INTY => GetNullableInt("INTY");
 
 		/// <summary>
 		/// Description: Brand
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: Status
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Number of periods
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of periods")]
-		public int? M3_NOPR => GetNullableInt("NOPR");
+		public int? M3NOPR => GetNullableInt("NOPR");
 
 		/// <summary>
 		/// Description: Valid from
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Months/period
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Months/period")]
-		public int? M3_CMPP => GetNullableInt("CMPP");
+		public int? M3CMPP => GetNullableInt("CMPP");
 
 		/// <summary>
 		/// Description: Invoicing method
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing method")]
-		public string M3_INVM => GetString("INVM");
+		public string M3INVM => GetString("INVM");
 
 		/// <summary>
 		/// Description: Customer price
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer price")]
-		public decimal? M3_CSPR => GetNullableDecimal("CSPR");
+		public decimal? M3CSPR => GetNullableDecimal("CSPR");
 
 		/// <summary>
 		/// Description: Residual value
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Residual value")]
-		public decimal? M3_RESV => GetNullableDecimal("RESV");
+		public decimal? M3RESV => GetNullableDecimal("RESV");
 
 		/// <summary>
 		/// Description: Residual %
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Residual %")]
-		public int? M3_REPE => GetNullableInt("REPE");
+		public int? M3REPE => GetNullableInt("REPE");
 
 		/// <summary>
 		/// Description: Interest type
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest type")]
-		public string M3_INTT => GetString("INTT");
+		public string M3INTT => GetString("INTT");
 
 		/// <summary>
 		/// Description: Interest rate
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interest rate")]
-		public decimal? M3_INPE => GetNullableDecimal("INPE");
+		public decimal? M3INPE => GetNullableDecimal("INPE");
 
 		/// <summary>
 		/// Description: Rent amount
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rent amount")]
-		public decimal? M3_RENT => GetNullableDecimal("RENT");
+		public decimal? M3RENT => GetNullableDecimal("RENT");
 
 		/// <summary>
 		/// Description: Currency
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 	}
 }
 // EOF

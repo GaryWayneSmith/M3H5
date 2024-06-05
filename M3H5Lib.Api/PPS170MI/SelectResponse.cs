@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Service process
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service process")]
-		public string M3_PRCS => GetString("PRCS");
+		public string M3PRCS => GetString("PRCS");
 
 		/// <summary>
 		/// Description: Service
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Order proposal number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order proposal number")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Subnumber - order proposal
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - order proposal")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Subnumber - order proposal
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - order proposal")]
-		public int? M3_PLP2 => GetNullableInt("PLP2");
+		public int? M3PLP2 => GetNullableInt("PLP2");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Planned quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned quantity")]
-		public decimal? M3_PPQT => GetNullableDecimal("PPQT");
+		public decimal? M3PPQT => GetNullableDecimal("PPQT");
 
 		/// <summary>
 		/// Description: Status - planned order
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - planned order")]
-		public int? M3_PSTS => GetNullableInt("PSTS");
+		public int? M3PSTS => GetNullableInt("PSTS");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public long? M3_RORN => GetNullableLong("RORN");
+		public long? M3RORN => GetNullableLong("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Co-sorting identity order proposal
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Co-sorting identity order proposal")]
-		public string M3_PPSQ => GetString("PPSQ");
+		public string M3PPSQ => GetString("PPSQ");
 
 		/// <summary>
 		/// Description: Responsible
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Project number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Simulation round
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Simulation round")]
-		public int? M3_ECVS => GetNullableInt("ECVS");
+		public int? M3ECVS => GetNullableInt("ECVS");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Macro order number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Macro order number")]
-		public decimal? M3_MACN => GetNullableDecimal("MACN");
+		public decimal? M3MACN => GetNullableDecimal("MACN");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 	}
 }
 // EOF

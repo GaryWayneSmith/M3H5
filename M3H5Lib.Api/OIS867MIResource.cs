@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS867MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,22 +38,22 @@ namespace M3H5Lib.Api
 		/// Description Add scale head
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_RSCB">Supplier rebate scale base</param>
-		/// <param name="m3_PRRF">Price list</param>
-		/// <param name="m3_CUCP">Currency - sales price</param>
-		/// <param name="m3_SRCA">Rebate calculation method</param>
-		/// <param name="m3_SRBA">Rebate base</param>
-		/// <param name="m3_RPUN">Rebate amount unit of measure</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_SUNO">Supplier</param>
-		/// <param name="m3_AGNB">Agreement number</param>
-		/// <param name="m3_SECW">Search criteria - warehouse</param>
-		/// <param name="m3_PRR1">Price list</param>
-		/// <param name="m3_CUC1">Currency</param>
-		/// <param name="m3_PCTP">Costing type</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3RSCB">Supplier rebate scale base</param>
+		/// <param name="m3PRRF">Price list</param>
+		/// <param name="m3CUCP">Currency - sales price</param>
+		/// <param name="m3SRCA">Rebate calculation method</param>
+		/// <param name="m3SRBA">Rebate base</param>
+		/// <param name="m3RPUN">Rebate amount unit of measure</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3SUNO">Supplier</param>
+		/// <param name="m3AGNB">Agreement number</param>
+		/// <param name="m3SECW">Search criteria - warehouse</param>
+		/// <param name="m3PRR1">Price list</param>
+		/// <param name="m3CUC1">Currency</param>
+		/// <param name="m3PCTP">Costing type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -60,22 +62,22 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddScaleHead(
-			string m3_SRSC, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_RSCB = null, 
-			string m3_PRRF = null, 
-			string m3_CUCP = null, 
-			int? m3_SRCA = null, 
-			int? m3_SRBA = null, 
-			string m3_RPUN = null, 
-			string m3_CUCD = null, 
-			string m3_SUNO = null, 
-			string m3_AGNB = null, 
-			string m3_SECW = null, 
-			string m3_PRR1 = null, 
-			string m3_CUC1 = null, 
-			string m3_PCTP = null, 
+			string m3SRSC, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3RSCB = null, 
+			string m3PRRF = null, 
+			string m3CUCP = null, 
+			int? m3SRCA = null, 
+			int? m3SRBA = null, 
+			string m3RPUN = null, 
+			string m3CUCD = null, 
+			string m3SUNO = null, 
+			string m3AGNB = null, 
+			string m3SECW = null, 
+			string m3PRR1 = null, 
+			string m3CUC1 = null, 
+			string m3PCTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -90,44 +92,44 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RSCB))
-				request.WithQueryParameter("RSCB", m3_RSCB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRRF))
-				request.WithQueryParameter("PRRF", m3_PRRF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCP))
-				request.WithQueryParameter("CUCP", m3_CUCP.Trim());
-			if (m3_SRCA.HasValue)
-				request.WithQueryParameter("SRCA", m3_SRCA.Value.ToString());
-			if (m3_SRBA.HasValue)
-				request.WithQueryParameter("SRBA", m3_SRBA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RPUN))
-				request.WithQueryParameter("RPUN", m3_RPUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AGNB))
-				request.WithQueryParameter("AGNB", m3_AGNB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SECW))
-				request.WithQueryParameter("SECW", m3_SECW.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRR1))
-				request.WithQueryParameter("PRR1", m3_PRR1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUC1))
-				request.WithQueryParameter("CUC1", m3_CUC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PCTP))
-				request.WithQueryParameter("PCTP", m3_PCTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RSCB))
+				request.WithQueryParameter("RSCB", m3RSCB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRRF))
+				request.WithQueryParameter("PRRF", m3PRRF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCP))
+				request.WithQueryParameter("CUCP", m3CUCP.Trim());
+			if (m3SRCA.HasValue)
+				request.WithQueryParameter("SRCA", m3SRCA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SRBA.HasValue)
+				request.WithQueryParameter("SRBA", m3SRBA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RPUN))
+				request.WithQueryParameter("RPUN", m3RPUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGNB))
+				request.WithQueryParameter("AGNB", m3AGNB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SECW))
+				request.WithQueryParameter("SECW", m3SECW.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRR1))
+				request.WithQueryParameter("PRR1", m3PRR1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUC1))
+				request.WithQueryParameter("CUC1", m3CUC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PCTP))
+				request.WithQueryParameter("PCTP", m3PCTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -137,7 +139,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -148,10 +151,10 @@ namespace M3H5Lib.Api
 		/// Description Add scale limit
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
-		/// <param name="m3_LIMT">Limit value</param>
-		/// <param name="m3_SREP">Rebate percentage</param>
-		/// <param name="m3_SREA">Rebate amount</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
+		/// <param name="m3LIMT">Limit value</param>
+		/// <param name="m3SREP">Rebate percentage</param>
+		/// <param name="m3SREA">Rebate amount</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -160,10 +163,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddScaleLimit(
-			string m3_SRSC, 
-			decimal? m3_LIMT = null, 
-			decimal? m3_SREP = null, 
-			decimal? m3_SREA = null, 
+			string m3SRSC, 
+			decimal? m3LIMT = null, 
+			decimal? m3SREP = null, 
+			decimal? m3SREA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -178,20 +181,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_LIMT.HasValue)
-				request.WithQueryParameter("LIMT", m3_LIMT.Value.ToString());
-			if (m3_SREP.HasValue)
-				request.WithQueryParameter("SREP", m3_SREP.Value.ToString());
-			if (m3_SREA.HasValue)
-				request.WithQueryParameter("SREA", m3_SREA.Value.ToString());
+			if (m3LIMT.HasValue)
+				request.WithQueryParameter("LIMT", m3LIMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SREP.HasValue)
+				request.WithQueryParameter("SREP", m3SREP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SREA.HasValue)
+				request.WithQueryParameter("SREA", m3SREA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -201,7 +204,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -212,7 +216,7 @@ namespace M3H5Lib.Api
 		/// Description Delete scale
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -221,7 +225,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelScale(
-			string m3_SRSC, 
+			string m3SRSC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -236,12 +240,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -251,7 +255,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -262,8 +267,8 @@ namespace M3H5Lib.Api
 		/// Description Delete scale limit
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
-		/// <param name="m3_LIMT">Limit value</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
+		/// <param name="m3LIMT">Limit value</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -272,8 +277,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelScaleLimit(
-			string m3_SRSC, 
-			decimal? m3_LIMT = null, 
+			string m3SRSC, 
+			decimal? m3LIMT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -288,16 +293,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_LIMT.HasValue)
-				request.WithQueryParameter("LIMT", m3_LIMT.Value.ToString());
+			if (m3LIMT.HasValue)
+				request.WithQueryParameter("LIMT", m3LIMT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -307,7 +312,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -318,7 +324,7 @@ namespace M3H5Lib.Api
 		/// Description Get scale head
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -327,7 +333,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetScaleHeadResponse></returns>
 		/// <exception cref="M3Exception<GetScaleHeadResponse>"></exception>
 		public async Task<M3Response<GetScaleHeadResponse>> GetScaleHead(
-			string m3_SRSC, 
+			string m3SRSC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -342,12 +348,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Execute the request
 			var result = await Execute<GetScaleHeadResponse>(
@@ -357,7 +363,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -368,8 +375,8 @@ namespace M3H5Lib.Api
 		/// Description Get scale limit
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
-		/// <param name="m3_LIMT">Limit value (Required)</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
+		/// <param name="m3LIMT">Limit value (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -378,8 +385,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetScaleLimitResponse></returns>
 		/// <exception cref="M3Exception<GetScaleLimitResponse>"></exception>
 		public async Task<M3Response<GetScaleLimitResponse>> GetScaleLimit(
-			string m3_SRSC, 
-			decimal m3_LIMT, 
+			string m3SRSC, 
+			decimal m3LIMT, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -394,13 +401,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim())
-				.WithQueryParameter("LIMT", m3_LIMT.ToString());
+				.WithQueryParameter("SRSC", m3SRSC.Trim())
+				.WithQueryParameter("LIMT", m3LIMT.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetScaleLimitResponse>(
@@ -410,7 +417,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -421,7 +429,7 @@ namespace M3H5Lib.Api
 		/// Description List scale head
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -430,7 +438,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstScaleHeadResponse></returns>
 		/// <exception cref="M3Exception<LstScaleHeadResponse>"></exception>
 		public async Task<M3Response<LstScaleHeadResponse>> LstScaleHead(
-			string m3_SRSC, 
+			string m3SRSC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -445,12 +453,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstScaleHeadResponse>(
@@ -460,7 +468,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -471,7 +480,7 @@ namespace M3H5Lib.Api
 		/// Description List scale limit
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -480,7 +489,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstScaleLimitResponse></returns>
 		/// <exception cref="M3Exception<LstScaleLimitResponse>"></exception>
 		public async Task<M3Response<LstScaleLimitResponse>> LstScaleLimit(
-			string m3_SRSC, 
+			string m3SRSC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -495,12 +504,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstScaleLimitResponse>(
@@ -510,7 +519,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -521,22 +531,22 @@ namespace M3H5Lib.Api
 		/// Description Update scale head
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_RSCB">Supplier rebate scale base</param>
-		/// <param name="m3_PRRF">Price list</param>
-		/// <param name="m3_CUCP">Currency - sales price</param>
-		/// <param name="m3_SRCA">Rebate calculation method</param>
-		/// <param name="m3_SRBA">Rebate base</param>
-		/// <param name="m3_RPUN">Rebate amount unit of measure</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_SUNO">Supplier</param>
-		/// <param name="m3_AGNB">Agreement number</param>
-		/// <param name="m3_SECW">Search criteria - warehouse</param>
-		/// <param name="m3_PRR1">Price list</param>
-		/// <param name="m3_CUC1">Currency</param>
-		/// <param name="m3_PCTP">Costing type</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3RSCB">Supplier rebate scale base</param>
+		/// <param name="m3PRRF">Price list</param>
+		/// <param name="m3CUCP">Currency - sales price</param>
+		/// <param name="m3SRCA">Rebate calculation method</param>
+		/// <param name="m3SRBA">Rebate base</param>
+		/// <param name="m3RPUN">Rebate amount unit of measure</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3SUNO">Supplier</param>
+		/// <param name="m3AGNB">Agreement number</param>
+		/// <param name="m3SECW">Search criteria - warehouse</param>
+		/// <param name="m3PRR1">Price list</param>
+		/// <param name="m3CUC1">Currency</param>
+		/// <param name="m3PCTP">Costing type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -545,22 +555,22 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdScaleHead(
-			string m3_SRSC, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_RSCB = null, 
-			string m3_PRRF = null, 
-			string m3_CUCP = null, 
-			int? m3_SRCA = null, 
-			int? m3_SRBA = null, 
-			string m3_RPUN = null, 
-			string m3_CUCD = null, 
-			string m3_SUNO = null, 
-			string m3_AGNB = null, 
-			string m3_SECW = null, 
-			string m3_PRR1 = null, 
-			string m3_CUC1 = null, 
-			string m3_PCTP = null, 
+			string m3SRSC, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3RSCB = null, 
+			string m3PRRF = null, 
+			string m3CUCP = null, 
+			int? m3SRCA = null, 
+			int? m3SRBA = null, 
+			string m3RPUN = null, 
+			string m3CUCD = null, 
+			string m3SUNO = null, 
+			string m3AGNB = null, 
+			string m3SECW = null, 
+			string m3PRR1 = null, 
+			string m3CUC1 = null, 
+			string m3PCTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -575,44 +585,44 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RSCB))
-				request.WithQueryParameter("RSCB", m3_RSCB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRRF))
-				request.WithQueryParameter("PRRF", m3_PRRF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCP))
-				request.WithQueryParameter("CUCP", m3_CUCP.Trim());
-			if (m3_SRCA.HasValue)
-				request.WithQueryParameter("SRCA", m3_SRCA.Value.ToString());
-			if (m3_SRBA.HasValue)
-				request.WithQueryParameter("SRBA", m3_SRBA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RPUN))
-				request.WithQueryParameter("RPUN", m3_RPUN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AGNB))
-				request.WithQueryParameter("AGNB", m3_AGNB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SECW))
-				request.WithQueryParameter("SECW", m3_SECW.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRR1))
-				request.WithQueryParameter("PRR1", m3_PRR1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUC1))
-				request.WithQueryParameter("CUC1", m3_CUC1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PCTP))
-				request.WithQueryParameter("PCTP", m3_PCTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RSCB))
+				request.WithQueryParameter("RSCB", m3RSCB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRRF))
+				request.WithQueryParameter("PRRF", m3PRRF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCP))
+				request.WithQueryParameter("CUCP", m3CUCP.Trim());
+			if (m3SRCA.HasValue)
+				request.WithQueryParameter("SRCA", m3SRCA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SRBA.HasValue)
+				request.WithQueryParameter("SRBA", m3SRBA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RPUN))
+				request.WithQueryParameter("RPUN", m3RPUN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGNB))
+				request.WithQueryParameter("AGNB", m3AGNB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SECW))
+				request.WithQueryParameter("SECW", m3SECW.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRR1))
+				request.WithQueryParameter("PRR1", m3PRR1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUC1))
+				request.WithQueryParameter("CUC1", m3CUC1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PCTP))
+				request.WithQueryParameter("PCTP", m3PCTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -622,7 +632,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -633,10 +644,10 @@ namespace M3H5Lib.Api
 		/// Description Update scale limit
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SRSC">Rebate scale (Required)</param>
-		/// <param name="m3_LIMT">Limit value</param>
-		/// <param name="m3_SREP">Rebate percentage</param>
-		/// <param name="m3_SREA">Rebate amount</param>
+		/// <param name="m3SRSC">Rebate scale (Required)</param>
+		/// <param name="m3LIMT">Limit value</param>
+		/// <param name="m3SREP">Rebate percentage</param>
+		/// <param name="m3SREA">Rebate amount</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -645,10 +656,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdScaleLimit(
-			string m3_SRSC, 
-			decimal? m3_LIMT = null, 
-			decimal? m3_SREP = null, 
-			decimal? m3_SREA = null, 
+			string m3SRSC, 
+			decimal? m3LIMT = null, 
+			decimal? m3SREP = null, 
+			decimal? m3SREA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -663,20 +674,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SRSC))
-				throw new ArgumentNullException("m3_SRSC");
+			if (string.IsNullOrWhiteSpace(m3SRSC))
+				throw new ArgumentNullException(nameof(m3SRSC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SRSC", m3_SRSC.Trim());
+				.WithQueryParameter("SRSC", m3SRSC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_LIMT.HasValue)
-				request.WithQueryParameter("LIMT", m3_LIMT.Value.ToString());
-			if (m3_SREP.HasValue)
-				request.WithQueryParameter("SREP", m3_SREP.Value.ToString());
-			if (m3_SREA.HasValue)
-				request.WithQueryParameter("SREA", m3_SREA.Value.ToString());
+			if (m3LIMT.HasValue)
+				request.WithQueryParameter("LIMT", m3LIMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SREP.HasValue)
+				request.WithQueryParameter("SREP", m3SREP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SREA.HasValue)
+				request.WithQueryParameter("SREA", m3SREA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -686,7 +697,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

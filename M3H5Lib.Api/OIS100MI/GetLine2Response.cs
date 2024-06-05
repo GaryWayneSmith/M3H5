@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Industry Application")]
-		public string M3_INAP => GetString("INAP");
+		public string M3INAP => GetString("INAP");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Demand order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Demand order number")]
-		public string M3_DRDN => GetString("DRDN");
+		public string M3DRDN => GetString("DRDN");
 
 		/// <summary>
 		/// Description: Demand order line
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Demand order line")]
-		public int? M3_DRDL => GetNullableInt("DRDL");
+		public int? M3DRDL => GetNullableInt("DRDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_DRDX => GetNullableInt("DRDX");
+		public int? M3DRDX => GetNullableInt("DRDX");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Promotion
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_PIDE => GetString("PIDE");
+		public string M3PIDE => GetString("PIDE");
 
 		/// <summary>
 		/// Description: Line amount - local currency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount - local currency")]
-		public decimal? M3_SAAM => GetNullableDecimal("SAAM");
+		public decimal? M3SAAM => GetNullableDecimal("SAAM");
 
 		/// <summary>
 		/// Description: Local currency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Supplier rebate agreement on sales
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier rebate agreement on sales")]
-		public string M3_RAGN => GetString("RAGN");
+		public string M3RAGN => GetString("RAGN");
 
 		/// <summary>
 		/// Description: Supplier rebate reference type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier rebate reference type")]
-		public string M3_CLAT => GetString("CLAT");
+		public string M3CLAT => GetString("CLAT");
 
 		/// <summary>
 		/// Description: Sales price - core charge
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price - core charge")]
-		public decimal? M3_CCSA => GetNullableDecimal("CCSA");
+		public decimal? M3CCSA => GetNullableDecimal("CCSA");
 
 		/// <summary>
 		/// Description: Delivery customer
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery customer")]
-		public string M3_DECU => GetString("DECU");
+		public string M3DECU => GetString("DECU");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Departure date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure date")]
-		public DateTime? M3_DSDT => GetNullableDateTime("DSDT");
+		public DateTime? M3DSDT => GetNullableDateTime("DSDT");
 
 		/// <summary>
 		/// Description: Departure time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure time")]
-		public int? M3_DSHM => GetNullableInt("DSHM");
+		public int? M3DSHM => GetNullableInt("DSHM");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Order line number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_PCNR => GetNullableInt("PCNR");
+		public int? M3PCNR => GetNullableInt("PCNR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_PCSU => GetNullableInt("PCSU");
+		public int? M3PCSU => GetNullableInt("PCSU");
 
 		/// <summary>
 		/// Description: Gross amount - line
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross amount - line")]
-		public decimal? M3_GLAM => GetNullableDecimal("GLAM");
+		public decimal? M3GLAM => GetNullableDecimal("GLAM");
 
 		/// <summary>
 		/// Description: Line classification
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line classification")]
-		public int? M3_LNCL => GetNullableInt("LNCL");
+		public int? M3LNCL => GetNullableInt("LNCL");
 
 		/// <summary>
 		/// Description: Tax exemption contract number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax exemption contract number")]
-		public string M3_TECN => GetString("TECN");
+		public string M3TECN => GetString("TECN");
 
 		/// <summary>
 		/// Description: Priority
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Line type
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public string M3_LTYP => GetString("LTYP");
+		public string M3LTYP => GetString("LTYP");
 
 		/// <summary>
 		/// Description: Discount amount 1
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 1")]
-		public decimal? M3_DIA1 => GetNullableDecimal("DIA1");
+		public decimal? M3DIA1 => GetNullableDecimal("DIA1");
 
 		/// <summary>
 		/// Description: Discount amount 2
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 2")]
-		public decimal? M3_DIA2 => GetNullableDecimal("DIA2");
+		public decimal? M3DIA2 => GetNullableDecimal("DIA2");
 
 		/// <summary>
 		/// Description: Discount amount 3
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 3")]
-		public decimal? M3_DIA3 => GetNullableDecimal("DIA3");
+		public decimal? M3DIA3 => GetNullableDecimal("DIA3");
 
 		/// <summary>
 		/// Description: Discount amount 4
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 4")]
-		public decimal? M3_DIA4 => GetNullableDecimal("DIA4");
+		public decimal? M3DIA4 => GetNullableDecimal("DIA4");
 
 		/// <summary>
 		/// Description: Discount amount 5
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 5")]
-		public decimal? M3_DIA5 => GetNullableDecimal("DIA5");
+		public decimal? M3DIA5 => GetNullableDecimal("DIA5");
 
 		/// <summary>
 		/// Description: Discount amount 6
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 6")]
-		public decimal? M3_DIA6 => GetNullableDecimal("DIA6");
+		public decimal? M3DIA6 => GetNullableDecimal("DIA6");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 	}
 }
 // EOF

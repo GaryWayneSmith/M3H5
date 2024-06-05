@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Feature
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTID => GetString("FTID");
+		public string M3FTID => GetString("FTID");
 
 		/// <summary>
 		/// Description: Feature type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature type")]
-		public int? M3_FTTP => GetNullableInt("FTTP");
+		public int? M3FTTP => GetNullableInt("FTTP");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Text
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX10 => GetString("TX10");
+		public string M3TX10 => GetString("TX10");
 
 		/// <summary>
 		/// Description: Feature group
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature group")]
-		public string M3_FGRP => GetString("FGRP");
+		public string M3FGRP => GetString("FGRP");
 
 		/// <summary>
 		/// Description: Feature check
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature check")]
-		public int? M3_FICR => GetNullableInt("FICR");
+		public int? M3FICR => GetNullableInt("FICR");
 
 		/// <summary>
 		/// Description: Option check
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option check")]
-		public int? M3_VAOP => GetNullableInt("VAOP");
+		public int? M3VAOP => GetNullableInt("VAOP");
 
 		/// <summary>
 		/// Description: Additional feature
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional feature")]
-		public int? M3_ADDF => GetNullableInt("ADDF");
+		public int? M3ADDF => GetNullableInt("ADDF");
 
 		/// <summary>
 		/// Description: Print on manufacturing order
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print on manufacturing order")]
-		public int? M3_POMO => GetNullableInt("POMO");
+		public int? M3POMO => GetNullableInt("POMO");
 
 		/// <summary>
 		/// Description: Print control - order document
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print control - order document")]
-		public int? M3_PRED => GetNullableInt("PRED");
+		public int? M3PRED => GetNullableInt("PRED");
 
 		/// <summary>
 		/// Description: Retreive from previous CO line
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Retreive from previous CO line")]
-		public int? M3_DCOO => GetNullableInt("DCOO");
+		public int? M3DCOO => GetNullableInt("DCOO");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Numeric range multiple
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric range multiple")]
-		public string M3_NRMU => GetString("NRMU");
+		public string M3NRMU => GetString("NRMU");
 
 		/// <summary>
 		/// Description: From numeric range value
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From numeric range value")]
-		public string M3_NUVF => GetString("NUVF");
+		public string M3NUVF => GetString("NUVF");
 
 		/// <summary>
 		/// Description: To numeric range value
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To numeric range value")]
-		public string M3_NUVT => GetString("NUVT");
+		public string M3NUVT => GetString("NUVT");
 
 		/// <summary>
 		/// Description: Bill of material group
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bill of material group")]
-		public int? M3_GRPF => GetNullableInt("GRPF");
+		public int? M3GRPF => GetNullableInt("GRPF");
 
 		/// <summary>
 		/// Description: Item group
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGF => GetString("ITGF");
+		public string M3ITGF => GetString("ITGF");
 
 		/// <summary>
 		/// Description: Item group
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGT => GetString("ITGT");
+		public string M3ITGT => GetString("ITGT");
 
 		/// <summary>
 		/// Description: Product Group
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product Group")]
-		public string M3_ITCF => GetString("ITCF");
+		public string M3ITCF => GetString("ITCF");
 
 		/// <summary>
 		/// Description: Product Group
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product Group")]
-		public string M3_ITCT => GetString("ITCT");
+		public string M3ITCT => GetString("ITCT");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Print feature information
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print feature information")]
-		public int? M3_PRFI => GetNullableInt("PRFI");
+		public int? M3PRFI => GetNullableInt("PRFI");
 
 		/// <summary>
 		/// Description: Print option information
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print option information")]
-		public int? M3_PRII => GetNullableInt("PRII");
+		public int? M3PRII => GetNullableInt("PRII");
 
 		/// <summary>
 		/// Description: Print on new line
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PDS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print on new line")]
-		public int? M3_PRNL => GetNullableInt("PRNL");
+		public int? M3PRNL => GetNullableInt("PRNL");
 	}
 }
 // EOF

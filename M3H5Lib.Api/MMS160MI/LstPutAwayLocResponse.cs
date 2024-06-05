@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_SLDS => GetString("SLDS");
+		public string M3SLDS => GetString("SLDS");
 
 		/// <summary>
 		/// Description: Stock zone
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock zone")]
-		public string M3_SLTP => GetString("SLTP");
+		public string M3SLTP => GetString("SLTP");
 
 		/// <summary>
 		/// Description: Responsible
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Multi-storage location
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multi-storage location")]
-		public int? M3_SLDV => GetNullableInt("SLDV");
+		public int? M3SLDV => GetNullableInt("SLDV");
 
 		/// <summary>
 		/// Description: Allocatable
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocatable")]
-		public int? M3_ALOC => GetNullableInt("ALOC");
+		public int? M3ALOC => GetNullableInt("ALOC");
 
 		/// <summary>
 		/// Description: Single allocation
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Single allocation")]
-		public int? M3_SALO => GetNullableInt("SALO");
+		public int? M3SALO => GetNullableInt("SALO");
 
 		/// <summary>
 		/// Description: Delay
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delay")]
-		public int? M3_DEHO => GetNullableInt("DEHO");
+		public int? M3DEHO => GetNullableInt("DEHO");
 
 		/// <summary>
 		/// Description: Status proposal
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status proposal")]
-		public string M3_DEST => GetString("DEST");
+		public string M3DEST => GetString("DEST");
 
 		/// <summary>
 		/// Description: Automatic deletion
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic deletion")]
-		public int? M3_AUDE => GetNullableInt("AUDE");
+		public int? M3AUDE => GetNullableInt("AUDE");
 
 		/// <summary>
 		/// Description: Automatic deletion delay
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic deletion delay")]
-		public int? M3_AUDD => GetNullableInt("AUDD");
+		public int? M3AUDD => GetNullableInt("AUDD");
 
 		/// <summary>
 		/// Description: Last receipt date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last receipt date")]
-		public DateTime? M3_IDDT => GetNullableDateTime("IDDT");
+		public DateTime? M3IDDT => GetNullableDateTime("IDDT");
 
 		/// <summary>
 		/// Description: Last issue date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last issue date")]
-		public DateTime? M3_ODDT => GetNullableDateTime("ODDT");
+		public DateTime? M3ODDT => GetNullableDateTime("ODDT");
 
 		/// <summary>
 		/// Description: Number of balance identities
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of balance identities")]
-		public int? M3_NBRL => GetNullableInt("NBRL");
+		public int? M3NBRL => GetNullableInt("NBRL");
 
 		/// <summary>
 		/// Description: Maximum storage volume
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum storage volume")]
-		public decimal? M3_MVOL => GetNullableDecimal("MVOL");
+		public decimal? M3MVOL => GetNullableDecimal("MVOL");
 
 		/// <summary>
 		/// Description: Current storage volume
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current storage volume")]
-		public decimal? M3_AVOL => GetNullableDecimal("AVOL");
+		public decimal? M3AVOL => GetNullableDecimal("AVOL");
 
 		/// <summary>
 		/// Description: Maximum storage weight
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum storage weight")]
-		public decimal? M3_MAXW => GetNullableDecimal("MAXW");
+		public decimal? M3MAXW => GetNullableDecimal("MAXW");
 
 		/// <summary>
 		/// Description: Current storage weight
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current storage weight")]
-		public decimal? M3_ACTW => GetNullableDecimal("ACTW");
+		public decimal? M3ACTW => GetNullableDecimal("ACTW");
 
 		/// <summary>
 		/// Description: Warehouse equipment
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse equipment")]
-		public string M3_PISE => GetString("PISE");
+		public string M3PISE => GetString("PISE");
 
 		/// <summary>
 		/// Description: Editing position 1
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Editing position 1")]
-		public int? M3_EDP1 => GetNullableInt("EDP1");
+		public int? M3EDP1 => GetNullableInt("EDP1");
 
 		/// <summary>
 		/// Description: Editing position 2
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Editing position 2")]
-		public int? M3_EDP2 => GetNullableInt("EDP2");
+		public int? M3EDP2 => GetNullableInt("EDP2");
 
 		/// <summary>
 		/// Description: Editing character 1
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Editing character 1")]
-		public string M3_EDS1 => GetString("EDS1");
+		public string M3EDS1 => GetString("EDS1");
 
 		/// <summary>
 		/// Description: Editing character 2
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Editing character 2")]
-		public string M3_EDS2 => GetString("EDS2");
+		public string M3EDS2 => GetString("EDS2");
 
 		/// <summary>
 		/// Description: Transportation flow
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation flow")]
-		public string M3_TRFL => GetString("TRFL");
+		public string M3TRFL => GetString("TRFL");
 
 		/// <summary>
 		/// Description: ABC class - frequency
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ABC class - frequency")]
-		public string M3_ABFC => GetString("ABFC");
+		public string M3ABFC => GetString("ABFC");
 
 		/// <summary>
 		/// Description: Distribution identity
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution identity")]
-		public string M3_SPID => GetString("SPID");
+		public string M3SPID => GetString("SPID");
 
 		/// <summary>
 		/// Description: Location type
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location type")]
-		public string M3_WHLT => GetString("WHLT");
+		public string M3WHLT => GetString("WHLT");
 
 		/// <summary>
 		/// Description: Transaction statistics
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction statistics")]
-		public int? M3_STFU => GetNullableInt("STFU");
+		public int? M3STFU => GetNullableInt("STFU");
 
 		/// <summary>
 		/// Description: Max filling rate
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max filling rate")]
-		public int? M3_MFRT => GetNullableInt("MFRT");
+		public int? M3MFRT => GetNullableInt("MFRT");
 
 		/// <summary>
 		/// Description: Current filling rate
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current filling rate")]
-		public int? M3_FRTE => GetNullableInt("FRTE");
+		public int? M3FRTE => GetNullableInt("FRTE");
 
 		/// <summary>
 		/// Description: Packaging length
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging length")]
-		public int? M3_PACL => GetNullableInt("PACL");
+		public int? M3PACL => GetNullableInt("PACL");
 
 		/// <summary>
 		/// Description: Packaging width
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging width")]
-		public int? M3_PACW => GetNullableInt("PACW");
+		public int? M3PACW => GetNullableInt("PACW");
 
 		/// <summary>
 		/// Description: Packaging height
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging height")]
-		public int? M3_PACH => GetNullableInt("PACH");
+		public int? M3PACH => GetNullableInt("PACH");
 
 		/// <summary>
 		/// Description: Container management
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container management")]
-		public int? M3_CMNG => GetNullableInt("CMNG");
+		public int? M3CMNG => GetNullableInt("CMNG");
 
 		/// <summary>
 		/// Description: Customer number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Text identity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Check code
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check code")]
-		public int? M3_CHKC => GetNullableInt("CHKC");
+		public int? M3CHKC => GetNullableInt("CHKC");
 
 		/// <summary>
 		/// Description: Location group
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location group")]
-		public string M3_LOCG => GetString("LOCG");
+		public string M3LOCG => GetString("LOCG");
 
 		/// <summary>
 		/// Description: Check code - location
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check code - location")]
-		public string M3_LCHK => GetString("LCHK");
+		public string M3LCHK => GetString("LCHK");
 
 		/// <summary>
 		/// Description: Entry date
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Geographic cod X
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod X")]
-		public decimal? M3_GEOX => GetNullableDecimal("GEOX");
+		public decimal? M3GEOX => GetNullableDecimal("GEOX");
 
 		/// <summary>
 		/// Description: Geographic cod  Z
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod  Z")]
-		public decimal? M3_GEOZ => GetNullableDecimal("GEOZ");
+		public decimal? M3GEOZ => GetNullableDecimal("GEOZ");
 
 		/// <summary>
 		/// Description: Create stock take at picking
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Create stock take at picking")]
-		public int? M3_INVD => GetNullableInt("INVD");
+		public int? M3INVD => GetNullableInt("INVD");
 
 		/// <summary>
 		/// Description: Latest physical inventory date
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Latest physical inventory date")]
-		public DateTime? M3_INDT => GetNullableDateTime("INDT");
+		public DateTime? M3INDT => GetNullableDateTime("INDT");
 
 		/// <summary>
 		/// Description: Reported quantity
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported quantity")]
-		public decimal? M3_RPQT => GetNullableDecimal("RPQT");
+		public decimal? M3RPQT => GetNullableDecimal("RPQT");
 
 		/// <summary>
 		/// Description: Record type
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MMS160MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Record type")]
-		public string M3_RTYP => GetString("RTYP");
+		public string M3RTYP => GetString("RTYP");
 	}
 }
 // EOF

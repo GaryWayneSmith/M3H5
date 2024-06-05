@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Planning date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Planned quantity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned quantity")]
-		public decimal? M3_PPQT => GetNullableDecimal("PPQT");
+		public decimal? M3PPQT => GetNullableDecimal("PPQT");
 
 		/// <summary>
 		/// Description: Option
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPT2 => GetString("OPT2");
+		public string M3OPT2 => GetString("OPT2");
 
 		/// <summary>
 		/// Description: Order proposal number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order proposal number")]
-		public int? M3_PLPN => GetNullableInt("PLPN");
+		public int? M3PLPN => GetNullableInt("PLPN");
 
 		/// <summary>
 		/// Description: Subnumber - order proposal
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber - order proposal")]
-		public int? M3_PLPS => GetNullableInt("PLPS");
+		public int? M3PLPS => GetNullableInt("PLPS");
 
 		/// <summary>
 		/// Description: Status - planned order
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - planned order")]
-		public int? M3_PSTS => GetNullableInt("PSTS");
+		public int? M3PSTS => GetNullableInt("PSTS");
 
 		/// <summary>
 		/// Description: From warehouse
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From warehouse")]
-		public string M3_FWHL => GetString("FWHL");
+		public string M3FWHL => GetString("FWHL");
 
 		/// <summary>
 		/// Description: Order type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public long? M3_RORN => GetNullableLong("RORN");
+		public long? M3RORN => GetNullableLong("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Planning time
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning time")]
-		public int? M3_PLHM => GetNullableInt("PLHM");
+		public int? M3PLHM => GetNullableInt("PLHM");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Error code/field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.DPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error code/field")]
-		public int? M3_ERRF => GetNullableInt("ERRF");
+		public int? M3ERRF => GetNullableInt("ERRF");
 	}
 }
 // EOF

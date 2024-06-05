@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Purchase costing element
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase costing element")]
-		public string M3_CEID => GetString("CEID");
+		public string M3CEID => GetString("CEID");
 
 		/// <summary>
 		/// Description: Costing key 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing key 1")]
-		public string M3_OVK1 => GetString("OVK1");
+		public string M3OVK1 => GetString("OVK1");
 
 		/// <summary>
 		/// Description: Costing key 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing key 2")]
-		public string M3_OVK2 => GetString("OVK2");
+		public string M3OVK2 => GetString("OVK2");
 
 		/// <summary>
 		/// Description: Costing key 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing key 3")]
-		public string M3_OVK3 => GetString("OVK3");
+		public string M3OVK3 => GetString("OVK3");
 
 		/// <summary>
 		/// Description: Valid from
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VFDT => GetNullableDateTime("VFDT");
+		public DateTime? M3VFDT => GetNullableDateTime("VFDT");
 
 		/// <summary>
 		/// Description: Costing markup
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing markup")]
-		public decimal? M3_OVHE => GetNullableDecimal("OVHE");
+		public decimal? M3OVHE => GetNullableDecimal("OVHE");
 
 		/// <summary>
 		/// Description: Batch price quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Batch price quantity")]
-		public int? M3_OVCD => GetNullableInt("OVCD");
+		public int? M3OVCD => GetNullableInt("OVCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Formula
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula")]
-		public string M3_FMID => GetString("FMID");
+		public string M3FMID => GetString("FMID");
 
 		/// <summary>
 		/// Description: Result identity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result identity")]
-		public string M3_RESI => GetString("RESI");
+		public string M3RESI => GetString("RESI");
 
 		/// <summary>
 		/// Description: Text identity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Costing key 4
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing key 4")]
-		public string M3_OVK4 => GetString("OVK4");
+		public string M3OVK4 => GetString("OVK4");
 
 		/// <summary>
 		/// Description: Costing key 5
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS280MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing key 5")]
-		public string M3_OVK5 => GetString("OVK5");
+		public string M3OVK5 => GetString("OVK5");
 	}
 }
 // EOF

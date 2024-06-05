@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS031MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Service charge
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS031MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service charge")]
-		public string M3_EXCD => GetString("EXCD");
+		public string M3EXCD => GetString("EXCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS031MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Language
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS031MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Description language 0
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS031MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description language 0")]
-		public string M3_CRD0 => GetString("CRD0");
+		public string M3CRD0 => GetString("CRD0");
 	}
 }
 // EOF

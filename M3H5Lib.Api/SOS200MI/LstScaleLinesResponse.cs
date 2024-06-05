@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ1 => GetString("OBJ1");
+		public string M3OBJ1 => GetString("OBJ1");
 
 		/// <summary>
 		/// Description: Field
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ2 => GetString("OBJ2");
+		public string M3OBJ2 => GetString("OBJ2");
 
 		/// <summary>
 		/// Description: Field
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ3 => GetString("OBJ3");
+		public string M3OBJ3 => GetString("OBJ3");
 
 		/// <summary>
 		/// Description: Text line 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 1")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 2")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Text line 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 3")]
-		public string M3_TXT3 => GetString("TXT3");
+		public string M3TXT3 => GetString("TXT3");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Discount percentage
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount percentage")]
-		public int? M3_DISP => GetNullableInt("DISP");
+		public int? M3DISP => GetNullableInt("DISP");
 
 		/// <summary>
 		/// Description: Discount amount
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount")]
-		public decimal? M3_DIAM => GetNullableDecimal("DIAM");
+		public decimal? M3DIAM => GetNullableDecimal("DIAM");
 
 		/// <summary>
 		/// Description: Limit value
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit value")]
-		public decimal? M3_LIMT => GetNullableDecimal("LIMT");
+		public decimal? M3LIMT => GetNullableDecimal("LIMT");
 
 		/// <summary>
 		/// Description: Discount type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount type")]
-		public int? M3_DITP => GetNullableInt("DITP");
+		public int? M3DITP => GetNullableInt("DITP");
 
 		/// <summary>
 		/// Description: Valid from
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Priority
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PREX => GetString("PREX");
+		public string M3PREX => GetString("PREX");
 
 		/// <summary>
 		/// Description: Discount model
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Discount number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount number")]
-		public int? M3_DIPO => GetNullableInt("DIPO");
+		public int? M3DIPO => GetNullableInt("DIPO");
 	}
 }
 // EOF

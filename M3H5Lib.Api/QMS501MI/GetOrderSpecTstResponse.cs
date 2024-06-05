@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Specification
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Specification")]
-		public string M3_SPEC => GetString("SPEC");
+		public string M3SPEC => GetString("SPEC");
 
 		/// <summary>
 		/// Description: Effective date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective date")]
-		public DateTime? M3_QSE1 => GetNullableDateTime("QSE1");
+		public DateTime? M3QSE1 => GetNullableDateTime("QSE1");
 
 		/// <summary>
 		/// Description: Effective time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective time")]
-		public int? M3_QSE2 => GetNullableInt("QSE2");
+		public int? M3QSE2 => GetNullableInt("QSE2");
 
 		/// <summary>
 		/// Description: Item number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Test
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test")]
-		public string M3_QTST => GetString("QTST");
+		public string M3QTST => GetString("QTST");
 
 		/// <summary>
 		/// Description: Effective date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective date")]
-		public DateTime? M3_QTE1 => GetNullableDateTime("QTE1");
+		public DateTime? M3QTE1 => GetNullableDateTime("QTE1");
 
 		/// <summary>
 		/// Description: Effective time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effective time")]
-		public int? M3_QTE2 => GetNullableInt("QTE2");
+		public int? M3QTE2 => GetNullableInt("QTE2");
 
 		/// <summary>
 		/// Description: Test type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test type")]
-		public int? M3_TSTY => GetNullableInt("TSTY");
+		public int? M3TSTY => GetNullableInt("TSTY");
 
 		/// <summary>
 		/// Description: Description
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Inactive date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inactive date")]
-		public DateTime? M3_QTI1 => GetNullableDateTime("QTI1");
+		public DateTime? M3QTI1 => GetNullableDateTime("QTI1");
 
 		/// <summary>
 		/// Description: Inactive time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inactive time")]
-		public int? M3_QTI2 => GetNullableInt("QTI2");
+		public int? M3QTI2 => GetNullableInt("QTI2");
 
 		/// <summary>
 		/// Description: Test order
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test order")]
-		public int? M3_EXSQ => GetNullableInt("EXSQ");
+		public int? M3EXSQ => GetNullableInt("EXSQ");
 
 		/// <summary>
 		/// Description: Test classification
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test classification")]
-		public string M3_TCLS => GetString("TCLS");
+		public string M3TCLS => GetString("TCLS");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Measurement method
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement method")]
-		public string M3_MSUR => GetString("MSUR");
+		public string M3MSUR => GetString("MSUR");
 
 		/// <summary>
 		/// Description: Measurement instrument
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Measurement instrument")]
-		public string M3_MSIN => GetString("MSIN");
+		public string M3MSIN => GetString("MSIN");
 
 		/// <summary>
 		/// Description: Department
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Department")]
-		public string M3_DEPT => GetString("DEPT");
+		public string M3DEPT => GetString("DEPT");
 
 		/// <summary>
 		/// Description: Laboratory
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Laboratory")]
-		public string M3_LABO => GetString("LABO");
+		public string M3LABO => GetString("LABO");
 
 		/// <summary>
 		/// Description: Sample type
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sample type")]
-		public string M3_SMTP => GetString("SMTP");
+		public string M3SMTP => GetString("SMTP");
 
 		/// <summary>
 		/// Description: Industry standard
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Industry standard")]
-		public string M3_INSD => GetString("INSD");
+		public string M3INSD => GetString("INSD");
 
 		/// <summary>
 		/// Description: Value setup
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value setup")]
-		public int? M3_VLTP => GetNullableInt("VLTP");
+		public int? M3VLTP => GetNullableInt("VLTP");
 
 		/// <summary>
 		/// Description: Numeric qualitative
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric qualitative")]
-		public string M3_QTCD => GetString("QTCD");
+		public string M3QTCD => GetString("QTCD");
 
 		/// <summary>
 		/// Description: Test result
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test result")]
-		public string M3_QLCD => GetString("QLCD");
+		public string M3QLCD => GetString("QLCD");
 
 		/// <summary>
 		/// Description: Expected operator
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expected operator")]
-		public int? M3_QOP1 => GetNullableInt("QOP1");
+		public int? M3QOP1 => GetNullableInt("QOP1");
 
 		/// <summary>
 		/// Description: Expected value max
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expected value max")]
-		public decimal? M3_EVMX => GetNullableDecimal("EVMX");
+		public decimal? M3EVMX => GetNullableDecimal("EVMX");
 
 		/// <summary>
 		/// Description: Expected value min
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expected value min")]
-		public decimal? M3_EVMN => GetNullableDecimal("EVMN");
+		public decimal? M3EVMN => GetNullableDecimal("EVMN");
 
 		/// <summary>
 		/// Description: Expected target value
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expected target value")]
-		public decimal? M3_EVTG => GetNullableDecimal("EVTG");
+		public decimal? M3EVTG => GetNullableDecimal("EVTG");
 
 		/// <summary>
 		/// Description: Test U/M
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test U/M")]
-		public string M3_TEUM => GetString("TEUM");
+		public string M3TEUM => GetString("TEUM");
 
 		/// <summary>
 		/// Description: Required
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Required")]
-		public int? M3_REQD => GetNullableInt("REQD");
+		public int? M3REQD => GetNullableInt("REQD");
 
 		/// <summary>
 		/// Description: Sampling required
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sampling required")]
-		public int? M3_SMPR => GetNullableInt("SMPR");
+		public int? M3SMPR => GetNullableInt("SMPR");
 
 		/// <summary>
 		/// Description: Internal test required
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal test required")]
-		public int? M3_INTR => GetNullableInt("INTR");
+		public int? M3INTR => GetNullableInt("INTR");
 
 		/// <summary>
 		/// Description: Frequency per
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frequency per")]
-		public int? M3_FRPR => GetNullableInt("FRPR");
+		public int? M3FRPR => GetNullableInt("FRPR");
 
 		/// <summary>
 		/// Description: Frequency times
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frequency times")]
-		public int? M3_FRTI => GetNullableInt("FRTI");
+		public int? M3FRTI => GetNullableInt("FRTI");
 
 		/// <summary>
 		/// Description: Frequency quantity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frequency quantity")]
-		public decimal? M3_FRQY => GetNullableDecimal("FRQY");
+		public decimal? M3FRQY => GetNullableDecimal("FRQY");
 
 		/// <summary>
 		/// Description: Frequency U/M
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Frequency U/M")]
-		public string M3_FRUM => GetString("FRUM");
+		public string M3FRUM => GetString("FRUM");
 
 		/// <summary>
 		/// Description: Sample size
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sample size")]
-		public decimal? M3_SMSZ => GetNullableDecimal("SMSZ");
+		public decimal? M3SMSZ => GetNullableDecimal("SMSZ");
 
 		/// <summary>
 		/// Description: Discard sample
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discard sample")]
-		public int? M3_DSSM => GetNullableInt("DSSM");
+		public int? M3DSSM => GetNullableInt("DSSM");
 
 		/// <summary>
 		/// Description: Retain sample
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Retain sample")]
-		public int? M3_RTSM => GetNullableInt("RTSM");
+		public int? M3RTSM => GetNullableInt("RTSM");
 
 		/// <summary>
 		/// Description: Calculated by formula
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated by formula")]
-		public int? M3_TCAL => GetNullableInt("TCAL");
+		public int? M3TCAL => GetNullableInt("TCAL");
 
 		/// <summary>
 		/// Description: Test priority
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.QMS501MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Test priority")]
-		public int? M3_QTSP => GetNullableInt("QTSP");
+		public int? M3QTSP => GetNullableInt("QTSP");
 	}
 }
 // EOF

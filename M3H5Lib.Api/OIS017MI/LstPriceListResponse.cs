@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Pricelist
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricelist")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Currency
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Customernumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customernumber")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Validfrom
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validfrom")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Validto
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validto")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Costingmodel-salesprice
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costingmodel-salesprice")]
-		public string M3_SCMO => GetString("SCMO");
+		public string M3SCMO => GetString("SCMO");
 
 		/// <summary>
 		/// Description: Calculationbase
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculationbase")]
-		public int? M3_CABA => GetNullableInt("CABA");
+		public int? M3CABA => GetNullableInt("CABA");
 
 		/// <summary>
 		/// Description: Basicpricelist
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basicpricelist")]
-		public string M3_BAPL => GetString("BAPL");
+		public string M3BAPL => GetString("BAPL");
 
 		/// <summary>
 		/// Description: Automaticsalespricecalculation
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automaticsalespricecalculation")]
-		public int? M3_SCAC => GetNullableInt("SCAC");
+		public int? M3SCAC => GetNullableInt("SCAC");
 
 		/// <summary>
 		/// Description: Salescampaign
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salescampaign")]
-		public string M3_CMNO => GetString("CMNO");
+		public string M3CMNO => GetString("CMNO");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Customer number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Promotion
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_PIDE => GetString("PIDE");
+		public string M3PIDE => GetString("PIDE");
 
 		/// <summary>
 		/// Description: Customer group
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer group")]
-		public string M3_CUCL => GetString("CUCL");
+		public string M3CUCL => GetString("CUCL");
 
 		/// <summary>
 		/// Description: Customer type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer type")]
-		public int? M3_CUTP => GetNullableInt("CUTP");
+		public int? M3CUTP => GetNullableInt("CUTP");
 
 		/// <summary>
 		/// Description: Sales person
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales person")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Discount model
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Discount group - customer
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount group - customer")]
-		public string M3_DIGC => GetString("DIGC");
+		public string M3DIGC => GetString("DIGC");
 
 		/// <summary>
 		/// Description: Customer order type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: District
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("District")]
-		public string M3_SDST => GetString("SDST");
+		public string M3SDST => GetString("SDST");
 
 		/// <summary>
 		/// Description: Country
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Payer
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Statistics customer
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics customer")]
-		public string M3_CUST => GetString("CUST");
+		public string M3CUST => GetString("CUST");
 
 		/// <summary>
 		/// Description: Statistics identity 1 customer
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 1 customer")]
-		public string M3_FRE1 => GetString("FRE1");
+		public string M3FRE1 => GetString("FRE1");
 
 		/// <summary>
 		/// Description: Statistics identity 2 customer
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 2 customer")]
-		public string M3_FRE2 => GetString("FRE2");
+		public string M3FRE2 => GetString("FRE2");
 
 		/// <summary>
 		/// Description: Bonus group
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus group")]
-		public string M3_BGRP => GetString("BGRP");
+		public string M3BGRP => GetString("BGRP");
 
 		/// <summary>
 		/// Description: Postal code
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: User-defined field 10 - customer
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 10 - customer")]
-		public string M3_CFC0 => GetString("CFC0");
+		public string M3CFC0 => GetString("CFC0");
 
 		/// <summary>
 		/// Description: User-defined field 1 - customer
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - customer")]
-		public string M3_CFC1 => GetString("CFC1");
+		public string M3CFC1 => GetString("CFC1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - customer
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - customer")]
-		public decimal? M3_CFC2 => GetNullableDecimal("CFC2");
+		public decimal? M3CFC2 => GetNullableDecimal("CFC2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - customer
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - customer")]
-		public string M3_CFC3 => GetString("CFC3");
+		public string M3CFC3 => GetString("CFC3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - customer
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - customer")]
-		public string M3_CFC4 => GetString("CFC4");
+		public string M3CFC4 => GetString("CFC4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - customer
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - customer")]
-		public string M3_CFC5 => GetString("CFC5");
+		public string M3CFC5 => GetString("CFC5");
 
 		/// <summary>
 		/// Description: User-defined field 6 - customer
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 6 - customer")]
-		public string M3_CFC6 => GetString("CFC6");
+		public string M3CFC6 => GetString("CFC6");
 
 		/// <summary>
 		/// Description: User-defined field 7 - customer
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 7 - customer")]
-		public decimal? M3_CFC7 => GetNullableDecimal("CFC7");
+		public decimal? M3CFC7 => GetNullableDecimal("CFC7");
 
 		/// <summary>
 		/// Description: User-defined field 8 - customer
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 8 - customer")]
-		public string M3_CFC8 => GetString("CFC8");
+		public string M3CFC8 => GetString("CFC8");
 
 		/// <summary>
 		/// Description: User-defined field 9 - customer
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 9 - customer")]
-		public string M3_CFC9 => GetString("CFC9");
+		public string M3CFC9 => GetString("CFC9");
 
 		/// <summary>
 		/// Description: Area/State
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Valid from
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: Entry date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Priority
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRI2 => GetNullableInt("PRI2");
+		public int? M3PRI2 => GetNullableInt("PRI2");
 	}
 }
 // EOF

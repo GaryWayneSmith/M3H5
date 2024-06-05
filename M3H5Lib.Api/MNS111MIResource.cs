@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MNS111MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description List a menu
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MNID">Menu (Required)</param>
-		/// <param name="m3_MNVR">Menu version</param>
-		/// <param name="m3_LMTS">Timestamp</param>
+		/// <param name="m3MNID">Menu (Required)</param>
+		/// <param name="m3MNVR">Menu version</param>
+		/// <param name="m3LMTS">Timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListResponse></returns>
 		/// <exception cref="M3Exception<ListResponse>"></exception>
 		public async Task<M3Response<ListResponse>> List(
-			string m3_MNID, 
-			string m3_MNVR = null, 
-			decimal? m3_LMTS = null, 
+			string m3MNID, 
+			string m3MNVR = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MNID))
-				throw new ArgumentNullException("m3_MNID");
+			if (string.IsNullOrWhiteSpace(m3MNID))
+				throw new ArgumentNullException(nameof(m3MNID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MNID", m3_MNID.Trim());
+				.WithQueryParameter("MNID", m3MNID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MNVR))
-				request.WithQueryParameter("MNVR", m3_MNVR.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MNVR))
+				request.WithQueryParameter("MNVR", m3MNVR.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListResponse>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// Description List complete menu tree
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MNVR">Menu version</param>
-		/// <param name="m3_LMTS">Timestamp</param>
+		/// <param name="m3MNVR">Menu version</param>
+		/// <param name="m3LMTS">Timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -106,8 +109,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListAllResponse></returns>
 		/// <exception cref="M3Exception<ListAllResponse>"></exception>
 		public async Task<M3Response<ListAllResponse>> ListAll(
-			string m3_MNVR = null, 
-			decimal? m3_LMTS = null, 
+			string m3MNVR = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,10 +125,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MNVR))
-				request.WithQueryParameter("MNVR", m3_MNVR.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MNVR))
+				request.WithQueryParameter("MNVR", m3MNVR.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListAllResponse>(
@@ -135,7 +138,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -146,8 +150,8 @@ namespace M3H5Lib.Api
 		/// Description List complete authorized menu tree
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MNVR">Menu version</param>
-		/// <param name="m3_LMTS">Timestamp</param>
+		/// <param name="m3MNVR">Menu version</param>
+		/// <param name="m3LMTS">Timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -156,8 +160,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListAllAuthResponse></returns>
 		/// <exception cref="M3Exception<ListAllAuthResponse>"></exception>
 		public async Task<M3Response<ListAllAuthResponse>> ListAllAuth(
-			string m3_MNVR = null, 
-			decimal? m3_LMTS = null, 
+			string m3MNVR = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -172,10 +176,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MNVR))
-				request.WithQueryParameter("MNVR", m3_MNVR.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MNVR))
+				request.WithQueryParameter("MNVR", m3MNVR.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListAllAuthResponse>(
@@ -185,7 +189,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -196,9 +201,9 @@ namespace M3H5Lib.Api
 		/// Description List a menu, select authourized functions
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MNID">Menu (Required)</param>
-		/// <param name="m3_MNVR">Menu version</param>
-		/// <param name="m3_LMTS">Timestamp</param>
+		/// <param name="m3MNID">Menu (Required)</param>
+		/// <param name="m3MNVR">Menu version</param>
+		/// <param name="m3LMTS">Timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -207,9 +212,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListAuthResponse></returns>
 		/// <exception cref="M3Exception<ListAuthResponse>"></exception>
 		public async Task<M3Response<ListAuthResponse>> ListAuth(
-			string m3_MNID, 
-			string m3_MNVR = null, 
-			decimal? m3_LMTS = null, 
+			string m3MNID, 
+			string m3MNVR = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -224,18 +229,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MNID))
-				throw new ArgumentNullException("m3_MNID");
+			if (string.IsNullOrWhiteSpace(m3MNID))
+				throw new ArgumentNullException(nameof(m3MNID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MNID", m3_MNID.Trim());
+				.WithQueryParameter("MNID", m3MNID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MNVR))
-				request.WithQueryParameter("MNVR", m3_MNVR.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MNVR))
+				request.WithQueryParameter("MNVR", m3MNVR.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListAuthResponse>(
@@ -245,7 +250,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -256,9 +262,9 @@ namespace M3H5Lib.Api
 		/// Description List complete menu tree starting from root menu
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MNID">Root menu (Required)</param>
-		/// <param name="m3_MNVR">Menu version</param>
-		/// <param name="m3_LMTS">Timestamp</param>
+		/// <param name="m3MNID">Root menu (Required)</param>
+		/// <param name="m3MNVR">Menu version</param>
+		/// <param name="m3LMTS">Timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -267,9 +273,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListTreeResponse></returns>
 		/// <exception cref="M3Exception<ListTreeResponse>"></exception>
 		public async Task<M3Response<ListTreeResponse>> ListTree(
-			string m3_MNID, 
-			string m3_MNVR = null, 
-			decimal? m3_LMTS = null, 
+			string m3MNID, 
+			string m3MNVR = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -284,18 +290,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MNID))
-				throw new ArgumentNullException("m3_MNID");
+			if (string.IsNullOrWhiteSpace(m3MNID))
+				throw new ArgumentNullException(nameof(m3MNID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MNID", m3_MNID.Trim());
+				.WithQueryParameter("MNID", m3MNID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MNVR))
-				request.WithQueryParameter("MNVR", m3_MNVR.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MNVR))
+				request.WithQueryParameter("MNVR", m3MNVR.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListTreeResponse>(
@@ -305,7 +311,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -316,9 +323,9 @@ namespace M3H5Lib.Api
 		/// Description List authorized menu tree starting from root menu
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MNID">Root menu (Required)</param>
-		/// <param name="m3_MNVR">Menu version</param>
-		/// <param name="m3_LMTS">Timestamp</param>
+		/// <param name="m3MNID">Root menu (Required)</param>
+		/// <param name="m3MNVR">Menu version</param>
+		/// <param name="m3LMTS">Timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -327,9 +334,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListTreeAuthResponse></returns>
 		/// <exception cref="M3Exception<ListTreeAuthResponse>"></exception>
 		public async Task<M3Response<ListTreeAuthResponse>> ListTreeAuth(
-			string m3_MNID, 
-			string m3_MNVR = null, 
-			decimal? m3_LMTS = null, 
+			string m3MNID, 
+			string m3MNVR = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -344,18 +351,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MNID))
-				throw new ArgumentNullException("m3_MNID");
+			if (string.IsNullOrWhiteSpace(m3MNID))
+				throw new ArgumentNullException(nameof(m3MNID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MNID", m3_MNID.Trim());
+				.WithQueryParameter("MNID", m3MNID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MNVR))
-				request.WithQueryParameter("MNVR", m3_MNVR.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MNVR))
+				request.WithQueryParameter("MNVR", m3MNVR.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListTreeAuthResponse>(
@@ -365,7 +372,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

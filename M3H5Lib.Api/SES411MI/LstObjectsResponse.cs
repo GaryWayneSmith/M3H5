@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Field
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Reason
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reason")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Sign method
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sign method")]
-		public int? M3_ESMT => GetNullableInt("ESMT");
+		public int? M3ESMT => GetNullableInt("ESMT");
 
 		/// <summary>
 		/// Description: Sign strategy
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sign strategy")]
-		public int? M3_ESST => GetNullableInt("ESST");
+		public int? M3ESST => GetNullableInt("ESST");
 
 		/// <summary>
 		/// Description: Sign process
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sign process")]
-		public int? M3_ESP1 => GetNullableInt("ESP1");
+		public int? M3ESP1 => GetNullableInt("ESP1");
 
 		/// <summary>
 		/// Description: Comment input
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comment input")]
-		public int? M3_ECIN => GetNullableInt("ECIN");
+		public int? M3ECIN => GetNullableInt("ECIN");
 
 		/// <summary>
 		/// Description: Status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Send application message - successful
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send application message - successful")]
-		public int? M3_SSND => GetNullableInt("SSND");
+		public int? M3SSND => GetNullableInt("SSND");
 
 		/// <summary>
 		/// Description: Receiver - successful
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiver - successful")]
-		public string M3_SREC => GetString("SREC");
+		public string M3SREC => GetString("SREC");
 
 		/// <summary>
 		/// Description: BOD enabled - successful
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("BOD enabled - successful")]
-		public int? M3_SBOD => GetNullableInt("SBOD");
+		public int? M3SBOD => GetNullableInt("SBOD");
 
 		/// <summary>
 		/// Description: BOD message type - successful
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("BOD message type - successful")]
-		public int? M3_SBDM => GetNullableInt("SBDM");
+		public int? M3SBDM => GetNullableInt("SBDM");
 
 		/// <summary>
 		/// Description: Workflow name - successful
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Workflow name - successful")]
-		public string M3_SWFN => GetString("SWFN");
+		public string M3SWFN => GetString("SWFN");
 
 		/// <summary>
 		/// Description: Send application message - failed
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send application message - failed")]
-		public int? M3_FSND => GetNullableInt("FSND");
+		public int? M3FSND => GetNullableInt("FSND");
 
 		/// <summary>
 		/// Description: Receiver - failed
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiver - failed")]
-		public string M3_FREC => GetString("FREC");
+		public string M3FREC => GetString("FREC");
 
 		/// <summary>
 		/// Description: BOD enabled - failed
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("BOD enabled - failed")]
-		public int? M3_FBOD => GetNullableInt("FBOD");
+		public int? M3FBOD => GetNullableInt("FBOD");
 
 		/// <summary>
 		/// Description: BOD message type - failed
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("BOD message type - failed")]
-		public int? M3_FBDM => GetNullableInt("FBDM");
+		public int? M3FBDM => GetNullableInt("FBDM");
 
 		/// <summary>
 		/// Description: Workflow name - failed
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SES411MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Workflow name - failed")]
-		public string M3_FWFN => GetString("FWFN");
+		public string M3FWFN => GetString("FWFN");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.GLS250MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Lists all GL-additional info based
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_GEXN">GL information number (Required)</param>
-		/// <param name="m3_JSNO">Journal sequence number</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3GEXN">GL information number (Required)</param>
+		/// <param name="m3JSNO">Journal sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstInfoResponse></returns>
 		/// <exception cref="M3Exception<LstInfoResponse>"></exception>
 		public async Task<M3Response<LstInfoResponse>> LstInfo(
-			string m3_DIVI, 
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_GEXN, 
-			int? m3_JSNO = null, 
+			string m3DIVI, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3GEXN, 
+			int? m3JSNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,19 +70,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("GEXN", m3_GEXN.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("GEXN", m3GEXN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_JSNO.HasValue)
-				request.WithQueryParameter("JSNO", m3_JSNO.Value.ToString());
+			if (m3JSNO.HasValue)
+				request.WithQueryParameter("JSNO", m3JSNO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstInfoResponse>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

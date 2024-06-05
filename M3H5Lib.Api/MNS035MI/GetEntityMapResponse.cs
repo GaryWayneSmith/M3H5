@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Program name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Validate field name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate field name")]
-		public string M3_VFLD => GetString("VFLD");
+		public string M3VFLD => GetString("VFLD");
 
 		/// <summary>
 		/// Description: Validate field value
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate field value")]
-		public string M3_VFVA => GetString("VFVA");
+		public string M3VFVA => GetString("VFVA");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SQNR => GetNullableInt("SQNR");
+		public int? M3SQNR => GetNullableInt("SQNR");
 
 		/// <summary>
 		/// Description: Infor standard entity code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Infor standard entity code")]
-		public string M3_ISEC => GetString("ISEC");
+		public string M3ISEC => GetString("ISEC");
 
 		/// <summary>
 		/// Description: Manual created
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual created")]
-		public int? M3_MCRT => GetNullableInt("MCRT");
+		public int? M3MCRT => GetNullableInt("MCRT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Changed by
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MNS035MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

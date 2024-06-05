@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CSS300MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Delete
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_BJNO">Job number</param>
-		/// <param name="m3_RGDT">Entry date</param>
+		/// <param name="m3BJNO">Job number</param>
+		/// <param name="m3RGDT">Entry date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Delete(
-			string m3_BJNO = null, 
-			DateTime? m3_RGDT = null, 
+			string m3BJNO = null, 
+			DateTime? m3RGDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
-			if (m3_RGDT.HasValue)
-				request.WithQueryParameter("RGDT", m3_RGDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
+			if (m3RGDT.HasValue)
+				request.WithQueryParameter("RGDT", m3RGDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,12 +89,12 @@ namespace M3H5Lib.Api
 		/// Description List line supply - Maps to the req. SourceItem entity
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_BJNO">Job number</param>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_RIDN">Order number</param>
-		/// <param name="m3_RIDL">Order line</param>
-		/// <param name="m3_RIDX">Line suffix</param>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3BJNO">Job number</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3RIDN">Order number</param>
+		/// <param name="m3RIDL">Order line</param>
+		/// <param name="m3RIDX">Line suffix</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -100,12 +103,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLineSupplyResponse></returns>
 		/// <exception cref="M3Exception<LstLineSupplyResponse>"></exception>
 		public async Task<M3Response<LstLineSupplyResponse>> LstLineSupply(
-			string m3_BJNO = null, 
-			string m3_ORCA = null, 
-			string m3_RIDN = null, 
-			int? m3_RIDL = null, 
-			int? m3_RIDX = null, 
-			int? m3_SEQN = null, 
+			string m3BJNO = null, 
+			string m3ORCA = null, 
+			string m3RIDN = null, 
+			int? m3RIDL = null, 
+			int? m3RIDX = null, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,18 +123,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RIDN))
-				request.WithQueryParameter("RIDN", m3_RIDN.Trim());
-			if (m3_RIDL.HasValue)
-				request.WithQueryParameter("RIDL", m3_RIDL.Value.ToString());
-			if (m3_RIDX.HasValue)
-				request.WithQueryParameter("RIDX", m3_RIDX.Value.ToString());
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RIDN))
+				request.WithQueryParameter("RIDN", m3RIDN.Trim());
+			if (m3RIDL.HasValue)
+				request.WithQueryParameter("RIDL", m3RIDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RIDX.HasValue)
+				request.WithQueryParameter("RIDX", m3RIDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstLineSupplyResponse>(
@@ -141,7 +144,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -152,11 +156,11 @@ namespace M3H5Lib.Api
 		/// Description List order lines - Maps to the req. PartsLineItem entity
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_BJNO">Job number</param>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_RIDN">Order number</param>
-		/// <param name="m3_RIDL">Order line</param>
-		/// <param name="m3_RIDX">Line suffix</param>
+		/// <param name="m3BJNO">Job number</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3RIDN">Order number</param>
+		/// <param name="m3RIDL">Order line</param>
+		/// <param name="m3RIDX">Line suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -165,11 +169,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOrdLineResponse></returns>
 		/// <exception cref="M3Exception<LstOrdLineResponse>"></exception>
 		public async Task<M3Response<LstOrdLineResponse>> LstOrdLine(
-			string m3_BJNO = null, 
-			string m3_ORCA = null, 
-			string m3_RIDN = null, 
-			int? m3_RIDL = null, 
-			int? m3_RIDX = null, 
+			string m3BJNO = null, 
+			string m3ORCA = null, 
+			string m3RIDN = null, 
+			int? m3RIDL = null, 
+			int? m3RIDX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -184,16 +188,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RIDN))
-				request.WithQueryParameter("RIDN", m3_RIDN.Trim());
-			if (m3_RIDL.HasValue)
-				request.WithQueryParameter("RIDL", m3_RIDL.Value.ToString());
-			if (m3_RIDX.HasValue)
-				request.WithQueryParameter("RIDX", m3_RIDX.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RIDN))
+				request.WithQueryParameter("RIDN", m3RIDN.Trim());
+			if (m3RIDL.HasValue)
+				request.WithQueryParameter("RIDL", m3RIDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RIDX.HasValue)
+				request.WithQueryParameter("RIDX", m3RIDX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstOrdLineResponse>(
@@ -203,7 +207,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -214,9 +219,9 @@ namespace M3H5Lib.Api
 		/// Description List sales order - Maps to the req. PartsSalesOrder entity
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_BJNO">Job number</param>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_RIDN">Order number</param>
+		/// <param name="m3BJNO">Job number</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3RIDN">Order number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -225,9 +230,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSalesOrdResponse></returns>
 		/// <exception cref="M3Exception<LstSalesOrdResponse>"></exception>
 		public async Task<M3Response<LstSalesOrdResponse>> LstSalesOrd(
-			string m3_BJNO = null, 
-			string m3_ORCA = null, 
-			string m3_RIDN = null, 
+			string m3BJNO = null, 
+			string m3ORCA = null, 
+			string m3RIDN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -242,12 +247,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BJNO))
-				request.WithQueryParameter("BJNO", m3_BJNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RIDN))
-				request.WithQueryParameter("RIDN", m3_RIDN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BJNO))
+				request.WithQueryParameter("BJNO", m3BJNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RIDN))
+				request.WithQueryParameter("RIDN", m3RIDN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSalesOrdResponse>(
@@ -257,7 +262,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

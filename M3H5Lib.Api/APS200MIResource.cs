@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.APS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add record to file FPLLOG
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_JSNO">Journal sequence number (Required)</param>
-		/// <param name="m3_ACTO">Action (Required)</param>
-		/// <param name="m3_USID">User ID (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_USI2">User ID 2</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3JSNO">Journal sequence number (Required)</param>
+		/// <param name="m3ACTO">Action (Required)</param>
+		/// <param name="m3USID">User ID (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3USI2">User ID 2</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddInvoiceLog(
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_JSNO, 
-			int m3_ACTO, 
-			string m3_USID, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			string m3_USI2 = null, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3JSNO, 
+			int m3ACTO, 
+			string m3USID, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			string m3USI2 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,24 +76,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("JSNO", m3_JSNO.ToString())
-				.WithQueryParameter("ACTO", m3_ACTO.ToString())
-				.WithQueryParameter("USID", m3_USID.Trim());
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JSNO", m3JSNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ACTO", m3ACTO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("USID", m3USID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USI2))
-				request.WithQueryParameter("USI2", m3_USI2.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USI2))
+				request.WithQueryParameter("USI2", m3USI2.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -101,7 +103,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -112,11 +115,11 @@ namespace M3H5Lib.Api
 		/// Description Get Cash Discount
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_JSNO">Journal sequence number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3JSNO">Journal sequence number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -125,11 +128,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCashDiscInfoResponse></returns>
 		/// <exception cref="M3Exception<GetCashDiscInfoResponse>"></exception>
 		public async Task<M3Response<GetCashDiscInfoResponse>> GetCashDiscInfo(
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_JSNO, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3JSNO, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -147,15 +150,15 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("JSNO", m3_JSNO.ToString());
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JSNO", m3JSNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCashDiscInfoResponse>(
@@ -165,7 +168,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -176,11 +180,11 @@ namespace M3H5Lib.Api
 		/// Description Retrieve the image path
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_JSNO">Journal Sequence number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3JSNO">Journal Sequence number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -189,11 +193,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetInvImagePathResponse></returns>
 		/// <exception cref="M3Exception<GetInvImagePathResponse>"></exception>
 		public async Task<M3Response<GetInvImagePathResponse>> GetInvImagePath(
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_JSNO, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3JSNO, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -211,15 +215,15 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("JSNO", m3_JSNO.ToString());
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JSNO", m3JSNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetInvImagePathResponse>(
@@ -229,7 +233,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -240,11 +245,11 @@ namespace M3H5Lib.Api
 		/// Description Get Invoice Total Information
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SPYN">Payee (Required)</param>
-		/// <param name="m3_SINO">Supplier invoice number (Required)</param>
-		/// <param name="m3_INYR">Invoice year (Required)</param>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SPYN">Payee (Required)</param>
+		/// <param name="m3SINO">Supplier invoice number (Required)</param>
+		/// <param name="m3INYR">Invoice year (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -253,11 +258,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetInvTotInfoResponse></returns>
 		/// <exception cref="M3Exception<GetInvTotInfoResponse>"></exception>
 		public async Task<M3Response<GetInvTotInfoResponse>> GetInvTotInfo(
-			string m3_DIVI, 
-			string m3_SPYN, 
-			string m3_SINO, 
-			int m3_INYR, 
-			string m3_SUNO, 
+			string m3DIVI, 
+			string m3SPYN, 
+			string m3SINO, 
+			int m3INYR, 
+			string m3SUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -272,22 +277,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SPYN))
-				throw new ArgumentNullException("m3_SPYN");
-			if (string.IsNullOrWhiteSpace(m3_SINO))
-				throw new ArgumentNullException("m3_SINO");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SPYN))
+				throw new ArgumentNullException(nameof(m3SPYN));
+			if (string.IsNullOrWhiteSpace(m3SINO))
+				throw new ArgumentNullException(nameof(m3SINO));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SPYN", m3_SPYN.Trim())
-				.WithQueryParameter("SINO", m3_SINO.Trim())
-				.WithQueryParameter("INYR", m3_INYR.ToString())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SPYN", m3SPYN.Trim())
+				.WithQueryParameter("SINO", m3SINO.Trim())
+				.WithQueryParameter("INYR", m3INYR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetInvTotInfoResponse>(
@@ -297,7 +302,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -308,11 +314,11 @@ namespace M3H5Lib.Api
 		/// Description Get Supplier Invoice
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_JSNO">Journal sequence number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3JSNO">Journal sequence number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -321,11 +327,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetInvoiceResponse></returns>
 		/// <exception cref="M3Exception<GetInvoiceResponse>"></exception>
 		public async Task<M3Response<GetInvoiceResponse>> GetInvoice(
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_JSNO, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3JSNO, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -343,15 +349,15 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("JSNO", m3_JSNO.ToString());
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JSNO", m3JSNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetInvoiceResponse>(
@@ -361,7 +367,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -372,13 +379,13 @@ namespace M3H5Lib.Api
 		/// Description Get unique key to supplier invoice record
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier number (Required)</param>
-		/// <param name="m3_SINO">Supplier invoice number (Required)</param>
-		/// <param name="m3_IVDT">Invoice date (Required)</param>
-		/// <param name="m3_INYR">Invoice year (Required)</param>
-		/// <param name="m3_TRCD">Transaction code (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3SUNO">Supplier number (Required)</param>
+		/// <param name="m3SINO">Supplier invoice number (Required)</param>
+		/// <param name="m3IVDT">Invoice date (Required)</param>
+		/// <param name="m3INYR">Invoice year (Required)</param>
+		/// <param name="m3TRCD">Transaction code (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -387,13 +394,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetUniqueKeyResponse></returns>
 		/// <exception cref="M3Exception<GetUniqueKeyResponse>"></exception>
 		public async Task<M3Response<GetUniqueKeyResponse>> GetUniqueKey(
-			string m3_SUNO, 
-			string m3_SINO, 
-			DateTime m3_IVDT, 
-			int m3_INYR, 
-			int m3_TRCD, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
+			string m3SUNO, 
+			string m3SINO, 
+			DateTime m3IVDT, 
+			int m3INYR, 
+			int m3TRCD, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -408,24 +415,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
-			if (string.IsNullOrWhiteSpace(m3_SINO))
-				throw new ArgumentNullException("m3_SINO");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
+			if (string.IsNullOrWhiteSpace(m3SINO))
+				throw new ArgumentNullException(nameof(m3SINO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("SINO", m3_SINO.Trim())
-				.WithQueryParameter("IVDT", m3_IVDT.ToM3String())
-				.WithQueryParameter("INYR", m3_INYR.ToString())
-				.WithQueryParameter("TRCD", m3_TRCD.ToString());
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("SINO", m3SINO.Trim())
+				.WithQueryParameter("IVDT", m3IVDT.ToM3String())
+				.WithQueryParameter("INYR", m3INYR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TRCD", m3TRCD.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetUniqueKeyResponse>(
@@ -435,7 +442,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -446,12 +454,12 @@ namespace M3H5Lib.Api
 		/// Description List records from file FPLLOG
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_JSNO">Journal sequence number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_ACTO">Action</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3JSNO">Journal sequence number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3ACTO">Action</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -460,12 +468,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstInvoiceLogResponse></returns>
 		/// <exception cref="M3Exception<LstInvoiceLogResponse>"></exception>
 		public async Task<M3Response<LstInvoiceLogResponse>> LstInvoiceLog(
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_JSNO, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			int? m3_ACTO = null, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3JSNO, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			int? m3ACTO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -483,17 +491,17 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("JSNO", m3_JSNO.ToString());
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JSNO", m3JSNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_ACTO.HasValue)
-				request.WithQueryParameter("ACTO", m3_ACTO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3ACTO.HasValue)
+				request.WithQueryParameter("ACTO", m3ACTO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstInvoiceLogResponse>(
@@ -503,7 +511,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -514,7 +523,7 @@ namespace M3H5Lib.Api
 		/// Description Search Supplier Invoice
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_SQRY">Search query (Required)</param>
+		/// <param name="m3SQRY">Search query (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -523,7 +532,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SearchSupInvoicResponse></returns>
 		/// <exception cref="M3Exception<SearchSupInvoicResponse>"></exception>
 		public async Task<M3Response<SearchSupInvoicResponse>> SearchSupInvoic(
-			string m3_SQRY, 
+			string m3SQRY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -538,12 +547,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SQRY))
-				throw new ArgumentNullException("m3_SQRY");
+			if (string.IsNullOrWhiteSpace(m3SQRY))
+				throw new ArgumentNullException(nameof(m3SQRY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SQRY", m3_SQRY.Trim());
+				.WithQueryParameter("SQRY", m3SQRY.Trim());
 
 			// Execute the request
 			var result = await Execute<SearchSupInvoicResponse>(
@@ -553,7 +562,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -564,11 +574,11 @@ namespace M3H5Lib.Api
 		/// Description Set Invoice as an ADC invoice
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_JSNO">Journal sequence number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3JSNO">Journal sequence number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -577,11 +587,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SetInvAsADC(
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_JSNO, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3JSNO, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -599,15 +609,15 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("JSNO", m3_JSNO.ToString());
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JSNO", m3JSNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -617,7 +627,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

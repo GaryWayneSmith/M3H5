@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document identity")]
-		public string M3_DOID => GetString("DOID");
+		public string M3DOID => GetString("DOID");
 
 		/// <summary>
 		/// Description: Document type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document type")]
-		public string M3_DOTY => GetString("DOTY");
+		public string M3DOTY => GetString("DOTY");
 
 		/// <summary>
 		/// Description: Doc. type description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Doc. type description")]
-		public string M3_DTDS => GetString("DTDS");
+		public string M3DTDS => GetString("DTDS");
 
 		/// <summary>
 		/// Description: Document subtype
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document subtype")]
-		public string M3_ADS1 => GetString("ADS1");
+		public string M3ADS1 => GetString("ADS1");
 
 		/// <summary>
 		/// Description: Doc. subtype description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Doc. subtype description")]
-		public string M3_STDS => GetString("STDS");
+		public string M3STDS => GetString("STDS");
 
 		/// <summary>
 		/// Description: Document issuer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document issuer")]
-		public string M3_AISB => GetString("AISB");
+		public string M3AISB => GetString("AISB");
 
 		/// <summary>
 		/// Description: Issuer name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issuer name")]
-		public string M3_ISNM => GetString("ISNM");
+		public string M3ISNM => GetString("ISNM");
 
 		/// <summary>
 		/// Description: Document number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document number")]
-		public string M3_DNUM => GetString("DNUM");
+		public string M3DNUM => GetString("DNUM");
 
 		/// <summary>
 		/// Description: Document object
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document object")]
-		public string M3_ADOB => GetString("ADOB");
+		public string M3ADOB => GetString("ADOB");
 
 		/// <summary>
 		/// Description: Status - document
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - document")]
-		public string M3_DOSS => GetString("DOSS");
+		public string M3DOSS => GetString("DOSS");
 
 		/// <summary>
 		/// Description: Document application
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document application")]
-		public string M3_DOFM => GetString("DOFM");
+		public string M3DOFM => GetString("DOFM");
 
 		/// <summary>
 		/// Description: Language
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: ECO managed
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ECO managed")]
-		public int? M3_ECMA => GetNullableInt("ECMA");
+		public int? M3ECMA => GetNullableInt("ECMA");
 
 		/// <summary>
 		/// Description: Revision number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Name
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_DODE => GetString("DODE");
+		public string M3DODE => GetString("DODE");
 
 		/// <summary>
 		/// Description: Subject
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subject")]
-		public string M3_ASBJ => GetString("ASBJ");
+		public string M3ASBJ => GetString("ASBJ");
 
 		/// <summary>
 		/// Description: Subject
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subject")]
-		public string M3_ASB2 => GetString("ASB2");
+		public string M3ASB2 => GetString("ASB2");
 
 		/// <summary>
 		/// Description: Document media
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document media")]
-		public string M3_DOME => GetString("DOME");
+		public string M3DOME => GetString("DOME");
 
 		/// <summary>
 		/// Description: File location
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File location")]
-		public string M3_FIOF => GetString("FIOF");
+		public string M3FIOF => GetString("FIOF");
 
 		/// <summary>
 		/// Description: Function area
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function area")]
-		public string M3_FUNC => GetString("FUNC");
+		public string M3FUNC => GetString("FUNC");
 
 		/// <summary>
 		/// Description: Standard numbering system
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard numbering system")]
-		public string M3_STNC => GetString("STNC");
+		public string M3STNC => GetString("STNC");
 
 		/// <summary>
 		/// Description: Document group
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document group")]
-		public string M3_DGRP => GetString("DGRP");
+		public string M3DGRP => GetString("DGRP");
 
 		/// <summary>
 		/// Description: Group description
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Group description")]
-		public string M3_GRDS => GetString("GRDS");
+		public string M3GRDS => GetString("GRDS");
 
 		/// <summary>
 		/// Description: Modification document
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Modification document")]
-		public int? M3_MDOC => GetNullableInt("MDOC");
+		public int? M3MDOC => GetNullableInt("MDOC");
 
 		/// <summary>
 		/// Description: Authority document
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authority document")]
-		public int? M3_DAUT => GetNullableInt("DAUT");
+		public int? M3DAUT => GetNullableInt("DAUT");
 
 		/// <summary>
 		/// Description: Document issuer code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document issuer code")]
-		public int? M3_DINT => GetNullableInt("DINT");
+		public int? M3DINT => GetNullableInt("DINT");
 
 		/// <summary>
 		/// Description: Responsible
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Name of user responsible
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name of user responsible")]
-		public string M3_RSDS => GetString("RSDS");
+		public string M3RSDS => GetString("RSDS");
 
 		/// <summary>
 		/// Description: Department
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Department")]
-		public string M3_DEPT => GetString("DEPT");
+		public string M3DEPT => GetString("DEPT");
 
 		/// <summary>
 		/// Description: Department name
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Department name")]
-		public string M3_DPNM => GetString("DPNM");
+		public string M3DPNM => GetString("DPNM");
 
 		/// <summary>
 		/// Description: Resp. engineering department
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Resp. engineering department")]
-		public string M3_AREG => GetString("AREG");
+		public string M3AREG => GetString("AREG");
 
 		/// <summary>
 		/// Description: Resp. engineering dept. name
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Resp. engineering dept. name")]
-		public string M3_RENM => GetString("RENM");
+		public string M3RENM => GetString("RENM");
 
 		/// <summary>
 		/// Description: Date issued
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date issued")]
-		public DateTime? M3_AISD => GetNullableDateTime("AISD");
+		public DateTime? M3AISD => GetNullableDateTime("AISD");
 
 		/// <summary>
 		/// Description: Effectivity date From
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effectivity date From")]
-		public DateTime? M3_AEDT => GetNullableDateTime("AEDT");
+		public DateTime? M3AEDT => GetNullableDateTime("AEDT");
 
 		/// <summary>
 		/// Description: Effectivity date To
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Effectivity date To")]
-		public DateTime? M3_AED2 => GetNullableDateTime("AED2");
+		public DateTime? M3AED2 => GetNullableDateTime("AED2");
 
 		/// <summary>
 		/// Description: Number of copies
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of copies")]
-		public int? M3_COPY => GetNullableInt("COPY");
+		public int? M3COPY => GetNullableInt("COPY");
 
 		/// <summary>
 		/// Description: Item number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Revision service
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision service")]
-		public int? M3_ARVS => GetNullableInt("ARVS");
+		public int? M3ARVS => GetNullableInt("ARVS");
 
 		/// <summary>
 		/// Description: Facility
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Compliance code
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compliance code")]
-		public string M3_ACPL => GetString("ACPL");
+		public string M3ACPL => GetString("ACPL");
 
 		/// <summary>
 		/// Description: Engineering order accomplishment date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Engineering order accomplishment date")]
-		public DateTime? M3_AADA => GetNullableDateTime("AADA");
+		public DateTime? M3AADA => GetNullableDateTime("AADA");
 
 		/// <summary>
 		/// Description: Amendment text
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amendment text")]
-		public string M3_AMTX => GetString("AMTX");
+		public string M3AMTX => GetString("AMTX");
 
 		/// <summary>
 		/// Description: Text
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_ACPT => GetString("ACPT");
+		public string M3ACPT => GetString("ACPT");
 
 		/// <summary>
 		/// Description: Text
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CRS230MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_ACP2 => GetString("ACP2");
+		public string M3ACP2 => GetString("ACP2");
 	}
 }
 // EOF

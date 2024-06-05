@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Job number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JBNO => GetNullableInt("JBNO");
+		public int? M3JBNO => GetNullableInt("JBNO");
 
 		/// <summary>
 		/// Description: Job date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public DateTime? M3_JBDT => GetNullableDateTime("JBDT");
+		public DateTime? M3JBDT => GetNullableDateTime("JBDT");
 
 		/// <summary>
 		/// Description: Job time
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_JBTM => GetNullableInt("JBTM");
+		public int? M3JBTM => GetNullableInt("JBTM");
 
 		/// <summary>
 		/// Description: Output file format
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Output file format")]
-		public string M3_OFFM => GetString("OFFM");
+		public string M3OFFM => GetString("OFFM");
 
 		/// <summary>
 		/// Description: Report type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Report type")]
-		public int? M3_RPTP => GetNullableInt("RPTP");
+		public int? M3RPTP => GetNullableInt("RPTP");
 
 		/// <summary>
 		/// Description: Reporting date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting date")]
-		public DateTime? M3_RPDT => GetNullableDateTime("RPDT");
+		public DateTime? M3RPDT => GetNullableDateTime("RPDT");
 
 		/// <summary>
 		/// Description: Accounting dimension from
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension from")]
-		public int? M3_ADFR => GetNullableInt("ADFR");
+		public int? M3ADFR => GetNullableInt("ADFR");
 
 		/// <summary>
 		/// Description: Accounting dimension to
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension to")]
-		public int? M3_ADTO => GetNullableInt("ADTO");
+		public int? M3ADTO => GetNullableInt("ADTO");
 
 		/// <summary>
 		/// Description: Accounting ID from
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting ID from")]
-		public string M3_FRAI => GetString("FRAI");
+		public string M3FRAI => GetString("FRAI");
 
 		/// <summary>
 		/// Description: Accounting ID to
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting ID to")]
-		public string M3_TOAI => GetString("TOAI");
+		public string M3TOAI => GetString("TOAI");
 
 		/// <summary>
 		/// Description: Create/change date from
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Create/change date from")]
-		public DateTime? M3_CCFD => GetNullableDateTime("CCFD");
+		public DateTime? M3CCFD => GetNullableDateTime("CCFD");
 
 		/// <summary>
 		/// Description: Create/change date to
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Create/change date to")]
-		public DateTime? M3_CCTD => GetNullableDateTime("CCTD");
+		public DateTime? M3CCTD => GetNullableDateTime("CCTD");
 
 		/// <summary>
 		/// Description: Blocked accounting identity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blocked accounting identity")]
-		public int? M3_LCCD => GetNullableInt("LCCD");
+		public int? M3LCCD => GetNullableInt("LCCD");
 
 		/// <summary>
 		/// Description: Budget account
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget account")]
-		public int? M3_BUAC => GetNullableInt("BUAC");
+		public int? M3BUAC => GetNullableInt("BUAC");
 
 		/// <summary>
 		/// Description: Status
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Language
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Description
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.AAS640MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 	}
 }
 // EOF

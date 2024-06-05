@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Item number or service expense
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number or service expense")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name (item or service expense name)
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name (item or service expense name)")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Order quantity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order quantity")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Payer
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Sales price
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Cost price
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price")]
-		public decimal? M3_UCOS => GetNullableDecimal("UCOS");
+		public decimal? M3UCOS => GetNullableDecimal("UCOS");
 
 		/// <summary>
 		/// Description: Reported quantity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported quantity")]
-		public decimal? M3_RAQT => GetNullableDecimal("RAQT");
+		public decimal? M3RAQT => GetNullableDecimal("RAQT");
 
 		/// <summary>
 		/// Description: Planned start date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start date")]
-		public DateTime? M3_PLSD => GetNullableDateTime("PLSD");
+		public DateTime? M3PLSD => GetNullableDateTime("PLSD");
 
 		/// <summary>
 		/// Description: Planned start time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start time")]
-		public int? M3_PLST => GetNullableInt("PLST");
+		public int? M3PLST => GetNullableInt("PLST");
 
 		/// <summary>
 		/// Description: Project number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Line status
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line status")]
-		public string M3_ORST => GetString("ORST");
+		public string M3ORST => GetString("ORST");
 
 		/// <summary>
 		/// Description: Line type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public int? M3_LTYP => GetNullableInt("LTYP");
+		public int? M3LTYP => GetNullableInt("LTYP");
 
 		/// <summary>
 		/// Description: Remaining quantity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining quantity")]
-		public decimal? M3_RNQT => GetNullableDecimal("RNQT");
+		public decimal? M3RNQT => GetNullableDecimal("RNQT");
 
 		/// <summary>
 		/// Description: Allocated quantity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Delivered quantity
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity")]
-		public decimal? M3_DLQT => GetNullableDecimal("DLQT");
+		public decimal? M3DLQT => GetNullableDecimal("DLQT");
 
 		/// <summary>
 		/// Description: Invoiced quantity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity")]
-		public decimal? M3_IVQT => GetNullableDecimal("IVQT");
+		public decimal? M3IVQT => GetNullableDecimal("IVQT");
 
 		/// <summary>
 		/// Description: Quantity 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity 1")]
-		public decimal? M3_QTY1 => GetNullableDecimal("QTY1");
+		public decimal? M3QTY1 => GetNullableDecimal("QTY1");
 
 		/// <summary>
 		/// Description: Change date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Technician
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician")]
-		public string M3_TECH => GetString("TECH");
+		public string M3TECH => GetString("TECH");
 
 		/// <summary>
 		/// Description: Location
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Serial number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERI => GetString("SERI");
+		public string M3SERI => GetString("SERI");
 
 		/// <summary>
 		/// Description: Description 1
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 1")]
-		public string M3_TEDS => GetString("TEDS");
+		public string M3TEDS => GetString("TEDS");
 
 		/// <summary>
 		/// Description: Quantity to invoice
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity to invoice")]
-		public decimal? M3_TIQT => GetNullableDecimal("TIQT");
+		public decimal? M3TIQT => GetNullableDecimal("TIQT");
 
 		/// <summary>
 		/// Description: Alternate U/M
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Price origin
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price origin")]
-		public string M3_PRMO => GetString("PRMO");
+		public string M3PRMO => GetString("PRMO");
 
 		/// <summary>
 		/// Description: Discount origin
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount origin")]
-		public int? M3_DICD => GetNullableInt("DICD");
+		public int? M3DICD => GetNullableInt("DICD");
 
 		/// <summary>
 		/// Description: Planned finish date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish date")]
-		public DateTime? M3_PLFD => GetNullableDateTime("PLFD");
+		public DateTime? M3PLFD => GetNullableDateTime("PLFD");
 
 		/// <summary>
 		/// Description: Planned finish time
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned finish time")]
-		public int? M3_PLFT => GetNullableInt("PLFT");
+		public int? M3PLFT => GetNullableInt("PLFT");
 
 		/// <summary>
 		/// Description: Inventory accounting
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting")]
-		public int? M3_STCD => GetNullableInt("STCD");
+		public int? M3STCD => GetNullableInt("STCD");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Flagged as completed
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Flagged as completed")]
-		public int? M3_OEND => GetNullableInt("OEND");
+		public int? M3OEND => GetNullableInt("OEND");
 
 		/// <summary>
 		/// Description: Item cost quantity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item cost quantity")]
-		public int? M3_COCD => GetNullableInt("COCD");
+		public int? M3COCD => GetNullableInt("COCD");
 
 		/// <summary>
 		/// Description: Standard cost code
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard cost code")]
-		public int? M3_UCCD => GetNullableInt("UCCD");
+		public int? M3UCCD => GetNullableInt("UCCD");
 
 		/// <summary>
 		/// Description: VAT code
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Joint delivery
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Joint delivery")]
-		public string M3_JDCD => GetString("JDCD");
+		public string M3JDCD => GetString("JDCD");
 
 		/// <summary>
 		/// Description: Line amount - order currency
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount - order currency")]
-		public decimal? M3_LNAM => GetNullableDecimal("LNAM");
+		public decimal? M3LNAM => GetNullableDecimal("LNAM");
 
 		/// <summary>
 		/// Description: Price list SO
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list SO")]
-		public string M3_PRS1 => GetString("PRS1");
+		public string M3PRS1 => GetString("PRS1");
 
 		/// <summary>
 		/// Description: Quantity (in kit)
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity (in kit)")]
-		public decimal? M3_CNQT => GetNullableDecimal("CNQT");
+		public decimal? M3CNQT => GetNullableDecimal("CNQT");
 
 		/// <summary>
 		/// Description: Error cause
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error cause")]
-		public string M3_ERCO => GetString("ERCO");
+		public string M3ERCO => GetString("ERCO");
 
 		/// <summary>
 		/// Description: Action
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action")]
-		public string M3_MECO => GetString("MECO");
+		public string M3MECO => GetString("MECO");
 
 		/// <summary>
 		/// Description: Error symptom
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom")]
-		public string M3_ESCO => GetString("ESCO");
+		public string M3ESCO => GetString("ESCO");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Discount model
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Status - discount 1
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - discount 1")]
-		public int? M3_DIC1 => GetNullableInt("DIC1");
+		public int? M3DIC1 => GetNullableInt("DIC1");
 
 		/// <summary>
 		/// Description: Status - discount 2
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - discount 2")]
-		public int? M3_DIC2 => GetNullableInt("DIC2");
+		public int? M3DIC2 => GetNullableInt("DIC2");
 
 		/// <summary>
 		/// Description: Status - discount 3
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - discount 3")]
-		public int? M3_DIC3 => GetNullableInt("DIC3");
+		public int? M3DIC3 => GetNullableInt("DIC3");
 
 		/// <summary>
 		/// Description: Status - discount 4
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - discount 4")]
-		public int? M3_DIC4 => GetNullableInt("DIC4");
+		public int? M3DIC4 => GetNullableInt("DIC4");
 
 		/// <summary>
 		/// Description: Status - discount 5
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - discount 5")]
-		public int? M3_DIC5 => GetNullableInt("DIC5");
+		public int? M3DIC5 => GetNullableInt("DIC5");
 
 		/// <summary>
 		/// Description: Status - discount 6
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - discount 6")]
-		public int? M3_DIC6 => GetNullableInt("DIC6");
+		public int? M3DIC6 => GetNullableInt("DIC6");
 
 		/// <summary>
 		/// Description: Discount 1
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 1")]
-		public int? M3_DIP1 => GetNullableInt("DIP1");
+		public int? M3DIP1 => GetNullableInt("DIP1");
 
 		/// <summary>
 		/// Description: Discount 2
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 2")]
-		public int? M3_DIP2 => GetNullableInt("DIP2");
+		public int? M3DIP2 => GetNullableInt("DIP2");
 
 		/// <summary>
 		/// Description: Discount 3
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 3")]
-		public int? M3_DIP3 => GetNullableInt("DIP3");
+		public int? M3DIP3 => GetNullableInt("DIP3");
 
 		/// <summary>
 		/// Description: Discount 4
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 4")]
-		public int? M3_DIP4 => GetNullableInt("DIP4");
+		public int? M3DIP4 => GetNullableInt("DIP4");
 
 		/// <summary>
 		/// Description: Discount 5
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 5")]
-		public int? M3_DIP5 => GetNullableInt("DIP5");
+		public int? M3DIP5 => GetNullableInt("DIP5");
 
 		/// <summary>
 		/// Description: Discount 6
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount 6")]
-		public int? M3_DIP6 => GetNullableInt("DIP6");
+		public int? M3DIP6 => GetNullableInt("DIP6");
 
 		/// <summary>
 		/// Description: Discount amount 1
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 1")]
-		public decimal? M3_DIA1 => GetNullableDecimal("DIA1");
+		public decimal? M3DIA1 => GetNullableDecimal("DIA1");
 
 		/// <summary>
 		/// Description: Discount amount 2
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 2")]
-		public decimal? M3_DIA2 => GetNullableDecimal("DIA2");
+		public decimal? M3DIA2 => GetNullableDecimal("DIA2");
 
 		/// <summary>
 		/// Description: Discount amount 3
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 3")]
-		public decimal? M3_DIA3 => GetNullableDecimal("DIA3");
+		public decimal? M3DIA3 => GetNullableDecimal("DIA3");
 
 		/// <summary>
 		/// Description: Discount amount 4
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 4")]
-		public decimal? M3_DIA4 => GetNullableDecimal("DIA4");
+		public decimal? M3DIA4 => GetNullableDecimal("DIA4");
 
 		/// <summary>
 		/// Description: Discount amount 5
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 5")]
-		public decimal? M3_DIA5 => GetNullableDecimal("DIA5");
+		public decimal? M3DIA5 => GetNullableDecimal("DIA5");
 
 		/// <summary>
 		/// Description: Discount amount 6
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount 6")]
-		public decimal? M3_DIA6 => GetNullableDecimal("DIA6");
+		public decimal? M3DIA6 => GetNullableDecimal("DIA6");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Function area
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Function area")]
-		public string M3_FCTN => GetString("FCTN");
+		public string M3FCTN => GetString("FCTN");
 
 		/// <summary>
 		/// Description: Tax code
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Entry date
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Post-text
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-text")]
-		public decimal? M3_POTX => GetNullableDecimal("POTX");
+		public decimal? M3POTX => GetNullableDecimal("POTX");
 
 		/// <summary>
 		/// Description: Pre-text
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-text")]
-		public decimal? M3_PRTX => GetNullableDecimal("PRTX");
+		public decimal? M3PRTX => GetNullableDecimal("PRTX");
 
 		/// <summary>
 		/// Description: Kit control
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kit control")]
-		public int? M3_FSCD => GetNullableInt("FSCD");
+		public int? M3FSCD => GetNullableInt("FSCD");
 
 		/// <summary>
 		/// Description: Fixed quantity
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed quantity")]
-		public int? M3_FQCD => GetNullableInt("FQCD");
+		public int? M3FQCD => GetNullableInt("FQCD");
 
 		/// <summary>
 		/// Description: Fixed price
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed price")]
-		public int? M3_FPCD => GetNullableInt("FPCD");
+		public int? M3FPCD => GetNullableInt("FPCD");
 
 		/// <summary>
 		/// Description: Pricing method
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pricing method")]
-		public int? M3_PSET => GetNullableInt("PSET");
+		public int? M3PSET => GetNullableInt("PSET");
 
 		/// <summary>
 		/// Description: Full cost summation
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Full cost summation")]
-		public int? M3_UPCO => GetNullableInt("UPCO");
+		public int? M3UPCO => GetNullableInt("UPCO");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Service expense category
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service expense category")]
-		public int? M3_SCOD => GetNullableInt("SCOD");
+		public int? M3SCOD => GetNullableInt("SCOD");
 
 		/// <summary>
 		/// Description: Service order job number
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order job number")]
-		public int? M3_JOBN => GetNullableInt("JOBN");
+		public int? M3JOBN => GetNullableInt("JOBN");
 
 		/// <summary>
 		/// Description: Assignment suffix
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment suffix")]
-		public int? M3_JBSX => GetNullableInt("JBSX");
+		public int? M3JBSX => GetNullableInt("JBSX");
 
 		/// <summary>
 		/// Description: Line amount 2
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount 2")]
-		public decimal? M3_LNA2 => GetNullableDecimal("LNA2");
+		public decimal? M3LNA2 => GetNullableDecimal("LNA2");
 
 		/// <summary>
 		/// Description: Last invoice date
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last invoice date")]
-		public DateTime? M3_LIDT => GetNullableDateTime("LIDT");
+		public DateTime? M3LIDT => GetNullableDateTime("LIDT");
 
 		/// <summary>
 		/// Description: Invoice Prefix
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -1024,7 +1024,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Remaining quantity - alternate U/M
@@ -1035,7 +1035,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining quantity - alternate U/M")]
-		public decimal? M3_RNQA => GetNullableDecimal("RNQA");
+		public decimal? M3RNQA => GetNullableDecimal("RNQA");
 
 		/// <summary>
 		/// Description: Allocated quantity - alternate U/M
@@ -1046,7 +1046,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - alternate U/M")]
-		public decimal? M3_ALQA => GetNullableDecimal("ALQA");
+		public decimal? M3ALQA => GetNullableDecimal("ALQA");
 
 		/// <summary>
 		/// Description: Reported quantity - alternate U/M
@@ -1057,7 +1057,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported quantity - alternate U/M")]
-		public decimal? M3_RAQA => GetNullableDecimal("RAQA");
+		public decimal? M3RAQA => GetNullableDecimal("RAQA");
 
 		/// <summary>
 		/// Description: Delivered quantity - alternate U/M
@@ -1068,7 +1068,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity - alternate U/M")]
-		public decimal? M3_DLQA => GetNullableDecimal("DLQA");
+		public decimal? M3DLQA => GetNullableDecimal("DLQA");
 
 		/// <summary>
 		/// Description: Quantity to invoice alternate U/M
@@ -1079,7 +1079,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity to invoice alternate U/M")]
-		public decimal? M3_TIQA => GetNullableDecimal("TIQA");
+		public decimal? M3TIQA => GetNullableDecimal("TIQA");
 
 		/// <summary>
 		/// Description: Invoiced quantity - alternate U/M
@@ -1090,7 +1090,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced quantity - alternate U/M")]
-		public decimal? M3_IVQA => GetNullableDecimal("IVQA");
+		public decimal? M3IVQA => GetNullableDecimal("IVQA");
 	}
 }
 // EOF

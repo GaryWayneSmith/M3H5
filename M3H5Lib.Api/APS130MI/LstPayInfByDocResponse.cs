@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Payment proposal
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment proposal")]
-		public long? M3_PRPN => GetNullableLong("PRPN");
+		public long? M3PRPN => GetNullableLong("PRPN");
 
 		/// <summary>
 		/// Description: Payment order
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment order")]
-		public int? M3_PYON => GetNullableInt("PYON");
+		public int? M3PYON => GetNullableInt("PYON");
 
 		/// <summary>
 		/// Description: Payee
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payee")]
-		public string M3_SPYN => GetString("SPYN");
+		public string M3SPYN => GetString("SPYN");
 
 		/// <summary>
 		/// Description: Payment document number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment document number")]
-		public int? M3_PDNB => GetNullableInt("PDNB");
+		public int? M3PDNB => GetNullableInt("PDNB");
 
 		/// <summary>
 		/// Description: Tagging type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tagging type")]
-		public string M3_TAGG => GetString("TAGG");
+		public string M3TAGG => GetString("TAGG");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SQNB => GetNullableInt("SQNB");
+		public int? M3SQNB => GetNullableInt("SQNB");
 
 		/// <summary>
 		/// Description: Language
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Completed
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Completed")]
-		public int? M3_CMPL => GetNullableInt("CMPL");
+		public int? M3CMPL => GetNullableInt("CMPL");
 
 		/// <summary>
 		/// Description: Exceeded
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exceeded")]
-		public int? M3_EXEE => GetNullableInt("EXEE");
+		public int? M3EXEE => GetNullableInt("EXEE");
 
 		/// <summary>
 		/// Description: Print advice
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print advice")]
-		public int? M3_PADV => GetNullableInt("PADV");
+		public int? M3PADV => GetNullableInt("PADV");
 
 		/// <summary>
 		/// Description: Text
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TEXT => GetString("TEXT");
+		public string M3TEXT => GetString("TEXT");
 	}
 }
 // EOF

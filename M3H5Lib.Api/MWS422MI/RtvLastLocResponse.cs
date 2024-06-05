@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: Picking list suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list suffix")]
-		public int? M3_PLSX => GetNullableInt("PLSX");
+		public int? M3PLSX => GetNullableInt("PLSX");
 
 		/// <summary>
 		/// Description: Last pack location
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last pack location")]
-		public string M3_LPLO => GetString("LPLO");
+		public string M3LPLO => GetString("LPLO");
 
 		/// <summary>
 		/// Description: Last dock location
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS422MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last dock location")]
-		public string M3_LDLO => GetString("LDLO");
+		public string M3LDLO => GetString("LDLO");
 	}
 }
 // EOF

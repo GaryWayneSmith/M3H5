@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Packing instruction header number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packing instruction header number")]
-		public long? M3_PINN => GetNullableLong("PINN");
+		public long? M3PINN => GetNullableLong("PINN");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_DWDT => GetNullableDateTime("DWDT");
+		public DateTime? M3DWDT => GetNullableDateTime("DWDT");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_DWHM => GetNullableInt("DWHM");
+		public int? M3DWHM => GetNullableInt("DWHM");
 
 		/// <summary>
 		/// Description: Packaging Istruction Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging Istruction Status")]
-		public string M3_INPS => GetString("INPS");
+		public string M3INPS => GetString("INPS");
 
 		/// <summary>
 		/// Description: Pre-pack number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack number")]
-		public string M3_PPNB => GetString("PPNB");
+		public string M3PPNB => GetString("PPNB");
 
 		/// <summary>
 		/// Description: Number of packages
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages")]
-		public decimal? M3_NBPA => GetNullableDecimal("NBPA");
+		public decimal? M3NBPA => GetNullableDecimal("NBPA");
 
 		/// <summary>
 		/// Description: Number of packages to consignee
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages to consignee")]
-		public decimal? M3_NBPC => GetNullableDecimal("NBPC");
+		public decimal? M3NBPC => GetNullableDecimal("NBPC");
 
 		/// <summary>
 		/// Description: Packaging Istruction Status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging Istruction Status")]
-		public string M3_INP2 => GetString("INP2");
+		public string M3INP2 => GetString("INP2");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Pre-pack type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack type")]
-		public string M3_PPTY => GetString("PPTY");
+		public string M3PPTY => GetString("PPTY");
 
 		/// <summary>
 		/// Description: Pre-pack status
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack status")]
-		public string M3_PPSA => GetString("PPSA");
+		public string M3PPSA => GetString("PPSA");
 
 		/// <summary>
 		/// Description: Item number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Description
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DSCR => GetString("DSCR");
+		public string M3DSCR => GetString("DSCR");
 
 		/// <summary>
 		/// Description: Packaging
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Product number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Facility
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Order category
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Consignee
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignee")]
-		public string M3_CONA => GetString("CONA");
+		public string M3CONA => GetString("CONA");
 
 		/// <summary>
 		/// Description: Order number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Address number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Number of packages
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages")]
-		public decimal? M3_NBP2 => GetNullableDecimal("NBP2");
+		public decimal? M3NBP2 => GetNullableDecimal("NBP2");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSC2 => GetString("SSC2");
+		public string M3SSC2 => GetString("SSC2");
 
 		/// <summary>
 		/// Description: Name
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_NAME => GetString("NAME");
+		public string M3NAME => GetString("NAME");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: City
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Postal code
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: State
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Country
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Harbor or airport
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harbor or airport")]
-		public string M3_HAFE => GetString("HAFE");
+		public string M3HAFE => GetString("HAFE");
 
 		/// <summary>
 		/// Description: District
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("District")]
-		public string M3_SDST => GetString("SDST");
+		public string M3SDST => GetString("SDST");
 
 		/// <summary>
 		/// Description: Language
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Sent to Supplier
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sent to Supplier")]
-		public int? M3_SNTS => GetNullableInt("SNTS");
+		public int? M3SNTS => GetNullableInt("SNTS");
 
 		/// <summary>
 		/// Description: Sent to Frwd Ag
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sent to Frwd Ag")]
-		public int? M3_SNTF => GetNullableInt("SNTF");
+		public int? M3SNTF => GetNullableInt("SNTF");
 
 		/// <summary>
 		/// Description: Sent to Whs
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sent to Whs")]
-		public int? M3_SNTW => GetNullableInt("SNTW");
+		public int? M3SNTW => GetNullableInt("SNTW");
 
 		/// <summary>
 		/// Description: County ID
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 
 		/// <summary>
 		/// Description: Rail station
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MMS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rail station")]
-		public string M3_RASN => GetString("RASN");
+		public string M3RASN => GetString("RASN");
 	}
 }
 // EOF

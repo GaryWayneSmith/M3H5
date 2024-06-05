@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.AHS100MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,16 +38,16 @@ namespace M3H5Lib.Api
 		/// Description Add report group
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_FILE">File (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_ARLI">Archiving library</param>
-		/// <param name="m3_SNDU">Single division used</param>
-		/// <param name="m3_ACGR">Object access group</param>
-		/// <param name="m3_APLI">Application area</param>
-		/// <param name="m3_MXNY">Maximum number of records</param>
-		/// <param name="m3_ADRP">Advanced report</param>
+		/// <param name="m3REPO">Ad-hoc report (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3FILE">File (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3ARLI">Archiving library</param>
+		/// <param name="m3SNDU">Single division used</param>
+		/// <param name="m3ACGR">Object access group</param>
+		/// <param name="m3APLI">Application area</param>
+		/// <param name="m3MXNY">Maximum number of records</param>
+		/// <param name="m3ADRP">Advanced report</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -54,16 +56,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddReportGroup(
-			string m3_REPO, 
-			string m3_TX40, 
-			string m3_FILE, 
-			string m3_TX15 = null, 
-			string m3_ARLI = null, 
-			int? m3_SNDU = null, 
-			string m3_ACGR = null, 
-			string m3_APLI = null, 
-			int? m3_MXNY = null, 
-			int? m3_ADRP = null, 
+			string m3REPO, 
+			string m3TX40, 
+			string m3FILE, 
+			string m3TX15 = null, 
+			string m3ARLI = null, 
+			int? m3SNDU = null, 
+			string m3ACGR = null, 
+			string m3APLI = null, 
+			int? m3MXNY = null, 
+			int? m3ADRP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -78,34 +80,34 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_REPO))
-				throw new ArgumentNullException("m3_REPO");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
+			if (string.IsNullOrWhiteSpace(m3REPO))
+				throw new ArgumentNullException(nameof(m3REPO));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("REPO", m3_REPO.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("FILE", m3_FILE.Trim());
+				.WithQueryParameter("REPO", m3REPO.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARLI))
-				request.WithQueryParameter("ARLI", m3_ARLI.Trim());
-			if (m3_SNDU.HasValue)
-				request.WithQueryParameter("SNDU", m3_SNDU.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ACGR))
-				request.WithQueryParameter("ACGR", m3_ACGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_APLI))
-				request.WithQueryParameter("APLI", m3_APLI.Trim());
-			if (m3_MXNY.HasValue)
-				request.WithQueryParameter("MXNY", m3_MXNY.Value.ToString());
-			if (m3_ADRP.HasValue)
-				request.WithQueryParameter("ADRP", m3_ADRP.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARLI))
+				request.WithQueryParameter("ARLI", m3ARLI.Trim());
+			if (m3SNDU.HasValue)
+				request.WithQueryParameter("SNDU", m3SNDU.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ACGR))
+				request.WithQueryParameter("ACGR", m3ACGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3APLI))
+				request.WithQueryParameter("APLI", m3APLI.Trim());
+			if (m3MXNY.HasValue)
+				request.WithQueryParameter("MXNY", m3MXNY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ADRP.HasValue)
+				request.WithQueryParameter("ADRP", m3ADRP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -115,7 +117,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -126,7 +129,7 @@ namespace M3H5Lib.Api
 		/// Description Delete report group
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report (Required)</param>
+		/// <param name="m3REPO">Ad-hoc report (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -135,7 +138,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelReportGroup(
-			string m3_REPO, 
+			string m3REPO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -150,12 +153,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_REPO))
-				throw new ArgumentNullException("m3_REPO");
+			if (string.IsNullOrWhiteSpace(m3REPO))
+				throw new ArgumentNullException(nameof(m3REPO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("REPO", m3_REPO.Trim());
+				.WithQueryParameter("REPO", m3REPO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -165,7 +168,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -176,7 +180,7 @@ namespace M3H5Lib.Api
 		/// Description Get report group
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report (Required)</param>
+		/// <param name="m3REPO">Ad-hoc report (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -185,7 +189,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetReportGroupResponse></returns>
 		/// <exception cref="M3Exception<GetReportGroupResponse>"></exception>
 		public async Task<M3Response<GetReportGroupResponse>> GetReportGroup(
-			string m3_REPO, 
+			string m3REPO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -200,12 +204,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_REPO))
-				throw new ArgumentNullException("m3_REPO");
+			if (string.IsNullOrWhiteSpace(m3REPO))
+				throw new ArgumentNullException(nameof(m3REPO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("REPO", m3_REPO.Trim());
+				.WithQueryParameter("REPO", m3REPO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetReportGroupResponse>(
@@ -215,7 +219,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -226,16 +231,16 @@ namespace M3H5Lib.Api
 		/// Description Import report group
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_FILE">File</param>
-		/// <param name="m3_ARLI">Archiving library</param>
-		/// <param name="m3_SNDU">Single division used</param>
-		/// <param name="m3_ACGR">Object access group</param>
-		/// <param name="m3_APLI">Application area</param>
-		/// <param name="m3_MXNY">Maximum number of records</param>
-		/// <param name="m3_ADRP">Advanced report</param>
+		/// <param name="m3REPO">Ad-hoc report</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3FILE">File</param>
+		/// <param name="m3ARLI">Archiving library</param>
+		/// <param name="m3SNDU">Single division used</param>
+		/// <param name="m3ACGR">Object access group</param>
+		/// <param name="m3APLI">Application area</param>
+		/// <param name="m3MXNY">Maximum number of records</param>
+		/// <param name="m3ADRP">Advanced report</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -244,16 +249,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ImportRepGroup(
-			string m3_REPO = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_FILE = null, 
-			string m3_ARLI = null, 
-			int? m3_SNDU = null, 
-			string m3_ACGR = null, 
-			string m3_APLI = null, 
-			int? m3_MXNY = null, 
-			int? m3_ADRP = null, 
+			string m3REPO = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3FILE = null, 
+			string m3ARLI = null, 
+			int? m3SNDU = null, 
+			string m3ACGR = null, 
+			string m3APLI = null, 
+			int? m3MXNY = null, 
+			int? m3ADRP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -268,26 +273,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_REPO))
-				request.WithQueryParameter("REPO", m3_REPO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARLI))
-				request.WithQueryParameter("ARLI", m3_ARLI.Trim());
-			if (m3_SNDU.HasValue)
-				request.WithQueryParameter("SNDU", m3_SNDU.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ACGR))
-				request.WithQueryParameter("ACGR", m3_ACGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_APLI))
-				request.WithQueryParameter("APLI", m3_APLI.Trim());
-			if (m3_MXNY.HasValue)
-				request.WithQueryParameter("MXNY", m3_MXNY.Value.ToString());
-			if (m3_ADRP.HasValue)
-				request.WithQueryParameter("ADRP", m3_ADRP.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3REPO))
+				request.WithQueryParameter("REPO", m3REPO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARLI))
+				request.WithQueryParameter("ARLI", m3ARLI.Trim());
+			if (m3SNDU.HasValue)
+				request.WithQueryParameter("SNDU", m3SNDU.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ACGR))
+				request.WithQueryParameter("ACGR", m3ACGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3APLI))
+				request.WithQueryParameter("APLI", m3APLI.Trim());
+			if (m3MXNY.HasValue)
+				request.WithQueryParameter("MXNY", m3MXNY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ADRP.HasValue)
+				request.WithQueryParameter("ADRP", m3ADRP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -297,7 +302,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -308,7 +314,7 @@ namespace M3H5Lib.Api
 		/// Description List data for report group
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report</param>
+		/// <param name="m3REPO">Ad-hoc report</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -317,7 +323,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstReportGroupResponse></returns>
 		/// <exception cref="M3Exception<LstReportGroupResponse>"></exception>
 		public async Task<M3Response<LstReportGroupResponse>> LstReportGroup(
-			string m3_REPO = null, 
+			string m3REPO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -332,8 +338,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_REPO))
-				request.WithQueryParameter("REPO", m3_REPO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REPO))
+				request.WithQueryParameter("REPO", m3REPO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstReportGroupResponse>(
@@ -343,7 +349,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -354,14 +361,14 @@ namespace M3H5Lib.Api
 		/// Description Update report group
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_REPO">Ad-hoc report</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_FILE">File</param>
-		/// <param name="m3_ARLI">Archiving library</param>
-		/// <param name="m3_SNDU">Single division used</param>
-		/// <param name="m3_ACGR">Object access group</param>
-		/// <param name="m3_APLI">Application area</param>
+		/// <param name="m3REPO">Ad-hoc report</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3FILE">File</param>
+		/// <param name="m3ARLI">Archiving library</param>
+		/// <param name="m3SNDU">Single division used</param>
+		/// <param name="m3ACGR">Object access group</param>
+		/// <param name="m3APLI">Application area</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -370,14 +377,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdReportGroup(
-			string m3_REPO = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_FILE = null, 
-			string m3_ARLI = null, 
-			int? m3_SNDU = null, 
-			string m3_ACGR = null, 
-			string m3_APLI = null, 
+			string m3REPO = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3FILE = null, 
+			string m3ARLI = null, 
+			int? m3SNDU = null, 
+			string m3ACGR = null, 
+			string m3APLI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -392,22 +399,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_REPO))
-				request.WithQueryParameter("REPO", m3_REPO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARLI))
-				request.WithQueryParameter("ARLI", m3_ARLI.Trim());
-			if (m3_SNDU.HasValue)
-				request.WithQueryParameter("SNDU", m3_SNDU.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ACGR))
-				request.WithQueryParameter("ACGR", m3_ACGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_APLI))
-				request.WithQueryParameter("APLI", m3_APLI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REPO))
+				request.WithQueryParameter("REPO", m3REPO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARLI))
+				request.WithQueryParameter("ARLI", m3ARLI.Trim());
+			if (m3SNDU.HasValue)
+				request.WithQueryParameter("SNDU", m3SNDU.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ACGR))
+				request.WithQueryParameter("ACGR", m3ACGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3APLI))
+				request.WithQueryParameter("APLI", m3APLI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -417,7 +424,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

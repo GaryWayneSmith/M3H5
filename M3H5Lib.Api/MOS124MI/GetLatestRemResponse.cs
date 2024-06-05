@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Removal/installation transaction number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Removal/installation transaction number")]
-		public string M3_RITR => GetString("RITR");
+		public string M3RITR => GetString("RITR");
 
 		/// <summary>
 		/// Description: Removal/installation transaction type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Removal/installation transaction type")]
-		public string M3_RITP => GetString("RITP");
+		public string M3RITP => GetString("RITP");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Transaction date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction date")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRT1 => GetNullableInt("TRT1");
+		public int? M3TRT1 => GetNullableInt("TRT1");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRT2 => GetNullableInt("TRT2");
+		public int? M3TRT2 => GetNullableInt("TRT2");
 
 		/// <summary>
 		/// Description: Transaction reason
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction reason")]
-		public string M3_RSCD => GetString("RSCD");
+		public string M3RSCD => GetString("RSCD");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: To location
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To location")]
-		public string M3_TWSL => GetString("TWSL");
+		public string M3TWSL => GetString("TWSL");
 
 		/// <summary>
 		/// Description: Next item number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next item number")]
-		public string M3_NHAR => GetString("NHAR");
+		public string M3NHAR => GetString("NHAR");
 
 		/// <summary>
 		/// Description: Next serial number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next serial number")]
-		public string M3_NHSR => GetString("NHSR");
+		public string M3NHSR => GetString("NHSR");
 
 		/// <summary>
 		/// Description: Item number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNR => GetString("ITNR");
+		public string M3ITNR => GetString("ITNR");
 
 		/// <summary>
 		/// Description: Lot number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANR => GetString("BANR");
+		public string M3BANR => GetString("BANR");
 
 		/// <summary>
 		/// Description: Configuration position
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration position")]
-		public string M3_CFGR => GetString("CFGR");
+		public string M3CFGR => GetString("CFGR");
 
 		/// <summary>
 		/// Description: Next item number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next item number")]
-		public string M3_NHAI => GetString("NHAI");
+		public string M3NHAI => GetString("NHAI");
 
 		/// <summary>
 		/// Description: Next serial number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next serial number")]
-		public string M3_NHSN => GetString("NHSN");
+		public string M3NHSN => GetString("NHSN");
 
 		/// <summary>
 		/// Description: Item number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNI => GetString("ITNI");
+		public string M3ITNI => GetString("ITNI");
 
 		/// <summary>
 		/// Description: Lot number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANI => GetString("BANI");
+		public string M3BANI => GetString("BANI");
 
 		/// <summary>
 		/// Description: Configuration position
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration position")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: Complaint
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Complaint")]
-		public int? M3_DEID => GetNullableInt("DEID");
+		public int? M3DEID => GetNullableInt("DEID");
 
 		/// <summary>
 		/// Description: Work order number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Task element number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Task element number")]
-		public int? M3_ACTS => GetNullableInt("ACTS");
+		public int? M3ACTS => GetNullableInt("ACTS");
 
 		/// <summary>
 		/// Description: Troubleshoot
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Troubleshoot")]
-		public int? M3_TRBL => GetNullableInt("TRBL");
+		public int? M3TRBL => GetNullableInt("TRBL");
 
 		/// <summary>
 		/// Description: Registration number/site
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number/site")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 
 		/// <summary>
 		/// Description: Customer number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Owner
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Owner")]
-		public string M3_OWI0 => GetString("OWI0");
+		public string M3OWI0 => GetString("OWI0");
 
 		/// <summary>
 		/// Description: Owner
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Owner")]
-		public string M3_OWI1 => GetString("OWI1");
+		public string M3OWI1 => GetString("OWI1");
 
 		/// <summary>
 		/// Description: Model/site
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MOS124MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model/site")]
-		public string M3_MOTP => GetString("MOTP");
+		public string M3MOTP => GetString("MOTP");
 	}
 }
 // EOF

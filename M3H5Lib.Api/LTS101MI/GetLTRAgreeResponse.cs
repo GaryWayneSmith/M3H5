@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Agreement customer
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement customer")]
-		public string M3_AGCN => GetString("AGCN");
+		public string M3AGCN => GetString("AGCN");
 
 		/// <summary>
 		/// Description: Customer name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Agreement order type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order type")]
-		public string M3_AOTP => GetString("AOTP");
+		public string M3AOTP => GetString("AOTP");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_AYRF => GetString("AYRF");
+		public string M3AYRF => GetString("AYRF");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_APHN => GetString("APHN");
+		public string M3APHN => GetString("APHN");
 
 		/// <summary>
 		/// Description: Customers order number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: User
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: LTR agreement responsible
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("LTR agreement responsible")]
-		public string M3_AGRE => GetString("AGRE");
+		public string M3AGRE => GetString("AGRE");
 
 		/// <summary>
 		/// Description: Service manager
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Reason code - created agreement
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reason code - created agreement")]
-		public string M3_ARCC => GetString("ARCC");
+		public string M3ARCC => GetString("ARCC");
 
 		/// <summary>
 		/// Description: Reason code - terminated agreement
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reason code - terminated agreement")]
-		public string M3_ARCT => GetString("ARCT");
+		public string M3ARCT => GetString("ARCT");
 
 		/// <summary>
 		/// Description: LTR agreement conditions
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("LTR agreement conditions")]
-		public string M3_AGRC => GetString("AGRC");
+		public string M3AGRC => GetString("AGRC");
 
 		/// <summary>
 		/// Description: Kit price printout
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Kit price printout")]
-		public int? M3_PKIT => GetNullableInt("PKIT");
+		public int? M3PKIT => GetNullableInt("PKIT");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Invoicing interval - years
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - years")]
-		public int? M3_IIYR => GetNullableInt("IIYR");
+		public int? M3IIYR => GetNullableInt("IIYR");
 
 		/// <summary>
 		/// Description: Invoicing interval - months
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - months")]
-		public int? M3_IIMO => GetNullableInt("IIMO");
+		public int? M3IIMO => GetNullableInt("IIMO");
 
 		/// <summary>
 		/// Description: Invoicing interval - weeks
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - weeks")]
-		public int? M3_IIWE => GetNullableInt("IIWE");
+		public int? M3IIWE => GetNullableInt("IIWE");
 
 		/// <summary>
 		/// Description: Price index
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price index")]
-		public string M3_IXCD => GetString("IXCD");
+		public string M3IXCD => GetString("IXCD");
 
 		/// <summary>
 		/// Description: Index interval years
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index interval years")]
-		public int? M3_IXYR => GetNullableInt("IXYR");
+		public int? M3IXYR => GetNullableInt("IXYR");
 
 		/// <summary>
 		/// Description: Index interval months
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index interval months")]
-		public int? M3_IXMO => GetNullableInt("IXMO");
+		public int? M3IXMO => GetNullableInt("IXMO");
 
 		/// <summary>
 		/// Description: Index interval weeks
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index interval weeks")]
-		public int? M3_IXWE => GetNullableInt("IXWE");
+		public int? M3IXWE => GetNullableInt("IXWE");
 
 		/// <summary>
 		/// Description: Price index value
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price index value")]
-		public decimal? M3_IXVA => GetNullableDecimal("IXVA");
+		public decimal? M3IXVA => GetNullableDecimal("IXVA");
 
 		/// <summary>
 		/// Description: Number of shifts
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.LTS101MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of shifts")]
-		public int? M3_ANOS => GetNullableInt("ANOS");
+		public int? M3ANOS => GetNullableInt("ANOS");
 	}
 }
 // EOF

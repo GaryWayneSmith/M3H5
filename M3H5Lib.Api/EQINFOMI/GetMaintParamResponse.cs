@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Constant value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Constant value")]
-		public string M3_STCO => GetString("STCO");
+		public string M3STCO => GetString("STCO");
 
 		/// <summary>
 		/// Description: Consolidated facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consolidated facility")]
-		public string M3_CFAC => GetString("CFAC");
+		public string M3CFAC => GetString("CFAC");
 
 		/// <summary>
 		/// Description: Incl forecast orders in master schedule
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Incl forecast orders in master schedule")]
-		public int? M3_MIN0 => GetNullableInt("MIN0");
+		public int? M3MIN0 => GetNullableInt("MIN0");
 
 		/// <summary>
 		/// Description: Incl scheduled services in Master Sched
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Incl scheduled services in Master Sched")]
-		public int? M3_MIN1 => GetNullableInt("MIN1");
+		public int? M3MIN1 => GetNullableInt("MIN1");
 
 		/// <summary>
 		/// Description: Incl unscheduled services in Master Sch
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Incl unscheduled services in Master Sch")]
-		public int? M3_MIN2 => GetNullableInt("MIN2");
+		public int? M3MIN2 => GetNullableInt("MIN2");
 
 		/// <summary>
 		/// Description: Incl engineer orders in Master Schedule
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Incl engineer orders in Master Schedule")]
-		public int? M3_MIN3 => GetNullableInt("MIN3");
+		public int? M3MIN3 => GetNullableInt("MIN3");
 
 		/// <summary>
 		/// Description: Incl external orders in Master Schedule
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Incl external orders in Master Schedule")]
-		public int? M3_MIN4 => GetNullableInt("MIN4");
+		public int? M3MIN4 => GetNullableInt("MIN4");
 
 		/// <summary>
 		/// Description: Incl stocked items in Master Schedule
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Incl stocked items in Master Schedule")]
-		public int? M3_MIN5 => GetNullableInt("MIN5");
+		public int? M3MIN5 => GetNullableInt("MIN5");
 
 		/// <summary>
 		/// Description: Warehouse for installed items
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse for installed items")]
-		public string M3_WHIN => GetString("WHIN");
+		public string M3WHIN => GetString("WHIN");
 
 		/// <summary>
 		/// Description: Location for installed item
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location for installed item")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Order type for item/equipment removal
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type for item/equipment removal")]
-		public string M3_TRT1 => GetString("TRT1");
+		public string M3TRT1 => GetString("TRT1");
 
 		/// <summary>
 		/// Description: Order type for item/equipment installation
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type for item/equipment installation")]
-		public string M3_TRT2 => GetString("TRT2");
+		public string M3TRT2 => GetString("TRT2");
 
 		/// <summary>
 		/// Description: Location for test
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location for test")]
-		public string M3_WSOS => GetString("WSOS");
+		public string M3WSOS => GetString("WSOS");
 
 		/// <summary>
 		/// Description: Location for transport
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location for transport")]
-		public string M3_WNSO => GetString("WNSO");
+		public string M3WNSO => GetString("WNSO");
 
 		/// <summary>
 		/// Description: Customer number at creation of external order
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number at creation of external order")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Structure type for intallation structure
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type for intallation structure")]
-		public string M3_STRI => GetString("STRI");
+		public string M3STRI => GetString("STRI");
 
 		/// <summary>
 		/// Description: Structure type for analysis of compl.(diff from 16)
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure type for analysis of compl.(diff from 16)")]
-		public string M3_STRR => GetString("STRR");
+		public string M3STRR => GetString("STRR");
 
 		/// <summary>
 		/// Description: Check for open trans when WO reporting
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check for open trans when WO reporting")]
-		public int? M3_UNWK => GetNullableInt("UNWK");
+		public int? M3UNWK => GetNullableInt("UNWK");
 
 		/// <summary>
 		/// Description: Display validity date in plant structure
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Display validity date in plant structure")]
-		public int? M3_DISD => GetNullableInt("DISD");
+		public int? M3DISD => GetNullableInt("DISD");
 
 		/// <summary>
 		/// Description: General service costing model
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("General service costing model")]
-		public string M3_PRCM => GetString("PRCM");
+		public string M3PRCM => GetString("PRCM");
 
 		/// <summary>
 		/// Description: Default service for exchange in MOS300
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default service for exchange in MOS300")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Default competing meter type  for services in MOS300
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default competing meter type  for services in MOS300")]
-		public int? M3_BLTA => GetNullableInt("BLTA");
+		public int? M3BLTA => GetNullableInt("BLTA");
 
 		/// <summary>
 		/// Description: Is function no used in material planning
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Is function no used in material planning")]
-		public int? M3_FUNK => GetNullableInt("FUNK");
+		public int? M3FUNK => GetNullableInt("FUNK");
 
 		/// <summary>
 		/// Description: General planned maintenance for model item
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("General planned maintenance for model item")]
-		public int? M3_AMIU => GetNullableInt("AMIU");
+		public int? M3AMIU => GetNullableInt("AMIU");
 
 		/// <summary>
 		/// Description: Perform online check of basic data in WO entry
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Perform online check of basic data in WO entry")]
-		public int? M3_ACBD => GetNullableInt("ACBD");
+		public int? M3ACBD => GetNullableInt("ACBD");
 
 		/// <summary>
 		/// Description: Fixed assets - integration method
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed assets - integration method")]
-		public int? M3_FAMA => GetNullableInt("FAMA");
+		public int? M3FAMA => GetNullableInt("FAMA");
 
 		/// <summary>
 		/// Description: Require scrap proposal printout before  scrap
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Require scrap proposal printout before  scrap")]
-		public int? M3_SCRP => GetNullableInt("SCRP");
+		public int? M3SCRP => GetNullableInt("SCRP");
 
 		/// <summary>
 		/// Description: Default site for  plant maintenance
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default site for  plant maintenance")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 
 		/// <summary>
 		/// Description: Automatic  update of spare part list in MOS050
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic  update of spare part list in MOS050")]
-		public int? M3_USPA => GetNullableInt("USPA");
+		public int? M3USPA => GetNullableInt("USPA");
 
 		/// <summary>
 		/// Description: Automatic creation of work requests from MOS085
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic creation of work requests from MOS085")]
-		public string M3_ASUF => GetString("ASUF");
+		public string M3ASUF => GetString("ASUF");
 
 		/// <summary>
 		/// Description: Default meter when creating service record
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default meter when creating service record")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Default inspection identity
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default inspection identity")]
-		public string M3_INSI => GetString("INSI");
+		public string M3INSI => GetString("INSI");
 
 		/// <summary>
 		/// Description: Default order type - simulation
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default order type - simulation")]
-		public string M3_SOTY => GetString("SOTY");
+		public string M3SOTY => GetString("SOTY");
 
 		/// <summary>
 		/// Description: Default item type for temprary item
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default item type for temprary item")]
-		public string M3_DITI => GetString("DITI");
+		public string M3DITI => GetString("DITI");
 
 		/// <summary>
 		/// Description: Default order type- forecast
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default order type- forecast")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Order type for installation/removal
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type for installation/removal")]
-		public string M3_TRT3 => GetString("TRT3");
+		public string M3TRT3 => GetString("TRT3");
 
 		/// <summary>
 		/// Description: Text block ID for order notes
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text block ID for order notes")]
-		public string M3_WEBN => GetString("WEBN");
+		public string M3WEBN => GetString("WEBN");
 
 		/// <summary>
 		/// Description: Externam service price list
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Externam service price list")]
-		public string M3_SPRL => GetString("SPRL");
+		public string M3SPRL => GetString("SPRL");
 
 		/// <summary>
 		/// Description: Internam service price list
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internam service price list")]
-		public string M3_SPR2 => GetString("SPR2");
+		public string M3SPR2 => GetString("SPR2");
 
 		/// <summary>
 		/// Description: Miscallaneous cost defined as item
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.EQINFOMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscallaneous cost defined as item")]
-		public int? M3_MIMA => GetNullableInt("MIMA");
+		public int? M3MIMA => GetNullableInt("MIMA");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: ID type 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ID type 1")]
-		public int? M3_MWTP => GetNullableInt("MWTP");
+		public int? M3MWTP => GetNullableInt("MWTP");
 
 		/// <summary>
 		/// Description: Identity 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Identity 1")]
-		public string M3_IDE1 => GetString("IDE1");
+		public string M3IDE1 => GetString("IDE1");
 
 		/// <summary>
 		/// Description: Description 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 1")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Excluded
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Excluded")]
-		public int? M3_EXCL => GetNullableInt("EXCL");
+		public int? M3EXCL => GetNullableInt("EXCL");
 
 		/// <summary>
 		/// Description: ID type 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ID type 2")]
-		public int? M3_LWTP => GetNullableInt("LWTP");
+		public int? M3LWTP => GetNullableInt("LWTP");
 
 		/// <summary>
 		/// Description: Identity 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Identity 2")]
-		public string M3_IDE2 => GetString("IDE2");
+		public string M3IDE2 => GetString("IDE2");
 
 		/// <summary>
 		/// Description: Description 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description 2")]
-		public string M3_MODE => GetString("MODE");
+		public string M3MODE => GetString("MODE");
 
 		/// <summary>
 		/// Description: Warranty range 1 in years
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty range 1 in years")]
-		public string M3_YEA1 => GetString("YEA1");
+		public string M3YEA1 => GetString("YEA1");
 
 		/// <summary>
 		/// Description: Warranty range 1 in months
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty range 1 in months")]
-		public string M3_MON1 => GetString("MON1");
+		public string M3MON1 => GetString("MON1");
 
 		/// <summary>
 		/// Description: Payer warranty range 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer warranty range 1")]
-		public string M3_PYN1 => GetString("PYN1");
+		public string M3PYN1 => GetString("PYN1");
 
 		/// <summary>
 		/// Description: Warranty range 2 in years
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty range 2 in years")]
-		public string M3_YEA2 => GetString("YEA2");
+		public string M3YEA2 => GetString("YEA2");
 
 		/// <summary>
 		/// Description: Warranty range 2 in months
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty range 2 in months")]
-		public string M3_MON2 => GetString("MON2");
+		public string M3MON2 => GetString("MON2");
 
 		/// <summary>
 		/// Description: Payer warranty range 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer warranty range 2")]
-		public string M3_PYN2 => GetString("PYN2");
+		public string M3PYN2 => GetString("PYN2");
 	}
 }
 // EOF

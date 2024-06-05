@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS434MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,27 +38,27 @@ namespace M3H5Lib.Api
 		/// Description Add a third party id
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TRDI">3rd-party id (Required)</param>
-		/// <param name="m3_TRDP">3rd-party provider (Required)</param>
-		/// <param name="m3_MEXX">Old MEID</param>
-		/// <param name="m3_US65">User</param>
-		/// <param name="m3_PWRD">Password</param>
-		/// <param name="m3_HADR">Host address</param>
-		/// <param name="m3_HPOR">Host port</param>
-		/// <param name="m3_TOSE">Timeout in seconds</param>
-		/// <param name="m3_VEND">Vendor</param>
-		/// <param name="m3_PART">Partner</param>
-		/// <param name="m3_PRXA">Proxy address</param>
-		/// <param name="m3_PRXL">Proxy logon</param>
-		/// <param name="m3_PRXP">Proxy port</param>
-		/// <param name="m3_PRXW">Proxy password</param>
-		/// <param name="m3_UD01">User-defined field</param>
-		/// <param name="m3_UD02">User-defined field</param>
-		/// <param name="m3_UD03">User-defined field</param>
-		/// <param name="m3_UD04">User-defined field</param>
-		/// <param name="m3_URLA">URL address</param>
-		/// <param name="m3_AUDY">Authorization days</param>
-		/// <param name="m3_MEID">Merchant ID</param>
+		/// <param name="m3TRDI">3rd-party id (Required)</param>
+		/// <param name="m3TRDP">3rd-party provider (Required)</param>
+		/// <param name="m3MEXX">Old MEID</param>
+		/// <param name="m3US65">User</param>
+		/// <param name="m3PWRD">Password</param>
+		/// <param name="m3HADR">Host address</param>
+		/// <param name="m3HPOR">Host port</param>
+		/// <param name="m3TOSE">Timeout in seconds</param>
+		/// <param name="m3VEND">Vendor</param>
+		/// <param name="m3PART">Partner</param>
+		/// <param name="m3PRXA">Proxy address</param>
+		/// <param name="m3PRXL">Proxy logon</param>
+		/// <param name="m3PRXP">Proxy port</param>
+		/// <param name="m3PRXW">Proxy password</param>
+		/// <param name="m3UD01">User-defined field</param>
+		/// <param name="m3UD02">User-defined field</param>
+		/// <param name="m3UD03">User-defined field</param>
+		/// <param name="m3UD04">User-defined field</param>
+		/// <param name="m3URLA">URL address</param>
+		/// <param name="m3AUDY">Authorization days</param>
+		/// <param name="m3MEID">Merchant ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -65,27 +67,27 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add3rdPartyId(
-			string m3_TRDI, 
-			string m3_TRDP, 
-			int? m3_MEXX = null, 
-			string m3_US65 = null, 
-			string m3_PWRD = null, 
-			string m3_HADR = null, 
-			int? m3_HPOR = null, 
-			int? m3_TOSE = null, 
-			string m3_VEND = null, 
-			string m3_PART = null, 
-			string m3_PRXA = null, 
-			string m3_PRXL = null, 
-			int? m3_PRXP = null, 
-			string m3_PRXW = null, 
-			string m3_UD01 = null, 
-			string m3_UD02 = null, 
-			string m3_UD03 = null, 
-			string m3_UD04 = null, 
-			string m3_URLA = null, 
-			int? m3_AUDY = null, 
-			int? m3_MEID = null, 
+			string m3TRDI, 
+			string m3TRDP, 
+			int? m3MEXX = null, 
+			string m3US65 = null, 
+			string m3PWRD = null, 
+			string m3HADR = null, 
+			int? m3HPOR = null, 
+			int? m3TOSE = null, 
+			string m3VEND = null, 
+			string m3PART = null, 
+			string m3PRXA = null, 
+			string m3PRXL = null, 
+			int? m3PRXP = null, 
+			string m3PRXW = null, 
+			string m3UD01 = null, 
+			string m3UD02 = null, 
+			string m3UD03 = null, 
+			string m3UD04 = null, 
+			string m3URLA = null, 
+			int? m3AUDY = null, 
+			int? m3MEID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -100,55 +102,55 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRDI))
-				throw new ArgumentNullException("m3_TRDI");
-			if (string.IsNullOrWhiteSpace(m3_TRDP))
-				throw new ArgumentNullException("m3_TRDP");
+			if (string.IsNullOrWhiteSpace(m3TRDI))
+				throw new ArgumentNullException(nameof(m3TRDI));
+			if (string.IsNullOrWhiteSpace(m3TRDP))
+				throw new ArgumentNullException(nameof(m3TRDP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRDI", m3_TRDI.Trim())
-				.WithQueryParameter("TRDP", m3_TRDP.Trim());
+				.WithQueryParameter("TRDI", m3TRDI.Trim())
+				.WithQueryParameter("TRDP", m3TRDP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_MEXX.HasValue)
-				request.WithQueryParameter("MEXX", m3_MEXX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_US65))
-				request.WithQueryParameter("US65", m3_US65.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PWRD))
-				request.WithQueryParameter("PWRD", m3_PWRD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_HADR))
-				request.WithQueryParameter("HADR", m3_HADR.Trim());
-			if (m3_HPOR.HasValue)
-				request.WithQueryParameter("HPOR", m3_HPOR.Value.ToString());
-			if (m3_TOSE.HasValue)
-				request.WithQueryParameter("TOSE", m3_TOSE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_VEND))
-				request.WithQueryParameter("VEND", m3_VEND.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PART))
-				request.WithQueryParameter("PART", m3_PART.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRXA))
-				request.WithQueryParameter("PRXA", m3_PRXA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRXL))
-				request.WithQueryParameter("PRXL", m3_PRXL.Trim());
-			if (m3_PRXP.HasValue)
-				request.WithQueryParameter("PRXP", m3_PRXP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PRXW))
-				request.WithQueryParameter("PRXW", m3_PRXW.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD01))
-				request.WithQueryParameter("UD01", m3_UD01.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD02))
-				request.WithQueryParameter("UD02", m3_UD02.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD03))
-				request.WithQueryParameter("UD03", m3_UD03.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD04))
-				request.WithQueryParameter("UD04", m3_UD04.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_URLA))
-				request.WithQueryParameter("URLA", m3_URLA.Trim());
-			if (m3_AUDY.HasValue)
-				request.WithQueryParameter("AUDY", m3_AUDY.Value.ToString());
-			if (m3_MEID.HasValue)
-				request.WithQueryParameter("MEID", m3_MEID.Value.ToString());
+			if (m3MEXX.HasValue)
+				request.WithQueryParameter("MEXX", m3MEXX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3US65))
+				request.WithQueryParameter("US65", m3US65.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PWRD))
+				request.WithQueryParameter("PWRD", m3PWRD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3HADR))
+				request.WithQueryParameter("HADR", m3HADR.Trim());
+			if (m3HPOR.HasValue)
+				request.WithQueryParameter("HPOR", m3HPOR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TOSE.HasValue)
+				request.WithQueryParameter("TOSE", m3TOSE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3VEND))
+				request.WithQueryParameter("VEND", m3VEND.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PART))
+				request.WithQueryParameter("PART", m3PART.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRXA))
+				request.WithQueryParameter("PRXA", m3PRXA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRXL))
+				request.WithQueryParameter("PRXL", m3PRXL.Trim());
+			if (m3PRXP.HasValue)
+				request.WithQueryParameter("PRXP", m3PRXP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PRXW))
+				request.WithQueryParameter("PRXW", m3PRXW.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD01))
+				request.WithQueryParameter("UD01", m3UD01.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD02))
+				request.WithQueryParameter("UD02", m3UD02.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD03))
+				request.WithQueryParameter("UD03", m3UD03.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD04))
+				request.WithQueryParameter("UD04", m3UD04.Trim());
+			if (!string.IsNullOrWhiteSpace(m3URLA))
+				request.WithQueryParameter("URLA", m3URLA.Trim());
+			if (m3AUDY.HasValue)
+				request.WithQueryParameter("AUDY", m3AUDY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MEID.HasValue)
+				request.WithQueryParameter("MEID", m3MEID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -158,7 +160,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -169,7 +172,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a third party id
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_TRDI">3rd-party id</param>
+		/// <param name="m3TRDI">3rd-party id</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -178,7 +181,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Dlt3rdPartyId(
-			string m3_TRDI = null, 
+			string m3TRDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -193,8 +196,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRDI))
-				request.WithQueryParameter("TRDI", m3_TRDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRDI))
+				request.WithQueryParameter("TRDI", m3TRDI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -204,7 +207,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -215,7 +219,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a 3td party id
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TRDI">3rd-party id</param>
+		/// <param name="m3TRDI">3rd-party id</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -224,7 +228,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<Get3rdPartyIdResponse></returns>
 		/// <exception cref="M3Exception<Get3rdPartyIdResponse>"></exception>
 		public async Task<M3Response<Get3rdPartyIdResponse>> Get3rdPartyId(
-			string m3_TRDI = null, 
+			string m3TRDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -239,8 +243,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRDI))
-				request.WithQueryParameter("TRDI", m3_TRDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRDI))
+				request.WithQueryParameter("TRDI", m3TRDI.Trim());
 
 			// Execute the request
 			var result = await Execute<Get3rdPartyIdResponse>(
@@ -250,7 +254,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -261,7 +266,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a 3td party id
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TRDI">3rd-party id</param>
+		/// <param name="m3TRDI">3rd-party id</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -270,7 +275,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<Get3rdPartyId2Response></returns>
 		/// <exception cref="M3Exception<Get3rdPartyId2Response>"></exception>
 		public async Task<M3Response<Get3rdPartyId2Response>> Get3rdPartyId2(
-			string m3_TRDI = null, 
+			string m3TRDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -285,8 +290,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRDI))
-				request.WithQueryParameter("TRDI", m3_TRDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRDI))
+				request.WithQueryParameter("TRDI", m3TRDI.Trim());
 
 			// Execute the request
 			var result = await Execute<Get3rdPartyId2Response>(
@@ -296,7 +301,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -307,7 +313,7 @@ namespace M3H5Lib.Api
 		/// Description List data for 3rd party ids
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TRDI">3rd-party id</param>
+		/// <param name="m3TRDI">3rd-party id</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -316,7 +322,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<Lst3rdPartyIdsResponse></returns>
 		/// <exception cref="M3Exception<Lst3rdPartyIdsResponse>"></exception>
 		public async Task<M3Response<Lst3rdPartyIdsResponse>> Lst3rdPartyIds(
-			string m3_TRDI = null, 
+			string m3TRDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -331,8 +337,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRDI))
-				request.WithQueryParameter("TRDI", m3_TRDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRDI))
+				request.WithQueryParameter("TRDI", m3TRDI.Trim());
 
 			// Execute the request
 			var result = await Execute<Lst3rdPartyIdsResponse>(
@@ -342,7 +348,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -353,7 +360,7 @@ namespace M3H5Lib.Api
 		/// Description List data for 3rd party ids
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TRDI">3rd-party id</param>
+		/// <param name="m3TRDI">3rd-party id</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -362,7 +369,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<Lst3rdPartyIds2Response></returns>
 		/// <exception cref="M3Exception<Lst3rdPartyIds2Response>"></exception>
 		public async Task<M3Response<Lst3rdPartyIds2Response>> Lst3rdPartyIds2(
-			string m3_TRDI = null, 
+			string m3TRDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -377,8 +384,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRDI))
-				request.WithQueryParameter("TRDI", m3_TRDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRDI))
+				request.WithQueryParameter("TRDI", m3TRDI.Trim());
 
 			// Execute the request
 			var result = await Execute<Lst3rdPartyIds2Response>(
@@ -388,7 +395,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -399,27 +407,27 @@ namespace M3H5Lib.Api
 		/// Description Update data for a 3rd party id
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_TRDI">3rd-party id (Required)</param>
-		/// <param name="m3_TRDP">3rd-party provider</param>
-		/// <param name="m3_HADR">Host address</param>
-		/// <param name="m3_MEXX">Old MEID</param>
-		/// <param name="m3_US65">User</param>
-		/// <param name="m3_PWRD">Password</param>
-		/// <param name="m3_HPOR">Host port</param>
-		/// <param name="m3_TOSE">Timeout in seconds</param>
-		/// <param name="m3_VEND">Vendor</param>
-		/// <param name="m3_PART">Partner</param>
-		/// <param name="m3_PRXA">Proxy address</param>
-		/// <param name="m3_PRXL">Proxy logon</param>
-		/// <param name="m3_PRXP">Proxy port</param>
-		/// <param name="m3_PRXW">Proxy password</param>
-		/// <param name="m3_UD01">User-defined field</param>
-		/// <param name="m3_UD02">User-defined field</param>
-		/// <param name="m3_UD03">User-defined field</param>
-		/// <param name="m3_UD04">User-defined field</param>
-		/// <param name="m3_URLA">URL address</param>
-		/// <param name="m3_AUDY">Authorization days</param>
-		/// <param name="m3_MEID">Merchant ID</param>
+		/// <param name="m3TRDI">3rd-party id (Required)</param>
+		/// <param name="m3TRDP">3rd-party provider</param>
+		/// <param name="m3HADR">Host address</param>
+		/// <param name="m3MEXX">Old MEID</param>
+		/// <param name="m3US65">User</param>
+		/// <param name="m3PWRD">Password</param>
+		/// <param name="m3HPOR">Host port</param>
+		/// <param name="m3TOSE">Timeout in seconds</param>
+		/// <param name="m3VEND">Vendor</param>
+		/// <param name="m3PART">Partner</param>
+		/// <param name="m3PRXA">Proxy address</param>
+		/// <param name="m3PRXL">Proxy logon</param>
+		/// <param name="m3PRXP">Proxy port</param>
+		/// <param name="m3PRXW">Proxy password</param>
+		/// <param name="m3UD01">User-defined field</param>
+		/// <param name="m3UD02">User-defined field</param>
+		/// <param name="m3UD03">User-defined field</param>
+		/// <param name="m3UD04">User-defined field</param>
+		/// <param name="m3URLA">URL address</param>
+		/// <param name="m3AUDY">Authorization days</param>
+		/// <param name="m3MEID">Merchant ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -428,27 +436,27 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd3rdPartyId(
-			string m3_TRDI, 
-			string m3_TRDP = null, 
-			string m3_HADR = null, 
-			int? m3_MEXX = null, 
-			string m3_US65 = null, 
-			string m3_PWRD = null, 
-			int? m3_HPOR = null, 
-			int? m3_TOSE = null, 
-			string m3_VEND = null, 
-			string m3_PART = null, 
-			string m3_PRXA = null, 
-			string m3_PRXL = null, 
-			int? m3_PRXP = null, 
-			string m3_PRXW = null, 
-			string m3_UD01 = null, 
-			string m3_UD02 = null, 
-			string m3_UD03 = null, 
-			string m3_UD04 = null, 
-			string m3_URLA = null, 
-			int? m3_AUDY = null, 
-			int? m3_MEID = null, 
+			string m3TRDI, 
+			string m3TRDP = null, 
+			string m3HADR = null, 
+			int? m3MEXX = null, 
+			string m3US65 = null, 
+			string m3PWRD = null, 
+			int? m3HPOR = null, 
+			int? m3TOSE = null, 
+			string m3VEND = null, 
+			string m3PART = null, 
+			string m3PRXA = null, 
+			string m3PRXL = null, 
+			int? m3PRXP = null, 
+			string m3PRXW = null, 
+			string m3UD01 = null, 
+			string m3UD02 = null, 
+			string m3UD03 = null, 
+			string m3UD04 = null, 
+			string m3URLA = null, 
+			int? m3AUDY = null, 
+			int? m3MEID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -463,54 +471,54 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TRDI))
-				throw new ArgumentNullException("m3_TRDI");
+			if (string.IsNullOrWhiteSpace(m3TRDI))
+				throw new ArgumentNullException(nameof(m3TRDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TRDI", m3_TRDI.Trim());
+				.WithQueryParameter("TRDI", m3TRDI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TRDP))
-				request.WithQueryParameter("TRDP", m3_TRDP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_HADR))
-				request.WithQueryParameter("HADR", m3_HADR.Trim());
-			if (m3_MEXX.HasValue)
-				request.WithQueryParameter("MEXX", m3_MEXX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_US65))
-				request.WithQueryParameter("US65", m3_US65.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PWRD))
-				request.WithQueryParameter("PWRD", m3_PWRD.Trim());
-			if (m3_HPOR.HasValue)
-				request.WithQueryParameter("HPOR", m3_HPOR.Value.ToString());
-			if (m3_TOSE.HasValue)
-				request.WithQueryParameter("TOSE", m3_TOSE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_VEND))
-				request.WithQueryParameter("VEND", m3_VEND.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PART))
-				request.WithQueryParameter("PART", m3_PART.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRXA))
-				request.WithQueryParameter("PRXA", m3_PRXA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRXL))
-				request.WithQueryParameter("PRXL", m3_PRXL.Trim());
-			if (m3_PRXP.HasValue)
-				request.WithQueryParameter("PRXP", m3_PRXP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PRXW))
-				request.WithQueryParameter("PRXW", m3_PRXW.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD01))
-				request.WithQueryParameter("UD01", m3_UD01.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD02))
-				request.WithQueryParameter("UD02", m3_UD02.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD03))
-				request.WithQueryParameter("UD03", m3_UD03.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UD04))
-				request.WithQueryParameter("UD04", m3_UD04.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_URLA))
-				request.WithQueryParameter("URLA", m3_URLA.Trim());
-			if (m3_AUDY.HasValue)
-				request.WithQueryParameter("AUDY", m3_AUDY.Value.ToString());
-			if (m3_MEID.HasValue)
-				request.WithQueryParameter("MEID", m3_MEID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3TRDP))
+				request.WithQueryParameter("TRDP", m3TRDP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3HADR))
+				request.WithQueryParameter("HADR", m3HADR.Trim());
+			if (m3MEXX.HasValue)
+				request.WithQueryParameter("MEXX", m3MEXX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3US65))
+				request.WithQueryParameter("US65", m3US65.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PWRD))
+				request.WithQueryParameter("PWRD", m3PWRD.Trim());
+			if (m3HPOR.HasValue)
+				request.WithQueryParameter("HPOR", m3HPOR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TOSE.HasValue)
+				request.WithQueryParameter("TOSE", m3TOSE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3VEND))
+				request.WithQueryParameter("VEND", m3VEND.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PART))
+				request.WithQueryParameter("PART", m3PART.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRXA))
+				request.WithQueryParameter("PRXA", m3PRXA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRXL))
+				request.WithQueryParameter("PRXL", m3PRXL.Trim());
+			if (m3PRXP.HasValue)
+				request.WithQueryParameter("PRXP", m3PRXP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PRXW))
+				request.WithQueryParameter("PRXW", m3PRXW.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD01))
+				request.WithQueryParameter("UD01", m3UD01.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD02))
+				request.WithQueryParameter("UD02", m3UD02.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD03))
+				request.WithQueryParameter("UD03", m3UD03.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UD04))
+				request.WithQueryParameter("UD04", m3UD04.Trim());
+			if (!string.IsNullOrWhiteSpace(m3URLA))
+				request.WithQueryParameter("URLA", m3URLA.Trim());
+			if (m3AUDY.HasValue)
+				request.WithQueryParameter("AUDY", m3AUDY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MEID.HasValue)
+				request.WithQueryParameter("MEID", m3MEID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -520,7 +528,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

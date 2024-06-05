@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 1")]
-		public string M3_COA1 => GetString("COA1");
+		public string M3COA1 => GetString("COA1");
 
 		/// <summary>
 		/// Description: Company address 2
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 2")]
-		public string M3_COA2 => GetString("COA2");
+		public string M3COA2 => GetString("COA2");
 
 		/// <summary>
 		/// Description: Company address 3
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 3")]
-		public string M3_COA3 => GetString("COA3");
+		public string M3COA3 => GetString("COA3");
 
 		/// <summary>
 		/// Description: Company address 4
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 4")]
-		public string M3_COA4 => GetString("COA4");
+		public string M3COA4 => GetString("COA4");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Telephone number 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 2")]
-		public string M3_PHN2 => GetString("PHN2");
+		public string M3PHN2 => GetString("PHN2");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_OVRN => GetString("OVRN");
+		public string M3OVRN => GetString("OVRN");
 
 		/// <summary>
 		/// Description: Tax declaration number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax declaration number")]
-		public string M3_VRNL => GetString("VRNL");
+		public string M3VRNL => GetString("VRNL");
 
 		/// <summary>
 		/// Description: EU report no
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("EU report no")]
-		public long? M3_ESNO => GetNullableLong("ESNO");
+		public long? M3ESNO => GetNullableLong("ESNO");
 
 		/// <summary>
 		/// Description: Year
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Period
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_PERI => GetNullableInt("PERI");
+		public int? M3PERI => GetNullableInt("PERI");
 
 		/// <summary>
 		/// Description: Quarter
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quarter")]
-		public int? M3_ESAR => GetNullableInt("ESAR");
+		public int? M3ESAR => GetNullableInt("ESAR");
 
 		/// <summary>
 		/// Description: Currency
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Base country
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Base country")]
-		public string M3_BSCD => GetString("BSCD");
+		public string M3BSCD => GetString("BSCD");
 
 		/// <summary>
 		/// Description: Corrective report
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Corrective report")]
-		public int? M3_CORR => GetNullableInt("CORR");
+		public int? M3CORR => GetNullableInt("CORR");
 
 		/// <summary>
 		/// Description: City
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Company name
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Postal code
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Entry date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Corrective report number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Corrective report number")]
-		public long? M3_CRRN => GetNullableLong("CRRN");
+		public long? M3CRRN => GetNullableLong("CRRN");
 
 		/// <summary>
 		/// Description: From VAT date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From VAT date")]
-		public DateTime? M3_FVAT => GetNullableDateTime("FVAT");
+		public DateTime? M3FVAT => GetNullableDateTime("FVAT");
 
 		/// <summary>
 		/// Description: To VAT date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.TXS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To VAT date")]
-		public DateTime? M3_TVAT => GetNullableDateTime("TVAT");
+		public DateTime? M3TVAT => GetNullableDateTime("TVAT");
 	}
 }
 // EOF

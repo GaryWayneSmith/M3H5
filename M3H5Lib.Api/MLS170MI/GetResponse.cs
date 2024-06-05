@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Line number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Quotation
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quotation")]
-		public int? M3_AQUO => GetNullableInt("AQUO");
+		public int? M3AQUO => GetNullableInt("AQUO");
 
 		/// <summary>
 		/// Description: Payer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_ALI1 => GetNullableInt("ALI1");
+		public int? M3ALI1 => GetNullableInt("ALI1");
 
 		/// <summary>
 		/// Description: Line type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public int? M3_ALNT => GetNullableInt("ALNT");
+		public int? M3ALNT => GetNullableInt("ALNT");
 
 		/// <summary>
 		/// Description: Period
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_CYP6 => GetNullableInt("CYP6");
+		public int? M3CYP6 => GetNullableInt("CYP6");
 
 		/// <summary>
 		/// Description: Job reference 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job reference 1")]
-		public string M3_GSR1 => GetString("GSR1");
+		public string M3GSR1 => GetString("GSR1");
 
 		/// <summary>
 		/// Description: Job reference 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job reference 2")]
-		public string M3_GSR2 => GetString("GSR2");
+		public string M3GSR2 => GetString("GSR2");
 
 		/// <summary>
 		/// Description: Facility
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work center
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Costing type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing type")]
-		public string M3_PCTP => GetString("PCTP");
+		public string M3PCTP => GetString("PCTP");
 
 		/// <summary>
 		/// Description: Operation number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Claim
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim")]
-		public string M3_CLNO => GetString("CLNO");
+		public string M3CLNO => GetString("CLNO");
 
 		/// <summary>
 		/// Description: Remark
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remark")]
-		public string M3_REMK => GetString("REMK");
+		public string M3REMK => GetString("REMK");
 
 		/// <summary>
 		/// Description: Sales price
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_ASP1 => GetNullableDecimal("ASP1");
+		public decimal? M3ASP1 => GetNullableDecimal("ASP1");
 
 		/// <summary>
 		/// Description: Sales price
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Net price
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net price")]
-		public decimal? M3_NEPR => GetNullableDecimal("NEPR");
+		public decimal? M3NEPR => GetNullableDecimal("NEPR");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Manually updated
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually updated")]
-		public int? M3_MAUP => GetNullableInt("MAUP");
+		public int? M3MAUP => GetNullableInt("MAUP");
 
 		/// <summary>
 		/// Description: Split code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split code")]
-		public int? M3_ASP9 => GetNullableInt("ASP9");
+		public int? M3ASP9 => GetNullableInt("ASP9");
 
 		/// <summary>
 		/// Description: Discount
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount")]
-		public int? M3_DIPL => GetNullableInt("DIPL");
+		public int? M3DIPL => GetNullableInt("DIPL");
 
 		/// <summary>
 		/// Description: Discount amount
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount")]
-		public decimal? M3_DIAL => GetNullableDecimal("DIAL");
+		public decimal? M3DIAL => GetNullableDecimal("DIAL");
 
 		/// <summary>
 		/// Description: Amount or price
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount or price")]
-		public int? M3_APAC => GetNullableInt("APAC");
+		public int? M3APAC => GetNullableInt("APAC");
 
 		/// <summary>
 		/// Description: Lot number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Handling charge
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Handling charge")]
-		public decimal? M3_AHPR => GetNullableDecimal("AHPR");
+		public decimal? M3AHPR => GetNullableDecimal("AHPR");
 
 		/// <summary>
 		/// Description: WIP debit material
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("WIP debit material")]
-		public decimal? M3_AMC2 => GetNullableDecimal("AMC2");
+		public decimal? M3AMC2 => GetNullableDecimal("AMC2");
 
 		/// <summary>
 		/// Description: Miscellaneous cost types
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Miscellaneous cost types")]
-		public string M3_AMTY => GetString("AMTY");
+		public string M3AMTY => GetString("AMTY");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Attribute number lot
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number lot")]
-		public decimal? M3_ATNB => GetNullableDecimal("ATNB");
+		public decimal? M3ATNB => GetNullableDecimal("ATNB");
 
 		/// <summary>
 		/// Description: Deviating work center
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deviating work center")]
-		public string M3_DPLG => GetString("DPLG");
+		public string M3DPLG => GetString("DPLG");
 
 		/// <summary>
 		/// Description: Text identity
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Employee number
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Tax code customer/address
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code customer/address")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Manually updated
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually updated")]
-		public int? M3_MUTC => GetNullableInt("MUTC");
+		public int? M3MUTC => GetNullableInt("MUTC");
 
 		/// <summary>
 		/// Description: Claim warranty
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim warranty")]
-		public int? M3_ACWA => GetNullableInt("ACWA");
+		public int? M3ACWA => GetNullableInt("ACWA");
 
 		/// <summary>
 		/// Description: WIP debit
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("WIP debit")]
-		public decimal? M3_AWCO => GetNullableDecimal("AWCO");
+		public decimal? M3AWCO => GetNullableDecimal("AWCO");
 
 		/// <summary>
 		/// Description: Warranty type
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty type")]
-		public string M3_WATP => GetString("WATP");
+		public string M3WATP => GetString("WATP");
 
 		/// <summary>
 		/// Description: Payer agreement
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer agreement")]
-		public string M3_CLAG => GetString("CLAG");
+		public string M3CLAG => GetString("CLAG");
 
 		/// <summary>
 		/// Description: Return processing
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return processing")]
-		public int? M3_RTPR => GetNullableInt("RTPR");
+		public int? M3RTPR => GetNullableInt("RTPR");
 
 		/// <summary>
 		/// Description: Price origin
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price origin")]
-		public string M3_PRMO => GetString("PRMO");
+		public string M3PRMO => GetString("PRMO");
 
 		/// <summary>
 		/// Description: Line number
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_DINR => GetNullableInt("DINR");
+		public int? M3DINR => GetNullableInt("DINR");
 
 		/// <summary>
 		/// Description: Discount in kind line suffix
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount in kind line suffix")]
-		public int? M3_DISX => GetNullableInt("DISX");
+		public int? M3DISX => GetNullableInt("DISX");
 
 		/// <summary>
 		/// Description: Project number
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: From order number
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From order number")]
-		public string M3_AFOR => GetString("AFOR");
+		public string M3AFOR => GetString("AFOR");
 
 		/// <summary>
 		/// Description: Line number
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_AFPO => GetNullableInt("AFPO");
+		public int? M3AFPO => GetNullableInt("AFPO");
 
 		/// <summary>
 		/// Description: Order number
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_TRNR => GetString("TRNR");
+		public string M3TRNR => GetString("TRNR");
 
 		/// <summary>
 		/// Description: Stock transaction type
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock transaction type")]
-		public int? M3_TTYP => GetNullableInt("TTYP");
+		public int? M3TTYP => GetNullableInt("TTYP");
 
 		/// <summary>
 		/// Description: Position number
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Position number")]
-		public int? M3_PONX => GetNullableInt("PONX");
+		public int? M3PONX => GetNullableInt("PONX");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.MLS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 	}
 }
 // EOF

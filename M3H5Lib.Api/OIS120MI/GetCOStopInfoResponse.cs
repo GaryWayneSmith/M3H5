@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Customer
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer stop
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer stop")]
-		public int? M3_BLCD => GetNullableInt("BLCD");
+		public int? M3BLCD => GetNullableInt("BLCD");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Customer order type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Lowest status - customer order
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - customer order")]
-		public string M3_ORSL => GetString("ORSL");
+		public string M3ORSL => GetString("ORSL");
 
 		/// <summary>
 		/// Description: Highest status - customer order
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - customer order")]
-		public string M3_ORST => GetString("ORST");
+		public string M3ORST => GetString("ORST");
 
 		/// <summary>
 		/// Description: Order date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_RLDT => GetNullableDateTime("RLDT");
+		public DateTime? M3RLDT => GetNullableDateTime("RLDT");
 
 		/// <summary>
 		/// Description: Net order value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net order value")]
-		public decimal? M3_NTAM => GetNullableDecimal("NTAM");
+		public decimal? M3NTAM => GetNullableDecimal("NTAM");
 
 		/// <summary>
 		/// Description: Customer order stop
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order stop")]
-		public int? M3_OBLC => GetNullableInt("OBLC");
+		public int? M3OBLC => GetNullableInt("OBLC");
 
 		/// <summary>
 		/// Description: Status
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Language
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Currency
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Credit limit 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit 1")]
-		public decimal? M3_CRLM => GetNullableDecimal("CRLM");
+		public decimal? M3CRLM => GetNullableDecimal("CRLM");
 
 		/// <summary>
 		/// Description: Overdue invoice amount
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overdue invoice amount")]
-		public decimal? M3_ODIN => GetNullableDecimal("ODIN");
+		public decimal? M3ODIN => GetNullableDecimal("ODIN");
 
 		/// <summary>
 		/// Description: Difference of CRLM and ODIN
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Difference of CRLM and ODIN")]
-		public decimal? M3_DIF1 => GetNullableDecimal("DIF1");
+		public decimal? M3DIF1 => GetNullableDecimal("DIF1");
 
 		/// <summary>
 		/// Description: Credit limit 2
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit 2")]
-		public decimal? M3_CRL2 => GetNullableDecimal("CRL2");
+		public decimal? M3CRL2 => GetNullableDecimal("CRL2");
 
 		/// <summary>
 		/// Description: Outstanding invoice amount
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Outstanding invoice amount")]
-		public decimal? M3_OINA => GetNullableDecimal("OINA");
+		public decimal? M3OINA => GetNullableDecimal("OINA");
 
 		/// <summary>
 		/// Description: Difference of CRL2 and OINA
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Difference of CRL2 and OINA")]
-		public decimal? M3_DIF2 => GetNullableDecimal("DIF2");
+		public decimal? M3DIF2 => GetNullableDecimal("DIF2");
 
 		/// <summary>
 		/// Description: Credit limit 3
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit limit 3")]
-		public decimal? M3_CRL3 => GetNullableDecimal("CRL3");
+		public decimal? M3CRL3 => GetNullableDecimal("CRL3");
 
 		/// <summary>
 		/// Description: Order value not invoiced
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order value not invoiced")]
-		public decimal? M3_OVNI => GetNullableDecimal("OVNI");
+		public decimal? M3OVNI => GetNullableDecimal("OVNI");
 
 		/// <summary>
 		/// Description: Outstanding without risk
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Outstanding without risk")]
-		public decimal? M3_OWOR => GetNullableDecimal("OWOR");
+		public decimal? M3OWOR => GetNullableDecimal("OWOR");
 
 		/// <summary>
 		/// Description: Order value without risk
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order value without risk")]
-		public decimal? M3_OVWR => GetNullableDecimal("OVWR");
+		public decimal? M3OVWR => GetNullableDecimal("OVWR");
 
 		/// <summary>
 		/// Description: Difference of CRL3 and OVNI
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Difference of CRL3 and OVNI")]
-		public decimal? M3_DIF3 => GetNullableDecimal("DIF3");
+		public decimal? M3DIF3 => GetNullableDecimal("DIF3");
 	}
 }
 // EOF

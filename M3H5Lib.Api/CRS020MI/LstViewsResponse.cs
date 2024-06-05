@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Information browser category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information browser category")]
-		public string M3_IBCA => GetString("IBCA");
+		public string M3IBCA => GetString("IBCA");
 
 		/// <summary>
 		/// Description: View
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View")]
-		public string M3_PAVR => GetString("PAVR");
+		public string M3PAVR => GetString("PAVR");
 
 		/// <summary>
 		/// Description: Panel
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel")]
-		public string M3_PIC1 => GetString("PIC1");
+		public string M3PIC1 => GetString("PIC1");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Option/quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option/quantity")]
-		public int? M3_PVTP => GetNullableInt("PVTP");
+		public int? M3PVTP => GetNullableInt("PVTP");
 	}
 }
 // EOF

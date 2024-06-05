@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Order category
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Order number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Operation number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Allocated quantity - basic U/M
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - basic U/M")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Remaining quantity - basic U/M
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining quantity - basic U/M")]
-		public decimal? M3_RNQT => GetNullableDecimal("RNQT");
+		public decimal? M3RNQT => GetNullableDecimal("RNQT");
 
 		/// <summary>
 		/// Description: Product number ( Main Product)
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number ( Main Product)")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Co-product share (for MOP)
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Co-product share (for MOP)")]
-		public int? M3_CPRP => GetNullableInt("CPRP");
+		public int? M3CPRP => GetNullableInt("CPRP");
 
 		/// <summary>
 		/// Description: Ordered qty - basic U/M (MO for ByCo)
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered qty - basic U/M (MO for ByCo)")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Ordered qty - alternate U/M (MO for ByC
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered qty - alternate U/M (MO for ByC")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Received quantity (MO for ByCo-prod)
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity (MO for ByCo-prod)")]
-		public decimal? M3_RVQT => GetNullableDecimal("RVQT");
+		public decimal? M3RVQT => GetNullableDecimal("RVQT");
 
 		/// <summary>
 		/// Description: Received quantity (Mo for ByCo-prod)
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity (Mo for ByCo-prod)")]
-		public decimal? M3_RVQA => GetNullableDecimal("RVQA");
+		public decimal? M3RVQA => GetNullableDecimal("RVQA");
 
 		/// <summary>
 		/// Description: Facility
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS080MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 	}
 }
 // EOF

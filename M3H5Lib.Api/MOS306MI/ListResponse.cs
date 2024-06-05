@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Service price list
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price list")]
-		public string M3_SPRL => GetString("SPRL");
+		public string M3SPRL => GetString("SPRL");
 
 		/// <summary>
 		/// Description: Service price method
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price method")]
-		public int? M3_SRVP => GetNullableInt("SRVP");
+		public int? M3SRVP => GetNullableInt("SRVP");
 
 		/// <summary>
 		/// Description: Currency
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Facility
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: From date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: Service price
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price")]
-		public decimal? M3_SERP => GetNullableDecimal("SERP");
+		public decimal? M3SERP => GetNullableDecimal("SERP");
 
 		/// <summary>
 		/// Description: Price in labor currency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in labor currency")]
-		public decimal? M3_ADF1 => GetNullableDecimal("ADF1");
+		public decimal? M3ADF1 => GetNullableDecimal("ADF1");
 
 		/// <summary>
 		/// Description: Price in material currency
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in material currency")]
-		public decimal? M3_ADF2 => GetNullableDecimal("ADF2");
+		public decimal? M3ADF2 => GetNullableDecimal("ADF2");
 
 		/// <summary>
 		/// Description: Price in subcontracting currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in subcontracting currency")]
-		public decimal? M3_ADF3 => GetNullableDecimal("ADF3");
+		public decimal? M3ADF3 => GetNullableDecimal("ADF3");
 
 		/// <summary>
 		/// Description: Price in miscellaneous currency
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in miscellaneous currency")]
-		public decimal? M3_ADF4 => GetNullableDecimal("ADF4");
+		public decimal? M3ADF4 => GetNullableDecimal("ADF4");
 
 		/// <summary>
 		/// Description: Fixed amount
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed amount")]
-		public int? M3_ADY1 => GetNullableInt("ADY1");
+		public int? M3ADY1 => GetNullableInt("ADY1");
 
 		/// <summary>
 		/// Description: Fixed amount
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed amount")]
-		public int? M3_ADY2 => GetNullableInt("ADY2");
+		public int? M3ADY2 => GetNullableInt("ADY2");
 
 		/// <summary>
 		/// Description: Fixed amount
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed amount")]
-		public int? M3_ADY3 => GetNullableInt("ADY3");
+		public int? M3ADY3 => GetNullableInt("ADY3");
 
 		/// <summary>
 		/// Description: Fixed amount
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS306MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed amount")]
-		public int? M3_ADY4 => GetNullableInt("ADY4");
+		public int? M3ADY4 => GetNullableInt("ADY4");
 	}
 }
 // EOF

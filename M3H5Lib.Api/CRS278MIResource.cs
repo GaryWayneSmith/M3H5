@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS278MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description List charge models
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CHSY">Line charge model</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CHSY">Line charge model</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstChrgModelsResponse></returns>
 		/// <exception cref="M3Exception<LstChrgModelsResponse>"></exception>
 		public async Task<M3Response<LstChrgModelsResponse>> LstChrgModels(
-			int? m3_CONO = null, 
-			string m3_CHSY = null, 
+			int? m3CONO = null, 
+			string m3CHSY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CHSY))
-				request.WithQueryParameter("CHSY", m3_CHSY.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CHSY))
+				request.WithQueryParameter("CHSY", m3CHSY.Trim());
 
 			// Execute the request
 			var result = await Execute<LstChrgModelsResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,9 +89,9 @@ namespace M3H5Lib.Api
 		/// Description List keys for order line charges
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CHSY">Line charge model</param>
-		/// <param name="m3_CRID">Charge</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CHSY">Line charge model</param>
+		/// <param name="m3CRID">Charge</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -97,9 +100,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstKeyLineChrgResponse></returns>
 		/// <exception cref="M3Exception<LstKeyLineChrgResponse>"></exception>
 		public async Task<M3Response<LstKeyLineChrgResponse>> LstKeyLineChrg(
-			int? m3_CONO = null, 
-			string m3_CHSY = null, 
-			string m3_CRID = null, 
+			int? m3CONO = null, 
+			string m3CHSY = null, 
+			string m3CRID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -114,12 +117,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CHSY))
-				request.WithQueryParameter("CHSY", m3_CHSY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CHSY))
+				request.WithQueryParameter("CHSY", m3CHSY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstKeyLineChrgResponse>(
@@ -129,7 +132,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -140,9 +144,9 @@ namespace M3H5Lib.Api
 		/// Description List line charges per model
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CHSY">Line charge model</param>
-		/// <param name="m3_CRID">Charge</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CHSY">Line charge model</param>
+		/// <param name="m3CRID">Charge</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -151,9 +155,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLineChrgModResponse></returns>
 		/// <exception cref="M3Exception<LstLineChrgModResponse>"></exception>
 		public async Task<M3Response<LstLineChrgModResponse>> LstLineChrgMod(
-			int? m3_CONO = null, 
-			string m3_CHSY = null, 
-			string m3_CRID = null, 
+			int? m3CONO = null, 
+			string m3CHSY = null, 
+			string m3CRID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -168,12 +172,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CHSY))
-				request.WithQueryParameter("CHSY", m3_CHSY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CHSY))
+				request.WithQueryParameter("CHSY", m3CHSY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstLineChrgModResponse>(
@@ -183,7 +187,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Travel zone
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Travel zone")]
-		public int? M3_LZON => GetNullableInt("LZON");
+		public int? M3LZON => GetNullableInt("LZON");
 
 		/// <summary>
 		/// Description: Number of kilometer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of kilometer")]
-		public int? M3_DIST => GetNullableInt("DIST");
+		public int? M3DIST => GetNullableInt("DIST");
 
 		/// <summary>
 		/// Description: Travel time
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Travel time")]
-		public int? M3_TRTI => GetNullableInt("TRTI");
+		public int? M3TRTI => GetNullableInt("TRTI");
 
 		/// <summary>
 		/// Description: Responsible
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Service manager
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Technician
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician")]
-		public string M3_TECH => GetString("TECH");
+		public string M3TECH => GetString("TECH");
 
 		/// <summary>
 		/// Description: Price list 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 1")]
-		public string M3_PRS1 => GetString("PRS1");
+		public string M3PRS1 => GetString("PRS1");
 
 		/// <summary>
 		/// Description: Price list 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 2")]
-		public string M3_PRS2 => GetString("PRS2");
+		public string M3PRS2 => GetString("PRS2");
 
 		/// <summary>
 		/// Description: Price list 3
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 3")]
-		public string M3_PRS3 => GetString("PRS3");
+		public string M3PRS3 => GetString("PRS3");
 
 		/// <summary>
 		/// Description: Price list 4
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 4")]
-		public string M3_PRS4 => GetString("PRS4");
+		public string M3PRS4 => GetString("PRS4");
 
 		/// <summary>
 		/// Description: Price list 5
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 5")]
-		public string M3_PRS5 => GetString("PRS5");
+		public string M3PRS5 => GetString("PRS5");
 
 		/// <summary>
 		/// Description: Discount model
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Mandatory cust order no
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mandatory cust order no")]
-		public int? M3_MCON => GetNullableInt("MCON");
+		public int? M3MCON => GetNullableInt("MCON");
 
 		/// <summary>
 		/// Description: Service order type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order type")]
-		public string M3_SOTP => GetString("SOTP");
+		public string M3SOTP => GetString("SOTP");
 
 		/// <summary>
 		/// Description: Run
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run")]
-		public string M3_RONO => GetString("RONO");
+		public string M3RONO => GetString("RONO");
 
 		/// <summary>
 		/// Description: Travel type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Travel type")]
-		public string M3_TVCD => GetString("TVCD");
+		public string M3TVCD => GetString("TVCD");
 	}
 }
 // EOF

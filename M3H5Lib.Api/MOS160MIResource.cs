@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MOS160MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Maintenance - Get Meter Value
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_MES0">Meter (Required)</param>
-		/// <param name="m3_CONO">CompanyNumber</param>
-		/// <param name="m3_ITNO">ItemNumber</param>
-		/// <param name="m3_SERN">SerialNumber</param>
-		/// <param name="m3_TAIL">TailNumber</param>
-		/// <param name="m3_CFGL">ConfigPosition</param>
+		/// <param name="m3MES0">Meter (Required)</param>
+		/// <param name="m3CONO">CompanyNumber</param>
+		/// <param name="m3ITNO">ItemNumber</param>
+		/// <param name="m3SERN">SerialNumber</param>
+		/// <param name="m3TAIL">TailNumber</param>
+		/// <param name="m3CFGL">ConfigPosition</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetMeterValueResponse></returns>
 		/// <exception cref="M3Exception<GetMeterValueResponse>"></exception>
 		public async Task<M3Response<GetMeterValueResponse>> GetMeterValue(
-			string m3_MES0, 
-			int? m3_CONO = null, 
-			string m3_ITNO = null, 
-			string m3_SERN = null, 
-			string m3_TAIL = null, 
-			string m3_CFGL = null, 
+			string m3MES0, 
+			int? m3CONO = null, 
+			string m3ITNO = null, 
+			string m3SERN = null, 
+			string m3TAIL = null, 
+			string m3CFGL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,24 +72,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MES0))
-				throw new ArgumentNullException("m3_MES0");
+			if (string.IsNullOrWhiteSpace(m3MES0))
+				throw new ArgumentNullException(nameof(m3MES0));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MES0", m3_MES0.Trim());
+				.WithQueryParameter("MES0", m3MES0.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SERN))
-				request.WithQueryParameter("SERN", m3_SERN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAIL))
-				request.WithQueryParameter("TAIL", m3_TAIL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFGL))
-				request.WithQueryParameter("CFGL", m3_CFGL.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SERN))
+				request.WithQueryParameter("SERN", m3SERN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAIL))
+				request.WithQueryParameter("TAIL", m3TAIL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFGL))
+				request.WithQueryParameter("CFGL", m3CFGL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetMeterValueResponse>(
@@ -97,7 +99,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -108,12 +111,12 @@ namespace M3H5Lib.Api
 		/// Description Maintenance - List Meter Values
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_MES0">Meter (Required)</param>
-		/// <param name="m3_CONO">CompanyNumber</param>
-		/// <param name="m3_ITNO">ItemNumber</param>
-		/// <param name="m3_SERN">SerialNumber</param>
-		/// <param name="m3_TAIL">TailNumber</param>
-		/// <param name="m3_CFGL">ConfigPosition</param>
+		/// <param name="m3MES0">Meter (Required)</param>
+		/// <param name="m3CONO">CompanyNumber</param>
+		/// <param name="m3ITNO">ItemNumber</param>
+		/// <param name="m3SERN">SerialNumber</param>
+		/// <param name="m3TAIL">TailNumber</param>
+		/// <param name="m3CFGL">ConfigPosition</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -122,12 +125,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstMeterValueResponse></returns>
 		/// <exception cref="M3Exception<LstMeterValueResponse>"></exception>
 		public async Task<M3Response<LstMeterValueResponse>> LstMeterValue(
-			string m3_MES0, 
-			int? m3_CONO = null, 
-			string m3_ITNO = null, 
-			string m3_SERN = null, 
-			string m3_TAIL = null, 
-			string m3_CFGL = null, 
+			string m3MES0, 
+			int? m3CONO = null, 
+			string m3ITNO = null, 
+			string m3SERN = null, 
+			string m3TAIL = null, 
+			string m3CFGL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -142,24 +145,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MES0))
-				throw new ArgumentNullException("m3_MES0");
+			if (string.IsNullOrWhiteSpace(m3MES0))
+				throw new ArgumentNullException(nameof(m3MES0));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MES0", m3_MES0.Trim());
+				.WithQueryParameter("MES0", m3MES0.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SERN))
-				request.WithQueryParameter("SERN", m3_SERN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAIL))
-				request.WithQueryParameter("TAIL", m3_TAIL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFGL))
-				request.WithQueryParameter("CFGL", m3_CFGL.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SERN))
+				request.WithQueryParameter("SERN", m3SERN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAIL))
+				request.WithQueryParameter("TAIL", m3TAIL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFGL))
+				request.WithQueryParameter("CFGL", m3CFGL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstMeterValueResponse>(
@@ -169,7 +172,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -180,22 +184,22 @@ namespace M3H5Lib.Api
 		/// Description Maintenance - Update meter
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_MES0">Meter (Required)</param>
-		/// <param name="m3_MVA0">MeterValue (Required)</param>
-		/// <param name="m3_CONO">CompanyNumber</param>
-		/// <param name="m3_ITNO">ItemNumber</param>
-		/// <param name="m3_SERN">SerialNumber</param>
-		/// <param name="m3_TAIL">TailNumber</param>
-		/// <param name="m3_CFGL">ConfigPosition</param>
-		/// <param name="m3_OPCT">OperationCycleType</param>
-		/// <param name="m3_STDT">StartDate</param>
-		/// <param name="m3_STTI">StartTime  HHMMSS</param>
-		/// <param name="m3_ENTM">EndTime    HHMMSS</param>
-		/// <param name="m3_FCLA">Error code 1</param>
-		/// <param name="m3_FCL2">Error code 2</param>
-		/// <param name="m3_FCL3">Error code 3</param>
-		/// <param name="m3_TIZO">Time zone</param>
-		/// <param name="m3_MEEV">Meter event</param>
+		/// <param name="m3MES0">Meter (Required)</param>
+		/// <param name="m3MVA0">MeterValue (Required)</param>
+		/// <param name="m3CONO">CompanyNumber</param>
+		/// <param name="m3ITNO">ItemNumber</param>
+		/// <param name="m3SERN">SerialNumber</param>
+		/// <param name="m3TAIL">TailNumber</param>
+		/// <param name="m3CFGL">ConfigPosition</param>
+		/// <param name="m3OPCT">OperationCycleType</param>
+		/// <param name="m3STDT">StartDate</param>
+		/// <param name="m3STTI">StartTime  HHMMSS</param>
+		/// <param name="m3ENTM">EndTime    HHMMSS</param>
+		/// <param name="m3FCLA">Error code 1</param>
+		/// <param name="m3FCL2">Error code 2</param>
+		/// <param name="m3FCL3">Error code 3</param>
+		/// <param name="m3TIZO">Time zone</param>
+		/// <param name="m3MEEV">Meter event</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -204,22 +208,22 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<UpdMeterValueResponse></returns>
 		/// <exception cref="M3Exception<UpdMeterValueResponse>"></exception>
 		public async Task<M3Response<UpdMeterValueResponse>> UpdMeterValue(
-			string m3_MES0, 
-			decimal m3_MVA0, 
-			int? m3_CONO = null, 
-			string m3_ITNO = null, 
-			string m3_SERN = null, 
-			string m3_TAIL = null, 
-			string m3_CFGL = null, 
-			string m3_OPCT = null, 
-			DateTime? m3_STDT = null, 
-			string m3_STTI = null, 
-			string m3_ENTM = null, 
-			string m3_FCLA = null, 
-			string m3_FCL2 = null, 
-			string m3_FCL3 = null, 
-			string m3_TIZO = null, 
-			string m3_MEEV = null, 
+			string m3MES0, 
+			decimal m3MVA0, 
+			int? m3CONO = null, 
+			string m3ITNO = null, 
+			string m3SERN = null, 
+			string m3TAIL = null, 
+			string m3CFGL = null, 
+			string m3OPCT = null, 
+			DateTime? m3STDT = null, 
+			string m3STTI = null, 
+			string m3ENTM = null, 
+			string m3FCLA = null, 
+			string m3FCL2 = null, 
+			string m3FCL3 = null, 
+			string m3TIZO = null, 
+			string m3MEEV = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -234,43 +238,43 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MES0))
-				throw new ArgumentNullException("m3_MES0");
+			if (string.IsNullOrWhiteSpace(m3MES0))
+				throw new ArgumentNullException(nameof(m3MES0));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MES0", m3_MES0.Trim())
-				.WithQueryParameter("MVA0", m3_MVA0.ToString());
+				.WithQueryParameter("MES0", m3MES0.Trim())
+				.WithQueryParameter("MVA0", m3MVA0.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SERN))
-				request.WithQueryParameter("SERN", m3_SERN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAIL))
-				request.WithQueryParameter("TAIL", m3_TAIL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFGL))
-				request.WithQueryParameter("CFGL", m3_CFGL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OPCT))
-				request.WithQueryParameter("OPCT", m3_OPCT.Trim());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_STTI))
-				request.WithQueryParameter("STTI", m3_STTI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ENTM))
-				request.WithQueryParameter("ENTM", m3_ENTM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FCLA))
-				request.WithQueryParameter("FCLA", m3_FCLA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FCL2))
-				request.WithQueryParameter("FCL2", m3_FCL2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FCL3))
-				request.WithQueryParameter("FCL3", m3_FCL3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIZO))
-				request.WithQueryParameter("TIZO", m3_TIZO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MEEV))
-				request.WithQueryParameter("MEEV", m3_MEEV.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SERN))
+				request.WithQueryParameter("SERN", m3SERN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAIL))
+				request.WithQueryParameter("TAIL", m3TAIL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFGL))
+				request.WithQueryParameter("CFGL", m3CFGL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OPCT))
+				request.WithQueryParameter("OPCT", m3OPCT.Trim());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3STTI))
+				request.WithQueryParameter("STTI", m3STTI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ENTM))
+				request.WithQueryParameter("ENTM", m3ENTM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FCLA))
+				request.WithQueryParameter("FCLA", m3FCLA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FCL2))
+				request.WithQueryParameter("FCL2", m3FCL2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FCL3))
+				request.WithQueryParameter("FCL3", m3FCL3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIZO))
+				request.WithQueryParameter("TIZO", m3TIZO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MEEV))
+				request.WithQueryParameter("MEEV", m3MEEV.Trim());
 
 			// Execute the request
 			var result = await Execute<UpdMeterValueResponse>(
@@ -280,7 +284,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

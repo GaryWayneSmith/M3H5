@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Customer's order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer's order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Customer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Customer order stop
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order stop")]
-		public int? M3_OBLC => GetNullableInt("OBLC");
+		public int? M3OBLC => GetNullableInt("OBLC");
 
 		/// <summary>
 		/// Description: Lowest status - customer order
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - customer order")]
-		public string M3_ORSL => GetString("ORSL");
+		public string M3ORSL => GetString("ORSL");
 
 		/// <summary>
 		/// Description: Order date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMCD => GetString("SMCD");
+		public string M3SMCD => GetString("SMCD");
 	}
 }
 // EOF

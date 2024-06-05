@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MOS124MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Get Information from latest Removal
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITNR">Item number (Required)</param>
-		/// <param name="m3_BANR">Lot number (Required)</param>
-		/// <param name="m3_TRDT">Transaction date</param>
-		/// <param name="m3_TRT1">Transaction time</param>
-		/// <param name="m3_TRT2">Transaction time</param>
+		/// <param name="m3ITNR">Item number (Required)</param>
+		/// <param name="m3BANR">Lot number (Required)</param>
+		/// <param name="m3TRDT">Transaction date</param>
+		/// <param name="m3TRT1">Transaction time</param>
+		/// <param name="m3TRT2">Transaction time</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetLatestRemResponse></returns>
 		/// <exception cref="M3Exception<GetLatestRemResponse>"></exception>
 		public async Task<M3Response<GetLatestRemResponse>> GetLatestRem(
-			string m3_ITNR, 
-			string m3_BANR, 
-			DateTime? m3_TRDT = null, 
-			int? m3_TRT1 = null, 
-			int? m3_TRT2 = null, 
+			string m3ITNR, 
+			string m3BANR, 
+			DateTime? m3TRDT = null, 
+			int? m3TRT1 = null, 
+			int? m3TRT2 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,23 +70,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNR))
-				throw new ArgumentNullException("m3_ITNR");
-			if (string.IsNullOrWhiteSpace(m3_BANR))
-				throw new ArgumentNullException("m3_BANR");
+			if (string.IsNullOrWhiteSpace(m3ITNR))
+				throw new ArgumentNullException(nameof(m3ITNR));
+			if (string.IsNullOrWhiteSpace(m3BANR))
+				throw new ArgumentNullException(nameof(m3BANR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNR", m3_ITNR.Trim())
-				.WithQueryParameter("BANR", m3_BANR.Trim());
+				.WithQueryParameter("ITNR", m3ITNR.Trim())
+				.WithQueryParameter("BANR", m3BANR.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_TRDT.HasValue)
-				request.WithQueryParameter("TRDT", m3_TRDT.Value.ToM3String());
-			if (m3_TRT1.HasValue)
-				request.WithQueryParameter("TRT1", m3_TRT1.Value.ToString());
-			if (m3_TRT2.HasValue)
-				request.WithQueryParameter("TRT2", m3_TRT2.Value.ToString());
+			if (m3TRDT.HasValue)
+				request.WithQueryParameter("TRDT", m3TRDT.Value.ToM3String());
+			if (m3TRT1.HasValue)
+				request.WithQueryParameter("TRT1", m3TRT1.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TRT2.HasValue)
+				request.WithQueryParameter("TRT2", m3TRT2.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetLatestRemResponse>(
@@ -94,7 +96,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -105,7 +108,7 @@ namespace M3H5Lib.Api
 		/// Description PrintRemovalTag
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RITR">Removal/installation transaction number (Required)</param>
+		/// <param name="m3RITR">Removal/installation transaction number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -114,7 +117,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> PrintRemovalTag(
-			string m3_RITR, 
+			string m3RITR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -129,12 +132,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_RITR))
-				throw new ArgumentNullException("m3_RITR");
+			if (string.IsNullOrWhiteSpace(m3RITR))
+				throw new ArgumentNullException(nameof(m3RITR));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("RITR", m3_RITR.Trim());
+				.WithQueryParameter("RITR", m3RITR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -144,7 +147,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

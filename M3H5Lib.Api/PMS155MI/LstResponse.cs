@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Demand order category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Demand order category")]
-		public string M3_DOCA => GetString("DOCA");
+		public string M3DOCA => GetString("DOCA");
 
 		/// <summary>
 		/// Description: Product
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Ordered quantity - alternate U/M
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - alternate U/M")]
-		public decimal? M3_ORQA => GetNullableDecimal("ORQA");
+		public decimal? M3ORQA => GetNullableDecimal("ORQA");
 
 		/// <summary>
 		/// Description: Manufacturing U/M
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing U/M")]
-		public string M3_MAUN => GetString("MAUN");
+		public string M3MAUN => GetString("MAUN");
 
 		/// <summary>
 		/// Description: Order balanced quantity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order balanced quantity")]
-		public decimal? M3_NBEQ => GetNullableDecimal("NBEQ");
+		public decimal? M3NBEQ => GetNullableDecimal("NBEQ");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Received quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity")]
-		public decimal? M3_RVQA => GetNullableDecimal("RVQA");
+		public decimal? M3RVQA => GetNullableDecimal("RVQA");
 
 		/// <summary>
 		/// Description: Last received balanced quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last received balanced quantity")]
-		public decimal? M3_NBE1 => GetNullableDecimal("NBE1");
+		public decimal? M3NBE1 => GetNullableDecimal("NBE1");
 
 		/// <summary>
 		/// Description: Current balanced quantity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current balanced quantity")]
-		public decimal? M3_CBEQ => GetNullableDecimal("CBEQ");
+		public decimal? M3CBEQ => GetNullableDecimal("CBEQ");
 
 		/// <summary>
 		/// Description: Current received balanced quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PMS155MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current received balanced quantity")]
-		public decimal? M3_CBE1 => GetNullableDecimal("CBE1");
+		public decimal? M3CBE1 => GetNullableDecimal("CBE1");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Planning policy
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning policy")]
-		public string M3_PLCD => GetString("PLCD");
+		public string M3PLCD => GetString("PLCD");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Default Status - purchase order
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default Status - purchase order")]
-		public string M3_PUSL => GetString("PUSL");
+		public string M3PUSL => GetString("PUSL");
 
 		/// <summary>
 		/// Description: Default Status - manufacturing order
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default Status - manufacturing order")]
-		public string M3_WHST => GetString("WHST");
+		public string M3WHST => GetString("WHST");
 
 		/// <summary>
 		/// Description: Default Status - DO
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default Status - DO")]
-		public string M3_TRSL => GetString("TRSL");
+		public string M3TRSL => GetString("TRSL");
 
 		/// <summary>
 		/// Description: Default Status - work order
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default Status - work order")]
-		public string M3_WHSM => GetString("WHSM");
+		public string M3WHSM => GetString("WHSM");
 
 		/// <summary>
 		/// Description: Release status - planned orders A1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Release status - planned orders A1")]
-		public string M3_STN1 => GetString("STN1");
+		public string M3STN1 => GetString("STN1");
 
 		/// <summary>
 		/// Description: Reschedule
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reschedule")]
-		public string M3_RSC9 => GetString("RSC9");
+		public string M3RSC9 => GetString("RSC9");
 
 		/// <summary>
 		/// Description: Release status - planned orders
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Release status - planned orders")]
-		public string M3_STNP => GetString("STNP");
+		public string M3STNP => GetString("STNP");
 
 		/// <summary>
 		/// Description: Firm qty if planned order is within PTF
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Firm qty if planned order is within PTF")]
-		public int? M3_FQPP => GetNullableInt("FQPP");
+		public int? M3FQPP => GetNullableInt("FQPP");
 
 		/// <summary>
 		/// Description: Explode pl order for master scheduled
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Explode pl order for master scheduled")]
-		public int? M3_EXPM => GetNullableInt("EXPM");
+		public int? M3EXPM => GetNullableInt("EXPM");
 
 		/// <summary>
 		/// Description: Automatic firm up horizon
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic firm up horizon")]
-		public int? M3_AFUH => GetNullableInt("AFUH");
+		public int? M3AFUH => GetNullableInt("AFUH");
 
 		/// <summary>
 		/// Description: Re-explode planned MO in status 20
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Re-explode planned MO in status 20")]
-		public string M3_CHMP => GetString("CHMP");
+		public string M3CHMP => GetString("CHMP");
 
 		/// <summary>
 		/// Description: Update material on MO
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update material on MO")]
-		public int? M3_UMMO => GetNullableInt("UMMO");
+		public int? M3UMMO => GetNullableInt("UMMO");
 
 		/// <summary>
 		/// Description: Time filter - reschedule to earlier date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time filter - reschedule to earlier date")]
-		public int? M3_DRIM => GetNullableInt("DRIM");
+		public int? M3DRIM => GetNullableInt("DRIM");
 
 		/// <summary>
 		/// Description: Time filter - reschedule to later date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time filter - reschedule to later date")]
-		public int? M3_DROM => GetNullableInt("DROM");
+		public int? M3DROM => GetNullableInt("DROM");
 
 		/// <summary>
 		/// Description: Amount filter - reschedule to later date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount filter - reschedule to later date")]
-		public decimal? M3_ALEA => GetNullableDecimal("ALEA");
+		public decimal? M3ALEA => GetNullableDecimal("ALEA");
 
 		/// <summary>
 		/// Description: Should AM order delay be generated
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Should AM order delay be generated")]
-		public int? M3_GODM => GetNullableInt("GODM");
+		public int? M3GODM => GetNullableInt("GODM");
 
 		/// <summary>
 		/// Description: Time filter - AM order delayed
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time filter - AM order delayed")]
-		public int? M3_DODN => GetNullableInt("DODN");
+		public int? M3DODN => GetNullableInt("DODN");
 
 		/// <summary>
 		/// Description: Should AM delay warnings be generated
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Should AM delay warnings be generated")]
-		public int? M3_GOWD => GetNullableInt("GOWD");
+		public int? M3GOWD => GetNullableInt("GOWD");
 
 		/// <summary>
 		/// Description: Time filter - AM order delay
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time filter - AM order delay")]
-		public int? M3_DODM => GetNullableInt("DODM");
+		public int? M3DODM => GetNullableInt("DODM");
 
 		/// <summary>
 		/// Description: AM order release prior to release date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AM order release prior to release date")]
-		public int? M3_ORMH => GetNullableInt("ORMH");
+		public int? M3ORMH => GetNullableInt("ORMH");
 
 		/// <summary>
 		/// Description: Recalculate qty for order policy 15
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recalculate qty for order policy 15")]
-		public int? M3_RCLQ => GetNullableInt("RCLQ");
+		public int? M3RCLQ => GetNullableInt("RCLQ");
 
 		/// <summary>
 		/// Description: Comp SS and proj ohb at planning fence
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comp SS and proj ohb at planning fence")]
-		public int? M3_SSPF => GetNullableInt("SSPF");
+		public int? M3SSPF => GetNullableInt("SSPF");
 
 		/// <summary>
 		/// Description: Compare RoP and available total
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compare RoP and available total")]
-		public int? M3_RPTA => GetNullableInt("RPTA");
+		public int? M3RPTA => GetNullableInt("RPTA");
 
 		/// <summary>
 		/// Description: Comp RoP and proj ohb at planning fence
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comp RoP and proj ohb at planning fence")]
-		public int? M3_RPCA => GetNullableInt("RPCA");
+		public int? M3RPCA => GetNullableInt("RPCA");
 
 		/// <summary>
 		/// Description: Should (RoP - avail at LT) > EOQ create
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Should (RoP - avail at LT) > EOQ create")]
-		public int? M3_SRAC => GetNullableInt("SRAC");
+		public int? M3SRAC => GetNullableInt("SRAC");
 
 		/// <summary>
 		/// Description: Shortage qty included in ordered qty
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shortage qty included in ordered qty")]
-		public int? M3_SQOQ => GetNullableInt("SQOQ");
+		public int? M3SQOQ => GetNullableInt("SQOQ");
 
 		/// <summary>
 		/// Description: Not repr reserv within lt reduce ohb
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Not repr reserv within lt reduce ohb")]
-		public int? M3_NREP => GetNullableInt("NREP");
+		public int? M3NREP => GetNullableInt("NREP");
 
 		/// <summary>
 		/// Description: Priority values generate planned orders
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority values generate planned orders")]
-		public int? M3_UPPR => GetNullableInt("UPPR");
+		public int? M3UPPR => GetNullableInt("UPPR");
 
 		/// <summary>
 		/// Description: Excess generates DO return
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Excess generates DO return")]
-		public int? M3_MXDR => GetNullableInt("MXDR");
+		public int? M3MXDR => GetNullableInt("MXDR");
 
 		/// <summary>
 		/// Description: Plan method 2 can be 1 at simulation
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Plan method 2 can be 1 at simulation")]
-		public int? M3_MRPS => GetNullableInt("MRPS");
+		public int? M3MRPS => GetNullableInt("MRPS");
 
 		/// <summary>
 		/// Description: Fixed reorder cycle
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed reorder cycle")]
-		public int? M3_FXRC => GetNullableInt("FXRC");
+		public int? M3FXRC => GetNullableInt("FXRC");
 
 		/// <summary>
 		/// Description: Amount limit - release planned orders
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount limit - release planned orders")]
-		public decimal? M3_LS90 => GetNullableDecimal("LS90");
+		public decimal? M3LS90 => GetNullableDecimal("LS90");
 
 		/// <summary>
 		/// Description: Forecast alarm consideration
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast alarm consideration")]
-		public int? M3_FACH => GetNullableInt("FACH");
+		public int? M3FACH => GetNullableInt("FACH");
 
 		/// <summary>
 		/// Description: Stop items with manual planning values
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stop items with manual planning values")]
-		public int? M3_MPI6 => GetNullableInt("MPI6");
+		public int? M3MPI6 => GetNullableInt("MPI6");
 
 		/// <summary>
 		/// Description: File closed planned orders
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File closed planned orders")]
-		public int? M3_ARCO => GetNullableInt("ARCO");
+		public int? M3ARCO => GetNullableInt("ARCO");
 
 		/// <summary>
 		/// Description: ATP calculation horizon adjustment
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ATP calculation horizon adjustment")]
-		public int? M3_ATPA => GetNullableInt("ATPA");
+		public int? M3ATPA => GetNullableInt("ATPA");
 
 		/// <summary>
 		/// Description: Sum pland ord within PTF for ord plcy 12
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sum pland ord within PTF for ord plcy 12")]
-		public int? M3_SUPO => GetNullableInt("SUPO");
+		public int? M3SUPO => GetNullableInt("SUPO");
 
 		/// <summary>
 		/// Description: APP synchronization
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("APP synchronization")]
-		public string M3_APPC => GetString("APPC");
+		public string M3APPC => GetString("APPC");
 
 		/// <summary>
 		/// Description: Re-calculate run-out time at mtrl pl chg
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Re-calculate run-out time at mtrl pl chg")]
-		public int? M3_RRMC => GetNullableInt("RRMC");
+		public int? M3RRMC => GetNullableInt("RRMC");
 
 		/// <summary>
 		/// Description: Remove pl orders outside pl horizon
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remove pl orders outside pl horizon")]
-		public int? M3_RPPH => GetNullableInt("RPPH");
+		public int? M3RPPH => GetNullableInt("RPPH");
 
 		/// <summary>
 		/// Description: Proposed time for order policy 15
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proposed time for order policy 15")]
-		public int? M3_PRPT => GetNullableInt("PRPT");
+		public int? M3PRPT => GetNullableInt("PRPT");
 
 		/// <summary>
 		/// Description: Consider shelf life in MRP
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consider shelf life in MRP")]
-		public int? M3_CSHL => GetNullableInt("CSHL");
+		public int? M3CSHL => GetNullableInt("CSHL");
 
 		/// <summary>
 		/// Description: Integrate APS planning
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Integrate APS planning")]
-		public int? M3_IAPS => GetNullableInt("IAPS");
+		public int? M3IAPS => GetNullableInt("IAPS");
 
 		/// <summary>
 		/// Description: Planning level
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning level")]
-		public int? M3_PLVL => GetNullableInt("PLVL");
+		public int? M3PLVL => GetNullableInt("PLVL");
 
 		/// <summary>
 		/// Description: Days to delay release after last issue
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MMS037MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days to delay release after last issue")]
-		public int? M3_DRED => GetNullableInt("DRED");
+		public int? M3DRED => GetNullableInt("DRED");
 	}
 }
 // EOF

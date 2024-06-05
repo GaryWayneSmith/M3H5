@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PDS003MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,20 +38,20 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_MSEQ">Sequence number</param>
-		/// <param name="m3_MTNO">Component number</param>
-		/// <param name="m3_OPNO">Operation number</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_OTYP">Selection type</param>
-		/// <param name="m3_FTID">Feature</param>
-		/// <param name="m3_OPTN">Option</param>
-		/// <param name="m3_INCE">Include/exclude product structure line</param>
-		/// <param name="m3_NUVT">To numeric range value</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3MSEQ">Sequence number</param>
+		/// <param name="m3MTNO">Component number</param>
+		/// <param name="m3OPNO">Operation number</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3OTYP">Selection type</param>
+		/// <param name="m3FTID">Feature</param>
+		/// <param name="m3OPTN">Option</param>
+		/// <param name="m3INCE">Include/exclude product structure line</param>
+		/// <param name="m3NUVT">To numeric range value</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -58,20 +60,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			int? m3_CONO = null, 
-			string m3_FACI = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			int? m3_FDAT = null, 
-			int? m3_MSEQ = null, 
-			string m3_MTNO = null, 
-			int? m3_OPNO = null, 
-			string m3_PLGR = null, 
-			string m3_OTYP = null, 
-			string m3_FTID = null, 
-			string m3_OPTN = null, 
-			string m3_INCE = null, 
-			decimal? m3_NUVT = null, 
+			int? m3CONO = null, 
+			string m3FACI = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			int? m3FDAT = null, 
+			int? m3MSEQ = null, 
+			string m3MTNO = null, 
+			int? m3OPNO = null, 
+			string m3PLGR = null, 
+			string m3OTYP = null, 
+			string m3FTID = null, 
+			string m3OPTN = null, 
+			string m3INCE = null, 
+			decimal? m3NUVT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -86,34 +88,34 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToString());
-			if (m3_MSEQ.HasValue)
-				request.WithQueryParameter("MSEQ", m3_MSEQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MTNO))
-				request.WithQueryParameter("MTNO", m3_MTNO.Trim());
-			if (m3_OPNO.HasValue)
-				request.WithQueryParameter("OPNO", m3_OPNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OTYP))
-				request.WithQueryParameter("OTYP", m3_OTYP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FTID))
-				request.WithQueryParameter("FTID", m3_FTID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OPTN))
-				request.WithQueryParameter("OPTN", m3_OPTN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INCE))
-				request.WithQueryParameter("INCE", m3_INCE.Trim());
-			if (m3_NUVT.HasValue)
-				request.WithQueryParameter("NUVT", m3_NUVT.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MSEQ.HasValue)
+				request.WithQueryParameter("MSEQ", m3MSEQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MTNO))
+				request.WithQueryParameter("MTNO", m3MTNO.Trim());
+			if (m3OPNO.HasValue)
+				request.WithQueryParameter("OPNO", m3OPNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYP))
+				request.WithQueryParameter("OTYP", m3OTYP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FTID))
+				request.WithQueryParameter("FTID", m3FTID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OPTN))
+				request.WithQueryParameter("OPTN", m3OPTN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INCE))
+				request.WithQueryParameter("INCE", m3INCE.Trim());
+			if (m3NUVT.HasValue)
+				request.WithQueryParameter("NUVT", m3NUVT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -123,7 +125,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -134,21 +137,21 @@ namespace M3H5Lib.Api
 		/// Description Copy
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_MSEQ">Sequence number</param>
-		/// <param name="m3_MTNO">Component number</param>
-		/// <param name="m3_OPNO">Operation number</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_OTYP">Selection type</param>
-		/// <param name="m3_FTID">Feature</param>
-		/// <param name="m3_OPTN">Option</param>
-		/// <param name="m3_CFTI">Feature</param>
-		/// <param name="m3_COPT">Option</param>
-		/// <param name="m3_INCE">Include/exclude product structure line</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3MSEQ">Sequence number</param>
+		/// <param name="m3MTNO">Component number</param>
+		/// <param name="m3OPNO">Operation number</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3OTYP">Selection type</param>
+		/// <param name="m3FTID">Feature</param>
+		/// <param name="m3OPTN">Option</param>
+		/// <param name="m3CFTI">Feature</param>
+		/// <param name="m3COPT">Option</param>
+		/// <param name="m3INCE">Include/exclude product structure line</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -157,21 +160,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Copy(
-			int? m3_CONO = null, 
-			string m3_FACI = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			int? m3_FDAT = null, 
-			int? m3_MSEQ = null, 
-			string m3_MTNO = null, 
-			int? m3_OPNO = null, 
-			string m3_PLGR = null, 
-			string m3_OTYP = null, 
-			string m3_FTID = null, 
-			string m3_OPTN = null, 
-			string m3_CFTI = null, 
-			string m3_COPT = null, 
-			string m3_INCE = null, 
+			int? m3CONO = null, 
+			string m3FACI = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			int? m3FDAT = null, 
+			int? m3MSEQ = null, 
+			string m3MTNO = null, 
+			int? m3OPNO = null, 
+			string m3PLGR = null, 
+			string m3OTYP = null, 
+			string m3FTID = null, 
+			string m3OPTN = null, 
+			string m3CFTI = null, 
+			string m3COPT = null, 
+			string m3INCE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -186,36 +189,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToString());
-			if (m3_MSEQ.HasValue)
-				request.WithQueryParameter("MSEQ", m3_MSEQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MTNO))
-				request.WithQueryParameter("MTNO", m3_MTNO.Trim());
-			if (m3_OPNO.HasValue)
-				request.WithQueryParameter("OPNO", m3_OPNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OTYP))
-				request.WithQueryParameter("OTYP", m3_OTYP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FTID))
-				request.WithQueryParameter("FTID", m3_FTID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OPTN))
-				request.WithQueryParameter("OPTN", m3_OPTN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CFTI))
-				request.WithQueryParameter("CFTI", m3_CFTI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_COPT))
-				request.WithQueryParameter("COPT", m3_COPT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INCE))
-				request.WithQueryParameter("INCE", m3_INCE.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MSEQ.HasValue)
+				request.WithQueryParameter("MSEQ", m3MSEQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MTNO))
+				request.WithQueryParameter("MTNO", m3MTNO.Trim());
+			if (m3OPNO.HasValue)
+				request.WithQueryParameter("OPNO", m3OPNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYP))
+				request.WithQueryParameter("OTYP", m3OTYP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FTID))
+				request.WithQueryParameter("FTID", m3FTID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OPTN))
+				request.WithQueryParameter("OPTN", m3OPTN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFTI))
+				request.WithQueryParameter("CFTI", m3CFTI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3COPT))
+				request.WithQueryParameter("COPT", m3COPT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INCE))
+				request.WithQueryParameter("INCE", m3INCE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -225,7 +228,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -236,18 +240,18 @@ namespace M3H5Lib.Api
 		/// Description Delete
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_MSEQ">Sequence number</param>
-		/// <param name="m3_MTNO">Component number</param>
-		/// <param name="m3_OPNO">Operation number</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_OTYP">Selection type</param>
-		/// <param name="m3_FTID">Feature</param>
-		/// <param name="m3_OPTN">Option</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3MSEQ">Sequence number</param>
+		/// <param name="m3MTNO">Component number</param>
+		/// <param name="m3OPNO">Operation number</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3OTYP">Selection type</param>
+		/// <param name="m3FTID">Feature</param>
+		/// <param name="m3OPTN">Option</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -256,18 +260,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Delete(
-			int? m3_CONO = null, 
-			string m3_FACI = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			int? m3_FDAT = null, 
-			int? m3_MSEQ = null, 
-			string m3_MTNO = null, 
-			int? m3_OPNO = null, 
-			string m3_PLGR = null, 
-			string m3_OTYP = null, 
-			string m3_FTID = null, 
-			string m3_OPTN = null, 
+			int? m3CONO = null, 
+			string m3FACI = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			int? m3FDAT = null, 
+			int? m3MSEQ = null, 
+			string m3MTNO = null, 
+			int? m3OPNO = null, 
+			string m3PLGR = null, 
+			string m3OTYP = null, 
+			string m3FTID = null, 
+			string m3OPTN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -282,30 +286,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToString());
-			if (m3_MSEQ.HasValue)
-				request.WithQueryParameter("MSEQ", m3_MSEQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MTNO))
-				request.WithQueryParameter("MTNO", m3_MTNO.Trim());
-			if (m3_OPNO.HasValue)
-				request.WithQueryParameter("OPNO", m3_OPNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OTYP))
-				request.WithQueryParameter("OTYP", m3_OTYP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FTID))
-				request.WithQueryParameter("FTID", m3_FTID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OPTN))
-				request.WithQueryParameter("OPTN", m3_OPTN.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MSEQ.HasValue)
+				request.WithQueryParameter("MSEQ", m3MSEQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MTNO))
+				request.WithQueryParameter("MTNO", m3MTNO.Trim());
+			if (m3OPNO.HasValue)
+				request.WithQueryParameter("OPNO", m3OPNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYP))
+				request.WithQueryParameter("OTYP", m3OTYP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FTID))
+				request.WithQueryParameter("FTID", m3FTID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OPTN))
+				request.WithQueryParameter("OPTN", m3OPTN.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -315,7 +319,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -326,18 +331,18 @@ namespace M3H5Lib.Api
 		/// Description Get
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_MSEQ">Sequence number</param>
-		/// <param name="m3_MTNO">Component number</param>
-		/// <param name="m3_OPNO">Operation number</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_OTYP">Selection type</param>
-		/// <param name="m3_FTID">Feature</param>
-		/// <param name="m3_OPTN">Option</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3MSEQ">Sequence number</param>
+		/// <param name="m3MTNO">Component number</param>
+		/// <param name="m3OPNO">Operation number</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3OTYP">Selection type</param>
+		/// <param name="m3FTID">Feature</param>
+		/// <param name="m3OPTN">Option</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -346,18 +351,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			int? m3_CONO = null, 
-			string m3_FACI = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			int? m3_FDAT = null, 
-			int? m3_MSEQ = null, 
-			string m3_MTNO = null, 
-			int? m3_OPNO = null, 
-			string m3_PLGR = null, 
-			string m3_OTYP = null, 
-			string m3_FTID = null, 
-			string m3_OPTN = null, 
+			int? m3CONO = null, 
+			string m3FACI = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			int? m3FDAT = null, 
+			int? m3MSEQ = null, 
+			string m3MTNO = null, 
+			int? m3OPNO = null, 
+			string m3PLGR = null, 
+			string m3OTYP = null, 
+			string m3FTID = null, 
+			string m3OPTN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -372,30 +377,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToString());
-			if (m3_MSEQ.HasValue)
-				request.WithQueryParameter("MSEQ", m3_MSEQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MTNO))
-				request.WithQueryParameter("MTNO", m3_MTNO.Trim());
-			if (m3_OPNO.HasValue)
-				request.WithQueryParameter("OPNO", m3_OPNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OTYP))
-				request.WithQueryParameter("OTYP", m3_OTYP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FTID))
-				request.WithQueryParameter("FTID", m3_FTID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OPTN))
-				request.WithQueryParameter("OPTN", m3_OPTN.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MSEQ.HasValue)
+				request.WithQueryParameter("MSEQ", m3MSEQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MTNO))
+				request.WithQueryParameter("MTNO", m3MTNO.Trim());
+			if (m3OPNO.HasValue)
+				request.WithQueryParameter("OPNO", m3OPNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYP))
+				request.WithQueryParameter("OTYP", m3OTYP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FTID))
+				request.WithQueryParameter("FTID", m3FTID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OPTN))
+				request.WithQueryParameter("OPTN", m3OPTN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -405,7 +410,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -416,18 +422,18 @@ namespace M3H5Lib.Api
 		/// Description List
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_MSEQ">Sequence number</param>
-		/// <param name="m3_MTNO">Component number</param>
-		/// <param name="m3_OPNO">Operation number</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_OTYP">Selection type</param>
-		/// <param name="m3_FTID">Feature</param>
-		/// <param name="m3_OPTN">Option</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3MSEQ">Sequence number</param>
+		/// <param name="m3MTNO">Component number</param>
+		/// <param name="m3OPNO">Operation number</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3OTYP">Selection type</param>
+		/// <param name="m3FTID">Feature</param>
+		/// <param name="m3OPTN">Option</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -436,18 +442,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListResponse></returns>
 		/// <exception cref="M3Exception<ListResponse>"></exception>
 		public async Task<M3Response<ListResponse>> List(
-			int? m3_CONO = null, 
-			string m3_FACI = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			int? m3_FDAT = null, 
-			int? m3_MSEQ = null, 
-			string m3_MTNO = null, 
-			int? m3_OPNO = null, 
-			string m3_PLGR = null, 
-			string m3_OTYP = null, 
-			string m3_FTID = null, 
-			string m3_OPTN = null, 
+			int? m3CONO = null, 
+			string m3FACI = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			int? m3FDAT = null, 
+			int? m3MSEQ = null, 
+			string m3MTNO = null, 
+			int? m3OPNO = null, 
+			string m3PLGR = null, 
+			string m3OTYP = null, 
+			string m3FTID = null, 
+			string m3OPTN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -462,30 +468,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToString());
-			if (m3_MSEQ.HasValue)
-				request.WithQueryParameter("MSEQ", m3_MSEQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MTNO))
-				request.WithQueryParameter("MTNO", m3_MTNO.Trim());
-			if (m3_OPNO.HasValue)
-				request.WithQueryParameter("OPNO", m3_OPNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OTYP))
-				request.WithQueryParameter("OTYP", m3_OTYP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FTID))
-				request.WithQueryParameter("FTID", m3_FTID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OPTN))
-				request.WithQueryParameter("OPTN", m3_OPTN.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MSEQ.HasValue)
+				request.WithQueryParameter("MSEQ", m3MSEQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MTNO))
+				request.WithQueryParameter("MTNO", m3MTNO.Trim());
+			if (m3OPNO.HasValue)
+				request.WithQueryParameter("OPNO", m3OPNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYP))
+				request.WithQueryParameter("OTYP", m3OTYP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FTID))
+				request.WithQueryParameter("FTID", m3FTID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OPTN))
+				request.WithQueryParameter("OPTN", m3OPTN.Trim());
 
 			// Execute the request
 			var result = await Execute<ListResponse>(
@@ -495,7 +501,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -506,20 +513,20 @@ namespace M3H5Lib.Api
 		/// Description Update
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_PRNO">Product number</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_MSEQ">Sequence number</param>
-		/// <param name="m3_MTNO">Component number</param>
-		/// <param name="m3_OPNO">Operation number</param>
-		/// <param name="m3_PLGR">Work center</param>
-		/// <param name="m3_OTYP">Selection type</param>
-		/// <param name="m3_FTID">Feature</param>
-		/// <param name="m3_OPTN">Option</param>
-		/// <param name="m3_INCE">Include/exclude product structure line</param>
-		/// <param name="m3_NUVT">To numeric range value</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3PRNO">Product number</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3MSEQ">Sequence number</param>
+		/// <param name="m3MTNO">Component number</param>
+		/// <param name="m3OPNO">Operation number</param>
+		/// <param name="m3PLGR">Work center</param>
+		/// <param name="m3OTYP">Selection type</param>
+		/// <param name="m3FTID">Feature</param>
+		/// <param name="m3OPTN">Option</param>
+		/// <param name="m3INCE">Include/exclude product structure line</param>
+		/// <param name="m3NUVT">To numeric range value</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -528,20 +535,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Update(
-			int? m3_CONO = null, 
-			string m3_FACI = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			int? m3_FDAT = null, 
-			int? m3_MSEQ = null, 
-			string m3_MTNO = null, 
-			int? m3_OPNO = null, 
-			string m3_PLGR = null, 
-			string m3_OTYP = null, 
-			string m3_FTID = null, 
-			string m3_OPTN = null, 
-			string m3_INCE = null, 
-			decimal? m3_NUVT = null, 
+			int? m3CONO = null, 
+			string m3FACI = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			int? m3FDAT = null, 
+			int? m3MSEQ = null, 
+			string m3MTNO = null, 
+			int? m3OPNO = null, 
+			string m3PLGR = null, 
+			string m3OTYP = null, 
+			string m3FTID = null, 
+			string m3OPTN = null, 
+			string m3INCE = null, 
+			decimal? m3NUVT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -556,34 +563,34 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToString());
-			if (m3_MSEQ.HasValue)
-				request.WithQueryParameter("MSEQ", m3_MSEQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MTNO))
-				request.WithQueryParameter("MTNO", m3_MTNO.Trim());
-			if (m3_OPNO.HasValue)
-				request.WithQueryParameter("OPNO", m3_OPNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLGR))
-				request.WithQueryParameter("PLGR", m3_PLGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OTYP))
-				request.WithQueryParameter("OTYP", m3_OTYP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FTID))
-				request.WithQueryParameter("FTID", m3_FTID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OPTN))
-				request.WithQueryParameter("OPTN", m3_OPTN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_INCE))
-				request.WithQueryParameter("INCE", m3_INCE.Trim());
-			if (m3_NUVT.HasValue)
-				request.WithQueryParameter("NUVT", m3_NUVT.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MSEQ.HasValue)
+				request.WithQueryParameter("MSEQ", m3MSEQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MTNO))
+				request.WithQueryParameter("MTNO", m3MTNO.Trim());
+			if (m3OPNO.HasValue)
+				request.WithQueryParameter("OPNO", m3OPNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLGR))
+				request.WithQueryParameter("PLGR", m3PLGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYP))
+				request.WithQueryParameter("OTYP", m3OTYP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FTID))
+				request.WithQueryParameter("FTID", m3FTID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OPTN))
+				request.WithQueryParameter("OPTN", m3OPTN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3INCE))
+				request.WithQueryParameter("INCE", m3INCE.Trim());
+			if (m3NUVT.HasValue)
+				request.WithQueryParameter("NUVT", m3NUVT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -593,7 +600,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Printer file
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Printer file")]
-		public string M3_PRTF => GetString("PRTF");
+		public string M3PRTF => GetString("PRTF");
 
 		/// <summary>
 		/// Description: Workstation
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Workstation")]
-		public string M3_DEVD => GetString("DEVD");
+		public string M3DEVD => GetString("DEVD");
 
 		/// <summary>
 		/// Description: User
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Media
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Media")]
-		public string M3_MEDC => GetString("MEDC");
+		public string M3MEDC => GetString("MEDC");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Form
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Form")]
-		public string M3_FMTP => GetString("FMTP");
+		public string M3FMTP => GetString("FMTP");
 
 		/// <summary>
 		/// Description: Number of copies
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of copies")]
-		public int? M3_COPY => GetNullableInt("COPY");
+		public int? M3COPY => GetNullableInt("COPY");
 
 		/// <summary>
 		/// Description: Priority
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_OUTP => GetString("OUTP");
+		public string M3OUTP => GetString("OUTP");
 
 		/// <summary>
 		/// Description: User data
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User data")]
-		public string M3_UDTA => GetString("UDTA");
+		public string M3UDTA => GetString("UDTA");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Fax text 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fax text 1")]
-		public string M3_TFT1 => GetString("TFT1");
+		public string M3TFT1 => GetString("TFT1");
 
 		/// <summary>
 		/// Description: Folder name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Folder name")]
-		public string M3_FLRN => GetString("FLRN");
+		public string M3FLRN => GetString("FLRN");
 
 		/// <summary>
 		/// Description: Generic name method
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Generic name method")]
-		public int? M3_GNNM => GetNullableInt("GNNM");
+		public int? M3GNNM => GetNullableInt("GNNM");
 
 		/// <summary>
 		/// Description: Path file
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Path file")]
-		public string M3_PAFD => GetString("PAFD");
+		public string M3PAFD => GetString("PAFD");
 
 		/// <summary>
 		/// Description: File suffix
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File suffix")]
-		public string M3_FSUX => GetString("FSUX");
+		public string M3FSUX => GetString("FSUX");
 
 		/// <summary>
 		/// Description: Printer
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Printer")]
-		public string M3_DEV1 => GetString("DEV1");
+		public string M3DEV1 => GetString("DEV1");
 
 		/// <summary>
 		/// Description: Overlay front page name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overlay front page name")]
-		public string M3_FOVR => GetString("FOVR");
+		public string M3FOVR => GetString("FOVR");
 
 		/// <summary>
 		/// Description: Tray
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tray")]
-		public string M3_DRWR => GetString("DRWR");
+		public string M3DRWR => GetString("DRWR");
 
 		/// <summary>
 		/// Description: Bin
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bin")]
-		public string M3_BINX => GetString("BINX");
+		public string M3BINX => GetString("BINX");
 
 		/// <summary>
 		/// Description: Tray
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tray")]
-		public string M3_TRAY => GetString("TRAY");
+		public string M3TRAY => GetString("TRAY");
 
 		/// <summary>
 		/// Description: To e-mail address
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To e-mail address")]
-		public string M3_TOMA => GetString("TOMA");
+		public string M3TOMA => GetString("TOMA");
 
 		/// <summary>
 		/// Description: From e-mail address
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From e-mail address")]
-		public string M3_FRMA => GetString("FRMA");
+		public string M3FRMA => GetString("FRMA");
 
 		/// <summary>
 		/// Description: Copy to e-mail address
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Copy to e-mail address")]
-		public string M3_CCMA => GetString("CCMA");
+		public string M3CCMA => GetString("CCMA");
 
 		/// <summary>
 		/// Description: Send time - fax
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send time - fax")]
-		public int? M3_FAXT => GetNullableInt("FAXT");
+		public int? M3FAXT => GetNullableInt("FAXT");
 
 		/// <summary>
 		/// Description: Subject
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subject")]
-		public string M3_SUBJ => GetString("SUBJ");
+		public string M3SUBJ => GetString("SUBJ");
 
 		/// <summary>
 		/// Description: Note
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Note")]
-		public string M3_NOT1 => GetString("NOT1");
+		public string M3NOT1 => GetString("NOT1");
 
 		/// <summary>
 		/// Description: Market identification
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Market identification")]
-		public string M3_MARI => GetString("MARI");
+		public string M3MARI => GetString("MARI");
 
 		/// <summary>
 		/// Description: Layout
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MNS205MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Layout")]
-		public string M3_LAYC => GetString("LAYC");
+		public string M3LAYC => GetString("LAYC");
 	}
 }
 // EOF

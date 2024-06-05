@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Payment proposal
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment proposal")]
-		public long? M3_PRPN => GetNullableLong("PRPN");
+		public long? M3PRPN => GetNullableLong("PRPN");
 
 		/// <summary>
 		/// Description: Payment order
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment order")]
-		public int? M3_PYON => GetNullableInt("PYON");
+		public int? M3PYON => GetNullableInt("PYON");
 
 		/// <summary>
 		/// Description: Payment method - accounts payable
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment method - accounts payable")]
-		public string M3_PYME => GetString("PYME");
+		public string M3PYME => GetString("PYME");
 
 		/// <summary>
 		/// Description: Payment class
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment class")]
-		public int? M3_PYCL => GetNullableInt("PYCL");
+		public int? M3PYCL => GetNullableInt("PYCL");
 
 		/// <summary>
 		/// Description: Grouped payment
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Grouped payment")]
-		public int? M3_GRPP => GetNullableInt("GRPP");
+		public int? M3GRPP => GetNullableInt("GRPP");
 
 		/// <summary>
 		/// Description: Transfer method
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer method")]
-		public int? M3_TR25 => GetNullableInt("TR25");
+		public int? M3TR25 => GetNullableInt("TR25");
 
 		/// <summary>
 		/// Description: Currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Quotas used
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quotas used")]
-		public int? M3_QUSD => GetNullableInt("QUSD");
+		public int? M3QUSD => GetNullableInt("QUSD");
 
 		/// <summary>
 		/// Description: Status - payment
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - payment")]
-		public int? M3_PYST => GetNullableInt("PYST");
+		public int? M3PYST => GetNullableInt("PYST");
 
 		/// <summary>
 		/// Description: Action
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action")]
-		public int? M3_ACTO => GetNullableInt("ACTO");
+		public int? M3ACTO => GetNullableInt("ACTO");
 
 		/// <summary>
 		/// Description: Foreign currency amount
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign currency amount")]
-		public decimal? M3_CUAM => GetNullableDecimal("CUAM");
+		public decimal? M3CUAM => GetNullableDecimal("CUAM");
 
 		/// <summary>
 		/// Description: Payment proposal date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment proposal date")]
-		public DateTime? M3_PRPD => GetNullableDateTime("PRPD");
+		public DateTime? M3PRPD => GetNullableDateTime("PRPD");
 
 		/// <summary>
 		/// Description: Number of payments
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of payments")]
-		public int? M3_NOPD => GetNullableInt("NOPD");
+		public int? M3NOPD => GetNullableInt("NOPD");
 
 		/// <summary>
 		/// Description: Number of lines
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of lines")]
-		public int? M3_NCHL => GetNullableInt("NCHL");
+		public int? M3NCHL => GetNullableInt("NCHL");
 
 		/// <summary>
 		/// Description: Foreign/domestic
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign/domestic")]
-		public string M3_NADO => GetString("NADO");
+		public string M3NADO => GetString("NADO");
 
 		/// <summary>
 		/// Description: Bank operation
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank operation")]
-		public string M3_BOPC => GetString("BOPC");
+		public string M3BOPC => GetString("BOPC");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Bank account name
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account name")]
-		public string M3_BANA => GetString("BANA");
+		public string M3BANA => GetString("BANA");
 
 		/// <summary>
 		/// Description: Bank number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank number")]
-		public string M3_BKNO => GetString("BKNO");
+		public string M3BKNO => GetString("BKNO");
 
 		/// <summary>
 		/// Description: Bank branch identity
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank branch identity")]
-		public string M3_BBRN => GetString("BBRN");
+		public string M3BBRN => GetString("BBRN");
 
 		/// <summary>
 		/// Description: Banking region
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Banking region")]
-		public string M3_BKPL => GetString("BKPL");
+		public string M3BKPL => GetString("BKPL");
 
 		/// <summary>
 		/// Description: Currency - bank account
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency - bank account")]
-		public string M3_BCUC => GetString("BCUC");
+		public string M3BCUC => GetString("BCUC");
 
 		/// <summary>
 		/// Description: Customer number at financial institution
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number at financial institution")]
-		public string M3_FICU => GetString("FICU");
+		public string M3FICU => GetString("FICU");
 
 		/// <summary>
 		/// Description: Bank EDI agreement number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank EDI agreement number")]
-		public string M3_BKAG => GetString("BKAG");
+		public string M3BKAG => GetString("BKAG");
 
 		/// <summary>
 		/// Description: SWIFT/BIC code
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SWIFT/BIC code")]
-		public string M3_SWBI => GetString("SWBI");
+		public string M3SWBI => GetString("SWBI");
 
 		/// <summary>
 		/// Description: Clearing system ID
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clearing system ID")]
-		public string M3_CLSI => GetString("CLSI");
+		public string M3CLSI => GetString("CLSI");
 
 		/// <summary>
 		/// Description: Clearing system number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clearing system number")]
-		public string M3_CLSN => GetString("CLSN");
+		public string M3CLSN => GetString("CLSN");
 
 		/// <summary>
 		/// Description: International bank account number
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("International bank account number")]
-		public string M3_IBAN => GetString("IBAN");
+		public string M3IBAN => GetString("IBAN");
 
 		/// <summary>
 		/// Description: Bank account number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account number")]
-		public string M3_BACN => GetString("BACN");
+		public string M3BACN => GetString("BACN");
 
 		/// <summary>
 		/// Description: Category purpose code
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Category purpose code")]
-		public string M3_CPCO => GetString("CPCO");
+		public string M3CPCO => GetString("CPCO");
 
 		/// <summary>
 		/// Description: Payment purpose code
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment purpose code")]
-		public string M3_PPCO => GetString("PPCO");
+		public string M3PPCO => GetString("PPCO");
 
 		/// <summary>
 		/// Description: Priority code
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority code")]
-		public int? M3_PITY => GetNullableInt("PITY");
+		public int? M3PITY => GetNullableInt("PITY");
 
 		/// <summary>
 		/// Description: Charge bearer code
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge bearer code")]
-		public int? M3_CBCD => GetNullableInt("CBCD");
+		public int? M3CBCD => GetNullableInt("CBCD");
 
 		/// <summary>
 		/// Description: Bank account field 1
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 1")]
-		public string M3_BAF1 => GetString("BAF1");
+		public string M3BAF1 => GetString("BAF1");
 
 		/// <summary>
 		/// Description: Bank account field 2
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 2")]
-		public string M3_BAF2 => GetString("BAF2");
+		public string M3BAF2 => GetString("BAF2");
 
 		/// <summary>
 		/// Description: Bank account field 3
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 3")]
-		public string M3_BAF3 => GetString("BAF3");
+		public string M3BAF3 => GetString("BAF3");
 
 		/// <summary>
 		/// Description: Bank account field 4
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 4")]
-		public string M3_BAF4 => GetString("BAF4");
+		public string M3BAF4 => GetString("BAF4");
 
 		/// <summary>
 		/// Description: Bank account field 5
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 5")]
-		public string M3_BAF5 => GetString("BAF5");
+		public string M3BAF5 => GetString("BAF5");
 
 		/// <summary>
 		/// Description: Intermediary - Bank account description
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - Bank account description")]
-		public string M3_IBBD => GetString("IBBD");
+		public string M3IBBD => GetString("IBBD");
 
 		/// <summary>
 		/// Description: Intermediary - Bank number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - Bank number")]
-		public string M3_IBBN => GetString("IBBN");
+		public string M3IBBN => GetString("IBBN");
 
 		/// <summary>
 		/// Description: Intermediary - Bank branch ID
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - Bank branch ID")]
-		public string M3_IBBB => GetString("IBBB");
+		public string M3IBBB => GetString("IBBB");
 
 		/// <summary>
 		/// Description: Intermediary - SWIFT/BIC code
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - SWIFT/BIC code")]
-		public string M3_IBSW => GetString("IBSW");
+		public string M3IBSW => GetString("IBSW");
 
 		/// <summary>
 		/// Description: Intermediary - Clearing system ID
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - Clearing system ID")]
-		public string M3_IBSI => GetString("IBSI");
+		public string M3IBSI => GetString("IBSI");
 
 		/// <summary>
 		/// Description: Intermediary - Clearing system number
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - Clearing system number")]
-		public string M3_IBSN => GetString("IBSN");
+		public string M3IBSN => GetString("IBSN");
 
 		/// <summary>
 		/// Description: Intermediary - international bank acc no
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - international bank acc no")]
-		public string M3_IBIB => GetString("IBIB");
+		public string M3IBIB => GetString("IBIB");
 
 		/// <summary>
 		/// Description: Intermediary - Bank account number
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Intermediary - Bank account number")]
-		public string M3_IBCN => GetString("IBCN");
+		public string M3IBCN => GetString("IBCN");
 
 		/// <summary>
 		/// Description: Electronic format
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Electronic format")]
-		public string M3_ELET => GetString("ELET");
+		public string M3ELET => GetString("ELET");
 
 		/// <summary>
 		/// Description: Document
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document")]
-		public string M3_DOCU => GetString("DOCU");
+		public string M3DOCU => GetString("DOCU");
 
 		/// <summary>
 		/// Description: End to end ID
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End to end ID")]
-		public int? M3_ETEI => GetNullableInt("ETEI");
+		public int? M3ETEI => GetNullableInt("ETEI");
 
 		/// <summary>
 		/// Description: Instruction ID
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Instruction ID")]
-		public int? M3_INID => GetNullableInt("INID");
+		public int? M3INID => GetNullableInt("INID");
 
 		/// <summary>
 		/// Description: Payment information
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment information")]
-		public int? M3_PYIN => GetNullableInt("PYIN");
+		public int? M3PYIN => GetNullableInt("PYIN");
 
 		/// <summary>
 		/// Description: Payment transfer code
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment transfer code")]
-		public string M3_PYTC => GetString("PYTC");
+		public string M3PYTC => GetString("PYTC");
 
 		/// <summary>
 		/// Description: Structured creditor reference
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structured creditor reference")]
-		public int? M3_SCRA => GetNullableInt("SCRA");
+		public int? M3SCRA => GetNullableInt("SCRA");
 
 		/// <summary>
 		/// Description: Batch booking indicator
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Batch booking indicator")]
-		public int? M3_BBIN => GetNullableInt("BBIN");
+		public int? M3BBIN => GetNullableInt("BBIN");
 
 		/// <summary>
 		/// Description: Service level code
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service level code")]
-		public int? M3_SLVC => GetNullableInt("SLVC");
+		public int? M3SLVC => GetNullableInt("SLVC");
 
 		/// <summary>
 		/// Description: Service level code - standard
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service level code - standard")]
-		public string M3_SLCS => GetString("SLCS");
+		public string M3SLCS => GetString("SLCS");
 
 		/// <summary>
 		/// Description: Service level code - exception
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service level code - exception")]
-		public string M3_SLCE => GetString("SLCE");
+		public string M3SLCE => GetString("SLCE");
 
 		/// <summary>
 		/// Description: Check digit method for bank account
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check digit method for bank account")]
-		public string M3_CMBN => GetString("CMBN");
+		public string M3CMBN => GetString("CMBN");
 	}
 }
 // EOF

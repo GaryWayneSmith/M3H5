@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net order amount")]
-		public decimal? M3_NTAM => GetNullableDecimal("NTAM");
+		public decimal? M3NTAM => GetNullableDecimal("NTAM");
 
 		/// <summary>
 		/// Description: Order discount
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order discount")]
-		public decimal? M3_ODAM => GetNullableDecimal("ODAM");
+		public decimal? M3ODAM => GetNullableDecimal("ODAM");
 
 		/// <summary>
 		/// Description: Order net
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order net")]
-		public decimal? M3_ONET => GetNullableDecimal("ONET");
+		public decimal? M3ONET => GetNullableDecimal("ONET");
 
 		/// <summary>
 		/// Description: Charge
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public decimal? M3_EXAM => GetNullableDecimal("EXAM");
+		public decimal? M3EXAM => GetNullableDecimal("EXAM");
 
 		/// <summary>
 		/// Description: External charge
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External charge")]
-		public decimal? M3_EFAM => GetNullableDecimal("EFAM");
+		public decimal? M3EFAM => GetNullableDecimal("EFAM");
 
 		/// <summary>
 		/// Description: Subtotal before tax
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subtotal before tax")]
-		public decimal? M3_ORVA => GetNullableDecimal("ORVA");
+		public decimal? M3ORVA => GetNullableDecimal("ORVA");
 
 		/// <summary>
 		/// Description: VAT amount
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT amount")]
-		public decimal? M3_VTAM => GetNullableDecimal("VTAM");
+		public decimal? M3VTAM => GetNullableDecimal("VTAM");
 
 		/// <summary>
 		/// Description: Subtotal after tax
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subtotal after tax")]
-		public decimal? M3_TOAM => GetNullableDecimal("TOAM");
+		public decimal? M3TOAM => GetNullableDecimal("TOAM");
 
 		/// <summary>
 		/// Description: Rounding off
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rounding off")]
-		public decimal? M3_ROAM => GetNullableDecimal("ROAM");
+		public decimal? M3ROAM => GetNullableDecimal("ROAM");
 
 		/// <summary>
 		/// Description: Total
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total")]
-		public decimal? M3_TOPY => GetNullableDecimal("TOPY");
+		public decimal? M3TOPY => GetNullableDecimal("TOPY");
 
 		/// <summary>
 		/// Description: Order value gross
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order value gross")]
-		public decimal? M3_BRAM => GetNullableDecimal("BRAM");
+		public decimal? M3BRAM => GetNullableDecimal("BRAM");
 
 		/// <summary>
 		/// Description: Invoiced net order amount
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced net order amount")]
-		public decimal? M3_INTA => GetNullableDecimal("INTA");
+		public decimal? M3INTA => GetNullableDecimal("INTA");
 
 		/// <summary>
 		/// Description: Invoiced order total discount
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced order total discount")]
-		public decimal? M3_IDAM => GetNullableDecimal("IDAM");
+		public decimal? M3IDAM => GetNullableDecimal("IDAM");
 
 		/// <summary>
 		/// Description: Invoiced order net
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced order net")]
-		public decimal? M3_INET => GetNullableDecimal("INET");
+		public decimal? M3INET => GetNullableDecimal("INET");
 
 		/// <summary>
 		/// Description: Invoiced service charge
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced service charge")]
-		public decimal? M3_IXAM => GetNullableDecimal("IXAM");
+		public decimal? M3IXAM => GetNullableDecimal("IXAM");
 
 		/// <summary>
 		/// Description: Invoiced external charge
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced external charge")]
-		public decimal? M3_IFAM => GetNullableDecimal("IFAM");
+		public decimal? M3IFAM => GetNullableDecimal("IFAM");
 
 		/// <summary>
 		/// Description: Invoiced subtotal before tax
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced subtotal before tax")]
-		public decimal? M3_IRVA => GetNullableDecimal("IRVA");
+		public decimal? M3IRVA => GetNullableDecimal("IRVA");
 
 		/// <summary>
 		/// Description: Invoiced VAT amount
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced VAT amount")]
-		public decimal? M3_IVTA => GetNullableDecimal("IVTA");
+		public decimal? M3IVTA => GetNullableDecimal("IVTA");
 
 		/// <summary>
 		/// Description: Invoiced subtotal after tax
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced subtotal after tax")]
-		public decimal? M3_ITOA => GetNullableDecimal("ITOA");
+		public decimal? M3ITOA => GetNullableDecimal("ITOA");
 
 		/// <summary>
 		/// Description: Invoiced rounding off
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced rounding off")]
-		public decimal? M3_IROA => GetNullableDecimal("IROA");
+		public decimal? M3IROA => GetNullableDecimal("IROA");
 
 		/// <summary>
 		/// Description: Invoiced total amount
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced total amount")]
-		public decimal? M3_ITOP => GetNullableDecimal("ITOP");
+		public decimal? M3ITOP => GetNullableDecimal("ITOP");
 
 		/// <summary>
 		/// Description: Invoiced gross order value
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced gross order value")]
-		public decimal? M3_IRAM => GetNullableDecimal("IRAM");
+		public decimal? M3IRAM => GetNullableDecimal("IRAM");
 
 		/// <summary>
 		/// Description: Summary invoice indicator
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Summary invoice indicator")]
-		public string M3_ISUM => GetString("ISUM");
+		public string M3ISUM => GetString("ISUM");
 
 		/// <summary>
 		/// Description: Total price indicator
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total price indicator")]
-		public string M3_ITPR => GetString("ITPR");
+		public string M3ITPR => GetString("ITPR");
 
 		/// <summary>
 		/// Description: Currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Vertex not calc
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Vertex not calc")]
-		public int? M3_VXCL => GetNullableInt("VXCL");
+		public int? M3VXCL => GetNullableInt("VXCL");
 	}
 }
 // EOF

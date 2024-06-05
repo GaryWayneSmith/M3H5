@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Customer number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Customer card number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer card number")]
-		public decimal? M3_CCNR => GetNullableDecimal("CCNR");
+		public decimal? M3CCNR => GetNullableDecimal("CCNR");
 
 		/// <summary>
 		/// Description: Customer stop
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer stop")]
-		public int? M3_BLCD => GetNullableInt("BLCD");
+		public int? M3BLCD => GetNullableInt("BLCD");
 
 		/// <summary>
 		/// Description: Replacement card
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement card")]
-		public int? M3_RCRD => GetNullableInt("RCRD");
+		public int? M3RCRD => GetNullableInt("RCRD");
 
 		/// <summary>
 		/// Description: Cash discount term
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount term")]
-		public string M3_TECD => GetString("TECD");
+		public string M3TECD => GetString("TECD");
 
 		/// <summary>
 		/// Description: Card type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Card type")]
-		public int? M3_CTP1 => GetNullableInt("CTP1");
+		public int? M3CTP1 => GetNullableInt("CTP1");
 
 		/// <summary>
 		/// Description: Main card
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main card")]
-		public string M3_MCRD => GetString("MCRD");
+		public string M3MCRD => GetString("MCRD");
 
 		/// <summary>
 		/// Description: Blocking date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blocking date")]
-		public int? M3_BLD1 => GetNullableInt("BLD1");
+		public int? M3BLD1 => GetNullableInt("BLD1");
 
 		/// <summary>
 		/// Description: Order date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Send to printing
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Send to printing")]
-		public int? M3_CSND => GetNullableInt("CSND");
+		public int? M3CSND => GetNullableInt("CSND");
 
 		/// <summary>
 		/// Description: Valid through month
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid through month")]
-		public int? M3_VTMM => GetNullableInt("VTMM");
+		public int? M3VTMM => GetNullableInt("VTMM");
 
 		/// <summary>
 		/// Description: Valid through year
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid through year")]
-		public int? M3_VTYY => GetNullableInt("VTYY");
+		public int? M3VTYY => GetNullableInt("VTYY");
 
 		/// <summary>
 		/// Description: Reference
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference")]
-		public string M3_REFE => GetString("REFE");
+		public string M3REFE => GetString("REFE");
 
 		/// <summary>
 		/// Description: Entry date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS612MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

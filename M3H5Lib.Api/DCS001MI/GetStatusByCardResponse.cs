@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DCS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup work in progress")]
-		public string M3_SEIN => GetString("SEIN");
+		public string M3SEIN => GetString("SEIN");
 
 		/// <summary>
 		/// Description: Setup work is stoppable
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DCS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup work is stoppable")]
-		public string M3_SEST => GetString("SEST");
+		public string M3SEST => GetString("SEST");
 
 		/// <summary>
 		/// Description: Operation work in progress
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DCS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation work in progress")]
-		public string M3_OPIN => GetString("OPIN");
+		public string M3OPIN => GetString("OPIN");
 
 		/// <summary>
 		/// Description: Operation work is stoppable
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DCS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation work is stoppable")]
-		public string M3_OPST => GetString("OPST");
+		public string M3OPST => GetString("OPST");
 
 		/// <summary>
 		/// Description: Disturbance work in progress
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DCS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Disturbance work in progress")]
-		public string M3_DIIN => GetString("DIIN");
+		public string M3DIIN => GetString("DIIN");
 
 		/// <summary>
 		/// Description: Disturbance work is stoppable
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DCS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Disturbance work is stoppable")]
-		public string M3_DIST => GetString("DIST");
+		public string M3DIST => GetString("DIST");
 	}
 }
 // EOF

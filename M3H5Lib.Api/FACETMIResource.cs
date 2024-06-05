@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.FACETMI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description List Facets
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_FNAM">Table name (Required)</param>
-		/// <param name="m3_SQRY">Search query (Required)</param>
-		/// <param name="m3_FLNA">Filtering of field name</param>
+		/// <param name="m3FNAM">Table name (Required)</param>
+		/// <param name="m3SQRY">Search query (Required)</param>
+		/// <param name="m3FLNA">Filtering of field name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstFacetsResponse></returns>
 		/// <exception cref="M3Exception<LstFacetsResponse>"></exception>
 		public async Task<M3Response<LstFacetsResponse>> LstFacets(
-			string m3_FNAM, 
-			string m3_SQRY, 
-			string m3_FLNA = null, 
+			string m3FNAM, 
+			string m3SQRY, 
+			string m3FLNA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,19 +66,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FNAM))
-				throw new ArgumentNullException("m3_FNAM");
-			if (string.IsNullOrWhiteSpace(m3_SQRY))
-				throw new ArgumentNullException("m3_SQRY");
+			if (string.IsNullOrWhiteSpace(m3FNAM))
+				throw new ArgumentNullException(nameof(m3FNAM));
+			if (string.IsNullOrWhiteSpace(m3SQRY))
+				throw new ArgumentNullException(nameof(m3SQRY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FNAM", m3_FNAM.Trim())
-				.WithQueryParameter("SQRY", m3_SQRY.Trim());
+				.WithQueryParameter("FNAM", m3FNAM.Trim())
+				.WithQueryParameter("SQRY", m3SQRY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FLNA))
-				request.WithQueryParameter("FLNA", m3_FLNA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLNA))
+				request.WithQueryParameter("FLNA", m3FLNA.Trim());
 
 			// Execute the request
 			var result = await Execute<LstFacetsResponse>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

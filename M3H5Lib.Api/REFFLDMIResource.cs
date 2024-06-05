@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.REFFLDMI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Gets metadata about the reference field
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_FLDI">Reference field (Required)</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3FLDI">Reference field (Required)</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_FLDI, 
-			string m3_LNCD = null, 
+			string m3FLDI, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,16 +64,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FLDI", m3_FLDI.Trim());
+				.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -81,7 +83,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -92,9 +95,9 @@ namespace M3H5Lib.Api
 		/// Description Lists value map for the field
 		/// Version Release: 5ea2
 		/// </summary>
-		/// <param name="m3_FLDI">Reference field (Required)</param>
-		/// <param name="m3_LNCD">Language</param>
-		/// <param name="m3_FILE">Table</param>
+		/// <param name="m3FLDI">Reference field (Required)</param>
+		/// <param name="m3LNCD">Language</param>
+		/// <param name="m3FILE">Table</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -103,9 +106,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstValueMapResponse></returns>
 		/// <exception cref="M3Exception<LstValueMapResponse>"></exception>
 		public async Task<M3Response<LstValueMapResponse>> LstValueMap(
-			string m3_FLDI, 
-			string m3_LNCD = null, 
-			string m3_FILE = null, 
+			string m3FLDI, 
+			string m3LNCD = null, 
+			string m3FILE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,18 +123,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FLDI", m3_FLDI.Trim());
+				.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstValueMapResponse>(
@@ -141,7 +144,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

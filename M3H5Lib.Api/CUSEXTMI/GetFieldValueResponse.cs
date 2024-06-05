@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Primary key 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 1")]
-		public string M3_PK01 => GetString("PK01");
+		public string M3PK01 => GetString("PK01");
 
 		/// <summary>
 		/// Description: Primary key 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 2")]
-		public string M3_PK02 => GetString("PK02");
+		public string M3PK02 => GetString("PK02");
 
 		/// <summary>
 		/// Description: Primary key 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 3")]
-		public string M3_PK03 => GetString("PK03");
+		public string M3PK03 => GetString("PK03");
 
 		/// <summary>
 		/// Description: Primary key 4
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 4")]
-		public string M3_PK04 => GetString("PK04");
+		public string M3PK04 => GetString("PK04");
 
 		/// <summary>
 		/// Description: Primary key 5
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 5")]
-		public string M3_PK05 => GetString("PK05");
+		public string M3PK05 => GetString("PK05");
 
 		/// <summary>
 		/// Description: Primary key 6
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 6")]
-		public string M3_PK06 => GetString("PK06");
+		public string M3PK06 => GetString("PK06");
 
 		/// <summary>
 		/// Description: Primary key 7
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 7")]
-		public string M3_PK07 => GetString("PK07");
+		public string M3PK07 => GetString("PK07");
 
 		/// <summary>
 		/// Description: Primary key 8
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Primary key 8")]
-		public string M3_PK08 => GetString("PK08");
+		public string M3PK08 => GetString("PK08");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A030 => GetString("A030");
+		public string M3A030 => GetString("A030");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A130 => GetString("A130");
+		public string M3A130 => GetString("A130");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A230 => GetString("A230");
+		public string M3A230 => GetString("A230");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A330 => GetString("A330");
+		public string M3A330 => GetString("A330");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A430 => GetString("A430");
+		public string M3A430 => GetString("A430");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A530 => GetString("A530");
+		public string M3A530 => GetString("A530");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A630 => GetString("A630");
+		public string M3A630 => GetString("A630");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A730 => GetString("A730");
+		public string M3A730 => GetString("A730");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A830 => GetString("A830");
+		public string M3A830 => GetString("A830");
 
 		/// <summary>
 		/// Description: Alpha field 30 positions
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 30 positions")]
-		public string M3_A930 => GetString("A930");
+		public string M3A930 => GetString("A930");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N096 => GetNullableDecimal("N096");
+		public decimal? M3N096 => GetNullableDecimal("N096");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N196 => GetNullableDecimal("N196");
+		public decimal? M3N196 => GetNullableDecimal("N196");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N296 => GetNullableDecimal("N296");
+		public decimal? M3N296 => GetNullableDecimal("N296");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N396 => GetNullableDecimal("N396");
+		public decimal? M3N396 => GetNullableDecimal("N396");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N496 => GetNullableDecimal("N496");
+		public decimal? M3N496 => GetNullableDecimal("N496");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N596 => GetNullableDecimal("N596");
+		public decimal? M3N596 => GetNullableDecimal("N596");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N696 => GetNullableDecimal("N696");
+		public decimal? M3N696 => GetNullableDecimal("N696");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N796 => GetNullableDecimal("N796");
+		public decimal? M3N796 => GetNullableDecimal("N796");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N896 => GetNullableDecimal("N896");
+		public decimal? M3N896 => GetNullableDecimal("N896");
 
 		/// <summary>
 		/// Description: Numeric field 19,6 positions
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric field 19,6 positions")]
-		public decimal? M3_N996 => GetNullableDecimal("N996");
+		public decimal? M3N996 => GetNullableDecimal("N996");
 
 		/// <summary>
 		/// Description: Migrated
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Migrated")]
-		public int? M3_MIGR => GetNullableInt("MIGR");
+		public int? M3MIGR => GetNullableInt("MIGR");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Text identity
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Data identity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Alphanumeric field 120 positions
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CUSEXTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alphanumeric field 120 positions")]
-		public string M3_A121 => GetString("A121");
+		public string M3A121 => GetString("A121");
 	}
 }
 // EOF

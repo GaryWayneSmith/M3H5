@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QUS060MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add a attribute template
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ATTE">Attribute template (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_ATVA">Attribute value (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_PRNO">Product</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_SUFI">Service</param>
+		/// <param name="m3ATTE">Attribute template (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3ATVA">Attribute value (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3PRNO">Product</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3SUFI">Service</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAtte(
-			string m3_ATTE, 
-			string m3_TX40, 
-			string m3_ATID, 
-			string m3_ATVA, 
-			string m3_TX15 = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			string m3_SUFI = null, 
+			string m3ATTE, 
+			string m3TX40, 
+			string m3ATID, 
+			string m3ATVA, 
+			string m3TX15 = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			string m3SUFI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,31 +76,31 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATTE))
-				throw new ArgumentNullException("m3_ATTE");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
-			if (string.IsNullOrWhiteSpace(m3_ATVA))
-				throw new ArgumentNullException("m3_ATVA");
+			if (string.IsNullOrWhiteSpace(m3ATTE))
+				throw new ArgumentNullException(nameof(m3ATTE));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
+			if (string.IsNullOrWhiteSpace(m3ATVA))
+				throw new ArgumentNullException(nameof(m3ATVA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATTE", m3_ATTE.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("ATID", m3_ATID.Trim())
-				.WithQueryParameter("ATVA", m3_ATVA.Trim());
+				.WithQueryParameter("ATTE", m3ATTE.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("ATID", m3ATID.Trim())
+				.WithQueryParameter("ATVA", m3ATVA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUFI))
-				request.WithQueryParameter("SUFI", m3_SUFI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUFI))
+				request.WithQueryParameter("SUFI", m3SUFI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -108,7 +110,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -119,7 +122,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a attribute template
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ATTE">Attribute template (Required)</param>
+		/// <param name="m3ATTE">Attribute template (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -128,7 +131,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltAtte(
-			string m3_ATTE, 
+			string m3ATTE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -143,12 +146,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATTE))
-				throw new ArgumentNullException("m3_ATTE");
+			if (string.IsNullOrWhiteSpace(m3ATTE))
+				throw new ArgumentNullException(nameof(m3ATTE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATTE", m3_ATTE.Trim());
+				.WithQueryParameter("ATTE", m3ATTE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -158,7 +161,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -169,7 +173,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a attribute template
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ATTE">Attribute template (Required)</param>
+		/// <param name="m3ATTE">Attribute template (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -178,7 +182,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAtteResponse></returns>
 		/// <exception cref="M3Exception<GetAtteResponse>"></exception>
 		public async Task<M3Response<GetAtteResponse>> GetAtte(
-			string m3_ATTE, 
+			string m3ATTE, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -193,12 +197,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATTE))
-				throw new ArgumentNullException("m3_ATTE");
+			if (string.IsNullOrWhiteSpace(m3ATTE))
+				throw new ArgumentNullException(nameof(m3ATTE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATTE", m3_ATTE.Trim());
+				.WithQueryParameter("ATTE", m3ATTE.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAtteResponse>(
@@ -208,7 +212,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -219,7 +224,7 @@ namespace M3H5Lib.Api
 		/// Description List data for attribute template
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ATTE">Attribute template</param>
+		/// <param name="m3ATTE">Attribute template</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -228,7 +233,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAtteResponse></returns>
 		/// <exception cref="M3Exception<LstAtteResponse>"></exception>
 		public async Task<M3Response<LstAtteResponse>> LstAtte(
-			string m3_ATTE = null, 
+			string m3ATTE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -243,8 +248,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ATTE))
-				request.WithQueryParameter("ATTE", m3_ATTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ATTE))
+				request.WithQueryParameter("ATTE", m3ATTE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAtteResponse>(
@@ -254,7 +259,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -265,14 +271,14 @@ namespace M3H5Lib.Api
 		/// Description Update data for a attribute template
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ATTE">Attribute template (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_ATID">Attribute identity</param>
-		/// <param name="m3_ATVA">Attribute value</param>
-		/// <param name="m3_PRNO">Product</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_SUFI">Service</param>
+		/// <param name="m3ATTE">Attribute template (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3ATID">Attribute identity</param>
+		/// <param name="m3ATVA">Attribute value</param>
+		/// <param name="m3PRNO">Product</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3SUFI">Service</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -281,14 +287,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAtte(
-			string m3_ATTE, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_ATID = null, 
-			string m3_ATVA = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			string m3_SUFI = null, 
+			string m3ATTE, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3ATID = null, 
+			string m3ATVA = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			string m3SUFI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -303,28 +309,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATTE))
-				throw new ArgumentNullException("m3_ATTE");
+			if (string.IsNullOrWhiteSpace(m3ATTE))
+				throw new ArgumentNullException(nameof(m3ATTE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATTE", m3_ATTE.Trim());
+				.WithQueryParameter("ATTE", m3ATTE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ATID))
-				request.WithQueryParameter("ATID", m3_ATID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ATVA))
-				request.WithQueryParameter("ATVA", m3_ATVA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUFI))
-				request.WithQueryParameter("SUFI", m3_SUFI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ATID))
+				request.WithQueryParameter("ATID", m3ATID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ATVA))
+				request.WithQueryParameter("ATVA", m3ATVA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUFI))
+				request.WithQueryParameter("SUFI", m3SUFI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -334,7 +340,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

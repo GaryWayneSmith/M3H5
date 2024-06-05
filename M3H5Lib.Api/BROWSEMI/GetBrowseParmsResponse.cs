@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference field")]
-		public string M3_RFLD => GetString("RFLD");
+		public string M3RFLD => GetString("RFLD");
 
 		/// <summary>
 		/// Description: Browse variant
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Browse variant")]
-		public string M3_VARI => GetString("VARI");
+		public string M3VARI => GetString("VARI");
 
 		/// <summary>
 		/// Description: Table
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Field type MUC C=central, L=Local, M=Mixed
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field type MUC C=central, L=Local, M=Mixed")]
-		public string M3_FTYP => GetString("FTYP");
+		public string M3FTYP => GetString("FTYP");
 
 		/// <summary>
 		/// Description: Selection key ('EQ' / blanks)
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection key ('EQ' / blanks)")]
-		public string M3_KYT1 => GetString("KYT1");
+		public string M3KYT1 => GetString("KYT1");
 
 		/// <summary>
 		/// Description: Selection key ('EQ' / blanks)
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection key ('EQ' / blanks)")]
-		public string M3_KYT2 => GetString("KYT2");
+		public string M3KYT2 => GetString("KYT2");
 
 		/// <summary>
 		/// Description: Selection key ('EQ' / blanks)
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selection key ('EQ' / blanks)")]
-		public string M3_KYT3 => GetString("KYT3");
+		public string M3KYT3 => GetString("KYT3");
 
 		/// <summary>
 		/// Description: Constant - Only CSYTAB
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Constant - Only CSYTAB")]
-		public string M3_CONS => GetString("CONS");
+		public string M3CONS => GetString("CONS");
 
 		/// <summary>
 		/// Description: Field 1 in browse window
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field 1 in browse window")]
-		public string M3_KYF1 => GetString("KYF1");
+		public string M3KYF1 => GetString("KYF1");
 
 		/// <summary>
 		/// Description: Field 2 in browse window
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field 2 in browse window")]
-		public string M3_KYF2 => GetString("KYF2");
+		public string M3KYF2 => GetString("KYF2");
 
 		/// <summary>
 		/// Description: Program name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Return field from prompt program
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return field from prompt program")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Blank language - only CSYTAB (0=Language, 1=Blank)
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.BROWSEMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Blank language - only CSYTAB (0=Language, 1=Blank)")]
-		public string M3_BLLD => GetString("BLLD");
+		public string M3BLLD => GetString("BLLD");
 	}
 }
 // EOF

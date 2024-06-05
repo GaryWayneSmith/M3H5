@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Journal number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal number")]
-		public int? M3_JRNO => GetNullableInt("JRNO");
+		public int? M3JRNO => GetNullableInt("JRNO");
 
 		/// <summary>
 		/// Description: Journal sequence number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal sequence number")]
-		public long? M3_JSNO => GetNullableLong("JSNO");
+		public long? M3JSNO => GetNullableLong("JSNO");
 
 		/// <summary>
 		/// Description: Payee
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payee")]
-		public string M3_SPYN => GetString("SPYN");
+		public string M3SPYN => GetString("SPYN");
 
 		/// <summary>
 		/// Description: Payment stop
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment stop")]
-		public int? M3_IVBL => GetNullableInt("IVBL");
+		public int? M3IVBL => GetNullableInt("IVBL");
 
 		/// <summary>
 		/// Description: Invoice year
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice year")]
-		public int? M3_INYR => GetNullableInt("INYR");
+		public int? M3INYR => GetNullableInt("INYR");
 
 		/// <summary>
 		/// Description: Due date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Due date")]
-		public DateTime? M3_DUDT => GetNullableDateTime("DUDT");
+		public DateTime? M3DUDT => GetNullableDateTime("DUDT");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: Program name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

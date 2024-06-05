@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.COS160MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AMTY">Miscellaneous cost types</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_UNIT">Unit of measure</param>
-		/// <param name="m3_TAXC">Tax code customer/address</param>
-		/// <param name="m3_RNRQ">Registration number required</param>
-		/// <param name="m3_MAPE">Mandatory approval of expenses</param>
-		/// <param name="m3_TXID">Text identity</param>
+		/// <param name="m3AMTY">Miscellaneous cost types</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3UNIT">Unit of measure</param>
+		/// <param name="m3TAXC">Tax code customer/address</param>
+		/// <param name="m3RNRQ">Registration number required</param>
+		/// <param name="m3MAPE">Mandatory approval of expenses</param>
+		/// <param name="m3TXID">Text identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_AMTY = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_UNIT = null, 
-			string m3_TAXC = null, 
-			int? m3_RNRQ = null, 
-			int? m3_MAPE = null, 
-			decimal? m3_TXID = null, 
+			string m3AMTY = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3UNIT = null, 
+			string m3TAXC = null, 
+			int? m3RNRQ = null, 
+			int? m3MAPE = null, 
+			decimal? m3TXID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,22 +76,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AMTY))
-				request.WithQueryParameter("AMTY", m3_AMTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UNIT))
-				request.WithQueryParameter("UNIT", m3_UNIT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAXC))
-				request.WithQueryParameter("TAXC", m3_TAXC.Trim());
-			if (m3_RNRQ.HasValue)
-				request.WithQueryParameter("RNRQ", m3_RNRQ.Value.ToString());
-			if (m3_MAPE.HasValue)
-				request.WithQueryParameter("MAPE", m3_MAPE.Value.ToString());
-			if (m3_TXID.HasValue)
-				request.WithQueryParameter("TXID", m3_TXID.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3AMTY))
+				request.WithQueryParameter("AMTY", m3AMTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UNIT))
+				request.WithQueryParameter("UNIT", m3UNIT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAXC))
+				request.WithQueryParameter("TAXC", m3TAXC.Trim());
+			if (m3RNRQ.HasValue)
+				request.WithQueryParameter("RNRQ", m3RNRQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MAPE.HasValue)
+				request.WithQueryParameter("MAPE", m3MAPE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TXID.HasValue)
+				request.WithQueryParameter("TXID", m3TXID.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -99,7 +101,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -110,7 +113,7 @@ namespace M3H5Lib.Api
 		/// Description Dlt
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AMTY">Miscellaneous cost types</param>
+		/// <param name="m3AMTY">Miscellaneous cost types</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -119,7 +122,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Delete(
-			string m3_AMTY = null, 
+			string m3AMTY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -134,8 +137,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AMTY))
-				request.WithQueryParameter("AMTY", m3_AMTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AMTY))
+				request.WithQueryParameter("AMTY", m3AMTY.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,7 +160,7 @@ namespace M3H5Lib.Api
 		/// Description Get Equipment group
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AMTY">Miscellaneous cost types</param>
+		/// <param name="m3AMTY">Miscellaneous cost types</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -165,7 +169,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_AMTY = null, 
+			string m3AMTY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -180,8 +184,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AMTY))
-				request.WithQueryParameter("AMTY", m3_AMTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AMTY))
+				request.WithQueryParameter("AMTY", m3AMTY.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -191,7 +195,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -202,7 +207,7 @@ namespace M3H5Lib.Api
 		/// Description Lst miscellaneous
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AMTY">Miscellaneous cost types</param>
+		/// <param name="m3AMTY">Miscellaneous cost types</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -211,7 +216,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListResponse></returns>
 		/// <exception cref="M3Exception<ListResponse>"></exception>
 		public async Task<M3Response<ListResponse>> List(
-			string m3_AMTY = null, 
+			string m3AMTY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,8 +231,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AMTY))
-				request.WithQueryParameter("AMTY", m3_AMTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AMTY))
+				request.WithQueryParameter("AMTY", m3AMTY.Trim());
 
 			// Execute the request
 			var result = await Execute<ListResponse>(
@@ -237,7 +242,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

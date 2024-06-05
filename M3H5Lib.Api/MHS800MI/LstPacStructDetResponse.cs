@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Partner
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Direction
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Package number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package number")]
-		public string M3_PANR => GetString("PANR");
+		public string M3PANR => GetString("PANR");
 
 		/// <summary>
 		/// Description: SSCC number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SSCC number")]
-		public string M3_SSCC => GetString("SSCC");
+		public string M3SSCC => GetString("SSCC");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Order number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Item number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Delivered quantity - basic unit
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity - basic unit")]
-		public decimal? M3_DLQT => GetNullableDecimal("DLQT");
+		public decimal? M3DLQT => GetNullableDecimal("DLQT");
 
 		/// <summary>
 		/// Description: Receipt quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receipt quantity")]
-		public decimal? M3_RCQT => GetNullableDecimal("RCQT");
+		public decimal? M3RCQT => GetNullableDecimal("RCQT");
 
 		/// <summary>
 		/// Description: Flagged as completed
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Flagged as completed")]
-		public int? M3_OEND => GetNullableInt("OEND");
+		public int? M3OEND => GetNullableInt("OEND");
 
 		/// <summary>
 		/// Description: Volume
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public int? M3_VOL3 => GetNullableInt("VOL3");
+		public int? M3VOL3 => GetNullableInt("VOL3");
 
 		/// <summary>
 		/// Description: Net weight
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public int? M3_NEWE => GetNullableInt("NEWE");
+		public int? M3NEWE => GetNullableInt("NEWE");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public int? M3_GRWE => GetNullableInt("GRWE");
+		public int? M3GRWE => GetNullableInt("GRWE");
 
 		/// <summary>
 		/// Description: Standard quantity
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard quantity")]
-		public decimal? M3_D1QT => GetNullableDecimal("D1QT");
+		public decimal? M3D1QT => GetNullableDecimal("D1QT");
 
 		/// <summary>
 		/// Description: Delivery specification
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery specification")]
-		public string M3_DLSP => GetString("DLSP");
+		public string M3DLSP => GetString("DLSP");
 
 		/// <summary>
 		/// Description: Customers order number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customers order number")]
-		public string M3_CUOR => GetString("CUOR");
+		public string M3CUOR => GetString("CUOR");
 
 		/// <summary>
 		/// Description: Lot number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Container
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Data identity
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Text identity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Capacity - free quantity
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity - free quantity")]
-		public decimal? M3_FCU1 => GetNullableDecimal("FCU1");
+		public decimal? M3FCU1 => GetNullableDecimal("FCU1");
 
 		/// <summary>
 		/// Description: Delivered quantity - alt. unit
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivered quantity - alt. unit")]
-		public decimal? M3_DLQA => GetNullableDecimal("DLQA");
+		public decimal? M3DLQA => GetNullableDecimal("DLQA");
 
 		/// <summary>
 		/// Description: Received quantity - alt. unit
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received quantity - alt. unit")]
-		public decimal? M3_RCQM => GetNullableDecimal("RCQM");
+		public decimal? M3RCQM => GetNullableDecimal("RCQM");
 
 		/// <summary>
 		/// Description: User-defined field 1
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User-defined field 2
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: User-defined field 3
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3")]
-		public string M3_USD3 => GetString("USD3");
+		public string M3USD3 => GetString("USD3");
 
 		/// <summary>
 		/// Description: User-defined field 4
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4")]
-		public string M3_USD4 => GetString("USD4");
+		public string M3USD4 => GetString("USD4");
 
 		/// <summary>
 		/// Description: User-defined field 5
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5")]
-		public string M3_USD5 => GetString("USD5");
+		public string M3USD5 => GetString("USD5");
 
 		/// <summary>
 		/// Description: Process flag - download
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Process flag - download")]
-		public int? M3_DOWN => GetNullableInt("DOWN");
+		public int? M3DOWN => GetNullableInt("DOWN");
 
 		/// <summary>
 		/// Description: Entry date
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Supplier
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier type
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier type")]
-		public int? M3_SUTY => GetNullableInt("SUTY");
+		public int? M3SUTY => GetNullableInt("SUTY");
 
 		/// <summary>
 		/// Description: Delivery note number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note number")]
-		public string M3_SUDO => GetString("SUDO");
+		public string M3SUDO => GetString("SUDO");
 
 		/// <summary>
 		/// Description: Delivery note date
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note date")]
-		public DateTime? M3_DNDT => GetNullableDateTime("DNDT");
+		public DateTime? M3DNDT => GetNullableDateTime("DNDT");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Supplier item number
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier item number")]
-		public string M3_SITE => GetString("SITE");
+		public string M3SITE => GetString("SITE");
 
 		/// <summary>
 		/// Description: Supplier item name
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier item name")]
-		public string M3_SITD => GetString("SITD");
+		public string M3SITD => GetString("SITD");
 
 		/// <summary>
 		/// Description: Delivery schedule
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery schedule")]
-		public string M3_DPNR => GetString("DPNR");
+		public string M3DPNR => GetString("DPNR");
 
 		/// <summary>
 		/// Description: Delivery contract number
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery contract number")]
-		public string M3_RSAG => GetString("RSAG");
+		public string M3RSAG => GetString("RSAG");
 
 		/// <summary>
 		/// Description: Supplier order number
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier order number")]
-		public string M3_SORN => GetString("SORN");
+		public string M3SORN => GetString("SORN");
 
 		/// <summary>
 		/// Description: Unit of measure
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measure")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Purchase order U/M
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order U/M")]
-		public string M3_PUUN => GetString("PUUN");
+		public string M3PUUN => GetString("PUUN");
 
 		/// <summary>
 		/// Description: Status
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Lot reference 1
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 1")]
-		public string M3_BREF => GetString("BREF");
+		public string M3BREF => GetString("BREF");
 
 		/// <summary>
 		/// Description: Lot reference 2
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot reference 2")]
-		public string M3_BRE2 => GetString("BRE2");
+		public string M3BRE2 => GetString("BRE2");
 
 		/// <summary>
 		/// Description: Main product
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main product")]
-		public string M3_HDPR => GetString("HDPR");
+		public string M3HDPR => GetString("HDPR");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Next activity
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next activity")]
-		public int? M3_NEAC => GetNullableInt("NEAC");
+		public int? M3NEAC => GetNullableInt("NEAC");
 
 		/// <summary>
 		/// Description: Receiving number
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.MHS800MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving number")]
-		public long? M3_REPN => GetNullableLong("REPN");
+		public long? M3REPN => GetNullableLong("REPN");
 	}
 }
 // EOF

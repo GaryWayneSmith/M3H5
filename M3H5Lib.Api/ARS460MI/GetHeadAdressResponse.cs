@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Agreement proposal number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement proposal number")]
-		public long? M3_DDAN => GetNullableLong("DDAN");
+		public long? M3DDAN => GetNullableLong("DDAN");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKI2 => GetString("BKI2");
+		public string M3BKI2 => GetString("BKI2");
 
 		/// <summary>
 		/// Description: Agreement indicator
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement indicator")]
-		public string M3_AGIN => GetString("AGIN");
+		public string M3AGIN => GetString("AGIN");
 
 		/// <summary>
 		/// Description: Bank number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank number")]
-		public string M3_BKNO => GetString("BKNO");
+		public string M3BKNO => GetString("BKNO");
 
 		/// <summary>
 		/// Description: Bank address 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 1")]
-		public string M3_BKA1 => GetString("BKA1");
+		public string M3BKA1 => GetString("BKA1");
 
 		/// <summary>
 		/// Description: Bank address 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 2")]
-		public string M3_BKA2 => GetString("BKA2");
+		public string M3BKA2 => GetString("BKA2");
 
 		/// <summary>
 		/// Description: Bank address 3
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 3")]
-		public string M3_BKA3 => GetString("BKA3");
+		public string M3BKA3 => GetString("BKA3");
 
 		/// <summary>
 		/// Description: Bank address 4
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank address 4")]
-		public string M3_BKA4 => GetString("BKA4");
+		public string M3BKA4 => GetString("BKA4");
 
 		/// <summary>
 		/// Description: Company name
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Company address 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 1")]
-		public string M3_COA1 => GetString("COA1");
+		public string M3COA1 => GetString("COA1");
 
 		/// <summary>
 		/// Description: Company address 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 2")]
-		public string M3_COA2 => GetString("COA2");
+		public string M3COA2 => GetString("COA2");
 
 		/// <summary>
 		/// Description: Company address 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 3")]
-		public string M3_COA3 => GetString("COA3");
+		public string M3COA3 => GetString("COA3");
 
 		/// <summary>
 		/// Description: Company address 4
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 4")]
-		public string M3_COA4 => GetString("COA4");
+		public string M3COA4 => GetString("COA4");
 
 		/// <summary>
 		/// Description: Company
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 	}
 }
 // EOF

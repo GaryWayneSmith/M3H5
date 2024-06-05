@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MNS410MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_USID">User (Required)</param>
-		/// <param name="m3_ROLL">Role (Required)</param>
-		/// <param name="m3_FVDT">Valid from</param>
-		/// <param name="m3_VTDT">Valid to</param>
+		/// <param name="m3USID">User (Required)</param>
+		/// <param name="m3ROLL">Role (Required)</param>
+		/// <param name="m3FVDT">Valid from</param>
+		/// <param name="m3VTDT">Valid to</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_USID, 
-			string m3_ROLL, 
-			DateTime? m3_FVDT = null, 
-			DateTime? m3_VTDT = null, 
+			string m3USID, 
+			string m3ROLL, 
+			DateTime? m3FVDT = null, 
+			DateTime? m3VTDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,21 +68,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
-			if (string.IsNullOrWhiteSpace(m3_ROLL))
-				throw new ArgumentNullException("m3_ROLL");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
+			if (string.IsNullOrWhiteSpace(m3ROLL))
+				throw new ArgumentNullException(nameof(m3ROLL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("USID", m3_USID.Trim())
-				.WithQueryParameter("ROLL", m3_ROLL.Trim());
+				.WithQueryParameter("USID", m3USID.Trim())
+				.WithQueryParameter("ROLL", m3ROLL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
-			if (m3_VTDT.HasValue)
-				request.WithQueryParameter("VTDT", m3_VTDT.Value.ToM3String());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
+			if (m3VTDT.HasValue)
+				request.WithQueryParameter("VTDT", m3VTDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -101,9 +104,9 @@ namespace M3H5Lib.Api
 		/// Description Dlt
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_USID">User (Required)</param>
-		/// <param name="m3_ROLL">Role (Required)</param>
-		/// <param name="m3_DLPR">WDLPR</param>
+		/// <param name="m3USID">User (Required)</param>
+		/// <param name="m3ROLL">Role (Required)</param>
+		/// <param name="m3DLPR">WDLPR</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -112,9 +115,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Dlt(
-			string m3_USID, 
-			string m3_ROLL, 
-			string m3_DLPR = null, 
+			string m3USID, 
+			string m3ROLL, 
+			string m3DLPR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -129,19 +132,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
-			if (string.IsNullOrWhiteSpace(m3_ROLL))
-				throw new ArgumentNullException("m3_ROLL");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
+			if (string.IsNullOrWhiteSpace(m3ROLL))
+				throw new ArgumentNullException(nameof(m3ROLL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("USID", m3_USID.Trim())
-				.WithQueryParameter("ROLL", m3_ROLL.Trim());
+				.WithQueryParameter("USID", m3USID.Trim())
+				.WithQueryParameter("ROLL", m3ROLL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DLPR))
-				request.WithQueryParameter("DLPR", m3_DLPR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DLPR))
+				request.WithQueryParameter("DLPR", m3DLPR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -151,7 +154,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -162,8 +166,8 @@ namespace M3H5Lib.Api
 		/// Description Get
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_USID">User (Required)</param>
-		/// <param name="m3_ROLL">Role (Required)</param>
+		/// <param name="m3USID">User (Required)</param>
+		/// <param name="m3ROLL">Role (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -172,8 +176,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_USID, 
-			string m3_ROLL, 
+			string m3USID, 
+			string m3ROLL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -188,15 +192,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
-			if (string.IsNullOrWhiteSpace(m3_ROLL))
-				throw new ArgumentNullException("m3_ROLL");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
+			if (string.IsNullOrWhiteSpace(m3ROLL))
+				throw new ArgumentNullException(nameof(m3ROLL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("USID", m3_USID.Trim())
-				.WithQueryParameter("ROLL", m3_ROLL.Trim());
+				.WithQueryParameter("USID", m3USID.Trim())
+				.WithQueryParameter("ROLL", m3ROLL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -206,7 +210,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -217,8 +222,8 @@ namespace M3H5Lib.Api
 		/// Description Lst
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_USID">User (Required)</param>
-		/// <param name="m3_ROLL">Role (Required)</param>
+		/// <param name="m3USID">User (Required)</param>
+		/// <param name="m3ROLL">Role (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -227,8 +232,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_USID, 
-			string m3_ROLL, 
+			string m3USID, 
+			string m3ROLL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -243,15 +248,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
-			if (string.IsNullOrWhiteSpace(m3_ROLL))
-				throw new ArgumentNullException("m3_ROLL");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
+			if (string.IsNullOrWhiteSpace(m3ROLL))
+				throw new ArgumentNullException(nameof(m3ROLL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("USID", m3_USID.Trim())
-				.WithQueryParameter("ROLL", m3_ROLL.Trim());
+				.WithQueryParameter("USID", m3USID.Trim())
+				.WithQueryParameter("ROLL", m3ROLL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -261,7 +266,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -301,7 +307,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -312,7 +319,7 @@ namespace M3H5Lib.Api
 		/// Description LstRolesByUser
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_USID">User (Required)</param>
+		/// <param name="m3USID">User (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -321,7 +328,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstRolesByUserResponse></returns>
 		/// <exception cref="M3Exception<LstRolesByUserResponse>"></exception>
 		public async Task<M3Response<LstRolesByUserResponse>> LstRolesByUser(
-			string m3_USID, 
+			string m3USID, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -336,12 +343,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("USID", m3_USID.Trim());
+				.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstRolesByUserResponse>(
@@ -351,7 +358,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -362,10 +370,10 @@ namespace M3H5Lib.Api
 		/// Description Upd
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_USID">User (Required)</param>
-		/// <param name="m3_ROLL">Role (Required)</param>
-		/// <param name="m3_FVDT">Valid from</param>
-		/// <param name="m3_VTDT">Valid to</param>
+		/// <param name="m3USID">User (Required)</param>
+		/// <param name="m3ROLL">Role (Required)</param>
+		/// <param name="m3FVDT">Valid from</param>
+		/// <param name="m3VTDT">Valid to</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -374,10 +382,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_USID, 
-			string m3_ROLL, 
-			DateTime? m3_FVDT = null, 
-			DateTime? m3_VTDT = null, 
+			string m3USID, 
+			string m3ROLL, 
+			DateTime? m3FVDT = null, 
+			DateTime? m3VTDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -392,21 +400,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_USID))
-				throw new ArgumentNullException("m3_USID");
-			if (string.IsNullOrWhiteSpace(m3_ROLL))
-				throw new ArgumentNullException("m3_ROLL");
+			if (string.IsNullOrWhiteSpace(m3USID))
+				throw new ArgumentNullException(nameof(m3USID));
+			if (string.IsNullOrWhiteSpace(m3ROLL))
+				throw new ArgumentNullException(nameof(m3ROLL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("USID", m3_USID.Trim())
-				.WithQueryParameter("ROLL", m3_ROLL.Trim());
+				.WithQueryParameter("USID", m3USID.Trim())
+				.WithQueryParameter("ROLL", m3ROLL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_FVDT.HasValue)
-				request.WithQueryParameter("FVDT", m3_FVDT.Value.ToM3String());
-			if (m3_VTDT.HasValue)
-				request.WithQueryParameter("VTDT", m3_VTDT.Value.ToM3String());
+			if (m3FVDT.HasValue)
+				request.WithQueryParameter("FVDT", m3FVDT.Value.ToM3String());
+			if (m3VTDT.HasValue)
+				request.WithQueryParameter("VTDT", m3VTDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -416,7 +424,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

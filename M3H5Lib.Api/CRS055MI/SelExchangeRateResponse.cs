@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Currency
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Rate date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rate date")]
-		public DateTime? M3_CUTD => GetNullableDateTime("CUTD");
+		public DateTime? M3CUTD => GetNullableDateTime("CUTD");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Local currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Currency conversion method
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency conversion method")]
-		public int? M3_DMCU => GetNullableInt("DMCU");
+		public int? M3DMCU => GetNullableInt("DMCU");
 
 		/// <summary>
 		/// Description: Rate factor
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rate factor")]
-		public int? M3_RAFA => GetNullableInt("RAFA");
+		public int? M3RAFA => GetNullableInt("RAFA");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS210MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description List authorized cash desks
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAuthCashDeskResponse></returns>
 		/// <exception cref="M3Exception<LstAuthCashDeskResponse>"></exception>
 		public async Task<M3Response<LstAuthCashDeskResponse>> LstAuthCashDesk(
-			string m3_FACI = null, 
-			string m3_USID = null, 
+			string m3FACI = null, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAuthCashDeskResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// Description LstPayMethods
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_CSHD">Cash desk</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3CSHD">Cash desk</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPayMethodsResponse></returns>
 		/// <exception cref="M3Exception<LstPayMethodsResponse>"></exception>
 		public async Task<M3Response<LstPayMethodsResponse>> LstPayMethods(
-			string m3_FACI = null, 
-			string m3_CSHD = null, 
+			string m3FACI = null, 
+			string m3CSHD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -112,10 +115,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CSHD))
-				request.WithQueryParameter("CSHD", m3_CSHD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSHD))
+				request.WithQueryParameter("CSHD", m3CSHD.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPayMethodsResponse>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

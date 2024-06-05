@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work center
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_PLNM => GetString("PLNM");
+		public string M3PLNM => GetString("PLNM");
 
 		/// <summary>
 		/// Description: Work center type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center type")]
-		public string M3_PLGT => GetString("PLGT");
+		public string M3PLGT => GetString("PLGT");
 
 		/// <summary>
 		/// Description: Resource type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Resource type")]
-		public string M3_PLTP => GetString("PLTP");
+		public string M3PLTP => GetString("PLTP");
 
 		/// <summary>
 		/// Description: Department
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Department")]
-		public string M3_DEPT => GetString("DEPT");
+		public string M3DEPT => GetString("DEPT");
 
 		/// <summary>
 		/// Description: Planning area
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning area")]
-		public string M3_REAR => GetString("REAR");
+		public string M3REAR => GetString("REAR");
 
 		/// <summary>
 		/// Description: Capacity type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity type")]
-		public string M3_PCAP => GetString("PCAP");
+		public string M3PCAP => GetString("PCAP");
 
 		/// <summary>
 		/// Description: Work center responsible
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center responsible")]
-		public string M3_WCRE => GetString("WCRE");
+		public string M3WCRE => GetString("WCRE");
 
 		/// <summary>
 		/// Description: Text identity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

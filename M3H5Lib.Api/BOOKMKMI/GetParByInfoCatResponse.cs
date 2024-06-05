@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Program name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Key field 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 1")]
-		public string M3_KF01 => GetString("KF01");
+		public string M3KF01 => GetString("KF01");
 
 		/// <summary>
 		/// Description: Key field 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 2")]
-		public string M3_KF02 => GetString("KF02");
+		public string M3KF02 => GetString("KF02");
 
 		/// <summary>
 		/// Description: Key field 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 3")]
-		public string M3_KF03 => GetString("KF03");
+		public string M3KF03 => GetString("KF03");
 
 		/// <summary>
 		/// Description: Key field 4
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 4")]
-		public string M3_KF04 => GetString("KF04");
+		public string M3KF04 => GetString("KF04");
 
 		/// <summary>
 		/// Description: Key field 5
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 5")]
-		public string M3_KF05 => GetString("KF05");
+		public string M3KF05 => GetString("KF05");
 
 		/// <summary>
 		/// Description: Key field 6
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 6")]
-		public string M3_KF06 => GetString("KF06");
+		public string M3KF06 => GetString("KF06");
 
 		/// <summary>
 		/// Description: Key field 7
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 7")]
-		public string M3_KF07 => GetString("KF07");
+		public string M3KF07 => GetString("KF07");
 
 		/// <summary>
 		/// Description: Key field 8
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 8")]
-		public string M3_KF08 => GetString("KF08");
+		public string M3KF08 => GetString("KF08");
 
 		/// <summary>
 		/// Description: Key field 9
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 9")]
-		public string M3_KF09 => GetString("KF09");
+		public string M3KF09 => GetString("KF09");
 
 		/// <summary>
 		/// Description: Key field 10
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 10")]
-		public string M3_KF10 => GetString("KF10");
+		public string M3KF10 => GetString("KF10");
 
 		/// <summary>
 		/// Description: Key field 11
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 11")]
-		public string M3_KF11 => GetString("KF11");
+		public string M3KF11 => GetString("KF11");
 
 		/// <summary>
 		/// Description: Key field 12
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 12")]
-		public string M3_KF12 => GetString("KF12");
+		public string M3KF12 => GetString("KF12");
 
 		/// <summary>
 		/// Description: Key field 13
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 13")]
-		public string M3_KF13 => GetString("KF13");
+		public string M3KF13 => GetString("KF13");
 
 		/// <summary>
 		/// Description: Key field 14
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 14")]
-		public string M3_KF14 => GetString("KF14");
+		public string M3KF14 => GetString("KF14");
 
 		/// <summary>
 		/// Description: Key field 15
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 15")]
-		public string M3_KF15 => GetString("KF15");
+		public string M3KF15 => GetString("KF15");
 
 		/// <summary>
 		/// Description: Key field 16
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field 16")]
-		public string M3_KF16 => GetString("KF16");
+		public string M3KF16 => GetString("KF16");
 
 		/// <summary>
 		/// Description: Allowed panel sequence
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.BOOKMKMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allowed panel sequence")]
-		public string M3_APSQ => GetString("APSQ");
+		public string M3APSQ => GetString("APSQ");
 	}
 }
 // EOF

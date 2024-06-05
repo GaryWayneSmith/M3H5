@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Distribution table
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution table")]
-		public string M3_DITI => GetString("DITI");
+		public string M3DITI => GetString("DITI");
 
 		/// <summary>
 		/// Description: From week
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From week")]
-		public int? M3_FRWE => GetNullableInt("FRWE");
+		public int? M3FRWE => GetNullableInt("FRWE");
 
 		/// <summary>
 		/// Description: To week
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To week")]
-		public int? M3_TOWE => GetNullableInt("TOWE");
+		public int? M3TOWE => GetNullableInt("TOWE");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_D1PC => GetNullableInt("D1PC");
+		public int? M3D1PC => GetNullableInt("D1PC");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_D2PC => GetNullableInt("D2PC");
+		public int? M3D2PC => GetNullableInt("D2PC");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_D3PC => GetNullableInt("D3PC");
+		public int? M3D3PC => GetNullableInt("D3PC");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_D4PC => GetNullableInt("D4PC");
+		public int? M3D4PC => GetNullableInt("D4PC");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_D5PC => GetNullableInt("D5PC");
+		public int? M3D5PC => GetNullableInt("D5PC");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_D6PC => GetNullableInt("D6PC");
+		public int? M3D6PC => GetNullableInt("D6PC");
 
 		/// <summary>
 		/// Description: Day percentage
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day percentage")]
-		public int? M3_D7PC => GetNullableInt("D7PC");
+		public int? M3D7PC => GetNullableInt("D7PC");
 
 		/// <summary>
 		/// Description: Entry date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Day 1 quantity
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day 1 quantity")]
-		public decimal? M3_DAQ1 => GetNullableDecimal("DAQ1");
+		public decimal? M3DAQ1 => GetNullableDecimal("DAQ1");
 
 		/// <summary>
 		/// Description: Day 2 quantity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day 2 quantity")]
-		public decimal? M3_DAQ2 => GetNullableDecimal("DAQ2");
+		public decimal? M3DAQ2 => GetNullableDecimal("DAQ2");
 
 		/// <summary>
 		/// Description: Day 3 quantity
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day 3 quantity")]
-		public decimal? M3_DAQ3 => GetNullableDecimal("DAQ3");
+		public decimal? M3DAQ3 => GetNullableDecimal("DAQ3");
 
 		/// <summary>
 		/// Description: Day 4 quantity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day 4 quantity")]
-		public decimal? M3_DAQ4 => GetNullableDecimal("DAQ4");
+		public decimal? M3DAQ4 => GetNullableDecimal("DAQ4");
 
 		/// <summary>
 		/// Description: Day 5 quantity
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day 5 quantity")]
-		public decimal? M3_DAQ5 => GetNullableDecimal("DAQ5");
+		public decimal? M3DAQ5 => GetNullableDecimal("DAQ5");
 
 		/// <summary>
 		/// Description: Day 6 quantity
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day 6 quantity")]
-		public decimal? M3_DAQ6 => GetNullableDecimal("DAQ6");
+		public decimal? M3DAQ6 => GetNullableDecimal("DAQ6");
 
 		/// <summary>
 		/// Description: Day 7 quantity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.FCS330MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day 7 quantity")]
-		public decimal? M3_DAQ7 => GetNullableDecimal("DAQ7");
+		public decimal? M3DAQ7 => GetNullableDecimal("DAQ7");
 	}
 }
 // EOF

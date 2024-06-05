@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value")]
-		public string M3_VALU => GetString("VALU");
+		public string M3VALU => GetString("VALU");
 
 		/// <summary>
 		/// Description: Program heading
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program heading")]
-		public string M3_PGMH => GetString("PGMH");
+		public string M3PGMH => GetString("PGMH");
 
 		/// <summary>
 		/// Description: Language file prefix
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language file prefix")]
-		public string M3_LNFP => GetString("LNFP");
+		public string M3LNFP => GetString("LNFP");
 
 		/// <summary>
 		/// Description: Text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.REFFLDMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 	}
 }
 // EOF

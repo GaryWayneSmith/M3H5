@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Time suffix
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time suffix")]
-		public int? M3_TMSX => GetNullableInt("TMSX");
+		public int? M3TMSX => GetNullableInt("TMSX");
 
 		/// <summary>
 		/// Description: Trans ID
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trans ID")]
-		public string M3_TTID => GetString("TTID");
+		public string M3TTID => GetString("TTID");
 
 		/// <summary>
 		/// Description: Trans type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trans type")]
-		public int? M3_TTYP => GetNullableInt("TTYP");
+		public int? M3TTYP => GetNullableInt("TTYP");
 
 		/// <summary>
 		/// Description: Location
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot ref 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot ref 1")]
-		public string M3_BREF => GetString("BREF");
+		public string M3BREF => GetString("BREF");
 	}
 }
 // EOF

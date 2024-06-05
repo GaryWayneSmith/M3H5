@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CTS095MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add safety stock protect at ATP calculation
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_PREX">Priority (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_SSPL">Protected safety stock level</param>
-		/// <param name="m3_MQSS">Maximum issue percent of safety stock</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3PREX">Priority (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3SSPL">Protected safety stock level</param>
+		/// <param name="m3MQSS">Maximum issue percent of safety stock</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_ORCA, 
-			string m3_PREX, 
-			string m3_OBV1, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			DateTime? m3_FDAT = null, 
-			int? m3_SSPL = null, 
-			int? m3_MQSS = null, 
+			string m3ORCA, 
+			string m3PREX, 
+			string m3OBV1, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			DateTime? m3FDAT = null, 
+			int? m3SSPL = null, 
+			int? m3MQSS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,30 +76,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
-			if (string.IsNullOrWhiteSpace(m3_PREX))
-				throw new ArgumentNullException("m3_PREX");
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
+			if (string.IsNullOrWhiteSpace(m3PREX))
+				throw new ArgumentNullException(nameof(m3PREX));
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORCA", m3_ORCA.Trim())
-				.WithQueryParameter("PREX", m3_PREX.Trim())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim());
+				.WithQueryParameter("ORCA", m3ORCA.Trim())
+				.WithQueryParameter("PREX", m3PREX.Trim())
+				.WithQueryParameter("OBV1", m3OBV1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_SSPL.HasValue)
-				request.WithQueryParameter("SSPL", m3_SSPL.Value.ToString());
-			if (m3_MQSS.HasValue)
-				request.WithQueryParameter("MQSS", m3_MQSS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3SSPL.HasValue)
+				request.WithQueryParameter("SSPL", m3SSPL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MQSS.HasValue)
+				request.WithQueryParameter("MQSS", m3MQSS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -107,7 +109,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -118,12 +121,12 @@ namespace M3H5Lib.Api
 		/// Description Delete safety stock protect at ATP calculation record
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_PREX">Priority (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3PREX">Priority (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -132,12 +135,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Dlt(
-			string m3_ORCA, 
-			string m3_PREX, 
-			string m3_OBV1, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			DateTime? m3_FDAT = null, 
+			string m3ORCA, 
+			string m3PREX, 
+			string m3OBV1, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -152,26 +155,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
-			if (string.IsNullOrWhiteSpace(m3_PREX))
-				throw new ArgumentNullException("m3_PREX");
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
+			if (string.IsNullOrWhiteSpace(m3PREX))
+				throw new ArgumentNullException(nameof(m3PREX));
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORCA", m3_ORCA.Trim())
-				.WithQueryParameter("PREX", m3_PREX.Trim())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim());
+				.WithQueryParameter("ORCA", m3ORCA.Trim())
+				.WithQueryParameter("PREX", m3PREX.Trim())
+				.WithQueryParameter("OBV1", m3OBV1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -181,7 +184,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -192,12 +196,12 @@ namespace M3H5Lib.Api
 		/// Description Get safety stock protect at ATP calculation record
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_PREX">Priority (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_FDAT">From date</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3PREX">Priority (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3FDAT">From date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -206,12 +210,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_ORCA, 
-			string m3_PREX, 
-			string m3_OBV1, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			DateTime? m3_FDAT = null, 
+			string m3ORCA, 
+			string m3PREX, 
+			string m3OBV1, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			DateTime? m3FDAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,26 +230,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
-			if (string.IsNullOrWhiteSpace(m3_PREX))
-				throw new ArgumentNullException("m3_PREX");
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
+			if (string.IsNullOrWhiteSpace(m3PREX))
+				throw new ArgumentNullException(nameof(m3PREX));
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORCA", m3_ORCA.Trim())
-				.WithQueryParameter("PREX", m3_PREX.Trim())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim());
+				.WithQueryParameter("ORCA", m3ORCA.Trim())
+				.WithQueryParameter("PREX", m3PREX.Trim())
+				.WithQueryParameter("OBV1", m3OBV1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -255,7 +259,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -266,13 +271,13 @@ namespace M3H5Lib.Api
 		/// Description List existing safety stock protect at ATP calculation record
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_PREX">Priority</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_NFTR">Number of filters</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3PREX">Priority</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3NFTR">Number of filters</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -281,13 +286,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_ORCA = null, 
-			string m3_PREX = null, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			DateTime? m3_FDAT = null, 
-			int? m3_NFTR = null, 
+			string m3ORCA = null, 
+			string m3PREX = null, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			DateTime? m3FDAT = null, 
+			int? m3NFTR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -302,20 +307,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PREX))
-				request.WithQueryParameter("PREX", m3_PREX.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_NFTR.HasValue)
-				request.WithQueryParameter("NFTR", m3_NFTR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PREX))
+				request.WithQueryParameter("PREX", m3PREX.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3NFTR.HasValue)
+				request.WithQueryParameter("NFTR", m3NFTR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -325,7 +330,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -336,14 +342,14 @@ namespace M3H5Lib.Api
 		/// Description Update safety stock protect at ATP calculation record
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_PREX">Priority (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_SSPL">Protected safety stock level</param>
-		/// <param name="m3_MQSS">Maximum issue percent of safety stock</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3PREX">Priority (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3SSPL">Protected safety stock level</param>
+		/// <param name="m3MQSS">Maximum issue percent of safety stock</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -352,14 +358,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_ORCA, 
-			string m3_PREX, 
-			string m3_OBV1, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			DateTime? m3_FDAT = null, 
-			int? m3_SSPL = null, 
-			int? m3_MQSS = null, 
+			string m3ORCA, 
+			string m3PREX, 
+			string m3OBV1, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			DateTime? m3FDAT = null, 
+			int? m3SSPL = null, 
+			int? m3MQSS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -374,30 +380,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
-			if (string.IsNullOrWhiteSpace(m3_PREX))
-				throw new ArgumentNullException("m3_PREX");
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
+			if (string.IsNullOrWhiteSpace(m3PREX))
+				throw new ArgumentNullException(nameof(m3PREX));
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORCA", m3_ORCA.Trim())
-				.WithQueryParameter("PREX", m3_PREX.Trim())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim());
+				.WithQueryParameter("ORCA", m3ORCA.Trim())
+				.WithQueryParameter("PREX", m3PREX.Trim())
+				.WithQueryParameter("OBV1", m3OBV1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_SSPL.HasValue)
-				request.WithQueryParameter("SSPL", m3_SSPL.Value.ToString());
-			if (m3_MQSS.HasValue)
-				request.WithQueryParameter("MQSS", m3_MQSS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3SSPL.HasValue)
+				request.WithQueryParameter("SSPL", m3SSPL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MQSS.HasValue)
+				request.WithQueryParameter("MQSS", m3MQSS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -407,7 +413,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

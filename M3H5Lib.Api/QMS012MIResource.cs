@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QMS012MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add Measurement Method
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_MSUR">Measurement method</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_ACTF">Active</param>
+		/// <param name="m3MSUR">Measurement method</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3ACTF">Active</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddMeasrmtMethd(
-			string m3_MSUR = null, 
-			string m3_TX40 = null, 
-			int? m3_ACTF = null, 
+			string m3MSUR = null, 
+			string m3TX40 = null, 
+			int? m3ACTF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,12 +66,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MSUR))
-				request.WithQueryParameter("MSUR", m3_MSUR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MSUR))
+				request.WithQueryParameter("MSUR", m3MSUR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -90,7 +93,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Measurment Method
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_MSUR">Measurement method</param>
+		/// <param name="m3MSUR">Measurement method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -99,7 +102,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltMeasrmtMethd(
-			string m3_MSUR = null, 
+			string m3MSUR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -114,8 +117,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MSUR))
-				request.WithQueryParameter("MSUR", m3_MSUR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSUR))
+				request.WithQueryParameter("MSUR", m3MSUR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -136,7 +140,7 @@ namespace M3H5Lib.Api
 		/// Description Get Measurement method
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_MSUR">Measurement method</param>
+		/// <param name="m3MSUR">Measurement method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -145,7 +149,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetMeasrmtMethdResponse></returns>
 		/// <exception cref="M3Exception<GetMeasrmtMethdResponse>"></exception>
 		public async Task<M3Response<GetMeasrmtMethdResponse>> GetMeasrmtMethd(
-			string m3_MSUR = null, 
+			string m3MSUR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -160,8 +164,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MSUR))
-				request.WithQueryParameter("MSUR", m3_MSUR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSUR))
+				request.WithQueryParameter("MSUR", m3MSUR.Trim());
 
 			// Execute the request
 			var result = await Execute<GetMeasrmtMethdResponse>(
@@ -171,7 +175,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -182,7 +187,7 @@ namespace M3H5Lib.Api
 		/// Description List Measurement method
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_MSUR">Measurement method</param>
+		/// <param name="m3MSUR">Measurement method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -191,7 +196,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstMeasrmtMethdResponse></returns>
 		/// <exception cref="M3Exception<LstMeasrmtMethdResponse>"></exception>
 		public async Task<M3Response<LstMeasrmtMethdResponse>> LstMeasrmtMethd(
-			string m3_MSUR = null, 
+			string m3MSUR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -206,8 +211,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MSUR))
-				request.WithQueryParameter("MSUR", m3_MSUR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSUR))
+				request.WithQueryParameter("MSUR", m3MSUR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstMeasrmtMethdResponse>(
@@ -217,7 +222,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -228,9 +234,9 @@ namespace M3H5Lib.Api
 		/// Description Update Measurement method
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_MSUR">Measurement method</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_ACTF">Active</param>
+		/// <param name="m3MSUR">Measurement method</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3ACTF">Active</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -239,9 +245,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdMeasrmtMethd(
-			string m3_MSUR = null, 
-			string m3_TX40 = null, 
-			int? m3_ACTF = null, 
+			string m3MSUR = null, 
+			string m3TX40 = null, 
+			int? m3ACTF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -256,12 +262,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MSUR))
-				request.WithQueryParameter("MSUR", m3_MSUR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (m3_ACTF.HasValue)
-				request.WithQueryParameter("ACTF", m3_ACTF.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MSUR))
+				request.WithQueryParameter("MSUR", m3MSUR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (m3ACTF.HasValue)
+				request.WithQueryParameter("ACTF", m3ACTF.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -271,7 +277,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

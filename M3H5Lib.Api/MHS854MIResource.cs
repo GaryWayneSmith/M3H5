@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MHS854MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,17 +38,17 @@ namespace M3H5Lib.Api
 		/// Description AddSublot
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_MSGN">Message number (Required)</param>
-		/// <param name="m3_PACN">Package number (Required)</param>
-		/// <param name="m3_MSLN">Message line number (Required)</param>
-		/// <param name="m3_SUBL">Subline number (Required)</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_BANT">Reference sublot ID</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_CAWE">Catch weight</param>
-		/// <param name="m3_GEDT">Date generated</param>
-		/// <param name="m3_GETM">Time generated</param>
-		/// <param name="m3_QLFR">Qualifier</param>
+		/// <param name="m3MSGN">Message number (Required)</param>
+		/// <param name="m3PACN">Package number (Required)</param>
+		/// <param name="m3MSLN">Message line number (Required)</param>
+		/// <param name="m3SUBL">Subline number (Required)</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3BANT">Reference sublot ID</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3CAWE">Catch weight</param>
+		/// <param name="m3GEDT">Date generated</param>
+		/// <param name="m3GETM">Time generated</param>
+		/// <param name="m3QLFR">Qualifier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -55,17 +57,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSublot(
-			string m3_MSGN, 
-			string m3_PACN, 
-			int m3_MSLN, 
-			int m3_SUBL, 
-			string m3_BANO = null, 
-			string m3_BANT = null, 
-			string m3_ITNO = null, 
-			decimal? m3_CAWE = null, 
-			DateTime? m3_GEDT = null, 
-			int? m3_GETM = null, 
-			string m3_QLFR = null, 
+			string m3MSGN, 
+			string m3PACN, 
+			int m3MSLN, 
+			int m3SUBL, 
+			string m3BANO = null, 
+			string m3BANT = null, 
+			string m3ITNO = null, 
+			decimal? m3CAWE = null, 
+			DateTime? m3GEDT = null, 
+			int? m3GETM = null, 
+			string m3QLFR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -80,33 +82,33 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MSGN))
-				throw new ArgumentNullException("m3_MSGN");
-			if (string.IsNullOrWhiteSpace(m3_PACN))
-				throw new ArgumentNullException("m3_PACN");
+			if (string.IsNullOrWhiteSpace(m3MSGN))
+				throw new ArgumentNullException(nameof(m3MSGN));
+			if (string.IsNullOrWhiteSpace(m3PACN))
+				throw new ArgumentNullException(nameof(m3PACN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MSGN", m3_MSGN.Trim())
-				.WithQueryParameter("PACN", m3_PACN.Trim())
-				.WithQueryParameter("MSLN", m3_MSLN.ToString())
-				.WithQueryParameter("SUBL", m3_SUBL.ToString());
+				.WithQueryParameter("MSGN", m3MSGN.Trim())
+				.WithQueryParameter("PACN", m3PACN.Trim())
+				.WithQueryParameter("MSLN", m3MSLN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SUBL", m3SUBL.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANT))
-				request.WithQueryParameter("BANT", m3_BANT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (m3_CAWE.HasValue)
-				request.WithQueryParameter("CAWE", m3_CAWE.Value.ToString());
-			if (m3_GEDT.HasValue)
-				request.WithQueryParameter("GEDT", m3_GEDT.Value.ToM3String());
-			if (m3_GETM.HasValue)
-				request.WithQueryParameter("GETM", m3_GETM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_QLFR))
-				request.WithQueryParameter("QLFR", m3_QLFR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANT))
+				request.WithQueryParameter("BANT", m3BANT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (m3CAWE.HasValue)
+				request.WithQueryParameter("CAWE", m3CAWE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3GEDT.HasValue)
+				request.WithQueryParameter("GEDT", m3GEDT.Value.ToM3String());
+			if (m3GETM.HasValue)
+				request.WithQueryParameter("GETM", m3GETM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3QLFR))
+				request.WithQueryParameter("QLFR", m3QLFR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -116,7 +118,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -127,10 +130,10 @@ namespace M3H5Lib.Api
 		/// Description DltSublot
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_MSGN">Message number (Required)</param>
-		/// <param name="m3_PACN">Package number (Required)</param>
-		/// <param name="m3_MSLN">Message line number (Required)</param>
-		/// <param name="m3_SUBL">Subline number (Required)</param>
+		/// <param name="m3MSGN">Message number (Required)</param>
+		/// <param name="m3PACN">Package number (Required)</param>
+		/// <param name="m3MSLN">Message line number (Required)</param>
+		/// <param name="m3SUBL">Subline number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -139,10 +142,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltSublot(
-			string m3_MSGN, 
-			string m3_PACN, 
-			int m3_MSLN, 
-			int m3_SUBL, 
+			string m3MSGN, 
+			string m3PACN, 
+			int m3MSLN, 
+			int m3SUBL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -157,17 +160,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MSGN))
-				throw new ArgumentNullException("m3_MSGN");
-			if (string.IsNullOrWhiteSpace(m3_PACN))
-				throw new ArgumentNullException("m3_PACN");
+			if (string.IsNullOrWhiteSpace(m3MSGN))
+				throw new ArgumentNullException(nameof(m3MSGN));
+			if (string.IsNullOrWhiteSpace(m3PACN))
+				throw new ArgumentNullException(nameof(m3PACN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MSGN", m3_MSGN.Trim())
-				.WithQueryParameter("PACN", m3_PACN.Trim())
-				.WithQueryParameter("MSLN", m3_MSLN.ToString())
-				.WithQueryParameter("SUBL", m3_SUBL.ToString());
+				.WithQueryParameter("MSGN", m3MSGN.Trim())
+				.WithQueryParameter("PACN", m3PACN.Trim())
+				.WithQueryParameter("MSLN", m3MSLN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SUBL", m3SUBL.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -177,7 +180,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -188,10 +192,10 @@ namespace M3H5Lib.Api
 		/// Description GetSublot
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_MSGN">Message number (Required)</param>
-		/// <param name="m3_PACN">Package number (Required)</param>
-		/// <param name="m3_MSLN">Message line number (Required)</param>
-		/// <param name="m3_SUBL">Subline number (Required)</param>
+		/// <param name="m3MSGN">Message number (Required)</param>
+		/// <param name="m3PACN">Package number (Required)</param>
+		/// <param name="m3MSLN">Message line number (Required)</param>
+		/// <param name="m3SUBL">Subline number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -200,10 +204,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSublotResponse></returns>
 		/// <exception cref="M3Exception<GetSublotResponse>"></exception>
 		public async Task<M3Response<GetSublotResponse>> GetSublot(
-			string m3_MSGN, 
-			string m3_PACN, 
-			int m3_MSLN, 
-			int m3_SUBL, 
+			string m3MSGN, 
+			string m3PACN, 
+			int m3MSLN, 
+			int m3SUBL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -218,17 +222,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MSGN))
-				throw new ArgumentNullException("m3_MSGN");
-			if (string.IsNullOrWhiteSpace(m3_PACN))
-				throw new ArgumentNullException("m3_PACN");
+			if (string.IsNullOrWhiteSpace(m3MSGN))
+				throw new ArgumentNullException(nameof(m3MSGN));
+			if (string.IsNullOrWhiteSpace(m3PACN))
+				throw new ArgumentNullException(nameof(m3PACN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MSGN", m3_MSGN.Trim())
-				.WithQueryParameter("PACN", m3_PACN.Trim())
-				.WithQueryParameter("MSLN", m3_MSLN.ToString())
-				.WithQueryParameter("SUBL", m3_SUBL.ToString());
+				.WithQueryParameter("MSGN", m3MSGN.Trim())
+				.WithQueryParameter("PACN", m3PACN.Trim())
+				.WithQueryParameter("MSLN", m3MSLN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SUBL", m3SUBL.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetSublotResponse>(
@@ -238,7 +242,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -249,10 +254,10 @@ namespace M3H5Lib.Api
 		/// Description LstSublots
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_MSGN">Message number</param>
-		/// <param name="m3_PACN">Package number</param>
-		/// <param name="m3_MSLN">Message line number</param>
-		/// <param name="m3_SUBL">Subline number</param>
+		/// <param name="m3MSGN">Message number</param>
+		/// <param name="m3PACN">Package number</param>
+		/// <param name="m3MSLN">Message line number</param>
+		/// <param name="m3SUBL">Subline number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -261,10 +266,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSublotsResponse></returns>
 		/// <exception cref="M3Exception<LstSublotsResponse>"></exception>
 		public async Task<M3Response<LstSublotsResponse>> LstSublots(
-			string m3_MSGN = null, 
-			string m3_PACN = null, 
-			int? m3_MSLN = null, 
-			int? m3_SUBL = null, 
+			string m3MSGN = null, 
+			string m3PACN = null, 
+			int? m3MSLN = null, 
+			int? m3SUBL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -279,14 +284,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_MSGN))
-				request.WithQueryParameter("MSGN", m3_MSGN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PACN))
-				request.WithQueryParameter("PACN", m3_PACN.Trim());
-			if (m3_MSLN.HasValue)
-				request.WithQueryParameter("MSLN", m3_MSLN.Value.ToString());
-			if (m3_SUBL.HasValue)
-				request.WithQueryParameter("SUBL", m3_SUBL.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3MSGN))
+				request.WithQueryParameter("MSGN", m3MSGN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PACN))
+				request.WithQueryParameter("PACN", m3PACN.Trim());
+			if (m3MSLN.HasValue)
+				request.WithQueryParameter("MSLN", m3MSLN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SUBL.HasValue)
+				request.WithQueryParameter("SUBL", m3SUBL.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstSublotsResponse>(
@@ -296,7 +301,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -307,10 +313,10 @@ namespace M3H5Lib.Api
 		/// Description Sets the date of the record(s) to todays date
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_MSGN">Message number (Required)</param>
-		/// <param name="m3_PACN">Package number (Required)</param>
-		/// <param name="m3_MSLN">Message line number (Required)</param>
-		/// <param name="m3_SUBL">Subline number (Required)</param>
+		/// <param name="m3MSGN">Message number (Required)</param>
+		/// <param name="m3PACN">Package number (Required)</param>
+		/// <param name="m3MSLN">Message line number (Required)</param>
+		/// <param name="m3SUBL">Subline number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -319,10 +325,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SetCurrentDateResponse></returns>
 		/// <exception cref="M3Exception<SetCurrentDateResponse>"></exception>
 		public async Task<M3Response<SetCurrentDateResponse>> SetCurrentDate(
-			string m3_MSGN, 
-			string m3_PACN, 
-			int m3_MSLN, 
-			int m3_SUBL, 
+			string m3MSGN, 
+			string m3PACN, 
+			int m3MSLN, 
+			int m3SUBL, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -337,17 +343,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MSGN))
-				throw new ArgumentNullException("m3_MSGN");
-			if (string.IsNullOrWhiteSpace(m3_PACN))
-				throw new ArgumentNullException("m3_PACN");
+			if (string.IsNullOrWhiteSpace(m3MSGN))
+				throw new ArgumentNullException(nameof(m3MSGN));
+			if (string.IsNullOrWhiteSpace(m3PACN))
+				throw new ArgumentNullException(nameof(m3PACN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MSGN", m3_MSGN.Trim())
-				.WithQueryParameter("PACN", m3_PACN.Trim())
-				.WithQueryParameter("MSLN", m3_MSLN.ToString())
-				.WithQueryParameter("SUBL", m3_SUBL.ToString());
+				.WithQueryParameter("MSGN", m3MSGN.Trim())
+				.WithQueryParameter("PACN", m3PACN.Trim())
+				.WithQueryParameter("MSLN", m3MSLN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SUBL", m3SUBL.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SetCurrentDateResponse>(
@@ -357,7 +363,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -368,17 +375,17 @@ namespace M3H5Lib.Api
 		/// Description UpdSublot
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_MSGN">Message number (Required)</param>
-		/// <param name="m3_PACN">Package number (Required)</param>
-		/// <param name="m3_MSLN">Message line number (Required)</param>
-		/// <param name="m3_SUBL">Subline number (Required)</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_BANT">Reference sublot ID</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_CAWE">Catch weight</param>
-		/// <param name="m3_GEDT">Date generated</param>
-		/// <param name="m3_GETM">Time generated</param>
-		/// <param name="m3_QLFR">Qualifier</param>
+		/// <param name="m3MSGN">Message number (Required)</param>
+		/// <param name="m3PACN">Package number (Required)</param>
+		/// <param name="m3MSLN">Message line number (Required)</param>
+		/// <param name="m3SUBL">Subline number (Required)</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3BANT">Reference sublot ID</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3CAWE">Catch weight</param>
+		/// <param name="m3GEDT">Date generated</param>
+		/// <param name="m3GETM">Time generated</param>
+		/// <param name="m3QLFR">Qualifier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -387,17 +394,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSublot(
-			string m3_MSGN, 
-			string m3_PACN, 
-			int m3_MSLN, 
-			int m3_SUBL, 
-			string m3_BANO = null, 
-			string m3_BANT = null, 
-			string m3_ITNO = null, 
-			decimal? m3_CAWE = null, 
-			DateTime? m3_GEDT = null, 
-			int? m3_GETM = null, 
-			string m3_QLFR = null, 
+			string m3MSGN, 
+			string m3PACN, 
+			int m3MSLN, 
+			int m3SUBL, 
+			string m3BANO = null, 
+			string m3BANT = null, 
+			string m3ITNO = null, 
+			decimal? m3CAWE = null, 
+			DateTime? m3GEDT = null, 
+			int? m3GETM = null, 
+			string m3QLFR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -412,33 +419,33 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MSGN))
-				throw new ArgumentNullException("m3_MSGN");
-			if (string.IsNullOrWhiteSpace(m3_PACN))
-				throw new ArgumentNullException("m3_PACN");
+			if (string.IsNullOrWhiteSpace(m3MSGN))
+				throw new ArgumentNullException(nameof(m3MSGN));
+			if (string.IsNullOrWhiteSpace(m3PACN))
+				throw new ArgumentNullException(nameof(m3PACN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MSGN", m3_MSGN.Trim())
-				.WithQueryParameter("PACN", m3_PACN.Trim())
-				.WithQueryParameter("MSLN", m3_MSLN.ToString())
-				.WithQueryParameter("SUBL", m3_SUBL.ToString());
+				.WithQueryParameter("MSGN", m3MSGN.Trim())
+				.WithQueryParameter("PACN", m3PACN.Trim())
+				.WithQueryParameter("MSLN", m3MSLN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SUBL", m3SUBL.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANT))
-				request.WithQueryParameter("BANT", m3_BANT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (m3_CAWE.HasValue)
-				request.WithQueryParameter("CAWE", m3_CAWE.Value.ToString());
-			if (m3_GEDT.HasValue)
-				request.WithQueryParameter("GEDT", m3_GEDT.Value.ToM3String());
-			if (m3_GETM.HasValue)
-				request.WithQueryParameter("GETM", m3_GETM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_QLFR))
-				request.WithQueryParameter("QLFR", m3_QLFR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANT))
+				request.WithQueryParameter("BANT", m3BANT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (m3CAWE.HasValue)
+				request.WithQueryParameter("CAWE", m3CAWE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3GEDT.HasValue)
+				request.WithQueryParameter("GEDT", m3GEDT.Value.ToM3String());
+			if (m3GETM.HasValue)
+				request.WithQueryParameter("GETM", m3GETM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3QLFR))
+				request.WithQueryParameter("QLFR", m3QLFR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -448,7 +455,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

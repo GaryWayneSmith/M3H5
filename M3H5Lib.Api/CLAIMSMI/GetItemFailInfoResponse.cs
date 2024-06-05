@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number causing failure")]
-		public string M3_ITCP => GetString("ITCP");
+		public string M3ITCP => GetString("ITCP");
 
 		/// <summary>
 		/// Description: Serial number causing failure
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number causing failure")]
-		public string M3_SECP => GetString("SECP");
+		public string M3SECP => GetString("SECP");
 
 		/// <summary>
 		/// Description: Meter
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Since new
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CLAIMSMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Since new")]
-		public decimal? M3_MVA0 => GetNullableDecimal("MVA0");
+		public decimal? M3MVA0 => GetNullableDecimal("MVA0");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.ATS040MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description This transaction displays Attribute Value
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_FATM">From Attribute model</param>
-		/// <param name="m3_TATM">To Attribute Model</param>
+		/// <param name="m3FATM">From Attribute model</param>
+		/// <param name="m3TATM">To Attribute Model</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDepAttrValueResponse></returns>
 		/// <exception cref="M3Exception<LstDepAttrValueResponse>"></exception>
 		public async Task<M3Response<LstDepAttrValueResponse>> LstDepAttrValue(
-			string m3_FATM = null, 
-			string m3_TATM = null, 
+			string m3FATM = null, 
+			string m3TATM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FATM))
-				request.WithQueryParameter("FATM", m3_FATM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TATM))
-				request.WithQueryParameter("TATM", m3_TATM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FATM))
+				request.WithQueryParameter("FATM", m3FATM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TATM))
+				request.WithQueryParameter("TATM", m3TATM.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDepAttrValueResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

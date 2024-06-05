@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice batch number")]
-		public long? M3_INBN => GetNullableLong("INBN");
+		public long? M3INBN => GetNullableLong("INBN");
 
 		/// <summary>
 		/// Description: Supplier
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: Invoice batch type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice batch type")]
-		public string M3_IBTP => GetString("IBTP");
+		public string M3IBTP => GetString("IBTP");
 
 		/// <summary>
 		/// Description: Invoice status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice status")]
-		public int? M3_SUPA => GetNullableInt("SUPA");
+		public int? M3SUPA => GetNullableInt("SUPA");
 	}
 }
 // EOF

@@ -11,12 +11,17 @@ namespace M3H5Lib.Api
 	public partial class EXPORTMIResource
 	{
 
-		public M3Response<T> ProcessM3EXPORTMIResponse<T>(M3EXPORTMIRequest request, M3Response<M3H5Lib.Api.EXPORTMI.SelectResponse> response,
+		public static M3Response<T> ProcessM3EXPORTMIResponse<T>(M3EXPORTMIRequest request, M3Response<EXPORTMI.SelectResponse> response,
 			bool? skipHeader = null,
 			bool? trimResults = null
 			) where T : M3BaseRecord, new()
 		{
-			M3RecordList<T> m3Rows = new M3RecordList<T>();
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+            if (response == null)
+                throw new ArgumentNullException(nameof(response));
+
+            M3RecordList<T> m3Rows = new M3RecordList<T>();
 
 			string trim(string data)
 			{
@@ -27,8 +32,8 @@ namespace M3H5Lib.Api
 				return data;
 			};
 
-			int recordLength = request.RecordLength;
-			foreach (M3H5Lib.Api.EXPORTMI.SelectResponse row in response.Rows)
+            int recordLength = request.RecordLength;
+			foreach (EXPORTMI.SelectResponse row in response.Rows)
 			{
 				if (row.RowIndex == 0
 					&& skipHeader.GetValueOrDefault(true))

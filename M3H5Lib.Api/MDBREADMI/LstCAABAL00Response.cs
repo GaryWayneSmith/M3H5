@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Acc model ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acc model ID")]
-		public string M3_MOID => GetString("MOID");
+		public string M3MOID => GetString("MOID");
 
 		/// <summary>
 		/// Description: Acc model line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acc model line")]
-		public int? M3_MOLN => GetNullableInt("MOLN");
+		public int? M3MOLN => GetNullableInt("MOLN");
 
 		/// <summary>
 		/// Description: Column value 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 1")]
-		public string M3_COV1 => GetString("COV1");
+		public string M3COV1 => GetString("COV1");
 
 		/// <summary>
 		/// Description: Column value 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 2")]
-		public string M3_COV2 => GetString("COV2");
+		public string M3COV2 => GetString("COV2");
 
 		/// <summary>
 		/// Description: Column value 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 3")]
-		public string M3_COV3 => GetString("COV3");
+		public string M3COV3 => GetString("COV3");
 
 		/// <summary>
 		/// Description: Column value 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 4")]
-		public string M3_COV4 => GetString("COV4");
+		public string M3COV4 => GetString("COV4");
 
 		/// <summary>
 		/// Description: Column value 6
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 6")]
-		public string M3_COV6 => GetString("COV6");
+		public string M3COV6 => GetString("COV6");
 
 		/// <summary>
 		/// Description: Column value 7
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 7")]
-		public string M3_COV7 => GetString("COV7");
+		public string M3COV7 => GetString("COV7");
 
 		/// <summary>
 		/// Description: Column value 8
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 8")]
-		public string M3_COV8 => GetString("COV8");
+		public string M3COV8 => GetString("COV8");
 
 		/// <summary>
 		/// Description: Column value 9
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 9")]
-		public string M3_COV9 => GetString("COV9");
+		public string M3COV9 => GetString("COV9");
 
 		/// <summary>
 		/// Description: Column value 10
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Column value 10")]
-		public string M3_CO10 => GetString("CO10");
+		public string M3CO10 => GetString("CO10");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_ACAM => GetNullableDecimal("ACAM");
+		public decimal? M3ACAM => GetNullableDecimal("ACAM");
 
 		/// <summary>
 		/// Description: Budg amount
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budg amount")]
-		public decimal? M3_BUAM => GetNullableDecimal("BUAM");
+		public decimal? M3BUAM => GetNullableDecimal("BUAM");
 
 		/// <summary>
 		/// Description: Account period
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account period")]
-		public int? M3_ACYP => GetNullableInt("ACYP");
+		public int? M3ACYP => GetNullableInt("ACYP");
 
 		/// <summary>
 		/// Description: Act amt rep cur
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Act amt rep cur")]
-		public decimal? M3_CURC => GetNullableDecimal("CURC");
+		public decimal? M3CURC => GetNullableDecimal("CURC");
 
 		/// <summary>
 		/// Description: Budget amt rep
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget amt rep")]
-		public decimal? M3_BURC => GetNullableDecimal("BURC");
+		public decimal? M3BURC => GetNullableDecimal("BURC");
 
 		/// <summary>
 		/// Description: Quantity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity")]
-		public decimal? M3_ACQT => GetNullableDecimal("ACQT");
+		public decimal? M3ACQT => GetNullableDecimal("ACQT");
 
 		/// <summary>
 		/// Description: Budg qty
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budg qty")]
-		public decimal? M3_BUQT => GetNullableDecimal("BUQT");
+		public decimal? M3BUQT => GetNullableDecimal("BUQT");
 
 		/// <summary>
 		/// Description: Next orig ID
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next orig ID")]
-		public long? M3_NHBI => GetNullableLong("NHBI");
+		public long? M3NHBI => GetNullableLong("NHBI");
 	}
 }
 // EOF

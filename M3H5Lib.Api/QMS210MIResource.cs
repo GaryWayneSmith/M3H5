@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QMS210MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add Specification entity
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SPEC">Specification</param>
-		/// <param name="m3_QSE1">Effective date</param>
-		/// <param name="m3_QSE2">Effective time</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_QMGP">Quality group</param>
-		/// <param name="m3_ETTP">Entity type</param>
-		/// <param name="m3_ETID">Entity ID</param>
-		/// <param name="m3_AUAT">Auto attach</param>
+		/// <param name="m3SPEC">Specification</param>
+		/// <param name="m3QSE1">Effective date</param>
+		/// <param name="m3QSE2">Effective time</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3QMGP">Quality group</param>
+		/// <param name="m3ETTP">Entity type</param>
+		/// <param name="m3ETID">Entity ID</param>
+		/// <param name="m3AUAT">Auto attach</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSpecEntity(
-			string m3_SPEC = null, 
-			DateTime? m3_QSE1 = null, 
-			int? m3_QSE2 = null, 
-			string m3_ITNO = null, 
-			string m3_QMGP = null, 
-			int? m3_ETTP = null, 
-			string m3_ETID = null, 
-			int? m3_AUAT = null, 
+			string m3SPEC = null, 
+			DateTime? m3QSE1 = null, 
+			int? m3QSE2 = null, 
+			string m3ITNO = null, 
+			string m3QMGP = null, 
+			int? m3ETTP = null, 
+			string m3ETID = null, 
+			int? m3AUAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,22 +76,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SPEC))
-				request.WithQueryParameter("SPEC", m3_SPEC.Trim());
-			if (m3_QSE1.HasValue)
-				request.WithQueryParameter("QSE1", m3_QSE1.Value.ToM3String());
-			if (m3_QSE2.HasValue)
-				request.WithQueryParameter("QSE2", m3_QSE2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_QMGP))
-				request.WithQueryParameter("QMGP", m3_QMGP.Trim());
-			if (m3_ETTP.HasValue)
-				request.WithQueryParameter("ETTP", m3_ETTP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ETID))
-				request.WithQueryParameter("ETID", m3_ETID.Trim());
-			if (m3_AUAT.HasValue)
-				request.WithQueryParameter("AUAT", m3_AUAT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3SPEC))
+				request.WithQueryParameter("SPEC", m3SPEC.Trim());
+			if (m3QSE1.HasValue)
+				request.WithQueryParameter("QSE1", m3QSE1.Value.ToM3String());
+			if (m3QSE2.HasValue)
+				request.WithQueryParameter("QSE2", m3QSE2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QMGP))
+				request.WithQueryParameter("QMGP", m3QMGP.Trim());
+			if (m3ETTP.HasValue)
+				request.WithQueryParameter("ETTP", m3ETTP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ETID))
+				request.WithQueryParameter("ETID", m3ETID.Trim());
+			if (m3AUAT.HasValue)
+				request.WithQueryParameter("AUAT", m3AUAT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -99,7 +101,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -110,13 +113,13 @@ namespace M3H5Lib.Api
 		/// Description Delete Specification Entity
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SPEC">Specification</param>
-		/// <param name="m3_QSE1">Effective date</param>
-		/// <param name="m3_QSE2">Effective time</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_QMGP">Quality group</param>
-		/// <param name="m3_ETTP">Entity type</param>
-		/// <param name="m3_ETID">Entity ID</param>
+		/// <param name="m3SPEC">Specification</param>
+		/// <param name="m3QSE1">Effective date</param>
+		/// <param name="m3QSE2">Effective time</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3QMGP">Quality group</param>
+		/// <param name="m3ETTP">Entity type</param>
+		/// <param name="m3ETID">Entity ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -125,13 +128,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltSpecEntity(
-			string m3_SPEC = null, 
-			DateTime? m3_QSE1 = null, 
-			int? m3_QSE2 = null, 
-			string m3_ITNO = null, 
-			string m3_QMGP = null, 
-			int? m3_ETTP = null, 
-			string m3_ETID = null, 
+			string m3SPEC = null, 
+			DateTime? m3QSE1 = null, 
+			int? m3QSE2 = null, 
+			string m3ITNO = null, 
+			string m3QMGP = null, 
+			int? m3ETTP = null, 
+			string m3ETID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -146,20 +149,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SPEC))
-				request.WithQueryParameter("SPEC", m3_SPEC.Trim());
-			if (m3_QSE1.HasValue)
-				request.WithQueryParameter("QSE1", m3_QSE1.Value.ToM3String());
-			if (m3_QSE2.HasValue)
-				request.WithQueryParameter("QSE2", m3_QSE2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_QMGP))
-				request.WithQueryParameter("QMGP", m3_QMGP.Trim());
-			if (m3_ETTP.HasValue)
-				request.WithQueryParameter("ETTP", m3_ETTP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ETID))
-				request.WithQueryParameter("ETID", m3_ETID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPEC))
+				request.WithQueryParameter("SPEC", m3SPEC.Trim());
+			if (m3QSE1.HasValue)
+				request.WithQueryParameter("QSE1", m3QSE1.Value.ToM3String());
+			if (m3QSE2.HasValue)
+				request.WithQueryParameter("QSE2", m3QSE2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QMGP))
+				request.WithQueryParameter("QMGP", m3QMGP.Trim());
+			if (m3ETTP.HasValue)
+				request.WithQueryParameter("ETTP", m3ETTP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ETID))
+				request.WithQueryParameter("ETID", m3ETID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -169,7 +172,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -180,13 +184,13 @@ namespace M3H5Lib.Api
 		/// Description Get Specification Entity
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SPEC">Specification</param>
-		/// <param name="m3_QSE1">Effective date</param>
-		/// <param name="m3_QSE2">Effective time</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_QMGP">Quality group</param>
-		/// <param name="m3_ETTP">Entity type</param>
-		/// <param name="m3_ETID">Entity ID</param>
+		/// <param name="m3SPEC">Specification</param>
+		/// <param name="m3QSE1">Effective date</param>
+		/// <param name="m3QSE2">Effective time</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3QMGP">Quality group</param>
+		/// <param name="m3ETTP">Entity type</param>
+		/// <param name="m3ETID">Entity ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -195,13 +199,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSpecEntityResponse></returns>
 		/// <exception cref="M3Exception<GetSpecEntityResponse>"></exception>
 		public async Task<M3Response<GetSpecEntityResponse>> GetSpecEntity(
-			string m3_SPEC = null, 
-			DateTime? m3_QSE1 = null, 
-			int? m3_QSE2 = null, 
-			string m3_ITNO = null, 
-			string m3_QMGP = null, 
-			int? m3_ETTP = null, 
-			string m3_ETID = null, 
+			string m3SPEC = null, 
+			DateTime? m3QSE1 = null, 
+			int? m3QSE2 = null, 
+			string m3ITNO = null, 
+			string m3QMGP = null, 
+			int? m3ETTP = null, 
+			string m3ETID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -216,20 +220,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SPEC))
-				request.WithQueryParameter("SPEC", m3_SPEC.Trim());
-			if (m3_QSE1.HasValue)
-				request.WithQueryParameter("QSE1", m3_QSE1.Value.ToM3String());
-			if (m3_QSE2.HasValue)
-				request.WithQueryParameter("QSE2", m3_QSE2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_QMGP))
-				request.WithQueryParameter("QMGP", m3_QMGP.Trim());
-			if (m3_ETTP.HasValue)
-				request.WithQueryParameter("ETTP", m3_ETTP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ETID))
-				request.WithQueryParameter("ETID", m3_ETID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPEC))
+				request.WithQueryParameter("SPEC", m3SPEC.Trim());
+			if (m3QSE1.HasValue)
+				request.WithQueryParameter("QSE1", m3QSE1.Value.ToM3String());
+			if (m3QSE2.HasValue)
+				request.WithQueryParameter("QSE2", m3QSE2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QMGP))
+				request.WithQueryParameter("QMGP", m3QMGP.Trim());
+			if (m3ETTP.HasValue)
+				request.WithQueryParameter("ETTP", m3ETTP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ETID))
+				request.WithQueryParameter("ETID", m3ETID.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSpecEntityResponse>(
@@ -239,7 +243,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -250,13 +255,13 @@ namespace M3H5Lib.Api
 		/// Description Liist Specification Entity
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SPEC">Specification</param>
-		/// <param name="m3_QSE1">Effective date</param>
-		/// <param name="m3_QSE2">Effective time</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_QMGP">Quality group</param>
-		/// <param name="m3_ETTP">Entity type</param>
-		/// <param name="m3_ETID">Entity ID</param>
+		/// <param name="m3SPEC">Specification</param>
+		/// <param name="m3QSE1">Effective date</param>
+		/// <param name="m3QSE2">Effective time</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3QMGP">Quality group</param>
+		/// <param name="m3ETTP">Entity type</param>
+		/// <param name="m3ETID">Entity ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -265,13 +270,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSpecEntityResponse></returns>
 		/// <exception cref="M3Exception<LstSpecEntityResponse>"></exception>
 		public async Task<M3Response<LstSpecEntityResponse>> LstSpecEntity(
-			string m3_SPEC = null, 
-			DateTime? m3_QSE1 = null, 
-			int? m3_QSE2 = null, 
-			string m3_ITNO = null, 
-			string m3_QMGP = null, 
-			int? m3_ETTP = null, 
-			string m3_ETID = null, 
+			string m3SPEC = null, 
+			DateTime? m3QSE1 = null, 
+			int? m3QSE2 = null, 
+			string m3ITNO = null, 
+			string m3QMGP = null, 
+			int? m3ETTP = null, 
+			string m3ETID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -286,20 +291,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SPEC))
-				request.WithQueryParameter("SPEC", m3_SPEC.Trim());
-			if (m3_QSE1.HasValue)
-				request.WithQueryParameter("QSE1", m3_QSE1.Value.ToM3String());
-			if (m3_QSE2.HasValue)
-				request.WithQueryParameter("QSE2", m3_QSE2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_QMGP))
-				request.WithQueryParameter("QMGP", m3_QMGP.Trim());
-			if (m3_ETTP.HasValue)
-				request.WithQueryParameter("ETTP", m3_ETTP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ETID))
-				request.WithQueryParameter("ETID", m3_ETID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPEC))
+				request.WithQueryParameter("SPEC", m3SPEC.Trim());
+			if (m3QSE1.HasValue)
+				request.WithQueryParameter("QSE1", m3QSE1.Value.ToM3String());
+			if (m3QSE2.HasValue)
+				request.WithQueryParameter("QSE2", m3QSE2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QMGP))
+				request.WithQueryParameter("QMGP", m3QMGP.Trim());
+			if (m3ETTP.HasValue)
+				request.WithQueryParameter("ETTP", m3ETTP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ETID))
+				request.WithQueryParameter("ETID", m3ETID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSpecEntityResponse>(
@@ -309,7 +314,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -320,14 +326,14 @@ namespace M3H5Lib.Api
 		/// Description Update Specification Entity
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SPEC">Specification</param>
-		/// <param name="m3_QSE1">Effective date</param>
-		/// <param name="m3_QSE2">Effective time</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_QMGP">Quality group</param>
-		/// <param name="m3_ETTP">Entity type</param>
-		/// <param name="m3_ETID">Entity ID</param>
-		/// <param name="m3_AUAT">Auto attach</param>
+		/// <param name="m3SPEC">Specification</param>
+		/// <param name="m3QSE1">Effective date</param>
+		/// <param name="m3QSE2">Effective time</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3QMGP">Quality group</param>
+		/// <param name="m3ETTP">Entity type</param>
+		/// <param name="m3ETID">Entity ID</param>
+		/// <param name="m3AUAT">Auto attach</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -336,14 +342,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSpecEntity(
-			string m3_SPEC = null, 
-			DateTime? m3_QSE1 = null, 
-			int? m3_QSE2 = null, 
-			string m3_ITNO = null, 
-			string m3_QMGP = null, 
-			int? m3_ETTP = null, 
-			string m3_ETID = null, 
-			int? m3_AUAT = null, 
+			string m3SPEC = null, 
+			DateTime? m3QSE1 = null, 
+			int? m3QSE2 = null, 
+			string m3ITNO = null, 
+			string m3QMGP = null, 
+			int? m3ETTP = null, 
+			string m3ETID = null, 
+			int? m3AUAT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -358,22 +364,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SPEC))
-				request.WithQueryParameter("SPEC", m3_SPEC.Trim());
-			if (m3_QSE1.HasValue)
-				request.WithQueryParameter("QSE1", m3_QSE1.Value.ToM3String());
-			if (m3_QSE2.HasValue)
-				request.WithQueryParameter("QSE2", m3_QSE2.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_QMGP))
-				request.WithQueryParameter("QMGP", m3_QMGP.Trim());
-			if (m3_ETTP.HasValue)
-				request.WithQueryParameter("ETTP", m3_ETTP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ETID))
-				request.WithQueryParameter("ETID", m3_ETID.Trim());
-			if (m3_AUAT.HasValue)
-				request.WithQueryParameter("AUAT", m3_AUAT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3SPEC))
+				request.WithQueryParameter("SPEC", m3SPEC.Trim());
+			if (m3QSE1.HasValue)
+				request.WithQueryParameter("QSE1", m3QSE1.Value.ToM3String());
+			if (m3QSE2.HasValue)
+				request.WithQueryParameter("QSE2", m3QSE2.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3QMGP))
+				request.WithQueryParameter("QMGP", m3QMGP.Trim());
+			if (m3ETTP.HasValue)
+				request.WithQueryParameter("ETTP", m3ETTP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ETID))
+				request.WithQueryParameter("ETID", m3ETID.Trim());
+			if (m3AUAT.HasValue)
+				request.WithQueryParameter("AUAT", m3AUAT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -383,7 +389,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

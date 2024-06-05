@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - fixed asset")]
-		public int? M3_FAST => GetNullableInt("FAST");
+		public int? M3FAST => GetNullableInt("FAST");
 
 		/// <summary>
 		/// Description: Fixed asset type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset type")]
-		public string M3_FATP => GetString("FATP");
+		public string M3FATP => GetString("FATP");
 
 		/// <summary>
 		/// Description: Depreciation type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation type")]
-		public int? M3_DPTP => GetNullableInt("DPTP");
+		public int? M3DPTP => GetNullableInt("DPTP");
 
 		/// <summary>
 		/// Description: Depreciation method
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation method")]
-		public int? M3_DPMD => GetNullableInt("DPMD");
+		public int? M3DPMD => GetNullableInt("DPMD");
 
 		/// <summary>
 		/// Description: Economic life
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Economic life")]
-		public int? M3_NOYR => GetNullableInt("NOYR");
+		public int? M3NOYR => GetNullableInt("NOYR");
 
 		/// <summary>
 		/// Description: Lifetime in months
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lifetime in months")]
-		public int? M3_NOMT => GetNullableInt("NOMT");
+		public int? M3NOMT => GetNullableInt("NOMT");
 
 		/// <summary>
 		/// Description: Semi-annual adjustment
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Semi-annual adjustment")]
-		public int? M3_HYAD => GetNullableInt("HYAD");
+		public int? M3HYAD => GetNullableInt("HYAD");
 
 		/// <summary>
 		/// Description: Value type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value type")]
-		public int? M3_VTAD => GetNullableInt("VTAD");
+		public int? M3VTAD => GetNullableInt("VTAD");
 
 		/// <summary>
 		/// Description: Depreciation share
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation share")]
-		public int? M3_NPER => GetNullableInt("NPER");
+		public int? M3NPER => GetNullableInt("NPER");
 
 		/// <summary>
 		/// Description: Stop value
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stop value")]
-		public decimal? M3_SVAL => GetNullableDecimal("SVAL");
+		public decimal? M3SVAL => GetNullableDecimal("SVAL");
 
 		/// <summary>
 		/// Description: Processing of remaining value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Processing of remaining value")]
-		public int? M3_STPC => GetNullableInt("STPC");
+		public int? M3STPC => GetNullableInt("STPC");
 
 		/// <summary>
 		/// Description: Method change
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Method change")]
-		public int? M3_DELN => GetNullableInt("DELN");
+		public int? M3DELN => GetNullableInt("DELN");
 
 		/// <summary>
 		/// Description: Depreciation plan
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation plan")]
-		public string M3_DTTB => GetString("DTTB");
+		public string M3DTTB => GetString("DTTB");
 
 		/// <summary>
 		/// Description: Last depreciation period
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last depreciation period")]
-		public int? M3_LPER => GetNullableInt("LPER");
+		public int? M3LPER => GetNullableInt("LPER");
 
 		/// <summary>
 		/// Description: Value type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value type")]
-		public int? M3_VTDP => GetNullableInt("VTDP");
+		public int? M3VTDP => GetNullableInt("VTDP");
 
 		/// <summary>
 		/// Description: Automatic change of depreciation method
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic change of depreciation method")]
-		public string M3_DTLC => GetString("DTLC");
+		public string M3DTLC => GetString("DTLC");
 
 		/// <summary>
 		/// Description: Coefficient template
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Coefficient template")]
-		public string M3_MDTP => GetString("MDTP");
+		public string M3MDTP => GetString("MDTP");
 
 		/// <summary>
 		/// Description: Digressive to linear transfer period
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Digressive to linear transfer period")]
-		public int? M3_DTLP => GetNullableInt("DTLP");
+		public int? M3DTLP => GetNullableInt("DTLP");
 
 		/// <summary>
 		/// Description: Entry date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Period type
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period type")]
-		public int? M3_DPBC => GetNullableInt("DPBC");
+		public int? M3DPBC => GetNullableInt("DPBC");
 
 		/// <summary>
 		/// Description: Below 0
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Below 0")]
-		public int? M3_BELZ => GetNullableInt("BELZ");
+		public int? M3BELZ => GetNullableInt("BELZ");
 
 		/// <summary>
 		/// Description: Start period method
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start period method")]
-		public int? M3_SPME => GetNullableInt("SPME");
+		public int? M3SPME => GetNullableInt("SPME");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Bonus Rate
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus Rate")]
-		public int? M3_BNRT => GetNullableInt("BNRT");
+		public int? M3BNRT => GetNullableInt("BNRT");
 
 		/// <summary>
 		/// Description: Accounting model ID
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting model ID")]
-		public string M3_MOID => GetString("MOID");
+		public string M3MOID => GetString("MOID");
 
 		/// <summary>
 		/// Description: Accounting model line
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting model line")]
-		public int? M3_MOLN => GetNullableInt("MOLN");
+		public int? M3MOLN => GetNullableInt("MOLN");
 
 		/// <summary>
 		/// Description: Zero revenue
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Zero revenue")]
-		public string M3_ZREV => GetString("ZREV");
+		public string M3ZREV => GetString("ZREV");
 
 		/// <summary>
 		/// Description: Operation plan version
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation plan version")]
-		public string M3_OPVR => GetString("OPVR");
+		public string M3OPVR => GetString("OPVR");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount number")]
-		public int? M3_DIPO => GetNullableInt("DIPO");
+		public int? M3DIPO => GetNullableInt("DIPO");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Additional text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional text")]
-		public string M3_TX08 => GetString("TX08");
+		public string M3TX08 => GetString("TX08");
 
 		/// <summary>
 		/// Description: Accumulation
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accumulation")]
-		public int? M3_DACC => GetNullableInt("DACC");
+		public int? M3DACC => GetNullableInt("DACC");
 
 		/// <summary>
 		/// Description: Manually changeable discount
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually changeable discount")]
-		public int? M3_DCHA => GetNullableInt("DCHA");
+		public int? M3DCHA => GetNullableInt("DCHA");
 
 		/// <summary>
 		/// Description: Discount presentation
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount presentation")]
-		public int? M3_DDSU => GetNullableInt("DDSU");
+		public int? M3DDSU => GetNullableInt("DDSU");
 
 		/// <summary>
 		/// Description: Allocated discount number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated discount number")]
-		public int? M3_ALDP => GetNullableInt("ALDP");
+		public int? M3ALDP => GetNullableInt("ALDP");
 
 		/// <summary>
 		/// Description: Discount type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount type")]
-		public int? M3_DITP => GetNullableInt("DITP");
+		public int? M3DITP => GetNullableInt("DITP");
 
 		/// <summary>
 		/// Description: Discount base
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount base")]
-		public string M3_DIBE => GetString("DIBE");
+		public string M3DIBE => GetString("DIBE");
 
 		/// <summary>
 		/// Description: Discount relation
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount relation")]
-		public string M3_DIRE => GetString("DIRE");
+		public string M3DIRE => GetString("DIRE");
 
 		/// <summary>
 		/// Description: Internal discount
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal discount")]
-		public int? M3_IDSC => GetNullableInt("IDSC");
+		public int? M3IDSC => GetNullableInt("IDSC");
 
 		/// <summary>
 		/// Description: Discount scale base
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount scale base")]
-		public string M3_SGGB => GetString("SGGB");
+		public string M3SGGB => GetString("SGGB");
 
 		/// <summary>
 		/// Description: Discount scale code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount scale code")]
-		public string M3_SGGC => GetString("SGGC");
+		public string M3SGGC => GetString("SGGC");
 
 		/// <summary>
 		/// Description: Scale unit of measure
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scale unit of measure")]
-		public string M3_SGGU => GetString("SGGU");
+		public string M3SGGU => GetString("SGGU");
 
 		/// <summary>
 		/// Description: Discount model
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 	}
 }
 // EOF

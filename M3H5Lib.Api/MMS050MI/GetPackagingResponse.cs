@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Packaging
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Name of packaging type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name of packaging type")]
-		public string M3_PANM => GetString("PANM");
+		public string M3PANM => GetString("PANM");
 
 		/// <summary>
 		/// Description: Location type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location type")]
-		public string M3_WHLT => GetString("WHLT");
+		public string M3WHLT => GetString("WHLT");
 
 		/// <summary>
 		/// Description: Weight capacity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weight capacity")]
-		public decimal? M3_WEIG => GetNullableDecimal("WEIG");
+		public decimal? M3WEIG => GetNullableDecimal("WEIG");
 
 		/// <summary>
 		/// Description: Volume
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Volume
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public decimal? M3_VOM3 => GetNullableDecimal("VOM3");
+		public decimal? M3VOM3 => GetNullableDecimal("VOM3");
 
 		/// <summary>
 		/// Description: Weight
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weight")]
-		public decimal? M3_VOMT => GetNullableDecimal("VOMT");
+		public decimal? M3VOMT => GetNullableDecimal("VOMT");
 
 		/// <summary>
 		/// Description: Item number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Packaging type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging type")]
-		public string M3_PACK => GetString("PACK");
+		public string M3PACK => GetString("PACK");
 
 		/// <summary>
 		/// Description: Packaging length
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging length")]
-		public int? M3_PACL => GetNullableInt("PACL");
+		public int? M3PACL => GetNullableInt("PACL");
 
 		/// <summary>
 		/// Description: Packaging width
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging width")]
-		public int? M3_PACW => GetNullableInt("PACW");
+		public int? M3PACW => GetNullableInt("PACW");
 
 		/// <summary>
 		/// Description: Packaging height
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging height")]
-		public int? M3_PACH => GetNullableInt("PACH");
+		public int? M3PACH => GetNullableInt("PACH");
 
 		/// <summary>
 		/// Description: Normalization factor
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Normalization factor")]
-		public int? M3_NMFA => GetNullableInt("NMFA");
+		public int? M3NMFA => GetNullableInt("NMFA");
 
 		/// <summary>
 		/// Description: Text identity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Capacity - free capacity unit
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity - free capacity unit")]
-		public decimal? M3_FRCP => GetNullableDecimal("FRCP");
+		public decimal? M3FRCP => GetNullableDecimal("FRCP");
 
 		/// <summary>
 		/// Description: Entry date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Packaging group
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging group")]
-		public string M3_PAGR => GetString("PAGR");
+		public string M3PAGR => GetString("PAGR");
 
 		/// <summary>
 		/// Description: Max fill rate
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Max fill rate")]
-		public int? M3_MXFI => GetNullableInt("MXFI");
+		public int? M3MXFI => GetNullableInt("MXFI");
 
 		/// <summary>
 		/// Description: Min fill rate
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Min fill rate")]
-		public int? M3_MIFI => GetNullableInt("MIFI");
+		public int? M3MIFI => GetNullableInt("MIFI");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Estimated free unit of assigned goods
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated free unit of assigned goods")]
-		public decimal? M3_FCU1 => GetNullableDecimal("FCU1");
+		public decimal? M3FCU1 => GetNullableDecimal("FCU1");
 	}
 }
 // EOF

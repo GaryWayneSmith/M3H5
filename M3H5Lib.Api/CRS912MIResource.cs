@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS912MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Add a new season
 		/// Version Release: MNB
 		/// </summary>
-		/// <param name="m3_SEA1">Season (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_LVDT">Valid to (Required)</param>
-		/// <param name="m3_STAT">Status (Required)</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_FOED">First order date</param>
-		/// <param name="m3_LOED">Last order entry date</param>
+		/// <param name="m3SEA1">Season (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3LVDT">Valid to (Required)</param>
+		/// <param name="m3STAT">Status (Required)</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3FOED">First order date</param>
+		/// <param name="m3LOED">Last order entry date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSeason(
-			string m3_SEA1, 
-			string m3_TX40, 
-			DateTime m3_STDT, 
-			DateTime m3_LVDT, 
-			string m3_STAT, 
-			string m3_TX15 = null, 
-			DateTime? m3_FOED = null, 
-			DateTime? m3_LOED = null, 
+			string m3SEA1, 
+			string m3TX40, 
+			DateTime m3STDT, 
+			DateTime m3LVDT, 
+			string m3STAT, 
+			string m3TX15 = null, 
+			DateTime? m3FOED = null, 
+			DateTime? m3LOED = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,28 +76,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SEA1))
-				throw new ArgumentNullException("m3_SEA1");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_STAT))
-				throw new ArgumentNullException("m3_STAT");
+			if (string.IsNullOrWhiteSpace(m3SEA1))
+				throw new ArgumentNullException(nameof(m3SEA1));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3STAT))
+				throw new ArgumentNullException(nameof(m3STAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SEA1", m3_SEA1.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("LVDT", m3_LVDT.ToM3String())
-				.WithQueryParameter("STAT", m3_STAT.Trim());
+				.WithQueryParameter("SEA1", m3SEA1.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("LVDT", m3LVDT.ToM3String())
+				.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_FOED.HasValue)
-				request.WithQueryParameter("FOED", m3_FOED.Value.ToM3String());
-			if (m3_LOED.HasValue)
-				request.WithQueryParameter("LOED", m3_LOED.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3FOED.HasValue)
+				request.WithQueryParameter("FOED", m3FOED.Value.ToM3String());
+			if (m3LOED.HasValue)
+				request.WithQueryParameter("LOED", m3LOED.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -105,7 +107,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -116,7 +119,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a season
 		/// Version Release: MNB
 		/// </summary>
-		/// <param name="m3_SEA1">Season (Required)</param>
+		/// <param name="m3SEA1">Season (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -125,7 +128,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelSeason(
-			string m3_SEA1, 
+			string m3SEA1, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -140,12 +143,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SEA1))
-				throw new ArgumentNullException("m3_SEA1");
+			if (string.IsNullOrWhiteSpace(m3SEA1))
+				throw new ArgumentNullException(nameof(m3SEA1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SEA1", m3_SEA1.Trim());
+				.WithQueryParameter("SEA1", m3SEA1.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -155,7 +158,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -166,7 +170,7 @@ namespace M3H5Lib.Api
 		/// Description Get details of a season
 		/// Version Release: MNB
 		/// </summary>
-		/// <param name="m3_SEA1">Season (Required)</param>
+		/// <param name="m3SEA1">Season (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -175,7 +179,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSeasonResponse></returns>
 		/// <exception cref="M3Exception<GetSeasonResponse>"></exception>
 		public async Task<M3Response<GetSeasonResponse>> GetSeason(
-			string m3_SEA1, 
+			string m3SEA1, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -190,12 +194,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SEA1))
-				throw new ArgumentNullException("m3_SEA1");
+			if (string.IsNullOrWhiteSpace(m3SEA1))
+				throw new ArgumentNullException(nameof(m3SEA1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SEA1", m3_SEA1.Trim());
+				.WithQueryParameter("SEA1", m3SEA1.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSeasonResponse>(
@@ -205,7 +209,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -216,7 +221,7 @@ namespace M3H5Lib.Api
 		/// Description List seasons
 		/// Version Release: MNB
 		/// </summary>
-		/// <param name="m3_SEA1">Season</param>
+		/// <param name="m3SEA1">Season</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -225,7 +230,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSeasonResponse></returns>
 		/// <exception cref="M3Exception<LstSeasonResponse>"></exception>
 		public async Task<M3Response<LstSeasonResponse>> LstSeason(
-			string m3_SEA1 = null, 
+			string m3SEA1 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -240,8 +245,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SEA1))
-				request.WithQueryParameter("SEA1", m3_SEA1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SEA1))
+				request.WithQueryParameter("SEA1", m3SEA1.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSeasonResponse>(
@@ -251,7 +256,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -262,14 +268,14 @@ namespace M3H5Lib.Api
 		/// Description Update details of a season
 		/// Version Release: MNB
 		/// </summary>
-		/// <param name="m3_SEA1">Season (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_STDT">Start date</param>
-		/// <param name="m3_LVDT">Valid to</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_FOED">First order date</param>
-		/// <param name="m3_LOED">Last order entry date</param>
+		/// <param name="m3SEA1">Season (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3STDT">Start date</param>
+		/// <param name="m3LVDT">Valid to</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3FOED">First order date</param>
+		/// <param name="m3LOED">Last order entry date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -278,14 +284,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSeason(
-			string m3_SEA1, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			DateTime? m3_STDT = null, 
-			DateTime? m3_LVDT = null, 
-			string m3_STAT = null, 
-			DateTime? m3_FOED = null, 
-			DateTime? m3_LOED = null, 
+			string m3SEA1, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			DateTime? m3STDT = null, 
+			DateTime? m3LVDT = null, 
+			string m3STAT = null, 
+			DateTime? m3FOED = null, 
+			DateTime? m3LOED = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -300,28 +306,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SEA1))
-				throw new ArgumentNullException("m3_SEA1");
+			if (string.IsNullOrWhiteSpace(m3SEA1))
+				throw new ArgumentNullException(nameof(m3SEA1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SEA1", m3_SEA1.Trim());
+				.WithQueryParameter("SEA1", m3SEA1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (m3_LVDT.HasValue)
-				request.WithQueryParameter("LVDT", m3_LVDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (m3_FOED.HasValue)
-				request.WithQueryParameter("FOED", m3_FOED.Value.ToM3String());
-			if (m3_LOED.HasValue)
-				request.WithQueryParameter("LOED", m3_LOED.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (m3LVDT.HasValue)
+				request.WithQueryParameter("LVDT", m3LVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (m3FOED.HasValue)
+				request.WithQueryParameter("FOED", m3FOED.Value.ToM3String());
+			if (m3LOED.HasValue)
+				request.WithQueryParameter("LOED", m3LOED.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -331,7 +337,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Schedule number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Schedule number")]
-		public decimal? M3_SCHN => GetNullableDecimal("SCHN");
+		public decimal? M3SCHN => GetNullableDecimal("SCHN");
 
 		/// <summary>
 		/// Description: Issue method
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue method")]
-		public int? M3_SPMT => GetNullableInt("SPMT");
+		public int? M3SPMT => GetNullableInt("SPMT");
 
 		/// <summary>
 		/// Description: Product number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Component number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component number")]
-		public string M3_MTNO => GetString("MTNO");
+		public string M3MTNO => GetString("MTNO");
 
 		/// <summary>
 		/// Description: Component Number Descrption
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Component Number Descrption")]
-		public string M3_MTDS => GetString("MTDS");
+		public string M3MTDS => GetString("MTDS");
 
 		/// <summary>
 		/// Description: Conversion factor
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion factor")]
-		public decimal? M3_COFA => GetNullableDecimal("COFA");
+		public decimal? M3COFA => GetNullableDecimal("COFA");
 
 		/// <summary>
 		/// Description: Conversion form
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Conversion form")]
-		public int? M3_DMCF => GetNullableInt("DMCF");
+		public int? M3DMCF => GetNullableInt("DMCF");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Responsible
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Item type
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item type")]
-		public string M3_ITTY => GetString("ITTY");
+		public string M3ITTY => GetString("ITTY");
 
 		/// <summary>
 		/// Description: Responsible
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_IRES => GetString("IRES");
+		public string M3IRES => GetString("IRES");
 
 		/// <summary>
 		/// Description: Planner
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planner")]
-		public string M3_PRES => GetString("PRES");
+		public string M3PRES => GetString("PRES");
 
 		/// <summary>
 		/// Description: Reserved quantity in alternative unit
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reserved quantity in alternative unit")]
-		public decimal? M3_REQA => GetNullableDecimal("REQA");
+		public decimal? M3REQA => GetNullableDecimal("REQA");
 
 		/// <summary>
 		/// Description: Reported quantity in alternative unit
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reported quantity in alternative unit")]
-		public decimal? M3_RPQA => GetNullableDecimal("RPQA");
+		public decimal? M3RPQA => GetNullableDecimal("RPQA");
 
 		/// <summary>
 		/// Description: Remaining quantity in alternative unit
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining quantity in alternative unit")]
-		public decimal? M3_RQTA => GetNullableDecimal("RQTA");
+		public decimal? M3RQTA => GetNullableDecimal("RQTA");
 
 		/// <summary>
 		/// Description: Reporting date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting date")]
-		public DateTime? M3_RPDT => GetNullableDateTime("RPDT");
+		public DateTime? M3RPDT => GetNullableDateTime("RPDT");
 
 		/// <summary>
 		/// Description: Manual completion flag
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual completion flag")]
-		public int? M3_REND => GetNullableInt("REND");
+		public int? M3REND => GetNullableInt("REND");
 
 		/// <summary>
 		/// Description: Location
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Container
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Catch weight
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight")]
-		public decimal? M3_CAWE => GetNullableDecimal("CAWE");
+		public decimal? M3CAWE => GetNullableDecimal("CAWE");
 
 		/// <summary>
 		/// Description: ABC class - volume
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ABC class - volume")]
-		public string M3_ABCD => GetString("ABCD");
+		public string M3ABCD => GetString("ABCD");
 
 		/// <summary>
 		/// Description: Reporting number
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting number")]
-		public int? M3_WOSQ => GetNullableInt("WOSQ");
+		public int? M3WOSQ => GetNullableInt("WOSQ");
 
 		/// <summary>
 		/// Description: Item group
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item group")]
-		public string M3_ITGR => GetString("ITGR");
+		public string M3ITGR => GetString("ITGR");
 
 		/// <summary>
 		/// Description: Planning policy
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PMS060MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning policy")]
-		public string M3_PLCD => GetString("PLCD");
+		public string M3PLCD => GetString("PLCD");
 	}
 }
 // EOF

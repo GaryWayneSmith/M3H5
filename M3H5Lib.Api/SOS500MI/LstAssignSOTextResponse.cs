@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom")]
-		public string M3_ESCO => GetString("ESCO");
+		public string M3ESCO => GetString("ESCO");
 
 		/// <summary>
 		/// Description: Error symptom text
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom text")]
-		public string M3_ETX1 => GetString("ETX1");
+		public string M3ETX1 => GetString("ETX1");
 
 		/// <summary>
 		/// Description: Error symptom text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom text")]
-		public string M3_ETX2 => GetString("ETX2");
+		public string M3ETX2 => GetString("ETX2");
 
 		/// <summary>
 		/// Description: Error symptom text
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom text")]
-		public string M3_ETX3 => GetString("ETX3");
+		public string M3ETX3 => GetString("ETX3");
 
 		/// <summary>
 		/// Description: Error symptom text
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Error symptom text")]
-		public string M3_ETX4 => GetString("ETX4");
+		public string M3ETX4 => GetString("ETX4");
 
 		/// <summary>
 		/// Description: Action text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action text")]
-		public string M3_MTCO => GetString("MTCO");
+		public string M3MTCO => GetString("MTCO");
 
 		/// <summary>
 		/// Description: Text
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MTX1 => GetString("MTX1");
+		public string M3MTX1 => GetString("MTX1");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MTX2 => GetString("MTX2");
+		public string M3MTX2 => GetString("MTX2");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MTX3 => GetString("MTX3");
+		public string M3MTX3 => GetString("MTX3");
 
 		/// <summary>
 		/// Description: Text
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MTX4 => GetString("MTX4");
+		public string M3MTX4 => GetString("MTX4");
 	}
 }
 // EOF

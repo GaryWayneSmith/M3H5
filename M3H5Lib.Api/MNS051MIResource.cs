@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MNS051MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,17 +38,17 @@ namespace M3H5Lib.Api
 		/// Description Adds a subsystem job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">New field description (Required)</param>
-		/// <param name="m3_JOB">Job (Required)</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_PGM">Program name</param>
-		/// <param name="m3_DLY">Delay auto job</param>
-		/// <param name="m3_FILE">Table</param>
-		/// <param name="m3_DFCO">Company</param>
-		/// <param name="m3_DFDI">Division</param>
-		/// <param name="m3_LANC">System language</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3SBSD">New field description (Required)</param>
+		/// <param name="m3JOB">Job (Required)</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3PGM">Program name</param>
+		/// <param name="m3DLY">Delay auto job</param>
+		/// <param name="m3FILE">Table</param>
+		/// <param name="m3DFCO">Company</param>
+		/// <param name="m3DFDI">Division</param>
+		/// <param name="m3LANC">System language</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -55,17 +57,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_SBSD, 
-			string m3_JOB, 
-			string m3_STAT = null, 
-			string m3_TX40 = null, 
-			string m3_PGM = null, 
-			int? m3_DLY = null, 
-			string m3_FILE = null, 
-			int? m3_DFCO = null, 
-			string m3_DFDI = null, 
-			string m3_LANC = null, 
-			string m3_USID = null, 
+			string m3SBSD, 
+			string m3JOB, 
+			string m3STAT = null, 
+			string m3TX40 = null, 
+			string m3PGM = null, 
+			int? m3DLY = null, 
+			string m3FILE = null, 
+			int? m3DFCO = null, 
+			string m3DFDI = null, 
+			string m3LANC = null, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -80,35 +82,35 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim())
-				.WithQueryParameter("JOB", m3_JOB.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim())
+				.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PGM))
-				request.WithQueryParameter("PGM", m3_PGM.Trim());
-			if (m3_DLY.HasValue)
-				request.WithQueryParameter("DLY", m3_DLY.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
-			if (m3_DFCO.HasValue)
-				request.WithQueryParameter("DFCO", m3_DFCO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DFDI))
-				request.WithQueryParameter("DFDI", m3_DFDI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LANC))
-				request.WithQueryParameter("LANC", m3_LANC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGM))
+				request.WithQueryParameter("PGM", m3PGM.Trim());
+			if (m3DLY.HasValue)
+				request.WithQueryParameter("DLY", m3DLY.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
+			if (m3DFCO.HasValue)
+				request.WithQueryParameter("DFCO", m3DFCO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DFDI))
+				request.WithQueryParameter("DFDI", m3DFDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LANC))
+				request.WithQueryParameter("LANC", m3LANC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -118,7 +120,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -129,9 +132,9 @@ namespace M3H5Lib.Api
 		/// Description AddNewInstance
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -140,9 +143,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddNewInstance(
-			string m3_SBSD, 
-			string m3_JOB, 
-			int m3_SQNR, 
+			string m3SBSD, 
+			string m3JOB, 
+			int m3SQNR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -157,16 +160,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim())
-				.WithQueryParameter("JOB", m3_JOB.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("SBSD", m3SBSD.Trim())
+				.WithQueryParameter("JOB", m3JOB.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -176,7 +179,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -216,7 +220,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -227,8 +232,8 @@ namespace M3H5Lib.Api
 		/// Description Deletes a subsystem job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job (Required)</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -237,8 +242,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Dlt(
-			string m3_SBSD, 
-			string m3_JOB, 
+			string m3SBSD, 
+			string m3JOB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -253,15 +258,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim())
-				.WithQueryParameter("JOB", m3_JOB.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim())
+				.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -271,7 +276,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -311,7 +317,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -322,8 +329,8 @@ namespace M3H5Lib.Api
 		/// Description EndJob
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_JOB">Job (Required)</param>
-		/// <param name="m3_SBSD">Subsystem description</param>
+		/// <param name="m3JOB">Job (Required)</param>
+		/// <param name="m3SBSD">Subsystem description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -332,8 +339,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> EndJob(
-			string m3_JOB, 
-			string m3_SBSD = null, 
+			string m3JOB, 
+			string m3SBSD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -348,16 +355,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("JOB", m3_JOB.Trim());
+				.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SBSD))
-				request.WithQueryParameter("SBSD", m3_SBSD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SBSD))
+				request.WithQueryParameter("SBSD", m3SBSD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -367,7 +374,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -378,8 +386,8 @@ namespace M3H5Lib.Api
 		/// Description Gets data for a subsystem job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job (Required)</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -388,8 +396,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_SBSD, 
-			string m3_JOB, 
+			string m3SBSD, 
+			string m3JOB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -404,15 +412,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim())
-				.WithQueryParameter("JOB", m3_JOB.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim())
+				.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -422,7 +430,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -433,8 +442,8 @@ namespace M3H5Lib.Api
 		/// Description Gets data for a subsystem job queue
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job (Required)</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -443,8 +452,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetJobQueueResponse></returns>
 		/// <exception cref="M3Exception<GetJobQueueResponse>"></exception>
 		public async Task<M3Response<GetJobQueueResponse>> GetJobQueue(
-			string m3_SBSD, 
-			string m3_JOB, 
+			string m3SBSD, 
+			string m3JOB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -459,15 +468,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim())
-				.WithQueryParameter("JOB", m3_JOB.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim())
+				.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Execute the request
 			var result = await Execute<GetJobQueueResponse>(
@@ -477,7 +486,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -488,8 +498,8 @@ namespace M3H5Lib.Api
 		/// Description List data for subsystem job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -498,8 +508,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_SBSD, 
-			string m3_JOB = null, 
+			string m3SBSD, 
+			string m3JOB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -514,16 +524,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_JOB))
-				request.WithQueryParameter("JOB", m3_JOB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3JOB))
+				request.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -533,7 +543,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -544,8 +555,8 @@ namespace M3H5Lib.Api
 		/// Description List data for an active subsystem job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -554,8 +565,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstActJobResponse></returns>
 		/// <exception cref="M3Exception<LstActJobResponse>"></exception>
 		public async Task<M3Response<LstActJobResponse>> LstActJob(
-			string m3_SBSD, 
-			string m3_JOB = null, 
+			string m3SBSD, 
+			string m3JOB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -570,16 +581,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_JOB))
-				request.WithQueryParameter("JOB", m3_JOB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3JOB))
+				request.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Execute the request
 			var result = await Execute<LstActJobResponse>(
@@ -589,7 +600,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -600,8 +612,8 @@ namespace M3H5Lib.Api
 		/// Description List job queues
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -610,8 +622,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstJobQueuesResponse></returns>
 		/// <exception cref="M3Exception<LstJobQueuesResponse>"></exception>
 		public async Task<M3Response<LstJobQueuesResponse>> LstJobQueues(
-			string m3_SBSD, 
-			string m3_JOB = null, 
+			string m3SBSD, 
+			string m3JOB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -626,16 +638,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_JOB))
-				request.WithQueryParameter("JOB", m3_JOB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3JOB))
+				request.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Execute the request
 			var result = await Execute<LstJobQueuesResponse>(
@@ -645,7 +657,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -656,8 +669,8 @@ namespace M3H5Lib.Api
 		/// Description List data for a none active subsystem job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -666,8 +679,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstNoneActJobResponse></returns>
 		/// <exception cref="M3Exception<LstNoneActJobResponse>"></exception>
 		public async Task<M3Response<LstNoneActJobResponse>> LstNoneActJob(
-			string m3_SBSD, 
-			string m3_JOB = null, 
+			string m3SBSD, 
+			string m3JOB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -682,16 +695,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_JOB))
-				request.WithQueryParameter("JOB", m3_JOB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3JOB))
+				request.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Execute the request
 			var result = await Execute<LstNoneActJobResponse>(
@@ -701,7 +714,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -741,7 +755,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -752,8 +767,8 @@ namespace M3H5Lib.Api
 		/// Description StartJob
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_JOB">Job (Required)</param>
-		/// <param name="m3_SBSD">Subsystem description</param>
+		/// <param name="m3JOB">Job (Required)</param>
+		/// <param name="m3SBSD">Subsystem description</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -762,8 +777,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> StartJob(
-			string m3_JOB, 
-			string m3_SBSD = null, 
+			string m3JOB, 
+			string m3SBSD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -778,16 +793,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("JOB", m3_JOB.Trim());
+				.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SBSD))
-				request.WithQueryParameter("SBSD", m3_SBSD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SBSD))
+				request.WithQueryParameter("SBSD", m3SBSD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -797,7 +812,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -808,17 +824,17 @@ namespace M3H5Lib.Api
 		/// Description Update data for a subsystem job
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_SBSD">Subsystem description (Required)</param>
-		/// <param name="m3_JOB">Job (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_STAT">Status</param>
-		/// <param name="m3_PGM">Program name</param>
-		/// <param name="m3_DLY">Delay auto job</param>
-		/// <param name="m3_FILE">Table</param>
-		/// <param name="m3_DFCO">Company</param>
-		/// <param name="m3_DFDI">Division</param>
-		/// <param name="m3_LANC">System language</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3SBSD">Subsystem description (Required)</param>
+		/// <param name="m3JOB">Job (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3STAT">Status</param>
+		/// <param name="m3PGM">Program name</param>
+		/// <param name="m3DLY">Delay auto job</param>
+		/// <param name="m3FILE">Table</param>
+		/// <param name="m3DFCO">Company</param>
+		/// <param name="m3DFDI">Division</param>
+		/// <param name="m3LANC">System language</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -827,17 +843,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_SBSD, 
-			string m3_JOB, 
-			string m3_TX40 = null, 
-			string m3_STAT = null, 
-			string m3_PGM = null, 
-			int? m3_DLY = null, 
-			string m3_FILE = null, 
-			int? m3_DFCO = null, 
-			string m3_DFDI = null, 
-			string m3_LANC = null, 
-			string m3_USID = null, 
+			string m3SBSD, 
+			string m3JOB, 
+			string m3TX40 = null, 
+			string m3STAT = null, 
+			string m3PGM = null, 
+			int? m3DLY = null, 
+			string m3FILE = null, 
+			int? m3DFCO = null, 
+			string m3DFDI = null, 
+			string m3LANC = null, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -852,35 +868,35 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SBSD))
-				throw new ArgumentNullException("m3_SBSD");
-			if (string.IsNullOrWhiteSpace(m3_JOB))
-				throw new ArgumentNullException("m3_JOB");
+			if (string.IsNullOrWhiteSpace(m3SBSD))
+				throw new ArgumentNullException(nameof(m3SBSD));
+			if (string.IsNullOrWhiteSpace(m3JOB))
+				throw new ArgumentNullException(nameof(m3JOB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SBSD", m3_SBSD.Trim())
-				.WithQueryParameter("JOB", m3_JOB.Trim());
+				.WithQueryParameter("SBSD", m3SBSD.Trim())
+				.WithQueryParameter("JOB", m3JOB.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STAT))
-				request.WithQueryParameter("STAT", m3_STAT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PGM))
-				request.WithQueryParameter("PGM", m3_PGM.Trim());
-			if (m3_DLY.HasValue)
-				request.WithQueryParameter("DLY", m3_DLY.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
-			if (m3_DFCO.HasValue)
-				request.WithQueryParameter("DFCO", m3_DFCO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DFDI))
-				request.WithQueryParameter("DFDI", m3_DFDI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LANC))
-				request.WithQueryParameter("LANC", m3_LANC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STAT))
+				request.WithQueryParameter("STAT", m3STAT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGM))
+				request.WithQueryParameter("PGM", m3PGM.Trim());
+			if (m3DLY.HasValue)
+				request.WithQueryParameter("DLY", m3DLY.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
+			if (m3DFCO.HasValue)
+				request.WithQueryParameter("DFCO", m3DFCO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DFDI))
+				request.WithQueryParameter("DFDI", m3DFDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LANC))
+				request.WithQueryParameter("LANC", m3LANC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -890,7 +906,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

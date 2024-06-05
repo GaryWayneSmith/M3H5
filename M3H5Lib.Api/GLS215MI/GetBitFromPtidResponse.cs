@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Balance key
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance key")]
-		public int? M3_BAKY => GetNullableInt("BAKY");
+		public int? M3BAKY => GetNullableInt("BAKY");
 
 		/// <summary>
 		/// Description: Balance dimension 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance dimension 1")]
-		public string M3_BIT1 => GetString("BIT1");
+		public string M3BIT1 => GetString("BIT1");
 
 		/// <summary>
 		/// Description: Balance dimension 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance dimension 2")]
-		public string M3_BIT2 => GetString("BIT2");
+		public string M3BIT2 => GetString("BIT2");
 
 		/// <summary>
 		/// Description: Balance dimension 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance dimension 3")]
-		public string M3_BIT3 => GetString("BIT3");
+		public string M3BIT3 => GetString("BIT3");
 
 		/// <summary>
 		/// Description: Balance dimension 4
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance dimension 4")]
-		public string M3_BIT4 => GetString("BIT4");
+		public string M3BIT4 => GetString("BIT4");
 
 		/// <summary>
 		/// Description: Balance dimension 5
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance dimension 5")]
-		public string M3_BIT5 => GetString("BIT5");
+		public string M3BIT5 => GetString("BIT5");
 
 		/// <summary>
 		/// Description: Balance dimension 6
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance dimension 6")]
-		public string M3_BIT6 => GetString("BIT6");
+		public string M3BIT6 => GetString("BIT6");
 
 		/// <summary>
 		/// Description: Balance dimension 7
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Balance dimension 7")]
-		public string M3_BIT7 => GetString("BIT7");
+		public string M3BIT7 => GetString("BIT7");
 
 		/// <summary>
 		/// Description: Pointer ID
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.GLS215MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pointer ID")]
-		public decimal? M3_PTID => GetNullableDecimal("PTID");
+		public decimal? M3PTID => GetNullableDecimal("PTID");
 	}
 }
 // EOF

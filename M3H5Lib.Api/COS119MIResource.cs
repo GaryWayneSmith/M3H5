@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.COS119MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add order connection
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_CNPE">Contact (Required)</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_ADRT">Address type</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_RFTP">Contact type</param>
+		/// <param name="m3CNPE">Contact (Required)</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3ADRT">Address type</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3RFTP">Contact type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddConnection(
-			string m3_CNPE, 
-			string m3_ORNO = null, 
-			int? m3_ADRT = null, 
-			string m3_ADID = null, 
-			string m3_RFTP = null, 
+			string m3CNPE, 
+			string m3ORNO = null, 
+			int? m3ADRT = null, 
+			string m3ADID = null, 
+			string m3RFTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,22 +70,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CNPE))
-				throw new ArgumentNullException("m3_CNPE");
+			if (string.IsNullOrWhiteSpace(m3CNPE))
+				throw new ArgumentNullException(nameof(m3CNPE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CNPE", m3_CNPE.Trim());
+				.WithQueryParameter("CNPE", m3CNPE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_ADRT.HasValue)
-				request.WithQueryParameter("ADRT", m3_ADRT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RFTP))
-				request.WithQueryParameter("RFTP", m3_RFTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3ADRT.HasValue)
+				request.WithQueryParameter("ADRT", m3ADRT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RFTP))
+				request.WithQueryParameter("RFTP", m3RFTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -93,7 +95,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -104,11 +107,11 @@ namespace M3H5Lib.Api
 		/// Description Delete order connection
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_CNPE">Contact (Required)</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_ADRT">Address type</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_RFTP">Contact type</param>
+		/// <param name="m3CNPE">Contact (Required)</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3ADRT">Address type</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3RFTP">Contact type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -117,11 +120,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DeleteConnect(
-			string m3_CNPE, 
-			string m3_ORNO = null, 
-			int? m3_ADRT = null, 
-			string m3_ADID = null, 
-			string m3_RFTP = null, 
+			string m3CNPE, 
+			string m3ORNO = null, 
+			int? m3ADRT = null, 
+			string m3ADID = null, 
+			string m3RFTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -136,22 +139,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CNPE))
-				throw new ArgumentNullException("m3_CNPE");
+			if (string.IsNullOrWhiteSpace(m3CNPE))
+				throw new ArgumentNullException(nameof(m3CNPE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CNPE", m3_CNPE.Trim());
+				.WithQueryParameter("CNPE", m3CNPE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_ADRT.HasValue)
-				request.WithQueryParameter("ADRT", m3_ADRT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RFTP))
-				request.WithQueryParameter("RFTP", m3_RFTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3ADRT.HasValue)
+				request.WithQueryParameter("ADRT", m3ADRT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RFTP))
+				request.WithQueryParameter("RFTP", m3RFTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -161,7 +164,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -172,12 +176,12 @@ namespace M3H5Lib.Api
 		/// Description LstByOrder
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_ADRT">Address type</param>
-		/// <param name="m3_ADID">Address number</param>
-		/// <param name="m3_RFTP">Contact type</param>
-		/// <param name="m3_CNPE">Contact</param>
-		/// <param name="m3_NFTR">Number of filters</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3ADRT">Address type</param>
+		/// <param name="m3ADID">Address number</param>
+		/// <param name="m3RFTP">Contact type</param>
+		/// <param name="m3CNPE">Contact</param>
+		/// <param name="m3NFTR">Number of filters</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -186,12 +190,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByOrderResponse></returns>
 		/// <exception cref="M3Exception<LstByOrderResponse>"></exception>
 		public async Task<M3Response<LstByOrderResponse>> LstByOrder(
-			string m3_ORNO = null, 
-			int? m3_ADRT = null, 
-			string m3_ADID = null, 
-			string m3_RFTP = null, 
-			string m3_CNPE = null, 
-			int? m3_NFTR = null, 
+			string m3ORNO = null, 
+			int? m3ADRT = null, 
+			string m3ADID = null, 
+			string m3RFTP = null, 
+			string m3CNPE = null, 
+			int? m3NFTR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -206,18 +210,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_ADRT.HasValue)
-				request.WithQueryParameter("ADRT", m3_ADRT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RFTP))
-				request.WithQueryParameter("RFTP", m3_RFTP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CNPE))
-				request.WithQueryParameter("CNPE", m3_CNPE.Trim());
-			if (m3_NFTR.HasValue)
-				request.WithQueryParameter("NFTR", m3_NFTR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3ADRT.HasValue)
+				request.WithQueryParameter("ADRT", m3ADRT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RFTP))
+				request.WithQueryParameter("RFTP", m3RFTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CNPE))
+				request.WithQueryParameter("CNPE", m3CNPE.Trim());
+			if (m3NFTR.HasValue)
+				request.WithQueryParameter("NFTR", m3NFTR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstByOrderResponse>(
@@ -227,7 +231,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -238,7 +243,7 @@ namespace M3H5Lib.Api
 		/// Description List order connection
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_CNPE">Contact</param>
+		/// <param name="m3CNPE">Contact</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -247,7 +252,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstConnectionResponse></returns>
 		/// <exception cref="M3Exception<LstConnectionResponse>"></exception>
 		public async Task<M3Response<LstConnectionResponse>> LstConnection(
-			string m3_CNPE = null, 
+			string m3CNPE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -262,8 +267,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CNPE))
-				request.WithQueryParameter("CNPE", m3_CNPE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CNPE))
+				request.WithQueryParameter("CNPE", m3CNPE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstConnectionResponse>(
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PPS386MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description AddModelElement
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_ANSQ">Attribute sequence number</param>
-		/// <param name="m3_SCET">Element type - sales price costing</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_POSE">Print on settlement</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3ANSQ">Attribute sequence number</param>
+		/// <param name="m3SCET">Element type - sales price costing</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3POSE">Print on settlement</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddModelElement(
-			string m3_WSCA = null, 
-			int? m3_FDAT = null, 
-			int? m3_ANSQ = null, 
-			int? m3_SCET = null, 
-			string m3_OBV1 = null, 
-			int? m3_POSE = null, 
+			string m3WSCA = null, 
+			int? m3FDAT = null, 
+			int? m3ANSQ = null, 
+			int? m3SCET = null, 
+			string m3OBV1 = null, 
+			int? m3POSE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,18 +72,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToString());
-			if (m3_ANSQ.HasValue)
-				request.WithQueryParameter("ANSQ", m3_ANSQ.Value.ToString());
-			if (m3_SCET.HasValue)
-				request.WithQueryParameter("SCET", m3_SCET.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (m3_POSE.HasValue)
-				request.WithQueryParameter("POSE", m3_POSE.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ANSQ.HasValue)
+				request.WithQueryParameter("ANSQ", m3ANSQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SCET.HasValue)
+				request.WithQueryParameter("SCET", m3SCET.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (m3POSE.HasValue)
+				request.WithQueryParameter("POSE", m3POSE.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -102,9 +105,9 @@ namespace M3H5Lib.Api
 		/// Description DltModelElement
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_ANSQ">Attribute sequence number</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3ANSQ">Attribute sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -113,9 +116,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltModelElement(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
-			int? m3_ANSQ = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
+			int? m3ANSQ = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -130,12 +133,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_ANSQ.HasValue)
-				request.WithQueryParameter("ANSQ", m3_ANSQ.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3ANSQ.HasValue)
+				request.WithQueryParameter("ANSQ", m3ANSQ.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,9 +160,9 @@ namespace M3H5Lib.Api
 		/// Description GetModelElement
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_ANSQ">Attribute sequence number</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3ANSQ">Attribute sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -167,9 +171,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetModelElementResponse></returns>
 		/// <exception cref="M3Exception<GetModelElementResponse>"></exception>
 		public async Task<M3Response<GetModelElementResponse>> GetModelElement(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
-			int? m3_ANSQ = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
+			int? m3ANSQ = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -184,12 +188,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_ANSQ.HasValue)
-				request.WithQueryParameter("ANSQ", m3_ANSQ.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3ANSQ.HasValue)
+				request.WithQueryParameter("ANSQ", m3ANSQ.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetModelElementResponse>(
@@ -199,7 +203,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -210,9 +215,9 @@ namespace M3H5Lib.Api
 		/// Description LstModelElement
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_ANSQ">Attribute sequence number</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3ANSQ">Attribute sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -221,9 +226,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstModelElementResponse></returns>
 		/// <exception cref="M3Exception<LstModelElementResponse>"></exception>
 		public async Task<M3Response<LstModelElementResponse>> LstModelElement(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
-			int? m3_ANSQ = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
+			int? m3ANSQ = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -238,12 +243,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_ANSQ.HasValue)
-				request.WithQueryParameter("ANSQ", m3_ANSQ.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3ANSQ.HasValue)
+				request.WithQueryParameter("ANSQ", m3ANSQ.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstModelElementResponse>(
@@ -253,7 +258,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -264,12 +270,12 @@ namespace M3H5Lib.Api
 		/// Description UpdModelElement
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_WSCA">Costing model</param>
-		/// <param name="m3_FDAT">From date</param>
-		/// <param name="m3_ANSQ">Attribute sequence number</param>
-		/// <param name="m3_SCET">Element type - sales price costing</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_POSE">Print on settlement</param>
+		/// <param name="m3WSCA">Costing model</param>
+		/// <param name="m3FDAT">From date</param>
+		/// <param name="m3ANSQ">Attribute sequence number</param>
+		/// <param name="m3SCET">Element type - sales price costing</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3POSE">Print on settlement</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -278,12 +284,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdModelElement(
-			string m3_WSCA = null, 
-			DateTime? m3_FDAT = null, 
-			int? m3_ANSQ = null, 
-			int? m3_SCET = null, 
-			string m3_OBV1 = null, 
-			int? m3_POSE = null, 
+			string m3WSCA = null, 
+			DateTime? m3FDAT = null, 
+			int? m3ANSQ = null, 
+			int? m3SCET = null, 
+			string m3OBV1 = null, 
+			int? m3POSE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -298,18 +304,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_WSCA))
-				request.WithQueryParameter("WSCA", m3_WSCA.Trim());
-			if (m3_FDAT.HasValue)
-				request.WithQueryParameter("FDAT", m3_FDAT.Value.ToM3String());
-			if (m3_ANSQ.HasValue)
-				request.WithQueryParameter("ANSQ", m3_ANSQ.Value.ToString());
-			if (m3_SCET.HasValue)
-				request.WithQueryParameter("SCET", m3_SCET.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (m3_POSE.HasValue)
-				request.WithQueryParameter("POSE", m3_POSE.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3WSCA))
+				request.WithQueryParameter("WSCA", m3WSCA.Trim());
+			if (m3FDAT.HasValue)
+				request.WithQueryParameter("FDAT", m3FDAT.Value.ToM3String());
+			if (m3ANSQ.HasValue)
+				request.WithQueryParameter("ANSQ", m3ANSQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SCET.HasValue)
+				request.WithQueryParameter("SCET", m3SCET.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (m3POSE.HasValue)
+				request.WithQueryParameter("POSE", m3POSE.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -319,7 +325,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Initial order type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Initial order type")]
-		public int? M3_INOT => GetNullableInt("INOT");
+		public int? M3INOT => GetNullableInt("INOT");
 
 		/// <summary>
 		/// Description: Initial order qualifier
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Initial order qualifier")]
-		public string M3_INOQ => GetString("INOQ");
+		public string M3INOQ => GetString("INOQ");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Demand order category
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Demand order category")]
-		public string M3_DOCA => GetString("DOCA");
+		public string M3DOCA => GetString("DOCA");
 
 		/// <summary>
 		/// Description: Demand order number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Demand order number")]
-		public string M3_DRDN => GetString("DRDN");
+		public string M3DRDN => GetString("DRDN");
 
 		/// <summary>
 		/// Description: Demand order line
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Demand order line")]
-		public int? M3_DRDL => GetNullableInt("DRDL");
+		public int? M3DRDL => GetNullableInt("DRDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_DRDX => GetNullableInt("DRDX");
+		public int? M3DRDX => GetNullableInt("DRDX");
 
 		/// <summary>
 		/// Description: Initial promotion
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Initial promotion")]
-		public int? M3_INIP => GetNullableInt("INIP");
+		public int? M3INIP => GetNullableInt("INIP");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_DWDT => GetNullableDateTime("DWDT");
+		public DateTime? M3DWDT => GetNullableDateTime("DWDT");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_DWHM => GetNullableInt("DWHM");
+		public int? M3DWHM => GetNullableInt("DWHM");
 
 		/// <summary>
 		/// Description: Priority
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRIO => GetNullableInt("PRIO");
+		public int? M3PRIO => GetNullableInt("PRIO");
 
 		/// <summary>
 		/// Description: Requested quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested quantity")]
-		public decimal? M3_DEMQ => GetNullableDecimal("DEMQ");
+		public decimal? M3DEMQ => GetNullableDecimal("DEMQ");
 
 		/// <summary>
 		/// Description: Customer
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS850MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 	}
 }
 // EOF

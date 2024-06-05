@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Promotion
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_PIDE => GetString("PIDE");
+		public string M3PIDE => GetString("PIDE");
 
 		/// <summary>
 		/// Description: Facility
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse type")]
-		public string M3_WHTY => GetString("WHTY");
+		public string M3WHTY => GetString("WHTY");
 
 		/// <summary>
 		/// Description: Warehouse subtype
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse subtype")]
-		public string M3_WHSY => GetString("WHSY");
+		public string M3WHSY => GetString("WHSY");
 
 		/// <summary>
 		/// Description: Place
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place")]
-		public string M3_WHPL => GetString("WHPL");
+		public string M3WHPL => GetString("WHPL");
 
 		/// <summary>
 		/// Description: Place of loading
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place of loading")]
-		public string M3_SDES => GetString("SDES");
+		public string M3SDES => GetString("SDES");
 
 		/// <summary>
 		/// Description: Country
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Area/state
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/state")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Geographical code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographical code")]
-		public int? M3_GEOC => GetNullableInt("GEOC");
+		public int? M3GEOC => GetNullableInt("GEOC");
 
 		/// <summary>
 		/// Description: Valid from
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public int? M3_FVDT => GetNullableInt("FVDT");
+		public int? M3FVDT => GetNullableInt("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public int? M3_LVDT => GetNullableInt("LVDT");
+		public int? M3LVDT => GetNullableInt("LVDT");
 
 		/// <summary>
 		/// Description: Entry date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

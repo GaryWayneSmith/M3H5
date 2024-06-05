@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.QMS150MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add set
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QSET">Set (Required)</param>
-		/// <param name="m3_QTST">Test (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
+		/// <param name="m3QSET">Set (Required)</param>
+		/// <param name="m3QTST">Test (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSet(
-			string m3_QSET, 
-			string m3_QTST, 
-			string m3_TX40, 
+			string m3QSET, 
+			string m3QTST, 
+			string m3TX40, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QSET))
-				throw new ArgumentNullException("m3_QSET");
-			if (string.IsNullOrWhiteSpace(m3_QTST))
-				throw new ArgumentNullException("m3_QTST");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3QSET))
+				throw new ArgumentNullException(nameof(m3QSET));
+			if (string.IsNullOrWhiteSpace(m3QTST))
+				throw new ArgumentNullException(nameof(m3QTST));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QSET", m3_QSET.Trim())
-				.WithQueryParameter("QTST", m3_QTST.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("QSET", m3QSET.Trim())
+				.WithQueryParameter("QTST", m3QTST.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// Description Delete set
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QSET">Set (Required)</param>
-		/// <param name="m3_QTST">Test (Required)</param>
+		/// <param name="m3QSET">Set (Required)</param>
+		/// <param name="m3QTST">Test (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -106,8 +109,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltSet(
-			string m3_QSET, 
-			string m3_QTST, 
+			string m3QSET, 
+			string m3QTST, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,15 +125,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QSET))
-				throw new ArgumentNullException("m3_QSET");
-			if (string.IsNullOrWhiteSpace(m3_QTST))
-				throw new ArgumentNullException("m3_QTST");
+			if (string.IsNullOrWhiteSpace(m3QSET))
+				throw new ArgumentNullException(nameof(m3QSET));
+			if (string.IsNullOrWhiteSpace(m3QTST))
+				throw new ArgumentNullException(nameof(m3QTST));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QSET", m3_QSET.Trim())
-				.WithQueryParameter("QTST", m3_QTST.Trim());
+				.WithQueryParameter("QSET", m3QSET.Trim())
+				.WithQueryParameter("QTST", m3QTST.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -140,7 +143,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -151,8 +155,8 @@ namespace M3H5Lib.Api
 		/// Description Get set
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QSET">Set (Required)</param>
-		/// <param name="m3_QTST">Test (Required)</param>
+		/// <param name="m3QSET">Set (Required)</param>
+		/// <param name="m3QTST">Test (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -161,8 +165,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSetResponse></returns>
 		/// <exception cref="M3Exception<GetSetResponse>"></exception>
 		public async Task<M3Response<GetSetResponse>> GetSet(
-			string m3_QSET, 
-			string m3_QTST, 
+			string m3QSET, 
+			string m3QTST, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -177,15 +181,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QSET))
-				throw new ArgumentNullException("m3_QSET");
-			if (string.IsNullOrWhiteSpace(m3_QTST))
-				throw new ArgumentNullException("m3_QTST");
+			if (string.IsNullOrWhiteSpace(m3QSET))
+				throw new ArgumentNullException(nameof(m3QSET));
+			if (string.IsNullOrWhiteSpace(m3QTST))
+				throw new ArgumentNullException(nameof(m3QTST));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QSET", m3_QSET.Trim())
-				.WithQueryParameter("QTST", m3_QTST.Trim());
+				.WithQueryParameter("QSET", m3QSET.Trim())
+				.WithQueryParameter("QTST", m3QTST.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSetResponse>(
@@ -195,7 +199,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -206,8 +211,8 @@ namespace M3H5Lib.Api
 		/// Description List set
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QSET">Set (Required)</param>
-		/// <param name="m3_QTST">Test (Required)</param>
+		/// <param name="m3QSET">Set (Required)</param>
+		/// <param name="m3QTST">Test (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -216,8 +221,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSetResponse></returns>
 		/// <exception cref="M3Exception<LstSetResponse>"></exception>
 		public async Task<M3Response<LstSetResponse>> LstSet(
-			string m3_QSET, 
-			string m3_QTST, 
+			string m3QSET, 
+			string m3QTST, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -232,15 +237,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QSET))
-				throw new ArgumentNullException("m3_QSET");
-			if (string.IsNullOrWhiteSpace(m3_QTST))
-				throw new ArgumentNullException("m3_QTST");
+			if (string.IsNullOrWhiteSpace(m3QSET))
+				throw new ArgumentNullException(nameof(m3QSET));
+			if (string.IsNullOrWhiteSpace(m3QTST))
+				throw new ArgumentNullException(nameof(m3QTST));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QSET", m3_QSET.Trim())
-				.WithQueryParameter("QTST", m3_QTST.Trim());
+				.WithQueryParameter("QSET", m3QSET.Trim())
+				.WithQueryParameter("QTST", m3QTST.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSetResponse>(
@@ -250,7 +255,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -261,9 +267,9 @@ namespace M3H5Lib.Api
 		/// Description Update set
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_QSET">Set (Required)</param>
-		/// <param name="m3_QTST">Test (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
+		/// <param name="m3QSET">Set (Required)</param>
+		/// <param name="m3QTST">Test (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -272,9 +278,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSet(
-			string m3_QSET, 
-			string m3_QTST, 
-			string m3_TX40, 
+			string m3QSET, 
+			string m3QTST, 
+			string m3TX40, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -289,18 +295,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_QSET))
-				throw new ArgumentNullException("m3_QSET");
-			if (string.IsNullOrWhiteSpace(m3_QTST))
-				throw new ArgumentNullException("m3_QTST");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3QSET))
+				throw new ArgumentNullException(nameof(m3QSET));
+			if (string.IsNullOrWhiteSpace(m3QTST))
+				throw new ArgumentNullException(nameof(m3QTST));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("QSET", m3_QSET.Trim())
-				.WithQueryParameter("QTST", m3_QTST.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("QSET", m3QSET.Trim())
+				.WithQueryParameter("QTST", m3QTST.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -310,7 +316,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

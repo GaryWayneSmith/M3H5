@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS117MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,15 +38,15 @@ namespace M3H5Lib.Api
 		/// Description Add Line Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CRID">Charge (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CRAM">Charge</param>
-		/// <param name="m3_CRFA">Calculation factor</param>
-		/// <param name="m3_CRD0">Description language 0</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CRID">Charge (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CRAM">Charge</param>
+		/// <param name="m3CRFA">Calculation factor</param>
+		/// <param name="m3CRD0">Description language 0</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -53,15 +55,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddLineChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			string m3_CRID, 
-			int? m3_CONO = null, 
-			decimal? m3_CRAM = null, 
-			decimal? m3_CRFA = null, 
-			string m3_CRD0 = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			string m3CRID, 
+			int? m3CONO = null, 
+			decimal? m3CRAM = null, 
+			decimal? m3CRFA = null, 
+			string m3CRD0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -76,28 +78,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_CRID))
-				throw new ArgumentNullException("m3_CRID");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3CRID))
+				throw new ArgumentNullException(nameof(m3CRID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("CRID", m3_CRID.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_CRAM.HasValue)
-				request.WithQueryParameter("CRAM", m3_CRAM.Value.ToString());
-			if (m3_CRFA.HasValue)
-				request.WithQueryParameter("CRFA", m3_CRFA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CRD0))
-				request.WithQueryParameter("CRD0", m3_CRD0.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CRAM.HasValue)
+				request.WithQueryParameter("CRAM", m3CRAM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CRFA.HasValue)
+				request.WithQueryParameter("CRFA", m3CRFA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CRD0))
+				request.WithQueryParameter("CRD0", m3CRD0.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -107,7 +109,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -118,19 +121,19 @@ namespace M3H5Lib.Api
 		/// Description Change Line Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CRID">Charge (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CRAM">Charge</param>
-		/// <param name="m3_CRFA">Calculation factor</param>
-		/// <param name="m3_CRD0">Description language 0</param>
-		/// <param name="m3_HACD">Debit frequency</param>
-		/// <param name="m3_CHST">Status - charge</param>
-		/// <param name="m3_CHPR">Presentation code - item charges</param>
-		/// <param name="m3_VTCD">VAT code</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CRID">Charge (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CRAM">Charge</param>
+		/// <param name="m3CRFA">Calculation factor</param>
+		/// <param name="m3CRD0">Description language 0</param>
+		/// <param name="m3HACD">Debit frequency</param>
+		/// <param name="m3CHST">Status - charge</param>
+		/// <param name="m3CHPR">Presentation code - item charges</param>
+		/// <param name="m3VTCD">VAT code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -139,19 +142,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgLineChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			string m3_CRID, 
-			int? m3_CONO = null, 
-			decimal? m3_CRAM = null, 
-			decimal? m3_CRFA = null, 
-			string m3_CRD0 = null, 
-			int? m3_HACD = null, 
-			string m3_CHST = null, 
-			int? m3_CHPR = null, 
-			int? m3_VTCD = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			string m3CRID, 
+			int? m3CONO = null, 
+			decimal? m3CRAM = null, 
+			decimal? m3CRFA = null, 
+			string m3CRD0 = null, 
+			int? m3HACD = null, 
+			string m3CHST = null, 
+			int? m3CHPR = null, 
+			int? m3VTCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -166,36 +169,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_CRID))
-				throw new ArgumentNullException("m3_CRID");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3CRID))
+				throw new ArgumentNullException(nameof(m3CRID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("CRID", m3_CRID.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_CRAM.HasValue)
-				request.WithQueryParameter("CRAM", m3_CRAM.Value.ToString());
-			if (m3_CRFA.HasValue)
-				request.WithQueryParameter("CRFA", m3_CRFA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CRD0))
-				request.WithQueryParameter("CRD0", m3_CRD0.Trim());
-			if (m3_HACD.HasValue)
-				request.WithQueryParameter("HACD", m3_HACD.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CHST))
-				request.WithQueryParameter("CHST", m3_CHST.Trim());
-			if (m3_CHPR.HasValue)
-				request.WithQueryParameter("CHPR", m3_CHPR.Value.ToString());
-			if (m3_VTCD.HasValue)
-				request.WithQueryParameter("VTCD", m3_VTCD.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CRAM.HasValue)
+				request.WithQueryParameter("CRAM", m3CRAM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CRFA.HasValue)
+				request.WithQueryParameter("CRFA", m3CRFA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CRD0))
+				request.WithQueryParameter("CRD0", m3CRD0.Trim());
+			if (m3HACD.HasValue)
+				request.WithQueryParameter("HACD", m3HACD.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CHST))
+				request.WithQueryParameter("CHST", m3CHST.Trim());
+			if (m3CHPR.HasValue)
+				request.WithQueryParameter("CHPR", m3CHPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VTCD.HasValue)
+				request.WithQueryParameter("VTCD", m3VTCD.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -205,7 +208,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -216,12 +220,12 @@ namespace M3H5Lib.Api
 		/// Description Delete Line Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CRID">Charge (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CRID">Charge (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -230,12 +234,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelLineChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			string m3_CRID, 
-			int? m3_CONO = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			string m3CRID, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -250,22 +254,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_CRID))
-				throw new ArgumentNullException("m3_CRID");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3CRID))
+				throw new ArgumentNullException(nameof(m3CRID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("CRID", m3_CRID.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -275,7 +279,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -286,12 +291,12 @@ namespace M3H5Lib.Api
 		/// Description Get Line Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CRID">Charge (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CRID">Charge (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -300,12 +305,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetLineChrgResponse></returns>
 		/// <exception cref="M3Exception<GetLineChrgResponse>"></exception>
 		public async Task<M3Response<GetLineChrgResponse>> GetLineChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			string m3_CRID, 
-			int? m3_CONO = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			string m3CRID, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -320,22 +325,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_CRID))
-				throw new ArgumentNullException("m3_CRID");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3CRID))
+				throw new ArgumentNullException(nameof(m3CRID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("CRID", m3_CRID.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetLineChrgResponse>(
@@ -345,7 +350,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -356,12 +362,12 @@ namespace M3H5Lib.Api
 		/// Description List Line Charge
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_CRID">Charge</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3CRID">Charge</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -370,12 +376,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLineChrgResponse></returns>
 		/// <exception cref="M3Exception<LstLineChrgResponse>"></exception>
 		public async Task<M3Response<LstLineChrgResponse>> LstLineChrg(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			int? m3_CONO = null, 
-			string m3_CRID = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			int? m3CONO = null, 
+			string m3CRID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -390,21 +396,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CRID))
-				request.WithQueryParameter("CRID", m3_CRID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CRID))
+				request.WithQueryParameter("CRID", m3CRID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstLineChrgResponse>(
@@ -414,7 +420,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

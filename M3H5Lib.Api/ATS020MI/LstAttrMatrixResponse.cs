@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ATS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ATS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ATS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ATS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Field
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ATS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ1 => GetString("OBJ1");
+		public string M3OBJ1 => GetString("OBJ1");
 
 		/// <summary>
 		/// Description: Field
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ATS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ2 => GetString("OBJ2");
+		public string M3OBJ2 => GetString("OBJ2");
 
 		/// <summary>
 		/// Description: Field
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ATS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ3 => GetString("OBJ3");
+		public string M3OBJ3 => GetString("OBJ3");
 	}
 }
 // EOF

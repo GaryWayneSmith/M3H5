@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Replacement type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement type")]
-		public int? M3_RPTY => GetNullableInt("RPTY");
+		public int? M3RPTY => GetNullableInt("RPTY");
 
 		/// <summary>
 		/// Description: Related item
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Related item")]
-		public string M3_ALIT => GetString("ALIT");
+		public string M3ALIT => GetString("ALIT");
 
 		/// <summary>
 		/// Description: Interchangeability
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interchangeability")]
-		public int? M3_INTC => GetNullableInt("INTC");
+		public int? M3INTC => GetNullableInt("INTC");
 
 		/// <summary>
 		/// Description: Start date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Reference type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference type")]
-		public int? M3_RATY => GetNullableInt("RATY");
+		public int? M3RATY => GetNullableInt("RATY");
 
 		/// <summary>
 		/// Description: Reference identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference identity")]
-		public string M3_RAID => GetString("RAID");
+		public string M3RAID => GetString("RAID");
 
 		/// <summary>
 		/// Description: Quantity factor
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity factor")]
-		public int? M3_QAFC => GetNullableInt("QAFC");
+		public int? M3QAFC => GetNullableInt("QAFC");
 
 		/// <summary>
 		/// Description: Preferred item
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Preferred item")]
-		public int? M3_PUPN => GetNullableInt("PUPN");
+		public int? M3PUPN => GetNullableInt("PUPN");
 
 		/// <summary>
 		/// Description: Change date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Copy statistics
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Copy statistics")]
-		public int? M3_CPYS => GetNullableInt("CPYS");
+		public int? M3CPYS => GetNullableInt("CPYS");
 
 		/// <summary>
 		/// Description: Cond replacement
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cond replacement")]
-		public int? M3_CNRE => GetNullableInt("CNRE");
+		public int? M3CNRE => GetNullableInt("CNRE");
 
 		/// <summary>
 		/// Description: Condition
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS020MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Condition")]
-		public string M3_CNDN => GetString("CNDN");
+		public string M3CNDN => GetString("CNDN");
 	}
 }
 // EOF

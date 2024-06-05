@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Price list
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Currency
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Customer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Start date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Package ID
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package ID")]
-		public string M3_PKID => GetString("PKID");
+		public string M3PKID => GetString("PKID");
 
 		/// <summary>
 		/// Description: Hourly rate 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly rate 1")]
-		public decimal? M3_HPS1 => GetNullableDecimal("HPS1");
+		public decimal? M3HPS1 => GetNullableDecimal("HPS1");
 
 		/// <summary>
 		/// Description: Hourly rate 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly rate 2")]
-		public decimal? M3_HPS2 => GetNullableDecimal("HPS2");
+		public decimal? M3HPS2 => GetNullableDecimal("HPS2");
 
 		/// <summary>
 		/// Description: Hourly rate 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly rate 3")]
-		public decimal? M3_HPS3 => GetNullableDecimal("HPS3");
+		public decimal? M3HPS3 => GetNullableDecimal("HPS3");
 
 		/// <summary>
 		/// Description: Hourly rate 0
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly rate 0")]
-		public decimal? M3_HPS0 => GetNullableDecimal("HPS0");
+		public decimal? M3HPS0 => GetNullableDecimal("HPS0");
 
 		/// <summary>
 		/// Description: Daily rate 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Daily rate 1")]
-		public decimal? M3_DPS1 => GetNullableDecimal("DPS1");
+		public decimal? M3DPS1 => GetNullableDecimal("DPS1");
 
 		/// <summary>
 		/// Description: Daily rate 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Daily rate 2")]
-		public decimal? M3_DPS2 => GetNullableDecimal("DPS2");
+		public decimal? M3DPS2 => GetNullableDecimal("DPS2");
 
 		/// <summary>
 		/// Description: Daily rate 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Daily rate 3")]
-		public decimal? M3_DPS3 => GetNullableDecimal("DPS3");
+		public decimal? M3DPS3 => GetNullableDecimal("DPS3");
 
 		/// <summary>
 		/// Description: Daily rate 0
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Daily rate 0")]
-		public decimal? M3_DPS0 => GetNullableDecimal("DPS0");
+		public decimal? M3DPS0 => GetNullableDecimal("DPS0");
 
 		/// <summary>
 		/// Description: Weekly rate(5) 1
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(5) 1")]
-		public decimal? M3_WP15 => GetNullableDecimal("WP15");
+		public decimal? M3WP15 => GetNullableDecimal("WP15");
 
 		/// <summary>
 		/// Description: Weekly rate(5) 2
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(5) 2")]
-		public decimal? M3_WP25 => GetNullableDecimal("WP25");
+		public decimal? M3WP25 => GetNullableDecimal("WP25");
 
 		/// <summary>
 		/// Description: Weekly rate(5) 3
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(5) 3")]
-		public decimal? M3_WP35 => GetNullableDecimal("WP35");
+		public decimal? M3WP35 => GetNullableDecimal("WP35");
 
 		/// <summary>
 		/// Description: Weekly rate(5) 0
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(5) 0")]
-		public decimal? M3_WP05 => GetNullableDecimal("WP05");
+		public decimal? M3WP05 => GetNullableDecimal("WP05");
 
 		/// <summary>
 		/// Description: Weekly rate(6) 1
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(6) 1")]
-		public decimal? M3_WP16 => GetNullableDecimal("WP16");
+		public decimal? M3WP16 => GetNullableDecimal("WP16");
 
 		/// <summary>
 		/// Description: Weekly rate(6) 2
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(6) 2")]
-		public decimal? M3_WP26 => GetNullableDecimal("WP26");
+		public decimal? M3WP26 => GetNullableDecimal("WP26");
 
 		/// <summary>
 		/// Description: Weekly rate(6) 3
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(6) 3")]
-		public decimal? M3_WP36 => GetNullableDecimal("WP36");
+		public decimal? M3WP36 => GetNullableDecimal("WP36");
 
 		/// <summary>
 		/// Description: Weekly rate(6) 0
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(6) 0")]
-		public decimal? M3_WP06 => GetNullableDecimal("WP06");
+		public decimal? M3WP06 => GetNullableDecimal("WP06");
 
 		/// <summary>
 		/// Description: Weekly rate(7) 1
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(7) 1")]
-		public decimal? M3_WP17 => GetNullableDecimal("WP17");
+		public decimal? M3WP17 => GetNullableDecimal("WP17");
 
 		/// <summary>
 		/// Description: Weekly rate(7) 2
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(7) 2")]
-		public decimal? M3_WP27 => GetNullableDecimal("WP27");
+		public decimal? M3WP27 => GetNullableDecimal("WP27");
 
 		/// <summary>
 		/// Description: Weekly rate(7) 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(7) 3")]
-		public decimal? M3_WP37 => GetNullableDecimal("WP37");
+		public decimal? M3WP37 => GetNullableDecimal("WP37");
 
 		/// <summary>
 		/// Description: Weekly rate(7) 0
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weekly rate(7) 0")]
-		public decimal? M3_WP07 => GetNullableDecimal("WP07");
+		public decimal? M3WP07 => GetNullableDecimal("WP07");
 
 		/// <summary>
 		/// Description: Monthly rate(5) 1
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(5) 1")]
-		public decimal? M3_MP15 => GetNullableDecimal("MP15");
+		public decimal? M3MP15 => GetNullableDecimal("MP15");
 
 		/// <summary>
 		/// Description: Monthly rate(5) 2
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(5) 2")]
-		public decimal? M3_MP25 => GetNullableDecimal("MP25");
+		public decimal? M3MP25 => GetNullableDecimal("MP25");
 
 		/// <summary>
 		/// Description: Monthly rate(5) 3
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(5) 3")]
-		public decimal? M3_MP35 => GetNullableDecimal("MP35");
+		public decimal? M3MP35 => GetNullableDecimal("MP35");
 
 		/// <summary>
 		/// Description: Monthly rate(5) 0
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(5) 0")]
-		public decimal? M3_MP05 => GetNullableDecimal("MP05");
+		public decimal? M3MP05 => GetNullableDecimal("MP05");
 
 		/// <summary>
 		/// Description: Monthly rate(6) 1
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(6) 1")]
-		public decimal? M3_MP16 => GetNullableDecimal("MP16");
+		public decimal? M3MP16 => GetNullableDecimal("MP16");
 
 		/// <summary>
 		/// Description: Monthly rate(6) 2
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(6) 2")]
-		public decimal? M3_MP26 => GetNullableDecimal("MP26");
+		public decimal? M3MP26 => GetNullableDecimal("MP26");
 
 		/// <summary>
 		/// Description: Monthly rate(6) 3
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(6) 3")]
-		public decimal? M3_MP36 => GetNullableDecimal("MP36");
+		public decimal? M3MP36 => GetNullableDecimal("MP36");
 
 		/// <summary>
 		/// Description: Monthly rate(6) 0
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(6) 0")]
-		public decimal? M3_MP06 => GetNullableDecimal("MP06");
+		public decimal? M3MP06 => GetNullableDecimal("MP06");
 
 		/// <summary>
 		/// Description: Monthly rate(7) 1
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(7) 1")]
-		public decimal? M3_MP17 => GetNullableDecimal("MP17");
+		public decimal? M3MP17 => GetNullableDecimal("MP17");
 
 		/// <summary>
 		/// Description: Monthly rate(7) 2
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(7) 2")]
-		public decimal? M3_MP27 => GetNullableDecimal("MP27");
+		public decimal? M3MP27 => GetNullableDecimal("MP27");
 
 		/// <summary>
 		/// Description: Monthly rate(7) 3
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(7) 3")]
-		public decimal? M3_MP37 => GetNullableDecimal("MP37");
+		public decimal? M3MP37 => GetNullableDecimal("MP37");
 
 		/// <summary>
 		/// Description: Monthly rate(7) 0
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monthly rate(7) 0")]
-		public decimal? M3_MP07 => GetNullableDecimal("MP07");
+		public decimal? M3MP07 => GetNullableDecimal("MP07");
 
 		/// <summary>
 		/// Description: Delivery charge
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery charge")]
-		public decimal? M3_DECH => GetNullableDecimal("DECH");
+		public decimal? M3DECH => GetNullableDecimal("DECH");
 
 		/// <summary>
 		/// Description: Delivery cost
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery cost")]
-		public decimal? M3_DECO => GetNullableDecimal("DECO");
+		public decimal? M3DECO => GetNullableDecimal("DECO");
 
 		/// <summary>
 		/// Description: Cost percentage
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.STS125MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost percentage")]
-		public int? M3_CPER => GetNullableInt("CPER");
+		public int? M3CPER => GetNullableInt("CPER");
 	}
 }
 // EOF

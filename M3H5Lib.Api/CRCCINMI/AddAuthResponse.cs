@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit card error code")]
-		public string M3_CCEC => GetString("CCEC");
+		public string M3CCEC => GetString("CCEC");
 
 		/// <summary>
 		/// Description: Message text
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message text")]
-		public string M3_MSG1 => GetString("MSG1");
+		public string M3MSG1 => GetString("MSG1");
 
 		/// <summary>
 		/// Description: Message text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message text")]
-		public string M3_MSG2 => GetString("MSG2");
+		public string M3MSG2 => GetString("MSG2");
 
 		/// <summary>
 		/// Description: Reference number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference number")]
-		public string M3_NREF => GetString("NREF");
+		public string M3NREF => GetString("NREF");
 
 		/// <summary>
 		/// Description: 3rd party provider
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("3rd party provider")]
-		public string M3_TRDP => GetString("TRDP");
+		public string M3TRDP => GetString("TRDP");
 
 		/// <summary>
 		/// Description: Address verification service
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address verification service")]
-		public string M3_AVS1 => GetString("AVS1");
+		public string M3AVS1 => GetString("AVS1");
 
 		/// <summary>
 		/// Description: Address verification service
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address verification service")]
-		public string M3_AVS2 => GetString("AVS2");
+		public string M3AVS2 => GetString("AVS2");
 
 		/// <summary>
 		/// Description: Address verification service
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address verification service")]
-		public string M3_AVS3 => GetString("AVS3");
+		public string M3AVS3 => GetString("AVS3");
 
 		/// <summary>
 		/// Description: Address verification service
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address verification service")]
-		public string M3_AVS4 => GetString("AVS4");
+		public string M3AVS4 => GetString("AVS4");
 
 		/// <summary>
 		/// Description: Card sequrity code check response
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Card sequrity code check response")]
-		public string M3_CSC2 => GetString("CSC2");
+		public string M3CSC2 => GetString("CSC2");
 
 		/// <summary>
 		/// Description: Status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: 3rd-party id
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRCCINMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("3rd-party id")]
-		public string M3_TRDI => GetString("TRDI");
+		public string M3TRDI => GetString("TRDI");
 	}
 }
 // EOF

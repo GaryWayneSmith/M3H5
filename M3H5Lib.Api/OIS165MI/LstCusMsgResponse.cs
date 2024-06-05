@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public string M3_TRTP => GetString("TRTP");
+		public string M3TRTP => GetString("TRTP");
 
 		/// <summary>
 		/// Description: Qualifier
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Qualifier")]
-		public int? M3_QLYF => GetNullableInt("QLYF");
+		public int? M3QLYF => GetNullableInt("QLYF");
 
 		/// <summary>
 		/// Description: Display priority
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Display priority")]
-		public int? M3_DPRI => GetNullableInt("DPRI");
+		public int? M3DPRI => GetNullableInt("DPRI");
 
 		/// <summary>
 		/// Description: From date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FRDT => GetNullableDateTime("FRDT");
+		public DateTime? M3FRDT => GetNullableDateTime("FRDT");
 
 		/// <summary>
 		/// Description: To date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 
 		/// <summary>
 		/// Description: Identity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Identity")]
-		public string M3_QLVA => GetString("QLVA");
+		public string M3QLVA => GetString("QLVA");
 
 		/// <summary>
 		/// Description: Tab limit value
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tab limit value")]
-		public decimal? M3_TLVA => GetNullableDecimal("TLVA");
+		public decimal? M3TLVA => GetNullableDecimal("TLVA");
 
 		/// <summary>
 		/// Description: User
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Description user
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description user")]
-		public string M3_TUID => GetString("TUID");
+		public string M3TUID => GetString("TUID");
 
 		/// <summary>
 		/// Description: Description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Line number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_LINO => GetNullableInt("LINO");
+		public int? M3LINO => GetNullableInt("LINO");
 
 		/// <summary>
 		/// Description: Text
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS165MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 	}
 }
 // EOF

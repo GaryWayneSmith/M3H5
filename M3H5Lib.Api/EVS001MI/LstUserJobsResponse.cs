@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Type")]
-		public string M3_TYPE => GetString("TYPE");
+		public string M3TYPE => GetString("TYPE");
 
 		/// <summary>
 		/// Description: Job UUID
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job UUID")]
-		public string M3_UUID => GetString("UUID");
+		public string M3UUID => GetString("UUID");
 
 		/// <summary>
 		/// Description: Job status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EVS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 	}
 }
 // EOF

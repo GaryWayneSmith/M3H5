@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address coded")]
-		public string M3_CDEA => GetString("CDEA");
+		public string M3CDEA => GetString("CDEA");
 
 		/// <summary>
 		/// Description: Code list qualifier
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Code list qualifier")]
-		public string M3_E0QA => GetString("E0QA");
+		public string M3E0QA => GetString("E0QA");
 
 		/// <summary>
 		/// Description: Company name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Postal code
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 
 		/// <summary>
 		/// Description: Country
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RSS110MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 	}
 }
 // EOF

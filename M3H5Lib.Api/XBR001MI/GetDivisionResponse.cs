@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Company name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Company address 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 1")]
-		public string M3_COA1 => GetString("COA1");
+		public string M3COA1 => GetString("COA1");
 
 		/// <summary>
 		/// Description: Company address 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 2")]
-		public string M3_COA2 => GetString("COA2");
+		public string M3COA2 => GetString("COA2");
 
 		/// <summary>
 		/// Description: Company address 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 3")]
-		public string M3_COA3 => GetString("COA3");
+		public string M3COA3 => GetString("COA3");
 
 		/// <summary>
 		/// Description: Company address 4
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company address 4")]
-		public string M3_COA4 => GetString("COA4");
+		public string M3COA4 => GetString("COA4");
 
 		/// <summary>
 		/// Description: Telephone
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Country
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Local currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Tax declaration number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax declaration number")]
-		public string M3_VRNL => GetString("VRNL");
+		public string M3VRNL => GetString("VRNL");
 
 		/// <summary>
 		/// Description: City
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Postal code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Federation unit
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Federation unit")]
-		public string M3_FEDA => GetString("FEDA");
+		public string M3FEDA => GetString("FEDA");
 
 		/// <summary>
 		/// Description: Inscr Estadual
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inscr Estadual")]
-		public string M3_IEST => GetString("IEST");
+		public string M3IEST => GetString("IEST");
 
 		/// <summary>
 		/// Description: CNPJ / CPF
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CNPJ / CPF")]
-		public decimal? M3_CNPJ => GetNullableDecimal("CNPJ");
+		public decimal? M3CNPJ => GetNullableDecimal("CNPJ");
 
 		/// <summary>
 		/// Description: Inscr Municipal
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inscr Municipal")]
-		public string M3_IMUN => GetString("IMUN");
+		public string M3IMUN => GetString("IMUN");
 
 		/// <summary>
 		/// Description: % IRRF
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% IRRF")]
-		public int? M3_IRRF => GetNullableInt("IRRF");
+		public int? M3IRRF => GetNullableInt("IRRF");
 
 		/// <summary>
 		/// Description: % ISS
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% ISS")]
-		public int? M3_CISS => GetNullableInt("CISS");
+		public int? M3CISS => GetNullableInt("CISS");
 
 		/// <summary>
 		/// Description: % COFINS
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% COFINS")]
-		public int? M3_COFI => GetNullableInt("COFI");
+		public int? M3COFI => GetNullableInt("COFI");
 
 		/// <summary>
 		/// Description: % PIS
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% PIS")]
-		public int? M3_XPI1 => GetNullableInt("XPI1");
+		public int? M3XPI1 => GetNullableInt("XPI1");
 
 		/// <summary>
 		/// Description: % Ret CSLL
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Ret CSLL")]
-		public int? M3_RCSL => GetNullableInt("RCSL");
+		public int? M3RCSL => GetNullableInt("RCSL");
 
 		/// <summary>
 		/// Description: % Ret PIS
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Ret PIS")]
-		public int? M3_RPIS => GetNullableInt("RPIS");
+		public int? M3RPIS => GetNullableInt("RPIS");
 
 		/// <summary>
 		/// Description: % Ret COFINS
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Ret COFINS")]
-		public int? M3_RCOF => GetNullableInt("RCOF");
+		public int? M3RCOF => GetNullableInt("RCOF");
 
 		/// <summary>
 		/// Description: NF-e environment
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("NF-e environment")]
-		public int? M3_NFEE => GetNullableInt("NFEE");
+		public int? M3NFEE => GetNullableInt("NFEE");
 
 		/// <summary>
 		/// Description: Address number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: IBGE City code
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("IBGE City code")]
-		public int? M3_IBCD => GetNullableInt("IBCD");
+		public int? M3IBCD => GetNullableInt("IBCD");
 
 		/// <summary>
 		/// Description: CNAE code
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CNAE code")]
-		public string M3_CNAE => GetString("CNAE");
+		public string M3CNAE => GetString("CNAE");
 
 		/// <summary>
 		/// Description: Tributary mode
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tributary mode")]
-		public int? M3_CRTC => GetNullableInt("CRTC");
+		public int? M3CRTC => GetNullableInt("CRTC");
 
 		/// <summary>
 		/// Description: Issue type
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue type")]
-		public string M3_NETE => GetString("NETE");
+		public string M3NETE => GetString("NETE");
 	}
 }
 // EOF

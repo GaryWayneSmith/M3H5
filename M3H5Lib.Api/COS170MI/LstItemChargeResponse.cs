@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Order line number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Quotation
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quotation")]
-		public int? M3_AQUO => GetNullableInt("AQUO");
+		public int? M3AQUO => GetNullableInt("AQUO");
 
 		/// <summary>
 		/// Description: Payer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Charge
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge")]
-		public string M3_CRID => GetString("CRID");
+		public string M3CRID => GetString("CRID");
 
 		/// <summary>
 		/// Description: Transaction number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction number")]
-		public int? M3_ALI1 => GetNullableInt("ALI1");
+		public int? M3ALI1 => GetNullableInt("ALI1");
 
 		/// <summary>
 		/// Description: Geographical code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographical code")]
-		public int? M3_GEOC => GetNullableInt("GEOC");
+		public int? M3GEOC => GetNullableInt("GEOC");
 
 		/// <summary>
 		/// Description: Tax amount 1
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 1")]
-		public decimal? M3_TXA1 => GetNullableDecimal("TXA1");
+		public decimal? M3TXA1 => GetNullableDecimal("TXA1");
 
 		/// <summary>
 		/// Description: Tax rate 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 1")]
-		public decimal? M3_TXR1 => GetNullableDecimal("TXR1");
+		public decimal? M3TXR1 => GetNullableDecimal("TXR1");
 
 		/// <summary>
 		/// Description: Tax description 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 1")]
-		public string M3_TXD1 => GetString("TXD1");
+		public string M3TXD1 => GetString("TXD1");
 
 		/// <summary>
 		/// Description: Tax amount 2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 2")]
-		public decimal? M3_TXA2 => GetNullableDecimal("TXA2");
+		public decimal? M3TXA2 => GetNullableDecimal("TXA2");
 
 		/// <summary>
 		/// Description: Tax rate 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 2")]
-		public decimal? M3_TXR2 => GetNullableDecimal("TXR2");
+		public decimal? M3TXR2 => GetNullableDecimal("TXR2");
 
 		/// <summary>
 		/// Description: Tax description 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 2")]
-		public string M3_TXD2 => GetString("TXD2");
+		public string M3TXD2 => GetString("TXD2");
 
 		/// <summary>
 		/// Description: Tax amount 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 3")]
-		public decimal? M3_TXA3 => GetNullableDecimal("TXA3");
+		public decimal? M3TXA3 => GetNullableDecimal("TXA3");
 
 		/// <summary>
 		/// Description: Tax rate 3
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 3")]
-		public decimal? M3_TXR3 => GetNullableDecimal("TXR3");
+		public decimal? M3TXR3 => GetNullableDecimal("TXR3");
 
 		/// <summary>
 		/// Description: Tax description 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 3")]
-		public string M3_TXD3 => GetString("TXD3");
+		public string M3TXD3 => GetString("TXD3");
 
 		/// <summary>
 		/// Description: Tax amount 4
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 4")]
-		public decimal? M3_TXA4 => GetNullableDecimal("TXA4");
+		public decimal? M3TXA4 => GetNullableDecimal("TXA4");
 
 		/// <summary>
 		/// Description: Tax rate 4
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 4")]
-		public decimal? M3_TXR4 => GetNullableDecimal("TXR4");
+		public decimal? M3TXR4 => GetNullableDecimal("TXR4");
 
 		/// <summary>
 		/// Description: Tax description 4
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 4")]
-		public string M3_TXD4 => GetString("TXD4");
+		public string M3TXD4 => GetString("TXD4");
 
 		/// <summary>
 		/// Description: Tax amount 5
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 5")]
-		public decimal? M3_TXA5 => GetNullableDecimal("TXA5");
+		public decimal? M3TXA5 => GetNullableDecimal("TXA5");
 
 		/// <summary>
 		/// Description: Tax rate 5
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 5")]
-		public decimal? M3_TXR5 => GetNullableDecimal("TXR5");
+		public decimal? M3TXR5 => GetNullableDecimal("TXR5");
 
 		/// <summary>
 		/// Description: Tax description 5
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 5")]
-		public string M3_TXD5 => GetString("TXD5");
+		public string M3TXD5 => GetString("TXD5");
 
 		/// <summary>
 		/// Description: VAT code
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code")]
-		public int? M3_VTCD => GetNullableInt("VTCD");
+		public int? M3VTCD => GetNullableInt("VTCD");
 
 		/// <summary>
 		/// Description: Tax code customer/address
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code customer/address")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Amount
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount")]
-		public decimal? M3_PBAM => GetNullableDecimal("PBAM");
+		public decimal? M3PBAM => GetNullableDecimal("PBAM");
 
 		/// <summary>
 		/// Description: Description
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_CRD0 => GetString("CRD0");
+		public string M3CRD0 => GetString("CRD0");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Internal charge
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal charge")]
-		public int? M3_CRTY => GetNullableInt("CRTY");
+		public int? M3CRTY => GetNullableInt("CRTY");
 
 		/// <summary>
 		/// Description: Status - charge
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.COS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - charge")]
-		public string M3_CHST => GetString("CHST");
+		public string M3CHST => GetString("CHST");
 	}
 }
 // EOF

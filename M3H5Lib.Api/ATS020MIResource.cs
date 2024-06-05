@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.ATS020MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description This transaction adds Attribute Matrix
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_OBJ1">Field</param>
-		/// <param name="m3_OBJ2">Field</param>
-		/// <param name="m3_OBJ3">Field</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3OBJ1">Field</param>
+		/// <param name="m3OBJ2">Field</param>
+		/// <param name="m3OBJ3">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAttrMatrix(
-			string m3_ATID, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			string m3_OBJ1 = null, 
-			string m3_OBJ2 = null, 
-			string m3_OBJ3 = null, 
+			string m3ATID, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			string m3OBJ1 = null, 
+			string m3OBJ2 = null, 
+			string m3OBJ3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,26 +74,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBJ1))
-				request.WithQueryParameter("OBJ1", m3_OBJ1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBJ2))
-				request.WithQueryParameter("OBJ2", m3_OBJ2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBJ3))
-				request.WithQueryParameter("OBJ3", m3_OBJ3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBJ1))
+				request.WithQueryParameter("OBJ1", m3OBJ1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBJ2))
+				request.WithQueryParameter("OBJ2", m3OBJ2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBJ3))
+				request.WithQueryParameter("OBJ3", m3OBJ3.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -101,7 +103,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -112,15 +115,15 @@ namespace M3H5Lib.Api
 		/// Description This transaction adds Attribute Value
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_ANSQ">Attribute sequence number</param>
-		/// <param name="m3_AALF">From attribute value</param>
-		/// <param name="m3_AALT">To attribute value</param>
-		/// <param name="m3_NRMU">Numeric range multiple</param>
-		/// <param name="m3_DCOD">Discontinued date</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3ANSQ">Attribute sequence number</param>
+		/// <param name="m3AALF">From attribute value</param>
+		/// <param name="m3AALT">To attribute value</param>
+		/// <param name="m3NRMU">Numeric range multiple</param>
+		/// <param name="m3DCOD">Discontinued date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -129,15 +132,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAttrValue(
-			string m3_ATID, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			int? m3_ANSQ = null, 
-			string m3_AALF = null, 
-			string m3_AALT = null, 
-			decimal? m3_NRMU = null, 
-			DateTime? m3_DCOD = null, 
+			string m3ATID, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			int? m3ANSQ = null, 
+			string m3AALF = null, 
+			string m3AALT = null, 
+			decimal? m3NRMU = null, 
+			DateTime? m3DCOD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -152,30 +155,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (m3_ANSQ.HasValue)
-				request.WithQueryParameter("ANSQ", m3_ANSQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_AALF))
-				request.WithQueryParameter("AALF", m3_AALF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AALT))
-				request.WithQueryParameter("AALT", m3_AALT.Trim());
-			if (m3_NRMU.HasValue)
-				request.WithQueryParameter("NRMU", m3_NRMU.Value.ToString());
-			if (m3_DCOD.HasValue)
-				request.WithQueryParameter("DCOD", m3_DCOD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (m3ANSQ.HasValue)
+				request.WithQueryParameter("ANSQ", m3ANSQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3AALF))
+				request.WithQueryParameter("AALF", m3AALF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AALT))
+				request.WithQueryParameter("AALT", m3AALT.Trim());
+			if (m3NRMU.HasValue)
+				request.WithQueryParameter("NRMU", m3NRMU.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DCOD.HasValue)
+				request.WithQueryParameter("DCOD", m3DCOD.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -185,7 +188,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -196,10 +200,10 @@ namespace M3H5Lib.Api
 		/// Description This transaction deletes the Attribute Matrix
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -208,10 +212,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelAttrMatrix(
-			string m3_ATID, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
+			string m3ATID, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,20 +230,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -249,7 +253,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -260,11 +265,11 @@ namespace M3H5Lib.Api
 		/// Description This transaction deletes Attaribute Value
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_AALF">From attribute value</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3AALF">From attribute value</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -273,11 +278,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelAttrValue(
-			string m3_ATID, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			string m3_AALF = null, 
+			string m3ATID, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			string m3AALF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -292,22 +297,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AALF))
-				request.WithQueryParameter("AALF", m3_AALF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AALF))
+				request.WithQueryParameter("AALF", m3AALF.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -317,7 +322,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -328,7 +334,7 @@ namespace M3H5Lib.Api
 		/// Description This transaction lists Attribute Matrix
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -337,7 +343,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAttrMatrixResponse></returns>
 		/// <exception cref="M3Exception<LstAttrMatrixResponse>"></exception>
 		public async Task<M3Response<LstAttrMatrixResponse>> LstAttrMatrix(
-			string m3_ATID, 
+			string m3ATID, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -352,12 +358,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAttrMatrixResponse>(
@@ -367,7 +373,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -378,10 +385,10 @@ namespace M3H5Lib.Api
 		/// Description This transaction displays Attribute Value
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -390,10 +397,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAttrValueResponse></returns>
 		/// <exception cref="M3Exception<LstAttrValueResponse>"></exception>
 		public async Task<M3Response<LstAttrValueResponse>> LstAttrValue(
-			string m3_ATID, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
+			string m3ATID, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -408,20 +415,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAttrValueResponse>(
@@ -431,7 +438,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -442,10 +450,10 @@ namespace M3H5Lib.Api
 		/// Description This transaction displays Attribute Value
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -454,10 +462,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelAttrValueResponse></returns>
 		/// <exception cref="M3Exception<SelAttrValueResponse>"></exception>
 		public async Task<M3Response<SelAttrValueResponse>> SelAttrValue(
-			string m3_ATID, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
+			string m3ATID, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -472,20 +480,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
 
 			// Execute the request
 			var result = await Execute<SelAttrValueResponse>(
@@ -495,7 +503,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -506,14 +515,14 @@ namespace M3H5Lib.Api
 		/// Description This transaction updates Attribute Value
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_AALF">From attribute value</param>
-		/// <param name="m3_AALT">To attribute value</param>
-		/// <param name="m3_NRMU">Numeric range multiple</param>
-		/// <param name="m3_DCOD">Discontinued date</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3AALF">From attribute value</param>
+		/// <param name="m3AALT">To attribute value</param>
+		/// <param name="m3NRMU">Numeric range multiple</param>
+		/// <param name="m3DCOD">Discontinued date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -522,14 +531,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAttrValue(
-			string m3_ATID, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			string m3_AALF = null, 
-			string m3_AALT = null, 
-			decimal? m3_NRMU = null, 
-			DateTime? m3_DCOD = null, 
+			string m3ATID, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			string m3AALF = null, 
+			string m3AALT = null, 
+			decimal? m3NRMU = null, 
+			DateTime? m3DCOD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -544,28 +553,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATID", m3_ATID.Trim());
+				.WithQueryParameter("ATID", m3ATID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AALF))
-				request.WithQueryParameter("AALF", m3_AALF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AALT))
-				request.WithQueryParameter("AALT", m3_AALT.Trim());
-			if (m3_NRMU.HasValue)
-				request.WithQueryParameter("NRMU", m3_NRMU.Value.ToString());
-			if (m3_DCOD.HasValue)
-				request.WithQueryParameter("DCOD", m3_DCOD.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AALF))
+				request.WithQueryParameter("AALF", m3AALF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AALT))
+				request.WithQueryParameter("AALT", m3AALT.Trim());
+			if (m3NRMU.HasValue)
+				request.WithQueryParameter("NRMU", m3NRMU.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DCOD.HasValue)
+				request.WithQueryParameter("DCOD", m3DCOD.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -575,7 +584,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

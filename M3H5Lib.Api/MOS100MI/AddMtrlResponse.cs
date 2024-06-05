@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order number")]
-		public string M3_MWNO => GetString("MWNO");
+		public string M3MWNO => GetString("MWNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_MSEQ => GetNullableInt("MSEQ");
+		public int? M3MSEQ => GetNullableInt("MSEQ");
 
 		/// <summary>
 		/// Description: Return processing
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return processing")]
-		public int? M3_RTPR => GetNullableInt("RTPR");
+		public int? M3RTPR => GetNullableInt("RTPR");
 
 		/// <summary>
 		/// Description: Warranty type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty type")]
-		public string M3_WATP => GetString("WATP");
+		public string M3WATP => GetString("WATP");
 
 		/// <summary>
 		/// Description: Payer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Agreement
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Excluded
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Excluded")]
-		public int? M3_EXCL => GetNullableInt("EXCL");
+		public int? M3EXCL => GetNullableInt("EXCL");
 
 		/// <summary>
 		/// Description: Item ID type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item ID type")]
-		public int? M3_IDTY => GetNullableInt("IDTY");
+		public int? M3IDTY => GetNullableInt("IDTY");
 
 		/// <summary>
 		/// Description: Item ID
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item ID")]
-		public string M3_IDEN => GetString("IDEN");
+		public string M3IDEN => GetString("IDEN");
 
 		/// <summary>
 		/// Description: Price origin
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price origin")]
-		public string M3_PRMO => GetString("PRMO");
+		public string M3PRMO => GetString("PRMO");
 	}
 }
 // EOF

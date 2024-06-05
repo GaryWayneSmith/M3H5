@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price U/M")]
-		public string M3_PPUN => GetString("PPUN");
+		public string M3PPUN => GetString("PPUN");
 
 		/// <summary>
 		/// Description: Description - Purchase price U/M
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Purchase price U/M")]
-		public string M3_DS01 => GetString("DS01");
+		public string M3DS01 => GetString("DS01");
 
 		/// <summary>
 		/// Description: Consumption code - trade stat (TST)
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consumption code - trade stat (TST)")]
-		public string M3_ECCC => GetString("ECCC");
+		public string M3ECCC => GetString("ECCC");
 
 		/// <summary>
 		/// Description: Costing model - purchasing
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - purchasing")]
-		public string M3_WSCA => GetString("WSCA");
+		public string M3WSCA => GetString("WSCA");
 
 		/// <summary>
 		/// Description: Procurement group
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Procurement group")]
-		public string M3_PRGP => GetString("PRGP");
+		public string M3PRGP => GetString("PRGP");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Costing model - product costing
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - product costing")]
-		public string M3_PRCM => GetString("PRCM");
+		public string M3PRCM => GetString("PRCM");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Purchase price quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price quantity")]
-		public int? M3_PUCD => GetNullableInt("PUCD");
+		public int? M3PUCD => GetNullableInt("PUCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Description - Currency
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Currency")]
-		public string M3_DS02 => GetString("DS02");
+		public string M3DS02 => GetString("DS02");
 
 		/// <summary>
 		/// Description: Sales price
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Currency - sales price
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency - sales price")]
-		public string M3_CUCS => GetString("CUCS");
+		public string M3CUCS => GetString("CUCS");
 
 		/// <summary>
 		/// Description: Description - Currency - sales price
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Currency - sales price")]
-		public string M3_DS03 => GetString("DS03");
+		public string M3DS03 => GetString("DS03");
 
 		/// <summary>
 		/// Description: Discount group - item
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount group - item")]
-		public string M3_DIGI => GetString("DIGI");
+		public string M3DIGI => GetString("DIGI");
 
 		/// <summary>
 		/// Description: Description - Discount group - item
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Discount group - item")]
-		public string M3_DS04 => GetString("DS04");
+		public string M3DS04 => GetString("DS04");
 
 		/// <summary>
 		/// Description: Bonus group
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus group")]
-		public string M3_BGRP => GetString("BGRP");
+		public string M3BGRP => GetString("BGRP");
 
 		/// <summary>
 		/// Description: Description - Bonus group
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Bonus group")]
-		public string M3_DS05 => GetString("DS05");
+		public string M3DS05 => GetString("DS05");
 
 		/// <summary>
 		/// Description: Commission group
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commission group")]
-		public string M3_PRVG => GetString("PRVG");
+		public string M3PRVG => GetString("PRVG");
 
 		/// <summary>
 		/// Description: Description - Commission group
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Commission group")]
-		public string M3_DS06 => GetString("DS06");
+		public string M3DS06 => GetString("DS06");
 
 		/// <summary>
 		/// Description: Statistics identity 3 item
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 3 item")]
-		public string M3_FRE3 => GetString("FRE3");
+		public string M3FRE3 => GetString("FRE3");
 
 		/// <summary>
 		/// Description: Statistics identity 4 item
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 4 item")]
-		public string M3_FRE4 => GetString("FRE4");
+		public string M3FRE4 => GetString("FRE4");
 
 		/// <summary>
 		/// Description: Order total discount generating
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order total discount generating")]
-		public int? M3_OTDI => GetNullableInt("OTDI");
+		public int? M3OTDI => GetNullableInt("OTDI");
 
 		/// <summary>
 		/// Description: Bonus generating
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus generating")]
-		public int? M3_BOGR => GetNullableInt("BOGR");
+		public int? M3BOGR => GetNullableInt("BOGR");
 
 		/// <summary>
 		/// Description: Sales price unit of measure
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price unit of measure")]
-		public string M3_SPUN => GetString("SPUN");
+		public string M3SPUN => GetString("SPUN");
 
 		/// <summary>
 		/// Description: Description - Sales price U/M
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - Sales price U/M")]
-		public string M3_DS07 => GetString("DS07");
+		public string M3DS07 => GetString("DS07");
 
 		/// <summary>
 		/// Description: Fixed or dynamic sales price U/M
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed or dynamic sales price U/M")]
-		public int? M3_SPUC => GetNullableInt("SPUC");
+		public int? M3SPUC => GetNullableInt("SPUC");
 
 		/// <summary>
 		/// Description: VAT code - purchase
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code - purchase")]
-		public int? M3_VTCP => GetNullableInt("VTCP");
+		public int? M3VTCP => GetNullableInt("VTCP");
 
 		/// <summary>
 		/// Description: VAT code - sales
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT code - sales")]
-		public int? M3_VTCS => GetNullableInt("VTCS");
+		public int? M3VTCS => GetNullableInt("VTCS");
 
 		/// <summary>
 		/// Description: Sales price - basic U/M
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price - basic U/M")]
-		public decimal? M3_SAPB => GetNullableDecimal("SAPB");
+		public decimal? M3SAPB => GetNullableDecimal("SAPB");
 
 		/// <summary>
 		/// Description: Change date
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Number of price decimal places
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of price decimal places")]
-		public int? M3_PDCC => GetNullableInt("PDCC");
+		public int? M3PDCC => GetNullableInt("PDCC");
 
 		/// <summary>
 		/// Description: Purchase Price date
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase Price date")]
-		public DateTime? M3_PPDT => GetNullableDateTime("PPDT");
+		public DateTime? M3PPDT => GetNullableDateTime("PPDT");
 
 		/// <summary>
 		/// Description: Sales price date
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price date")]
-		public DateTime? M3_SPDT => GetNullableDateTime("SPDT");
+		public DateTime? M3SPDT => GetNullableDateTime("SPDT");
 	}
 }
 // EOF

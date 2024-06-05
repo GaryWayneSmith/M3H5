@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS114MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,15 +38,15 @@ namespace M3H5Lib.Api
 		/// Description Create new sales persons
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RIDN">Order number (Required)</param>
-		/// <param name="m3_RIDL">Order line (Required)</param>
-		/// <param name="m3_SMCD">Salesperson (Required)</param>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_RIDX">Line suffix</param>
-		/// <param name="m3_VERS">Version</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_CAMO">Commission amount</param>
-		/// <param name="m3_COPE">Commission percentage</param>
+		/// <param name="m3RIDN">Order number (Required)</param>
+		/// <param name="m3RIDL">Order line (Required)</param>
+		/// <param name="m3SMCD">Salesperson (Required)</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3RIDX">Line suffix</param>
+		/// <param name="m3VERS">Version</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3CAMO">Commission amount</param>
+		/// <param name="m3COPE">Commission percentage</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -53,15 +55,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_RIDN, 
-			int m3_RIDL, 
-			string m3_SMCD, 
-			string m3_ORCA, 
-			int? m3_RIDX = null, 
-			int? m3_VERS = null, 
-			string m3_CUCD = null, 
-			decimal? m3_CAMO = null, 
-			int? m3_COPE = null, 
+			string m3RIDN, 
+			int m3RIDL, 
+			string m3SMCD, 
+			string m3ORCA, 
+			int? m3RIDX = null, 
+			int? m3VERS = null, 
+			string m3CUCD = null, 
+			decimal? m3CAMO = null, 
+			int? m3COPE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -76,31 +78,31 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_RIDN))
-				throw new ArgumentNullException("m3_RIDN");
-			if (string.IsNullOrWhiteSpace(m3_SMCD))
-				throw new ArgumentNullException("m3_SMCD");
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
+			if (string.IsNullOrWhiteSpace(m3RIDN))
+				throw new ArgumentNullException(nameof(m3RIDN));
+			if (string.IsNullOrWhiteSpace(m3SMCD))
+				throw new ArgumentNullException(nameof(m3SMCD));
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("RIDN", m3_RIDN.Trim())
-				.WithQueryParameter("RIDL", m3_RIDL.ToString())
-				.WithQueryParameter("SMCD", m3_SMCD.Trim())
-				.WithQueryParameter("ORCA", m3_ORCA.Trim());
+				.WithQueryParameter("RIDN", m3RIDN.Trim())
+				.WithQueryParameter("RIDL", m3RIDL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("SMCD", m3SMCD.Trim())
+				.WithQueryParameter("ORCA", m3ORCA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RIDX.HasValue)
-				request.WithQueryParameter("RIDX", m3_RIDX.Value.ToString());
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (m3_CAMO.HasValue)
-				request.WithQueryParameter("CAMO", m3_CAMO.Value.ToString());
-			if (m3_COPE.HasValue)
-				request.WithQueryParameter("COPE", m3_COPE.Value.ToString());
+			if (m3RIDX.HasValue)
+				request.WithQueryParameter("RIDX", m3RIDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (m3CAMO.HasValue)
+				request.WithQueryParameter("CAMO", m3CAMO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3COPE.HasValue)
+				request.WithQueryParameter("COPE", m3COPE.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -110,7 +112,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -121,12 +124,12 @@ namespace M3H5Lib.Api
 		/// Description Delete sales persons
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RIDN">Order number (Required)</param>
-		/// <param name="m3_RIDL">Order line (Required)</param>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_RIDX">Line suffix</param>
-		/// <param name="m3_VERS">Version</param>
-		/// <param name="m3_SMCD">Salesperson</param>
+		/// <param name="m3RIDN">Order number (Required)</param>
+		/// <param name="m3RIDL">Order line (Required)</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3RIDX">Line suffix</param>
+		/// <param name="m3VERS">Version</param>
+		/// <param name="m3SMCD">Salesperson</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -135,12 +138,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Delete(
-			string m3_RIDN, 
-			int m3_RIDL, 
-			string m3_ORCA, 
-			int? m3_RIDX = null, 
-			int? m3_VERS = null, 
-			string m3_SMCD = null, 
+			string m3RIDN, 
+			int m3RIDL, 
+			string m3ORCA, 
+			int? m3RIDX = null, 
+			int? m3VERS = null, 
+			string m3SMCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -155,24 +158,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_RIDN))
-				throw new ArgumentNullException("m3_RIDN");
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
+			if (string.IsNullOrWhiteSpace(m3RIDN))
+				throw new ArgumentNullException(nameof(m3RIDN));
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("RIDN", m3_RIDN.Trim())
-				.WithQueryParameter("RIDL", m3_RIDL.ToString())
-				.WithQueryParameter("ORCA", m3_ORCA.Trim());
+				.WithQueryParameter("RIDN", m3RIDN.Trim())
+				.WithQueryParameter("RIDL", m3RIDL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ORCA", m3ORCA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RIDX.HasValue)
-				request.WithQueryParameter("RIDX", m3_RIDX.Value.ToString());
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SMCD))
-				request.WithQueryParameter("SMCD", m3_SMCD.Trim());
+			if (m3RIDX.HasValue)
+				request.WithQueryParameter("RIDX", m3RIDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SMCD))
+				request.WithQueryParameter("SMCD", m3SMCD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -182,7 +185,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -193,11 +197,11 @@ namespace M3H5Lib.Api
 		/// Description List salespersons
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_RIDN">Order number (Required)</param>
-		/// <param name="m3_RIDL">Order line (Required)</param>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_RIDX">Line suffix</param>
-		/// <param name="m3_VERS">Version</param>
+		/// <param name="m3RIDN">Order number (Required)</param>
+		/// <param name="m3RIDL">Order line (Required)</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3RIDX">Line suffix</param>
+		/// <param name="m3VERS">Version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -206,11 +210,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListResponse></returns>
 		/// <exception cref="M3Exception<ListResponse>"></exception>
 		public async Task<M3Response<ListResponse>> List(
-			string m3_RIDN, 
-			int m3_RIDL, 
-			string m3_ORCA, 
-			int? m3_RIDX = null, 
-			int? m3_VERS = null, 
+			string m3RIDN, 
+			int m3RIDL, 
+			string m3ORCA, 
+			int? m3RIDX = null, 
+			int? m3VERS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -225,22 +229,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_RIDN))
-				throw new ArgumentNullException("m3_RIDN");
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
+			if (string.IsNullOrWhiteSpace(m3RIDN))
+				throw new ArgumentNullException(nameof(m3RIDN));
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("RIDN", m3_RIDN.Trim())
-				.WithQueryParameter("RIDL", m3_RIDL.ToString())
-				.WithQueryParameter("ORCA", m3_ORCA.Trim());
+				.WithQueryParameter("RIDN", m3RIDN.Trim())
+				.WithQueryParameter("RIDL", m3RIDL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ORCA", m3ORCA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RIDX.HasValue)
-				request.WithQueryParameter("RIDX", m3_RIDX.Value.ToString());
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
+			if (m3RIDX.HasValue)
+				request.WithQueryParameter("RIDX", m3RIDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<ListResponse>(
@@ -250,7 +254,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

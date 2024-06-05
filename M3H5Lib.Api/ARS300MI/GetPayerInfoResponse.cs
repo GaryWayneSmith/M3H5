@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Remittance number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remittance number")]
-		public int? M3_RMNB => GetNullableInt("RMNB");
+		public int? M3RMNB => GetNullableInt("RMNB");
 
 		/// <summary>
 		/// Description: Payer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Bank account name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account name")]
-		public string M3_BANA => GetString("BANA");
+		public string M3BANA => GetString("BANA");
 
 		/// <summary>
 		/// Description: Bank number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank number")]
-		public string M3_BKNO => GetString("BKNO");
+		public string M3BKNO => GetString("BKNO");
 
 		/// <summary>
 		/// Description: Bank branch identity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank branch identity")]
-		public string M3_BBRN => GetString("BBRN");
+		public string M3BBRN => GetString("BBRN");
 
 		/// <summary>
 		/// Description: Banking region
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Banking region")]
-		public string M3_BKPL => GetString("BKPL");
+		public string M3BKPL => GetString("BKPL");
 
 		/// <summary>
 		/// Description: SWIFT/BIC code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SWIFT/BIC code")]
-		public string M3_SWBI => GetString("SWBI");
+		public string M3SWBI => GetString("SWBI");
 
 		/// <summary>
 		/// Description: Clearing system ID
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clearing system ID")]
-		public string M3_CLSI => GetString("CLSI");
+		public string M3CLSI => GetString("CLSI");
 
 		/// <summary>
 		/// Description: Clearing system number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Clearing system number")]
-		public string M3_CLSN => GetString("CLSN");
+		public string M3CLSN => GetString("CLSN");
 
 		/// <summary>
 		/// Description: International bank account number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("International bank account number")]
-		public string M3_IBAN => GetString("IBAN");
+		public string M3IBAN => GetString("IBAN");
 
 		/// <summary>
 		/// Description: Bank account number
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account number")]
-		public string M3_BACN => GetString("BACN");
+		public string M3BACN => GetString("BACN");
 
 		/// <summary>
 		/// Description: Category purpose code
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Category purpose code")]
-		public string M3_CPCO => GetString("CPCO");
+		public string M3CPCO => GetString("CPCO");
 
 		/// <summary>
 		/// Description: Payment purpose code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment purpose code")]
-		public string M3_PPCO => GetString("PPCO");
+		public string M3PPCO => GetString("PPCO");
 
 		/// <summary>
 		/// Description: Priority code
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority code")]
-		public int? M3_PITY => GetNullableInt("PITY");
+		public int? M3PITY => GetNullableInt("PITY");
 
 		/// <summary>
 		/// Description: Charge bearer code
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Charge bearer code")]
-		public int? M3_CBCD => GetNullableInt("CBCD");
+		public int? M3CBCD => GetNullableInt("CBCD");
 
 		/// <summary>
 		/// Description: Bank account field 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 1")]
-		public string M3_BAF1 => GetString("BAF1");
+		public string M3BAF1 => GetString("BAF1");
 
 		/// <summary>
 		/// Description: Bank account field 2
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 2")]
-		public string M3_BAF2 => GetString("BAF2");
+		public string M3BAF2 => GetString("BAF2");
 
 		/// <summary>
 		/// Description: Bank account field 3
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 3")]
-		public string M3_BAF3 => GetString("BAF3");
+		public string M3BAF3 => GetString("BAF3");
 
 		/// <summary>
 		/// Description: Bank account field 4
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 4")]
-		public string M3_BAF4 => GetString("BAF4");
+		public string M3BAF4 => GetString("BAF4");
 
 		/// <summary>
 		/// Description: Bank account field 5
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 5")]
-		public string M3_BAF5 => GetString("BAF5");
+		public string M3BAF5 => GetString("BAF5");
 
 		/// <summary>
 		/// Description: Name
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Country
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: State
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Postal code
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: City
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: VAT registration number
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT registration number")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: VAT reg no with Country prefix
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VAT reg no with Country prefix")]
-		public string M3_VRN2 => GetString("VRN2");
+		public string M3VRN2 => GetString("VRN2");
 
 		/// <summary>
 		/// Description: Organization number 1
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 1")]
-		public string M3_CORG => GetString("CORG");
+		public string M3CORG => GetString("CORG");
 
 		/// <summary>
 		/// Description: Organization number 2
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organization number 2")]
-		public string M3_COR2 => GetString("COR2");
+		public string M3COR2 => GetString("COR2");
 	}
 }
 // EOF

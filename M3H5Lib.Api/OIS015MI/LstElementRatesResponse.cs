@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Element - sales price costing
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element - sales price costing")]
-		public string M3_SCEL => GetString("SCEL");
+		public string M3SCEL => GetString("SCEL");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Valid from
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Costing markup
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing markup")]
-		public decimal? M3_OVHE => GetNullableDecimal("OVHE");
+		public decimal? M3OVHE => GetNullableDecimal("OVHE");
 
 		/// <summary>
 		/// Description: Currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Sales price quantity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Formula
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula")]
-		public string M3_FMID => GetString("FMID");
+		public string M3FMID => GetString("FMID");
 
 		/// <summary>
 		/// Description: Result identity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result identity")]
-		public string M3_RESI => GetString("RESI");
+		public string M3RESI => GetString("RESI");
 
 		/// <summary>
 		/// Description: Entry date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Price list
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: Start value 5
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS015MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 5")]
-		public string M3_OBV5 => GetString("OBV5");
+		public string M3OBV5 => GetString("OBV5");
 	}
 }
 // EOF

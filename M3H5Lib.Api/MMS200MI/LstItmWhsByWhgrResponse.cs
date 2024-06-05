@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Responsible
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Buyer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buyer")]
-		public string M3_BUYE => GetString("BUYE");
+		public string M3BUYE => GetString("BUYE");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Supplier
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Item type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item type")]
-		public string M3_ITTY => GetString("ITTY");
+		public string M3ITTY => GetString("ITTY");
 
 		/// <summary>
 		/// Description: Warehouse type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse type")]
-		public string M3_WHTY => GetString("WHTY");
+		public string M3WHTY => GetString("WHTY");
 
 		/// <summary>
 		/// Description: Warehouse subtype
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse subtype")]
-		public string M3_WHSY => GetString("WHSY");
+		public string M3WHSY => GetString("WHSY");
 
 		/// <summary>
 		/// Description: Reorder point
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reorder point")]
-		public decimal? M3_REOP => GetNullableDecimal("REOP");
+		public decimal? M3REOP => GetNullableDecimal("REOP");
 
 		/// <summary>
 		/// Description: Safety stock
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Safety stock")]
-		public decimal? M3_SSQT => GetNullableDecimal("SSQT");
+		public decimal? M3SSQT => GetNullableDecimal("SSQT");
 
 		/// <summary>
 		/// Description: Planning method
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning method")]
-		public int? M3_OPLC => GetNullableInt("OPLC");
+		public int? M3OPLC => GetNullableInt("OPLC");
 
 		/// <summary>
 		/// Description: Calculated extra safety stock
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated extra safety stock")]
-		public decimal? M3_CESS => GetNullableDecimal("CESS");
+		public decimal? M3CESS => GetNullableDecimal("CESS");
 
 		/// <summary>
 		/// Description: Maximum stock
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum stock")]
-		public decimal? M3_MXST => GetNullableDecimal("MXST");
+		public decimal? M3MXST => GetNullableDecimal("MXST");
 
 		/// <summary>
 		/// Description: Order quantity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order quantity")]
-		public decimal? M3_EOQT => GetNullableDecimal("EOQT");
+		public decimal? M3EOQT => GetNullableDecimal("EOQT");
 
 		/// <summary>
 		/// Description: Minimum order quantity
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum order quantity")]
-		public decimal? M3_LOQT => GetNullableDecimal("LOQT");
+		public decimal? M3LOQT => GetNullableDecimal("LOQT");
 
 		/// <summary>
 		/// Description: Maximum order quantity
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum order quantity")]
-		public decimal? M3_MOQT => GetNullableDecimal("MOQT");
+		public decimal? M3MOQT => GetNullableDecimal("MOQT");
 
 		/// <summary>
 		/// Description: Acquisition code
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition code")]
-		public int? M3_PUIT => GetNullableInt("PUIT");
+		public int? M3PUIT => GetNullableInt("PUIT");
 
 		/// <summary>
 		/// Description: Supplying warehouse
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplying warehouse")]
-		public string M3_SUWH => GetString("SUWH");
+		public string M3SUWH => GetString("SUWH");
 
 		/// <summary>
 		/// Description: Supply lead time
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply lead time")]
-		public int? M3_LEA1 => GetNullableInt("LEA1");
+		public int? M3LEA1 => GetNullableInt("LEA1");
 
 		/// <summary>
 		/// Description: Inspection lead time
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inspection lead time")]
-		public int? M3_LEA2 => GetNullableInt("LEA2");
+		public int? M3LEA2 => GetNullableInt("LEA2");
 
 		/// <summary>
 		/// Description: Transportation lead time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation lead time")]
-		public int? M3_LEA3 => GetNullableInt("LEA3");
+		public int? M3LEA3 => GetNullableInt("LEA3");
 
 		/// <summary>
 		/// Description: Administrative lead time
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Administrative lead time")]
-		public int? M3_LEA4 => GetNullableInt("LEA4");
+		public int? M3LEA4 => GetNullableInt("LEA4");
 
 		/// <summary>
 		/// Description: Postal lead time - supplier
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal lead time - supplier")]
-		public int? M3_PODA => GetNullableInt("PODA");
+		public int? M3PODA => GetNullableInt("PODA");
 
 		/// <summary>
 		/// Description: Lead time
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lead time")]
-		public int? M3_LEAT => GetNullableInt("LEAT");
+		public int? M3LEAT => GetNullableInt("LEAT");
 
 		/// <summary>
 		/// Description: Order multiple
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order multiple")]
-		public decimal? M3_UNMU => GetNullableDecimal("UNMU");
+		public decimal? M3UNMU => GetNullableDecimal("UNMU");
 
 		/// <summary>
 		/// Description: Order type
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Inventory planned
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory planned")]
-		public string M3_IPLA => GetString("IPLA");
+		public string M3IPLA => GetString("IPLA");
 
 		/// <summary>
 		/// Description: Surplus stock type
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Surplus stock type")]
-		public string M3_SURT => GetString("SURT");
+		public string M3SURT => GetString("SURT");
 
 		/// <summary>
 		/// Description: Returnable/non-returnable indicator
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Returnable/non-returnable indicator")]
-		public int? M3_RNRI => GetNullableInt("RNRI");
+		public int? M3RNRI => GetNullableInt("RNRI");
 
 		/// <summary>
 		/// Description: On-hand balance approved
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("On-hand balance approved")]
-		public decimal? M3_STQT => GetNullableDecimal("STQT");
+		public decimal? M3STQT => GetNullableDecimal("STQT");
 
 		/// <summary>
 		/// Description: On-hand balance for inspection
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("On-hand balance for inspection")]
-		public decimal? M3_QUQT => GetNullableDecimal("QUQT");
+		public decimal? M3QUQT => GetNullableDecimal("QUQT");
 
 		/// <summary>
 		/// Description: Rejected on-hand balance
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rejected on-hand balance")]
-		public decimal? M3_RJQT => GetNullableDecimal("RJQT");
+		public decimal? M3RJQT => GetNullableDecimal("RJQT");
 
 		/// <summary>
 		/// Description: Allocated quantity - basic U/M
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - basic U/M")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Allocatable net
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocatable net")]
-		public string M3_AV01 => GetString("AV01");
+		public string M3AV01 => GetString("AV01");
 
 		/// <summary>
 		/// Description: Allocatable on-hand balance
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocatable on-hand balance")]
-		public decimal? M3_AVAL => GetNullableDecimal("AVAL");
+		public decimal? M3AVAL => GetNullableDecimal("AVAL");
 
 		/// <summary>
 		/// Description: Excess quantity
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Excess quantity")]
-		public decimal? M3_EXQT => GetNullableDecimal("EXQT");
+		public decimal? M3EXQT => GetNullableDecimal("EXQT");
 
 		/// <summary>
 		/// Description: Picking list quantity - basic U/M
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list quantity - basic U/M")]
-		public decimal? M3_PLQT => GetNullableDecimal("PLQT");
+		public decimal? M3PLQT => GetNullableDecimal("PLQT");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Purchased quantity
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchased quantity")]
-		public decimal? M3_PUQT => GetNullableDecimal("PUQT");
+		public decimal? M3PUQT => GetNullableDecimal("PUQT");
 
 		/// <summary>
 		/// Description: Reserved quantity
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reserved quantity")]
-		public decimal? M3_REQT => GetNullableDecimal("REQT");
+		public decimal? M3REQT => GetNullableDecimal("REQT");
 
 		/// <summary>
 		/// Description: Reserved quantity to backorder
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reserved quantity to backorder")]
-		public decimal? M3_RLQT => GetNullableDecimal("RLQT");
+		public decimal? M3RLQT => GetNullableDecimal("RLQT");
 
 		/// <summary>
 		/// Description: Available inventory
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Available inventory")]
-		public string M3_AV02 => GetString("AV02");
+		public string M3AV02 => GetString("AV02");
 
 		/// <summary>
 		/// Description: Change date
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Transaction date
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction date")]
-		public DateTime? M3_TRDT => GetNullableDateTime("TRDT");
+		public DateTime? M3TRDT => GetNullableDateTime("TRDT");
 
 		/// <summary>
 		/// Description: Transaction time
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction time")]
-		public int? M3_TRTM => GetNullableInt("TRTM");
+		public int? M3TRTM => GetNullableInt("TRTM");
 
 		/// <summary>
 		/// Description: Time zone
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public int? M3_TGMT => GetNullableInt("TGMT");
+		public int? M3TGMT => GetNullableInt("TGMT");
 
 		/// <summary>
 		/// Description: Location
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Location type
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location type")]
-		public string M3_WHLT => GetString("WHLT");
+		public string M3WHLT => GetString("WHLT");
 
 		/// <summary>
 		/// Description: Stock zone
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock zone")]
-		public string M3_SLTP => GetString("SLTP");
+		public string M3SLTP => GetString("SLTP");
 
 		/// <summary>
 		/// Description: Location group
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location group")]
-		public string M3_LOCG => GetString("LOCG");
+		public string M3LOCG => GetString("LOCG");
 
 		/// <summary>
 		/// Description: Futured dated order
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MMS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Futured dated order")]
-		public string M3_FDOQ => GetString("FDOQ");
+		public string M3FDOQ => GetString("FDOQ");
 	}
 }
 // EOF

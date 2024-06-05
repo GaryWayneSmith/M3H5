@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Agent
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agent")]
-		public int? M3_TIAG => GetNullableInt("TIAG");
+		public int? M3TIAG => GetNullableInt("TIAG");
 
 		/// <summary>
 		/// Description: Transfer method
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer method")]
-		public int? M3_TIMT => GetNullableInt("TIMT");
+		public int? M3TIMT => GetNullableInt("TIMT");
 
 		/// <summary>
 		/// Description: Issuing number system
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issuing number system")]
-		public string M3_TIIN => GetString("TIIN");
+		public string M3TIIN => GetString("TIIN");
 
 		/// <summary>
 		/// Description: Business code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business code")]
-		public string M3_TIBC => GetString("TIBC");
+		public string M3TIBC => GetString("TIBC");
 
 		/// <summary>
 		/// Description: Client code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Client code")]
-		public string M3_TICC => GetString("TICC");
+		public string M3TICC => GetString("TICC");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_TISQ => GetNullableInt("TISQ");
+		public int? M3TISQ => GetNullableInt("TISQ");
 
 		/// <summary>
 		/// Description: Certificate password
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Certificate password")]
-		public string M3_TIPW => GetString("TIPW");
+		public string M3TIPW => GetString("TIPW");
 
 		/// <summary>
 		/// Description: Encryption key
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Encryption key")]
-		public string M3_TIEK => GetString("TIEK");
+		public string M3TIEK => GetString("TIEK");
 
 		/// <summary>
 		/// Description: Keystore id
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Keystore id")]
-		public string M3_TIKI => GetString("TIKI");
+		public string M3TIKI => GetString("TIKI");
 
 		/// <summary>
 		/// Description: Rvalue
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rvalue")]
-		public string M3_TIRV => GetString("TIRV");
+		public string M3TIRV => GetString("TIRV");
 
 		/// <summary>
 		/// Description: Smartbills server
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Smartbills server")]
-		public string M3_TISB => GetString("TISB");
+		public string M3TISB => GetString("TISB");
 
 		/// <summary>
 		/// Description: Authentification token
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authentification token")]
-		public string M3_TIAT => GetString("TIAT");
+		public string M3TIAT => GetString("TIAT");
 
 		/// <summary>
 		/// Description: Authentification token valid date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authentification token valid date")]
-		public DateTime? M3_TIDA => GetNullableDateTime("TIDA");
+		public DateTime? M3TIDA => GetNullableDateTime("TIDA");
 
 		/// <summary>
 		/// Description: Authentication code for customer company
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authentication code for customer company")]
-		public string M3_TIAC => GetString("TIAC");
+		public string M3TIAC => GetString("TIAC");
 
 		/// <summary>
 		/// Description: Tax registration ID
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax registration ID")]
-		public string M3_TRGI => GetString("TRGI");
+		public string M3TRGI => GetString("TRGI");
 
 		/// <summary>
 		/// Description: Save XML
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.TXS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Save XML")]
-		public int? M3_SXML => GetNullableInt("SXML");
+		public int? M3SXML => GetNullableInt("SXML");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SQNR => GetNullableInt("SQNR");
+		public int? M3SQNR => GetNullableInt("SQNR");
 
 		/// <summary>
 		/// Description: Text identity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXIF => GetNullableDecimal("TXIF");
+		public decimal? M3TXIF => GetNullableDecimal("TXIF");
 
 		/// <summary>
 		/// Description: Text identity
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXI1 => GetNullableDecimal("TXI1");
+		public decimal? M3TXI1 => GetNullableDecimal("TXI1");
 
 		/// <summary>
 		/// Description: Text-ID 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text-ID 2")]
-		public decimal? M3_TXI2 => GetNullableDecimal("TXI2");
+		public decimal? M3TXI2 => GetNullableDecimal("TXI2");
 
 		/// <summary>
 		/// Description: Text ID description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text ID description")]
-		public decimal? M3_TXI3 => GetNullableDecimal("TXI3");
+		public decimal? M3TXI3 => GetNullableDecimal("TXI3");
 
 		/// <summary>
 		/// Description: Text identity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXIR => GetNullableDecimal("TXIR");
+		public decimal? M3TXIR => GetNullableDecimal("TXIR");
 
 		/// <summary>
 		/// Description: Text
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL1 => GetString("TXL1");
+		public string M3TXL1 => GetString("TXL1");
 
 		/// <summary>
 		/// Description: Text
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL2 => GetString("TXL2");
+		public string M3TXL2 => GetString("TXL2");
 
 		/// <summary>
 		/// Description: Text
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL3 => GetString("TXL3");
+		public string M3TXL3 => GetString("TXL3");
 
 		/// <summary>
 		/// Description: Text
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL4 => GetString("TXL4");
+		public string M3TXL4 => GetString("TXL4");
 
 		/// <summary>
 		/// Description: Text
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL5 => GetString("TXL5");
+		public string M3TXL5 => GetString("TXL5");
 
 		/// <summary>
 		/// Description: Text
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL6 => GetString("TXL6");
+		public string M3TXL6 => GetString("TXL6");
 
 		/// <summary>
 		/// Description: Text
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL7 => GetString("TXL7");
+		public string M3TXL7 => GetString("TXL7");
 
 		/// <summary>
 		/// Description: Text
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL8 => GetString("TXL8");
+		public string M3TXL8 => GetString("TXL8");
 
 		/// <summary>
 		/// Description: Text
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL9 => GetString("TXL9");
+		public string M3TXL9 => GetString("TXL9");
 
 		/// <summary>
 		/// Description: Text
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TXL0 => GetString("TXL0");
+		public string M3TXL0 => GetString("TXL0");
 
 		/// <summary>
 		/// Description: Entry date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Changed by
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Change number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MOS057MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 	}
 }
 // EOF

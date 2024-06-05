@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_CTNO => GetString("CTNO");
+		public string M3CTNO => GetString("CTNO");
 
 		/// <summary>
 		/// Description: Customer number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer site
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Line number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_POSX => GetNullableInt("POSX");
+		public int? M3POSX => GetNullableInt("POSX");
 
 		/// <summary>
 		/// Description: Item number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Agreed quantity
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreed quantity")]
-		public decimal? M3_AGQT => GetNullableDecimal("AGQT");
+		public decimal? M3AGQT => GetNullableDecimal("AGQT");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: Contract item
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contract item")]
-		public string M3_AGRS => GetString("AGRS");
+		public string M3AGRS => GetString("AGRS");
 
 		/// <summary>
 		/// Description: Highest status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status")]
-		public string M3_ORST => GetString("ORST");
+		public string M3ORST => GetString("ORST");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AGTP => GetString("AGTP");
+		public string M3AGTP => GetString("AGTP");
 
 		/// <summary>
 		/// Description: Validity type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validity type")]
-		public string M3_VLCD => GetString("VLCD");
+		public string M3VLCD => GetString("VLCD");
 
 		/// <summary>
 		/// Description: Valid from
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_VADF => GetNullableDateTime("VADF");
+		public DateTime? M3VADF => GetNullableDateTime("VADF");
 
 		/// <summary>
 		/// Description: Valid to
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_VADT => GetNullableDateTime("VADT");
+		public DateTime? M3VADT => GetNullableDateTime("VADT");
 
 		/// <summary>
 		/// Description: Invoicing range
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing range")]
-		public DateTime? M3_IIDF => GetNullableDateTime("IIDF");
+		public DateTime? M3IIDF => GetNullableDateTime("IIDF");
 
 		/// <summary>
 		/// Description: End  invoicing
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End  invoicing")]
-		public DateTime? M3_IIDT => GetNullableDateTime("IIDT");
+		public DateTime? M3IIDT => GetNullableDateTime("IIDT");
 
 		/// <summary>
 		/// Description: Next order date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next order date")]
-		public DateTime? M3_NODT => GetNullableDateTime("NODT");
+		public DateTime? M3NODT => GetNullableDateTime("NODT");
 
 		/// <summary>
 		/// Description: Invoicing interval - years
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - years")]
-		public int? M3_IIYR => GetNullableInt("IIYR");
+		public int? M3IIYR => GetNullableInt("IIYR");
 
 		/// <summary>
 		/// Description: Invoicing interval - months
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - months")]
-		public int? M3_IIMO => GetNullableInt("IIMO");
+		public int? M3IIMO => GetNullableInt("IIMO");
 
 		/// <summary>
 		/// Description: Invoicing interval - days
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing interval - days")]
-		public int? M3_IIDA => GetNullableInt("IIDA");
+		public int? M3IIDA => GetNullableInt("IIDA");
 
 		/// <summary>
 		/// Description: Invoiced to date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoiced to date")]
-		public DateTime? M3_ITDT => GetNullableDateTime("ITDT");
+		public DateTime? M3ITDT => GetNullableDateTime("ITDT");
 
 		/// <summary>
 		/// Description: Invoicing method
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing method")]
-		public string M3_INVM => GetString("INVM");
+		public string M3INVM => GetString("INVM");
 
 		/// <summary>
 		/// Description: Invoice block
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice block")]
-		public int? M3_ILCD => GetNullableInt("ILCD");
+		public int? M3ILCD => GetNullableInt("ILCD");
 
 		/// <summary>
 		/// Description: Service stop
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service stop")]
-		public int? M3_LSCD => GetNullableInt("LSCD");
+		public int? M3LSCD => GetNullableInt("LSCD");
 
 		/// <summary>
 		/// Description: Response time
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Response time")]
-		public int? M3_APTM => GetNullableInt("APTM");
+		public int? M3APTM => GetNullableInt("APTM");
 
 		/// <summary>
 		/// Description: Higher level
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Higher level")]
-		public int? M3_ADDI => GetNullableInt("ADDI");
+		public int? M3ADDI => GetNullableInt("ADDI");
 
 		/// <summary>
 		/// Description: Aggregated meter invoicing
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Aggregated meter invoicing")]
-		public int? M3_MAIV => GetNullableInt("MAIV");
+		public int? M3MAIV => GetNullableInt("MAIV");
 
 		/// <summary>
 		/// Description: Agreement price
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Agreement price quantity
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement price quantity")]
-		public int? M3_SACD => GetNullableInt("SACD");
+		public int? M3SACD => GetNullableInt("SACD");
 
 		/// <summary>
 		/// Description: Current index
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current index")]
-		public string M3_IXCD => GetString("IXCD");
+		public string M3IXCD => GetString("IXCD");
 
 		/// <summary>
 		/// Description: Current index value
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Current index value")]
-		public decimal? M3_IXAV => GetNullableDecimal("IXAV");
+		public decimal? M3IXAV => GetNullableDecimal("IXAV");
 
 		/// <summary>
 		/// Description: Line amount
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount")]
-		public decimal? M3_LNAM => GetNullableDecimal("LNAM");
+		public decimal? M3LNAM => GetNullableDecimal("LNAM");
 
 		/// <summary>
 		/// Description: Orig index
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Orig index")]
-		public string M3_IXC2 => GetString("IXC2");
+		public string M3IXC2 => GetString("IXC2");
 
 		/// <summary>
 		/// Description: Orig value
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Orig value")]
-		public decimal? M3_IXVO => GetNullableDecimal("IXVO");
+		public decimal? M3IXVO => GetNullableDecimal("IXVO");
 
 		/// <summary>
 		/// Description: Orig Agre price
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Orig Agre price")]
-		public decimal? M3_SAPO => GetNullableDecimal("SAPO");
+		public decimal? M3SAPO => GetNullableDecimal("SAPO");
 
 		/// <summary>
 		/// Description: Price list SO
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list SO")]
-		public string M3_PRS1 => GetString("PRS1");
+		public string M3PRS1 => GetString("PRS1");
 
 		/// <summary>
 		/// Description: Price origin
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price origin")]
-		public string M3_PRMO => GetString("PRMO");
+		public string M3PRMO => GetString("PRMO");
 
 		/// <summary>
 		/// Description: Price list SO
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list SO")]
-		public string M3_PLSO => GetString("PLSO");
+		public string M3PLSO => GetString("PLSO");
 
 		/// <summary>
 		/// Description: Disc % warranty
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Disc % warranty")]
-		public int? M3_WADP => GetNullableInt("WADP");
+		public int? M3WADP => GetNullableInt("WADP");
 
 		/// <summary>
 		/// Description: Valid To
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid To")]
-		public DateTime? M3_DIDA => GetNullableDateTime("DIDA");
+		public DateTime? M3DIDA => GetNullableDateTime("DIDA");
 
 		/// <summary>
 		/// Description: Discount model
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount model")]
-		public string M3_DISY => GetString("DISY");
+		public string M3DISY => GetString("DISY");
 
 		/// <summary>
 		/// Description: Payer
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Revenue-account
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue-account")]
-		public string M3_AIT1 => GetString("AIT1");
+		public string M3AIT1 => GetString("AIT1");
 
 		/// <summary>
 		/// Description: Revenue-project
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue-project")]
-		public string M3_AIT2 => GetString("AIT2");
+		public string M3AIT2 => GetString("AIT2");
 
 		/// <summary>
 		/// Description: Revenue-element
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue-element")]
-		public string M3_AIT3 => GetString("AIT3");
+		public string M3AIT3 => GetString("AIT3");
 
 		/// <summary>
 		/// Description: Revenue-Dim 4
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue-Dim 4")]
-		public string M3_AIT4 => GetString("AIT4");
+		public string M3AIT4 => GetString("AIT4");
 
 		/// <summary>
 		/// Description: Revenue-Dim 5
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue-Dim 5")]
-		public string M3_AIT5 => GetString("AIT5");
+		public string M3AIT5 => GetString("AIT5");
 
 		/// <summary>
 		/// Description: Revenue-Dim 6
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue-Dim 6")]
-		public string M3_AIT6 => GetString("AIT6");
+		public string M3AIT6 => GetString("AIT6");
 
 		/// <summary>
 		/// Description: Revenue-Dim 7
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revenue-Dim 7")]
-		public string M3_AIT7 => GetString("AIT7");
+		public string M3AIT7 => GetString("AIT7");
 
 		/// <summary>
 		/// Description: Cost-Account
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost-Account")]
-		public string M3_AIC1 => GetString("AIC1");
+		public string M3AIC1 => GetString("AIC1");
 
 		/// <summary>
 		/// Description: Cost-Project
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost-Project")]
-		public string M3_AIC2 => GetString("AIC2");
+		public string M3AIC2 => GetString("AIC2");
 
 		/// <summary>
 		/// Description: Cost-Element
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost-Element")]
-		public string M3_AIC3 => GetString("AIC3");
+		public string M3AIC3 => GetString("AIC3");
 
 		/// <summary>
 		/// Description: Cost-Dim 4
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost-Dim 4")]
-		public string M3_AIC4 => GetString("AIC4");
+		public string M3AIC4 => GetString("AIC4");
 
 		/// <summary>
 		/// Description: Cost-Dim 5
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost-Dim 5")]
-		public string M3_AIC5 => GetString("AIC5");
+		public string M3AIC5 => GetString("AIC5");
 
 		/// <summary>
 		/// Description: Cost-Dim 6
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost-Dim 6")]
-		public string M3_AIC6 => GetString("AIC6");
+		public string M3AIC6 => GetString("AIC6");
 
 		/// <summary>
 		/// Description: Cost-Dim 7
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost-Dim 7")]
-		public string M3_AIC7 => GetString("AIC7");
+		public string M3AIC7 => GetString("AIC7");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 
 		/// <summary>
 		/// Description: Project number
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Acc control object
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acc control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: User-defined field 1
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1")]
-		public string M3_CFJ1 => GetString("CFJ1");
+		public string M3CFJ1 => GetString("CFJ1");
 
 		/// <summary>
 		/// Description: User-defined field 2
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2")]
-		public decimal? M3_CFJ2 => GetNullableDecimal("CFJ2");
+		public decimal? M3CFJ2 => GetNullableDecimal("CFJ2");
 
 		/// <summary>
 		/// Description: User-defined field 3
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3")]
-		public string M3_CFJ3 => GetString("CFJ3");
+		public string M3CFJ3 => GetString("CFJ3");
 
 		/// <summary>
 		/// Description: User-defined field 4
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4")]
-		public string M3_CFJ4 => GetString("CFJ4");
+		public string M3CFJ4 => GetString("CFJ4");
 
 		/// <summary>
 		/// Description: User-defined field 5
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5")]
-		public string M3_CFJ5 => GetString("CFJ5");
+		public string M3CFJ5 => GetString("CFJ5");
 
 		/// <summary>
 		/// Description: User-defined field 6
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 6")]
-		public string M3_CFJ6 => GetString("CFJ6");
+		public string M3CFJ6 => GetString("CFJ6");
 
 		/// <summary>
 		/// Description: User-defined field 7
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 7")]
-		public decimal? M3_CFJ7 => GetNullableDecimal("CFJ7");
+		public decimal? M3CFJ7 => GetNullableDecimal("CFJ7");
 
 		/// <summary>
 		/// Description: User-defined field 8
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 8")]
-		public string M3_CFJ8 => GetString("CFJ8");
+		public string M3CFJ8 => GetString("CFJ8");
 
 		/// <summary>
 		/// Description: User-defined field 9
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 9")]
-		public string M3_CFJ9 => GetString("CFJ9");
+		public string M3CFJ9 => GetString("CFJ9");
 
 		/// <summary>
 		/// Description: User-defined field 10
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 10")]
-		public string M3_CFJ0 => GetString("CFJ0");
+		public string M3CFJ0 => GetString("CFJ0");
 
 		/// <summary>
 		/// Description: Service manager
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Work schedule
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule")]
-		public int? M3_WOSC => GetNullableInt("WOSC");
+		public int? M3WOSC => GetNullableInt("WOSC");
 
 		/// <summary>
 		/// Description: Technician 1
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician 1")]
-		public string M3_TEC1 => GetString("TEC1");
+		public string M3TEC1 => GetString("TEC1");
 
 		/// <summary>
 		/// Description: Technician 2
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician 2")]
-		public string M3_TEC2 => GetString("TEC2");
+		public string M3TEC2 => GetString("TEC2");
 
 		/// <summary>
 		/// Description: Preventive service order
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Preventive service order")]
-		public int? M3_PSCO => GetNullableInt("PSCO");
+		public int? M3PSCO => GetNullableInt("PSCO");
 
 		/// <summary>
 		/// Description: Quotation number
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quotation number")]
-		public string M3_OFNO => GetString("OFNO");
+		public string M3OFNO => GetString("OFNO");
 
 		/// <summary>
 		/// Description: Reference to order number
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.SAS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference to order number")]
-		public string M3_RFON => GetString("RFON");
+		public string M3RFON => GetString("RFON");
 	}
 }
 // EOF

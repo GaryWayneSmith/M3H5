@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.LTS350MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Retrieve Invoice Head
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_IVNO">Invoice number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_INPX">Invoice Prefix</param>
-		/// <param name="m3_AGNB">Agreement number</param>
-		/// <param name="m3_EXIN">Extended Invoice Number</param>
+		/// <param name="m3IVNO">Invoice number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3INPX">Invoice Prefix</param>
+		/// <param name="m3AGNB">Agreement number</param>
+		/// <param name="m3EXIN">Extended Invoice Number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetInvHeadResponse></returns>
 		/// <exception cref="M3Exception<GetInvHeadResponse>"></exception>
 		public async Task<M3Response<GetInvHeadResponse>> GetInvHead(
-			int m3_IVNO, 
-			int? m3_CONO = null, 
-			string m3_INPX = null, 
-			string m3_AGNB = null, 
-			string m3_EXIN = null, 
+			int m3IVNO, 
+			int? m3CONO = null, 
+			string m3INPX = null, 
+			string m3AGNB = null, 
+			string m3EXIN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -71,17 +73,17 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("IVNO", m3_IVNO.ToString());
+				.WithQueryParameter("IVNO", m3IVNO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_INPX))
-				request.WithQueryParameter("INPX", m3_INPX.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AGNB))
-				request.WithQueryParameter("AGNB", m3_AGNB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_EXIN))
-				request.WithQueryParameter("EXIN", m3_EXIN.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3INPX))
+				request.WithQueryParameter("INPX", m3INPX.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AGNB))
+				request.WithQueryParameter("AGNB", m3AGNB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EXIN))
+				request.WithQueryParameter("EXIN", m3EXIN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetInvHeadResponse>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

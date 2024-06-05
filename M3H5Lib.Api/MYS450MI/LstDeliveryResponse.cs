@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Partner
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_E0PA => GetString("E0PA");
+		public string M3E0PA => GetString("E0PA");
 
 		/// <summary>
 		/// Description: Message number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message number")]
-		public string M3_MSGN => GetString("MSGN");
+		public string M3MSGN => GetString("MSGN");
 
 		/// <summary>
 		/// Description: Direction
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Dispatch policy
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dispatch policy")]
-		public string M3_DPOL => GetString("DPOL");
+		public string M3DPOL => GetString("DPOL");
 
 		/// <summary>
 		/// Description: Consignee
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignee")]
-		public string M3_CONA => GetString("CONA");
+		public string M3CONA => GetString("CONA");
 
 		/// <summary>
 		/// Description: Consignee address number
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignee address number")]
-		public string M3_COAA => GetString("COAA");
+		public string M3COAA => GetString("COAA");
 
 		/// <summary>
 		/// Description: Consignor
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignor")]
-		public string M3_CONB => GetString("CONB");
+		public string M3CONB => GetString("CONB");
 
 		/// <summary>
 		/// Description: Consignor address number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consignor address number")]
-		public string M3_COBB => GetString("COBB");
+		public string M3COBB => GetString("COBB");
 
 		/// <summary>
 		/// Description: Place of loading
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place of loading")]
-		public string M3_SDES => GetString("SDES");
+		public string M3SDES => GetString("SDES");
 
 		/// <summary>
 		/// Description: Departure date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure date")]
-		public DateTime? M3_DSDT => GetNullableDateTime("DSDT");
+		public DateTime? M3DSDT => GetNullableDateTime("DSDT");
 
 		/// <summary>
 		/// Description: Departure time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure time")]
-		public int? M3_DSHM => GetNullableInt("DSHM");
+		public int? M3DSHM => GetNullableInt("DSHM");
 
 		/// <summary>
 		/// Description: Requested route
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested route")]
-		public string M3_SROT => GetString("SROT");
+		public string M3SROT => GetString("SROT");
 
 		/// <summary>
 		/// Description: Requested route departure
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested route departure")]
-		public int? M3_SROD => GetNullableInt("SROD");
+		public int? M3SROD => GetNullableInt("SROD");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Transaction type
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public int? M3_TTYP => GetNullableInt("TTYP");
+		public int? M3TTYP => GetNullableInt("TTYP");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Place
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place")]
-		public string M3_EDES => GetString("EDES");
+		public string M3EDES => GetString("EDES");
 
 		/// <summary>
 		/// Description: Delivery note reference qualifier
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note reference qualifier")]
-		public int? M3_PUTP => GetNullableInt("PUTP");
+		public int? M3PUTP => GetNullableInt("PUTP");
 
 		/// <summary>
 		/// Description: Delivery note reference
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note reference")]
-		public string M3_PUSN => GetString("PUSN");
+		public string M3PUSN => GetString("PUSN");
 
 		/// <summary>
 		/// Description: Packaging action
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging action")]
-		public string M3_PCKA => GetString("PCKA");
+		public string M3PCKA => GetString("PCKA");
 
 		/// <summary>
 		/// Description: Net weight
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public int? M3_NEWE => GetNullableInt("NEWE");
+		public int? M3NEWE => GetNullableInt("NEWE");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public int? M3_GRWE => GetNullableInt("GRWE");
+		public int? M3GRWE => GetNullableInt("GRWE");
 
 		/// <summary>
 		/// Description: Volume
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume")]
-		public int? M3_VOL3 => GetNullableInt("VOL3");
+		public int? M3VOL3 => GetNullableInt("VOL3");
 
 		/// <summary>
 		/// Description: Free capacity unit
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free capacity unit")]
-		public decimal? M3_FCU1 => GetNullableDecimal("FCU1");
+		public decimal? M3FCU1 => GetNullableDecimal("FCU1");
 
 		/// <summary>
 		/// Description: Shipment
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment")]
-		public int? M3_CONN => GetNullableInt("CONN");
+		public int? M3CONN => GetNullableInt("CONN");
 
 		/// <summary>
 		/// Description: Requested forwarding agent
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested forwarding agent")]
-		public string M3_FWNS => GetString("FWNS");
+		public string M3FWNS => GetString("FWNS");
 
 		/// <summary>
 		/// Description: Place sequence number for unloading
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place sequence number for unloading")]
-		public int? M3_MULS => GetNullableInt("MULS");
+		public int? M3MULS => GetNullableInt("MULS");
 
 		/// <summary>
 		/// Description: Unloading sequence within place
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unloading sequence within place")]
-		public int? M3_SULS => GetNullableInt("SULS");
+		public int? M3SULS => GetNullableInt("SULS");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public string M3_LODO => GetString("LODO");
+		public string M3LODO => GetString("LODO");
 
 		/// <summary>
 		/// Description: User defined field
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User defined field
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: User defined field
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field")]
-		public string M3_USD3 => GetString("USD3");
+		public string M3USD3 => GetString("USD3");
 
 		/// <summary>
 		/// Description: User defined field
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field")]
-		public string M3_USD4 => GetString("USD4");
+		public string M3USD4 => GetString("USD4");
 
 		/// <summary>
 		/// Description: User defined field
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field")]
-		public string M3_USD5 => GetString("USD5");
+		public string M3USD5 => GetString("USD5");
 
 		/// <summary>
 		/// Description: Transportation equipment
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation equipment")]
-		public string M3_TRCA => GetString("TRCA");
+		public string M3TRCA => GetString("TRCA");
 
 		/// <summary>
 		/// Description: Entry date
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MYS450MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

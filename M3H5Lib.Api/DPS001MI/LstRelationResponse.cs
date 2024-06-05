@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Relation type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Relation type")]
-		public int? M3_RLTY => GetNullableInt("RLTY");
+		public int? M3RLTY => GetNullableInt("RLTY");
 
 		/// <summary>
 		/// Description: From Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From Warehouse")]
-		public string M3_FWLO => GetString("FWLO");
+		public string M3FWLO => GetString("FWLO");
 
 		/// <summary>
 		/// Description: To Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To Warehouse")]
-		public string M3_TWLO => GetString("TWLO");
+		public string M3TWLO => GetString("TWLO");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Transportation days
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation days")]
-		public int? M3_TRDY => GetNullableInt("TRDY");
+		public int? M3TRDY => GetNullableInt("TRDY");
 
 		/// <summary>
 		/// Description: Transportation hours
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation hours")]
-		public int? M3_TRTE => GetNullableInt("TRTE");
+		public int? M3TRTE => GetNullableInt("TRTE");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PLX710MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Get Invoice Reference
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
-		/// <param name="m3_SINO">Supplier invoice number (Required)</param>
-		/// <param name="m3_STCO">Constant value (Required)</param>
-		/// <param name="m3_STKY">Key value</param>
-		/// <param name="m3_LNCD">Language</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
+		/// <param name="m3SINO">Supplier invoice number (Required)</param>
+		/// <param name="m3STCO">Constant value (Required)</param>
+		/// <param name="m3STKY">Key value</param>
+		/// <param name="m3LNCD">Language</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetReferenceResponse></returns>
 		/// <exception cref="M3Exception<GetReferenceResponse>"></exception>
 		public async Task<M3Response<GetReferenceResponse>> GetReference(
-			string m3_DIVI, 
-			string m3_SUNO, 
-			string m3_SINO, 
-			string m3_STCO, 
-			string m3_STKY = null, 
-			string m3_LNCD = null, 
+			string m3DIVI, 
+			string m3SUNO, 
+			string m3SINO, 
+			string m3STCO, 
+			string m3STKY = null, 
+			string m3LNCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,27 +72,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
-			if (string.IsNullOrWhiteSpace(m3_SINO))
-				throw new ArgumentNullException("m3_SINO");
-			if (string.IsNullOrWhiteSpace(m3_STCO))
-				throw new ArgumentNullException("m3_STCO");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
+			if (string.IsNullOrWhiteSpace(m3SINO))
+				throw new ArgumentNullException(nameof(m3SINO));
+			if (string.IsNullOrWhiteSpace(m3STCO))
+				throw new ArgumentNullException(nameof(m3STCO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("SINO", m3_SINO.Trim())
-				.WithQueryParameter("STCO", m3_STCO.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("SINO", m3SINO.Trim())
+				.WithQueryParameter("STCO", m3STCO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_STKY))
-				request.WithQueryParameter("STKY", m3_STKY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_LNCD))
-				request.WithQueryParameter("LNCD", m3_LNCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STKY))
+				request.WithQueryParameter("STKY", m3STKY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3LNCD))
+				request.WithQueryParameter("LNCD", m3LNCD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetReferenceResponse>(
@@ -100,7 +102,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

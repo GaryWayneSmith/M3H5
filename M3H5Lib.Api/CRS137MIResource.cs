@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS137MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add Geographical code
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_GEOC">Geographical code (Required)</param>
-		/// <param name="m3_TAJ1">Tax jurisdiction 1</param>
-		/// <param name="m3_TAJ2">Tax jurisdiction 2</param>
-		/// <param name="m3_TAJ3">Tax jurisdiction 3</param>
-		/// <param name="m3_TAJ4">Tax jurisdiction 4</param>
-		/// <param name="m3_TAJ5">Tax jurisdiction 5</param>
+		/// <param name="m3GEOC">Geographical code (Required)</param>
+		/// <param name="m3TAJ1">Tax jurisdiction 1</param>
+		/// <param name="m3TAJ2">Tax jurisdiction 2</param>
+		/// <param name="m3TAJ3">Tax jurisdiction 3</param>
+		/// <param name="m3TAJ4">Tax jurisdiction 4</param>
+		/// <param name="m3TAJ5">Tax jurisdiction 5</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddGeoCode(
-			int m3_GEOC, 
-			string m3_TAJ1 = null, 
-			string m3_TAJ2 = null, 
-			string m3_TAJ3 = null, 
-			string m3_TAJ4 = null, 
-			string m3_TAJ5 = null, 
+			int m3GEOC, 
+			string m3TAJ1 = null, 
+			string m3TAJ2 = null, 
+			string m3TAJ3 = null, 
+			string m3TAJ4 = null, 
+			string m3TAJ5 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -73,19 +75,19 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GEOC", m3_GEOC.ToString());
+				.WithQueryParameter("GEOC", m3GEOC.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TAJ1))
-				request.WithQueryParameter("TAJ1", m3_TAJ1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ2))
-				request.WithQueryParameter("TAJ2", m3_TAJ2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ3))
-				request.WithQueryParameter("TAJ3", m3_TAJ3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ4))
-				request.WithQueryParameter("TAJ4", m3_TAJ4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ5))
-				request.WithQueryParameter("TAJ5", m3_TAJ5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ1))
+				request.WithQueryParameter("TAJ1", m3TAJ1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ2))
+				request.WithQueryParameter("TAJ2", m3TAJ2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ3))
+				request.WithQueryParameter("TAJ3", m3TAJ3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ4))
+				request.WithQueryParameter("TAJ4", m3TAJ4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ5))
+				request.WithQueryParameter("TAJ5", m3TAJ5.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -95,7 +97,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -106,7 +109,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Geographical code
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_GEOC">Geographical code (Required)</param>
+		/// <param name="m3GEOC">Geographical code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -115,7 +118,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltGeoCode(
-			int m3_GEOC, 
+			int m3GEOC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -133,7 +136,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GEOC", m3_GEOC.ToString());
+				.WithQueryParameter("GEOC", m3GEOC.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -143,7 +146,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -154,7 +158,7 @@ namespace M3H5Lib.Api
 		/// Description Retrieves Geographical code
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_GEOC">Geographical code (Required)</param>
+		/// <param name="m3GEOC">Geographical code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -163,7 +167,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetGeoCodeResponse></returns>
 		/// <exception cref="M3Exception<GetGeoCodeResponse>"></exception>
 		public async Task<M3Response<GetGeoCodeResponse>> GetGeoCode(
-			int m3_GEOC, 
+			int m3GEOC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -181,7 +185,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GEOC", m3_GEOC.ToString());
+				.WithQueryParameter("GEOC", m3GEOC.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetGeoCodeResponse>(
@@ -191,7 +195,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -202,7 +207,7 @@ namespace M3H5Lib.Api
 		/// Description List  Geographical codes
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_GEOC">Geographical code</param>
+		/// <param name="m3GEOC">Geographical code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -211,7 +216,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstGeoCodesResponse></returns>
 		/// <exception cref="M3Exception<LstGeoCodesResponse>"></exception>
 		public async Task<M3Response<LstGeoCodesResponse>> LstGeoCodes(
-			int? m3_GEOC = null, 
+			int? m3GEOC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,8 +231,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_GEOC.HasValue)
-				request.WithQueryParameter("GEOC", m3_GEOC.Value.ToString());
+			if (m3GEOC.HasValue)
+				request.WithQueryParameter("GEOC", m3GEOC.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstGeoCodesResponse>(
@@ -237,7 +242,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -248,12 +254,12 @@ namespace M3H5Lib.Api
 		/// Description Update Geographical code
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_GEOC">Geographical code (Required)</param>
-		/// <param name="m3_TAJ1">Tax jurisdiction 1</param>
-		/// <param name="m3_TAJ2">Tax jurisdiction 2</param>
-		/// <param name="m3_TAJ3">Tax jurisdiction 3</param>
-		/// <param name="m3_TAJ4">Tax jurisdiction 4</param>
-		/// <param name="m3_TAJ5">Tax jurisdiction 5</param>
+		/// <param name="m3GEOC">Geographical code (Required)</param>
+		/// <param name="m3TAJ1">Tax jurisdiction 1</param>
+		/// <param name="m3TAJ2">Tax jurisdiction 2</param>
+		/// <param name="m3TAJ3">Tax jurisdiction 3</param>
+		/// <param name="m3TAJ4">Tax jurisdiction 4</param>
+		/// <param name="m3TAJ5">Tax jurisdiction 5</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -262,12 +268,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdGeoCode(
-			int m3_GEOC, 
-			string m3_TAJ1 = null, 
-			string m3_TAJ2 = null, 
-			string m3_TAJ3 = null, 
-			string m3_TAJ4 = null, 
-			string m3_TAJ5 = null, 
+			int m3GEOC, 
+			string m3TAJ1 = null, 
+			string m3TAJ2 = null, 
+			string m3TAJ3 = null, 
+			string m3TAJ4 = null, 
+			string m3TAJ5 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -285,19 +291,19 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("GEOC", m3_GEOC.ToString());
+				.WithQueryParameter("GEOC", m3GEOC.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TAJ1))
-				request.WithQueryParameter("TAJ1", m3_TAJ1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ2))
-				request.WithQueryParameter("TAJ2", m3_TAJ2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ3))
-				request.WithQueryParameter("TAJ3", m3_TAJ3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ4))
-				request.WithQueryParameter("TAJ4", m3_TAJ4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TAJ5))
-				request.WithQueryParameter("TAJ5", m3_TAJ5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ1))
+				request.WithQueryParameter("TAJ1", m3TAJ1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ2))
+				request.WithQueryParameter("TAJ2", m3TAJ2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ3))
+				request.WithQueryParameter("TAJ3", m3TAJ3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ4))
+				request.WithQueryParameter("TAJ4", m3TAJ4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TAJ5))
+				request.WithQueryParameter("TAJ5", m3TAJ5.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -307,7 +313,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

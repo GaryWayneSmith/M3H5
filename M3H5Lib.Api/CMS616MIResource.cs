@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS616MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add supplier customer reference type
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSRT">Supplier reference type (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3CSRT">Supplier reference type (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSupRefType(
-			int m3_CSRT, 
-			string m3_TX40, 
-			string m3_TX15 = null, 
+			int m3CSRT, 
+			string m3TX40, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,17 +66,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSRT", m3_CSRT.ToString())
-				.WithQueryParameter("TX40", m3_TX40.Trim());
+				.WithQueryParameter("CSRT", m3CSRT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TX40", m3TX40.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -84,7 +86,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -95,7 +98,7 @@ namespace M3H5Lib.Api
 		/// Description Delete supplier sustomer reference type
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSRT">Supplier reference type</param>
+		/// <param name="m3CSRT">Supplier reference type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -104,7 +107,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelSupRefType(
-			int? m3_CSRT = null, 
+			int? m3CSRT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -119,8 +122,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CSRT.HasValue)
-				request.WithQueryParameter("CSRT", m3_CSRT.Value.ToString());
+			if (m3CSRT.HasValue)
+				request.WithQueryParameter("CSRT", m3CSRT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -130,7 +133,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -141,7 +145,7 @@ namespace M3H5Lib.Api
 		/// Description Get supplier customer reference type
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSRT">Supplier reference type</param>
+		/// <param name="m3CSRT">Supplier reference type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -150,7 +154,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSupRefTypeResponse></returns>
 		/// <exception cref="M3Exception<GetSupRefTypeResponse>"></exception>
 		public async Task<M3Response<GetSupRefTypeResponse>> GetSupRefType(
-			int? m3_CSRT = null, 
+			int? m3CSRT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -165,8 +169,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CSRT.HasValue)
-				request.WithQueryParameter("CSRT", m3_CSRT.Value.ToString());
+			if (m3CSRT.HasValue)
+				request.WithQueryParameter("CSRT", m3CSRT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetSupRefTypeResponse>(
@@ -176,7 +180,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -187,7 +192,7 @@ namespace M3H5Lib.Api
 		/// Description List supplier customer reference type
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSRT">Supplier reference type</param>
+		/// <param name="m3CSRT">Supplier reference type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -196,7 +201,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSupRefTypeResponse></returns>
 		/// <exception cref="M3Exception<LstSupRefTypeResponse>"></exception>
 		public async Task<M3Response<LstSupRefTypeResponse>> LstSupRefType(
-			int? m3_CSRT = null, 
+			int? m3CSRT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -211,8 +216,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CSRT.HasValue)
-				request.WithQueryParameter("CSRT", m3_CSRT.Value.ToString());
+			if (m3CSRT.HasValue)
+				request.WithQueryParameter("CSRT", m3CSRT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstSupRefTypeResponse>(
@@ -222,7 +227,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

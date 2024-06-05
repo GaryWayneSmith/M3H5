@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Operation number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Service
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Revision number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Subservice
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subservice")]
-		public string M3_SSUF => GetString("SSUF");
+		public string M3SSUF => GetString("SSUF");
 
 		/// <summary>
 		/// Description: Work center
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Operation description
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Text line 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 1")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line 2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 2")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Document identity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Document identity")]
-		public string M3_DOID => GetString("DOID");
+		public string M3DOID => GetString("DOID");
 
 		/// <summary>
 		/// Description: Setup time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup time")]
-		public int? M3_SETI => GetNullableInt("SETI");
+		public int? M3SETI => GetNullableInt("SETI");
 
 		/// <summary>
 		/// Description: External setup time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External setup time")]
-		public int? M3_OSET => GetNullableInt("OSET");
+		public int? M3OSET => GetNullableInt("OSET");
 
 		/// <summary>
 		/// Description: Run time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run time")]
-		public int? M3_PITI => GetNullableInt("PITI");
+		public int? M3PITI => GetNullableInt("PITI");
 
 		/// <summary>
 		/// Description: Text identity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: OEM hours
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("OEM hours")]
-		public int? M3_RUNO => GetNullableInt("RUNO");
+		public int? M3RUNO => GetNullableInt("RUNO");
 
 		/// <summary>
 		/// Description: Price hours
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price hours")]
-		public int? M3_RUNP => GetNullableInt("RUNP");
+		public int? M3RUNP => GetNullableInt("RUNP");
 
 		/// <summary>
 		/// Description: Target hours
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target hours")]
-		public int? M3_RUNT => GetNullableInt("RUNT");
+		public int? M3RUNT => GetNullableInt("RUNT");
 
 		/// <summary>
 		/// Description: Multiplication factor - manufacturing
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiplication factor - manufacturing")]
-		public int? M3_MFPR => GetNullableInt("MFPR");
+		public int? M3MFPR => GetNullableInt("MFPR");
 
 		/// <summary>
 		/// Description: Operation cost multiplier
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation cost multiplier")]
-		public int? M3_OPCM => GetNullableInt("OPCM");
+		public int? M3OPCM => GetNullableInt("OPCM");
 
 		/// <summary>
 		/// Description: Number of labor tickets
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of labor tickets")]
-		public int? M3_CAMP => GetNullableInt("CAMP");
+		public int? M3CAMP => GetNullableInt("CAMP");
 
 		/// <summary>
 		/// Description: Structure sequence number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ECS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure sequence number")]
-		public long? M3_STSQ => GetNullableLong("STSQ");
+		public long? M3STSQ => GetNullableLong("STSQ");
 	}
 }
 // EOF

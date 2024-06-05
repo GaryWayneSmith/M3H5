@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS030MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,21 +38,21 @@ namespace M3H5Lib.Api
 		/// Description Add depot
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_DPOT">Rental depot (Required)</param>
-		/// <param name="m3_DISY">Discount model (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_WHYA">Warehouse - yard (Required)</param>
-		/// <param name="m3_WHOH">Warehouse - on hire (Required)</param>
-		/// <param name="m3_PRRF">Price list (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_WXYA">Warehouse - cross hire on yard</param>
-		/// <param name="m3_WXOH">Warehouse - cross hire on hire</param>
-		/// <param name="m3_RPLT">Rent PL tab</param>
-		/// <param name="m3_PLTB">Price list table</param>
-		/// <param name="m3_RDIS">Rental discount model</param>
+		/// <param name="m3DPOT">Rental depot (Required)</param>
+		/// <param name="m3DISY">Discount model (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3WHYA">Warehouse - yard (Required)</param>
+		/// <param name="m3WHOH">Warehouse - on hire (Required)</param>
+		/// <param name="m3PRRF">Price list (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3WXYA">Warehouse - cross hire on yard</param>
+		/// <param name="m3WXOH">Warehouse - cross hire on hire</param>
+		/// <param name="m3RPLT">Rent PL tab</param>
+		/// <param name="m3PLTB">Price list table</param>
+		/// <param name="m3RDIS">Rental discount model</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -59,21 +61,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddDepot(
-			string m3_DPOT, 
-			string m3_DISY, 
-			string m3_FACI, 
-			string m3_TX40, 
-			string m3_WHYA, 
-			string m3_WHOH, 
-			string m3_PRRF, 
-			string m3_CUCD, 
-			string m3_DIVI = null, 
-			string m3_TX15 = null, 
-			string m3_WXYA = null, 
-			string m3_WXOH = null, 
-			string m3_RPLT = null, 
-			string m3_PLTB = null, 
-			string m3_RDIS = null, 
+			string m3DPOT, 
+			string m3DISY, 
+			string m3FACI, 
+			string m3TX40, 
+			string m3WHYA, 
+			string m3WHOH, 
+			string m3PRRF, 
+			string m3CUCD, 
+			string m3DIVI = null, 
+			string m3TX15 = null, 
+			string m3WXYA = null, 
+			string m3WXOH = null, 
+			string m3RPLT = null, 
+			string m3PLTB = null, 
+			string m3RDIS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -88,49 +90,49 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DPOT))
-				throw new ArgumentNullException("m3_DPOT");
-			if (string.IsNullOrWhiteSpace(m3_DISY))
-				throw new ArgumentNullException("m3_DISY");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_WHYA))
-				throw new ArgumentNullException("m3_WHYA");
-			if (string.IsNullOrWhiteSpace(m3_WHOH))
-				throw new ArgumentNullException("m3_WHOH");
-			if (string.IsNullOrWhiteSpace(m3_PRRF))
-				throw new ArgumentNullException("m3_PRRF");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3DPOT))
+				throw new ArgumentNullException(nameof(m3DPOT));
+			if (string.IsNullOrWhiteSpace(m3DISY))
+				throw new ArgumentNullException(nameof(m3DISY));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3WHYA))
+				throw new ArgumentNullException(nameof(m3WHYA));
+			if (string.IsNullOrWhiteSpace(m3WHOH))
+				throw new ArgumentNullException(nameof(m3WHOH));
+			if (string.IsNullOrWhiteSpace(m3PRRF))
+				throw new ArgumentNullException(nameof(m3PRRF));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DPOT", m3_DPOT.Trim())
-				.WithQueryParameter("DISY", m3_DISY.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("WHYA", m3_WHYA.Trim())
-				.WithQueryParameter("WHOH", m3_WHOH.Trim())
-				.WithQueryParameter("PRRF", m3_PRRF.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim());
+				.WithQueryParameter("DPOT", m3DPOT.Trim())
+				.WithQueryParameter("DISY", m3DISY.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("WHYA", m3WHYA.Trim())
+				.WithQueryParameter("WHOH", m3WHOH.Trim())
+				.WithQueryParameter("PRRF", m3PRRF.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WXYA))
-				request.WithQueryParameter("WXYA", m3_WXYA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WXOH))
-				request.WithQueryParameter("WXOH", m3_WXOH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RPLT))
-				request.WithQueryParameter("RPLT", m3_RPLT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PLTB))
-				request.WithQueryParameter("PLTB", m3_PLTB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RDIS))
-				request.WithQueryParameter("RDIS", m3_RDIS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WXYA))
+				request.WithQueryParameter("WXYA", m3WXYA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WXOH))
+				request.WithQueryParameter("WXOH", m3WXOH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RPLT))
+				request.WithQueryParameter("RPLT", m3RPLT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PLTB))
+				request.WithQueryParameter("PLTB", m3PLTB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RDIS))
+				request.WithQueryParameter("RDIS", m3RDIS.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -140,7 +142,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -151,7 +154,7 @@ namespace M3H5Lib.Api
 		/// Description Delete depot
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_DPOT">Rental depot (Required)</param>
+		/// <param name="m3DPOT">Rental depot (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -160,7 +163,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltDepot(
-			string m3_DPOT, 
+			string m3DPOT, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -175,12 +178,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DPOT))
-				throw new ArgumentNullException("m3_DPOT");
+			if (string.IsNullOrWhiteSpace(m3DPOT))
+				throw new ArgumentNullException(nameof(m3DPOT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DPOT", m3_DPOT.Trim());
+				.WithQueryParameter("DPOT", m3DPOT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -190,7 +193,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -201,7 +205,7 @@ namespace M3H5Lib.Api
 		/// Description Get depot
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_DPOT">Rental depot (Required)</param>
+		/// <param name="m3DPOT">Rental depot (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -210,7 +214,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDepotResponse></returns>
 		/// <exception cref="M3Exception<GetDepotResponse>"></exception>
 		public async Task<M3Response<GetDepotResponse>> GetDepot(
-			string m3_DPOT, 
+			string m3DPOT, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -225,12 +229,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DPOT))
-				throw new ArgumentNullException("m3_DPOT");
+			if (string.IsNullOrWhiteSpace(m3DPOT))
+				throw new ArgumentNullException(nameof(m3DPOT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DPOT", m3_DPOT.Trim());
+				.WithQueryParameter("DPOT", m3DPOT.Trim());
 
 			// Execute the request
 			var result = await Execute<GetDepotResponse>(
@@ -240,7 +244,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -280,7 +285,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -291,21 +297,21 @@ namespace M3H5Lib.Api
 		/// Description Update depot
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_DPOT">Rental depot (Required)</param>
-		/// <param name="m3_DISY">Discount model (Required)</param>
-		/// <param name="m3_WHYA">Warehouse - yard (Required)</param>
-		/// <param name="m3_WHOH">Warehouse - on hire (Required)</param>
-		/// <param name="m3_PRRF">Price list (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_WXYA">Warehouse - cross hire on yard</param>
-		/// <param name="m3_WXOH">Warehouse - cross hire on hire</param>
-		/// <param name="m3_RPLT">Rent PL tab</param>
-		/// <param name="m3_PLTB">Price list table</param>
-		/// <param name="m3_RDIS">Rental discount model</param>
+		/// <param name="m3DPOT">Rental depot (Required)</param>
+		/// <param name="m3DISY">Discount model (Required)</param>
+		/// <param name="m3WHYA">Warehouse - yard (Required)</param>
+		/// <param name="m3WHOH">Warehouse - on hire (Required)</param>
+		/// <param name="m3PRRF">Price list (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3WXYA">Warehouse - cross hire on yard</param>
+		/// <param name="m3WXOH">Warehouse - cross hire on hire</param>
+		/// <param name="m3RPLT">Rent PL tab</param>
+		/// <param name="m3PLTB">Price list table</param>
+		/// <param name="m3RDIS">Rental discount model</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -314,21 +320,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdDepot(
-			string m3_DPOT, 
-			string m3_DISY, 
-			string m3_WHYA, 
-			string m3_WHOH, 
-			string m3_PRRF, 
-			string m3_CUCD, 
-			string m3_DIVI = null, 
-			string m3_FACI = null, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
-			string m3_WXYA = null, 
-			string m3_WXOH = null, 
-			string m3_RPLT = null, 
-			string m3_PLTB = null, 
-			string m3_RDIS = null, 
+			string m3DPOT, 
+			string m3DISY, 
+			string m3WHYA, 
+			string m3WHOH, 
+			string m3PRRF, 
+			string m3CUCD, 
+			string m3DIVI = null, 
+			string m3FACI = null, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
+			string m3WXYA = null, 
+			string m3WXOH = null, 
+			string m3RPLT = null, 
+			string m3PLTB = null, 
+			string m3RDIS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -343,47 +349,47 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DPOT))
-				throw new ArgumentNullException("m3_DPOT");
-			if (string.IsNullOrWhiteSpace(m3_DISY))
-				throw new ArgumentNullException("m3_DISY");
-			if (string.IsNullOrWhiteSpace(m3_WHYA))
-				throw new ArgumentNullException("m3_WHYA");
-			if (string.IsNullOrWhiteSpace(m3_WHOH))
-				throw new ArgumentNullException("m3_WHOH");
-			if (string.IsNullOrWhiteSpace(m3_PRRF))
-				throw new ArgumentNullException("m3_PRRF");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3DPOT))
+				throw new ArgumentNullException(nameof(m3DPOT));
+			if (string.IsNullOrWhiteSpace(m3DISY))
+				throw new ArgumentNullException(nameof(m3DISY));
+			if (string.IsNullOrWhiteSpace(m3WHYA))
+				throw new ArgumentNullException(nameof(m3WHYA));
+			if (string.IsNullOrWhiteSpace(m3WHOH))
+				throw new ArgumentNullException(nameof(m3WHOH));
+			if (string.IsNullOrWhiteSpace(m3PRRF))
+				throw new ArgumentNullException(nameof(m3PRRF));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DPOT", m3_DPOT.Trim())
-				.WithQueryParameter("DISY", m3_DISY.Trim())
-				.WithQueryParameter("WHYA", m3_WHYA.Trim())
-				.WithQueryParameter("WHOH", m3_WHOH.Trim())
-				.WithQueryParameter("PRRF", m3_PRRF.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim());
+				.WithQueryParameter("DPOT", m3DPOT.Trim())
+				.WithQueryParameter("DISY", m3DISY.Trim())
+				.WithQueryParameter("WHYA", m3WHYA.Trim())
+				.WithQueryParameter("WHOH", m3WHOH.Trim())
+				.WithQueryParameter("PRRF", m3PRRF.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WXYA))
-				request.WithQueryParameter("WXYA", m3_WXYA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WXOH))
-				request.WithQueryParameter("WXOH", m3_WXOH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RPLT))
-				request.WithQueryParameter("RPLT", m3_RPLT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PLTB))
-				request.WithQueryParameter("PLTB", m3_PLTB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RDIS))
-				request.WithQueryParameter("RDIS", m3_RDIS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WXYA))
+				request.WithQueryParameter("WXYA", m3WXYA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WXOH))
+				request.WithQueryParameter("WXOH", m3WXOH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RPLT))
+				request.WithQueryParameter("RPLT", m3RPLT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PLTB))
+				request.WithQueryParameter("PLTB", m3PLTB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RDIS))
+				request.WithQueryParameter("RDIS", m3RDIS.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -393,7 +399,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

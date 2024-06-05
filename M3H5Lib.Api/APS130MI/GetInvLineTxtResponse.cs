@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Payment proposal
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment proposal")]
-		public long? M3_PRPN => GetNullableLong("PRPN");
+		public long? M3PRPN => GetNullableLong("PRPN");
 
 		/// <summary>
 		/// Description: Payment order
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment order")]
-		public int? M3_PYON => GetNullableInt("PYON");
+		public int? M3PYON => GetNullableInt("PYON");
 
 		/// <summary>
 		/// Description: Payee
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payee")]
-		public string M3_SPYN => GetString("SPYN");
+		public string M3SPYN => GetString("SPYN");
 
 		/// <summary>
 		/// Description: Original division
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original division")]
-		public string M3_ODIV => GetString("ODIV");
+		public string M3ODIV => GetString("ODIV");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier customer number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier customer number")]
-		public string M3_SCNO => GetString("SCNO");
+		public string M3SCNO => GetString("SCNO");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: Invoice year
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice year")]
-		public int? M3_INYR => GetNullableInt("INYR");
+		public int? M3INYR => GetNullableInt("INYR");
 
 		/// <summary>
 		/// Description: Voucher text
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher text")]
-		public string M3_VTXT => GetString("VTXT");
+		public string M3VTXT => GetString("VTXT");
 
 		/// <summary>
 		/// Description: External text 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External text 1")]
-		public string M3_TX51 => GetString("TX51");
+		public string M3TX51 => GetString("TX51");
 
 		/// <summary>
 		/// Description: External text 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External text 2")]
-		public string M3_TX52 => GetString("TX52");
+		public string M3TX52 => GetString("TX52");
 
 		/// <summary>
 		/// Description: External text 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External text 3")]
-		public string M3_TX53 => GetString("TX53");
+		public string M3TX53 => GetString("TX53");
 
 		/// <summary>
 		/// Description: External text 4
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External text 4")]
-		public string M3_TX54 => GetString("TX54");
+		public string M3TX54 => GetString("TX54");
 
 		/// <summary>
 		/// Description: Detailed description 1-3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detailed description 1-3")]
-		public string M3_AW10 => GetString("AW10");
+		public string M3AW10 => GetString("AW10");
 
 		/// <summary>
 		/// Description: External text 5
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.APS130MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External text 5")]
-		public string M3_TX55 => GetString("TX55");
+		public string M3TX55 => GetString("TX55");
 	}
 }
 // EOF

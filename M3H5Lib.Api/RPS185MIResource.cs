@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.RPS185MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,20 +38,20 @@ namespace M3H5Lib.Api
 		/// Description Add Planning template rule
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PREX">Priority (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_SEQN">Sequence number (Required)</param>
-		/// <param name="m3_RULE">Rule (Required)</param>
-		/// <param name="m3_OPE1">Operator (Required)</param>
-		/// <param name="m3_CMVL">Compare value (Required)</param>
-		/// <param name="m3_PLNT">Planning template (Required)</param>
-		/// <param name="m3_ANDO">AND operator (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_OBV4">Start value 4</param>
-		/// <param name="m3_OBV5">Start value 5</param>
-		/// <param name="m3_FLDA">Field</param>
-		/// <param name="m3_XVAL">X-value</param>
+		/// <param name="m3PREX">Priority (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3SEQN">Sequence number (Required)</param>
+		/// <param name="m3RULE">Rule (Required)</param>
+		/// <param name="m3OPE1">Operator (Required)</param>
+		/// <param name="m3CMVL">Compare value (Required)</param>
+		/// <param name="m3PLNT">Planning template (Required)</param>
+		/// <param name="m3ANDO">AND operator (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3OBV4">Start value 4</param>
+		/// <param name="m3OBV5">Start value 5</param>
+		/// <param name="m3FLDA">Field</param>
+		/// <param name="m3XVAL">X-value</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -58,20 +60,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPLTRule(
-			string m3_PREX, 
-			string m3_OBV1, 
-			int m3_SEQN, 
-			string m3_RULE, 
-			string m3_OPE1, 
-			decimal m3_CMVL, 
-			string m3_PLNT, 
-			int m3_ANDO, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			string m3_OBV4 = null, 
-			string m3_OBV5 = null, 
-			string m3_FLDA = null, 
-			DateTime? m3_XVAL = null, 
+			string m3PREX, 
+			string m3OBV1, 
+			int m3SEQN, 
+			string m3RULE, 
+			string m3OPE1, 
+			decimal m3CMVL, 
+			string m3PLNT, 
+			int m3ANDO, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			string m3OBV4 = null, 
+			string m3OBV5 = null, 
+			string m3FLDA = null, 
+			DateTime? m3XVAL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -86,41 +88,41 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PREX))
-				throw new ArgumentNullException("m3_PREX");
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
-			if (string.IsNullOrWhiteSpace(m3_RULE))
-				throw new ArgumentNullException("m3_RULE");
-			if (string.IsNullOrWhiteSpace(m3_OPE1))
-				throw new ArgumentNullException("m3_OPE1");
-			if (string.IsNullOrWhiteSpace(m3_PLNT))
-				throw new ArgumentNullException("m3_PLNT");
+			if (string.IsNullOrWhiteSpace(m3PREX))
+				throw new ArgumentNullException(nameof(m3PREX));
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
+			if (string.IsNullOrWhiteSpace(m3RULE))
+				throw new ArgumentNullException(nameof(m3RULE));
+			if (string.IsNullOrWhiteSpace(m3OPE1))
+				throw new ArgumentNullException(nameof(m3OPE1));
+			if (string.IsNullOrWhiteSpace(m3PLNT))
+				throw new ArgumentNullException(nameof(m3PLNT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PREX", m3_PREX.Trim())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim())
-				.WithQueryParameter("SEQN", m3_SEQN.ToString())
-				.WithQueryParameter("RULE", m3_RULE.Trim())
-				.WithQueryParameter("OPE1", m3_OPE1.Trim())
-				.WithQueryParameter("CMVL", m3_CMVL.ToString())
-				.WithQueryParameter("PLNT", m3_PLNT.Trim())
-				.WithQueryParameter("ANDO", m3_ANDO.ToString());
+				.WithQueryParameter("PREX", m3PREX.Trim())
+				.WithQueryParameter("OBV1", m3OBV1.Trim())
+				.WithQueryParameter("SEQN", m3SEQN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("RULE", m3RULE.Trim())
+				.WithQueryParameter("OPE1", m3OPE1.Trim())
+				.WithQueryParameter("CMVL", m3CMVL.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PLNT", m3PLNT.Trim())
+				.WithQueryParameter("ANDO", m3ANDO.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV4))
-				request.WithQueryParameter("OBV4", m3_OBV4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV5))
-				request.WithQueryParameter("OBV5", m3_OBV5.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDA))
-				request.WithQueryParameter("FLDA", m3_FLDA.Trim());
-			if (m3_XVAL.HasValue)
-				request.WithQueryParameter("XVAL", m3_XVAL.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV4))
+				request.WithQueryParameter("OBV4", m3OBV4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV5))
+				request.WithQueryParameter("OBV5", m3OBV5.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDA))
+				request.WithQueryParameter("FLDA", m3FLDA.Trim());
+			if (m3XVAL.HasValue)
+				request.WithQueryParameter("XVAL", m3XVAL.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -130,7 +132,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -141,20 +144,20 @@ namespace M3H5Lib.Api
 		/// Description Change Planning template rule
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PREX">Priority</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_OBV4">Start value 4</param>
-		/// <param name="m3_OBV5">Start value 5</param>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_RULE">Rule</param>
-		/// <param name="m3_FLDA">Field</param>
-		/// <param name="m3_XVAL">X-value</param>
-		/// <param name="m3_OPE1">Operator</param>
-		/// <param name="m3_CMVL">Compare value</param>
-		/// <param name="m3_PLNT">Planning template</param>
-		/// <param name="m3_ANDO">AND operator</param>
+		/// <param name="m3PREX">Priority</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3OBV4">Start value 4</param>
+		/// <param name="m3OBV5">Start value 5</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3RULE">Rule</param>
+		/// <param name="m3FLDA">Field</param>
+		/// <param name="m3XVAL">X-value</param>
+		/// <param name="m3OPE1">Operator</param>
+		/// <param name="m3CMVL">Compare value</param>
+		/// <param name="m3PLNT">Planning template</param>
+		/// <param name="m3ANDO">AND operator</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -163,20 +166,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChangePLTRule(
-			string m3_PREX = null, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			string m3_OBV4 = null, 
-			string m3_OBV5 = null, 
-			int? m3_SEQN = null, 
-			string m3_RULE = null, 
-			string m3_FLDA = null, 
-			DateTime? m3_XVAL = null, 
-			string m3_OPE1 = null, 
-			decimal? m3_CMVL = null, 
-			string m3_PLNT = null, 
-			int? m3_ANDO = null, 
+			string m3PREX = null, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			string m3OBV4 = null, 
+			string m3OBV5 = null, 
+			int? m3SEQN = null, 
+			string m3RULE = null, 
+			string m3FLDA = null, 
+			DateTime? m3XVAL = null, 
+			string m3OPE1 = null, 
+			decimal? m3CMVL = null, 
+			string m3PLNT = null, 
+			int? m3ANDO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -191,34 +194,34 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PREX))
-				request.WithQueryParameter("PREX", m3_PREX.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV4))
-				request.WithQueryParameter("OBV4", m3_OBV4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV5))
-				request.WithQueryParameter("OBV5", m3_OBV5.Trim());
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RULE))
-				request.WithQueryParameter("RULE", m3_RULE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDA))
-				request.WithQueryParameter("FLDA", m3_FLDA.Trim());
-			if (m3_XVAL.HasValue)
-				request.WithQueryParameter("XVAL", m3_XVAL.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_OPE1))
-				request.WithQueryParameter("OPE1", m3_OPE1.Trim());
-			if (m3_CMVL.HasValue)
-				request.WithQueryParameter("CMVL", m3_CMVL.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PLNT))
-				request.WithQueryParameter("PLNT", m3_PLNT.Trim());
-			if (m3_ANDO.HasValue)
-				request.WithQueryParameter("ANDO", m3_ANDO.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PREX))
+				request.WithQueryParameter("PREX", m3PREX.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV4))
+				request.WithQueryParameter("OBV4", m3OBV4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV5))
+				request.WithQueryParameter("OBV5", m3OBV5.Trim());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RULE))
+				request.WithQueryParameter("RULE", m3RULE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDA))
+				request.WithQueryParameter("FLDA", m3FLDA.Trim());
+			if (m3XVAL.HasValue)
+				request.WithQueryParameter("XVAL", m3XVAL.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3OPE1))
+				request.WithQueryParameter("OPE1", m3OPE1.Trim());
+			if (m3CMVL.HasValue)
+				request.WithQueryParameter("CMVL", m3CMVL.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PLNT))
+				request.WithQueryParameter("PLNT", m3PLNT.Trim());
+			if (m3ANDO.HasValue)
+				request.WithQueryParameter("ANDO", m3ANDO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -228,7 +231,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -239,19 +243,19 @@ namespace M3H5Lib.Api
 		/// Description Copy Planning template rule
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_FRPR">Priority</param>
-		/// <param name="m3_FRV1">Start value 1</param>
-		/// <param name="m3_FRV2">Start value 2</param>
-		/// <param name="m3_FRV3">Start value 3</param>
-		/// <param name="m3_FRV4">Start value 4</param>
-		/// <param name="m3_FRV5">Start value 5</param>
-		/// <param name="m3_FRSQ">Sequence number</param>
-		/// <param name="m3_TOV1">Start value 1</param>
-		/// <param name="m3_TOV2">Start value 2</param>
-		/// <param name="m3_TOV3">Start value 3</param>
-		/// <param name="m3_TOV4">Start value 4</param>
-		/// <param name="m3_TOV5">Start value 5</param>
-		/// <param name="m3_TOSQ">Sequence number</param>
+		/// <param name="m3FRPR">Priority</param>
+		/// <param name="m3FRV1">Start value 1</param>
+		/// <param name="m3FRV2">Start value 2</param>
+		/// <param name="m3FRV3">Start value 3</param>
+		/// <param name="m3FRV4">Start value 4</param>
+		/// <param name="m3FRV5">Start value 5</param>
+		/// <param name="m3FRSQ">Sequence number</param>
+		/// <param name="m3TOV1">Start value 1</param>
+		/// <param name="m3TOV2">Start value 2</param>
+		/// <param name="m3TOV3">Start value 3</param>
+		/// <param name="m3TOV4">Start value 4</param>
+		/// <param name="m3TOV5">Start value 5</param>
+		/// <param name="m3TOSQ">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -260,19 +264,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> CopyPLTRule(
-			string m3_FRPR = null, 
-			string m3_FRV1 = null, 
-			string m3_FRV2 = null, 
-			string m3_FRV3 = null, 
-			string m3_FRV4 = null, 
-			string m3_FRV5 = null, 
-			int? m3_FRSQ = null, 
-			string m3_TOV1 = null, 
-			string m3_TOV2 = null, 
-			string m3_TOV3 = null, 
-			string m3_TOV4 = null, 
-			string m3_TOV5 = null, 
-			int? m3_TOSQ = null, 
+			string m3FRPR = null, 
+			string m3FRV1 = null, 
+			string m3FRV2 = null, 
+			string m3FRV3 = null, 
+			string m3FRV4 = null, 
+			string m3FRV5 = null, 
+			int? m3FRSQ = null, 
+			string m3TOV1 = null, 
+			string m3TOV2 = null, 
+			string m3TOV3 = null, 
+			string m3TOV4 = null, 
+			string m3TOV5 = null, 
+			int? m3TOSQ = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -287,32 +291,32 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FRPR))
-				request.WithQueryParameter("FRPR", m3_FRPR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRV1))
-				request.WithQueryParameter("FRV1", m3_FRV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRV2))
-				request.WithQueryParameter("FRV2", m3_FRV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRV3))
-				request.WithQueryParameter("FRV3", m3_FRV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRV4))
-				request.WithQueryParameter("FRV4", m3_FRV4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRV5))
-				request.WithQueryParameter("FRV5", m3_FRV5.Trim());
-			if (m3_FRSQ.HasValue)
-				request.WithQueryParameter("FRSQ", m3_FRSQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TOV1))
-				request.WithQueryParameter("TOV1", m3_TOV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOV2))
-				request.WithQueryParameter("TOV2", m3_TOV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOV3))
-				request.WithQueryParameter("TOV3", m3_TOV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOV4))
-				request.WithQueryParameter("TOV4", m3_TOV4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOV5))
-				request.WithQueryParameter("TOV5", m3_TOV5.Trim());
-			if (m3_TOSQ.HasValue)
-				request.WithQueryParameter("TOSQ", m3_TOSQ.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3FRPR))
+				request.WithQueryParameter("FRPR", m3FRPR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRV1))
+				request.WithQueryParameter("FRV1", m3FRV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRV2))
+				request.WithQueryParameter("FRV2", m3FRV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRV3))
+				request.WithQueryParameter("FRV3", m3FRV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRV4))
+				request.WithQueryParameter("FRV4", m3FRV4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRV5))
+				request.WithQueryParameter("FRV5", m3FRV5.Trim());
+			if (m3FRSQ.HasValue)
+				request.WithQueryParameter("FRSQ", m3FRSQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TOV1))
+				request.WithQueryParameter("TOV1", m3TOV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOV2))
+				request.WithQueryParameter("TOV2", m3TOV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOV3))
+				request.WithQueryParameter("TOV3", m3TOV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOV4))
+				request.WithQueryParameter("TOV4", m3TOV4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOV5))
+				request.WithQueryParameter("TOV5", m3TOV5.Trim());
+			if (m3TOSQ.HasValue)
+				request.WithQueryParameter("TOSQ", m3TOSQ.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -322,7 +326,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -333,13 +338,13 @@ namespace M3H5Lib.Api
 		/// Description Delete Planning template rule
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PREX">Priority</param>
-		/// <param name="m3_OBV1">Start value 1</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_OBV4">Start value 4</param>
-		/// <param name="m3_OBV5">Start value 5</param>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3PREX">Priority</param>
+		/// <param name="m3OBV1">Start value 1</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3OBV4">Start value 4</param>
+		/// <param name="m3OBV5">Start value 5</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -348,13 +353,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DeletePLTRule(
-			string m3_PREX = null, 
-			string m3_OBV1 = null, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			string m3_OBV4 = null, 
-			string m3_OBV5 = null, 
-			int? m3_SEQN = null, 
+			string m3PREX = null, 
+			string m3OBV1 = null, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			string m3OBV4 = null, 
+			string m3OBV5 = null, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -369,20 +374,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PREX))
-				request.WithQueryParameter("PREX", m3_PREX.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV1))
-				request.WithQueryParameter("OBV1", m3_OBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV4))
-				request.WithQueryParameter("OBV4", m3_OBV4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV5))
-				request.WithQueryParameter("OBV5", m3_OBV5.Trim());
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PREX))
+				request.WithQueryParameter("PREX", m3PREX.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV1))
+				request.WithQueryParameter("OBV1", m3OBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV4))
+				request.WithQueryParameter("OBV4", m3OBV4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV5))
+				request.WithQueryParameter("OBV5", m3OBV5.Trim());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -392,7 +397,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -403,7 +409,7 @@ namespace M3H5Lib.Api
 		/// Description List Planning template rule
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PREX">Priority</param>
+		/// <param name="m3PREX">Priority</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -412,7 +418,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListPLTRuleResponse></returns>
 		/// <exception cref="M3Exception<ListPLTRuleResponse>"></exception>
 		public async Task<M3Response<ListPLTRuleResponse>> ListPLTRule(
-			string m3_PREX = null, 
+			string m3PREX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -427,8 +433,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PREX))
-				request.WithQueryParameter("PREX", m3_PREX.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PREX))
+				request.WithQueryParameter("PREX", m3PREX.Trim());
 
 			// Execute the request
 			var result = await Execute<ListPLTRuleResponse>(
@@ -438,7 +444,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin identity")]
-		public long? M3_BIRT => GetNullableLong("BIRT");
+		public long? M3BIRT => GetNullableLong("BIRT");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Registration number/site
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number/site")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 
 		/// <summary>
 		/// Description: Configuration position
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration position")]
-		public string M3_CFGL => GetString("CFGL");
+		public string M3CFGL => GetString("CFGL");
 
 		/// <summary>
 		/// Description: Start date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Start time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public int? M3_STTI => GetNullableInt("STTI");
+		public int? M3STTI => GetNullableInt("STTI");
 
 		/// <summary>
 		/// Description: Coordinate X
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Coordinate X")]
-		public string M3_CORX => GetString("CORX");
+		public string M3CORX => GetString("CORX");
 
 		/// <summary>
 		/// Description: Coordinate Y
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Coordinate Y")]
-		public string M3_CORY => GetString("CORY");
+		public string M3CORY => GetString("CORY");
 
 		/// <summary>
 		/// Description: Coordinate Z
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Coordinate Z")]
-		public string M3_CORZ => GetString("CORZ");
+		public string M3CORZ => GetString("CORZ");
 
 		/// <summary>
 		/// Description: Address number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Customer name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Customer address 1
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 1")]
-		public string M3_CUA1 => GetString("CUA1");
+		public string M3CUA1 => GetString("CUA1");
 
 		/// <summary>
 		/// Description: Customer address 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 2")]
-		public string M3_CUA2 => GetString("CUA2");
+		public string M3CUA2 => GetString("CUA2");
 
 		/// <summary>
 		/// Description: Customer address 3
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 3")]
-		public string M3_CUA3 => GetString("CUA3");
+		public string M3CUA3 => GetString("CUA3");
 
 		/// <summary>
 		/// Description: Customer address 4
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer address 4")]
-		public string M3_CUA4 => GetString("CUA4");
+		public string M3CUA4 => GetString("CUA4");
 
 		/// <summary>
 		/// Description: Postal code
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 
 		/// <summary>
 		/// Description: Valid media
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid media")]
-		public string M3_MEAL => GetString("MEAL");
+		public string M3MEAL => GetString("MEAL");
 
 		/// <summary>
 		/// Description: City
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: State
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Country
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Text
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Status
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Reference order number
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order number")]
-		public string M3_RORN => GetString("RORN");
+		public string M3RORN => GetString("RORN");
 
 		/// <summary>
 		/// Description: Reference order line
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order line")]
-		public int? M3_RORL => GetNullableInt("RORL");
+		public int? M3RORL => GetNullableInt("RORL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RORX => GetNullableInt("RORX");
+		public int? M3RORX => GetNullableInt("RORX");
 	}
 }
 // EOF

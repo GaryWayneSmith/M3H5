@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUN1 => GetString("CUN1");
+		public string M3CUN1 => GetString("CUN1");
 
 		/// <summary>
 		/// Description: Payer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Payer name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer name")]
-		public string M3_CUN2 => GetString("CUN2");
+		public string M3CUN2 => GetString("CUN2");
 
 		/// <summary>
 		/// Description: Customer order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order number")]
-		public string M3_ORNO => GetString("ORNO");
+		public string M3ORNO => GetString("ORNO");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Highest status - customer order
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - customer order")]
-		public string M3_ORST => GetString("ORST");
+		public string M3ORST => GetString("ORST");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public int? M3_IVNO => GetNullableInt("IVNO");
+		public int? M3IVNO => GetNullableInt("IVNO");
 
 		/// <summary>
 		/// Description: Summary invoice
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Summary invoice")]
-		public int? M3_AICD => GetNullableInt("AICD");
+		public int? M3AICD => GetNullableInt("AICD");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: Invoicing time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing time")]
-		public int? M3_INTM => GetNullableInt("INTM");
+		public int? M3INTM => GetNullableInt("INTM");
 
 		/// <summary>
 		/// Description: Time of delivery
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time of delivery")]
-		public int? M3_DLTM => GetNullableInt("DLTM");
+		public int? M3DLTM => GetNullableInt("DLTM");
 
 		/// <summary>
 		/// Description: Shipment
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment")]
-		public int? M3_CONN => GetNullableInt("CONN");
+		public int? M3CONN => GetNullableInt("CONN");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Route
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route")]
-		public string M3_ROUT => GetString("ROUT");
+		public string M3ROUT => GetString("ROUT");
 
 		/// <summary>
 		/// Description: Route departure
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route departure")]
-		public int? M3_RODN => GetNullableInt("RODN");
+		public int? M3RODN => GetNullableInt("RODN");
 
 		/// <summary>
 		/// Description: Order value gross
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order value gross")]
-		public decimal? M3_AMT1 => GetNullableDecimal("AMT1");
+		public decimal? M3AMT1 => GetNullableDecimal("AMT1");
 
 		/// <summary>
 		/// Description: Currency
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Net order value
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net order value")]
-		public decimal? M3_AMT2 => GetNullableDecimal("AMT2");
+		public decimal? M3AMT2 => GetNullableDecimal("AMT2");
 
 		/// <summary>
 		/// Description: Invoice rate
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice rate")]
-		public decimal? M3_RAIN => GetNullableDecimal("RAIN");
+		public decimal? M3RAIN => GetNullableDecimal("RAIN");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Update sales statistics
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update sales statistics")]
-		public int? M3_UPST => GetNullableInt("UPST");
+		public int? M3UPST => GetNullableInt("UPST");
 
 		/// <summary>
 		/// Description: Update INTRASTAT
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update INTRASTAT")]
-		public int? M3_UPIS => GetNullableInt("UPIS");
+		public int? M3UPIS => GetNullableInt("UPIS");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery method text
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method text")]
-		public string M3_MOD1 => GetString("MOD1");
+		public string M3MOD1 => GetString("MOD1");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Terms text
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Terms text")]
-		public string M3_TEL1 => GetString("TEL1");
+		public string M3TEL1 => GetString("TEL1");
 
 		/// <summary>
 		/// Description: Invoice Prefix
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Prefix")]
-		public string M3_INPX => GetString("INPX");
+		public string M3INPX => GetString("INPX");
 
 		/// <summary>
 		/// Description: Extended Invoice Number
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended Invoice Number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Reference - extended invoice number
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference - extended invoice number")]
-		public string M3_RXIN => GetString("RXIN");
+		public string M3RXIN => GetString("RXIN");
 	}
 }
 // EOF

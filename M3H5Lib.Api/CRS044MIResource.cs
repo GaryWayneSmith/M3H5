@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS044MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add postal code
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_PONO">Postal code (Required)</param>
-		/// <param name="m3_CITY">City (Required)</param>
-		/// <param name="m3_CSCD">Country (Required)</param>
+		/// <param name="m3PONO">Postal code (Required)</param>
+		/// <param name="m3CITY">City (Required)</param>
+		/// <param name="m3CSCD">Country (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPostalCode(
-			string m3_PONO, 
-			string m3_CITY, 
-			string m3_CSCD, 
+			string m3PONO, 
+			string m3CITY, 
+			string m3CSCD, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PONO))
-				throw new ArgumentNullException("m3_PONO");
-			if (string.IsNullOrWhiteSpace(m3_CITY))
-				throw new ArgumentNullException("m3_CITY");
-			if (string.IsNullOrWhiteSpace(m3_CSCD))
-				throw new ArgumentNullException("m3_CSCD");
+			if (string.IsNullOrWhiteSpace(m3PONO))
+				throw new ArgumentNullException(nameof(m3PONO));
+			if (string.IsNullOrWhiteSpace(m3CITY))
+				throw new ArgumentNullException(nameof(m3CITY));
+			if (string.IsNullOrWhiteSpace(m3CSCD))
+				throw new ArgumentNullException(nameof(m3CSCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PONO", m3_PONO.Trim())
-				.WithQueryParameter("CITY", m3_CITY.Trim())
-				.WithQueryParameter("CSCD", m3_CSCD.Trim());
+				.WithQueryParameter("PONO", m3PONO.Trim())
+				.WithQueryParameter("CITY", m3CITY.Trim())
+				.WithQueryParameter("CSCD", m3CSCD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,9 +99,9 @@ namespace M3H5Lib.Api
 		/// Description Delete postal code
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_CSCD">Country (Required)</param>
-		/// <param name="m3_PONO">Postal code (Required)</param>
-		/// <param name="m3_CITY">City (Required)</param>
+		/// <param name="m3CSCD">Country (Required)</param>
+		/// <param name="m3PONO">Postal code (Required)</param>
+		/// <param name="m3CITY">City (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,9 +110,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelPostalCode(
-			string m3_CSCD, 
-			string m3_PONO, 
-			string m3_CITY, 
+			string m3CSCD, 
+			string m3PONO, 
+			string m3CITY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -124,18 +127,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSCD))
-				throw new ArgumentNullException("m3_CSCD");
-			if (string.IsNullOrWhiteSpace(m3_PONO))
-				throw new ArgumentNullException("m3_PONO");
-			if (string.IsNullOrWhiteSpace(m3_CITY))
-				throw new ArgumentNullException("m3_CITY");
+			if (string.IsNullOrWhiteSpace(m3CSCD))
+				throw new ArgumentNullException(nameof(m3CSCD));
+			if (string.IsNullOrWhiteSpace(m3PONO))
+				throw new ArgumentNullException(nameof(m3PONO));
+			if (string.IsNullOrWhiteSpace(m3CITY))
+				throw new ArgumentNullException(nameof(m3CITY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSCD", m3_CSCD.Trim())
-				.WithQueryParameter("PONO", m3_PONO.Trim())
-				.WithQueryParameter("CITY", m3_CITY.Trim());
+				.WithQueryParameter("CSCD", m3CSCD.Trim())
+				.WithQueryParameter("PONO", m3PONO.Trim())
+				.WithQueryParameter("CITY", m3CITY.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,8 +160,8 @@ namespace M3H5Lib.Api
 		/// Description List city by postal code
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_CSCD">Country (Required)</param>
-		/// <param name="m3_PONO">Postal code (Required)</param>
+		/// <param name="m3CSCD">Country (Required)</param>
+		/// <param name="m3PONO">Postal code (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -166,8 +170,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCityByCodeResponse></returns>
 		/// <exception cref="M3Exception<LstCityByCodeResponse>"></exception>
 		public async Task<M3Response<LstCityByCodeResponse>> LstCityByCode(
-			string m3_CSCD, 
-			string m3_PONO, 
+			string m3CSCD, 
+			string m3PONO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -182,15 +186,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSCD))
-				throw new ArgumentNullException("m3_CSCD");
-			if (string.IsNullOrWhiteSpace(m3_PONO))
-				throw new ArgumentNullException("m3_PONO");
+			if (string.IsNullOrWhiteSpace(m3CSCD))
+				throw new ArgumentNullException(nameof(m3CSCD));
+			if (string.IsNullOrWhiteSpace(m3PONO))
+				throw new ArgumentNullException(nameof(m3PONO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSCD", m3_CSCD.Trim())
-				.WithQueryParameter("PONO", m3_PONO.Trim());
+				.WithQueryParameter("CSCD", m3CSCD.Trim())
+				.WithQueryParameter("PONO", m3PONO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCityByCodeResponse>(
@@ -200,7 +204,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -211,9 +216,9 @@ namespace M3H5Lib.Api
 		/// Description List postal codes
 		/// Version Release: 15.x
 		/// </summary>
-		/// <param name="m3_CSCD">Country</param>
-		/// <param name="m3_PONO">Postal code</param>
-		/// <param name="m3_CITY">City</param>
+		/// <param name="m3CSCD">Country</param>
+		/// <param name="m3PONO">Postal code</param>
+		/// <param name="m3CITY">City</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -222,9 +227,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPostalCodesResponse></returns>
 		/// <exception cref="M3Exception<LstPostalCodesResponse>"></exception>
 		public async Task<M3Response<LstPostalCodesResponse>> LstPostalCodes(
-			string m3_CSCD = null, 
-			string m3_PONO = null, 
-			string m3_CITY = null, 
+			string m3CSCD = null, 
+			string m3PONO = null, 
+			string m3CITY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -239,12 +244,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CSCD))
-				request.WithQueryParameter("CSCD", m3_CSCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PONO))
-				request.WithQueryParameter("PONO", m3_PONO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CITY))
-				request.WithQueryParameter("CITY", m3_CITY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSCD))
+				request.WithQueryParameter("CSCD", m3CSCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PONO))
+				request.WithQueryParameter("PONO", m3PONO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CITY))
+				request.WithQueryParameter("CITY", m3CITY.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPostalCodesResponse>(
@@ -254,7 +259,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

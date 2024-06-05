@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Stock zone
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock zone")]
-		public string M3_SLTP => GetString("SLTP");
+		public string M3SLTP => GetString("SLTP");
 
 		/// <summary>
 		/// Description: Name of stock location type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name of stock location type")]
-		public string M3_ARNM => GetString("ARNM");
+		public string M3ARNM => GetString("ARNM");
 
 		/// <summary>
 		/// Description: Volume calculation
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Volume calculation")]
-		public int? M3_COVO => GetNullableInt("COVO");
+		public int? M3COVO => GetNullableInt("COVO");
 
 		/// <summary>
 		/// Description: Weight check
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weight check")]
-		public int? M3_WECD => GetNullableInt("WECD");
+		public int? M3WECD => GetNullableInt("WECD");
 
 		/// <summary>
 		/// Description: Weight check from position
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weight check from position")]
-		public int? M3_FWLP => GetNullableInt("FWLP");
+		public int? M3FWLP => GetNullableInt("FWLP");
 
 		/// <summary>
 		/// Description: Weight check to position
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Weight check to position")]
-		public int? M3_TWLP => GetNullableInt("TWLP");
+		public int? M3TWLP => GetNullableInt("TWLP");
 
 		/// <summary>
 		/// Description: Horizontal axis from position
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Horizontal axis from position")]
-		public int? M3_FHOR => GetNullableInt("FHOR");
+		public int? M3FHOR => GetNullableInt("FHOR");
 
 		/// <summary>
 		/// Description: Horizontal axis to position
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Horizontal axis to position")]
-		public int? M3_THOR => GetNullableInt("THOR");
+		public int? M3THOR => GetNullableInt("THOR");
 
 		/// <summary>
 		/// Description: Vertical axis from position
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Vertical axis from position")]
-		public int? M3_FVER => GetNullableInt("FVER");
+		public int? M3FVER => GetNullableInt("FVER");
 
 		/// <summary>
 		/// Description: Vertical axis to position
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Vertical axis to position")]
-		public int? M3_TVER => GetNullableInt("TVER");
+		public int? M3TVER => GetNullableInt("TVER");
 
 		/// <summary>
 		/// Description: Picking list break
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list break")]
-		public int? M3_PLBR => GetNullableInt("PLBR");
+		public int? M3PLBR => GetNullableInt("PLBR");
 
 		/// <summary>
 		/// Description: Picking team
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking team")]
-		public string M3_TEAM => GetString("TEAM");
+		public string M3TEAM => GetString("TEAM");
 
 		/// <summary>
 		/// Description: Container used for storage
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container used for storage")]
-		public int? M3_LCUC => GetNullableInt("LCUC");
+		public int? M3LCUC => GetNullableInt("LCUC");
 
 		/// <summary>
 		/// Description: Prevent put-away label
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Prevent put-away label")]
-		public int? M3_SPRD => GetNullableInt("SPRD");
+		public int? M3SPRD => GetNullableInt("SPRD");
 
 		/// <summary>
 		/// Description: Sorting
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting")]
-		public int? M3_TRFU => GetNullableInt("TRFU");
+		public int? M3TRFU => GetNullableInt("TRFU");
 
 		/// <summary>
 		/// Description: Printer
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Printer")]
-		public string M3_DEV => GetString("DEV");
+		public string M3DEV => GetString("DEV");
 
 		/// <summary>
 		/// Description: Filling rate calculation
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Filling rate calculation")]
-		public int? M3_FRCA => GetNullableInt("FRCA");
+		public int? M3FRCA => GetNullableInt("FRCA");
 
 		/// <summary>
 		/// Description: Responsible
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Packing area
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packing area")]
-		public string M3_PASL => GetString("PASL");
+		public string M3PASL => GetString("PASL");
 
 		/// <summary>
 		/// Description: Two-step put-away
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Two-step put-away")]
-		public int? M3_TSPA => GetNullableInt("TSPA");
+		public int? M3TSPA => GetNullableInt("TSPA");
 
 		/// <summary>
 		/// Description: Entry date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 	}
 }
 // EOF

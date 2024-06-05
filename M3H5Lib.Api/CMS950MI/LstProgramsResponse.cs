@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Version
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version")]
-		public int? M3_BEVE => GetNullableInt("BEVE");
+		public int? M3BEVE => GetNullableInt("BEVE");
 
 		/// <summary>
 		/// Description: System component
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("System component")]
-		public string M3_SYCO => GetString("SYCO");
+		public string M3SYCO => GetString("SYCO");
 
 		/// <summary>
 		/// Description: File
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SQCE => GetNullableInt("SQCE");
+		public int? M3SQCE => GetNullableInt("SQCE");
 
 		/// <summary>
 		/// Description: Submit job
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Submit job")]
-		public int? M3_SBMJ => GetNullableInt("SBMJ");
+		public int? M3SBMJ => GetNullableInt("SBMJ");
 
 		/// <summary>
 		/// Description: Description
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Number of records
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of records")]
-		public decimal? M3_NOR2 => GetNullableDecimal("NOR2");
+		public decimal? M3NOR2 => GetNullableDecimal("NOR2");
 
 		/// <summary>
 		/// Description: Number of records read
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of records read")]
-		public decimal? M3_NOR6 => GetNullableDecimal("NOR6");
+		public decimal? M3NOR6 => GetNullableDecimal("NOR6");
 
 		/// <summary>
 		/// Description: Number of records updated
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of records updated")]
-		public decimal? M3_NOR3 => GetNullableDecimal("NOR3");
+		public decimal? M3NOR3 => GetNullableDecimal("NOR3");
 
 		/// <summary>
 		/// Description: Number of records written
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of records written")]
-		public decimal? M3_NOR4 => GetNullableDecimal("NOR4");
+		public decimal? M3NOR4 => GetNullableDecimal("NOR4");
 
 		/// <summary>
 		/// Description: Number of records deleted
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of records deleted")]
-		public decimal? M3_NOR5 => GetNullableDecimal("NOR5");
+		public decimal? M3NOR5 => GetNullableDecimal("NOR5");
 
 		/// <summary>
 		/// Description: Migration status
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Migration status")]
-		public string M3_MIST => GetString("MIST");
+		public string M3MIST => GetString("MIST");
 
 		/// <summary>
 		/// Description: Optional to run
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Optional to run")]
-		public int? M3_OPTR => GetNullableInt("OPTR");
+		public int? M3OPTR => GetNullableInt("OPTR");
 
 		/// <summary>
 		/// Description: Migration log
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Migration log")]
-		public int? M3_MLOG => GetNullableInt("MLOG");
+		public int? M3MLOG => GetNullableInt("MLOG");
 
 		/// <summary>
 		/// Description: Program dependency
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program dependency")]
-		public string M3_RPGM => GetString("RPGM");
+		public string M3RPGM => GetString("RPGM");
 
 		/// <summary>
 		/// Description: Safe to run several times
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Safe to run several times")]
-		public int? M3_SFTR => GetNullableInt("SFTR");
+		public int? M3SFTR => GetNullableInt("SFTR");
 
 		/// <summary>
 		/// Description: Job name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job name")]
-		public string M3_JNA => GetString("JNA");
+		public string M3JNA => GetString("JNA");
 
 		/// <summary>
 		/// Description: Job number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JNU => GetNullableInt("JNU");
+		public int? M3JNU => GetNullableInt("JNU");
 
 		/// <summary>
 		/// Description: User
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USS => GetString("USS");
+		public string M3USS => GetString("USS");
 
 		/// <summary>
 		/// Description: Start date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Start time
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public int? M3_STTI => GetNullableInt("STTI");
+		public int? M3STTI => GetNullableInt("STTI");
 
 		/// <summary>
 		/// Description: Finish date
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_ENDT => GetNullableDateTime("ENDT");
+		public DateTime? M3ENDT => GetNullableDateTime("ENDT");
 
 		/// <summary>
 		/// Description: Finish time
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish time")]
-		public int? M3_FTIM => GetNullableInt("FTIM");
+		public int? M3FTIM => GetNullableInt("FTIM");
 
 		/// <summary>
 		/// Description: Active job
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CMS950MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active job")]
-		public int? M3_AJOB => GetNullableInt("AJOB");
+		public int? M3AJOB => GetNullableInt("AJOB");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS241MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description List Equipment Ser Item Meter Reading
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_SERN">Serial number (Required)</param>
-		/// <param name="m3_CFGL">Configuration position</param>
-		/// <param name="m3_NONC">Non calendar meters only</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3SERN">Serial number (Required)</param>
+		/// <param name="m3CFGL">Configuration position</param>
+		/// <param name="m3NONC">Non calendar meters only</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstMetersResponse></returns>
 		/// <exception cref="M3Exception<LstMetersResponse>"></exception>
 		public async Task<M3Response<LstMetersResponse>> LstMeters(
-			string m3_ITNO, 
-			string m3_SERN, 
-			string m3_CFGL = null, 
-			string m3_NONC = null, 
+			string m3ITNO, 
+			string m3SERN, 
+			string m3CFGL = null, 
+			string m3NONC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,21 +68,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_SERN))
-				throw new ArgumentNullException("m3_SERN");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3SERN))
+				throw new ArgumentNullException(nameof(m3SERN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("SERN", m3_SERN.Trim());
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("SERN", m3SERN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CFGL))
-				request.WithQueryParameter("CFGL", m3_CFGL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_NONC))
-				request.WithQueryParameter("NONC", m3_NONC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFGL))
+				request.WithQueryParameter("CFGL", m3CFGL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3NONC))
+				request.WithQueryParameter("NONC", m3NONC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstMetersResponse>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

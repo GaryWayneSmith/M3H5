@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OPS200MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Check value coupon ledger sale
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_PYCD">Payment method - accounts receivable</param>
-		/// <param name="m3_VCNO">Value coupon no</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable</param>
+		/// <param name="m3VCNO">Value coupon no</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ChkVCLdgSaleResponse></returns>
 		/// <exception cref="M3Exception<ChkVCLdgSaleResponse>"></exception>
 		public async Task<M3Response<ChkVCLdgSaleResponse>> ChkVCLdgSale(
-			string m3_PYCD = null, 
-			string m3_VCNO = null, 
+			string m3PYCD = null, 
+			string m3VCNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PYCD))
-				request.WithQueryParameter("PYCD", m3_PYCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VCNO))
-				request.WithQueryParameter("VCNO", m3_VCNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYCD))
+				request.WithQueryParameter("PYCD", m3PYCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VCNO))
+				request.WithQueryParameter("VCNO", m3VCNO.Trim());
 
 			// Execute the request
 			var result = await Execute<ChkVCLdgSaleResponse>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// Description Check value coupon ledger end
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_PYCD">Payment method - accounts receivable</param>
-		/// <param name="m3_VCNO">Value coupon no</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable</param>
+		/// <param name="m3VCNO">Value coupon no</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ChkVCLdgTendResponse></returns>
 		/// <exception cref="M3Exception<ChkVCLdgTendResponse>"></exception>
 		public async Task<M3Response<ChkVCLdgTendResponse>> ChkVCLdgTend(
-			string m3_PYCD = null, 
-			string m3_VCNO = null, 
+			string m3PYCD = null, 
+			string m3VCNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -112,10 +115,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PYCD))
-				request.WithQueryParameter("PYCD", m3_PYCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VCNO))
-				request.WithQueryParameter("VCNO", m3_VCNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYCD))
+				request.WithQueryParameter("PYCD", m3PYCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VCNO))
+				request.WithQueryParameter("VCNO", m3VCNO.Trim());
 
 			// Execute the request
 			var result = await Execute<ChkVCLdgTendResponse>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Style number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style number")]
-		public string M3_STYN => GetString("STYN");
+		public string M3STYN => GetString("STYN");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQNU => GetNullableInt("SQNU");
+		public int? M3SQNU => GetNullableInt("SQNU");
 
 		/// <summary>
 		/// Description: Feature
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature")]
-		public string M3_FTID => GetString("FTID");
+		public string M3FTID => GetString("FTID");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Feature group
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS017MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature group")]
-		public string M3_FGRP => GetString("FGRP");
+		public string M3FGRP => GetString("FGRP");
 	}
 }
 // EOF

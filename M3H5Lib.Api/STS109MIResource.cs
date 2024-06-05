@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS109MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Create Rental Agreement
 		/// Version Release: 12
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_CRCD">Create agreement (Required)</param>
-		/// <param name="m3_ARCC">Reason code - created agreement (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_PRQA">Yes/no</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3CRCD">Create agreement (Required)</param>
+		/// <param name="m3ARCC">Reason code - created agreement (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3PRQA">Yes/no</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<CrtRentalAgrmntResponse></returns>
 		/// <exception cref="M3Exception<CrtRentalAgrmntResponse>"></exception>
 		public async Task<M3Response<CrtRentalAgrmntResponse>> CrtRentalAgrmnt(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_CRCD, 
-			string m3_ARCC, 
-			int? m3_CONO = null, 
-			int? m3_PRQA = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3CRCD, 
+			string m3ARCC, 
+			int? m3CONO = null, 
+			int? m3PRQA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,23 +72,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_ARCC))
-				throw new ArgumentNullException("m3_ARCC");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3ARCC))
+				throw new ArgumentNullException(nameof(m3ARCC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("CRCD", m3_CRCD.ToString())
-				.WithQueryParameter("ARCC", m3_ARCC.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CRCD", m3CRCD.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ARCC", m3ARCC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_PRQA.HasValue)
-				request.WithQueryParameter("PRQA", m3_PRQA.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PRQA.HasValue)
+				request.WithQueryParameter("PRQA", m3PRQA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<CrtRentalAgrmntResponse>(
@@ -96,7 +98,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

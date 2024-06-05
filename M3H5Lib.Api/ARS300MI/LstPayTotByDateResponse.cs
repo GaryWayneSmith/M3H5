@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Remitance Number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remitance Number")]
-		public int? M3_RMNB => GetNullableInt("RMNB");
+		public int? M3RMNB => GetNullableInt("RMNB");
 
 		/// <summary>
 		/// Description: Payment Date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment Date")]
-		public DateTime? M3_DTP5 => GetNullableDateTime("DTP5");
+		public DateTime? M3DTP5 => GetNullableDateTime("DTP5");
 
 		/// <summary>
 		/// Description: Payer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Debiting Number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debiting Number")]
-		public long? M3_DENB => GetNullableLong("DENB");
+		public long? M3DENB => GetNullableLong("DENB");
 
 		/// <summary>
 		/// Description: Currency Amount
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency Amount")]
-		public decimal? M3_CUAM => GetNullableDecimal("CUAM");
+		public decimal? M3CUAM => GetNullableDecimal("CUAM");
 
 		/// <summary>
 		/// Description: Debiting Status
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Debiting Status")]
-		public int? M3_STAT => GetNullableInt("STAT");
+		public int? M3STAT => GetNullableInt("STAT");
 	}
 }
 // EOF

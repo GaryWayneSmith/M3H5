@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS476MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sublot policy")]
-		public string M3_SUMP => GetString("SUMP");
+		public string M3SUMP => GetString("SUMP");
 
 		/// <summary>
 		/// Description: Auto populate reference sublot ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS476MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Auto populate reference sublot ID")]
-		public int? M3_ABNS => GetNullableInt("ABNS");
+		public int? M3ABNS => GetNullableInt("ABNS");
 
 		/// <summary>
 		/// Description: Protect reference sublot ID
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS476MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Protect reference sublot ID")]
-		public int? M3_PBNS => GetNullableInt("PBNS");
+		public int? M3PBNS => GetNullableInt("PBNS");
 
 		/// <summary>
 		/// Description: Text identity
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS476MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

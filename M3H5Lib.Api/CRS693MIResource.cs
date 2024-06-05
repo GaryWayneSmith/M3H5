@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS693MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Retrieve bank account additional values
 		/// Version Release: 12.3
 		/// </summary>
-		/// <param name="m3_BKTP">Bank account type (Required)</param>
-		/// <param name="m3_ACHO">Account holder (Required)</param>
-		/// <param name="m3_BKID">Bank account identity (Required)</param>
-		/// <param name="m3_BVTP">Bank account value type (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3BKTP">Bank account type (Required)</param>
+		/// <param name="m3ACHO">Account holder (Required)</param>
+		/// <param name="m3BKID">Bank account identity (Required)</param>
+		/// <param name="m3BVTP">Bank account value type (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetBasicDataResponse></returns>
 		/// <exception cref="M3Exception<GetBasicDataResponse>"></exception>
 		public async Task<M3Response<GetBasicDataResponse>> GetBasicData(
-			int m3_BKTP, 
-			string m3_ACHO, 
-			string m3_BKID, 
-			int m3_BVTP, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
+			int m3BKTP, 
+			string m3ACHO, 
+			string m3BKID, 
+			int m3BVTP, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,23 +72,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ACHO))
-				throw new ArgumentNullException("m3_ACHO");
-			if (string.IsNullOrWhiteSpace(m3_BKID))
-				throw new ArgumentNullException("m3_BKID");
+			if (string.IsNullOrWhiteSpace(m3ACHO))
+				throw new ArgumentNullException(nameof(m3ACHO));
+			if (string.IsNullOrWhiteSpace(m3BKID))
+				throw new ArgumentNullException(nameof(m3BKID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BKTP", m3_BKTP.ToString())
-				.WithQueryParameter("ACHO", m3_ACHO.Trim())
-				.WithQueryParameter("BKID", m3_BKID.Trim())
-				.WithQueryParameter("BVTP", m3_BVTP.ToString());
+				.WithQueryParameter("BKTP", m3BKTP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ACHO", m3ACHO.Trim())
+				.WithQueryParameter("BKID", m3BKID.Trim())
+				.WithQueryParameter("BVTP", m3BVTP.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetBasicDataResponse>(
@@ -96,7 +98,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -107,11 +110,11 @@ namespace M3H5Lib.Api
 		/// Description List Bank account additional values by account holder
 		/// Version Release: 12.3
 		/// </summary>
-		/// <param name="m3_BKTP">Bank account type (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_ACHO">Account holder</param>
-		/// <param name="m3_BKID">Bank account identity</param>
+		/// <param name="m3BKTP">Bank account type (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3ACHO">Account holder</param>
+		/// <param name="m3BKID">Bank account identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -120,11 +123,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByAccHolderResponse></returns>
 		/// <exception cref="M3Exception<LstByAccHolderResponse>"></exception>
 		public async Task<M3Response<LstByAccHolderResponse>> LstByAccHolder(
-			int m3_BKTP, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			string m3_ACHO = null, 
-			string m3_BKID = null, 
+			int m3BKTP, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			string m3ACHO = null, 
+			string m3BKID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -142,17 +145,17 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("BKTP", m3_BKTP.ToString());
+				.WithQueryParameter("BKTP", m3BKTP.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ACHO))
-				request.WithQueryParameter("ACHO", m3_ACHO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BKID))
-				request.WithQueryParameter("BKID", m3_BKID.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ACHO))
+				request.WithQueryParameter("ACHO", m3ACHO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BKID))
+				request.WithQueryParameter("BKID", m3BKID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByAccHolderResponse>(
@@ -162,7 +165,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -173,9 +177,9 @@ namespace M3H5Lib.Api
 		/// Description List Bank account additional values by value type
 		/// Version Release: 12.3
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_BVTP">Bank account value type</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3BVTP">Bank account value type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -184,9 +188,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByValueTypeResponse></returns>
 		/// <exception cref="M3Exception<LstByValueTypeResponse>"></exception>
 		public async Task<M3Response<LstByValueTypeResponse>> LstByValueType(
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			int? m3_BVTP = null, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			int? m3BVTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -201,12 +205,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_BVTP.HasValue)
-				request.WithQueryParameter("BVTP", m3_BVTP.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3BVTP.HasValue)
+				request.WithQueryParameter("BVTP", m3BVTP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstByValueTypeResponse>(
@@ -216,7 +220,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

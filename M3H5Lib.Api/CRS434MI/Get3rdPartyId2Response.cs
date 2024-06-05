@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("3rd-party id")]
-		public string M3_TRDI => GetString("TRDI");
+		public string M3TRDI => GetString("TRDI");
 
 		/// <summary>
 		/// Description: 3rd-party provider
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("3rd-party provider")]
-		public string M3_TRDP => GetString("TRDP");
+		public string M3TRDP => GetString("TRDP");
 
 		/// <summary>
 		/// Description: Merchant id
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Merchant id")]
-		public int? M3_MEID => GetNullableInt("MEID");
+		public int? M3MEID => GetNullableInt("MEID");
 
 		/// <summary>
 		/// Description: User
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_US65 => GetString("US65");
+		public string M3US65 => GetString("US65");
 
 		/// <summary>
 		/// Description: Password
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Password")]
-		public string M3_PWRD => GetString("PWRD");
+		public string M3PWRD => GetString("PWRD");
 
 		/// <summary>
 		/// Description: Host address
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Host address")]
-		public string M3_HADR => GetString("HADR");
+		public string M3HADR => GetString("HADR");
 
 		/// <summary>
 		/// Description: Host port
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Host port")]
-		public int? M3_HPOR => GetNullableInt("HPOR");
+		public int? M3HPOR => GetNullableInt("HPOR");
 
 		/// <summary>
 		/// Description: Timeout in seconds
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timeout in seconds")]
-		public int? M3_TOSE => GetNullableInt("TOSE");
+		public int? M3TOSE => GetNullableInt("TOSE");
 
 		/// <summary>
 		/// Description: Vendor
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Vendor")]
-		public string M3_VEND => GetString("VEND");
+		public string M3VEND => GetString("VEND");
 
 		/// <summary>
 		/// Description: Partner
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner")]
-		public string M3_PART => GetString("PART");
+		public string M3PART => GetString("PART");
 
 		/// <summary>
 		/// Description: Proxy address
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proxy address")]
-		public string M3_PRXA => GetString("PRXA");
+		public string M3PRXA => GetString("PRXA");
 
 		/// <summary>
 		/// Description: Proxy port
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proxy port")]
-		public int? M3_PRXP => GetNullableInt("PRXP");
+		public int? M3PRXP => GetNullableInt("PRXP");
 
 		/// <summary>
 		/// Description: Proxy logon
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proxy logon")]
-		public string M3_PRXL => GetString("PRXL");
+		public string M3PRXL => GetString("PRXL");
 
 		/// <summary>
 		/// Description: Proxy password
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proxy password")]
-		public string M3_PRXW => GetString("PRXW");
+		public string M3PRXW => GetString("PRXW");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_UD01 => GetString("UD01");
+		public string M3UD01 => GetString("UD01");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_UD02 => GetString("UD02");
+		public string M3UD02 => GetString("UD02");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_UD03 => GetString("UD03");
+		public string M3UD03 => GetString("UD03");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_UD04 => GetString("UD04");
+		public string M3UD04 => GetString("UD04");
 
 		/// <summary>
 		/// Description: Text identity
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: URL address
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("URL address")]
-		public string M3_URLA => GetString("URLA");
+		public string M3URLA => GetString("URLA");
 
 		/// <summary>
 		/// Description: Authorization days
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS434MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Authorization days")]
-		public int? M3_AUDY => GetNullableInt("AUDY");
+		public int? M3AUDY => GetNullableInt("AUDY");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS119MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add Contact person to rental agreement Line
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Order line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CNPE">Contact (Required)</param>
-		/// <param name="m3_RFTP">Contact type</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Order line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CNPE">Contact (Required)</param>
+		/// <param name="m3RFTP">Contact type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			string m3_CNPE, 
-			string m3_RFTP = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			string m3CNPE, 
+			string m3RFTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,22 +72,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_CNPE))
-				throw new ArgumentNullException("m3_CNPE");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3CNPE))
+				throw new ArgumentNullException(nameof(m3CNPE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("CNPE", m3_CNPE.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CNPE", m3CNPE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RFTP))
-				request.WithQueryParameter("RFTP", m3_RFTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RFTP))
+				request.WithQueryParameter("RFTP", m3RFTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -95,7 +97,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -106,12 +109,12 @@ namespace M3H5Lib.Api
 		/// Description Del Contact person
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Order line number (Required)</param>
-		/// <param name="m3_CNPE">Contact (Required)</param>
-		/// <param name="m3_POSX">Line suffix</param>
-		/// <param name="m3_RFTP">Contact type</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Order line number (Required)</param>
+		/// <param name="m3CNPE">Contact (Required)</param>
+		/// <param name="m3POSX">Line suffix</param>
+		/// <param name="m3RFTP">Contact type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -120,12 +123,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Del(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			string m3_CNPE, 
-			int? m3_POSX = null, 
-			string m3_RFTP = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			string m3CNPE, 
+			int? m3POSX = null, 
+			string m3RFTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -140,23 +143,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_CNPE))
-				throw new ArgumentNullException("m3_CNPE");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3CNPE))
+				throw new ArgumentNullException(nameof(m3CNPE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("CNPE", m3_CNPE.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CNPE", m3CNPE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_POSX.HasValue)
-				request.WithQueryParameter("POSX", m3_POSX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_RFTP))
-				request.WithQueryParameter("RFTP", m3_RFTP.Trim());
+			if (m3POSX.HasValue)
+				request.WithQueryParameter("POSX", m3POSX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3RFTP))
+				request.WithQueryParameter("RFTP", m3RFTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -166,7 +169,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -177,12 +181,12 @@ namespace M3H5Lib.Api
 		/// Description Get Contact person
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Order line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_CNPE">Contact (Required)</param>
-		/// <param name="m3_RFTP">Contact type</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Order line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3CNPE">Contact (Required)</param>
+		/// <param name="m3RFTP">Contact type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -191,12 +195,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			string m3_CNPE, 
-			string m3_RFTP = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			string m3CNPE, 
+			string m3RFTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -211,22 +215,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_CNPE))
-				throw new ArgumentNullException("m3_CNPE");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3CNPE))
+				throw new ArgumentNullException(nameof(m3CNPE));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("CNPE", m3_CNPE.Trim());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CNPE", m3CNPE.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_RFTP))
-				request.WithQueryParameter("RFTP", m3_RFTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RFTP))
+				request.WithQueryParameter("RFTP", m3RFTP.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -236,7 +240,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -247,10 +252,10 @@ namespace M3H5Lib.Api
 		/// Description Lst Contact Person
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Order line number</param>
-		/// <param name="m3_POSX">Line suffix</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Order line number</param>
+		/// <param name="m3POSX">Line suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -259,10 +264,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int? m3_PONR = null, 
-			int? m3_POSX = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int? m3PONR = null, 
+			int? m3POSX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -277,19 +282,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PONR.HasValue)
-				request.WithQueryParameter("PONR", m3_PONR.Value.ToString());
-			if (m3_POSX.HasValue)
-				request.WithQueryParameter("POSX", m3_POSX.Value.ToString());
+			if (m3PONR.HasValue)
+				request.WithQueryParameter("PONR", m3PONR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3POSX.HasValue)
+				request.WithQueryParameter("POSX", m3POSX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -299,7 +304,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MHS805MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,18 +38,18 @@ namespace M3H5Lib.Api
 		/// Description List Pre Allocations
 		/// Version Release: 11.4
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_AOCA">Acquistion order category</param>
-		/// <param name="m3_ARDN">Acquisition order number</param>
-		/// <param name="m3_ARDL">Acquisition order line</param>
-		/// <param name="m3_ARDX">Line suffix</param>
-		/// <param name="m3_DOCA">Demand order category</param>
-		/// <param name="m3_DRDN">Demand order number</param>
-		/// <param name="m3_DRDL">Demand order line</param>
-		/// <param name="m3_DRDX">Line suffix</param>
-		/// <param name="m3_DOWN">0/blank=Unprocessed, 1=Processed</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3AOCA">Acquistion order category</param>
+		/// <param name="m3ARDN">Acquisition order number</param>
+		/// <param name="m3ARDL">Acquisition order line</param>
+		/// <param name="m3ARDX">Line suffix</param>
+		/// <param name="m3DOCA">Demand order category</param>
+		/// <param name="m3DRDN">Demand order number</param>
+		/// <param name="m3DRDL">Demand order line</param>
+		/// <param name="m3DRDX">Line suffix</param>
+		/// <param name="m3DOWN">0/blank=Unprocessed, 1=Processed</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -56,18 +58,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPreAllocResponse></returns>
 		/// <exception cref="M3Exception<LstPreAllocResponse>"></exception>
 		public async Task<M3Response<LstPreAllocResponse>> LstPreAlloc(
-			string m3_E0PA, 
-			int? m3_CONO = null, 
-			string m3_WHLO = null, 
-			string m3_AOCA = null, 
-			string m3_ARDN = null, 
-			int? m3_ARDL = null, 
-			int? m3_ARDX = null, 
-			string m3_DOCA = null, 
-			string m3_DRDN = null, 
-			int? m3_DRDL = null, 
-			int? m3_DRDX = null, 
-			int? m3_DOWN = null, 
+			string m3E0PA, 
+			int? m3CONO = null, 
+			string m3WHLO = null, 
+			string m3AOCA = null, 
+			string m3ARDN = null, 
+			int? m3ARDL = null, 
+			int? m3ARDX = null, 
+			string m3DOCA = null, 
+			string m3DRDN = null, 
+			int? m3DRDL = null, 
+			int? m3DRDX = null, 
+			int? m3DOWN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -82,36 +84,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AOCA))
-				request.WithQueryParameter("AOCA", m3_AOCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARDN))
-				request.WithQueryParameter("ARDN", m3_ARDN.Trim());
-			if (m3_ARDL.HasValue)
-				request.WithQueryParameter("ARDL", m3_ARDL.Value.ToString());
-			if (m3_ARDX.HasValue)
-				request.WithQueryParameter("ARDX", m3_ARDX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DOCA))
-				request.WithQueryParameter("DOCA", m3_DOCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DRDN))
-				request.WithQueryParameter("DRDN", m3_DRDN.Trim());
-			if (m3_DRDL.HasValue)
-				request.WithQueryParameter("DRDL", m3_DRDL.Value.ToString());
-			if (m3_DRDX.HasValue)
-				request.WithQueryParameter("DRDX", m3_DRDX.Value.ToString());
-			if (m3_DOWN.HasValue)
-				request.WithQueryParameter("DOWN", m3_DOWN.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AOCA))
+				request.WithQueryParameter("AOCA", m3AOCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARDN))
+				request.WithQueryParameter("ARDN", m3ARDN.Trim());
+			if (m3ARDL.HasValue)
+				request.WithQueryParameter("ARDL", m3ARDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ARDX.HasValue)
+				request.WithQueryParameter("ARDX", m3ARDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DOCA))
+				request.WithQueryParameter("DOCA", m3DOCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DRDN))
+				request.WithQueryParameter("DRDN", m3DRDN.Trim());
+			if (m3DRDL.HasValue)
+				request.WithQueryParameter("DRDL", m3DRDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DRDX.HasValue)
+				request.WithQueryParameter("DRDX", m3DRDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DOWN.HasValue)
+				request.WithQueryParameter("DOWN", m3DOWN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPreAllocResponse>(
@@ -121,7 +123,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -132,18 +135,18 @@ namespace M3H5Lib.Api
 		/// Description Process Pre Allocations
 		/// Version Release: 11.4
 		/// </summary>
-		/// <param name="m3_E0PA">Partner (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_AOCA">Acquistion order category</param>
-		/// <param name="m3_ARDN">Acquisition order number</param>
-		/// <param name="m3_ARDL">Acquisition order line</param>
-		/// <param name="m3_ARDX">Line suffix</param>
-		/// <param name="m3_DOCA">Demand order category</param>
-		/// <param name="m3_DRDN">Demand order number</param>
-		/// <param name="m3_DRDL">Demand order line</param>
-		/// <param name="m3_DRDX">Line suffix</param>
-		/// <param name="m3_DOWN">0/blank=Unprocessed, 1=Processed</param>
+		/// <param name="m3E0PA">Partner (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3AOCA">Acquistion order category</param>
+		/// <param name="m3ARDN">Acquisition order number</param>
+		/// <param name="m3ARDL">Acquisition order line</param>
+		/// <param name="m3ARDX">Line suffix</param>
+		/// <param name="m3DOCA">Demand order category</param>
+		/// <param name="m3DRDN">Demand order number</param>
+		/// <param name="m3DRDL">Demand order line</param>
+		/// <param name="m3DRDX">Line suffix</param>
+		/// <param name="m3DOWN">0/blank=Unprocessed, 1=Processed</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -152,18 +155,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> PrcPreAlloc(
-			string m3_E0PA, 
-			int? m3_CONO = null, 
-			string m3_WHLO = null, 
-			string m3_AOCA = null, 
-			string m3_ARDN = null, 
-			int? m3_ARDL = null, 
-			int? m3_ARDX = null, 
-			string m3_DOCA = null, 
-			string m3_DRDN = null, 
-			int? m3_DRDL = null, 
-			int? m3_DRDX = null, 
-			int? m3_DOWN = null, 
+			string m3E0PA, 
+			int? m3CONO = null, 
+			string m3WHLO = null, 
+			string m3AOCA = null, 
+			string m3ARDN = null, 
+			int? m3ARDL = null, 
+			int? m3ARDX = null, 
+			string m3DOCA = null, 
+			string m3DRDN = null, 
+			int? m3DRDL = null, 
+			int? m3DRDX = null, 
+			int? m3DOWN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -178,36 +181,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_E0PA))
-				throw new ArgumentNullException("m3_E0PA");
+			if (string.IsNullOrWhiteSpace(m3E0PA))
+				throw new ArgumentNullException(nameof(m3E0PA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("E0PA", m3_E0PA.Trim());
+				.WithQueryParameter("E0PA", m3E0PA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_AOCA))
-				request.WithQueryParameter("AOCA", m3_AOCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARDN))
-				request.WithQueryParameter("ARDN", m3_ARDN.Trim());
-			if (m3_ARDL.HasValue)
-				request.WithQueryParameter("ARDL", m3_ARDL.Value.ToString());
-			if (m3_ARDX.HasValue)
-				request.WithQueryParameter("ARDX", m3_ARDX.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DOCA))
-				request.WithQueryParameter("DOCA", m3_DOCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_DRDN))
-				request.WithQueryParameter("DRDN", m3_DRDN.Trim());
-			if (m3_DRDL.HasValue)
-				request.WithQueryParameter("DRDL", m3_DRDL.Value.ToString());
-			if (m3_DRDX.HasValue)
-				request.WithQueryParameter("DRDX", m3_DRDX.Value.ToString());
-			if (m3_DOWN.HasValue)
-				request.WithQueryParameter("DOWN", m3_DOWN.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3AOCA))
+				request.WithQueryParameter("AOCA", m3AOCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARDN))
+				request.WithQueryParameter("ARDN", m3ARDN.Trim());
+			if (m3ARDL.HasValue)
+				request.WithQueryParameter("ARDL", m3ARDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ARDX.HasValue)
+				request.WithQueryParameter("ARDX", m3ARDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DOCA))
+				request.WithQueryParameter("DOCA", m3DOCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DRDN))
+				request.WithQueryParameter("DRDN", m3DRDN.Trim());
+			if (m3DRDL.HasValue)
+				request.WithQueryParameter("DRDL", m3DRDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DRDX.HasValue)
+				request.WithQueryParameter("DRDX", m3DRDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3DOWN.HasValue)
+				request.WithQueryParameter("DOWN", m3DOWN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -217,7 +220,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

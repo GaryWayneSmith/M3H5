@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS123MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,19 +38,19 @@ namespace M3H5Lib.Api
 		/// Description AddSteppedPrice
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PRRF">Price list (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_CCAP">Rental rate type (Required)</param>
-		/// <param name="m3_ADPW">Days per week (Required)</param>
-		/// <param name="m3_LIMT">Limit value (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_HPS1">Rate 1</param>
-		/// <param name="m3_HPS2">Rate 2</param>
-		/// <param name="m3_HPS3">Rate 3</param>
-		/// <param name="m3_HPS0">Rate 0</param>
+		/// <param name="m3PRRF">Price list (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3CCAP">Rental rate type (Required)</param>
+		/// <param name="m3ADPW">Days per week (Required)</param>
+		/// <param name="m3LIMT">Limit value (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3HPS1">Rate 1</param>
+		/// <param name="m3HPS2">Rate 2</param>
+		/// <param name="m3HPS3">Rate 3</param>
+		/// <param name="m3HPS0">Rate 0</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -57,19 +59,19 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSteppedPrice(
-			string m3_PRRF, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_CCAP, 
-			int m3_ADPW, 
-			decimal m3_LIMT, 
-			string m3_CUNO = null, 
-			string m3_ITNO = null, 
-			string m3_ITGR = null, 
-			decimal? m3_HPS1 = null, 
-			decimal? m3_HPS2 = null, 
-			decimal? m3_HPS3 = null, 
-			decimal? m3_HPS0 = null, 
+			string m3PRRF, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3CCAP, 
+			int m3ADPW, 
+			decimal m3LIMT, 
+			string m3CUNO = null, 
+			string m3ITNO = null, 
+			string m3ITGR = null, 
+			decimal? m3HPS1 = null, 
+			decimal? m3HPS2 = null, 
+			decimal? m3HPS3 = null, 
+			decimal? m3HPS0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -84,37 +86,37 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRRF))
-				throw new ArgumentNullException("m3_PRRF");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_CCAP))
-				throw new ArgumentNullException("m3_CCAP");
+			if (string.IsNullOrWhiteSpace(m3PRRF))
+				throw new ArgumentNullException(nameof(m3PRRF));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3CCAP))
+				throw new ArgumentNullException(nameof(m3CCAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRRF", m3_PRRF.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("CCAP", m3_CCAP.Trim())
-				.WithQueryParameter("ADPW", m3_ADPW.ToString())
-				.WithQueryParameter("LIMT", m3_LIMT.ToString());
+				.WithQueryParameter("PRRF", m3PRRF.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("CCAP", m3CCAP.Trim())
+				.WithQueryParameter("ADPW", m3ADPW.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("LIMT", m3LIMT.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (m3_HPS1.HasValue)
-				request.WithQueryParameter("HPS1", m3_HPS1.Value.ToString());
-			if (m3_HPS2.HasValue)
-				request.WithQueryParameter("HPS2", m3_HPS2.Value.ToString());
-			if (m3_HPS3.HasValue)
-				request.WithQueryParameter("HPS3", m3_HPS3.Value.ToString());
-			if (m3_HPS0.HasValue)
-				request.WithQueryParameter("HPS0", m3_HPS0.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (m3HPS1.HasValue)
+				request.WithQueryParameter("HPS1", m3HPS1.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3HPS2.HasValue)
+				request.WithQueryParameter("HPS2", m3HPS2.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3HPS3.HasValue)
+				request.WithQueryParameter("HPS3", m3HPS3.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3HPS0.HasValue)
+				request.WithQueryParameter("HPS0", m3HPS0.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -124,7 +126,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -135,15 +138,15 @@ namespace M3H5Lib.Api
 		/// Description DelSteppedPrice
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRRF">Price list (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_CCAP">Rental rate type (Required)</param>
-		/// <param name="m3_ADPW">Days per week (Required)</param>
-		/// <param name="m3_LIMT">New field description (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ITGR">Item group</param>
+		/// <param name="m3PRRF">Price list (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3CCAP">Rental rate type (Required)</param>
+		/// <param name="m3ADPW">Days per week (Required)</param>
+		/// <param name="m3LIMT">New field description (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ITGR">Item group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -152,15 +155,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelSteppedPrice(
-			string m3_PRRF, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_CCAP, 
-			int m3_ADPW, 
-			decimal m3_LIMT, 
-			string m3_CUNO = null, 
-			string m3_ITNO = null, 
-			string m3_ITGR = null, 
+			string m3PRRF, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3CCAP, 
+			int m3ADPW, 
+			decimal m3LIMT, 
+			string m3CUNO = null, 
+			string m3ITNO = null, 
+			string m3ITGR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -175,29 +178,29 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRRF))
-				throw new ArgumentNullException("m3_PRRF");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_CCAP))
-				throw new ArgumentNullException("m3_CCAP");
+			if (string.IsNullOrWhiteSpace(m3PRRF))
+				throw new ArgumentNullException(nameof(m3PRRF));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3CCAP))
+				throw new ArgumentNullException(nameof(m3CCAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRRF", m3_PRRF.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("CCAP", m3_CCAP.Trim())
-				.WithQueryParameter("ADPW", m3_ADPW.ToString())
-				.WithQueryParameter("LIMT", m3_LIMT.ToString());
+				.WithQueryParameter("PRRF", m3PRRF.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("CCAP", m3CCAP.Trim())
+				.WithQueryParameter("ADPW", m3ADPW.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("LIMT", m3LIMT.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -207,7 +210,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -218,16 +222,16 @@ namespace M3H5Lib.Api
 		/// Description GetSteppedPrice
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_PRRF">Price list (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_CCAP">Rental rate type (Required)</param>
-		/// <param name="m3_ADPW">Days per week (Required)</param>
-		/// <param name="m3_LIMT">New field description (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_STDT">Start date</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_BRAN">Brand</param>
-		/// <param name="m3_ITGR">Item group</param>
+		/// <param name="m3PRRF">Price list (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3CCAP">Rental rate type (Required)</param>
+		/// <param name="m3ADPW">Days per week (Required)</param>
+		/// <param name="m3LIMT">New field description (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3STDT">Start date</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3BRAN">Brand</param>
+		/// <param name="m3ITGR">Item group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -236,16 +240,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSteppedPriceResponse></returns>
 		/// <exception cref="M3Exception<GetSteppedPriceResponse>"></exception>
 		public async Task<M3Response<GetSteppedPriceResponse>> GetSteppedPrice(
-			string m3_PRRF, 
-			string m3_CUCD, 
-			string m3_CCAP, 
-			int m3_ADPW, 
-			decimal m3_LIMT, 
-			string m3_CUNO = null, 
-			DateTime? m3_STDT = null, 
-			string m3_ITNO = null, 
-			string m3_BRAN = null, 
-			string m3_ITGR = null, 
+			string m3PRRF, 
+			string m3CUCD, 
+			string m3CCAP, 
+			int m3ADPW, 
+			decimal m3LIMT, 
+			string m3CUNO = null, 
+			DateTime? m3STDT = null, 
+			string m3ITNO = null, 
+			string m3BRAN = null, 
+			string m3ITGR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -260,32 +264,32 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRRF))
-				throw new ArgumentNullException("m3_PRRF");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_CCAP))
-				throw new ArgumentNullException("m3_CCAP");
+			if (string.IsNullOrWhiteSpace(m3PRRF))
+				throw new ArgumentNullException(nameof(m3PRRF));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3CCAP))
+				throw new ArgumentNullException(nameof(m3CCAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRRF", m3_PRRF.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("CCAP", m3_CCAP.Trim())
-				.WithQueryParameter("ADPW", m3_ADPW.ToString())
-				.WithQueryParameter("LIMT", m3_LIMT.ToString());
+				.WithQueryParameter("PRRF", m3PRRF.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("CCAP", m3CCAP.Trim())
+				.WithQueryParameter("ADPW", m3ADPW.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("LIMT", m3LIMT.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BRAN))
-				request.WithQueryParameter("BRAN", m3_BRAN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BRAN))
+				request.WithQueryParameter("BRAN", m3BRAN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
 
 			// Execute the request
 			var result = await Execute<GetSteppedPriceResponse>(
@@ -295,7 +299,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -306,14 +311,14 @@ namespace M3H5Lib.Api
 		/// Description LstSteppedPrice
 		/// Version Release: 5ea2
 		/// </summary>
-		/// <param name="m3_PRRF">Price list</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_STDT">Start date</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_CCAP">Rental rate type</param>
-		/// <param name="m3_ADPW">Days per week</param>
+		/// <param name="m3PRRF">Price list</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3STDT">Start date</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3CCAP">Rental rate type</param>
+		/// <param name="m3ADPW">Days per week</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -322,14 +327,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSteppedPriceResponse></returns>
 		/// <exception cref="M3Exception<LstSteppedPriceResponse>"></exception>
 		public async Task<M3Response<LstSteppedPriceResponse>> LstSteppedPrice(
-			string m3_PRRF = null, 
-			string m3_CUCD = null, 
-			string m3_CUNO = null, 
-			DateTime? m3_STDT = null, 
-			string m3_ITNO = null, 
-			string m3_ITGR = null, 
-			string m3_CCAP = null, 
-			int? m3_ADPW = null, 
+			string m3PRRF = null, 
+			string m3CUCD = null, 
+			string m3CUNO = null, 
+			DateTime? m3STDT = null, 
+			string m3ITNO = null, 
+			string m3ITGR = null, 
+			string m3CCAP = null, 
+			int? m3ADPW = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -344,22 +349,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRRF))
-				request.WithQueryParameter("PRRF", m3_PRRF.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_STDT.HasValue)
-				request.WithQueryParameter("STDT", m3_STDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CCAP))
-				request.WithQueryParameter("CCAP", m3_CCAP.Trim());
-			if (m3_ADPW.HasValue)
-				request.WithQueryParameter("ADPW", m3_ADPW.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PRRF))
+				request.WithQueryParameter("PRRF", m3PRRF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3STDT.HasValue)
+				request.WithQueryParameter("STDT", m3STDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CCAP))
+				request.WithQueryParameter("CCAP", m3CCAP.Trim());
+			if (m3ADPW.HasValue)
+				request.WithQueryParameter("ADPW", m3ADPW.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstSteppedPriceResponse>(
@@ -369,7 +374,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -380,20 +386,20 @@ namespace M3H5Lib.Api
 		/// Description UpdSteppedPrice
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_PRRF">Price list (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_STDT">Start date (Required)</param>
-		/// <param name="m3_CCAP">Rental rate type (Required)</param>
-		/// <param name="m3_ADPW">Days per week (Required)</param>
-		/// <param name="m3_LIMT">Limit value (Required)</param>
-		/// <param name="m3_CUNO">Customer</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_ITGR">Item group</param>
-		/// <param name="m3_NLMT">New limit value</param>
-		/// <param name="m3_HPS1">Rate 1</param>
-		/// <param name="m3_HPS2">Rate 2</param>
-		/// <param name="m3_HPS3">Rate 3</param>
-		/// <param name="m3_HPS0">Rate 0</param>
+		/// <param name="m3PRRF">Price list (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3STDT">Start date (Required)</param>
+		/// <param name="m3CCAP">Rental rate type (Required)</param>
+		/// <param name="m3ADPW">Days per week (Required)</param>
+		/// <param name="m3LIMT">Limit value (Required)</param>
+		/// <param name="m3CUNO">Customer</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3ITGR">Item group</param>
+		/// <param name="m3NLMT">New limit value</param>
+		/// <param name="m3HPS1">Rate 1</param>
+		/// <param name="m3HPS2">Rate 2</param>
+		/// <param name="m3HPS3">Rate 3</param>
+		/// <param name="m3HPS0">Rate 0</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -402,20 +408,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSteppedPrice(
-			string m3_PRRF, 
-			string m3_CUCD, 
-			DateTime m3_STDT, 
-			string m3_CCAP, 
-			int m3_ADPW, 
-			decimal m3_LIMT, 
-			string m3_CUNO = null, 
-			string m3_ITNO = null, 
-			string m3_ITGR = null, 
-			decimal? m3_NLMT = null, 
-			decimal? m3_HPS1 = null, 
-			decimal? m3_HPS2 = null, 
-			decimal? m3_HPS3 = null, 
-			decimal? m3_HPS0 = null, 
+			string m3PRRF, 
+			string m3CUCD, 
+			DateTime m3STDT, 
+			string m3CCAP, 
+			int m3ADPW, 
+			decimal m3LIMT, 
+			string m3CUNO = null, 
+			string m3ITNO = null, 
+			string m3ITGR = null, 
+			decimal? m3NLMT = null, 
+			decimal? m3HPS1 = null, 
+			decimal? m3HPS2 = null, 
+			decimal? m3HPS3 = null, 
+			decimal? m3HPS0 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -430,39 +436,39 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRRF))
-				throw new ArgumentNullException("m3_PRRF");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_CCAP))
-				throw new ArgumentNullException("m3_CCAP");
+			if (string.IsNullOrWhiteSpace(m3PRRF))
+				throw new ArgumentNullException(nameof(m3PRRF));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3CCAP))
+				throw new ArgumentNullException(nameof(m3CCAP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRRF", m3_PRRF.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String())
-				.WithQueryParameter("CCAP", m3_CCAP.Trim())
-				.WithQueryParameter("ADPW", m3_ADPW.ToString())
-				.WithQueryParameter("LIMT", m3_LIMT.ToString());
+				.WithQueryParameter("PRRF", m3PRRF.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("STDT", m3STDT.ToM3String())
+				.WithQueryParameter("CCAP", m3CCAP.Trim())
+				.WithQueryParameter("ADPW", m3ADPW.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("LIMT", m3LIMT.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITGR))
-				request.WithQueryParameter("ITGR", m3_ITGR.Trim());
-			if (m3_NLMT.HasValue)
-				request.WithQueryParameter("NLMT", m3_NLMT.Value.ToString());
-			if (m3_HPS1.HasValue)
-				request.WithQueryParameter("HPS1", m3_HPS1.Value.ToString());
-			if (m3_HPS2.HasValue)
-				request.WithQueryParameter("HPS2", m3_HPS2.Value.ToString());
-			if (m3_HPS3.HasValue)
-				request.WithQueryParameter("HPS3", m3_HPS3.Value.ToString());
-			if (m3_HPS0.HasValue)
-				request.WithQueryParameter("HPS0", m3_HPS0.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITGR))
+				request.WithQueryParameter("ITGR", m3ITGR.Trim());
+			if (m3NLMT.HasValue)
+				request.WithQueryParameter("NLMT", m3NLMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3HPS1.HasValue)
+				request.WithQueryParameter("HPS1", m3HPS1.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3HPS2.HasValue)
+				request.WithQueryParameter("HPS2", m3HPS2.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3HPS3.HasValue)
+				request.WithQueryParameter("HPS3", m3HPS3.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3HPS0.HasValue)
+				request.WithQueryParameter("HPS0", m3HPS0.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -472,7 +478,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Agreement order type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order type")]
-		public string M3_AOTP => GetString("AOTP");
+		public string M3AOTP => GetString("AOTP");
 
 		/// <summary>
 		/// Description: Agreement order category
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order category")]
-		public string M3_AOTK => GetString("AOTK");
+		public string M3AOTK => GetString("AOTK");
 
 		/// <summary>
 		/// Description: Next manual function
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next manual function")]
-		public int? M3_NEXT => GetNullableInt("NEXT");
+		public int? M3NEXT => GetNullableInt("NEXT");
 
 		/// <summary>
 		/// Description: Agreement order type description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement order type description")]
-		public string M3_ATDE => GetString("ATDE");
+		public string M3ATDE => GetString("ATDE");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AT51 => GetString("AT51");
+		public string M3AT51 => GetString("AT51");
 
 		/// <summary>
 		/// Description: Indiv item number in agr
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Indiv item number in agr")]
-		public int? M3_AT52 => GetNullableInt("AT52");
+		public int? M3AT52 => GetNullableInt("AT52");
 
 		/// <summary>
 		/// Description: Item number in agreement
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number in agreement")]
-		public int? M3_AT53 => GetNullableInt("AT53");
+		public int? M3AT53 => GetNullableInt("AT53");
 
 		/// <summary>
 		/// Description: Several agreement types
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Several agreement types")]
-		public int? M3_AT54 => GetNullableInt("AT54");
+		public int? M3AT54 => GetNullableInt("AT54");
 
 		/// <summary>
 		/// Description: Sales price rule
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price rule")]
-		public int? M3_AT57 => GetNullableInt("AT57");
+		public int? M3AT57 => GetNullableInt("AT57");
 
 		/// <summary>
 		/// Description: Discount updates
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount updates")]
-		public int? M3_AT58 => GetNullableInt("AT58");
+		public int? M3AT58 => GetNullableInt("AT58");
 
 		/// <summary>
 		/// Description: Check sequence item identity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check sequence item identity")]
-		public string M3_AT60 => GetString("AT60");
+		public string M3AT60 => GetString("AT60");
 
 		/// <summary>
 		/// Description: Contract item
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contract item")]
-		public string M3_AT77 => GetString("AT77");
+		public string M3AT77 => GetString("AT77");
 
 		/// <summary>
 		/// Description: Serv ord type - prev service
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv ord type - prev service")]
-		public string M3_PSOT => GetString("PSOT");
+		public string M3PSOT => GetString("PSOT");
 
 		/// <summary>
 		/// Description: Serv ord type - agr order
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv ord type - agr order")]
-		public string M3_AIOT => GetString("AIOT");
+		public string M3AIOT => GetString("AIOT");
 
 		/// <summary>
 		/// Description: Credit check
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit check")]
-		public int? M3_AT80 => GetNullableInt("AT80");
+		public int? M3AT80 => GetNullableInt("AT80");
 
 		/// <summary>
 		/// Description: Change date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS400MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

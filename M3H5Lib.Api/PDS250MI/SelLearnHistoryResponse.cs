@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work center
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Main product
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main product")]
-		public string M3_HDPR => GetString("HDPR");
+		public string M3HDPR => GetString("HDPR");
 
 		/// <summary>
 		/// Description: Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Learning curve
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Learning curve")]
-		public string M3_LECU => GetString("LECU");
+		public string M3LECU => GetString("LECU");
 
 		/// <summary>
 		/// Description: Days used
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Days used")]
-		public int? M3_UDAY => GetNullableInt("UDAY");
+		public int? M3UDAY => GetNullableInt("UDAY");
 
 		/// <summary>
 		/// Description: Latest update date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Latest update date")]
-		public DateTime? M3_USDT => GetNullableDateTime("USDT");
+		public DateTime? M3USDT => GetNullableDateTime("USDT");
 
 		/// <summary>
 		/// Description: Warehouse group
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS250MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse group")]
-		public string M3_WHGR => GetString("WHGR");
+		public string M3WHGR => GetString("WHGR");
 	}
 }
 // EOF

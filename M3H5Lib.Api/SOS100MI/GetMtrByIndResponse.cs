@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 1")]
-		public string M3_M1NA => GetString("M1NA");
+		public string M3M1NA => GetString("M1NA");
 
 		/// <summary>
 		/// Description: Name meter 2
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 2")]
-		public string M3_M2NA => GetString("M2NA");
+		public string M3M2NA => GetString("M2NA");
 
 		/// <summary>
 		/// Description: Name meter 3
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 3")]
-		public string M3_M3NA => GetString("M3NA");
+		public string M3M3NA => GetString("M3NA");
 
 		/// <summary>
 		/// Description: Name meter 4
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 4")]
-		public string M3_M4NA => GetString("M4NA");
+		public string M3M4NA => GetString("M4NA");
 
 		/// <summary>
 		/// Description: Name meter 5
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 5")]
-		public string M3_M5NA => GetString("M5NA");
+		public string M3M5NA => GetString("M5NA");
 
 		/// <summary>
 		/// Description: Name meter 6
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 6")]
-		public string M3_M6NA => GetString("M6NA");
+		public string M3M6NA => GetString("M6NA");
 
 		/// <summary>
 		/// Description: Previous meter reading - Meter 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous meter reading - Meter 1")]
-		public long? M3_PMV1 => GetNullableLong("PMV1");
+		public long? M3PMV1 => GetNullableLong("PMV1");
 
 		/// <summary>
 		/// Description: Previous meter reading - Meter 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous meter reading - Meter 2")]
-		public long? M3_PMV2 => GetNullableLong("PMV2");
+		public long? M3PMV2 => GetNullableLong("PMV2");
 
 		/// <summary>
 		/// Description: Previous meter reading - Meter 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous meter reading - Meter 3")]
-		public long? M3_PMV3 => GetNullableLong("PMV3");
+		public long? M3PMV3 => GetNullableLong("PMV3");
 
 		/// <summary>
 		/// Description: Previous meter reading - Meter 4
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous meter reading - Meter 4")]
-		public long? M3_PMV4 => GetNullableLong("PMV4");
+		public long? M3PMV4 => GetNullableLong("PMV4");
 
 		/// <summary>
 		/// Description: Previous meter reading - Meter 5
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous meter reading - Meter 5")]
-		public long? M3_PMV5 => GetNullableLong("PMV5");
+		public long? M3PMV5 => GetNullableLong("PMV5");
 
 		/// <summary>
 		/// Description: Previous meter reading - Meter 6
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous meter reading - Meter 6")]
-		public long? M3_PMV6 => GetNullableLong("PMV6");
+		public long? M3PMV6 => GetNullableLong("PMV6");
 
 		/// <summary>
 		/// Description: Model description OBS 20 pos (30 pos)
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model description OBS 20 pos (30 pos)")]
-		public string M3_MODE => GetString("MODE");
+		public string M3MODE => GetString("MODE");
 
 		/// <summary>
 		/// Description: Customer site
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Address ID
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address ID")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Customer name
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Name meter 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 1")]
-		public string M3_M1DC => GetString("M1DC");
+		public string M3M1DC => GetString("M1DC");
 
 		/// <summary>
 		/// Description: Name meter 2
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 2")]
-		public string M3_M2DC => GetString("M2DC");
+		public string M3M2DC => GetString("M2DC");
 
 		/// <summary>
 		/// Description: Name meter 3
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 3")]
-		public string M3_M3DC => GetString("M3DC");
+		public string M3M3DC => GetString("M3DC");
 
 		/// <summary>
 		/// Description: Name meter 4
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 4")]
-		public string M3_M4DC => GetString("M4DC");
+		public string M3M4DC => GetString("M4DC");
 
 		/// <summary>
 		/// Description: Name meter 5
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 5")]
-		public string M3_M5DC => GetString("M5DC");
+		public string M3M5DC => GetString("M5DC");
 
 		/// <summary>
 		/// Description: Name meter 6
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name meter 6")]
-		public string M3_M6DC => GetString("M6DC");
+		public string M3M6DC => GetString("M6DC");
 
 		/// <summary>
 		/// Description: Estim meter value - Meter 1
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estim meter value - Meter 1")]
-		public decimal? M3_M1ES => GetNullableDecimal("M1ES");
+		public decimal? M3M1ES => GetNullableDecimal("M1ES");
 
 		/// <summary>
 		/// Description: Estim meter value - Meter 2
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estim meter value - Meter 2")]
-		public decimal? M3_M2ES => GetNullableDecimal("M2ES");
+		public decimal? M3M2ES => GetNullableDecimal("M2ES");
 
 		/// <summary>
 		/// Description: Estim meter value - Meter 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estim meter value - Meter 3")]
-		public decimal? M3_M3ES => GetNullableDecimal("M3ES");
+		public decimal? M3M3ES => GetNullableDecimal("M3ES");
 
 		/// <summary>
 		/// Description: Estim meter value - Meter 4
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estim meter value - Meter 4")]
-		public decimal? M3_M4ES => GetNullableDecimal("M4ES");
+		public decimal? M3M4ES => GetNullableDecimal("M4ES");
 
 		/// <summary>
 		/// Description: Estim meter value - Meter 5
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estim meter value - Meter 5")]
-		public decimal? M3_M5ES => GetNullableDecimal("M5ES");
+		public decimal? M3M5ES => GetNullableDecimal("M5ES");
 
 		/// <summary>
 		/// Description: Estim meter value - Meter 6
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estim meter value - Meter 6")]
-		public decimal? M3_M6ES => GetNullableDecimal("M6ES");
+		public decimal? M3M6ES => GetNullableDecimal("M6ES");
 
 		/// <summary>
 		/// Description: Tot mtr based on mtr
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tot mtr based on mtr")]
-		public string M3_TMBM => GetString("TMBM");
+		public string M3TMBM => GetString("TMBM");
 
 		/// <summary>
 		/// Description: Description - total meter
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description - total meter")]
-		public string M3_TMDS => GetString("TMDS");
+		public string M3TMDS => GetString("TMDS");
 
 		/// <summary>
 		/// Description: Name - total meter
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name - total meter")]
-		public string M3_TMNA => GetString("TMNA");
+		public string M3TMNA => GetString("TMNA");
 
 		/// <summary>
 		/// Description: Usage period type 1
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Usage period type 1")]
-		public int? M3_AMB1 => GetNullableInt("AMB1");
+		public int? M3AMB1 => GetNullableInt("AMB1");
 
 		/// <summary>
 		/// Description: Usage period type 2
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Usage period type 2")]
-		public int? M3_AMB2 => GetNullableInt("AMB2");
+		public int? M3AMB2 => GetNullableInt("AMB2");
 
 		/// <summary>
 		/// Description: Descr log mtr 1
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr log mtr 1")]
-		public string M3_L1DS => GetString("L1DS");
+		public string M3L1DS => GetString("L1DS");
 
 		/// <summary>
 		/// Description: Descr log mtr 2
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr log mtr 2")]
-		public string M3_L2DS => GetString("L2DS");
+		public string M3L2DS => GetString("L2DS");
 
 		/// <summary>
 		/// Description: Descr log mtr 3
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr log mtr 3")]
-		public string M3_L3DS => GetString("L3DS");
+		public string M3L3DS => GetString("L3DS");
 
 		/// <summary>
 		/// Description: Descr log mtr 4
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr log mtr 4")]
-		public string M3_L4DS => GetString("L4DS");
+		public string M3L4DS => GetString("L4DS");
 
 		/// <summary>
 		/// Description: Descr log mtr 5
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr log mtr 5")]
-		public string M3_L5DS => GetString("L5DS");
+		public string M3L5DS => GetString("L5DS");
 
 		/// <summary>
 		/// Description: Descr log mtr 6
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr log mtr 6")]
-		public string M3_L6DS => GetString("L6DS");
+		public string M3L6DS => GetString("L6DS");
 
 		/// <summary>
 		/// Description: Formula log mtr 1
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula log mtr 1")]
-		public string M3_L1FO => GetString("L1FO");
+		public string M3L1FO => GetString("L1FO");
 
 		/// <summary>
 		/// Description: Formula log mtr 2
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula log mtr 2")]
-		public string M3_L2FO => GetString("L2FO");
+		public string M3L2FO => GetString("L2FO");
 
 		/// <summary>
 		/// Description: Formula log mtr 3
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula log mtr 3")]
-		public string M3_L3FO => GetString("L3FO");
+		public string M3L3FO => GetString("L3FO");
 
 		/// <summary>
 		/// Description: Formula log mtr 4
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula log mtr 4")]
-		public string M3_L4FO => GetString("L4FO");
+		public string M3L4FO => GetString("L4FO");
 
 		/// <summary>
 		/// Description: Formula log mtr 5
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula log mtr 5")]
-		public string M3_L5FO => GetString("L5FO");
+		public string M3L5FO => GetString("L5FO");
 
 		/// <summary>
 		/// Description: Formula log mtr 6
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula log mtr 6")]
-		public string M3_L6FO => GetString("L6FO");
+		public string M3L6FO => GetString("L6FO");
 
 		/// <summary>
 		/// Description: Desrc - inv mtr 1
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Desrc - inv mtr 1")]
-		public string M3_I1DS => GetString("I1DS");
+		public string M3I1DS => GetString("I1DS");
 
 		/// <summary>
 		/// Description: Descr - inv mtr 2
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr - inv mtr 2")]
-		public string M3_I2DS => GetString("I2DS");
+		public string M3I2DS => GetString("I2DS");
 
 		/// <summary>
 		/// Description: Descr - inv mtr 3
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr - inv mtr 3")]
-		public string M3_I3DS => GetString("I3DS");
+		public string M3I3DS => GetString("I3DS");
 
 		/// <summary>
 		/// Description: Descr - inv mtr 4
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr - inv mtr 4")]
-		public string M3_I4DS => GetString("I4DS");
+		public string M3I4DS => GetString("I4DS");
 
 		/// <summary>
 		/// Description: Descr . inv mtr 5
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr . inv mtr 5")]
-		public string M3_I5DS => GetString("I5DS");
+		public string M3I5DS => GetString("I5DS");
 
 		/// <summary>
 		/// Description: Descr - inv mtr 6
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Descr - inv mtr 6")]
-		public string M3_I6DS => GetString("I6DS");
+		public string M3I6DS => GetString("I6DS");
 
 		/// <summary>
 		/// Description: Name - inv mtr 1
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name - inv mtr 1")]
-		public string M3_I1NA => GetString("I1NA");
+		public string M3I1NA => GetString("I1NA");
 
 		/// <summary>
 		/// Description: Name - inv mtr 2
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name - inv mtr 2")]
-		public string M3_I2NA => GetString("I2NA");
+		public string M3I2NA => GetString("I2NA");
 
 		/// <summary>
 		/// Description: Name - inv mtr 3
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name - inv mtr 3")]
-		public string M3_I3NA => GetString("I3NA");
+		public string M3I3NA => GetString("I3NA");
 
 		/// <summary>
 		/// Description: Name - inv mtr 4
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name - inv mtr 4")]
-		public string M3_I4NA => GetString("I4NA");
+		public string M3I4NA => GetString("I4NA");
 
 		/// <summary>
 		/// Description: Name - inv mtr 5
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name - inv mtr 5")]
-		public string M3_I5NA => GetString("I5NA");
+		public string M3I5NA => GetString("I5NA");
 
 		/// <summary>
 		/// Description: Name - inv mtr 6
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name - inv mtr 6")]
-		public string M3_I6NA => GetString("I6NA");
+		public string M3I6NA => GetString("I6NA");
 
 		/// <summary>
 		/// Description: Inv mtr 1 based on mtr
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv mtr 1 based on mtr")]
-		public string M3_I1BM => GetString("I1BM");
+		public string M3I1BM => GetString("I1BM");
 
 		/// <summary>
 		/// Description: Inv mtr 2 based on mtr
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv mtr 2 based on mtr")]
-		public string M3_I2BM => GetString("I2BM");
+		public string M3I2BM => GetString("I2BM");
 
 		/// <summary>
 		/// Description: Inv mtr 3 based on mtr
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv mtr 3 based on mtr")]
-		public string M3_I3BM => GetString("I3BM");
+		public string M3I3BM => GetString("I3BM");
 
 		/// <summary>
 		/// Description: Inv mtr 4 based on mtr
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv mtr 4 based on mtr")]
-		public string M3_I4BM => GetString("I4BM");
+		public string M3I4BM => GetString("I4BM");
 
 		/// <summary>
 		/// Description: Inv mtr 5 based on mtr
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv mtr 5 based on mtr")]
-		public string M3_I5BM => GetString("I5BM");
+		public string M3I5BM => GetString("I5BM");
 
 		/// <summary>
 		/// Description: Inv mtr 6 based on mtr
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inv mtr 6 based on mtr")]
-		public string M3_I6BM => GetString("I6BM");
+		public string M3I6BM => GetString("I6BM");
 
 		/// <summary>
 		/// Description: Last meter reading date
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last meter reading date")]
-		public DateTime? M3_LMRD => GetNullableDateTime("LMRD");
+		public DateTime? M3LMRD => GetNullableDateTime("LMRD");
 	}
 }
 // EOF

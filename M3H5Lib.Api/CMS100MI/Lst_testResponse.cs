@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_EGDIVI => GetString("EGDIVI");
+		public string M3EGDIVI => GetString("EGDIVI");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_EGYEA4 => GetNullableInt("EGYEA4");
+		public int? M3EGYEA4 => GetNullableInt("EGYEA4");
 
 		/// <summary>
 		/// Description: Accounting date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting date")]
-		public DateTime? M3_EGACDT => GetNullableDateTime("EGACDT");
+		public DateTime? M3EGACDT => GetNullableDateTime("EGACDT");
 
 		/// <summary>
 		/// Description: Journal no
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal no")]
-		public int? M3_EGJRNO => GetNullableInt("EGJRNO");
+		public int? M3EGJRNO => GetNullableInt("EGJRNO");
 
 		/// <summary>
 		/// Description: Journal seq no
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal seq no")]
-		public int? M3_EGJSNO => GetNullableInt("EGJSNO");
+		public int? M3EGJSNO => GetNullableInt("EGJSNO");
 
 		/// <summary>
 		/// Description: Voucher no
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher no")]
-		public int? M3_EGVONO => GetNullableInt("EGVONO");
+		public int? M3EGVONO => GetNullableInt("EGVONO");
 
 		/// <summary>
 		/// Description: Account dim 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account dim 1")]
-		public string M3_EGAIT1 => GetString("EGAIT1");
+		public string M3EGAIT1 => GetString("EGAIT1");
 
 		/// <summary>
 		/// Description: Account dim 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account dim 2")]
-		public string M3_EGAIT2 => GetString("EGAIT2");
+		public string M3EGAIT2 => GetString("EGAIT2");
 
 		/// <summary>
 		/// Description: Account dim 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account dim 3")]
-		public string M3_EGAIT3 => GetString("EGAIT3");
+		public string M3EGAIT3 => GetString("EGAIT3");
 
 		/// <summary>
 		/// Description: Account dim 4
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account dim 4")]
-		public string M3_EGAIT4 => GetString("EGAIT4");
+		public string M3EGAIT4 => GetString("EGAIT4");
 
 		/// <summary>
 		/// Description: Account dim 5
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account dim 5")]
-		public string M3_EGAIT5 => GetString("EGAIT5");
+		public string M3EGAIT5 => GetString("EGAIT5");
 
 		/// <summary>
 		/// Description: Account dim 6
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account dim 6")]
-		public string M3_EGAIT6 => GetString("EGAIT6");
+		public string M3EGAIT6 => GetString("EGAIT6");
 
 		/// <summary>
 		/// Description: Account dim 7
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account dim 7")]
-		public string M3_EGAIT7 => GetString("EGAIT7");
+		public string M3EGAIT7 => GetString("EGAIT7");
 
 		/// <summary>
 		/// Description: Recorded amount
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recorded amount")]
-		public decimal? M3_EGACAM => GetNullableDecimal("EGACAM");
+		public decimal? M3EGACAM => GetNullableDecimal("EGACAM");
 
 		/// <summary>
 		/// Description: Voucher text
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CMS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher text")]
-		public string M3_EGVTXT => GetString("EGVTXT");
+		public string M3EGVTXT => GetString("EGVTXT");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 1 positions")]
-		public string M3_MAR2 => GetString("MAR2");
+		public string M3MAR2 => GetString("MAR2");
 
 		/// <summary>
 		/// Description: Alpha field 2 positions
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alpha field 2 positions")]
-		public string M3_MARK => GetString("MARK");
+		public string M3MARK => GetString("MARK");
 
 		/// <summary>
 		/// Description: Alternative
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternative")]
-		public int? M3_SPLA => GetNullableInt("SPLA");
+		public int? M3SPLA => GetNullableInt("SPLA");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Exchanged item
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchanged item")]
-		public string M3_RITN => GetString("RITN");
+		public string M3RITN => GetString("RITN");
 
 		/// <summary>
 		/// Description: Departure date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure date")]
-		public DateTime? M3_DSDT => GetNullableDateTime("DSDT");
+		public DateTime? M3DSDT => GetNullableDateTime("DSDT");
 
 		/// <summary>
 		/// Description: Departure time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure time")]
-		public int? M3_DSHM => GetNullableInt("DSHM");
+		public int? M3DSHM => GetNullableInt("DSHM");
 
 		/// <summary>
 		/// Description: Confirmed delivery date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery date")]
-		public DateTime? M3_CODZ => GetNullableDateTime("CODZ");
+		public DateTime? M3CODZ => GetNullableDateTime("CODZ");
 
 		/// <summary>
 		/// Description: Confirmed delivery time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery time")]
-		public int? M3_COHZ => GetNullableInt("COHZ");
+		public int? M3COHZ => GetNullableInt("COHZ");
 
 		/// <summary>
 		/// Description: Proposed quantity - alternate U/M
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Proposed quantity - alternate U/M")]
-		public decimal? M3_PBQA => GetNullableDecimal("PBQA");
+		public decimal? M3PBQA => GetNullableDecimal("PBQA");
 
 		/// <summary>
 		/// Description: Alternate U/M
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternate U/M")]
-		public string M3_ALUN => GetString("ALUN");
+		public string M3ALUN => GetString("ALUN");
 
 		/// <summary>
 		/// Description: Available-to-promise - cumulative
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Available-to-promise - cumulative")]
-		public decimal? M3_AVTP => GetNullableDecimal("AVTP");
+		public decimal? M3AVTP => GetNullableDecimal("AVTP");
 
 		/// <summary>
 		/// Description: Cond replacement
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cond replacement")]
-		public int? M3_CNRE => GetNullableInt("CNRE");
+		public int? M3CNRE => GetNullableInt("CNRE");
 
 		/// <summary>
 		/// Description: Condition
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Condition")]
-		public string M3_CNDN => GetString("CNDN");
+		public string M3CNDN => GetString("CNDN");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Selected alternative
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected alternative")]
-		public int? M3_PALT => GetNullableInt("PALT");
+		public int? M3PALT => GetNullableInt("PALT");
 
 		/// <summary>
 		/// Description: Automatic option
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic option")]
-		public int? M3_AOPT => GetNullableInt("AOPT");
+		public int? M3AOPT => GetNullableInt("AOPT");
 
 		/// <summary>
 		/// Description: Split on alternative
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Split on alternative")]
-		public int? M3_SPLP => GetNullableInt("SPLP");
+		public int? M3SPLP => GetNullableInt("SPLP");
 
 		/// <summary>
 		/// Description: Backorder
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Backorder")]
-		public int? M3_BCKO => GetNullableInt("BCKO");
+		public int? M3BCKO => GetNullableInt("BCKO");
 
 		/// <summary>
 		/// Description: Partial delivery
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partial delivery")]
-		public int? M3_PADL => GetNullableInt("PADL");
+		public int? M3PADL => GetNullableInt("PADL");
 
 		/// <summary>
 		/// Description: Available-to-promise calculation
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Available-to-promise calculation")]
-		public int? M3_ATPC => GetNullableInt("ATPC");
+		public int? M3ATPC => GetNullableInt("ATPC");
 
 		/// <summary>
 		/// Description: Capacity-to-promise check
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity-to-promise check")]
-		public int? M3_CTPC => GetNullableInt("CTPC");
+		public int? M3CTPC => GetNullableInt("CTPC");
 
 		/// <summary>
 		/// Description: Material-to-promise check
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material-to-promise check")]
-		public int? M3_MTPC => GetNullableInt("MTPC");
+		public int? M3MTPC => GetNullableInt("MTPC");
 
 		/// <summary>
 		/// Description: Transportation-to-promise check
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation-to-promise check")]
-		public int? M3_TTPC => GetNullableInt("TTPC");
+		public int? M3TTPC => GetNullableInt("TTPC");
 
 		/// <summary>
 		/// Description: Line type
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line type")]
-		public string M3_LTYP => GetString("LTYP");
+		public string M3LTYP => GetString("LTYP");
 
 		/// <summary>
 		/// Description: Supplier
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Sourcing warehouse
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sourcing warehouse")]
-		public string M3_SWHL => GetString("SWHL");
+		public string M3SWHL => GetString("SWHL");
 
 		/// <summary>
 		/// Description: Order type
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Replace item
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replace item")]
-		public int? M3_AFL6 => GetNullableInt("AFL6");
+		public int? M3AFL6 => GetNullableInt("AFL6");
 
 		/// <summary>
 		/// Description: Planning date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Planning time
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning time")]
-		public int? M3_PLHM => GetNullableInt("PLHM");
+		public int? M3PLHM => GetNullableInt("PLHM");
 
 		/// <summary>
 		/// Description: Confirmed delivery date
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery date")]
-		public DateTime? M3_CODT => GetNullableDateTime("CODT");
+		public DateTime? M3CODT => GetNullableDateTime("CODT");
 
 		/// <summary>
 		/// Description: Confirmed delivery time
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Confirmed delivery time")]
-		public int? M3_COHM => GetNullableInt("COHM");
+		public int? M3COHM => GetNullableInt("COHM");
 
 		/// <summary>
 		/// Description: Route
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route")]
-		public string M3_ROUT => GetString("ROUT");
+		public string M3ROUT => GetString("ROUT");
 
 		/// <summary>
 		/// Description: Route departure
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route departure")]
-		public int? M3_RODN => GetNullableInt("RODN");
+		public int? M3RODN => GetNullableInt("RODN");
 
 		/// <summary>
 		/// Description: Main product
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main product")]
-		public string M3_HDPR => GetString("HDPR");
+		public string M3HDPR => GetString("HDPR");
 
 		/// <summary>
 		/// Description: Transaction quantity in alt U/M
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity in alt U/M")]
-		public decimal? M3_TRQA => GetNullableDecimal("TRQA");
+		public decimal? M3TRQA => GetNullableDecimal("TRQA");
 
 		/// <summary>
 		/// Description: First delivery date
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("First delivery date")]
-		public DateTime? M3_FDDZ => GetNullableDateTime("FDDZ");
+		public DateTime? M3FDDZ => GetNullableDateTime("FDDZ");
 
 		/// <summary>
 		/// Description: First delivery time
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("First delivery time")]
-		public int? M3_FDHZ => GetNullableInt("FDHZ");
+		public int? M3FDHZ => GetNullableInt("FDHZ");
 
 		/// <summary>
 		/// Description: Last delivery date
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last delivery date")]
-		public DateTime? M3_LDDZ => GetNullableDateTime("LDDZ");
+		public DateTime? M3LDDZ => GetNullableDateTime("LDDZ");
 
 		/// <summary>
 		/// Description: Last delivery time
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last delivery time")]
-		public int? M3_LDHZ => GetNullableInt("LDHZ");
+		public int? M3LDHZ => GetNullableInt("LDHZ");
 
 		/// <summary>
 		/// Description: Availability date
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Availability date")]
-		public DateTime? M3_AVDT => GetNullableDateTime("AVDT");
+		public DateTime? M3AVDT => GetNullableDateTime("AVDT");
 
 		/// <summary>
 		/// Description: Time hours & minutes
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time hours & minutes")]
-		public int? M3_TIHM => GetNullableInt("TIHM");
+		public int? M3TIHM => GetNullableInt("TIHM");
 
 		/// <summary>
 		/// Description: Issue multiple
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Issue multiple")]
-		public decimal? M3_TOMU => GetNullableDecimal("TOMU");
+		public decimal? M3TOMU => GetNullableDecimal("TOMU");
 
 		/// <summary>
 		/// Description: Supply model
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply model")]
-		public string M3_SPLM => GetString("SPLM");
+		public string M3SPLM => GetString("SPLM");
 
 		/// <summary>
 		/// Description: Priority
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PREX => GetString("PREX");
+		public string M3PREX => GetString("PREX");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Start value 4
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 4")]
-		public string M3_OBV4 => GetString("OBV4");
+		public string M3OBV4 => GetString("OBV4");
 
 		/// <summary>
 		/// Description: From date
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Multiple selection
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiple selection")]
-		public int? M3_MSEL => GetNullableInt("MSEL");
+		public int? M3MSEL => GetNullableInt("MSEL");
 
 		/// <summary>
 		/// Description: Original confirmed delivery date
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original confirmed delivery date")]
-		public DateTime? M3_COD1 => GetNullableDateTime("COD1");
+		public DateTime? M3COD1 => GetNullableDateTime("COD1");
 
 		/// <summary>
 		/// Description: Original confirmed delivery time
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original confirmed delivery time")]
-		public int? M3_COH1 => GetNullableInt("COH1");
+		public int? M3COH1 => GetNullableInt("COH1");
 
 		/// <summary>
 		/// Description: Manually changed
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually changed")]
-		public int? M3_MCPL => GetNullableInt("MCPL");
+		public int? M3MCPL => GetNullableInt("MCPL");
 
 		/// <summary>
 		/// Description: Free message 1
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free message 1")]
-		public string M3_MSG1 => GetString("MSG1");
+		public string M3MSG1 => GetString("MSG1");
 
 		/// <summary>
 		/// Description: Free message 2
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free message 2")]
-		public string M3_MSG2 => GetString("MSG2");
+		public string M3MSG2 => GetString("MSG2");
 
 		/// <summary>
 		/// Description: Free message 3
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.OIS340MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Free message 3")]
-		public string M3_MSG3 => GetString("MSG3");
+		public string M3MSG3 => GetString("MSG3");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS110MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add rental deposit
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_DEPA">Deposit Amount</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3DEPA">Deposit Amount</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddDeposit(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int? m3_SEQN = null, 
-			string m3_PYNO = null, 
-			decimal? m3_DEPA = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int? m3SEQN = null, 
+			string m3PYNO = null, 
+			decimal? m3DEPA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,21 +70,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (m3_DEPA.HasValue)
-				request.WithQueryParameter("DEPA", m3_DEPA.Value.ToString());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (m3DEPA.HasValue)
+				request.WithQueryParameter("DEPA", m3DEPA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -92,7 +94,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -103,11 +106,11 @@ namespace M3H5Lib.Api
 		/// Description Change deposit
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number (Required)</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_DEPA">Deposit Amount</param>
-		/// <param name="m3_VERS">Version</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3SEQN">Sequence number (Required)</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3DEPA">Deposit Amount</param>
+		/// <param name="m3VERS">Version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -116,11 +119,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgDeposit(
-			string m3_AGNB, 
-			int m3_SEQN, 
-			string m3_PYNO = null, 
-			decimal? m3_DEPA = null, 
-			int? m3_VERS = null, 
+			string m3AGNB, 
+			int m3SEQN, 
+			string m3PYNO = null, 
+			decimal? m3DEPA = null, 
+			int? m3VERS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -135,21 +138,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("SEQN", m3_SEQN.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("SEQN", m3SEQN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (m3_DEPA.HasValue)
-				request.WithQueryParameter("DEPA", m3_DEPA.Value.ToString());
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (m3DEPA.HasValue)
+				request.WithQueryParameter("DEPA", m3DEPA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -159,7 +162,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -170,9 +174,9 @@ namespace M3H5Lib.Api
 		/// Description Delete Deposit
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_SEQN">Sequence number (Required)</param>
-		/// <param name="m3_VERS">Version</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3SEQN">Sequence number (Required)</param>
+		/// <param name="m3VERS">Version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -181,9 +185,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelDeposit(
-			string m3_AGNB, 
-			int m3_SEQN, 
-			int? m3_VERS = null, 
+			string m3AGNB, 
+			int m3SEQN, 
+			int? m3VERS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -198,17 +202,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("SEQN", m3_SEQN.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("SEQN", m3SEQN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -218,7 +222,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -229,9 +234,9 @@ namespace M3H5Lib.Api
 		/// Description Get deposit
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number</param>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_VERS">Version</param>
+		/// <param name="m3AGNB">Agreement number</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3VERS">Version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -240,9 +245,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDepositResponse></returns>
 		/// <exception cref="M3Exception<GetDepositResponse>"></exception>
 		public async Task<M3Response<GetDepositResponse>> GetDeposit(
-			string m3_AGNB = null, 
-			int? m3_SEQN = null, 
-			int? m3_VERS = null, 
+			string m3AGNB = null, 
+			int? m3SEQN = null, 
+			int? m3VERS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -257,12 +262,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AGNB))
-				request.WithQueryParameter("AGNB", m3_AGNB.Trim());
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3AGNB))
+				request.WithQueryParameter("AGNB", m3AGNB.Trim());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetDepositResponse>(
@@ -272,7 +277,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -283,9 +289,9 @@ namespace M3H5Lib.Api
 		/// Description List deposit
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number</param>
-		/// <param name="m3_SEQN">Sequence number</param>
-		/// <param name="m3_VERS">Version</param>
+		/// <param name="m3AGNB">Agreement number</param>
+		/// <param name="m3SEQN">Sequence number</param>
+		/// <param name="m3VERS">Version</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -294,9 +300,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDepositResponse></returns>
 		/// <exception cref="M3Exception<LstDepositResponse>"></exception>
 		public async Task<M3Response<LstDepositResponse>> LstDeposit(
-			string m3_AGNB = null, 
-			int? m3_SEQN = null, 
-			int? m3_VERS = null, 
+			string m3AGNB = null, 
+			int? m3SEQN = null, 
+			int? m3VERS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -311,12 +317,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_AGNB))
-				request.WithQueryParameter("AGNB", m3_AGNB.Trim());
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
-			if (m3_VERS.HasValue)
-				request.WithQueryParameter("VERS", m3_VERS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3AGNB))
+				request.WithQueryParameter("AGNB", m3AGNB.Trim());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VERS.HasValue)
+				request.WithQueryParameter("VERS", m3VERS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstDepositResponse>(
@@ -326,7 +332,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

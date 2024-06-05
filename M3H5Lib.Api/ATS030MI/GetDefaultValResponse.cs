@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Priority
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PREX => GetString("PREX");
+		public string M3PREX => GetString("PREX");
 
 		/// <summary>
 		/// Description: Attribute type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute type")]
-		public string M3_ATVC => GetString("ATVC");
+		public string M3ATVC => GetString("ATVC");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Default value
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default value")]
-		public string M3_DEVA => GetString("DEVA");
+		public string M3DEVA => GetString("DEVA");
 
 		/// <summary>
 		/// Description: Field
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJC => GetString("OBJC");
+		public string M3OBJC => GetString("OBJC");
 
 		/// <summary>
 		/// Description: Formula
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula")]
-		public string M3_FMID => GetString("FMID");
+		public string M3FMID => GetString("FMID");
 
 		/// <summary>
 		/// Description: Formula result identity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Formula result identity")]
-		public string M3_FORI => GetString("FORI");
+		public string M3FORI => GetString("FORI");
 
 		/// <summary>
 		/// Description: Attribute value range - from percentage
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value range - from percentage")]
-		public int? M3_AVRP => GetNullableInt("AVRP");
+		public int? M3AVRP => GetNullableInt("AVRP");
 
 		/// <summary>
 		/// Description: Attribute value range - to percentage
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value range - to percentage")]
-		public int? M3_ATRP => GetNullableInt("ATRP");
+		public int? M3ATRP => GetNullableInt("ATRP");
 
 		/// <summary>
 		/// Description: Attribute range value - from
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute range value - from")]
-		public decimal? M3_AVRV => GetNullableDecimal("AVRV");
+		public decimal? M3AVRV => GetNullableDecimal("AVRV");
 
 		/// <summary>
 		/// Description: Attribute value range -  to value
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value range -  to value")]
-		public decimal? M3_ATRV => GetNullableDecimal("ATRV");
+		public decimal? M3ATRV => GetNullableDecimal("ATRV");
 
 		/// <summary>
 		/// Description: From formula result identity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From formula result identity")]
-		public string M3_AFRF => GetString("AFRF");
+		public string M3AFRF => GetString("AFRF");
 
 		/// <summary>
 		/// Description: To formula result identity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To formula result identity")]
-		public string M3_ATRF => GetString("ATRF");
+		public string M3ATRF => GetString("ATRF");
 
 		/// <summary>
 		/// Description: Inheritance
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inheritance")]
-		public int? M3_INHC => GetNullableInt("INHC");
+		public int? M3INHC => GetNullableInt("INHC");
 
 		/// <summary>
 		/// Description: Item attribute
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ATS030MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item attribute")]
-		public int? M3_IATT => GetNullableInt("IATT");
+		public int? M3IATT => GetNullableInt("IATT");
 	}
 }
 // EOF

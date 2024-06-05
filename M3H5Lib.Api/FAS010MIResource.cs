@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.FAS010MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description List Fixed asset usage plan
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_ASID">Fixed asset (Required)</param>
-		/// <param name="m3_SBNO">Subnumber (Required)</param>
-		/// <param name="m3_DPTP">Depreciation type (Required)</param>
-		/// <param name="m3_VPER">Value period</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3ASID">Fixed asset (Required)</param>
+		/// <param name="m3SBNO">Subnumber (Required)</param>
+		/// <param name="m3DPTP">Depreciation type (Required)</param>
+		/// <param name="m3VPER">Value period</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAssetUsageResponse></returns>
 		/// <exception cref="M3Exception<LstAssetUsageResponse>"></exception>
 		public async Task<M3Response<LstAssetUsageResponse>> LstAssetUsage(
-			int m3_CONO, 
-			string m3_DIVI, 
-			string m3_ASID, 
-			int m3_SBNO, 
-			int m3_DPTP, 
-			int? m3_VPER = null, 
+			int m3CONO, 
+			string m3DIVI, 
+			string m3ASID, 
+			int m3SBNO, 
+			int m3DPTP, 
+			int? m3VPER = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,22 +72,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_ASID))
-				throw new ArgumentNullException("m3_ASID");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3ASID))
+				throw new ArgumentNullException(nameof(m3ASID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("ASID", m3_ASID.Trim())
-				.WithQueryParameter("SBNO", m3_SBNO.ToString())
-				.WithQueryParameter("DPTP", m3_DPTP.ToString());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("ASID", m3ASID.Trim())
+				.WithQueryParameter("SBNO", m3SBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DPTP", m3DPTP.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_VPER.HasValue)
-				request.WithQueryParameter("VPER", m3_VPER.Value.ToString());
+			if (m3VPER.HasValue)
+				request.WithQueryParameter("VPER", m3VPER.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAssetUsageResponse>(
@@ -95,7 +97,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -106,13 +109,13 @@ namespace M3H5Lib.Api
 		/// Description Update Fixed asset usage
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_ASID">Fixed asset (Required)</param>
-		/// <param name="m3_SBNO">Subnumber (Required)</param>
-		/// <param name="m3_DPTP">Depreciation type (Required)</param>
-		/// <param name="m3_VPER">Value period (Required)</param>
-		/// <param name="m3_USSH">Used share (Required)</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3ASID">Fixed asset (Required)</param>
+		/// <param name="m3SBNO">Subnumber (Required)</param>
+		/// <param name="m3DPTP">Depreciation type (Required)</param>
+		/// <param name="m3VPER">Value period (Required)</param>
+		/// <param name="m3USSH">Used share (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -121,13 +124,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAssetUsage(
-			int m3_CONO, 
-			string m3_DIVI, 
-			string m3_ASID, 
-			int m3_SBNO, 
-			int m3_DPTP, 
-			int m3_VPER, 
-			decimal m3_USSH, 
+			int m3CONO, 
+			string m3DIVI, 
+			string m3ASID, 
+			int m3SBNO, 
+			int m3DPTP, 
+			int m3VPER, 
+			decimal m3USSH, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -142,20 +145,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_ASID))
-				throw new ArgumentNullException("m3_ASID");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3ASID))
+				throw new ArgumentNullException(nameof(m3ASID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("ASID", m3_ASID.Trim())
-				.WithQueryParameter("SBNO", m3_SBNO.ToString())
-				.WithQueryParameter("DPTP", m3_DPTP.ToString())
-				.WithQueryParameter("VPER", m3_VPER.ToString())
-				.WithQueryParameter("USSH", m3_USSH.ToString());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("ASID", m3ASID.Trim())
+				.WithQueryParameter("SBNO", m3SBNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DPTP", m3DPTP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("VPER", m3VPER.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("USSH", m3USSH.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -165,7 +168,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

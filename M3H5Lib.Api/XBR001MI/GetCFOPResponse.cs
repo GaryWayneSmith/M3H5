@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Internal CFOP Code
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal CFOP Code")]
-		public string M3_ICFO => GetString("ICFO");
+		public string M3ICFO => GetString("ICFO");
 
 		/// <summary>
 		/// Description: CFOP
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CFOP")]
-		public string M3_CFOP => GetString("CFOP");
+		public string M3CFOP => GetString("CFOP");
 
 		/// <summary>
 		/// Description: Text
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TEXT => GetString("TEXT");
+		public string M3TEXT => GetString("TEXT");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TEX1 => GetString("TEX1");
+		public string M3TEX1 => GetString("TEX1");
 
 		/// <summary>
 		/// Description: Text
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TEX2 => GetString("TEX2");
+		public string M3TEX2 => GetString("TEX2");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TEX3 => GetString("TEX3");
+		public string M3TEX3 => GetString("TEX3");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TEX4 => GetString("TEX4");
+		public string M3TEX4 => GetString("TEX4");
 
 		/// <summary>
 		/// Description: Freight Invoice
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight Invoice")]
-		public string M3_FINV => GetString("FINV");
+		public string M3FINV => GetString("FINV");
 
 		/// <summary>
 		/// Description: Service Invoice
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service Invoice")]
-		public string M3_SINV => GetString("SINV");
+		public string M3SINV => GetString("SINV");
 
 		/// <summary>
 		/// Description: Service Code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service Code")]
-		public string M3_SERV => GetString("SERV");
+		public string M3SERV => GetString("SERV");
 
 		/// <summary>
 		/// Description: % ISS
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% ISS")]
-		public int? M3_CISS => GetNullableInt("CISS");
+		public int? M3CISS => GetNullableInt("CISS");
 
 		/// <summary>
 		/// Description: Calculates IPI
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculates IPI")]
-		public string M3_XCIP => GetString("XCIP");
+		public string M3XCIP => GetString("XCIP");
 
 		/// <summary>
 		/// Description: Calculates ICMS
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculates ICMS")]
-		public int? M3_CICM => GetNullableInt("CICM");
+		public int? M3CICM => GetNullableInt("CICM");
 
 		/// <summary>
 		/// Description: % ICMS
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% ICMS")]
-		public int? M3_ICMS => GetNullableInt("ICMS");
+		public int? M3ICMS => GetNullableInt("ICMS");
 
 		/// <summary>
 		/// Description: % Repasse discount
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Repasse discount")]
-		public int? M3_RDIS => GetNullableInt("RDIS");
+		public int? M3RDIS => GetNullableInt("RDIS");
 
 		/// <summary>
 		/// Description: PIS from Item
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PIS from Item")]
-		public string M3_CPIS => GetString("CPIS");
+		public string M3CPIS => GetString("CPIS");
 
 		/// <summary>
 		/// Description: COFINS from Item
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("COFINS from Item")]
-		public string M3_XCCO => GetString("XCCO");
+		public string M3XCCO => GetString("XCCO");
 
 		/// <summary>
 		/// Description: IPI Credit at Goods receipt
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("IPI Credit at Goods receipt")]
-		public string M3_GIPI => GetString("GIPI");
+		public string M3GIPI => GetString("GIPI");
 
 		/// <summary>
 		/// Description: ICMS Credit at Goods receipt
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ICMS Credit at Goods receipt")]
-		public string M3_GICM => GetString("GICM");
+		public string M3GICM => GetString("GICM");
 
 		/// <summary>
 		/// Description: PIS Credit at Goods receipt
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PIS Credit at Goods receipt")]
-		public string M3_GPIS => GetString("GPIS");
+		public string M3GPIS => GetString("GPIS");
 
 		/// <summary>
 		/// Description: COFINS Credit at Goods receipt
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("COFINS Credit at Goods receipt")]
-		public string M3_GCOF => GetString("GCOF");
+		public string M3GCOF => GetString("GCOF");
 
 		/// <summary>
 		/// Description: Gen Acc Payable
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gen Acc Payable")]
-		public string M3_GEAP => GetString("GEAP");
+		public string M3GEAP => GetString("GEAP");
 
 		/// <summary>
 		/// Description: Gen Acc Receiv
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gen Acc Receiv")]
-		public string M3_GEAR => GetString("GEAR");
+		public string M3GEAR => GetString("GEAR");
 
 		/// <summary>
 		/// Description: % Red. base IPI
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Red. base IPI")]
-		public int? M3_RIPI => GetNullableInt("RIPI");
+		public int? M3RIPI => GetNullableInt("RIPI");
 
 		/// <summary>
 		/// Description: % Red. base ICMS
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Red. base ICMS")]
-		public int? M3_RICM => GetNullableInt("RICM");
+		public int? M3RICM => GetNullableInt("RICM");
 
 		/// <summary>
 		/// Description: % Ret PIS
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Ret PIS")]
-		public int? M3_RPIS => GetNullableInt("RPIS");
+		public int? M3RPIS => GetNullableInt("RPIS");
 
 		/// <summary>
 		/// Description: % Ret COFINS
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% Ret COFINS")]
-		public int? M3_RCOF => GetNullableInt("RCOF");
+		public int? M3RCOF => GetNullableInt("RCOF");
 
 		/// <summary>
 		/// Description: ICMS tribute code
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ICMS tribute code")]
-		public string M3_TICM => GetString("TICM");
+		public string M3TICM => GetString("TICM");
 
 		/// <summary>
 		/// Description: Fiscal code
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fiscal code")]
-		public string M3_XFIS => GetString("XFIS");
+		public string M3XFIS => GetString("XFIS");
 
 		/// <summary>
 		/// Description: SUFRAMA
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SUFRAMA")]
-		public string M3_XURF => GetString("XURF");
+		public string M3XURF => GetString("XURF");
 
 		/// <summary>
 		/// Description: Cv ICMS 24/2001
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cv ICMS 24/2001")]
-		public string M3_OICM => GetString("OICM");
+		public string M3OICM => GetString("OICM");
 
 		/// <summary>
 		/// Description: PIS retained
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PIS retained")]
-		public string M3_PISR => GetString("PISR");
+		public string M3PISR => GetString("PISR");
 
 		/// <summary>
 		/// Description: COFINS retained
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("COFINS retained")]
-		public string M3_COFR => GetString("COFR");
+		public string M3COFR => GetString("COFR");
 
 		/// <summary>
 		/// Description: CSLL retained
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("CSLL retained")]
-		public string M3_CSLR => GetString("CSLR");
+		public string M3CSLR => GetString("CSLR");
 
 		/// <summary>
 		/// Description: ISS retained
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ISS retained")]
-		public string M3_ISSR => GetString("ISSR");
+		public string M3ISSR => GetString("ISSR");
 
 		/// <summary>
 		/// Description: PIS import
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PIS import")]
-		public string M3_IPIS => GetString("IPIS");
+		public string M3IPIS => GetString("IPIS");
 
 		/// <summary>
 		/// Description: COFINS import
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("COFINS import")]
-		public string M3_XICO => GetString("XICO");
+		public string M3XICO => GetString("XICO");
 
 		/// <summary>
 		/// Description: % PIS
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% PIS")]
-		public string M3_XPI1 => GetString("XPI1");
+		public string M3XPI1 => GetString("XPI1");
 
 		/// <summary>
 		/// Description: % COFINS
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% COFINS")]
-		public int? M3_COFI => GetNullableInt("COFI");
+		public int? M3COFI => GetNullableInt("COFI");
 
 		/// <summary>
 		/// Description: Cred sub trib
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cred sub trib")]
-		public string M3_GSUB => GetString("GSUB");
+		public string M3GSUB => GetString("GSUB");
 
 		/// <summary>
 		/// Description: Text identity
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: IPI Tributation Code
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("IPI Tributation Code")]
-		public string M3_TIPI => GetString("TIPI");
+		public string M3TIPI => GetString("TIPI");
 
 		/// <summary>
 		/// Description: PIS Tributation Code
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PIS Tributation Code")]
-		public string M3_TPIS => GetString("TPIS");
+		public string M3TPIS => GetString("TPIS");
 
 		/// <summary>
 		/// Description: % COFINS
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("% COFINS")]
-		public int? M3_TCOF => GetNullableInt("TCOF");
+		public int? M3TCOF => GetNullableInt("TCOF");
 
 		/// <summary>
 		/// Description: ISSQN tributation code
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("ISSQN tributation code")]
-		public string M3_ISSC => GetString("ISSC");
+		public string M3ISSC => GetString("ISSC");
 	}
 }
 // EOF

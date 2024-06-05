@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.GLS030MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Get accounting id category
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_SCEN">Scenario</param>
-		/// <param name="m3_AITP">Accounting dimension</param>
-		/// <param name="m3_AITM">Accounting identity</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3SCEN">Scenario</param>
+		/// <param name="m3AITP">Accounting dimension</param>
+		/// <param name="m3AITM">Accounting identity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAcntIdCtgryResponse></returns>
 		/// <exception cref="M3Exception<GetAcntIdCtgryResponse>"></exception>
 		public async Task<M3Response<GetAcntIdCtgryResponse>> GetAcntIdCtgry(
-			string m3_DIVI = null, 
-			string m3_SCEN = null, 
-			int? m3_AITP = null, 
-			string m3_AITM = null, 
+			string m3DIVI = null, 
+			string m3SCEN = null, 
+			int? m3AITP = null, 
+			string m3AITM = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,14 +68,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SCEN))
-				request.WithQueryParameter("SCEN", m3_SCEN.Trim());
-			if (m3_AITP.HasValue)
-				request.WithQueryParameter("AITP", m3_AITP.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_AITM))
-				request.WithQueryParameter("AITM", m3_AITM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SCEN))
+				request.WithQueryParameter("SCEN", m3SCEN.Trim());
+			if (m3AITP.HasValue)
+				request.WithQueryParameter("AITP", m3AITP.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3AITM))
+				request.WithQueryParameter("AITM", m3AITM.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAcntIdCtgryResponse>(
@@ -83,7 +85,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

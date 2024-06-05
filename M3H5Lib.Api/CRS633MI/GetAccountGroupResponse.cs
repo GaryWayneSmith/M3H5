@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Account group
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account group")]
-		public string M3_AICL => GetString("AICL");
+		public string M3AICL => GetString("AICL");
 
 		/// <summary>
 		/// Description: Level
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Level")]
-		public int? M3_LVEL => GetNullableInt("LVEL");
+		public int? M3LVEL => GetNullableInt("LVEL");
 
 		/// <summary>
 		/// Description: Sequence within level
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence within level")]
-		public int? M3_LVLS => GetNullableInt("LVLS");
+		public int? M3LVLS => GetNullableInt("LVLS");
 
 		/// <summary>
 		/// Description: Account group type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account group type")]
-		public int? M3_ACLT => GetNullableInt("ACLT");
+		public int? M3ACLT => GetNullableInt("ACLT");
 
 		/// <summary>
 		/// Description: Page break
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Page break")]
-		public int? M3_QRYB => GetNullableInt("QRYB");
+		public int? M3QRYB => GetNullableInt("QRYB");
 
 		/// <summary>
 		/// Description: Account group level 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account group level 1")]
-		public string M3_AIC1 => GetString("AIC1");
+		public string M3AIC1 => GetString("AIC1");
 
 		/// <summary>
 		/// Description: Account group level 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account group level 2")]
-		public string M3_AIC2 => GetString("AIC2");
+		public string M3AIC2 => GetString("AIC2");
 
 		/// <summary>
 		/// Description: Account group level 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account group level 3")]
-		public string M3_AIC3 => GetString("AIC3");
+		public string M3AIC3 => GetString("AIC3");
 
 		/// <summary>
 		/// Description: Account group level 4
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Account group level 4")]
-		public string M3_AIC4 => GetString("AIC4");
+		public string M3AIC4 => GetString("AIC4");
 
 		/// <summary>
 		/// Description: Country description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Country name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS633MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 	}
 }
 // EOF

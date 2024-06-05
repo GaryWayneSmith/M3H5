@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Shift model
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shift model")]
-		public string M3_SHFM => GetString("SHFM");
+		public string M3SHFM => GetString("SHFM");
 
 		/// <summary>
 		/// Description: Start day
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start day")]
-		public string M3_SDAY => GetString("SDAY");
+		public string M3SDAY => GetString("SDAY");
 
 		/// <summary>
 		/// Description: Start time
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public string M3_STIM => GetString("STIM");
+		public string M3STIM => GetString("STIM");
 
 		/// <summary>
 		/// Description: End day
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End day")]
-		public string M3_EDAY => GetString("EDAY");
+		public string M3EDAY => GetString("EDAY");
 
 		/// <summary>
 		/// Description: End time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("End time")]
-		public string M3_ETIM => GetString("ETIM");
+		public string M3ETIM => GetString("ETIM");
 
 		/// <summary>
 		/// Description: Shift
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shift")]
-		public string M3_SHFC => GetString("SHFC");
+		public string M3SHFC => GetString("SHFC");
 
 		/// <summary>
 		/// Description: APP shift reference
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("APP shift reference")]
-		public int? M3_PMSR => GetNullableInt("PMSR");
+		public int? M3PMSR => GetNullableInt("PMSR");
 
 		/// <summary>
 		/// Description: Nominal number of hours
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Nominal number of hours")]
-		public int? M3_GHRS => GetNullableInt("GHRS");
+		public int? M3GHRS => GetNullableInt("GHRS");
 
 		/// <summary>
 		/// Description: Change date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Shift Model description
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shift Model description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Shift Model name
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shift Model name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Work schedule
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS515MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule")]
-		public int? M3_WOSC => GetNullableInt("WOSC");
+		public int? M3WOSC => GetNullableInt("WOSC");
 	}
 }
 // EOF

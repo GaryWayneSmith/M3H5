@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Engineering order number")]
-		public string M3_AECN => GetString("AECN");
+		public string M3AECN => GetString("AECN");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Planned start date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned start date")]
-		public DateTime? M3_PLSD => GetNullableDateTime("PLSD");
+		public DateTime? M3PLSD => GetNullableDateTime("PLSD");
 
 		/// <summary>
 		/// Description: Status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Revision number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number")]
-		public string M3_ECVE => GetString("ECVE");
+		public string M3ECVE => GetString("ECVE");
 
 		/// <summary>
 		/// Description: Revision number - engineering order
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision number - engineering order")]
-		public string M3_AECR => GetString("AECR");
+		public string M3AECR => GetString("AECR");
 
 		/// <summary>
 		/// Description: Modification marking
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Modification marking")]
-		public string M3_MODM => GetString("MODM");
+		public string M3MODM => GetString("MODM");
 
 		/// <summary>
 		/// Description: Replacement type
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement type")]
-		public int? M3_RPTY => GetNullableInt("RPTY");
+		public int? M3RPTY => GetNullableInt("RPTY");
 
 		/// <summary>
 		/// Description: Text identity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

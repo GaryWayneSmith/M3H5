@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JBNO => GetNullableInt("JBNO");
+		public int? M3JBNO => GetNullableInt("JBNO");
 
 		/// <summary>
 		/// Description: Job date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public DateTime? M3_JBDT => GetNullableDateTime("JBDT");
+		public DateTime? M3JBDT => GetNullableDateTime("JBDT");
 
 		/// <summary>
 		/// Description: Job time
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_JBTM => GetNullableInt("JBTM");
+		public int? M3JBTM => GetNullableInt("JBTM");
 
 		/// <summary>
 		/// Description: Company
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Payment type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment type")]
-		public string M3_PYTP => GetString("PYTP");
+		public string M3PYTP => GetString("PYTP");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKID => GetString("BKID");
+		public string M3BKID => GetString("BKID");
 
 		/// <summary>
 		/// Description: Bank account indicator
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account indicator")]
-		public string M3_BKIN => GetString("BKIN");
+		public string M3BKIN => GetString("BKIN");
 
 		/// <summary>
 		/// Description: Bank account field 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 1")]
-		public string M3_BAF1 => GetString("BAF1");
+		public string M3BAF1 => GetString("BAF1");
 
 		/// <summary>
 		/// Description: Bank account field 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 2")]
-		public string M3_BAF2 => GetString("BAF2");
+		public string M3BAF2 => GetString("BAF2");
 
 		/// <summary>
 		/// Description: Bank account field 3
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 3")]
-		public string M3_BAF3 => GetString("BAF3");
+		public string M3BAF3 => GetString("BAF3");
 
 		/// <summary>
 		/// Description: Bank account field 4
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 4")]
-		public string M3_BAF4 => GetString("BAF4");
+		public string M3BAF4 => GetString("BAF4");
 
 		/// <summary>
 		/// Description: Bank account field 5
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account field 5")]
-		public string M3_BAF5 => GetString("BAF5");
+		public string M3BAF5 => GetString("BAF5");
 
 		/// <summary>
 		/// Description: Bank name
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank name")]
-		public string M3_BKNM => GetString("BKNM");
+		public string M3BKNM => GetString("BKNM");
 
 		/// <summary>
 		/// Description: Check number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check number")]
-		public string M3_CKNO => GetString("CKNO");
+		public string M3CKNO => GetString("CKNO");
 
 		/// <summary>
 		/// Description: Year
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Journal number
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal number")]
-		public int? M3_JRNO => GetNullableInt("JRNO");
+		public int? M3JRNO => GetNullableInt("JRNO");
 
 		/// <summary>
 		/// Description: Journal sequence number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Journal sequence number")]
-		public int? M3_JSNO => GetNullableInt("JSNO");
+		public int? M3JSNO => GetNullableInt("JSNO");
 
 		/// <summary>
 		/// Description: Payer
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public string M3_CINO => GetString("CINO");
+		public string M3CINO => GetString("CINO");
 
 		/// <summary>
 		/// Description: Invoice year
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice year")]
-		public int? M3_INYR => GetNullableInt("INYR");
+		public int? M3INYR => GetNullableInt("INYR");
 
 		/// <summary>
 		/// Description: Voucher number series
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number series")]
-		public string M3_VSER => GetString("VSER");
+		public string M3VSER => GetString("VSER");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: Customer group
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer group")]
-		public string M3_CUCL => GetString("CUCL");
+		public string M3CUCL => GetString("CUCL");
 
 		/// <summary>
 		/// Description: Currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTP => GetNullableInt("CRTP");
+		public int? M3CRTP => GetNullableInt("CRTP");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Foreign currency amount
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign currency amount")]
-		public decimal? M3_CUAM => GetNullableDecimal("CUAM");
+		public decimal? M3CUAM => GetNullableDecimal("CUAM");
 
 		/// <summary>
 		/// Description: Decimal places for amount
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Decimal places for amount")]
-		public int? M3_DCAM => GetNullableInt("DCAM");
+		public int? M3DCAM => GetNullableInt("DCAM");
 
 		/// <summary>
 		/// Description: Due date
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Due date")]
-		public DateTime? M3_DUDT => GetNullableDateTime("DUDT");
+		public DateTime? M3DUDT => GetNullableDateTime("DUDT");
 
 		/// <summary>
 		/// Description: Accounting date
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting date")]
-		public DateTime? M3_ACDT => GetNullableDateTime("ACDT");
+		public DateTime? M3ACDT => GetNullableDateTime("ACDT");
 
 		/// <summary>
 		/// Description: Payment date
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment date")]
-		public DateTime? M3_DTP5 => GetNullableDateTime("DTP5");
+		public DateTime? M3DTP5 => GetNullableDateTime("DTP5");
 
 		/// <summary>
 		/// Description: Payment method - accounts receivable
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment method - accounts receivable")]
-		public string M3_PYCD => GetString("PYCD");
+		public string M3PYCD => GetString("PYCD");
 
 		/// <summary>
 		/// Description: Bank account identity
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank account identity")]
-		public string M3_BKI2 => GetString("BKI2");
+		public string M3BKI2 => GetString("BKI2");
 
 		/// <summary>
 		/// Description: Acceptance code
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acceptance code")]
-		public int? M3_QACE => GetNullableInt("QACE");
+		public int? M3QACE => GetNullableInt("QACE");
 
 		/// <summary>
 		/// Description: Banking region
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Banking region")]
-		public string M3_BKPL => GetString("BKPL");
+		public string M3BKPL => GetString("BKPL");
 
 		/// <summary>
 		/// Description: Remittance number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remittance number")]
-		public int? M3_RMNB => GetNullableInt("RMNB");
+		public int? M3RMNB => GetNullableInt("RMNB");
 
 		/// <summary>
 		/// Description: Status - remittance
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - remittance")]
-		public int? M3_RSTA => GetNullableInt("RSTA");
+		public int? M3RSTA => GetNullableInt("RSTA");
 
 		/// <summary>
 		/// Description: Bank EDI agreement number
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bank EDI agreement number")]
-		public string M3_BKAG => GetString("BKAG");
+		public string M3BKAG => GetString("BKAG");
 
 		/// <summary>
 		/// Description: Cash discount date
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount date")]
-		public DateTime? M3_CDDT => GetNullableDateTime("CDDT");
+		public DateTime? M3CDDT => GetNullableDateTime("CDDT");
 
 		/// <summary>
 		/// Description: Cash discount percentage
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount percentage")]
-		public int? M3_CDPC => GetNullableInt("CDPC");
+		public int? M3CDPC => GetNullableInt("CDPC");
 
 		/// <summary>
 		/// Description: Cash discount amount currency
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount currency")]
-		public decimal? M3_CDCU => GetNullableDecimal("CDCU");
+		public decimal? M3CDCU => GetNullableDecimal("CDCU");
 
 		/// <summary>
 		/// Description: Cash discount amount accounted
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount amount accounted")]
-		public decimal? M3_CDAM => GetNullableDecimal("CDAM");
+		public decimal? M3CDAM => GetNullableDecimal("CDAM");
 
 		/// <summary>
 		/// Description: Cash discount term
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount term")]
-		public string M3_TECD => GetString("TECD");
+		public string M3TECD => GetString("TECD");
 
 		/// <summary>
 		/// Description: Factoring charge
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Factoring charge")]
-		public decimal? M3_FACA => GetNullableDecimal("FACA");
+		public decimal? M3FACA => GetNullableDecimal("FACA");
 
 		/// <summary>
 		/// Description: Drawee reference number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Drawee reference number")]
-		public string M3_DRRN => GetString("DRRN");
+		public string M3DRRN => GetString("DRRN");
 
 		/// <summary>
 		/// Description: Sequence type
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence type")]
-		public string M3_SQTP => GetString("SQTP");
+		public string M3SQTP => GetString("SQTP");
 
 		/// <summary>
 		/// Description: Amended mandate
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amended mandate")]
-		public string M3_AMRC => GetString("AMRC");
+		public string M3AMRC => GetString("AMRC");
 
 		/// <summary>
 		/// Description: Direct debit scheme
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direct debit scheme")]
-		public int? M3_SDDS => GetNullableInt("SDDS");
+		public int? M3SDDS => GetNullableInt("SDDS");
 
 		/// <summary>
 		/// Description: Agreement indicator
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement indicator")]
-		public string M3_AGIN => GetString("AGIN");
+		public string M3AGIN => GetString("AGIN");
 
 		/// <summary>
 		/// Description: Customer
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Purpose
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purpose")]
-		public string M3_PUPO => GetString("PUPO");
+		public string M3PUPO => GetString("PUPO");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.ARS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 	}
 }
 // EOF

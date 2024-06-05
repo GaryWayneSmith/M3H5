@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS055MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description AddRate
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_CRTP">Exchange rate type (Required)</param>
-		/// <param name="m3_CUTD">Rate date (Required)</param>
-		/// <param name="m3_ARAT">Exchange rate (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3CRTP">Exchange rate type (Required)</param>
+		/// <param name="m3CUTD">Rate date (Required)</param>
+		/// <param name="m3ARAT">Exchange rate (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddRateResponse></returns>
 		/// <exception cref="M3Exception<AddRateResponse>"></exception>
 		public async Task<M3Response<AddRateResponse>> AddRate(
-			string m3_CUCD, 
-			int m3_CRTP, 
-			DateTime m3_CUTD, 
-			decimal m3_ARAT, 
-			string m3_DIVI = null, 
+			string m3CUCD, 
+			int m3CRTP, 
+			DateTime m3CUTD, 
+			decimal m3ARAT, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,19 +70,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("CRTP", m3_CRTP.ToString())
-				.WithQueryParameter("CUTD", m3_CUTD.ToM3String())
-				.WithQueryParameter("ARAT", m3_ARAT.ToString());
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("CRTP", m3CRTP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CUTD", m3CUTD.ToM3String())
+				.WithQueryParameter("ARAT", m3ARAT.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<AddRateResponse>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -101,8 +104,8 @@ namespace M3H5Lib.Api
 		/// Description Get Basic Data
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -111,8 +114,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetBasicDataResponse></returns>
 		/// <exception cref="M3Exception<GetBasicDataResponse>"></exception>
 		public async Task<M3Response<GetBasicDataResponse>> GetBasicData(
-			string m3_CUCD, 
-			string m3_DIVI = null, 
+			string m3CUCD, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -127,16 +130,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCD", m3_CUCD.Trim());
+				.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetBasicDataResponse>(
@@ -146,7 +149,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -157,9 +161,9 @@ namespace M3H5Lib.Api
 		/// Description Lists currency rates per rate type
 		/// Version Release: 5ea2
 		/// </summary>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_CRTP">Exchange rate type (Required)</param>
-		/// <param name="m3_CUTD">Rate date</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3CRTP">Exchange rate type (Required)</param>
+		/// <param name="m3CUTD">Rate date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -168,9 +172,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstRatesPerTypeResponse></returns>
 		/// <exception cref="M3Exception<LstRatesPerTypeResponse>"></exception>
 		public async Task<M3Response<LstRatesPerTypeResponse>> LstRatesPerType(
-			string m3_CUCD, 
-			int m3_CRTP, 
-			DateTime? m3_CUTD = null, 
+			string m3CUCD, 
+			int m3CRTP, 
+			DateTime? m3CUTD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -185,17 +189,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("CRTP", m3_CRTP.ToString());
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("CRTP", m3CRTP.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CUTD.HasValue)
-				request.WithQueryParameter("CUTD", m3_CUTD.Value.ToM3String());
+			if (m3CUTD.HasValue)
+				request.WithQueryParameter("CUTD", m3CUTD.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstRatesPerTypeResponse>(
@@ -205,7 +209,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -216,12 +221,12 @@ namespace M3H5Lib.Api
 		/// Description Lists currency rates per period
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_CRTP">Exchange rate type (Required)</param>
-		/// <param name="m3_FPER">From period (Required)</param>
-		/// <param name="m3_TPER">To period (Required)</param>
-		/// <param name="m3_DAYN">Day number (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3CRTP">Exchange rate type (Required)</param>
+		/// <param name="m3FPER">From period (Required)</param>
+		/// <param name="m3TPER">To period (Required)</param>
+		/// <param name="m3DAYN">Day number (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -230,12 +235,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstRtPerPeriodResponse></returns>
 		/// <exception cref="M3Exception<LstRtPerPeriodResponse>"></exception>
 		public async Task<M3Response<LstRtPerPeriodResponse>> LstRtPerPeriod(
-			string m3_CUCD, 
-			int m3_CRTP, 
-			int m3_FPER, 
-			int m3_TPER, 
-			int m3_DAYN, 
-			string m3_DIVI = null, 
+			string m3CUCD, 
+			int m3CRTP, 
+			int m3FPER, 
+			int m3TPER, 
+			int m3DAYN, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -250,20 +255,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("CRTP", m3_CRTP.ToString())
-				.WithQueryParameter("FPER", m3_FPER.ToString())
-				.WithQueryParameter("TPER", m3_TPER.ToString())
-				.WithQueryParameter("DAYN", m3_DAYN.ToString());
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("CRTP", m3CRTP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FPER", m3FPER.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TPER", m3TPER.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("DAYN", m3DAYN.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstRtPerPeriodResponse>(
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -284,14 +290,14 @@ namespace M3H5Lib.Api
 		/// Description Select Currencies
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CRTP">Exchange rate type (Required)</param>
-		/// <param name="m3_CUTD">Rate date (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FRDI">From division</param>
-		/// <param name="m3_TODI">To division</param>
-		/// <param name="m3_FCUR">From Currency</param>
-		/// <param name="m3_TCUR">To Currency</param>
-		/// <param name="m3_LMTS">Last import´s timestamp</param>
+		/// <param name="m3CRTP">Exchange rate type (Required)</param>
+		/// <param name="m3CUTD">Rate date (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FRDI">From division</param>
+		/// <param name="m3TODI">To division</param>
+		/// <param name="m3FCUR">From Currency</param>
+		/// <param name="m3TCUR">To Currency</param>
+		/// <param name="m3LMTS">Last import´s timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -300,14 +306,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelExchangeRateResponse></returns>
 		/// <exception cref="M3Exception<SelExchangeRateResponse>"></exception>
 		public async Task<M3Response<SelExchangeRateResponse>> SelExchangeRate(
-			int m3_CRTP, 
-			DateTime m3_CUTD, 
-			int? m3_CONO = null, 
-			string m3_FRDI = null, 
-			string m3_TODI = null, 
-			string m3_FCUR = null, 
-			string m3_TCUR = null, 
-			decimal? m3_LMTS = null, 
+			int m3CRTP, 
+			DateTime m3CUTD, 
+			int? m3CONO = null, 
+			string m3FRDI = null, 
+			string m3TODI = null, 
+			string m3FCUR = null, 
+			string m3TCUR = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -325,22 +331,22 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CRTP", m3_CRTP.ToString())
-				.WithQueryParameter("CUTD", m3_CUTD.ToM3String());
+				.WithQueryParameter("CRTP", m3CRTP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CUTD", m3CUTD.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FRDI))
-				request.WithQueryParameter("FRDI", m3_FRDI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TODI))
-				request.WithQueryParameter("TODI", m3_TODI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FCUR))
-				request.WithQueryParameter("FCUR", m3_FCUR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TCUR))
-				request.WithQueryParameter("TCUR", m3_TCUR.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FRDI))
+				request.WithQueryParameter("FRDI", m3FRDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TODI))
+				request.WithQueryParameter("TODI", m3TODI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FCUR))
+				request.WithQueryParameter("FCUR", m3FCUR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TCUR))
+				request.WithQueryParameter("TCUR", m3TCUR.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<SelExchangeRateResponse>(
@@ -350,7 +356,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

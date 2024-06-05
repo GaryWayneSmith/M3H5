@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Location
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Lot number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Container
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Container")]
-		public string M3_CAMU => GetString("CAMU");
+		public string M3CAMU => GetString("CAMU");
 
 		/// <summary>
 		/// Description: Receiving number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receiving number")]
-		public long? M3_REPN => GetNullableLong("REPN");
+		public long? M3REPN => GetNullableLong("REPN");
 
 		/// <summary>
 		/// Description: Stock transaction type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock transaction type")]
-		public int? M3_TTYP => GetNullableInt("TTYP");
+		public int? M3TTYP => GetNullableInt("TTYP");
 
 		/// <summary>
 		/// Description: Order number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order operation
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order operation")]
-		public int? M3_RIDO => GetNullableInt("RIDO");
+		public int? M3RIDO => GetNullableInt("RIDO");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_RIDI => GetNullableDecimal("RIDI");
+		public decimal? M3RIDI => GetNullableDecimal("RIDI");
 
 		/// <summary>
 		/// Description: Picking list suffix
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list suffix")]
-		public int? M3_PLSX => GetNullableInt("PLSX");
+		public int? M3PLSX => GetNullableInt("PLSX");
 
 		/// <summary>
 		/// Description: Order line
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Status
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Stock zone
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stock zone")]
-		public string M3_SLTP => GetString("SLTP");
+		public string M3SLTP => GetString("SLTP");
 
 		/// <summary>
 		/// Description: Warehouse equipment
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse equipment")]
-		public string M3_PISE => GetString("PISE");
+		public string M3PISE => GetString("PISE");
 
 		/// <summary>
 		/// Description: Allocated quantity - basic U/M
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - basic U/M")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Sort value
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sort value")]
-		public string M3_SORT => GetString("SORT");
+		public string M3SORT => GetString("SORT");
 
 		/// <summary>
 		/// Description: Transportation flow
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation flow")]
-		public string M3_TRFL => GetString("TRFL");
+		public string M3TRFL => GetString("TRFL");
 
 		/// <summary>
 		/// Description: Allocation origin
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocation origin")]
-		public string M3_MAAL => GetString("MAAL");
+		public string M3MAAL => GetString("MAAL");
 
 		/// <summary>
 		/// Description: Reference text
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference text")]
-		public string M3_RFTX => GetString("RFTX");
+		public string M3RFTX => GetString("RFTX");
 
 		/// <summary>
 		/// Description: Program name
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Picking list round
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list round")]
-		public int? M3_PLPR => GetNullableInt("PLPR");
+		public int? M3PLPR => GetNullableInt("PLPR");
 
 		/// <summary>
 		/// Description: Packed quantity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packed quantity")]
-		public decimal? M3_PAQT => GetNullableDecimal("PAQT");
+		public decimal? M3PAQT => GetNullableDecimal("PAQT");
 
 		/// <summary>
 		/// Description: Catch weight
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Catch weight")]
-		public decimal? M3_CAWE => GetNullableDecimal("CAWE");
+		public decimal? M3CAWE => GetNullableDecimal("CAWE");
 
 		/// <summary>
 		/// Description: From picking location
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From picking location")]
-		public string M3_FLOC => GetString("FLOC");
+		public string M3FLOC => GetString("FLOC");
 
 		/// <summary>
 		/// Description: Printer
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Printer")]
-		public string M3_DEVC => GetString("DEVC");
+		public string M3DEVC => GetString("DEVC");
 
 		/// <summary>
 		/// Description: Inventory accounting
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting")]
-		public int? M3_STCD => GetNullableInt("STCD");
+		public int? M3STCD => GetNullableInt("STCD");
 
 		/// <summary>
 		/// Description: Soft allocation
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Soft allocation")]
-		public int? M3_SOFT => GetNullableInt("SOFT");
+		public int? M3SOFT => GetNullableInt("SOFT");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: To location
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To location")]
-		public string M3_TWSL => GetString("TWSL");
+		public string M3TWSL => GetString("TWSL");
 
 		/// <summary>
 		/// Description: Flagged as completed
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Flagged as completed")]
-		public int? M3_OEND => GetNullableInt("OEND");
+		public int? M3OEND => GetNullableInt("OEND");
 
 		/// <summary>
 		/// Description: Wave number
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Wave number")]
-		public string M3_PLRI => GetString("PLRI");
+		public string M3PLRI => GetString("PLRI");
 
 		/// <summary>
 		/// Description: Transaction quantity in alt U/M
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity in alt U/M")]
-		public decimal? M3_TRQA => GetNullableDecimal("TRQA");
+		public decimal? M3TRQA => GetNullableDecimal("TRQA");
 
 		/// <summary>
 		/// Description: Allocated quantity - alternate U/M
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - alternate U/M")]
-		public decimal? M3_ALQA => GetNullableDecimal("ALQA");
+		public decimal? M3ALQA => GetNullableDecimal("ALQA");
 
 		/// <summary>
 		/// Description: Allocated quantity - nominal
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - nominal")]
-		public decimal? M3_ALQN => GetNullableDecimal("ALQN");
+		public decimal? M3ALQN => GetNullableDecimal("ALQN");
 
 		/// <summary>
 		/// Description: Packed quantity - alternate U/M
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packed quantity - alternate U/M")]
-		public decimal? M3_PAQA => GetNullableDecimal("PAQA");
+		public decimal? M3PAQA => GetNullableDecimal("PAQA");
 
 		/// <summary>
 		/// Description: Detailed order requirement (DOR) number
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detailed order requirement (DOR) number")]
-		public decimal? M3_CNNR => GetNullableDecimal("CNNR");
+		public decimal? M3CNNR => GetNullableDecimal("CNNR");
 
 		/// <summary>
 		/// Description: Level sequence number
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Level sequence number")]
-		public int? M3_LSQN => GetNullableInt("LSQN");
+		public int? M3LSQN => GetNullableInt("LSQN");
 
 		/// <summary>
 		/// Description: Structure sequence number
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Structure sequence number")]
-		public int? M3_SSEQ => GetNullableInt("SSEQ");
+		public int? M3SSEQ => GetNullableInt("SSEQ");
 
 		/// <summary>
 		/// Description: Reporting number - pick line
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting number - pick line")]
-		public decimal? M3_PLRN => GetNullableDecimal("PLRN");
+		public decimal? M3PLRN => GetNullableDecimal("PLRN");
 
 		/// <summary>
 		/// Description: Entry date
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Load building
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Load building")]
-		public int? M3_LOBL => GetNullableInt("LOBL");
+		public int? M3LOBL => GetNullableInt("LOBL");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public string M3_LODO => GetString("LODO");
+		public string M3LODO => GetString("LODO");
 
 		/// <summary>
 		/// Description: Scan required
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MWS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scan required")]
-		public int? M3_SCRQ => GetNullableInt("SCRQ");
+		public int? M3SCRQ => GetNullableInt("SCRQ");
 	}
 }
 // EOF

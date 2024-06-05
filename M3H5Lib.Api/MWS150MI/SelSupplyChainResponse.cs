@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Supply chain level
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply chain level")]
-		public int? M3_SCLE => GetNullableInt("SCLE");
+		public int? M3SCLE => GetNullableInt("SCLE");
 
 		/// <summary>
 		/// Description: Order category
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Line number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line number")]
-		public int? M3_PONR => GetNullableInt("PONR");
+		public int? M3PONR => GetNullableInt("PONR");
 
 		/// <summary>
 		/// Description: Line specification
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line specification")]
-		public int? M3_RIDS => GetNullableInt("RIDS");
+		public int? M3RIDS => GetNullableInt("RIDS");
 
 		/// <summary>
 		/// Description: Facility
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Pre-allocated quantity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-allocated quantity")]
-		public decimal? M3_PQTY => GetNullableDecimal("PQTY");
+		public decimal? M3PQTY => GetNullableDecimal("PQTY");
 
 		/// <summary>
 		/// Description: Recieved pre-allocated quantity
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Recieved pre-allocated quantity")]
-		public decimal? M3_PQTR => GetNullableDecimal("PQTR");
+		public decimal? M3PQTR => GetNullableDecimal("PQTR");
 
 		/// <summary>
 		/// Description: Pre-allocation type
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-allocation type")]
-		public string M3_PATY => GetString("PATY");
+		public string M3PATY => GetString("PATY");
 
 		/// <summary>
 		/// Description: Color
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Color")]
-		public int? M3_FLAG => GetNullableInt("FLAG");
+		public int? M3FLAG => GetNullableInt("FLAG");
 
 		/// <summary>
 		/// Description: Planning date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning date")]
-		public DateTime? M3_PLDT => GetNullableDateTime("PLDT");
+		public DateTime? M3PLDT => GetNullableDateTime("PLDT");
 
 		/// <summary>
 		/// Description: Planning time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning time")]
-		public int? M3_PLHM => GetNullableInt("PLHM");
+		public int? M3PLHM => GetNullableInt("PLHM");
 
 		/// <summary>
 		/// Description: Compare date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compare date")]
-		public DateTime? M3_CPDT => GetNullableDateTime("CPDT");
+		public DateTime? M3CPDT => GetNullableDateTime("CPDT");
 
 		/// <summary>
 		/// Description: Compare time
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compare time")]
-		public int? M3_CPHM => GetNullableInt("CPHM");
+		public int? M3CPHM => GetNullableInt("CPHM");
 
 		/// <summary>
 		/// Description: Supply chain number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply chain number")]
-		public string M3_SCNB => GetString("SCNB");
+		public string M3SCNB => GetString("SCNB");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Main Attribute 1
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main Attribute 1")]
-		public string M3_ATI1 => GetString("ATI1");
+		public string M3ATI1 => GetString("ATI1");
 
 		/// <summary>
 		/// Description: Main value 1
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main value 1")]
-		public string M3_AAT1 => GetString("AAT1");
+		public string M3AAT1 => GetString("AAT1");
 
 		/// <summary>
 		/// Description: Main Attribute 2
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main Attribute 2")]
-		public string M3_ATI2 => GetString("ATI2");
+		public string M3ATI2 => GetString("ATI2");
 
 		/// <summary>
 		/// Description: Main value 2
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main value 2")]
-		public string M3_AAT2 => GetString("AAT2");
+		public string M3AAT2 => GetString("AAT2");
 
 		/// <summary>
 		/// Description: Main Attribute 3
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main Attribute 3")]
-		public string M3_ATI3 => GetString("ATI3");
+		public string M3ATI3 => GetString("ATI3");
 
 		/// <summary>
 		/// Description: Main Value 3
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main Value 3")]
-		public string M3_AAT3 => GetString("AAT3");
+		public string M3AAT3 => GetString("AAT3");
 
 		/// <summary>
 		/// Description: Main Attribute 4
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main Attribute 4")]
-		public string M3_ATI4 => GetString("ATI4");
+		public string M3ATI4 => GetString("ATI4");
 
 		/// <summary>
 		/// Description: Main Value 4
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main Value 4")]
-		public string M3_AAT4 => GetString("AAT4");
+		public string M3AAT4 => GetString("AAT4");
 
 		/// <summary>
 		/// Description: Main Attribute 5
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main Attribute 5")]
-		public string M3_ATI5 => GetString("ATI5");
+		public string M3ATI5 => GetString("ATI5");
 
 		/// <summary>
 		/// Description: Main value 5
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main value 5")]
-		public string M3_AAT5 => GetString("AAT5");
+		public string M3AAT5 => GetString("AAT5");
 
 		/// <summary>
 		/// Description: Status
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MWS150MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 	}
 }
 // EOF

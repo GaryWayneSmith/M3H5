@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.ARBR01MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Get Head information
 		/// Version Release: 14.0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_RMNB">Remittance number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3RMNB">Remittance number (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetHeadResponse></returns>
 		/// <exception cref="M3Exception<GetHeadResponse>"></exception>
 		public async Task<M3Response<GetHeadResponse>> GetHead(
-			string m3_DIVI, 
-			int m3_RMNB, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			int m3RMNB, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,17 +66,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("RMNB", m3_RMNB.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("RMNB", m3RMNB.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetHeadResponse>(
@@ -84,7 +86,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -95,10 +98,10 @@ namespace M3H5Lib.Api
 		/// Description Get Payer Level information
 		/// Version Release: 14.0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_RMNB">Remittance number (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_CONO">Company</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3RMNB">Remittance number (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3CONO">Company</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,10 +110,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPayerInfoResponse></returns>
 		/// <exception cref="M3Exception<GetPayerInfoResponse>"></exception>
 		public async Task<M3Response<GetPayerInfoResponse>> GetPayerInfo(
-			string m3_DIVI, 
-			int m3_RMNB, 
-			string m3_PYNO, 
-			int? m3_CONO = null, 
+			string m3DIVI, 
+			int m3RMNB, 
+			string m3PYNO, 
+			int? m3CONO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -125,20 +128,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("RMNB", m3_RMNB.ToString())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("RMNB", m3RMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PYNO", m3PYNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetPayerInfoResponse>(
@@ -148,7 +151,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -159,10 +163,10 @@ namespace M3H5Lib.Api
 		/// Description List payer level informations
 		/// Version Release: 14.0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_RMNB">Remittance number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_PYNO">Payer</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3RMNB">Remittance number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3PYNO">Payer</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -171,10 +175,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPayerInfoResponse></returns>
 		/// <exception cref="M3Exception<LstPayerInfoResponse>"></exception>
 		public async Task<M3Response<LstPayerInfoResponse>> LstPayerInfo(
-			string m3_DIVI, 
-			int m3_RMNB, 
-			int? m3_CONO = null, 
-			string m3_PYNO = null, 
+			string m3DIVI, 
+			int m3RMNB, 
+			int? m3CONO = null, 
+			string m3PYNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -189,19 +193,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("RMNB", m3_RMNB.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("RMNB", m3RMNB.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPayerInfoResponse>(
@@ -211,7 +215,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -222,11 +227,11 @@ namespace M3H5Lib.Api
 		/// Description List Remitted payment line by payer
 		/// Version Release: 14.0
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_RMNB">Remittance number (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_PYNO">Payer</param>
-		/// <param name="m3_DUDT">Due date</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3RMNB">Remittance number (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3PYNO">Payer</param>
+		/// <param name="m3DUDT">Due date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -235,11 +240,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstRemByPayerResponse></returns>
 		/// <exception cref="M3Exception<LstRemByPayerResponse>"></exception>
 		public async Task<M3Response<LstRemByPayerResponse>> LstRemByPayer(
-			string m3_DIVI, 
-			int m3_RMNB, 
-			int? m3_CONO = null, 
-			string m3_PYNO = null, 
-			DateTime? m3_DUDT = null, 
+			string m3DIVI, 
+			int m3RMNB, 
+			int? m3CONO = null, 
+			string m3PYNO = null, 
+			DateTime? m3DUDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -254,21 +259,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("RMNB", m3_RMNB.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("RMNB", m3RMNB.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
-			if (m3_DUDT.HasValue)
-				request.WithQueryParameter("DUDT", m3_DUDT.Value.ToM3String());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
+			if (m3DUDT.HasValue)
+				request.WithQueryParameter("DUDT", m3DUDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<LstRemByPayerResponse>(
@@ -278,7 +283,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: QI request ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request ID")]
-		public string M3_QRID => GetString("QRID");
+		public string M3QRID => GetString("QRID");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: QI request status
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request status")]
-		public int? M3_QSTA => GetNullableInt("QSTA");
+		public int? M3QSTA => GetNullableInt("QSTA");
 
 		/// <summary>
 		/// Description: QI request approval status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request approval status")]
-		public int? M3_QAPR => GetNullableInt("QAPR");
+		public int? M3QAPR => GetNullableInt("QAPR");
 
 		/// <summary>
 		/// Description: QI request required date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("QI request required date")]
-		public DateTime? M3_QRDT => GetNullableDateTime("QRDT");
+		public DateTime? M3QRDT => GetNullableDateTime("QRDT");
 
 		/// <summary>
 		/// Description: Date approved
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date approved")]
-		public DateTime? M3_APDT => GetNullableDateTime("APDT");
+		public DateTime? M3APDT => GetNullableDateTime("APDT");
 
 		/// <summary>
 		/// Description: Program name
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.QMS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

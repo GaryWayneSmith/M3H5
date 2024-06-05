@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Payee
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payee")]
-		public string M3_SPYN => GetString("SPYN");
+		public string M3SPYN => GetString("SPYN");
 
 		/// <summary>
 		/// Description: Supplier
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier invoice number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier invoice number")]
-		public string M3_SINO => GetString("SINO");
+		public string M3SINO => GetString("SINO");
 
 		/// <summary>
 		/// Description: Invoice year
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice year")]
-		public int? M3_INYR => GetNullableInt("INYR");
+		public int? M3INYR => GetNullableInt("INYR");
 
 		/// <summary>
 		/// Description: Action
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action")]
-		public int? M3_ACTO => GetNullableInt("ACTO");
+		public int? M3ACTO => GetNullableInt("ACTO");
 
 		/// <summary>
 		/// Description: User ID
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User ID")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: User ID 2
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User ID 2")]
-		public string M3_USI2 => GetString("USI2");
+		public string M3USI2 => GetString("USI2");
 
 		/// <summary>
 		/// Description: Action date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action date")]
-		public DateTime? M3_ACTD => GetNullableDateTime("ACTD");
+		public DateTime? M3ACTD => GetNullableDateTime("ACTD");
 
 		/// <summary>
 		/// Description: Action time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.APS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Action time")]
-		public int? M3_ACTM => GetNullableInt("ACTM");
+		public int? M3ACTM => GetNullableInt("ACTM");
 	}
 }
 // EOF

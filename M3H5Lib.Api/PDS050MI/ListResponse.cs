@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company Number")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Option
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OOPT => GetString("OOPT");
+		public string M3OOPT => GetString("OOPT");
 
 		/// <summary>
 		/// Description: Text
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Sequence number for sorting
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number for sorting")]
-		public int? M3_SQNU => GetNullableInt("SQNU");
+		public int? M3SQNU => GetNullableInt("SQNU");
 
 		/// <summary>
 		/// Description: Combination code
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Combination code")]
-		public int? M3_XCOC => GetNullableInt("XCOC");
+		public int? M3XCOC => GetNullableInt("XCOC");
 
 		/// <summary>
 		/// Description: Option group
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option group")]
-		public string M3_OGRP => GetString("OGRP");
+		public string M3OGRP => GetString("OGRP");
 
 		/// <summary>
 		/// Description: Material category
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material category")]
-		public string M3_MTCT => GetString("MTCT");
+		public string M3MTCT => GetString("MTCT");
 
 		/// <summary>
 		/// Description: Option
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS050MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPTN => GetString("OPTN");
+		public string M3OPTN => GetString("OPTN");
 	}
 }
 // EOF

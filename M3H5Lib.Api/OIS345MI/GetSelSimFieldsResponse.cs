@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected price simulation field 1")]
-		public string M3_SPS1 => GetString("SPS1");
+		public string M3SPS1 => GetString("SPS1");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DES1 => GetString("DES1");
+		public string M3DES1 => GetString("DES1");
 
 		/// <summary>
 		/// Description: Selected price simulation field 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected price simulation field 2")]
-		public string M3_SPS2 => GetString("SPS2");
+		public string M3SPS2 => GetString("SPS2");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DES2 => GetString("DES2");
+		public string M3DES2 => GetString("DES2");
 
 		/// <summary>
 		/// Description: Selected price simulation field 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected price simulation field 3")]
-		public string M3_SPS3 => GetString("SPS3");
+		public string M3SPS3 => GetString("SPS3");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DES3 => GetString("DES3");
+		public string M3DES3 => GetString("DES3");
 
 		/// <summary>
 		/// Description: Selected price simulation field 4
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected price simulation field 4")]
-		public string M3_SPS4 => GetString("SPS4");
+		public string M3SPS4 => GetString("SPS4");
 
 		/// <summary>
 		/// Description: Description
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DES4 => GetString("DES4");
+		public string M3DES4 => GetString("DES4");
 
 		/// <summary>
 		/// Description: Selected price simulation field 5
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected price simulation field 5")]
-		public string M3_SPS5 => GetString("SPS5");
+		public string M3SPS5 => GetString("SPS5");
 
 		/// <summary>
 		/// Description: Description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DES5 => GetString("DES5");
+		public string M3DES5 => GetString("DES5");
 
 		/// <summary>
 		/// Description: Selected price simulation field 6
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selected price simulation field 6")]
-		public string M3_SPS6 => GetString("SPS6");
+		public string M3SPS6 => GetString("SPS6");
 
 		/// <summary>
 		/// Description: Description
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS345MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DES6 => GetString("DES6");
+		public string M3DES6 => GetString("DES6");
 	}
 }
 // EOF

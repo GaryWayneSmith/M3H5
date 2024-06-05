@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,9 +37,9 @@ namespace M3H5Lib.Api
 		/// Description Control all transactions
 		/// Version Release: 12.1
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_BITP">Type of automatically generated invoice</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3BITP">Type of automatically generated invoice</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,9 +48,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ControlAll(
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			string m3_BITP = null, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			string m3BITP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -63,12 +65,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BITP))
-				request.WithQueryParameter("BITP", m3_BITP.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BITP))
+				request.WithQueryParameter("BITP", m3BITP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -78,7 +80,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -89,13 +92,13 @@ namespace M3H5Lib.Api
 		/// Description Control Invoice
 		/// Version Release: 12.4
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_SINO">Supplier invoice number (Required)</param>
-		/// <param name="m3_BITP">Type of automatically generated invoice (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_SPYN">Payee</param>
-		/// <param name="m3_SUNO">Supplier number</param>
-		/// <param name="m3_CUCD">Currency</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3SINO">Supplier invoice number (Required)</param>
+		/// <param name="m3BITP">Type of automatically generated invoice (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3SPYN">Payee</param>
+		/// <param name="m3SUNO">Supplier number</param>
+		/// <param name="m3CUCD">Currency</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -104,13 +107,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ControlInvoice(
-			string m3_DIVI, 
-			string m3_SINO, 
-			string m3_BITP, 
-			int? m3_CONO = null, 
-			string m3_SPYN = null, 
-			string m3_SUNO = null, 
-			string m3_CUCD = null, 
+			string m3DIVI, 
+			string m3SINO, 
+			string m3BITP, 
+			int? m3CONO = null, 
+			string m3SPYN = null, 
+			string m3SUNO = null, 
+			string m3CUCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -125,28 +128,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_SINO))
-				throw new ArgumentNullException("m3_SINO");
-			if (string.IsNullOrWhiteSpace(m3_BITP))
-				throw new ArgumentNullException("m3_BITP");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3SINO))
+				throw new ArgumentNullException(nameof(m3SINO));
+			if (string.IsNullOrWhiteSpace(m3BITP))
+				throw new ArgumentNullException(nameof(m3BITP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("SINO", m3_SINO.Trim())
-				.WithQueryParameter("BITP", m3_BITP.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("SINO", m3SINO.Trim())
+				.WithQueryParameter("BITP", m3BITP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SPYN))
-				request.WithQueryParameter("SPYN", m3_SPYN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SPYN))
+				request.WithQueryParameter("SPYN", m3SPYN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -156,7 +159,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field name")]
-		public string M3_FLNM => GetString("FLNM");
+		public string M3FLNM => GetString("FLNM");
 
 		/// <summary>
 		/// Description: Description in repository
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description in repository")]
-		public string M3_FLDS => GetString("FLDS");
+		public string M3FLDS => GetString("FLDS");
 
 		/// <summary>
 		/// Description: General Word
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("General Word")]
-		public string M3_MSI5 => GetString("MSI5");
+		public string M3MSI5 => GetString("MSI5");
 
 		/// <summary>
 		/// Description: Text length 3
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text length 3")]
-		public string M3_TX03 => GetString("TX03");
+		public string M3TX03 => GetString("TX03");
 
 		/// <summary>
 		/// Description: Text length 5
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text length 5")]
-		public string M3_TX05 => GetString("TX05");
+		public string M3TX05 => GetString("TX05");
 
 		/// <summary>
 		/// Description: Text length 10
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text length 10")]
-		public string M3_TX10 => GetString("TX10");
+		public string M3TX10 => GetString("TX10");
 
 		/// <summary>
 		/// Description: Text length 15
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text length 15")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Text length 40 (AA)
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MRS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text length 40 (AA)")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 	}
 }
 // EOF

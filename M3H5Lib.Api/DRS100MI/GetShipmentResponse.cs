@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Shipment
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment")]
-		public int? M3_CONN => GetNullableInt("CONN");
+		public int? M3CONN => GetNullableInt("CONN");
 
 		/// <summary>
 		/// Description: Responsible
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Route type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route type")]
-		public int? M3_RUTP => GetNullableInt("RUTP");
+		public int? M3RUTP => GetNullableInt("RUTP");
 
 		/// <summary>
 		/// Description: Route
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route")]
-		public string M3_ROUT => GetString("ROUT");
+		public string M3ROUT => GetString("ROUT");
 
 		/// <summary>
 		/// Description: Name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Route departure
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Route departure")]
-		public int? M3_RODN => GetNullableInt("RODN");
+		public int? M3RODN => GetNullableInt("RODN");
 
 		/// <summary>
 		/// Description: Loading platform
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Loading platform")]
-		public string M3_LODO => GetString("LODO");
+		public string M3LODO => GetString("LODO");
 
 		/// <summary>
 		/// Description: Main delivery method
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Main delivery method")]
-		public string M3_MMDL => GetString("MMDL");
+		public string M3MMDL => GetString("MMDL");
 
 		/// <summary>
 		/// Description: Name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_MNAM => GetString("MNAM");
+		public string M3MNAM => GetString("MNAM");
 
 		/// <summary>
 		/// Description: Planned route departure date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned route departure date")]
-		public DateTime? M3_RDDT => GetNullableDateTime("RDDT");
+		public DateTime? M3RDDT => GetNullableDateTime("RDDT");
 
 		/// <summary>
 		/// Description: Planned route departure time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned route departure time")]
-		public int? M3_RDTM => GetNullableInt("RDTM");
+		public int? M3RDTM => GetNullableInt("RDTM");
 
 		/// <summary>
 		/// Description: Departure date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure date")]
-		public DateTime? M3_DSDT => GetNullableDateTime("DSDT");
+		public DateTime? M3DSDT => GetNullableDateTime("DSDT");
 
 		/// <summary>
 		/// Description: Departure time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Departure time")]
-		public int? M3_DSHM => GetNullableInt("DSHM");
+		public int? M3DSHM => GetNullableInt("DSHM");
 
 		/// <summary>
 		/// Description: Arrival date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Arrival date")]
-		public DateTime? M3_ARDT => GetNullableDateTime("ARDT");
+		public DateTime? M3ARDT => GetNullableDateTime("ARDT");
 
 		/// <summary>
 		/// Description: Arrival time
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Arrival time")]
-		public int? M3_ARHM => GetNullableInt("ARHM");
+		public int? M3ARHM => GetNullableInt("ARHM");
 
 		/// <summary>
 		/// Description: Deadline date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Deadline date")]
-		public DateTime? M3_CDLD => GetNullableDateTime("CDLD");
+		public DateTime? M3CDLD => GetNullableDateTime("CDLD");
 
 		/// <summary>
 		/// Description: Chr. delivery note nbr creation time
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Chr. delivery note nbr creation time")]
-		public int? M3_CDHM => GetNullableInt("CDHM");
+		public int? M3CDHM => GetNullableInt("CDHM");
 
 		/// <summary>
 		/// Description: Ignore deadline when connecting dely no
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ignore deadline when connecting dely no")]
-		public int? M3_DLAC => GetNullableInt("DLAC");
+		public int? M3DLAC => GetNullableInt("DLAC");
 
 		/// <summary>
 		/// Description: Highest status - shipment
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - shipment")]
-		public string M3_CSTH => GetString("CSTH");
+		public string M3CSTH => GetString("CSTH");
 
 		/// <summary>
 		/// Description: Lowest status - shipment
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - shipment")]
-		public string M3_CSTL => GetString("CSTL");
+		public string M3CSTL => GetString("CSTL");
 
 		/// <summary>
 		/// Description: Highest document status
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest document status")]
-		public string M3_DSTH => GetString("DSTH");
+		public string M3DSTH => GetString("DSTH");
 
 		/// <summary>
 		/// Description: Lowest document status
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest document status")]
-		public string M3_DSTL => GetString("DSTL");
+		public string M3DSTL => GetString("DSTL");
 
 		/// <summary>
 		/// Description: Forwarding agent
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarding agent")]
-		public string M3_FWNO => GetString("FWNO");
+		public string M3FWNO => GetString("FWNO");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Transportation equipment
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation equipment")]
-		public string M3_TRCA => GetString("TRCA");
+		public string M3TRCA => GetString("TRCA");
 
 		/// <summary>
 		/// Description: Place of loading
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Place of loading")]
-		public string M3_SDES => GetString("SDES");
+		public string M3SDES => GetString("SDES");
 
 		/// <summary>
 		/// Description: Name
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ENAM => GetString("ENAM");
+		public string M3ENAM => GetString("ENAM");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Estimated volume of assigned goods
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated volume of assigned goods")]
-		public decimal? M3_VOL3 => GetNullableDecimal("VOL3");
+		public decimal? M3VOL3 => GetNullableDecimal("VOL3");
 
 		/// <summary>
 		/// Description: Estimated free unit of assigned goods
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated free unit of assigned goods")]
-		public decimal? M3_FCU1 => GetNullableDecimal("FCU1");
+		public decimal? M3FCU1 => GetNullableDecimal("FCU1");
 
 		/// <summary>
 		/// Description: Estimated gross weight packed goods
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated gross weight packed goods")]
-		public decimal? M3_GWTE => GetNullableDecimal("GWTE");
+		public decimal? M3GWTE => GetNullableDecimal("GWTE");
 
 		/// <summary>
 		/// Description: Estimated volume
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated volume")]
-		public decimal? M3_VLME => GetNullableDecimal("VLME");
+		public decimal? M3VLME => GetNullableDecimal("VLME");
 
 		/// <summary>
 		/// Description: Estimated free unit packed goods
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Estimated free unit packed goods")]
-		public decimal? M3_FRCE => GetNullableDecimal("FRCE");
+		public decimal? M3FRCE => GetNullableDecimal("FRCE");
 
 		/// <summary>
 		/// Description: Packed gross weight
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packed gross weight")]
-		public decimal? M3_GRW2 => GetNullableDecimal("GRW2");
+		public decimal? M3GRW2 => GetNullableDecimal("GRW2");
 
 		/// <summary>
 		/// Description: Packed volume
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packed volume")]
-		public decimal? M3_WM32 => GetNullableDecimal("WM32");
+		public decimal? M3WM32 => GetNullableDecimal("WM32");
 
 		/// <summary>
 		/// Description: Packed  - free capacity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packed  - free capacity")]
-		public decimal? M3_PFCP => GetNullableDecimal("PFCP");
+		public decimal? M3PFCP => GetNullableDecimal("PFCP");
 
 		/// <summary>
 		/// Description: Shipment capacity - gross weight
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment capacity - gross weight")]
-		public decimal? M3_GRW3 => GetNullableDecimal("GRW3");
+		public decimal? M3GRW3 => GetNullableDecimal("GRW3");
 
 		/// <summary>
 		/// Description: Capacitu - volume
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacitu - volume")]
-		public decimal? M3_VM33 => GetNullableDecimal("VM33");
+		public decimal? M3VM33 => GetNullableDecimal("VM33");
 
 		/// <summary>
 		/// Description: Capacity - free capacity unit
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity - free capacity unit")]
-		public decimal? M3_FRCP => GetNullableDecimal("FRCP");
+		public decimal? M3FRCP => GetNullableDecimal("FRCP");
 
 		/// <summary>
 		/// Description: Text identity
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Auto attach of several deliveries
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Auto attach of several deliveries")]
-		public int? M3_AUTO => GetNullableInt("AUTO");
+		public int? M3AUTO => GetNullableInt("AUTO");
 
 		/// <summary>
 		/// Description: Manual connection only
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual connection only")]
-		public int? M3_MANC => GetNullableInt("MANC");
+		public int? M3MANC => GetNullableInt("MANC");
 
 		/// <summary>
 		/// Description: Shipment closed
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment closed")]
-		public int? M3_CLOS => GetNullableInt("CLOS");
+		public int? M3CLOS => GetNullableInt("CLOS");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Invoicing status
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing status")]
-		public int? M3_IVSS => GetNullableInt("IVSS");
+		public int? M3IVSS => GetNullableInt("IVSS");
 
 		/// <summary>
 		/// Description: Shipment ready for loading
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipment ready for loading")]
-		public int? M3_SILO => GetNullableInt("SILO");
+		public int? M3SILO => GetNullableInt("SILO");
 
 		/// <summary>
 		/// Description: Number of loaded pick lines
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of loaded pick lines")]
-		public int? M3_NBLL => GetNullableInt("NBLL");
+		public int? M3NBLL => GetNullableInt("NBLL");
 
 		/// <summary>
 		/// Description: Number of pick lines
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of pick lines")]
-		public int? M3_NBPL => GetNullableInt("NBPL");
+		public int? M3NBPL => GetNullableInt("NBPL");
 
 		/// <summary>
 		/// Description: Number of loaded packages
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of loaded packages")]
-		public int? M3_NBLP => GetNullableInt("NBLP");
+		public int? M3NBLP => GetNullableInt("NBLP");
 
 		/// <summary>
 		/// Description: Number of packages
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages")]
-		public int? M3_NBRP => GetNullableInt("NBRP");
+		public int? M3NBRP => GetNullableInt("NBRP");
 
 		/// <summary>
 		/// Description: Entry date
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Transportation service ID
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation service ID")]
-		public string M3_TSID => GetString("TSID");
+		public string M3TSID => GetString("TSID");
 
 		/// <summary>
 		/// Description: Detention reason code
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detention reason code")]
-		public string M3_DRCD => GetString("DRCD");
+		public string M3DRCD => GetString("DRCD");
 
 		/// <summary>
 		/// Description: Actual detention date
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual detention date")]
-		public DateTime? M3_DFDT => GetNullableDateTime("DFDT");
+		public DateTime? M3DFDT => GetNullableDateTime("DFDT");
 
 		/// <summary>
 		/// Description: Actual detention time
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual detention time")]
-		public int? M3_DFHM => GetNullableInt("DFHM");
+		public int? M3DFHM => GetNullableInt("DFHM");
 
 		/// <summary>
 		/// Description: Forwarders planned arrival date
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarders planned arrival date")]
-		public DateTime? M3_PWDT => GetNullableDateTime("PWDT");
+		public DateTime? M3PWDT => GetNullableDateTime("PWDT");
 
 		/// <summary>
 		/// Description: Forwarders planned arrival time
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarders planned arrival time")]
-		public int? M3_PWHM => GetNullableInt("PWHM");
+		public int? M3PWHM => GetNullableInt("PWHM");
 
 		/// <summary>
 		/// Description: Forwarders actual arrival date
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarders actual arrival date")]
-		public DateTime? M3_AWDT => GetNullableDateTime("AWDT");
+		public DateTime? M3AWDT => GetNullableDateTime("AWDT");
 
 		/// <summary>
 		/// Description: Forwarders actual arrival time
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forwarders actual arrival time")]
-		public int? M3_AWHM => GetNullableInt("AWHM");
+		public int? M3AWHM => GetNullableInt("AWHM");
 
 		/// <summary>
 		/// Description: Detention time - days
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detention time - days")]
-		public int? M3_DETD => GetNullableInt("DETD");
+		public int? M3DETD => GetNullableInt("DETD");
 
 		/// <summary>
 		/// Description: Detention time - hours
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detention time - hours")]
-		public int? M3_DEHT => GetNullableInt("DEHT");
+		public int? M3DEHT => GetNullableInt("DEHT");
 
 		/// <summary>
 		/// Description: Detention time - minutes
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Detention time - minutes")]
-		public int? M3_DEMT => GetNullableInt("DEMT");
+		public int? M3DEMT => GetNullableInt("DEMT");
 
 		/// <summary>
 		/// Description: Seal number
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Seal number")]
-		public string M3_SEAL => GetString("SEAL");
+		public string M3SEAL => GetString("SEAL");
 
 		/// <summary>
 		/// Description: number of stopped deliveries
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("number of stopped deliveries")]
-		public int? M3_NBDS => GetNullableInt("NBDS");
+		public int? M3NBDS => GetNullableInt("NBDS");
 
 		/// <summary>
 		/// Description: transportation interface indicator ID
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("transportation interface indicator ID")]
-		public string M3_TRFI => GetString("TRFI");
+		public string M3TRFI => GetString("TRFI");
 
 		/// <summary>
 		/// Description: Transport identity - departure
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transport identity - departure")]
-		public string M3_E0B4 => GetString("E0B4");
+		public string M3E0B4 => GetString("E0B4");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.DRS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 	}
 }
 // EOF

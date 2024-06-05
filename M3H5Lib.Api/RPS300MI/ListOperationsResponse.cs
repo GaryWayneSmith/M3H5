@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Macro order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Macro order number")]
-		public string M3_MONO => GetString("MONO");
+		public string M3MONO => GetString("MONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Basic unit of measurement
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measurement")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Work center
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Operation number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Bucket start date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bucket start date")]
-		public DateTime? M3_SDBU => GetNullableDateTime("SDBU");
+		public DateTime? M3SDBU => GetNullableDateTime("SDBU");
 
 		/// <summary>
 		/// Description: Bucket end date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bucket end date")]
-		public DateTime? M3_EDBU => GetNullableDateTime("EDBU");
+		public DateTime? M3EDBU => GetNullableDateTime("EDBU");
 
 		/// <summary>
 		/// Description: Start date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Finish date
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Ordered quantity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Manufactured quantity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufactured quantity")]
-		public decimal? M3_MAQT => GetNullableDecimal("MAQT");
+		public decimal? M3MAQT => GetNullableDecimal("MAQT");
 
 		/// <summary>
 		/// Description: Remanining quantity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remanining quantity")]
-		public decimal? M3_RMQT => GetNullableDecimal("RMQT");
+		public decimal? M3RMQT => GetNullableDecimal("RMQT");
 
 		/// <summary>
 		/// Description: Run time
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run time")]
-		public decimal? M3_PITI => GetNullableDecimal("PITI");
+		public decimal? M3PITI => GetNullableDecimal("PITI");
 
 		/// <summary>
 		/// Description: Average runtime
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Average runtime")]
-		public decimal? M3_AVPI => GetNullableDecimal("AVPI");
+		public decimal? M3AVPI => GetNullableDecimal("AVPI");
 
 		/// <summary>
 		/// Description: Maximum fixed runtime
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum fixed runtime")]
-		public decimal? M3_MXFR => GetNullableDecimal("MXFR");
+		public decimal? M3MXFR => GetNullableDecimal("MXFR");
 
 		/// <summary>
 		/// Description: Maximum setup time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum setup time")]
-		public decimal? M3_MXSE => GetNullableDecimal("MXSE");
+		public decimal? M3MXSE => GetNullableDecimal("MXSE");
 
 		/// <summary>
 		/// Description: Operation sequence number
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation sequence number")]
-		public int? M3_SEOP => GetNullableInt("SEOP");
+		public int? M3SEOP => GetNullableInt("SEOP");
 
 		/// <summary>
 		/// Description: Processed by APP
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Processed by APP")]
-		public int? M3_PRAP => GetNullableInt("PRAP");
+		public int? M3PRAP => GetNullableInt("PRAP");
 
 		/// <summary>
 		/// Description: Sequencing status
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequencing status")]
-		public int? M3_SEQS => GetNullableInt("SEQS");
+		public int? M3SEQS => GetNullableInt("SEQS");
 
 		/// <summary>
 		/// Description: Forced start date
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forced start date")]
-		public DateTime? M3_FRCD => GetNullableDateTime("FRCD");
+		public DateTime? M3FRCD => GetNullableDateTime("FRCD");
 
 		/// <summary>
 		/// Description: Forced start time
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forced start time")]
-		public int? M3_FRCT => GetNullableInt("FRCT");
+		public int? M3FRCT => GetNullableInt("FRCT");
 
 		/// <summary>
 		/// Description: Entry date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Start time
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time")]
-		public int? M3_STIM => GetNullableInt("STIM");
+		public int? M3STIM => GetNullableInt("STIM");
 
 		/// <summary>
 		/// Description: Finish time
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish time")]
-		public int? M3_MFTI => GetNullableInt("MFTI");
+		public int? M3MFTI => GetNullableInt("MFTI");
 
 		/// <summary>
 		/// Description: Original start date
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original start date")]
-		public DateTime? M3_FSTD => GetNullableDateTime("FSTD");
+		public DateTime? M3FSTD => GetNullableDateTime("FSTD");
 
 		/// <summary>
 		/// Description: Original start time
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original start time")]
-		public int? M3_FSTT => GetNullableInt("FSTT");
+		public int? M3FSTT => GetNullableInt("FSTT");
 
 		/// <summary>
 		/// Description: Original finish date
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original finish date")]
-		public DateTime? M3_FFID => GetNullableDateTime("FFID");
+		public DateTime? M3FFID => GetNullableDateTime("FFID");
 
 		/// <summary>
 		/// Description: Original finish time
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Original finish time")]
-		public int? M3_FFIT => GetNullableInt("FFIT");
+		public int? M3FFIT => GetNullableInt("FFIT");
 
 		/// <summary>
 		/// Description: Safety time
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Safety time")]
-		public int? M3_SATD => GetNullableInt("SATD");
+		public int? M3SATD => GetNullableInt("SATD");
 
 		/// <summary>
 		/// Description: Shipping buffer in production days
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shipping buffer in production days")]
-		public int? M3_SHBP => GetNullableInt("SHBP");
+		public int? M3SHBP => GetNullableInt("SHBP");
 
 		/// <summary>
 		/// Description: Next Operation
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next Operation")]
-		public int? M3_NSEO => GetNullableInt("NSEO");
+		public int? M3NSEO => GetNullableInt("NSEO");
 
 		/// <summary>
 		/// Description: Work center resource
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center resource")]
-		public string M3_PLG6 => GetString("PLG6");
+		public string M3PLG6 => GetString("PLG6");
 
 		/// <summary>
 		/// Description: Operation description
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation description")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: Planned number of workers - run time
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of workers - run time")]
-		public int? M3_PRNP => GetNullableInt("PRNP");
+		public int? M3PRNP => GetNullableInt("PRNP");
 
 		/// <summary>
 		/// Description: Planned number of machines
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of machines")]
-		public int? M3_PRNM => GetNullableInt("PRNM");
+		public int? M3PRNM => GetNullableInt("PRNM");
 
 		/// <summary>
 		/// Description: Planned number of workers - setup
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned number of workers - setup")]
-		public int? M3_SENP => GetNullableInt("SENP");
+		public int? M3SENP => GetNullableInt("SENP");
 
 		/// <summary>
 		/// Description: Capacity type
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.RPS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity type")]
-		public string M3_PCAP => GetString("PCAP");
+		public string M3PCAP => GetString("PCAP");
 	}
 }
 // EOF

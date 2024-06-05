@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MMS450MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description List packing instructions by order
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORCA">Order category (Required)</param>
-		/// <param name="m3_RIDN">Order number (Required)</param>
-		/// <param name="m3_RIDL">Order line</param>
-		/// <param name="m3_RIDX">Line suffix</param>
+		/// <param name="m3ORCA">Order category (Required)</param>
+		/// <param name="m3RIDN">Order number (Required)</param>
+		/// <param name="m3RIDL">Order line</param>
+		/// <param name="m3RIDX">Line suffix</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPckInstByOrdResponse></returns>
 		/// <exception cref="M3Exception<LstPckInstByOrdResponse>"></exception>
 		public async Task<M3Response<LstPckInstByOrdResponse>> LstPckInstByOrd(
-			string m3_ORCA, 
-			string m3_RIDN, 
-			int? m3_RIDL = null, 
-			int? m3_RIDX = null, 
+			string m3ORCA, 
+			string m3RIDN, 
+			int? m3RIDL = null, 
+			int? m3RIDX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,21 +68,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORCA))
-				throw new ArgumentNullException("m3_ORCA");
-			if (string.IsNullOrWhiteSpace(m3_RIDN))
-				throw new ArgumentNullException("m3_RIDN");
+			if (string.IsNullOrWhiteSpace(m3ORCA))
+				throw new ArgumentNullException(nameof(m3ORCA));
+			if (string.IsNullOrWhiteSpace(m3RIDN))
+				throw new ArgumentNullException(nameof(m3RIDN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORCA", m3_ORCA.Trim())
-				.WithQueryParameter("RIDN", m3_RIDN.Trim());
+				.WithQueryParameter("ORCA", m3ORCA.Trim())
+				.WithQueryParameter("RIDN", m3RIDN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RIDL.HasValue)
-				request.WithQueryParameter("RIDL", m3_RIDL.Value.ToString());
-			if (m3_RIDX.HasValue)
-				request.WithQueryParameter("RIDX", m3_RIDX.Value.ToString());
+			if (m3RIDL.HasValue)
+				request.WithQueryParameter("RIDL", m3RIDL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RIDX.HasValue)
+				request.WithQueryParameter("RIDX", m3RIDX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPckInstByOrdResponse>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -101,8 +104,8 @@ namespace M3H5Lib.Api
 		/// Description List packing instructions Consignee
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PINN">Packing instruction header number (Required)</param>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3PINN">Packing instruction header number (Required)</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -111,8 +114,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPckInstConsResponse></returns>
 		/// <exception cref="M3Exception<LstPckInstConsResponse>"></exception>
 		public async Task<M3Response<LstPckInstConsResponse>> LstPckInstCons(
-			long m3_PINN, 
-			string m3_PPNB, 
+			long m3PINN, 
+			string m3PPNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -127,13 +130,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PINN", m3_PINN.ToString())
-				.WithQueryParameter("PPNB", m3_PPNB.Trim());
+				.WithQueryParameter("PINN", m3PINN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PPNB", m3PPNB.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPckInstConsResponse>(
@@ -143,7 +146,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -154,8 +158,8 @@ namespace M3H5Lib.Api
 		/// Description List packing instructions detail
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PINN">Packing instruction header number (Required)</param>
-		/// <param name="m3_PPNB">Pre-pack number (Required)</param>
+		/// <param name="m3PINN">Packing instruction header number (Required)</param>
+		/// <param name="m3PPNB">Pre-pack number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -164,8 +168,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPckInstDetResponse></returns>
 		/// <exception cref="M3Exception<LstPckInstDetResponse>"></exception>
 		public async Task<M3Response<LstPckInstDetResponse>> LstPckInstDet(
-			long m3_PINN, 
-			string m3_PPNB, 
+			long m3PINN, 
+			string m3PPNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -180,13 +184,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PPNB))
-				throw new ArgumentNullException("m3_PPNB");
+			if (string.IsNullOrWhiteSpace(m3PPNB))
+				throw new ArgumentNullException(nameof(m3PPNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PINN", m3_PINN.ToString())
-				.WithQueryParameter("PPNB", m3_PPNB.Trim());
+				.WithQueryParameter("PINN", m3PINN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PPNB", m3PPNB.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPckInstDetResponse>(
@@ -196,7 +200,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -207,7 +212,7 @@ namespace M3H5Lib.Api
 		/// Description List Packing Instruction Lines
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_PINN">Packing instruction header number (Required)</param>
+		/// <param name="m3PINN">Packing instruction header number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -216,7 +221,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPckInstLinesResponse></returns>
 		/// <exception cref="M3Exception<LstPckInstLinesResponse>"></exception>
 		public async Task<M3Response<LstPckInstLinesResponse>> LstPckInstLines(
-			long m3_PINN, 
+			long m3PINN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -234,7 +239,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PINN", m3_PINN.ToString());
+				.WithQueryParameter("PINN", m3PINN.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstPckInstLinesResponse>(
@@ -244,7 +249,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

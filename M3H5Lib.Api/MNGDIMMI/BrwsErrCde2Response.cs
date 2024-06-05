@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FLDI => GetString("FLDI");
+		public string M3FLDI => GetString("FLDI");
 
 		/// <summary>
 		/// Description: Start position for field column
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start position for field column")]
-		public string M3_FLDC => GetString("FLDC");
+		public string M3FLDC => GetString("FLDC");
 
 		/// <summary>
 		/// Description: Field length
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field length")]
-		public int? M3_FLDB => GetNullableInt("FLDB");
+		public int? M3FLDB => GetNullableInt("FLDB");
 
 		/// <summary>
 		/// Description: Justify right or left
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Justify right or left")]
-		public string M3_FLDJ => GetString("FLDJ");
+		public string M3FLDJ => GetString("FLDJ");
 
 		/// <summary>
 		/// Description: Key field
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEYI => GetString("KEYI");
+		public string M3KEYI => GetString("KEYI");
 
 		/// <summary>
 		/// Description: Key position
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key position")]
-		public string M3_KEYP => GetString("KEYP");
+		public string M3KEYP => GetString("KEYP");
 
 		/// <summary>
 		/// Description: General word
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("General word")]
-		public string M3_MSI5 => GetString("MSI5");
+		public string M3MSI5 => GetString("MSI5");
 
 		/// <summary>
 		/// Description: Message text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message text")]
-		public string M3_MS15 => GetString("MS15");
+		public string M3MS15 => GetString("MS15");
 
 		/// <summary>
 		/// Description: Message text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message text")]
-		public string M3_MS40 => GetString("MS40");
+		public string M3MS40 => GetString("MS40");
 
 		/// <summary>
 		/// Description: Message text adjusted to column length
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message text adjusted to column length")]
-		public string M3_MS00 => GetString("MS00");
+		public string M3MS00 => GetString("MS00");
 
 		/// <summary>
 		/// Description: File
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: File key
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File key")]
-		public string M3_KF01 => GetString("KF01");
+		public string M3KF01 => GetString("KF01");
 
 		/// <summary>
 		/// Description: File key
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File key")]
-		public string M3_KF02 => GetString("KF02");
+		public string M3KF02 => GetString("KF02");
 
 		/// <summary>
 		/// Description: File key
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File key")]
-		public string M3_KF03 => GetString("KF03");
+		public string M3KF03 => GetString("KF03");
 
 		/// <summary>
 		/// Description: File key
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File key")]
-		public string M3_KF04 => GetString("KF04");
+		public string M3KF04 => GetString("KF04");
 
 		/// <summary>
 		/// Description: File key
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File key")]
-		public string M3_KF05 => GetString("KF05");
+		public string M3KF05 => GetString("KF05");
 
 		/// <summary>
 		/// Description: File key
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File key")]
-		public string M3_KF06 => GetString("KF06");
+		public string M3KF06 => GetString("KF06");
 
 		/// <summary>
 		/// Description: File key
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File key")]
-		public string M3_KF07 => GetString("KF07");
+		public string M3KF07 => GetString("KF07");
 
 		/// <summary>
 		/// Description: Number of filters
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MNGDIMMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of filters")]
-		public int? M3_NFTR => GetNullableInt("NFTR");
+		public int? M3NFTR => GetNullableInt("NFTR");
 	}
 }
 // EOF

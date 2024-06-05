@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CSS720MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Add Reference Type For Process
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_EIPI">Process id (Required)</param>
-		/// <param name="m3_CSRT">Supplier reference type (Required)</param>
+		/// <param name="m3EIPI">Process id (Required)</param>
+		/// <param name="m3CSRT">Supplier reference type (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddRefType(
-			string m3_EIPI, 
-			int m3_CSRT, 
+			string m3EIPI, 
+			int m3CSRT, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,13 +64,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EIPI))
-				throw new ArgumentNullException("m3_EIPI");
+			if (string.IsNullOrWhiteSpace(m3EIPI))
+				throw new ArgumentNullException(nameof(m3EIPI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EIPI", m3_EIPI.Trim())
-				.WithQueryParameter("CSRT", m3_CSRT.ToString());
+				.WithQueryParameter("EIPI", m3EIPI.Trim())
+				.WithQueryParameter("CSRT", m3CSRT.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -78,7 +80,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -89,8 +92,8 @@ namespace M3H5Lib.Api
 		/// Description Delete Reference Type
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_EIPI">Process id</param>
-		/// <param name="m3_CSRT">Supplier reference type</param>
+		/// <param name="m3EIPI">Process id</param>
+		/// <param name="m3CSRT">Supplier reference type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -99,8 +102,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltRefType(
-			string m3_EIPI = null, 
-			int? m3_CSRT = null, 
+			string m3EIPI = null, 
+			int? m3CSRT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -115,10 +118,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EIPI))
-				request.WithQueryParameter("EIPI", m3_EIPI.Trim());
-			if (m3_CSRT.HasValue)
-				request.WithQueryParameter("CSRT", m3_CSRT.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3EIPI))
+				request.WithQueryParameter("EIPI", m3EIPI.Trim());
+			if (m3CSRT.HasValue)
+				request.WithQueryParameter("CSRT", m3CSRT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -128,7 +131,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -139,7 +143,7 @@ namespace M3H5Lib.Api
 		/// Description List Reference Type By Process
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_EIPI">Process id (Required)</param>
+		/// <param name="m3EIPI">Process id (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -148,7 +152,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByProcessResponse></returns>
 		/// <exception cref="M3Exception<LstByProcessResponse>"></exception>
 		public async Task<M3Response<LstByProcessResponse>> LstByProcess(
-			string m3_EIPI, 
+			string m3EIPI, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -163,12 +167,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EIPI))
-				throw new ArgumentNullException("m3_EIPI");
+			if (string.IsNullOrWhiteSpace(m3EIPI))
+				throw new ArgumentNullException(nameof(m3EIPI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EIPI", m3_EIPI.Trim());
+				.WithQueryParameter("EIPI", m3EIPI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByProcessResponse>(
@@ -178,7 +182,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

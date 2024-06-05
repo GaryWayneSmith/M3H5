@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Customer order type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order type")]
-		public string M3_ORTP => GetString("ORTP");
+		public string M3ORTP => GetString("ORTP");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Customer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Order date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_ORDT => GetNullableDateTime("ORDT");
+		public DateTime? M3ORDT => GetNullableDateTime("ORDT");
 
 		/// <summary>
 		/// Description: Order time
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order time")]
-		public int? M3_ORTM => GetNullableInt("ORTM");
+		public int? M3ORTM => GetNullableInt("ORTM");
 
 		/// <summary>
 		/// Description: Time zone
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public int? M3_TGMT => GetNullableInt("TGMT");
+		public int? M3TGMT => GetNullableInt("TGMT");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_RLDT => GetNullableDateTime("RLDT");
+		public DateTime? M3RLDT => GetNullableDateTime("RLDT");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_RLHM => GetNullableInt("RLHM");
+		public int? M3RLHM => GetNullableInt("RLHM");
 
 		/// <summary>
 		/// Description: User
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 	}
 }
 // EOF

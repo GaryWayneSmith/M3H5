@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MWS150MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Select Supply Chain
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_RIDN">Order Number</param>
-		/// <param name="m3_PONR">Line number</param>
-		/// <param name="m3_RIDS">Line specification</param>
-		/// <param name="m3_SCNB">Supply chain number</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3RIDN">Order Number</param>
+		/// <param name="m3PONR">Line number</param>
+		/// <param name="m3RIDS">Line specification</param>
+		/// <param name="m3SCNB">Supply chain number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelSupplyChainResponse></returns>
 		/// <exception cref="M3Exception<SelSupplyChainResponse>"></exception>
 		public async Task<M3Response<SelSupplyChainResponse>> SelSupplyChain(
-			int? m3_CONO = null, 
-			string m3_ORCA = null, 
-			string m3_RIDN = null, 
-			int? m3_PONR = null, 
-			int? m3_RIDS = null, 
-			string m3_SCNB = null, 
+			int? m3CONO = null, 
+			string m3ORCA = null, 
+			string m3RIDN = null, 
+			int? m3PONR = null, 
+			int? m3RIDS = null, 
+			string m3SCNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,18 +72,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RIDN))
-				request.WithQueryParameter("RIDN", m3_RIDN.Trim());
-			if (m3_PONR.HasValue)
-				request.WithQueryParameter("PONR", m3_PONR.Value.ToString());
-			if (m3_RIDS.HasValue)
-				request.WithQueryParameter("RIDS", m3_RIDS.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SCNB))
-				request.WithQueryParameter("SCNB", m3_SCNB.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RIDN))
+				request.WithQueryParameter("RIDN", m3RIDN.Trim());
+			if (m3PONR.HasValue)
+				request.WithQueryParameter("PONR", m3PONR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RIDS.HasValue)
+				request.WithQueryParameter("RIDS", m3RIDS.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SCNB))
+				request.WithQueryParameter("SCNB", m3SCNB.Trim());
 
 			// Execute the request
 			var result = await Execute<SelSupplyChainResponse>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

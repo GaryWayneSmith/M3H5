@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.EXPORTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field name")]
-		public string M3_FLDN => GetString("FLDN");
+		public string M3FLDN => GetString("FLDN");
 
 		/// <summary>
 		/// Description: Field description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.EXPORTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field description")]
-		public string M3_FLDS => GetString("FLDS");
+		public string M3FLDS => GetString("FLDS");
 
 		/// <summary>
 		/// Description: Field type
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.EXPORTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field type")]
-		public string M3_FLTY => GetString("FLTY");
+		public string M3FLTY => GetString("FLTY");
 
 		/// <summary>
 		/// Description: Field length
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.EXPORTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field length")]
-		public int? M3_FLLE => GetNullableInt("FLLE");
+		public int? M3FLLE => GetNullableInt("FLLE");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.EXPORTMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_FLDP => GetNullableInt("FLDP");
+		public int? M3FLDP => GetNullableInt("FLDP");
 	}
 }
 // EOF

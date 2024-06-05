@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRIT24MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Get supplier address
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
-		/// <param name="m3_ADTE">Address type (Required)</param>
-		/// <param name="m3_STDT">Stock Transaction Date (Required)</param>
-		/// <param name="m3_ADID">Address number</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
+		/// <param name="m3ADTE">Address type (Required)</param>
+		/// <param name="m3STDT">Stock Transaction Date (Required)</param>
+		/// <param name="m3ADID">Address number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAddressResponse></returns>
 		/// <exception cref="M3Exception<GetAddressResponse>"></exception>
 		public async Task<M3Response<GetAddressResponse>> GetAddress(
-			string m3_SUNO, 
-			int m3_ADTE, 
-			DateTime m3_STDT, 
-			string m3_ADID = null, 
+			string m3SUNO, 
+			int m3ADTE, 
+			DateTime m3STDT, 
+			string m3ADID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,18 +68,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("ADTE", m3_ADTE.ToString())
-				.WithQueryParameter("STDT", m3_STDT.ToM3String());
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("ADTE", m3ADTE.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("STDT", m3STDT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ADID))
-				request.WithQueryParameter("ADID", m3_ADID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADID))
+				request.WithQueryParameter("ADID", m3ADID.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAddressResponse>(
@@ -87,7 +89,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -98,7 +101,7 @@ namespace M3H5Lib.Api
 		/// Description Get Italian customer basic data
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,7 +110,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetBasicDataResponse></returns>
 		/// <exception cref="M3Exception<GetBasicDataResponse>"></exception>
 		public async Task<M3Response<GetBasicDataResponse>> GetBasicData(
-			string m3_SUNO, 
+			string m3SUNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -122,12 +125,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim());
+				.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<GetBasicDataResponse>(
@@ -137,7 +140,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -148,7 +152,7 @@ namespace M3H5Lib.Api
 		/// Description List Italian customer basic data in customer number order
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier</param>
+		/// <param name="m3SUNO">Supplier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -157,7 +161,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByNumberResponse></returns>
 		/// <exception cref="M3Exception<LstByNumberResponse>"></exception>
 		public async Task<M3Response<LstByNumberResponse>> LstByNumber(
-			string m3_SUNO = null, 
+			string m3SUNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -172,8 +176,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_SUNO))
-				request.WithQueryParameter("SUNO", m3_SUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SUNO))
+				request.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByNumberResponse>(
@@ -183,7 +187,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

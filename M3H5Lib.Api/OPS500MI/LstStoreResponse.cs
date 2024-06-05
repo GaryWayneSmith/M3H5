@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Store ID
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store ID")]
-		public string M3_RSTN => GetString("RSTN");
+		public string M3RSTN => GetString("RSTN");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Customer
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Customer name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: District
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("District")]
-		public string M3_SDST => GetString("SDST");
+		public string M3SDST => GetString("SDST");
 
 		/// <summary>
 		/// Description: Payer
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Statistics customer
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics customer")]
-		public string M3_CUST => GetString("CUST");
+		public string M3CUST => GetString("CUST");
 
 		/// <summary>
 		/// Description: Statistics identity 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 1")]
-		public string M3_FRE1 => GetString("FRE1");
+		public string M3FRE1 => GetString("FRE1");
 
 		/// <summary>
 		/// Description: Statistics identity 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics identity 2")]
-		public string M3_FRE2 => GetString("FRE2");
+		public string M3FRE2 => GetString("FRE2");
 
 		/// <summary>
 		/// Description: Company group customer
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company group customer")]
-		public string M3_CCUS => GetString("CCUS");
+		public string M3CCUS => GetString("CCUS");
 
 		/// <summary>
 		/// Description: User-defined field 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1")]
-		public string M3_CFC1 => GetString("CFC1");
+		public string M3CFC1 => GetString("CFC1");
 
 		/// <summary>
 		/// Description: User-defined field 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2")]
-		public decimal? M3_CFC2 => GetNullableDecimal("CFC2");
+		public decimal? M3CFC2 => GetNullableDecimal("CFC2");
 
 		/// <summary>
 		/// Description: User-defined field 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3")]
-		public string M3_CFC3 => GetString("CFC3");
+		public string M3CFC3 => GetString("CFC3");
 
 		/// <summary>
 		/// Description: User-defined field 4
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4")]
-		public string M3_CFC4 => GetString("CFC4");
+		public string M3CFC4 => GetString("CFC4");
 
 		/// <summary>
 		/// Description: User-defined field 5
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5")]
-		public string M3_CFC5 => GetString("CFC5");
+		public string M3CFC5 => GetString("CFC5");
 
 		/// <summary>
 		/// Description: User-defined field 6
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 6")]
-		public string M3_CFC6 => GetString("CFC6");
+		public string M3CFC6 => GetString("CFC6");
 
 		/// <summary>
 		/// Description: User-defined field 7
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 7")]
-		public decimal? M3_CFC7 => GetNullableDecimal("CFC7");
+		public decimal? M3CFC7 => GetNullableDecimal("CFC7");
 
 		/// <summary>
 		/// Description: User-defined field 8
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 8")]
-		public string M3_CFC8 => GetString("CFC8");
+		public string M3CFC8 => GetString("CFC8");
 
 		/// <summary>
 		/// Description: User-defined field 9
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 9")]
-		public string M3_CFC9 => GetString("CFC9");
+		public string M3CFC9 => GetString("CFC9");
 
 		/// <summary>
 		/// Description: User-defined field 10
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 10")]
-		public string M3_CFC0 => GetString("CFC0");
+		public string M3CFC0 => GetString("CFC0");
 
 		/// <summary>
 		/// Description: Company name
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address line 4
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 4")]
-		public string M3_ADR4 => GetString("ADR4");
+		public string M3ADR4 => GetString("ADR4");
 
 		/// <summary>
 		/// Description: Country
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Postal code
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Area/State
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Town/City
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Town/City")]
-		public string M3_TOWN => GetString("TOWN");
+		public string M3TOWN => GetString("TOWN");
 
 		/// <summary>
 		/// Description: Planning Node
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning Node")]
-		public string M3_PNOD => GetString("PNOD");
+		public string M3PNOD => GetString("PNOD");
 
 		/// <summary>
 		/// Description: Shop category
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shop category")]
-		public string M3_STCE => GetString("STCE");
+		public string M3STCE => GetString("STCE");
 
 		/// <summary>
 		/// Description: Business area
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business area")]
-		public string M3_BUAR => GetString("BUAR");
+		public string M3BUAR => GetString("BUAR");
 
 		/// <summary>
 		/// Description: Shop class
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shop class")]
-		public string M3_STOC => GetString("STOC");
+		public string M3STOC => GetString("STOC");
 
 		/// <summary>
 		/// Description: Shop volume class
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shop volume class")]
-		public string M3_VOLC => GetString("VOLC");
+		public string M3VOLC => GetString("VOLC");
 
 		/// <summary>
 		/// Description: Store User-defined field 1
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 1")]
-		public string M3_WF01 => GetString("WF01");
+		public string M3WF01 => GetString("WF01");
 
 		/// <summary>
 		/// Description: Store User-defined field 2
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 2")]
-		public string M3_WF02 => GetString("WF02");
+		public string M3WF02 => GetString("WF02");
 
 		/// <summary>
 		/// Description: Store User-defined field 3
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 3")]
-		public string M3_WF03 => GetString("WF03");
+		public string M3WF03 => GetString("WF03");
 
 		/// <summary>
 		/// Description: Store User-defined field 4
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 4")]
-		public string M3_WF04 => GetString("WF04");
+		public string M3WF04 => GetString("WF04");
 
 		/// <summary>
 		/// Description: Store User-defined field 5
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 5")]
-		public string M3_WF05 => GetString("WF05");
+		public string M3WF05 => GetString("WF05");
 
 		/// <summary>
 		/// Description: Store User-defined field 6
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 6")]
-		public string M3_WF06 => GetString("WF06");
+		public string M3WF06 => GetString("WF06");
 
 		/// <summary>
 		/// Description: Store User-defined field 7
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 7")]
-		public string M3_WF07 => GetString("WF07");
+		public string M3WF07 => GetString("WF07");
 
 		/// <summary>
 		/// Description: Store User-defined field 8
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 8")]
-		public string M3_WF08 => GetString("WF08");
+		public string M3WF08 => GetString("WF08");
 
 		/// <summary>
 		/// Description: Store User-defined field 9
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 9")]
-		public decimal? M3_WF09 => GetNullableDecimal("WF09");
+		public decimal? M3WF09 => GetNullableDecimal("WF09");
 
 		/// <summary>
 		/// Description: Store User-defined field 10
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 10")]
-		public decimal? M3_WF10 => GetNullableDecimal("WF10");
+		public decimal? M3WF10 => GetNullableDecimal("WF10");
 
 		/// <summary>
 		/// Description: Store User-defined field 11
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 11")]
-		public decimal? M3_WF11 => GetNullableDecimal("WF11");
+		public decimal? M3WF11 => GetNullableDecimal("WF11");
 
 		/// <summary>
 		/// Description: Store User-defined field 12
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 12")]
-		public decimal? M3_WF12 => GetNullableDecimal("WF12");
+		public decimal? M3WF12 => GetNullableDecimal("WF12");
 
 		/// <summary>
 		/// Description: Store User-defined field 13
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 13")]
-		public decimal? M3_WF13 => GetNullableDecimal("WF13");
+		public decimal? M3WF13 => GetNullableDecimal("WF13");
 
 		/// <summary>
 		/// Description: Store User-defined field 14
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 14")]
-		public decimal? M3_WF14 => GetNullableDecimal("WF14");
+		public decimal? M3WF14 => GetNullableDecimal("WF14");
 
 		/// <summary>
 		/// Description: Store User-defined field 15
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 15")]
-		public DateTime? M3_WF15 => GetNullableDateTime("WF15");
+		public DateTime? M3WF15 => GetNullableDateTime("WF15");
 
 		/// <summary>
 		/// Description: Store User-defined field 16
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 16")]
-		public DateTime? M3_WF16 => GetNullableDateTime("WF16");
+		public DateTime? M3WF16 => GetNullableDateTime("WF16");
 
 		/// <summary>
 		/// Description: Store User-defined field 17
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 17")]
-		public int? M3_WF17 => GetNullableInt("WF17");
+		public int? M3WF17 => GetNullableInt("WF17");
 
 		/// <summary>
 		/// Description: Store User-defined field 18
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 18")]
-		public int? M3_WF18 => GetNullableInt("WF18");
+		public int? M3WF18 => GetNullableInt("WF18");
 
 		/// <summary>
 		/// Description: Store User-defined field 19
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 19")]
-		public int? M3_WF19 => GetNullableInt("WF19");
+		public int? M3WF19 => GetNullableInt("WF19");
 
 		/// <summary>
 		/// Description: Store User-defined field 20
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 20")]
-		public int? M3_WF20 => GetNullableInt("WF20");
+		public int? M3WF20 => GetNullableInt("WF20");
 
 		/// <summary>
 		/// Description: Store User-defined field 21
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 21")]
-		public int? M3_WF21 => GetNullableInt("WF21");
+		public int? M3WF21 => GetNullableInt("WF21");
 
 		/// <summary>
 		/// Description: Store User-defined field 22
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Store User-defined field 22")]
-		public int? M3_WF22 => GetNullableInt("WF22");
+		public int? M3WF22 => GetNullableInt("WF22");
 
 		/// <summary>
 		/// Description: County ID
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.OPS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 	}
 }
 // EOF

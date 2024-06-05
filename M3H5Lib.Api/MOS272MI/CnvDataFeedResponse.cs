@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Converted Received date")]
-		public DateTime? M3_CVRD => GetNullableDateTime("CVRD");
+		public DateTime? M3CVRD => GetNullableDateTime("CVRD");
 
 		/// <summary>
 		/// Description: Converted Received time (HHMMSS)
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Converted Received time (HHMMSS)")]
-		public int? M3_CVRT => GetNullableInt("CVRT");
+		public int? M3CVRT => GetNullableInt("CVRT");
 
 		/// <summary>
 		/// Description: Converted Module Date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Converted Module Date")]
-		public DateTime? M3_CVMD => GetNullableDateTime("CVMD");
+		public DateTime? M3CVMD => GetNullableDateTime("CVMD");
 
 		/// <summary>
 		/// Description: Converted Module Time (HHMMSS)
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Converted Module Time (HHMMSS)")]
-		public int? M3_CVMT => GetNullableInt("CVMT");
+		public int? M3CVMT => GetNullableInt("CVMT");
 
 		/// <summary>
 		/// Description: From Time zone
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From Time zone")]
-		public string M3_FTZN => GetString("FTZN");
+		public string M3FTZN => GetString("FTZN");
 
 		/// <summary>
 		/// Description: To Time zone
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To Time zone")]
-		public string M3_TTZN => GetString("TTZN");
+		public string M3TTZN => GetString("TTZN");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public string M3_TGMT => GetString("TGMT");
+		public string M3TGMT => GetString("TGMT");
 
 		/// <summary>
 		/// Description: Adjustment
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS272MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adjustment")]
-		public string M3_DSAD => GetString("DSAD");
+		public string M3DSAD => GetString("DSAD");
 	}
 }
 // EOF

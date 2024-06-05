@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,8 +37,8 @@ namespace M3H5Lib.Api
 		/// Description Delete field group field
 		/// Version Release: 15.0
 		/// </summary>
-		/// <param name="m3_MGRP">Field group (Required)</param>
-		/// <param name="m3_OBJC">Field (Required)</param>
+		/// <param name="m3MGRP">Field group (Required)</param>
+		/// <param name="m3OBJC">Field (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -45,8 +47,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelField(
-			string m3_MGRP, 
-			string m3_OBJC, 
+			string m3MGRP, 
+			string m3OBJC, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -61,15 +63,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MGRP))
-				throw new ArgumentNullException("m3_MGRP");
-			if (string.IsNullOrWhiteSpace(m3_OBJC))
-				throw new ArgumentNullException("m3_OBJC");
+			if (string.IsNullOrWhiteSpace(m3MGRP))
+				throw new ArgumentNullException(nameof(m3MGRP));
+			if (string.IsNullOrWhiteSpace(m3OBJC))
+				throw new ArgumentNullException(nameof(m3OBJC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MGRP", m3_MGRP.Trim())
-				.WithQueryParameter("OBJC", m3_OBJC.Trim());
+				.WithQueryParameter("MGRP", m3MGRP.Trim())
+				.WithQueryParameter("OBJC", m3OBJC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -79,7 +81,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

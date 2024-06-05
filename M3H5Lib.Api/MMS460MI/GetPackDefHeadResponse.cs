@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack number")]
-		public string M3_PPNB => GetString("PPNB");
+		public string M3PPNB => GetString("PPNB");
 
 		/// <summary>
 		/// Description: Pre-pack type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack type")]
-		public string M3_PPTY => GetString("PPTY");
+		public string M3PPTY => GetString("PPTY");
 
 		/// <summary>
 		/// Description: Pre-pack status
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-pack status")]
-		public string M3_PPSA => GetString("PPSA");
+		public string M3PPSA => GetString("PPSA");
 
 		/// <summary>
 		/// Description: Item number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_DSCR => GetString("DSCR");
+		public string M3DSCR => GetString("DSCR");
 
 		/// <summary>
 		/// Description: Packaging
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging")]
-		public string M3_PACT => GetString("PACT");
+		public string M3PACT => GetString("PACT");
 
 		/// <summary>
 		/// Description: Package level
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Package level")]
-		public int? M3_PACO => GetNullableInt("PACO");
+		public int? M3PACO => GetNullableInt("PACO");
 
 		/// <summary>
 		/// Description: Included in pre-pack
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Included in pre-pack")]
-		public string M3_PPII => GetString("PPII");
+		public string M3PPII => GetString("PPII");
 
 		/// <summary>
 		/// Description: Product number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Facility
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Entry date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS460MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

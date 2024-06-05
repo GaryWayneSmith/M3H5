@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Procurement group
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Procurement group")]
-		public string M3_PRGP => GetString("PRGP");
+		public string M3PRGP => GetString("PRGP");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Buyer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buyer")]
-		public string M3_BUYE => GetString("BUYE");
+		public string M3BUYE => GetString("BUYE");
 
 		/// <summary>
 		/// Description: Release date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Release date")]
-		public DateTime? M3_RELD => GetNullableDateTime("RELD");
+		public DateTime? M3RELD => GetNullableDateTime("RELD");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: Total cost
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total cost")]
-		public decimal? M3_TOCO => GetNullableDecimal("TOCO");
+		public decimal? M3TOCO => GetNullableDecimal("TOCO");
 
 		/// <summary>
 		/// Description: Total volume
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total volume")]
-		public decimal? M3_TVOL => GetNullableDecimal("TVOL");
+		public decimal? M3TVOL => GetNullableDecimal("TVOL");
 
 		/// <summary>
 		/// Description: Total gross weight
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total gross weight")]
-		public decimal? M3_TGRW => GetNullableDecimal("TGRW");
+		public decimal? M3TGRW => GetNullableDecimal("TGRW");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Net weight
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Late proposals
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Late proposals")]
-		public int? M3_LAPL => GetNullableInt("LAPL");
+		public int? M3LAPL => GetNullableInt("LAPL");
 
 		/// <summary>
 		/// Description: Referenced proposals
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Referenced proposals")]
-		public int? M3_RFPL => GetNullableInt("RFPL");
+		public int? M3RFPL => GetNullableInt("RFPL");
 
 		/// <summary>
 		/// Description: Normal proposals
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Normal proposals")]
-		public int? M3_NOPL => GetNullableInt("NOPL");
+		public int? M3NOPL => GetNullableInt("NOPL");
 
 		/// <summary>
 		/// Description: Number of planned orders
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of planned orders")]
-		public int? M3_NUPL => GetNullableInt("NUPL");
+		public int? M3NUPL => GetNullableInt("NUPL");
 
 		/// <summary>
 		/// Description: Target type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target type")]
-		public int? M3_TRGT => GetNullableInt("TRGT");
+		public int? M3TRGT => GetNullableInt("TRGT");
 
 		/// <summary>
 		/// Description: Target weight
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target weight")]
-		public decimal? M3_TRGW => GetNullableDecimal("TRGW");
+		public decimal? M3TRGW => GetNullableDecimal("TRGW");
 
 		/// <summary>
 		/// Description: Target volume
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target volume")]
-		public decimal? M3_TRGV => GetNullableDecimal("TRGV");
+		public decimal? M3TRGV => GetNullableDecimal("TRGV");
 
 		/// <summary>
 		/// Description: Target cost
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target cost")]
-		public decimal? M3_TRGC => GetNullableDecimal("TRGC");
+		public decimal? M3TRGC => GetNullableDecimal("TRGC");
 
 		/// <summary>
 		/// Description: Release interval
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Release interval")]
-		public int? M3_RLIV => GetNullableInt("RLIV");
+		public int? M3RLIV => GetNullableInt("RLIV");
 
 		/// <summary>
 		/// Description: Line buy
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line buy")]
-		public int? M3_LIBU => GetNullableInt("LIBU");
+		public int? M3LIBU => GetNullableInt("LIBU");
 
 		/// <summary>
 		/// Description: Fill-up
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fill-up")]
-		public int? M3_FILU => GetNullableInt("FILU");
+		public int? M3FILU => GetNullableInt("FILU");
 
 		/// <summary>
 		/// Description: Planned release date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS194MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned release date")]
-		public DateTime? M3_PRLD => GetNullableDateTime("PRLD");
+		public DateTime? M3PRLD => GetNullableDateTime("PRLD");
 	}
 }
 // EOF

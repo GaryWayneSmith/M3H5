@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Promotion
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_PIDE => GetString("PIDE");
+		public string M3PIDE => GetString("PIDE");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Table
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_TAID => GetString("TAID");
+		public string M3TAID => GetString("TAID");
 
 		/// <summary>
 		/// Description: Customer number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Status - promotion
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - promotion")]
-		public int? M3_PROS => GetNullableInt("PROS");
+		public int? M3PROS => GetNullableInt("PROS");
 
 		/// <summary>
 		/// Description: Promotion type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion type")]
-		public string M3_PTPE => GetString("PTPE");
+		public string M3PTPE => GetString("PTPE");
 
 		/// <summary>
 		/// Description: Promotion responsible
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion responsible")]
-		public string M3_PRES => GetString("PRES");
+		public string M3PRES => GetString("PRES");
 
 		/// <summary>
 		/// Description: Date code
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date code")]
-		public int? M3_DTCD => GetNullableInt("DTCD");
+		public int? M3DTCD => GetNullableInt("DTCD");
 
 		/// <summary>
 		/// Description: Valid from
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public int? M3_LVDT => GetNullableInt("LVDT");
+		public int? M3LVDT => GetNullableInt("LVDT");
 
 		/// <summary>
 		/// Description: Activity start date
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activity start date")]
-		public DateTime? M3_FRD2 => GetNullableDateTime("FRD2");
+		public DateTime? M3FRD2 => GetNullableDateTime("FRD2");
 
 		/// <summary>
 		/// Description: Activity end date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activity end date")]
-		public DateTime? M3_TOD2 => GetNullableDateTime("TOD2");
+		public DateTime? M3TOD2 => GetNullableDateTime("TOD2");
 
 		/// <summary>
 		/// Description: Currency
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Promotion terms
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion terms")]
-		public int? M3_PTER => GetNullableInt("PTER");
+		public int? M3PTER => GetNullableInt("PTER");
 
 		/// <summary>
 		/// Description: Budgeted fixed cost
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budgeted fixed cost")]
-		public decimal? M3_BUFC => GetNullableDecimal("BUFC");
+		public decimal? M3BUFC => GetNullableDecimal("BUFC");
 
 		/// <summary>
 		/// Description: Actual fixed cost
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual fixed cost")]
-		public decimal? M3_ACFC => GetNullableDecimal("ACFC");
+		public decimal? M3ACFC => GetNullableDecimal("ACFC");
 
 		/// <summary>
 		/// Description: Distribution method
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Distribution method")]
-		public int? M3_DIMI => GetNullableInt("DIMI");
+		public int? M3DIMI => GetNullableInt("DIMI");
 
 		/// <summary>
 		/// Description: Amount sold
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Amount sold")]
-		public decimal? M3_SOAM => GetNullableDecimal("SOAM");
+		public decimal? M3SOAM => GetNullableDecimal("SOAM");
 
 		/// <summary>
 		/// Description: Additional text
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional text")]
-		public string M3_TX08 => GetString("TX08");
+		public string M3TX08 => GetString("TX08");
 
 		/// <summary>
 		/// Description: Discount category
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount category")]
-		public string M3_DICA => GetString("DICA");
+		public string M3DICA => GetString("DICA");
 
 		/// <summary>
 		/// Description: Discount base
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount base")]
-		public string M3_DIBE => GetString("DIBE");
+		public string M3DIBE => GetString("DIBE");
 
 		/// <summary>
 		/// Description: Discount relation
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount relation")]
-		public string M3_DIRE => GetString("DIRE");
+		public string M3DIRE => GetString("DIRE");
 
 		/// <summary>
 		/// Description: Manually changeable discount
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manually changeable discount")]
-		public int? M3_DCHA => GetNullableInt("DCHA");
+		public int? M3DCHA => GetNullableInt("DCHA");
 
 		/// <summary>
 		/// Description: Statistics field for discount
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Statistics field for discount")]
-		public int? M3_DPST => GetNullableInt("DPST");
+		public int? M3DPST => GetNullableInt("DPST");
 
 		/// <summary>
 		/// Description: Discount presentation
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount presentation")]
-		public int? M3_DDSU => GetNullableInt("DDSU");
+		public int? M3DDSU => GetNullableInt("DDSU");
 
 		/// <summary>
 		/// Description: Internal discount
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal discount")]
-		public int? M3_IDSC => GetNullableInt("IDSC");
+		public int? M3IDSC => GetNullableInt("IDSC");
 
 		/// <summary>
 		/// Description: User-defined accounting control object
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Activity customer
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activity customer")]
-		public string M3_ACUS => GetString("ACUS");
+		public string M3ACUS => GetString("ACUS");
 
 		/// <summary>
 		/// Description: Text identity
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Costing model - sales price
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - sales price")]
-		public string M3_SCMO => GetString("SCMO");
+		public string M3SCMO => GetString("SCMO");
 
 		/// <summary>
 		/// Description: Promotion statistics period type 1
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion statistics period type 1")]
-		public int? M3_PPT1 => GetNullableInt("PPT1");
+		public int? M3PPT1 => GetNullableInt("PPT1");
 
 		/// <summary>
 		/// Description: Promotion statistics period type 2
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion statistics period type 2")]
-		public int? M3_PPT2 => GetNullableInt("PPT2");
+		public int? M3PPT2 => GetNullableInt("PPT2");
 
 		/// <summary>
 		/// Description: Bill back
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bill back")]
-		public int? M3_BILB => GetNullableInt("BILB");
+		public int? M3BILB => GetNullableInt("BILB");
 
 		/// <summary>
 		/// Description: Business chain
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Business chain")]
-		public string M3_CHAI => GetString("CHAI");
+		public string M3CHAI => GetString("CHAI");
 
 		/// <summary>
 		/// Description: Customer selection
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer selection")]
-		public string M3_CUSE => GetString("CUSE");
+		public string M3CUSE => GetString("CUSE");
 
 		/// <summary>
 		/// Description: Update promotion
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update promotion")]
-		public int? M3_UPPC => GetNullableInt("UPPC");
+		public int? M3UPPC => GetNullableInt("UPPC");
 
 		/// <summary>
 		/// Description: Customer generated
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer generated")]
-		public int? M3_CUGE => GetNullableInt("CUGE");
+		public int? M3CUGE => GetNullableInt("CUGE");
 
 		/// <summary>
 		/// Description: Warehouse generated
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse generated")]
-		public int? M3_WHGE => GetNullableInt("WHGE");
+		public int? M3WHGE => GetNullableInt("WHGE");
 
 		/// <summary>
 		/// Description: Warehouse table
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse table")]
-		public string M3_WHTA => GetString("WHTA");
+		public string M3WHTA => GetString("WHTA");
 
 		/// <summary>
 		/// Description: Warehouse selection
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse selection")]
-		public string M3_WHSE => GetString("WHSE");
+		public string M3WHSE => GetString("WHSE");
 
 		/// <summary>
 		/// Description: Object access group
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object access group")]
-		public string M3_ACGR => GetString("ACGR");
+		public string M3ACGR => GetString("ACGR");
 
 		/// <summary>
 		/// Description: Entry date
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Bonus generating
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bonus generating")]
-		public int? M3_BNCD => GetNullableInt("BNCD");
+		public int? M3BNCD => GetNullableInt("BNCD");
 
 		/// <summary>
 		/// Description: Commission generating
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commission generating")]
-		public int? M3_PRAC => GetNullableInt("PRAC");
+		public int? M3PRAC => GetNullableInt("PRAC");
 
 		/// <summary>
 		/// Description: Supplier
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Claim calculation method
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim calculation method")]
-		public int? M3_CLMT => GetNullableInt("CLMT");
+		public int? M3CLMT => GetNullableInt("CLMT");
 
 		/// <summary>
 		/// Description: SPA claim percentage
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SPA claim percentage")]
-		public int? M3_SCLP => GetNullableInt("SCLP");
+		public int? M3SCLP => GetNullableInt("SCLP");
 
 		/// <summary>
 		/// Description: Discount percentage
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount percentage")]
-		public int? M3_DISP => GetNullableInt("DISP");
+		public int? M3DISP => GetNullableInt("DISP");
 
 		/// <summary>
 		/// Description: Agreement number
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AGNB => GetString("AGNB");
+		public string M3AGNB => GetString("AGNB");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Priority
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public int? M3_PRI2 => GetNullableInt("PRI2");
+		public int? M3PRI2 => GetNullableInt("PRI2");
 
 		/// <summary>
 		/// Description: Propose supplier
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Propose supplier")]
-		public int? M3_PSUP => GetNullableInt("PSUP");
+		public int? M3PSUP => GetNullableInt("PSUP");
 
 		/// <summary>
 		/// Description: Price list 1
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 1")]
-		public string M3_PRR1 => GetString("PRR1");
+		public string M3PRR1 => GetString("PRR1");
 
 		/// <summary>
 		/// Description: Currency code 1
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency code 1")]
-		public string M3_CUC1 => GetString("CUC1");
+		public string M3CUC1 => GetString("CUC1");
 
 		/// <summary>
 		/// Description: Label flag 1
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Label flag 1")]
-		public string M3_LFL1 => GetString("LFL1");
+		public string M3LFL1 => GetString("LFL1");
 
 		/// <summary>
 		/// Description: Price list
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list")]
-		public string M3_PRRF => GetString("PRRF");
+		public string M3PRRF => GetString("PRRF");
 
 		/// <summary>
 		/// Description: Order type group
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.OIS840MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type group")]
-		public string M3_OTYG => GetString("OTYG");
+		public string M3OTYG => GetString("OTYG");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Product
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Operation number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation number")]
-		public int? M3_OPNO => GetNullableInt("OPNO");
+		public int? M3OPNO => GetNullableInt("OPNO");
 
 		/// <summary>
 		/// Description: Reporting number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reporting number")]
-		public decimal? M3_WOSQ => GetNullableDecimal("WOSQ");
+		public decimal? M3WOSQ => GetNullableDecimal("WOSQ");
 
 		/// <summary>
 		/// Description: Manufacturing order number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing order number")]
-		public string M3_MFNO => GetString("MFNO");
+		public string M3MFNO => GetString("MFNO");
 
 		/// <summary>
 		/// Description: Work center
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Employee number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Used labor run time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used labor run time")]
-		public int? M3_UMAT => GetNullableInt("UMAT");
+		public int? M3UMAT => GetNullableInt("UMAT");
 
 		/// <summary>
 		/// Description: Used machine run time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used machine run time")]
-		public int? M3_UPIT => GetNullableInt("UPIT");
+		public int? M3UPIT => GetNullableInt("UPIT");
 
 		/// <summary>
 		/// Description: Used machine setup time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used machine setup time")]
-		public int? M3_USET => GetNullableInt("USET");
+		public int? M3USET => GetNullableInt("USET");
 
 		/// <summary>
 		/// Description: Used labor setup time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used labor setup time")]
-		public int? M3_UMAS => GetNullableInt("UMAS");
+		public int? M3UMAS => GetNullableInt("UMAS");
 
 		/// <summary>
 		/// Description: Run disturbance
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Run disturbance")]
-		public string M3_RUDI => GetString("RUDI");
+		public string M3RUDI => GetString("RUDI");
 
 		/// <summary>
 		/// Description: Setup disturbance
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Setup disturbance")]
-		public string M3_SEDI => GetString("SEDI");
+		public string M3SEDI => GetString("SEDI");
 
 		/// <summary>
 		/// Description: Manufactured quantity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufactured quantity")]
-		public decimal? M3_MAQT => GetNullableDecimal("MAQT");
+		public decimal? M3MAQT => GetNullableDecimal("MAQT");
 
 		/// <summary>
 		/// Description: Manufactured quantity
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufactured quantity")]
-		public decimal? M3_MAQA => GetNullableDecimal("MAQA");
+		public decimal? M3MAQA => GetNullableDecimal("MAQA");
 
 		/// <summary>
 		/// Description: Operation report type
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation report type")]
-		public int? M3_OPTP => GetNullableInt("OPTP");
+		public int? M3OPTP => GetNullableInt("OPTP");
 
 		/// <summary>
 		/// Description: Open/closed record
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Open/closed record")]
-		public int? M3_FICD => GetNullableInt("FICD");
+		public int? M3FICD => GetNullableInt("FICD");
 
 		/// <summary>
 		/// Description: Start date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Start time - operation
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time - operation")]
-		public int? M3_OSTM => GetNullableInt("OSTM");
+		public int? M3OSTM => GetNullableInt("OSTM");
 
 		/// <summary>
 		/// Description: Finish date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Stop time operation
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PMS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stop time operation")]
-		public int? M3_OFTM => GetNullableInt("OFTM");
+		public int? M3OFTM => GetNullableInt("OFTM");
 	}
 }
 // EOF

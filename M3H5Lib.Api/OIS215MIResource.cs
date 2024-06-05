@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS215MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add3rdpResult
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number</param>
-		/// <param name="m3_IRNO">Invoice reference number</param>
-		/// <param name="m3_CCEC">Result</param>
-		/// <param name="m3_MSGE">Message text</param>
-		/// <param name="m3_MSID">Message ID</param>
+		/// <param name="m3PMNB">Payment number</param>
+		/// <param name="m3IRNO">Invoice reference number</param>
+		/// <param name="m3CCEC">Result</param>
+		/// <param name="m3MSGE">Message text</param>
+		/// <param name="m3MSID">Message ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add3rdpResult(
-			int? m3_PMNB = null, 
-			string m3_IRNO = null, 
-			string m3_CCEC = null, 
-			string m3_MSGE = null, 
-			string m3_MSID = null, 
+			int? m3PMNB = null, 
+			string m3IRNO = null, 
+			string m3CCEC = null, 
+			string m3MSGE = null, 
+			string m3MSID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,16 +70,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PMNB.HasValue)
-				request.WithQueryParameter("PMNB", m3_PMNB.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_IRNO))
-				request.WithQueryParameter("IRNO", m3_IRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CCEC))
-				request.WithQueryParameter("CCEC", m3_CCEC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MSGE))
-				request.WithQueryParameter("MSGE", m3_MSGE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MSID))
-				request.WithQueryParameter("MSID", m3_MSID.Trim());
+			if (m3PMNB.HasValue)
+				request.WithQueryParameter("PMNB", m3PMNB.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3IRNO))
+				request.WithQueryParameter("IRNO", m3IRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CCEC))
+				request.WithQueryParameter("CCEC", m3CCEC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSGE))
+				request.WithQueryParameter("MSGE", m3MSGE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSID))
+				request.WithQueryParameter("MSID", m3MSID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -87,7 +89,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -98,12 +101,12 @@ namespace M3H5Lib.Api
 		/// Description Add cash movement
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSHD">From Cash desk (Required)</param>
-		/// <param name="m3_CSH2">To Cash desk (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_PMAM">Payment amount - foreign currency (Required)</param>
-		/// <param name="m3_PMNB">Payment number</param>
+		/// <param name="m3CSHD">From Cash desk (Required)</param>
+		/// <param name="m3CSH2">To Cash desk (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3PMAM">Payment amount - foreign currency (Required)</param>
+		/// <param name="m3PMNB">Payment number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -112,12 +115,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCashMovement(
-			string m3_CSHD, 
-			string m3_CSH2, 
-			string m3_CUCD, 
-			DateTime m3_PYDT, 
-			decimal m3_PMAM, 
-			int? m3_PMNB = null, 
+			string m3CSHD, 
+			string m3CSH2, 
+			string m3CUCD, 
+			DateTime m3PYDT, 
+			decimal m3PMAM, 
+			int? m3PMNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -132,24 +135,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_CSH2))
-				throw new ArgumentNullException("m3_CSH2");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3CSH2))
+				throw new ArgumentNullException(nameof(m3CSH2));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("CSH2", m3_CSH2.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("PMAM", m3_PMAM.ToString());
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("CSH2", m3CSH2.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("PMAM", m3PMAM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PMNB.HasValue)
-				request.WithQueryParameter("PMNB", m3_PMNB.Value.ToString());
+			if (m3PMNB.HasValue)
+				request.WithQueryParameter("PMNB", m3PMNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -159,7 +162,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -170,21 +174,21 @@ namespace M3H5Lib.Api
 		/// Description Create check and perform a validation
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_ACDT">Accounting date (Required)</param>
-		/// <param name="m3_CKNO">Check number (Required)</param>
-		/// <param name="m3_PYCD">Payment method - accounts receivable</param>
-		/// <param name="m3_ADR1">Address line 1</param>
-		/// <param name="m3_ADR2">Address line 2</param>
-		/// <param name="m3_ADR3">Address line 3</param>
-		/// <param name="m3_ADR4">Address line 4</param>
-		/// <param name="m3_TX01">Text line  1</param>
-		/// <param name="m3_TX02">Text line  2</param>
-		/// <param name="m3_PRCX">Print receipt</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3ACDT">Accounting date (Required)</param>
+		/// <param name="m3CKNO">Check number (Required)</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable</param>
+		/// <param name="m3ADR1">Address line 1</param>
+		/// <param name="m3ADR2">Address line 2</param>
+		/// <param name="m3ADR3">Address line 3</param>
+		/// <param name="m3ADR4">Address line 4</param>
+		/// <param name="m3TX01">Text line  1</param>
+		/// <param name="m3TX02">Text line  2</param>
+		/// <param name="m3PRCX">Print receipt</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -193,21 +197,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCreateCheck(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			string m3_PYNO, 
-			DateTime m3_PYDT, 
-			string m3_CUCD, 
-			DateTime m3_ACDT, 
-			string m3_CKNO, 
-			string m3_PYCD = null, 
-			string m3_ADR1 = null, 
-			string m3_ADR2 = null, 
-			string m3_ADR3 = null, 
-			string m3_ADR4 = null, 
-			string m3_TX01 = null, 
-			string m3_TX02 = null, 
-			int? m3_PRCX = null, 
+			int m3PMNB, 
+			string m3CSHD, 
+			string m3PYNO, 
+			DateTime m3PYDT, 
+			string m3CUCD, 
+			DateTime m3ACDT, 
+			string m3CKNO, 
+			string m3PYCD = null, 
+			string m3ADR1 = null, 
+			string m3ADR2 = null, 
+			string m3ADR3 = null, 
+			string m3ADR4 = null, 
+			string m3TX01 = null, 
+			string m3TX02 = null, 
+			int? m3PRCX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -222,42 +226,42 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_CKNO))
-				throw new ArgumentNullException("m3_CKNO");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3CKNO))
+				throw new ArgumentNullException(nameof(m3CKNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("ACDT", m3_ACDT.ToM3String())
-				.WithQueryParameter("CKNO", m3_CKNO.Trim());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("ACDT", m3ACDT.ToM3String())
+				.WithQueryParameter("CKNO", m3CKNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PYCD))
-				request.WithQueryParameter("PYCD", m3_PYCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADR1))
-				request.WithQueryParameter("ADR1", m3_ADR1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADR2))
-				request.WithQueryParameter("ADR2", m3_ADR2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADR3))
-				request.WithQueryParameter("ADR3", m3_ADR3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ADR4))
-				request.WithQueryParameter("ADR4", m3_ADR4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX01))
-				request.WithQueryParameter("TX01", m3_TX01.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX02))
-				request.WithQueryParameter("TX02", m3_TX02.Trim());
-			if (m3_PRCX.HasValue)
-				request.WithQueryParameter("PRCX", m3_PRCX.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PYCD))
+				request.WithQueryParameter("PYCD", m3PYCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADR1))
+				request.WithQueryParameter("ADR1", m3ADR1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADR2))
+				request.WithQueryParameter("ADR2", m3ADR2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADR3))
+				request.WithQueryParameter("ADR3", m3ADR3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ADR4))
+				request.WithQueryParameter("ADR4", m3ADR4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX01))
+				request.WithQueryParameter("TX01", m3TX01.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX02))
+				request.WithQueryParameter("TX02", m3TX02.Trim());
+			if (m3PRCX.HasValue)
+				request.WithQueryParameter("PRCX", m3PRCX.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -267,7 +271,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -278,14 +283,14 @@ namespace M3H5Lib.Api
 		/// Description Add invoice
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_EXIN">Extended invoice number (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_PYCD">Payment method - accounts receivable (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3EXIN">Extended invoice number (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -294,14 +299,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddInvoice(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			int m3_YEA4, 
-			string m3_EXIN, 
-			string m3_PYNO, 
-			string m3_PYCD, 
-			DateTime m3_PYDT, 
-			string m3_CUCD, 
+			int m3PMNB, 
+			string m3CSHD, 
+			int m3YEA4, 
+			string m3EXIN, 
+			string m3PYNO, 
+			string m3PYCD, 
+			DateTime m3PYDT, 
+			string m3CUCD, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -316,27 +321,27 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_EXIN))
-				throw new ArgumentNullException("m3_EXIN");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
-			if (string.IsNullOrWhiteSpace(m3_PYCD))
-				throw new ArgumentNullException("m3_PYCD");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3EXIN))
+				throw new ArgumentNullException(nameof(m3EXIN));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
+			if (string.IsNullOrWhiteSpace(m3PYCD))
+				throw new ArgumentNullException(nameof(m3PYCD));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("EXIN", m3_EXIN.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("PYCD", m3_PYCD.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("EXIN", m3EXIN.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("PYCD", m3PYCD.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -346,7 +351,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -357,14 +363,14 @@ namespace M3H5Lib.Api
 		/// Description Add an on account payment
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_PMAM">Payment amount - foreign currency (Required)</param>
-		/// <param name="m3_VTXT">Voucher text (Required)</param>
-		/// <param name="m3_YEA4">Year</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3PMAM">Payment amount - foreign currency (Required)</param>
+		/// <param name="m3VTXT">Voucher text (Required)</param>
+		/// <param name="m3YEA4">Year</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -373,14 +379,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddOnAccount(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			string m3_CUCD, 
-			string m3_PYNO, 
-			DateTime m3_PYDT, 
-			decimal m3_PMAM, 
-			string m3_VTXT, 
-			int? m3_YEA4 = null, 
+			int m3PMNB, 
+			string m3CSHD, 
+			string m3CUCD, 
+			string m3PYNO, 
+			DateTime m3PYDT, 
+			decimal m3PMAM, 
+			string m3VTXT, 
+			int? m3YEA4 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -395,28 +401,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
-			if (string.IsNullOrWhiteSpace(m3_VTXT))
-				throw new ArgumentNullException("m3_VTXT");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
+			if (string.IsNullOrWhiteSpace(m3VTXT))
+				throw new ArgumentNullException(nameof(m3VTXT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("PMAM", m3_PMAM.ToString())
-				.WithQueryParameter("VTXT", m3_VTXT.Trim());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("PMAM", m3PMAM.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("VTXT", m3VTXT.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_YEA4.HasValue)
-				request.WithQueryParameter("YEA4", m3_YEA4.Value.ToString());
+			if (m3YEA4.HasValue)
+				request.WithQueryParameter("YEA4", m3YEA4.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -426,7 +432,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -437,22 +444,22 @@ namespace M3H5Lib.Api
 		/// Description Add payment
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_PYCD">Payment method - accounts receivable (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_PMAM">Payment amount - foreign currency (Required)</param>
-		/// <param name="m3_BKID">Bank account identity</param>
-		/// <param name="m3_CKNO">Check number</param>
-		/// <param name="m3_IRNO">Invoice reference number</param>
-		/// <param name="m3_3RDP">3rd-party provider</param>
-		/// <param name="m3_3RDI">3rd-party ID</param>
-		/// <param name="m3_TRTY">Transaction type</param>
-		/// <param name="m3_CTPY">Card type</param>
-		/// <param name="m3_CANU">Card number</param>
-		/// <param name="m3_NOCA">Name on card</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3PMAM">Payment amount - foreign currency (Required)</param>
+		/// <param name="m3BKID">Bank account identity</param>
+		/// <param name="m3CKNO">Check number</param>
+		/// <param name="m3IRNO">Invoice reference number</param>
+		/// <param name="m33RDP">3rd-party provider</param>
+		/// <param name="m33RDI">3rd-party ID</param>
+		/// <param name="m3TRTY">Transaction type</param>
+		/// <param name="m3CTPY">Card type</param>
+		/// <param name="m3CANU">Card number</param>
+		/// <param name="m3NOCA">Name on card</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -461,22 +468,22 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPayment(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			string m3_PYNO, 
-			string m3_PYCD, 
-			DateTime m3_PYDT, 
-			string m3_CUCD, 
-			decimal m3_PMAM, 
-			string m3_BKID = null, 
-			string m3_CKNO = null, 
-			string m3_IRNO = null, 
-			string m3_3RDP = null, 
-			string m3_3RDI = null, 
-			string m3_TRTY = null, 
-			string m3_CTPY = null, 
-			string m3_CANU = null, 
-			string m3_NOCA = null, 
+			int m3PMNB, 
+			string m3CSHD, 
+			string m3PYNO, 
+			string m3PYCD, 
+			DateTime m3PYDT, 
+			string m3CUCD, 
+			decimal m3PMAM, 
+			string m3BKID = null, 
+			string m3CKNO = null, 
+			string m3IRNO = null, 
+			string m33RDP = null, 
+			string m33RDI = null, 
+			string m3TRTY = null, 
+			string m3CTPY = null, 
+			string m3CANU = null, 
+			string m3NOCA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -491,44 +498,44 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
-			if (string.IsNullOrWhiteSpace(m3_PYCD))
-				throw new ArgumentNullException("m3_PYCD");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
+			if (string.IsNullOrWhiteSpace(m3PYCD))
+				throw new ArgumentNullException(nameof(m3PYCD));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("PYCD", m3_PYCD.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("PMAM", m3_PMAM.ToString());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("PYCD", m3PYCD.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("PMAM", m3PMAM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BKID))
-				request.WithQueryParameter("BKID", m3_BKID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CKNO))
-				request.WithQueryParameter("CKNO", m3_CKNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_IRNO))
-				request.WithQueryParameter("IRNO", m3_IRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_3RDP))
-				request.WithQueryParameter("3RDP", m3_3RDP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_3RDI))
-				request.WithQueryParameter("3RDI", m3_3RDI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRTY))
-				request.WithQueryParameter("TRTY", m3_TRTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CTPY))
-				request.WithQueryParameter("CTPY", m3_CTPY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CANU))
-				request.WithQueryParameter("CANU", m3_CANU.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_NOCA))
-				request.WithQueryParameter("NOCA", m3_NOCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BKID))
+				request.WithQueryParameter("BKID", m3BKID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CKNO))
+				request.WithQueryParameter("CKNO", m3CKNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3IRNO))
+				request.WithQueryParameter("IRNO", m3IRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m33RDP))
+				request.WithQueryParameter("3RDP", m33RDP.Trim());
+			if (!string.IsNullOrWhiteSpace(m33RDI))
+				request.WithQueryParameter("3RDI", m33RDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRTY))
+				request.WithQueryParameter("TRTY", m3TRTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CTPY))
+				request.WithQueryParameter("CTPY", m3CTPY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CANU))
+				request.WithQueryParameter("CANU", m3CANU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3NOCA))
+				request.WithQueryParameter("NOCA", m3NOCA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -538,7 +545,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -549,7 +557,7 @@ namespace M3H5Lib.Api
 		/// Description Add payment number
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSHD">Cash desk</param>
+		/// <param name="m3CSHD">Cash desk</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -558,7 +566,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<AddPaymentNoResponse></returns>
 		/// <exception cref="M3Exception<AddPaymentNoResponse>"></exception>
 		public async Task<M3Response<AddPaymentNoResponse>> AddPaymentNo(
-			string m3_CSHD = null, 
+			string m3CSHD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -573,8 +581,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CSHD))
-				request.WithQueryParameter("CSHD", m3_CSHD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CSHD))
+				request.WithQueryParameter("CSHD", m3CSHD.Trim());
 
 			// Execute the request
 			var result = await Execute<AddPaymentNoResponse>(
@@ -584,7 +592,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -595,13 +604,13 @@ namespace M3H5Lib.Api
 		/// Description Add a petty cash transaction
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_SLOP">Accounting option - payt rcvd variances (Required)</param>
-		/// <param name="m3_PMAM">Payment amount - foreign currency (Required)</param>
-		/// <param name="m3_PMNB">Payment number</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3SLOP">Accounting option - payt rcvd variances (Required)</param>
+		/// <param name="m3PMAM">Payment amount - foreign currency (Required)</param>
+		/// <param name="m3PMNB">Payment number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -610,13 +619,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPettyCash(
-			string m3_CSHD, 
-			string m3_CUCD, 
-			string m3_PYNO, 
-			DateTime m3_PYDT, 
-			int m3_SLOP, 
-			decimal m3_PMAM, 
-			int? m3_PMNB = null, 
+			string m3CSHD, 
+			string m3CUCD, 
+			string m3PYNO, 
+			DateTime m3PYDT, 
+			int m3SLOP, 
+			decimal m3PMAM, 
+			int? m3PMNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -631,25 +640,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("SLOP", m3_SLOP.ToString())
-				.WithQueryParameter("PMAM", m3_PMAM.ToString());
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("SLOP", m3SLOP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PMAM", m3PMAM.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PMNB.HasValue)
-				request.WithQueryParameter("PMNB", m3_PMNB.Value.ToString());
+			if (m3PMNB.HasValue)
+				request.WithQueryParameter("PMNB", m3PMNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -659,7 +668,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -670,12 +680,12 @@ namespace M3H5Lib.Api
 		/// Description Change head values
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_CUCD">Currency</param>
-		/// <param name="m3_PYCD">Payment method - accounts receivable</param>
-		/// <param name="m3_PYDT">Payment date</param>
-		/// <param name="m3_PYNO">Payer</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3CUCD">Currency</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable</param>
+		/// <param name="m3PYDT">Payment date</param>
+		/// <param name="m3PYNO">Payer</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -684,12 +694,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ChgHeadValuesResponse></returns>
 		/// <exception cref="M3Exception<ChgHeadValuesResponse>"></exception>
 		public async Task<M3Response<ChgHeadValuesResponse>> ChgHeadValues(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			string m3_CUCD = null, 
-			string m3_PYCD = null, 
-			DateTime? m3_PYDT = null, 
-			string m3_PYNO = null, 
+			int m3PMNB, 
+			string m3CSHD, 
+			string m3CUCD = null, 
+			string m3PYCD = null, 
+			DateTime? m3PYDT = null, 
+			string m3PYNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -704,23 +714,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PYCD))
-				request.WithQueryParameter("PYCD", m3_PYCD.Trim());
-			if (m3_PYDT.HasValue)
-				request.WithQueryParameter("PYDT", m3_PYDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_PYNO))
-				request.WithQueryParameter("PYNO", m3_PYNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PYCD))
+				request.WithQueryParameter("PYCD", m3PYCD.Trim());
+			if (m3PYDT.HasValue)
+				request.WithQueryParameter("PYDT", m3PYDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3PYNO))
+				request.WithQueryParameter("PYNO", m3PYNO.Trim());
 
 			// Execute the request
 			var result = await Execute<ChgHeadValuesResponse>(
@@ -730,7 +740,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -741,8 +752,8 @@ namespace M3H5Lib.Api
 		/// Description Delete line
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_PLNB">Line number (Required)</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3PLNB">Line number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -751,8 +762,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelLine(
-			int m3_PMNB, 
-			int m3_PLNB, 
+			int m3PMNB, 
+			int m3PLNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -770,8 +781,8 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("PLNB", m3_PLNB.ToString());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PLNB", m3PLNB.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -781,7 +792,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -792,8 +804,8 @@ namespace M3H5Lib.Api
 		/// Description End program
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_PMNB">Payment number</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3PMNB">Payment number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -802,8 +814,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> EndProgram(
-			string m3_CSHD, 
-			int? m3_PMNB = null, 
+			string m3CSHD, 
+			int? m3PMNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -818,16 +830,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CSHD", m3_CSHD.Trim());
+				.WithQueryParameter("CSHD", m3CSHD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PMNB.HasValue)
-				request.WithQueryParameter("PMNB", m3_PMNB.Value.ToString());
+			if (m3PMNB.HasValue)
+				request.WithQueryParameter("PMNB", m3PMNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -837,7 +849,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -848,12 +861,12 @@ namespace M3H5Lib.Api
 		/// Description Retrieve init of fields for AddCreateCheck
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_PYCD">Payment method - accounts receivable</param>
-		/// <param name="m3_PYDT">Payment date</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable</param>
+		/// <param name="m3PYDT">Payment date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -862,12 +875,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCrtChkInitResponse></returns>
 		/// <exception cref="M3Exception<GetCrtChkInitResponse>"></exception>
 		public async Task<M3Response<GetCrtChkInitResponse>> GetCrtChkInit(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			string m3_PYNO, 
-			string m3_CUCD, 
-			string m3_PYCD = null, 
-			DateTime? m3_PYDT = null, 
+			int m3PMNB, 
+			string m3CSHD, 
+			string m3PYNO, 
+			string m3CUCD, 
+			string m3PYCD = null, 
+			DateTime? m3PYDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -882,25 +895,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PYCD))
-				request.WithQueryParameter("PYCD", m3_PYCD.Trim());
-			if (m3_PYDT.HasValue)
-				request.WithQueryParameter("PYDT", m3_PYDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3PYCD))
+				request.WithQueryParameter("PYCD", m3PYCD.Trim());
+			if (m3PYDT.HasValue)
+				request.WithQueryParameter("PYDT", m3PYDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<GetCrtChkInitResponse>(
@@ -910,7 +923,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -921,8 +935,8 @@ namespace M3H5Lib.Api
 		/// Description Get details about a cash desk line
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_PLNB">Line number (Required)</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3PLNB">Line number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -931,8 +945,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDetailsResponse></returns>
 		/// <exception cref="M3Exception<GetDetailsResponse>"></exception>
 		public async Task<M3Response<GetDetailsResponse>> GetDetails(
-			int m3_PMNB, 
-			int m3_PLNB, 
+			int m3PMNB, 
+			int m3PLNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -950,8 +964,8 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("PLNB", m3_PLNB.ToString());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PLNB", m3PLNB.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetDetailsResponse>(
@@ -961,7 +975,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -972,8 +987,8 @@ namespace M3H5Lib.Api
 		/// Description Get head values
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number</param>
-		/// <param name="m3_CSHD">Cash desk</param>
+		/// <param name="m3PMNB">Payment number</param>
+		/// <param name="m3CSHD">Cash desk</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -982,8 +997,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetHeadValuesResponse></returns>
 		/// <exception cref="M3Exception<GetHeadValuesResponse>"></exception>
 		public async Task<M3Response<GetHeadValuesResponse>> GetHeadValues(
-			int? m3_PMNB = null, 
-			string m3_CSHD = null, 
+			int? m3PMNB = null, 
+			string m3CSHD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -998,10 +1013,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PMNB.HasValue)
-				request.WithQueryParameter("PMNB", m3_PMNB.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CSHD))
-				request.WithQueryParameter("CSHD", m3_CSHD.Trim());
+			if (m3PMNB.HasValue)
+				request.WithQueryParameter("PMNB", m3PMNB.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CSHD))
+				request.WithQueryParameter("CSHD", m3CSHD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetHeadValuesResponse>(
@@ -1011,7 +1026,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1022,8 +1038,8 @@ namespace M3H5Lib.Api
 		/// Description Get cash desk parameters
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number</param>
-		/// <param name="m3_CSHD">Cash desk</param>
+		/// <param name="m3PMNB">Payment number</param>
+		/// <param name="m3CSHD">Cash desk</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1032,8 +1048,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetParametersResponse></returns>
 		/// <exception cref="M3Exception<GetParametersResponse>"></exception>
 		public async Task<M3Response<GetParametersResponse>> GetParameters(
-			int? m3_PMNB = null, 
-			string m3_CSHD = null, 
+			int? m3PMNB = null, 
+			string m3CSHD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1048,10 +1064,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PMNB.HasValue)
-				request.WithQueryParameter("PMNB", m3_PMNB.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CSHD))
-				request.WithQueryParameter("CSHD", m3_CSHD.Trim());
+			if (m3PMNB.HasValue)
+				request.WithQueryParameter("PMNB", m3PMNB.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CSHD))
+				request.WithQueryParameter("CSHD", m3CSHD.Trim());
 
 			// Execute the request
 			var result = await Execute<GetParametersResponse>(
@@ -1061,7 +1077,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1072,7 +1089,7 @@ namespace M3H5Lib.Api
 		/// Description Get summary fields
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number</param>
+		/// <param name="m3PMNB">Payment number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1081,7 +1098,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSummaryResponse></returns>
 		/// <exception cref="M3Exception<GetSummaryResponse>"></exception>
 		public async Task<M3Response<GetSummaryResponse>> GetSummary(
-			int? m3_PMNB = null, 
+			int? m3PMNB = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1096,8 +1113,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_PMNB.HasValue)
-				request.WithQueryParameter("PMNB", m3_PMNB.Value.ToString());
+			if (m3PMNB.HasValue)
+				request.WithQueryParameter("PMNB", m3PMNB.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetSummaryResponse>(
@@ -1107,7 +1124,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1118,7 +1136,7 @@ namespace M3H5Lib.Api
 		/// Description List account options
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
+		/// <param name="m3DIVI">Division (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1127,7 +1145,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAccOptionsResponse></returns>
 		/// <exception cref="M3Exception<LstAccOptionsResponse>"></exception>
 		public async Task<M3Response<LstAccOptionsResponse>> LstAccOptions(
-			string m3_DIVI, 
+			string m3DIVI, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1142,12 +1160,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAccOptionsResponse>(
@@ -1157,7 +1175,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1168,14 +1187,14 @@ namespace M3H5Lib.Api
 		/// Description List all invoices by payer
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_YEA4">Year</param>
-		/// <param name="m3_INPX">Invoice prefix</param>
-		/// <param name="m3_IVNO">Invoice number</param>
-		/// <param name="m3_EXIN">Extended invoice number</param>
-		/// <param name="m3_OOIN">Only open invoices</param>
-		/// <param name="m3_NOYE">Number of years</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3YEA4">Year</param>
+		/// <param name="m3INPX">Invoice prefix</param>
+		/// <param name="m3IVNO">Invoice number</param>
+		/// <param name="m3EXIN">Extended invoice number</param>
+		/// <param name="m3OOIN">Only open invoices</param>
+		/// <param name="m3NOYE">Number of years</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1184,14 +1203,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAllInvByPayResponse></returns>
 		/// <exception cref="M3Exception<LstAllInvByPayResponse>"></exception>
 		public async Task<M3Response<LstAllInvByPayResponse>> LstAllInvByPay(
-			string m3_DIVI, 
-			string m3_PYNO, 
-			int? m3_YEA4 = null, 
-			string m3_INPX = null, 
-			int? m3_IVNO = null, 
-			string m3_EXIN = null, 
-			string m3_OOIN = null, 
-			int? m3_NOYE = null, 
+			string m3DIVI, 
+			string m3PYNO, 
+			int? m3YEA4 = null, 
+			string m3INPX = null, 
+			int? m3IVNO = null, 
+			string m3EXIN = null, 
+			string m3OOIN = null, 
+			int? m3NOYE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1206,29 +1225,29 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_YEA4.HasValue)
-				request.WithQueryParameter("YEA4", m3_YEA4.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_INPX))
-				request.WithQueryParameter("INPX", m3_INPX.Trim());
-			if (m3_IVNO.HasValue)
-				request.WithQueryParameter("IVNO", m3_IVNO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_EXIN))
-				request.WithQueryParameter("EXIN", m3_EXIN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OOIN))
-				request.WithQueryParameter("OOIN", m3_OOIN.Trim());
-			if (m3_NOYE.HasValue)
-				request.WithQueryParameter("NOYE", m3_NOYE.Value.ToString());
+			if (m3YEA4.HasValue)
+				request.WithQueryParameter("YEA4", m3YEA4.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3INPX))
+				request.WithQueryParameter("INPX", m3INPX.Trim());
+			if (m3IVNO.HasValue)
+				request.WithQueryParameter("IVNO", m3IVNO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3EXIN))
+				request.WithQueryParameter("EXIN", m3EXIN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OOIN))
+				request.WithQueryParameter("OOIN", m3OOIN.Trim());
+			if (m3NOYE.HasValue)
+				request.WithQueryParameter("NOYE", m3NOYE.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAllInvByPayResponse>(
@@ -1238,7 +1257,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1249,8 +1269,8 @@ namespace M3H5Lib.Api
 		/// Description List lines
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_RCVA">Cash received</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3RCVA">Cash received</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1259,8 +1279,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLineCrCrdResponse></returns>
 		/// <exception cref="M3Exception<LstLineCrCrdResponse>"></exception>
 		public async Task<M3Response<LstLineCrCrdResponse>> LstLineCrCrd(
-			int m3_PMNB, 
-			decimal? m3_RCVA = null, 
+			int m3PMNB, 
+			decimal? m3RCVA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1278,11 +1298,11 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RCVA.HasValue)
-				request.WithQueryParameter("RCVA", m3_RCVA.Value.ToString());
+			if (m3RCVA.HasValue)
+				request.WithQueryParameter("RCVA", m3RCVA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstLineCrCrdResponse>(
@@ -1292,7 +1312,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1303,7 +1324,7 @@ namespace M3H5Lib.Api
 		/// Description List lines
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1312,7 +1333,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstLinesResponse></returns>
 		/// <exception cref="M3Exception<LstLinesResponse>"></exception>
 		public async Task<M3Response<LstLinesResponse>> LstLines(
-			int m3_PMNB, 
+			int m3PMNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1330,7 +1351,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstLinesResponse>(
@@ -1340,7 +1361,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1351,7 +1373,7 @@ namespace M3H5Lib.Api
 		/// Description Reset - deletes all lines
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1360,7 +1382,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Reset(
-			int m3_PMNB, 
+			int m3PMNB, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1378,7 +1400,7 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1388,7 +1410,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1399,16 +1422,16 @@ namespace M3H5Lib.Api
 		/// Description Validate
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_PYCD">Payment method - accounts receivable</param>
-		/// <param name="m3_PRCX">Print receipt</param>
-		/// <param name="m3_PATO">Create payment tolerance</param>
-		/// <param name="m3_SLOP">Accounting option - payt rcvd variances</param>
-		/// <param name="m3_PAPA">Create partial payment</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable</param>
+		/// <param name="m3PRCX">Print receipt</param>
+		/// <param name="m3PATO">Create payment tolerance</param>
+		/// <param name="m3SLOP">Accounting option - payt rcvd variances</param>
+		/// <param name="m3PAPA">Create partial payment</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1417,16 +1440,16 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Validate(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			string m3_PYNO, 
-			DateTime m3_PYDT, 
-			string m3_CUCD, 
-			string m3_PYCD = null, 
-			int? m3_PRCX = null, 
-			int? m3_PATO = null, 
-			int? m3_SLOP = null, 
-			int? m3_PAPA = null, 
+			int m3PMNB, 
+			string m3CSHD, 
+			string m3PYNO, 
+			DateTime m3PYDT, 
+			string m3CUCD, 
+			string m3PYCD = null, 
+			int? m3PRCX = null, 
+			int? m3PATO = null, 
+			int? m3SLOP = null, 
+			int? m3PAPA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1441,32 +1464,32 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PYCD))
-				request.WithQueryParameter("PYCD", m3_PYCD.Trim());
-			if (m3_PRCX.HasValue)
-				request.WithQueryParameter("PRCX", m3_PRCX.Value.ToString());
-			if (m3_PATO.HasValue)
-				request.WithQueryParameter("PATO", m3_PATO.Value.ToString());
-			if (m3_SLOP.HasValue)
-				request.WithQueryParameter("SLOP", m3_SLOP.Value.ToString());
-			if (m3_PAPA.HasValue)
-				request.WithQueryParameter("PAPA", m3_PAPA.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3PYCD))
+				request.WithQueryParameter("PYCD", m3PYCD.Trim());
+			if (m3PRCX.HasValue)
+				request.WithQueryParameter("PRCX", m3PRCX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PATO.HasValue)
+				request.WithQueryParameter("PATO", m3PATO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SLOP.HasValue)
+				request.WithQueryParameter("SLOP", m3SLOP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3PAPA.HasValue)
+				request.WithQueryParameter("PAPA", m3PAPA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1476,7 +1499,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -1487,13 +1511,13 @@ namespace M3H5Lib.Api
 		/// Description ValidateCCData
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PMNB">Payment number (Required)</param>
-		/// <param name="m3_CSHD">Cash desk (Required)</param>
-		/// <param name="m3_PYNO">Payer (Required)</param>
-		/// <param name="m3_PYDT">Payment date (Required)</param>
-		/// <param name="m3_CUCD">Currency (Required)</param>
-		/// <param name="m3_PYCD">Payment method - accounts receivable (Required)</param>
-		/// <param name="m3_PMAM">Payment amount - foreign currency (Required)</param>
+		/// <param name="m3PMNB">Payment number (Required)</param>
+		/// <param name="m3CSHD">Cash desk (Required)</param>
+		/// <param name="m3PYNO">Payer (Required)</param>
+		/// <param name="m3PYDT">Payment date (Required)</param>
+		/// <param name="m3CUCD">Currency (Required)</param>
+		/// <param name="m3PYCD">Payment method - accounts receivable (Required)</param>
+		/// <param name="m3PMAM">Payment amount - foreign currency (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -1502,13 +1526,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ValidateCCData(
-			int m3_PMNB, 
-			string m3_CSHD, 
-			string m3_PYNO, 
-			DateTime m3_PYDT, 
-			string m3_CUCD, 
-			string m3_PYCD, 
-			decimal m3_PMAM, 
+			int m3PMNB, 
+			string m3CSHD, 
+			string m3PYNO, 
+			DateTime m3PYDT, 
+			string m3CUCD, 
+			string m3PYCD, 
+			decimal m3PMAM, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -1523,24 +1547,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSHD))
-				throw new ArgumentNullException("m3_CSHD");
-			if (string.IsNullOrWhiteSpace(m3_PYNO))
-				throw new ArgumentNullException("m3_PYNO");
-			if (string.IsNullOrWhiteSpace(m3_CUCD))
-				throw new ArgumentNullException("m3_CUCD");
-			if (string.IsNullOrWhiteSpace(m3_PYCD))
-				throw new ArgumentNullException("m3_PYCD");
+			if (string.IsNullOrWhiteSpace(m3CSHD))
+				throw new ArgumentNullException(nameof(m3CSHD));
+			if (string.IsNullOrWhiteSpace(m3PYNO))
+				throw new ArgumentNullException(nameof(m3PYNO));
+			if (string.IsNullOrWhiteSpace(m3CUCD))
+				throw new ArgumentNullException(nameof(m3CUCD));
+			if (string.IsNullOrWhiteSpace(m3PYCD))
+				throw new ArgumentNullException(nameof(m3PYCD));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PMNB", m3_PMNB.ToString())
-				.WithQueryParameter("CSHD", m3_CSHD.Trim())
-				.WithQueryParameter("PYNO", m3_PYNO.Trim())
-				.WithQueryParameter("PYDT", m3_PYDT.ToM3String())
-				.WithQueryParameter("CUCD", m3_CUCD.Trim())
-				.WithQueryParameter("PYCD", m3_PYCD.Trim())
-				.WithQueryParameter("PMAM", m3_PMAM.ToString());
+				.WithQueryParameter("PMNB", m3PMNB.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSHD", m3CSHD.Trim())
+				.WithQueryParameter("PYNO", m3PYNO.Trim())
+				.WithQueryParameter("PYDT", m3PYDT.ToM3String())
+				.WithQueryParameter("CUCD", m3CUCD.Trim())
+				.WithQueryParameter("PYCD", m3PYCD.Trim())
+				.WithQueryParameter("PMAM", m3PMAM.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -1550,7 +1574,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

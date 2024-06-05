@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS107MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,20 +38,20 @@ namespace M3H5Lib.Api
 		/// Description Simulate rental price
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_AGCN">Agreement customer (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_ORQT">Ordered quantity - basic U/M (Required)</param>
-		/// <param name="m3_FVDT">Valid from (Required)</param>
-		/// <param name="m3_AOTP">Agreement order type (Required)</param>
-		/// <param name="m3_DPOT">Rental depot (Required)</param>
-		/// <param name="m3_FACI">Facility (Required)</param>
-		/// <param name="m3_LVDT">Valid to</param>
-		/// <param name="m3_LTYP">Line type</param>
-		/// <param name="m3_CCAP">Rental rate type</param>
-		/// <param name="m3_PRRF">Price list</param>
-		/// <param name="m3_RAFA">Rate factor</param>
-		/// <param name="m3_ADPW">Days per week</param>
-		/// <param name="m3_CUCD">Currency</param>
+		/// <param name="m3AGCN">Agreement customer (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3ORQT">Ordered quantity - basic U/M (Required)</param>
+		/// <param name="m3FVDT">Valid from (Required)</param>
+		/// <param name="m3AOTP">Agreement order type (Required)</param>
+		/// <param name="m3DPOT">Rental depot (Required)</param>
+		/// <param name="m3FACI">Facility (Required)</param>
+		/// <param name="m3LVDT">Valid to</param>
+		/// <param name="m3LTYP">Line type</param>
+		/// <param name="m3CCAP">Rental rate type</param>
+		/// <param name="m3PRRF">Price list</param>
+		/// <param name="m3RAFA">Rate factor</param>
+		/// <param name="m3ADPW">Days per week</param>
+		/// <param name="m3CUCD">Currency</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -58,20 +60,20 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SimRentalPrcResponse></returns>
 		/// <exception cref="M3Exception<SimRentalPrcResponse>"></exception>
 		public async Task<M3Response<SimRentalPrcResponse>> SimRentalPrc(
-			string m3_AGCN, 
-			string m3_ITNO, 
-			decimal m3_ORQT, 
-			DateTime m3_FVDT, 
-			string m3_AOTP, 
-			string m3_DPOT, 
-			string m3_FACI, 
-			DateTime? m3_LVDT = null, 
-			string m3_LTYP = null, 
-			string m3_CCAP = null, 
-			string m3_PRRF = null, 
-			int? m3_RAFA = null, 
-			int? m3_ADPW = null, 
-			string m3_CUCD = null, 
+			string m3AGCN, 
+			string m3ITNO, 
+			decimal m3ORQT, 
+			DateTime m3FVDT, 
+			string m3AOTP, 
+			string m3DPOT, 
+			string m3FACI, 
+			DateTime? m3LVDT = null, 
+			string m3LTYP = null, 
+			string m3CCAP = null, 
+			string m3PRRF = null, 
+			int? m3RAFA = null, 
+			int? m3ADPW = null, 
+			string m3CUCD = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -86,42 +88,42 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGCN))
-				throw new ArgumentNullException("m3_AGCN");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_AOTP))
-				throw new ArgumentNullException("m3_AOTP");
-			if (string.IsNullOrWhiteSpace(m3_DPOT))
-				throw new ArgumentNullException("m3_DPOT");
-			if (string.IsNullOrWhiteSpace(m3_FACI))
-				throw new ArgumentNullException("m3_FACI");
+			if (string.IsNullOrWhiteSpace(m3AGCN))
+				throw new ArgumentNullException(nameof(m3AGCN));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3AOTP))
+				throw new ArgumentNullException(nameof(m3AOTP));
+			if (string.IsNullOrWhiteSpace(m3DPOT))
+				throw new ArgumentNullException(nameof(m3DPOT));
+			if (string.IsNullOrWhiteSpace(m3FACI))
+				throw new ArgumentNullException(nameof(m3FACI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGCN", m3_AGCN.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("ORQT", m3_ORQT.ToString())
-				.WithQueryParameter("FVDT", m3_FVDT.ToM3String())
-				.WithQueryParameter("AOTP", m3_AOTP.Trim())
-				.WithQueryParameter("DPOT", m3_DPOT.Trim())
-				.WithQueryParameter("FACI", m3_FACI.Trim());
+				.WithQueryParameter("AGCN", m3AGCN.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("ORQT", m3ORQT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("FVDT", m3FVDT.ToM3String())
+				.WithQueryParameter("AOTP", m3AOTP.Trim())
+				.WithQueryParameter("DPOT", m3DPOT.Trim())
+				.WithQueryParameter("FACI", m3FACI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_LVDT.HasValue)
-				request.WithQueryParameter("LVDT", m3_LVDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_LTYP))
-				request.WithQueryParameter("LTYP", m3_LTYP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CCAP))
-				request.WithQueryParameter("CCAP", m3_CCAP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRRF))
-				request.WithQueryParameter("PRRF", m3_PRRF.Trim());
-			if (m3_RAFA.HasValue)
-				request.WithQueryParameter("RAFA", m3_RAFA.Value.ToString());
-			if (m3_ADPW.HasValue)
-				request.WithQueryParameter("ADPW", m3_ADPW.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_CUCD))
-				request.WithQueryParameter("CUCD", m3_CUCD.Trim());
+			if (m3LVDT.HasValue)
+				request.WithQueryParameter("LVDT", m3LVDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3LTYP))
+				request.WithQueryParameter("LTYP", m3LTYP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CCAP))
+				request.WithQueryParameter("CCAP", m3CCAP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRRF))
+				request.WithQueryParameter("PRRF", m3PRRF.Trim());
+			if (m3RAFA.HasValue)
+				request.WithQueryParameter("RAFA", m3RAFA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ADPW.HasValue)
+				request.WithQueryParameter("ADPW", m3ADPW.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3CUCD))
+				request.WithQueryParameter("CUCD", m3CUCD.Trim());
 
 			// Execute the request
 			var result = await Execute<SimRentalPrcResponse>(
@@ -131,7 +133,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

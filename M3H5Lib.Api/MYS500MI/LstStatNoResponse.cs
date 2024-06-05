@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Message direction
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Message direction")]
-		public string M3_E0IO => GetString("E0IO");
+		public string M3E0IO => GetString("E0IO");
 
 		/// <summary>
 		/// Description: Direction
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Direction")]
-		public int? M3_INOU => GetNullableInt("INOU");
+		public int? M3INOU => GetNullableInt("INOU");
 
 		/// <summary>
 		/// Description: TEI Transfer ID
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("TEI Transfer ID")]
-		public string M3_TINR => GetString("TINR");
+		public string M3TINR => GetString("TINR");
 
 		/// <summary>
 		/// Description: Customs statistical number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customs statistical number")]
-		public string M3_CSNO => GetString("CSNO");
+		public string M3CSNO => GetString("CSNO");
 
 		/// <summary>
 		/// Description: Country of origin
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country of origin")]
-		public string M3_ORCO => GetString("ORCO");
+		public string M3ORCO => GetString("ORCO");
 
 		/// <summary>
 		/// Description: Customs procedure - export
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customs procedure - export")]
-		public string M3_CPRE => GetString("CPRE");
+		public string M3CPRE => GetString("CPRE");
 
 		/// <summary>
 		/// Description: Customs procedure - import
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customs procedure - import")]
-		public string M3_CPRI => GetString("CPRI");
+		public string M3CPRI => GetString("CPRI");
 
 		/// <summary>
 		/// Description: Description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Number of packages
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of packages")]
-		public int? M3_NUPA => GetNullableInt("NUPA");
+		public int? M3NUPA => GetNullableInt("NUPA");
 
 		/// <summary>
 		/// Description: Gross weight
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Gross weight")]
-		public decimal? M3_GRWE => GetNullableDecimal("GRWE");
+		public decimal? M3GRWE => GetNullableDecimal("GRWE");
 
 		/// <summary>
 		/// Description: Net weight
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Net weight")]
-		public decimal? M3_NEWE => GetNullableDecimal("NEWE");
+		public decimal? M3NEWE => GetNullableDecimal("NEWE");
 
 		/// <summary>
 		/// Description: Customs quantity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customs quantity")]
-		public decimal? M3_ECQT => GetNullableDecimal("ECQT");
+		public decimal? M3ECQT => GetNullableDecimal("ECQT");
 
 		/// <summary>
 		/// Description: Supplementary U/M
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplementary U/M")]
-		public string M3_SUPL => GetString("SUPL");
+		public string M3SUPL => GetString("SUPL");
 
 		/// <summary>
 		/// Description: Line amount - order currency
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line amount - order currency")]
-		public decimal? M3_LNAM => GetNullableDecimal("LNAM");
+		public decimal? M3LNAM => GetNullableDecimal("LNAM");
 
 		/// <summary>
 		/// Description: Currency
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MYS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Work order category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order category")]
-		public string M3_MOTC => GetString("MOTC");
+		public string M3MOTC => GetString("MOTC");
 
 		/// <summary>
 		/// Description: Update material plan
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update material plan")]
-		public int? M3_UPMP => GetNullableInt("UPMP");
+		public int? M3UPMP => GetNullableInt("UPMP");
 
 		/// <summary>
 		/// Description: Number series
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number series")]
-		public string M3_NBID => GetString("NBID");
+		public string M3NBID => GetString("NBID");
 
 		/// <summary>
 		/// Description: Keep planned order number as MO number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Keep planned order number as MO number")]
-		public int? M3_KEEP => GetNullableInt("KEEP");
+		public int? M3KEEP => GetNullableInt("KEEP");
 
 		/// <summary>
 		/// Description: POS to M3 Requisition +
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("POS to M3 Requisition +")]
-		public string M3_TRT1 => GetString("TRT1");
+		public string M3TRT1 => GetString("TRT1");
 
 		/// <summary>
 		/// Description: POS to M3 Requisition -
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("POS to M3 Requisition -")]
-		public string M3_TRT2 => GetString("TRT2");
+		public string M3TRT2 => GetString("TRT2");
 
 		/// <summary>
 		/// Description: Create customer order automatically
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Create customer order automatically")]
-		public int? M3_SOCR => GetNullableInt("SOCR");
+		public int? M3SOCR => GetNullableInt("SOCR");
 
 		/// <summary>
 		/// Description: Should WO be created for each request
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Should WO be created for each request")]
-		public int? M3_MOOH => GetNullableInt("MOOH");
+		public int? M3MOOH => GetNullableInt("MOOH");
 
 		/// <summary>
 		/// Description: Automatic allocation of employees
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic allocation of employees")]
-		public int? M3_AAPA => GetNullableInt("AAPA");
+		public int? M3AAPA => GetNullableInt("AAPA");
 
 		/// <summary>
 		/// Description: Dispatch policy
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dispatch policy")]
-		public string M3_DPOL => GetString("DPOL");
+		public string M3DPOL => GetString("DPOL");
 
 		/// <summary>
 		/// Description: Supply model
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply model")]
-		public string M3_SPLM => GetString("SPLM");
+		public string M3SPLM => GetString("SPLM");
 
 		/// <summary>
 		/// Description: Advanced order costing
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Advanced order costing")]
-		public int? M3_CALE => GetNullableInt("CALE");
+		public int? M3CALE => GetNullableInt("CALE");
 
 		/// <summary>
 		/// Description: Actual values - value type 01
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual values - value type 01")]
-		public int? M3_CAAV => GetNullableInt("CAAV");
+		public int? M3CAAV => GetNullableInt("CAAV");
 
 		/// <summary>
 		/// Description: Standard values - value type 03
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Standard values - value type 03")]
-		public int? M3_CASV => GetNullableInt("CASV");
+		public int? M3CASV => GetNullableInt("CASV");
 
 		/// <summary>
 		/// Description: Order costing variance
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order costing variance")]
-		public int? M3_CAVA => GetNullableInt("CAVA");
+		public int? M3CAVA => GetNullableInt("CAVA");
 
 		/// <summary>
 		/// Description: Mandatory service error report
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mandatory service error report")]
-		public int? M3_MSER => GetNullableInt("MSER");
+		public int? M3MSER => GetNullableInt("MSER");
 
 		/// <summary>
 		/// Description: Customer order ref required on WO
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer order ref required on WO")]
-		public int? M3_WOCU => GetNullableInt("WOCU");
+		public int? M3WOCU => GetNullableInt("WOCU");
 
 		/// <summary>
 		/// Description: Default PO type - repair order fr maint
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default PO type - repair order fr maint")]
-		public string M3_DPTR => GetString("DPTR");
+		public string M3DPTR => GetString("DPTR");
 
 		/// <summary>
 		/// Description: Description
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Text identity
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Phantom ID")]
-		public string M3_PHID => GetString("PHID");
+		public string M3PHID => GetString("PHID");
 
 		/// <summary>
 		/// Description: Style number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style number")]
-		public string M3_STYN => GetString("STYN");
+		public string M3STYN => GetString("STYN");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: X-option
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("X-option")]
-		public string M3_OPTX => GetString("OPTX");
+		public string M3OPTX => GetString("OPTX");
 
 		/// <summary>
 		/// Description: Y-option
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Y-option")]
-		public string M3_OPTY => GetString("OPTY");
+		public string M3OPTY => GetString("OPTY");
 
 		/// <summary>
 		/// Description: Z-option
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Z-option")]
-		public string M3_OPTZ => GetString("OPTZ");
+		public string M3OPTZ => GetString("OPTZ");
 	}
 }
 // EOF

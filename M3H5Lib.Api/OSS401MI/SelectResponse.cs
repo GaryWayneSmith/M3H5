@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Dataset
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dataset")]
-		public string M3_SBDS => GetString("SBDS");
+		public string M3SBDS => GetString("SBDS");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Dataset Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dataset Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Period Type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period Type")]
-		public int? M3_PETP => GetNullableInt("PETP");
+		public int? M3PETP => GetNullableInt("PETP");
 
 		/// <summary>
 		/// Description: Valid from
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid from")]
-		public DateTime? M3_FVDT => GetNullableDateTime("FVDT");
+		public DateTime? M3FVDT => GetNullableDateTime("FVDT");
 
 		/// <summary>
 		/// Description: Valid to
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Valid to")]
-		public DateTime? M3_LVDT => GetNullableDateTime("LVDT");
+		public DateTime? M3LVDT => GetNullableDateTime("LVDT");
 
 		/// <summary>
 		/// Description: File
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Division
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Number of records
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OSS401MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of records")]
-		public decimal? M3_RCNU => GetNullableDecimal("RCNU");
+		public decimal? M3RCNU => GetNullableDecimal("RCNU");
 	}
 }
 // EOF

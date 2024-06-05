@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Attribute type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute type")]
-		public string M3_ATVC => GetString("ATVC");
+		public string M3ATVC => GetString("ATVC");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Attribute group
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute group")]
-		public string M3_ATGR => GetString("ATGR");
+		public string M3ATGR => GetString("ATGR");
 
 		/// <summary>
 		/// Description: Controlling object
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Controlling object")]
-		public int? M3_COBT => GetNullableInt("COBT");
+		public int? M3COBT => GetNullableInt("COBT");
 
 		/// <summary>
 		/// Description: Manual change allowed
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual change allowed")]
-		public int? M3_MCAL => GetNullableInt("MCAL");
+		public int? M3MCAL => GetNullableInt("MCAL");
 
 		/// <summary>
 		/// Description: Print attribute value
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print attribute value")]
-		public int? M3_PRII => GetNullableInt("PRII");
+		public int? M3PRII => GetNullableInt("PRII");
 
 		/// <summary>
 		/// Description: Print attribute info
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print attribute info")]
-		public int? M3_PRFI => GetNullableInt("PRFI");
+		public int? M3PRFI => GetNullableInt("PRFI");
 
 		/// <summary>
 		/// Description: Print on new line
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print on new line")]
-		public int? M3_PRNL => GetNullableInt("PRNL");
+		public int? M3PRNL => GetNullableInt("PRNL");
 
 		/// <summary>
 		/// Description: Print separator
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print separator")]
-		public string M3_PSEP => GetString("PSEP");
+		public string M3PSEP => GetString("PSEP");
 
 		/// <summary>
 		/// Description: Print separator prefix
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print separator prefix")]
-		public string M3_PSPR => GetString("PSPR");
+		public string M3PSPR => GetString("PSPR");
 
 		/// <summary>
 		/// Description: Print separator suffix
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print separator suffix")]
-		public string M3_PSES => GetString("PSES");
+		public string M3PSES => GetString("PSES");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Item attribute
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item attribute")]
-		public int? M3_IATT => GetNullableInt("IATT");
+		public int? M3IATT => GetNullableInt("IATT");
 
 		/// <summary>
 		/// Description: Multiple attribute values
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Multiple attribute values")]
-		public int? M3_MUAV => GetNullableInt("MUAV");
+		public int? M3MUAV => GetNullableInt("MUAV");
 
 		/// <summary>
 		/// Description: Attribute classification
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute classification")]
-		public int? M3_ATCL => GetNullableInt("ATCL");
+		public int? M3ATCL => GetNullableInt("ATCL");
 
 		/// <summary>
 		/// Description: Allow blanks
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allow blanks")]
-		public int? M3_ALBA => GetNullableInt("ALBA");
+		public int? M3ALBA => GetNullableInt("ALBA");
 
 		/// <summary>
 		/// Description: Quality controlled
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quality controlled")]
-		public int? M3_QLCT => GetNullableInt("QLCT");
+		public int? M3QLCT => GetNullableInt("QLCT");
 
 		/// <summary>
 		/// Description: Dynamically calculated
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ATS010MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dynamically calculated")]
-		public int? M3_DYCA => GetNullableInt("DYCA");
+		public int? M3DYCA => GetNullableInt("DYCA");
 	}
 }
 // EOF

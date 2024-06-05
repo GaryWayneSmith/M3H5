@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount term")]
-		public string M3_TECD => GetString("TECD");
+		public string M3TECD => GetString("TECD");
 
 		/// <summary>
 		/// Description: Language
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Cash discount method
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount method")]
-		public int? M3_GRNT => GetNullableInt("GRNT");
+		public int? M3GRNT => GetNullableInt("GRNT");
 
 		/// <summary>
 		/// Description: Cash discount - local currency
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount - local currency")]
-		public decimal? M3_CDAM => GetNullableDecimal("CDAM");
+		public decimal? M3CDAM => GetNullableDecimal("CDAM");
 
 		/// <summary>
 		/// Description: Cash discount days
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount days")]
-		public int? M3_CDDY => GetNullableInt("CDDY");
+		public int? M3CDDY => GetNullableInt("CDDY");
 
 		/// <summary>
 		/// Description: Cash discount date 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount date 1")]
-		public DateTime? M3_CDT1 => GetNullableDateTime("CDT1");
+		public DateTime? M3CDT1 => GetNullableDateTime("CDT1");
 
 		/// <summary>
 		/// Description: Cash discount percentage
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount percentage")]
-		public int? M3_CDPC => GetNullableInt("CDPC");
+		public int? M3CDPC => GetNullableInt("CDPC");
 
 		/// <summary>
 		/// Description: Cash discount 1, amount
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount 1, amount")]
-		public decimal? M3_CDA1 => GetNullableDecimal("CDA1");
+		public decimal? M3CDA1 => GetNullableDecimal("CDA1");
 
 		/// <summary>
 		/// Description: Cash discount days
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount days")]
-		public int? M3_CDD2 => GetNullableInt("CDD2");
+		public int? M3CDD2 => GetNullableInt("CDD2");
 
 		/// <summary>
 		/// Description: Cash discount date 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount date 2")]
-		public DateTime? M3_CDT2 => GetNullableDateTime("CDT2");
+		public DateTime? M3CDT2 => GetNullableDateTime("CDT2");
 
 		/// <summary>
 		/// Description: Cash discount percentage
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount percentage")]
-		public int? M3_CDP2 => GetNullableInt("CDP2");
+		public int? M3CDP2 => GetNullableInt("CDP2");
 
 		/// <summary>
 		/// Description: Cash dicount 2, amount
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash dicount 2, amount")]
-		public decimal? M3_CDA2 => GetNullableDecimal("CDA2");
+		public decimal? M3CDA2 => GetNullableDecimal("CDA2");
 
 		/// <summary>
 		/// Description: Cash discount days
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount days")]
-		public int? M3_CDD3 => GetNullableInt("CDD3");
+		public int? M3CDD3 => GetNullableInt("CDD3");
 
 		/// <summary>
 		/// Description: Cash discount date 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount date 3")]
-		public DateTime? M3_CDT3 => GetNullableDateTime("CDT3");
+		public DateTime? M3CDT3 => GetNullableDateTime("CDT3");
 
 		/// <summary>
 		/// Description: Cash discount percentage
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount percentage")]
-		public int? M3_CDP3 => GetNullableInt("CDP3");
+		public int? M3CDP3 => GetNullableInt("CDP3");
 
 		/// <summary>
 		/// Description: Cash discount 3, amount
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cash discount 3, amount")]
-		public decimal? M3_CDA3 => GetNullableDecimal("CDA3");
+		public decimal? M3CDA3 => GetNullableDecimal("CDA3");
 
 		/// <summary>
 		/// Description: Terms text
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Terms text")]
-		public string M3_TEL1 => GetString("TEL1");
+		public string M3TEL1 => GetString("TEL1");
 
 		/// <summary>
 		/// Description: Terms text
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.POS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Terms text")]
-		public string M3_TEL2 => GetString("TEL2");
+		public string M3TEL2 => GetString("TEL2");
 	}
 }
 // EOF

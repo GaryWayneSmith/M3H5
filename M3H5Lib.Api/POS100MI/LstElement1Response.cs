@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Position number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Position number")]
-		public long? M3_POSI => GetNullableLong("POSI");
+		public long? M3POSI => GetNullableLong("POSI");
 
 		/// <summary>
 		/// Description: Level in structure
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Level in structure")]
-		public int? M3_LEVL => GetNullableInt("LEVL");
+		public int? M3LEVL => GetNullableInt("LEVL");
 
 		/// <summary>
 		/// Description: First element above in structure
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("First element above in structure")]
-		public string M3_CIEN => GetString("CIEN");
+		public string M3CIEN => GetString("CIEN");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Project category
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project category")]
-		public string M3_POTK => GetString("POTK");
+		public string M3POTK => GetString("POTK");
 
 		/// <summary>
 		/// Description: Milestone
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Milestone")]
-		public int? M3_MILS => GetNullableInt("MILS");
+		public int? M3MILS => GetNullableInt("MILS");
 
 		/// <summary>
 		/// Description: Change date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_CHDA => GetNullableDateTime("CHDA");
+		public DateTime? M3CHDA => GetNullableDateTime("CHDA");
 
 		/// <summary>
 		/// Description: Text identity
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Scheduling
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scheduling")]
-		public int? M3_TMSC => GetNullableInt("TMSC");
+		public int? M3TMSC => GetNullableInt("TMSC");
 
 		/// <summary>
 		/// Description: Element status
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.POS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element status")]
-		public string M3_ELST => GetString("ELST");
+		public string M3ELST => GetString("ELST");
 	}
 }
 // EOF

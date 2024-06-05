@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Budget item ID
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget item ID")]
-		public string M3_IDEN => GetString("IDEN");
+		public string M3IDEN => GetString("IDEN");
 
 		/// <summary>
 		/// Description: Budget amount
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget amount")]
-		public decimal? M3_BUAT => GetNullableDecimal("BUAT");
+		public decimal? M3BUAT => GetNullableDecimal("BUAT");
 
 		/// <summary>
 		/// Description: Budget quantity
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget quantity")]
-		public decimal? M3_BUQT => GetNullableDecimal("BUQT");
+		public decimal? M3BUQT => GetNullableDecimal("BUQT");
 
 		/// <summary>
 		/// Description: Actual
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual")]
-		public decimal? M3_OUAT => GetNullableDecimal("OUAT");
+		public decimal? M3OUAT => GetNullableDecimal("OUAT");
 
 		/// <summary>
 		/// Description: Actual quantity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Actual quantity")]
-		public decimal? M3_OUQT => GetNullableDecimal("OUQT");
+		public decimal? M3OUQT => GetNullableDecimal("OUQT");
 
 		/// <summary>
 		/// Description: Expense/Revenue code
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Expense/Revenue code")]
-		public int? M3_ICVT => GetNullableInt("ICVT");
+		public int? M3ICVT => GetNullableInt("ICVT");
 
 		/// <summary>
 		/// Description: Date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.POS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date")]
-		public DateTime? M3_DTUM => GetNullableDateTime("DTUM");
+		public DateTime? M3DTUM => GetNullableDateTime("DTUM");
 	}
 }
 // EOF

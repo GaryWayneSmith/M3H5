@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Claimofficer
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claimofficer")]
-		public string M3_CLRE => GetString("CLRE");
+		public string M3CLRE => GetString("CLRE");
 
 		/// <summary>
 		/// Description: Claimreference
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claimreference")]
-		public string M3_CLRF => GetString("CLRF");
+		public string M3CLRF => GetString("CLRF");
 
 		/// <summary>
 		/// Description: Claimnumber
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claimnumber")]
-		public string M3_CLAN => GetString("CLAN");
+		public string M3CLAN => GetString("CLAN");
 
 		/// <summary>
 		/// Description: Suppliernumber
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliernumber")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Purchaseordernumber
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchaseordernumber")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Lowestclaimstatus
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowestclaimstatus")]
-		public string M3_CLAL => GetString("CLAL");
+		public string M3CLAL => GetString("CLAL");
 
 		/// <summary>
 		/// Description: Highestclaimstatus
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highestclaimstatus")]
-		public string M3_CLAH => GetString("CLAH");
+		public string M3CLAH => GetString("CLAH");
 
 		/// <summary>
 		/// Description: Claimdate
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claimdate")]
-		public DateTime? M3_CLAD => GetNullableDateTime("CLAD");
+		public DateTime? M3CLAD => GetNullableDateTime("CLAD");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Responsible for reporting
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible for reporting")]
-		public string M3_RPRE => GetString("RPRE");
+		public string M3RPRE => GetString("RPRE");
 
 		/// <summary>
 		/// Description: Description
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: Your reference
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference")]
-		public string M3_YRE1 => GetString("YRE1");
+		public string M3YRE1 => GetString("YRE1");
 
 		/// <summary>
 		/// Description: Replacement delivery
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement delivery")]
-		public int? M3_REPT => GetNullableInt("REPT");
+		public int? M3REPT => GetNullableInt("REPT");
 
 		/// <summary>
 		/// Description: Credit to issue
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit to issue")]
-		public int? M3_CRTI => GetNullableInt("CRTI");
+		public int? M3CRTI => GetNullableInt("CRTI");
 
 		/// <summary>
 		/// Description: Supplementary delivery
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplementary delivery")]
-		public int? M3_COMD => GetNullableInt("COMD");
+		public int? M3COMD => GetNullableInt("COMD");
 
 		/// <summary>
 		/// Description: Cost to repair
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost to repair")]
-		public int? M3_CORE => GetNullableInt("CORE");
+		public int? M3CORE => GetNullableInt("CORE");
 
 		/// <summary>
 		/// Description: Update material plan
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update material plan")]
-		public int? M3_UPAV => GetNullableInt("UPAV");
+		public int? M3UPAV => GetNullableInt("UPAV");
 
 		/// <summary>
 		/// Description: Replacement delivery date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Replacement delivery date")]
-		public DateTime? M3_RPTD => GetNullableDateTime("RPTD");
+		public DateTime? M3RPTD => GetNullableDateTime("RPTD");
 
 		/// <summary>
 		/// Description: Delivery note number
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery note number")]
-		public string M3_SUDO => GetString("SUDO");
+		public string M3SUDO => GetString("SUDO");
 
 		/// <summary>
 		/// Description: Supplier order number
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier order number")]
-		public string M3_SORN => GetString("SORN");
+		public string M3SORN => GetString("SORN");
 
 		/// <summary>
 		/// Description: Receipt date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receipt date")]
-		public DateTime? M3_RCLD => GetNullableDateTime("RCLD");
+		public DateTime? M3RCLD => GetNullableDateTime("RCLD");
 
 		/// <summary>
 		/// Description: Transaction identity
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction identity")]
-		public string M3_TTID => GetString("TTID");
+		public string M3TTID => GetString("TTID");
 
 		/// <summary>
 		/// Description: Media profile
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Media profile")]
-		public string M3_CMCO => GetString("CMCO");
+		public string M3CMCO => GetString("CMCO");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Your via address
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your via address")]
-		public string M3_SHVI => GetString("SHVI");
+		public string M3SHVI => GetString("SHVI");
 
 		/// <summary>
 		/// Description: Your receiving address
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your receiving address")]
-		public string M3_FIDS => GetString("FIDS");
+		public string M3FIDS => GetString("FIDS");
 
 		/// <summary>
 		/// Description: First printout date
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("First printout date")]
-		public DateTime? M3_LEDT => GetNullableDateTime("LEDT");
+		public DateTime? M3LEDT => GetNullableDateTime("LEDT");
 
 		/// <summary>
 		/// Description: Consolidation value 1
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consolidation value 1")]
-		public string M3_CVE1 => GetString("CVE1");
+		public string M3CVE1 => GetString("CVE1");
 
 		/// <summary>
 		/// Description: Consolidation value 2
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consolidation value 2")]
-		public string M3_CVE2 => GetString("CVE2");
+		public string M3CVE2 => GetString("CVE2");
 
 		/// <summary>
 		/// Description: Consolidation value 3
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consolidation value 3")]
-		public string M3_CVE3 => GetString("CVE3");
+		public string M3CVE3 => GetString("CVE3");
 
 		/// <summary>
 		/// Description: Consolidation value 4
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consolidation value 4")]
-		public string M3_CVE4 => GetString("CVE4");
+		public string M3CVE4 => GetString("CVE4");
 
 		/// <summary>
 		/// Description: Consolidation value 5
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Consolidation value 5")]
-		public string M3_CVE5 => GetString("CVE5");
+		public string M3CVE5 => GetString("CVE5");
 
 		/// <summary>
 		/// Description: Currency
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Text identity
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Return to supplier order type
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return to supplier order type")]
-		public string M3_RTOT => GetString("RTOT");
+		public string M3RTOT => GetString("RTOT");
 
 		/// <summary>
 		/// Description: Return-to-supplier order category
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return-to-supplier order category")]
-		public string M3_RTOC => GetString("RTOC");
+		public string M3RTOC => GetString("RTOC");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD1 => GetString("USD1");
+		public string M3USD1 => GetString("USD1");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD2 => GetString("USD2");
+		public string M3USD2 => GetString("USD2");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD3 => GetString("USD3");
+		public string M3USD3 => GetString("USD3");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD4 => GetString("USD4");
+		public string M3USD4 => GetString("USD4");
 
 		/// <summary>
 		/// Description: User-defined field
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field")]
-		public string M3_USD5 => GetString("USD5");
+		public string M3USD5 => GetString("USD5");
 
 		/// <summary>
 		/// Description: External claim number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External claim number")]
-		public string M3_ECLN => GetString("ECLN");
+		public string M3ECLN => GetString("ECLN");
 	}
 }
 // EOF

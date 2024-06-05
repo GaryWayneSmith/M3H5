@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Origin identity
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin identity")]
-		public long? M3_BIRT => GetNullableLong("BIRT");
+		public long? M3BIRT => GetNullableLong("BIRT");
 
 		/// <summary>
 		/// Description: Equipment number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment number")]
-		public string M3_EQNO => GetString("EQNO");
+		public string M3EQNO => GetString("EQNO");
 
 		/// <summary>
 		/// Description: Search key for equipment
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search key for equipment")]
-		public string M3_SKEY => GetString("SKEY");
+		public string M3SKEY => GetString("SKEY");
 
 		/// <summary>
 		/// Description: Fleet
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fleet")]
-		public string M3_FLEE => GetString("FLEE");
+		public string M3FLEE => GetString("FLEE");
 
 		/// <summary>
 		/// Description: Customer
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Fixed asset
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset")]
-		public string M3_ASID => GetString("ASID");
+		public string M3ASID => GetString("ASID");
 
 		/// <summary>
 		/// Description: Year model
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year model")]
-		public string M3_MLYR => GetString("MLYR");
+		public string M3MLYR => GetString("MLYR");
 
 		/// <summary>
 		/// Description: Brand
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: Equipment type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment type")]
-		public string M3_EQTP => GetString("EQTP");
+		public string M3EQTP => GetString("EQTP");
 
 		/// <summary>
 		/// Description: Equipment group category
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment group category")]
-		public string M3_EQGC => GetString("EQGC");
+		public string M3EQGC => GetString("EQGC");
 
 		/// <summary>
 		/// Description: Registration number/site
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Registration number/site")]
-		public string M3_TAIL => GetString("TAIL");
+		public string M3TAIL => GetString("TAIL");
 
 		/// <summary>
 		/// Description: Industry application
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Industry application")]
-		public string M3_INAP => GetString("INAP");
+		public string M3INAP => GetString("INAP");
 
 		/// <summary>
 		/// Description: Fleet number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fleet number")]
-		public string M3_FLNO => GetString("FLNO");
+		public string M3FLNO => GetString("FLNO");
 
 		/// <summary>
 		/// Description: Sales model
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales model")]
-		public string M3_ASLM => GetString("ASLM");
+		public string M3ASLM => GetString("ASLM");
 
 		/// <summary>
 		/// Description: Price model
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price model")]
-		public string M3_APRM => GetString("APRM");
+		public string M3APRM => GetString("APRM");
 
 		/// <summary>
 		/// Description: Dealer model
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dealer model")]
-		public string M3_ADLM => GetString("ADLM");
+		public string M3ADLM => GetString("ADLM");
 
 		/// <summary>
 		/// Description: Customer site
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer site")]
-		public string M3_CUPL => GetString("CUPL");
+		public string M3CUPL => GetString("CUPL");
 
 		/// <summary>
 		/// Description: Program name
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: File
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Key string
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key string")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

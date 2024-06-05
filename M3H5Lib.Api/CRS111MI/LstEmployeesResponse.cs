@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Name
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_EMNM => GetString("EMNM");
+		public string M3EMNM => GetString("EMNM");
 
 		/// <summary>
 		/// Description: Active employee
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS111MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active employee")]
-		public int? M3_ACEM => GetNullableInt("ACEM");
+		public int? M3ACEM => GetNullableInt("ACEM");
 	}
 }
 // EOF

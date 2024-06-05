@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS472MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add custom fields per group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMG">Custom field group (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_CFMF">Custom field (Required)</param>
+		/// <param name="m3CFMG">Custom field group (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3CFMF">Custom field (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCustPerGrp(
-			string m3_CFMG, 
-			int m3_SQNR, 
-			string m3_CFMF, 
+			string m3CFMG, 
+			int m3SQNR, 
+			string m3CFMF, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,16 +66,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMG))
-				throw new ArgumentNullException("m3_CFMG");
-			if (string.IsNullOrWhiteSpace(m3_CFMF))
-				throw new ArgumentNullException("m3_CFMF");
+			if (string.IsNullOrWhiteSpace(m3CFMG))
+				throw new ArgumentNullException(nameof(m3CFMG));
+			if (string.IsNullOrWhiteSpace(m3CFMF))
+				throw new ArgumentNullException(nameof(m3CFMF));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMG", m3_CFMG.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString())
-				.WithQueryParameter("CFMF", m3_CFMF.Trim());
+				.WithQueryParameter("CFMG", m3CFMG.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CFMF", m3CFMF.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -83,7 +85,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -94,8 +97,8 @@ namespace M3H5Lib.Api
 		/// Description Delete custom fields per group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMG">Custom field group (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
+		/// <param name="m3CFMG">Custom field group (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -104,8 +107,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltCustPerGrp(
-			string m3_CFMG, 
-			int m3_SQNR, 
+			string m3CFMG, 
+			int m3SQNR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,13 +123,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMG))
-				throw new ArgumentNullException("m3_CFMG");
+			if (string.IsNullOrWhiteSpace(m3CFMG))
+				throw new ArgumentNullException(nameof(m3CFMG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMG", m3_CFMG.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("CFMG", m3CFMG.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -136,7 +139,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -147,8 +151,8 @@ namespace M3H5Lib.Api
 		/// Description Get custom fields per group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMG">Custom field group (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
+		/// <param name="m3CFMG">Custom field group (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -157,8 +161,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCustPerGrpResponse></returns>
 		/// <exception cref="M3Exception<GetCustPerGrpResponse>"></exception>
 		public async Task<M3Response<GetCustPerGrpResponse>> GetCustPerGrp(
-			string m3_CFMG, 
-			int m3_SQNR, 
+			string m3CFMG, 
+			int m3SQNR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -173,13 +177,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMG))
-				throw new ArgumentNullException("m3_CFMG");
+			if (string.IsNullOrWhiteSpace(m3CFMG))
+				throw new ArgumentNullException(nameof(m3CFMG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMG", m3_CFMG.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("CFMG", m3CFMG.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetCustPerGrpResponse>(
@@ -189,7 +193,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -200,8 +205,8 @@ namespace M3H5Lib.Api
 		/// Description List custom fields per group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMG">Custom field group</param>
-		/// <param name="m3_SQNR">Sequence number</param>
+		/// <param name="m3CFMG">Custom field group</param>
+		/// <param name="m3SQNR">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -210,8 +215,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCustPerGrpResponse></returns>
 		/// <exception cref="M3Exception<LstCustPerGrpResponse>"></exception>
 		public async Task<M3Response<LstCustPerGrpResponse>> LstCustPerGrp(
-			string m3_CFMG = null, 
-			int? m3_SQNR = null, 
+			string m3CFMG = null, 
+			int? m3SQNR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,10 +231,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CFMG))
-				request.WithQueryParameter("CFMG", m3_CFMG.Trim());
-			if (m3_SQNR.HasValue)
-				request.WithQueryParameter("SQNR", m3_SQNR.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CFMG))
+				request.WithQueryParameter("CFMG", m3CFMG.Trim());
+			if (m3SQNR.HasValue)
+				request.WithQueryParameter("SQNR", m3SQNR.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstCustPerGrpResponse>(
@@ -239,7 +244,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -250,9 +256,9 @@ namespace M3H5Lib.Api
 		/// Description Update custom fields per group
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CFMG">Custom field group (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_CFMF">Custom field</param>
+		/// <param name="m3CFMG">Custom field group (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3CFMF">Custom field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -261,9 +267,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdCustPerGrp(
-			string m3_CFMG, 
-			int m3_SQNR, 
-			string m3_CFMF = null, 
+			string m3CFMG, 
+			int m3SQNR, 
+			string m3CFMF = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -278,17 +284,17 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CFMG))
-				throw new ArgumentNullException("m3_CFMG");
+			if (string.IsNullOrWhiteSpace(m3CFMG))
+				throw new ArgumentNullException(nameof(m3CFMG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CFMG", m3_CFMG.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("CFMG", m3CFMG.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CFMF))
-				request.WithQueryParameter("CFMF", m3_CFMF.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CFMF))
+				request.WithQueryParameter("CFMF", m3CFMF.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -298,7 +304,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

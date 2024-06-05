@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner alias")]
-		public string M3_PAAL => GetString("PAAL");
+		public string M3PAAL => GetString("PAAL");
 
 		/// <summary>
 		/// Description: Partner alias sublevel 1
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner alias sublevel 1")]
-		public string M3_PAA1 => GetString("PAA1");
+		public string M3PAA1 => GetString("PAA1");
 
 		/// <summary>
 		/// Description: Partner alias sublevel 2
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner alias sublevel 2")]
-		public string M3_PAA2 => GetString("PAA2");
+		public string M3PAA2 => GetString("PAA2");
 
 		/// <summary>
 		/// Description: Partner alias qualifier
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner alias qualifier")]
-		public string M3_PAAQ => GetString("PAAQ");
+		public string M3PAAQ => GetString("PAAQ");
 
 		/// <summary>
 		/// Description: Partner alias category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner alias category")]
-		public int? M3_PAAC => GetNullableInt("PAAC");
+		public int? M3PAAC => GetNullableInt("PAAC");
 
 		/// <summary>
 		/// Description: Partner ID highest level
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS886MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Partner ID highest level")]
-		public string M3_PAIH => GetString("PAIH");
+		public string M3PAIH => GetString("PAIH");
 	}
 }
 // EOF

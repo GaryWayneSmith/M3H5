@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Facility
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Order type
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Purchase order category
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order category")]
-		public string M3_POTC => GetString("POTC");
+		public string M3POTC => GetString("POTC");
 
 		/// <summary>
 		/// Description: Lowest status - purchase order
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest status - purchase order")]
-		public string M3_PUSL => GetString("PUSL");
+		public string M3PUSL => GetString("PUSL");
 
 		/// <summary>
 		/// Description: Change date - order status
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date - order status")]
-		public DateTime? M3_SLDT => GetNullableDateTime("SLDT");
+		public DateTime? M3SLDT => GetNullableDateTime("SLDT");
 
 		/// <summary>
 		/// Description: Highest status - purchase order
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest status - purchase order")]
-		public string M3_PUST => GetString("PUST");
+		public string M3PUST => GetString("PUST");
 
 		/// <summary>
 		/// Description: Change date highest order status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date highest order status")]
-		public DateTime? M3_SCDT => GetNullableDateTime("SCDT");
+		public DateTime? M3SCDT => GetNullableDateTime("SCDT");
 
 		/// <summary>
 		/// Description: Communication code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Communication code")]
-		public string M3_CMCO => GetString("CMCO");
+		public string M3CMCO => GetString("CMCO");
 
 		/// <summary>
 		/// Description: Order date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order date")]
-		public DateTime? M3_PUDT => GetNullableDateTime("PUDT");
+		public DateTime? M3PUDT => GetNullableDateTime("PUDT");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Language code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language code")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Currency
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Terms of freight
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Terms of freight")]
-		public string M3_TEAF => GetString("TEAF");
+		public string M3TEAF => GetString("TEAF");
 
 		/// <summary>
 		/// Description: Packaging terms
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging terms")]
-		public string M3_TEPA => GetString("TEPA");
+		public string M3TEPA => GetString("TEPA");
 
 		/// <summary>
 		/// Description: Reference
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference")]
-		public string M3_RFID => GetString("RFID");
+		public string M3RFID => GetString("RFID");
 
 		/// <summary>
 		/// Description: Your reference
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference")]
-		public string M3_YRE1 => GetString("YRE1");
+		public string M3YRE1 => GetString("YRE1");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_DWDT => GetNullableDateTime("DWDT");
+		public DateTime? M3DWDT => GetNullableDateTime("DWDT");
 
 		/// <summary>
 		/// Description: Requisition by
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requisition by")]
-		public string M3_PURC => GetString("PURC");
+		public string M3PURC => GetString("PURC");
 
 		/// <summary>
 		/// Description: Buyer
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buyer")]
-		public string M3_BUYE => GetString("BUYE");
+		public string M3BUYE => GetString("BUYE");
 
 		/// <summary>
 		/// Description: Facsimile transmission number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimile transmission number")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Terms text
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Terms text")]
-		public string M3_TEL1 => GetString("TEL1");
+		public string M3TEL1 => GetString("TEL1");
 
 		/// <summary>
 		/// Description: Harbour or airport
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Harbour or airport")]
-		public string M3_HAFE => GetString("HAFE");
+		public string M3HAFE => GetString("HAFE");
 
 		/// <summary>
 		/// Description: Rail station
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rail station")]
-		public string M3_RASN => GetString("RASN");
+		public string M3RASN => GetString("RASN");
 
 		/// <summary>
 		/// Description: Monitoring active
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monitoring active")]
-		public int? M3_EXAT => GetNullableInt("EXAT");
+		public int? M3EXAT => GetNullableInt("EXAT");
 
 		/// <summary>
 		/// Description: Monitoring activity list
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PPS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Monitoring activity list")]
-		public string M3_FUSC => GetString("FUSC");
+		public string M3FUSC => GetString("FUSC");
 	}
 }
 // EOF

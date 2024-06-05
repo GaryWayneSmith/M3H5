@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contact")]
-		public string M3_CNPE => GetString("CNPE");
+		public string M3CNPE => GetString("CNPE");
 
 		/// <summary>
 		/// Description: Contact type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Contact type")]
-		public string M3_RFTP => GetString("RFTP");
+		public string M3RFTP => GetString("RFTP");
 
 		/// <summary>
 		/// Description: Customer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Address type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address type")]
-		public int? M3_ADRT => GetNullableInt("ADRT");
+		public int? M3ADRT => GetNullableInt("ADRT");
 
 		/// <summary>
 		/// Description: Address number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 	}
 }
 // EOF

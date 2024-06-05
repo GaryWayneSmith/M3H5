@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,14 +37,14 @@ namespace M3H5Lib.Api
 		/// Description Quick add of attribute
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_ATTE">Attribute template (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_ATID">Attribute identity (Required)</param>
-		/// <param name="m3_ATVA">Attribute value (Required)</param>
-		/// <param name="m3_ITDS">Name</param>
-		/// <param name="m3_TX30">Text</param>
-		/// <param name="m3_ANSQ">Attribute sequence number</param>
-		/// <param name="m3_DSPG">Display group</param>
+		/// <param name="m3ATTE">Attribute template (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3ATID">Attribute identity (Required)</param>
+		/// <param name="m3ATVA">Attribute value (Required)</param>
+		/// <param name="m3ITDS">Name</param>
+		/// <param name="m3TX30">Text</param>
+		/// <param name="m3ANSQ">Attribute sequence number</param>
+		/// <param name="m3DSPG">Display group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,14 +53,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> QuickAddAttrib(
-			string m3_ATTE, 
-			string m3_ITNO, 
-			string m3_ATID, 
-			string m3_ATVA, 
-			string m3_ITDS = null, 
-			string m3_TX30 = null, 
-			int? m3_ANSQ = null, 
-			string m3_DSPG = null, 
+			string m3ATTE, 
+			string m3ITNO, 
+			string m3ATID, 
+			string m3ATVA, 
+			string m3ITDS = null, 
+			string m3TX30 = null, 
+			int? m3ANSQ = null, 
+			string m3DSPG = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -73,31 +75,31 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ATTE))
-				throw new ArgumentNullException("m3_ATTE");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_ATID))
-				throw new ArgumentNullException("m3_ATID");
-			if (string.IsNullOrWhiteSpace(m3_ATVA))
-				throw new ArgumentNullException("m3_ATVA");
+			if (string.IsNullOrWhiteSpace(m3ATTE))
+				throw new ArgumentNullException(nameof(m3ATTE));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3ATID))
+				throw new ArgumentNullException(nameof(m3ATID));
+			if (string.IsNullOrWhiteSpace(m3ATVA))
+				throw new ArgumentNullException(nameof(m3ATVA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ATTE", m3_ATTE.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("ATID", m3_ATID.Trim())
-				.WithQueryParameter("ATVA", m3_ATVA.Trim());
+				.WithQueryParameter("ATTE", m3ATTE.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("ATID", m3ATID.Trim())
+				.WithQueryParameter("ATVA", m3ATVA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ITDS))
-				request.WithQueryParameter("ITDS", m3_ITDS.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX30))
-				request.WithQueryParameter("TX30", m3_TX30.Trim());
-			if (m3_ANSQ.HasValue)
-				request.WithQueryParameter("ANSQ", m3_ANSQ.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DSPG))
-				request.WithQueryParameter("DSPG", m3_DSPG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITDS))
+				request.WithQueryParameter("ITDS", m3ITDS.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX30))
+				request.WithQueryParameter("TX30", m3TX30.Trim());
+			if (m3ANSQ.HasValue)
+				request.WithQueryParameter("ANSQ", m3ANSQ.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DSPG))
+				request.WithQueryParameter("DSPG", m3DSPG.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -107,7 +109,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

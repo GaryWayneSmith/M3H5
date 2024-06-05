@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.TXS095MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,21 +38,21 @@ namespace M3H5Lib.Api
 		/// Description Add Tax Invoice Agent Settings
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_TIAG">Agent (Required)</param>
-		/// <param name="m3_TIMT">Transfer method (Required)</param>
-		/// <param name="m3_TIIN">Issuing number system (Required)</param>
-		/// <param name="m3_TIBC">Business code (Required)</param>
-		/// <param name="m3_TICC">Client code (Required)</param>
-		/// <param name="m3_TISB">Smartbills server (Required)</param>
-		/// <param name="m3_TIAT">Authentification token (Required)</param>
-		/// <param name="m3_TRGI">Tax registration ID (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TIPW">Certificate password</param>
-		/// <param name="m3_TIEK">Encryption key</param>
-		/// <param name="m3_TIKI">Keystore id</param>
-		/// <param name="m3_TIRV">Rvalue</param>
-		/// <param name="m3_TIDA">Authentification token valid date</param>
-		/// <param name="m3_SXML">Save XML</param>
+		/// <param name="m3TIAG">Agent (Required)</param>
+		/// <param name="m3TIMT">Transfer method (Required)</param>
+		/// <param name="m3TIIN">Issuing number system (Required)</param>
+		/// <param name="m3TIBC">Business code (Required)</param>
+		/// <param name="m3TICC">Client code (Required)</param>
+		/// <param name="m3TISB">Smartbills server (Required)</param>
+		/// <param name="m3TIAT">Authentification token (Required)</param>
+		/// <param name="m3TRGI">Tax registration ID (Required)</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TIPW">Certificate password</param>
+		/// <param name="m3TIEK">Encryption key</param>
+		/// <param name="m3TIKI">Keystore id</param>
+		/// <param name="m3TIRV">Rvalue</param>
+		/// <param name="m3TIDA">Authentification token valid date</param>
+		/// <param name="m3SXML">Save XML</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -59,21 +61,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddTaxAgentSet(
-			int m3_TIAG, 
-			int m3_TIMT, 
-			string m3_TIIN, 
-			string m3_TIBC, 
-			string m3_TICC, 
-			string m3_TISB, 
-			string m3_TIAT, 
-			string m3_TRGI, 
-			string m3_DIVI = null, 
-			string m3_TIPW = null, 
-			string m3_TIEK = null, 
-			string m3_TIKI = null, 
-			string m3_TIRV = null, 
-			DateTime? m3_TIDA = null, 
-			int? m3_SXML = null, 
+			int m3TIAG, 
+			int m3TIMT, 
+			string m3TIIN, 
+			string m3TIBC, 
+			string m3TICC, 
+			string m3TISB, 
+			string m3TIAT, 
+			string m3TRGI, 
+			string m3DIVI = null, 
+			string m3TIPW = null, 
+			string m3TIEK = null, 
+			string m3TIKI = null, 
+			string m3TIRV = null, 
+			DateTime? m3TIDA = null, 
+			int? m3SXML = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -88,45 +90,45 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TIIN))
-				throw new ArgumentNullException("m3_TIIN");
-			if (string.IsNullOrWhiteSpace(m3_TIBC))
-				throw new ArgumentNullException("m3_TIBC");
-			if (string.IsNullOrWhiteSpace(m3_TICC))
-				throw new ArgumentNullException("m3_TICC");
-			if (string.IsNullOrWhiteSpace(m3_TISB))
-				throw new ArgumentNullException("m3_TISB");
-			if (string.IsNullOrWhiteSpace(m3_TIAT))
-				throw new ArgumentNullException("m3_TIAT");
-			if (string.IsNullOrWhiteSpace(m3_TRGI))
-				throw new ArgumentNullException("m3_TRGI");
+			if (string.IsNullOrWhiteSpace(m3TIIN))
+				throw new ArgumentNullException(nameof(m3TIIN));
+			if (string.IsNullOrWhiteSpace(m3TIBC))
+				throw new ArgumentNullException(nameof(m3TIBC));
+			if (string.IsNullOrWhiteSpace(m3TICC))
+				throw new ArgumentNullException(nameof(m3TICC));
+			if (string.IsNullOrWhiteSpace(m3TISB))
+				throw new ArgumentNullException(nameof(m3TISB));
+			if (string.IsNullOrWhiteSpace(m3TIAT))
+				throw new ArgumentNullException(nameof(m3TIAT));
+			if (string.IsNullOrWhiteSpace(m3TRGI))
+				throw new ArgumentNullException(nameof(m3TRGI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TIAG", m3_TIAG.ToString())
-				.WithQueryParameter("TIMT", m3_TIMT.ToString())
-				.WithQueryParameter("TIIN", m3_TIIN.Trim())
-				.WithQueryParameter("TIBC", m3_TIBC.Trim())
-				.WithQueryParameter("TICC", m3_TICC.Trim())
-				.WithQueryParameter("TISB", m3_TISB.Trim())
-				.WithQueryParameter("TIAT", m3_TIAT.Trim())
-				.WithQueryParameter("TRGI", m3_TRGI.Trim());
+				.WithQueryParameter("TIAG", m3TIAG.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TIMT", m3TIMT.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TIIN", m3TIIN.Trim())
+				.WithQueryParameter("TIBC", m3TIBC.Trim())
+				.WithQueryParameter("TICC", m3TICC.Trim())
+				.WithQueryParameter("TISB", m3TISB.Trim())
+				.WithQueryParameter("TIAT", m3TIAT.Trim())
+				.WithQueryParameter("TRGI", m3TRGI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIPW))
-				request.WithQueryParameter("TIPW", m3_TIPW.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIEK))
-				request.WithQueryParameter("TIEK", m3_TIEK.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIKI))
-				request.WithQueryParameter("TIKI", m3_TIKI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIRV))
-				request.WithQueryParameter("TIRV", m3_TIRV.Trim());
-			if (m3_TIDA.HasValue)
-				request.WithQueryParameter("TIDA", m3_TIDA.Value.ToM3String());
-			if (m3_SXML.HasValue)
-				request.WithQueryParameter("SXML", m3_SXML.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIPW))
+				request.WithQueryParameter("TIPW", m3TIPW.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIEK))
+				request.WithQueryParameter("TIEK", m3TIEK.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIKI))
+				request.WithQueryParameter("TIKI", m3TIKI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIRV))
+				request.WithQueryParameter("TIRV", m3TIRV.Trim());
+			if (m3TIDA.HasValue)
+				request.WithQueryParameter("TIDA", m3TIDA.Value.ToM3String());
+			if (m3SXML.HasValue)
+				request.WithQueryParameter("SXML", m3SXML.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -136,7 +138,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -147,8 +150,8 @@ namespace M3H5Lib.Api
 		/// Description Copy Tax Invoice Agent Settings
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_CDIV">Division - copy to (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3CDIV">Division - copy to (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -157,8 +160,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> CpyTaxAgentSet(
-			string m3_CDIV, 
-			string m3_DIVI = null, 
+			string m3CDIV, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -173,16 +176,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CDIV))
-				throw new ArgumentNullException("m3_CDIV");
+			if (string.IsNullOrWhiteSpace(m3CDIV))
+				throw new ArgumentNullException(nameof(m3CDIV));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CDIV", m3_CDIV.Trim());
+				.WithQueryParameter("CDIV", m3CDIV.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -192,7 +195,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -203,7 +207,7 @@ namespace M3H5Lib.Api
 		/// Description Delete Tax Invoice Agent Settings
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -212,7 +216,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelTaxAgentSet(
-			string m3_DIVI = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -227,8 +231,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -238,7 +242,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -249,7 +254,7 @@ namespace M3H5Lib.Api
 		/// Description Get Tax Invoice Agent Settings
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -258,7 +263,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetTaxAgentSetResponse></returns>
 		/// <exception cref="M3Exception<GetTaxAgentSetResponse>"></exception>
 		public async Task<M3Response<GetTaxAgentSetResponse>> GetTaxAgentSet(
-			string m3_DIVI = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -273,8 +278,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetTaxAgentSetResponse>(
@@ -284,7 +289,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -295,7 +301,7 @@ namespace M3H5Lib.Api
 		/// Description List Tax Invoice Agent Settings
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -304,7 +310,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTaxAgentSetResponse></returns>
 		/// <exception cref="M3Exception<LstTaxAgentSetResponse>"></exception>
 		public async Task<M3Response<LstTaxAgentSetResponse>> LstTaxAgentSet(
-			string m3_DIVI = null, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -319,8 +325,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstTaxAgentSetResponse>(
@@ -330,7 +336,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -341,21 +348,21 @@ namespace M3H5Lib.Api
 		/// Description Update Tax Invoice Agent Settings
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TIAG">Agent</param>
-		/// <param name="m3_TIMT">Transfer method</param>
-		/// <param name="m3_TIIN">Issuing number system</param>
-		/// <param name="m3_TIBC">Business code</param>
-		/// <param name="m3_TICC">Client code</param>
-		/// <param name="m3_TIPW">Certificate password</param>
-		/// <param name="m3_TIEK">Encryption key</param>
-		/// <param name="m3_TIKI">Keystore id</param>
-		/// <param name="m3_TIRV">Rvalue</param>
-		/// <param name="m3_TISB">Smartbills server</param>
-		/// <param name="m3_TIAT">Authentification token</param>
-		/// <param name="m3_TIDA">Authentification token valid date</param>
-		/// <param name="m3_TRGI">Tax registration ID</param>
-		/// <param name="m3_SXML">Save XML</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TIAG">Agent</param>
+		/// <param name="m3TIMT">Transfer method</param>
+		/// <param name="m3TIIN">Issuing number system</param>
+		/// <param name="m3TIBC">Business code</param>
+		/// <param name="m3TICC">Client code</param>
+		/// <param name="m3TIPW">Certificate password</param>
+		/// <param name="m3TIEK">Encryption key</param>
+		/// <param name="m3TIKI">Keystore id</param>
+		/// <param name="m3TIRV">Rvalue</param>
+		/// <param name="m3TISB">Smartbills server</param>
+		/// <param name="m3TIAT">Authentification token</param>
+		/// <param name="m3TIDA">Authentification token valid date</param>
+		/// <param name="m3TRGI">Tax registration ID</param>
+		/// <param name="m3SXML">Save XML</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -364,21 +371,21 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdTaxAgentSet(
-			string m3_DIVI = null, 
-			int? m3_TIAG = null, 
-			int? m3_TIMT = null, 
-			string m3_TIIN = null, 
-			string m3_TIBC = null, 
-			string m3_TICC = null, 
-			string m3_TIPW = null, 
-			string m3_TIEK = null, 
-			string m3_TIKI = null, 
-			string m3_TIRV = null, 
-			string m3_TISB = null, 
-			string m3_TIAT = null, 
-			DateTime? m3_TIDA = null, 
-			string m3_TRGI = null, 
-			int? m3_SXML = null, 
+			string m3DIVI = null, 
+			int? m3TIAG = null, 
+			int? m3TIMT = null, 
+			string m3TIIN = null, 
+			string m3TIBC = null, 
+			string m3TICC = null, 
+			string m3TIPW = null, 
+			string m3TIEK = null, 
+			string m3TIKI = null, 
+			string m3TIRV = null, 
+			string m3TISB = null, 
+			string m3TIAT = null, 
+			DateTime? m3TIDA = null, 
+			string m3TRGI = null, 
+			int? m3SXML = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -393,36 +400,36 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_TIAG.HasValue)
-				request.WithQueryParameter("TIAG", m3_TIAG.Value.ToString());
-			if (m3_TIMT.HasValue)
-				request.WithQueryParameter("TIMT", m3_TIMT.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TIIN))
-				request.WithQueryParameter("TIIN", m3_TIIN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIBC))
-				request.WithQueryParameter("TIBC", m3_TIBC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TICC))
-				request.WithQueryParameter("TICC", m3_TICC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIPW))
-				request.WithQueryParameter("TIPW", m3_TIPW.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIEK))
-				request.WithQueryParameter("TIEK", m3_TIEK.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIKI))
-				request.WithQueryParameter("TIKI", m3_TIKI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIRV))
-				request.WithQueryParameter("TIRV", m3_TIRV.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TISB))
-				request.WithQueryParameter("TISB", m3_TISB.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TIAT))
-				request.WithQueryParameter("TIAT", m3_TIAT.Trim());
-			if (m3_TIDA.HasValue)
-				request.WithQueryParameter("TIDA", m3_TIDA.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_TRGI))
-				request.WithQueryParameter("TRGI", m3_TRGI.Trim());
-			if (m3_SXML.HasValue)
-				request.WithQueryParameter("SXML", m3_SXML.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3TIAG.HasValue)
+				request.WithQueryParameter("TIAG", m3TIAG.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TIMT.HasValue)
+				request.WithQueryParameter("TIMT", m3TIMT.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TIIN))
+				request.WithQueryParameter("TIIN", m3TIIN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIBC))
+				request.WithQueryParameter("TIBC", m3TIBC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TICC))
+				request.WithQueryParameter("TICC", m3TICC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIPW))
+				request.WithQueryParameter("TIPW", m3TIPW.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIEK))
+				request.WithQueryParameter("TIEK", m3TIEK.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIKI))
+				request.WithQueryParameter("TIKI", m3TIKI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIRV))
+				request.WithQueryParameter("TIRV", m3TIRV.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TISB))
+				request.WithQueryParameter("TISB", m3TISB.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TIAT))
+				request.WithQueryParameter("TIAT", m3TIAT.Trim());
+			if (m3TIDA.HasValue)
+				request.WithQueryParameter("TIDA", m3TIDA.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3TRGI))
+				request.WithQueryParameter("TRGI", m3TRGI.Trim());
+			if (m3SXML.HasValue)
+				request.WithQueryParameter("SXML", m3SXML.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -432,7 +439,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_MAQA => GetString("MAQA");
+		public string M3MAQA => GetString("MAQA");
 
 		/// <summary>
 		/// Description: Scrapped quantity
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scrapped quantity")]
-		public decimal? M3_SCQA => GetNullableDecimal("SCQA");
+		public decimal? M3SCQA => GetNullableDecimal("SCQA");
 
 		/// <summary>
 		/// Description: Used labor run time
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used labor run time")]
-		public int? M3_UMAT => GetNullableInt("UMAT");
+		public int? M3UMAT => GetNullableInt("UMAT");
 
 		/// <summary>
 		/// Description: Start date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Start time - operation
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start time - operation")]
-		public int? M3_OSTM => GetNullableInt("OSTM");
+		public int? M3OSTM => GetNullableInt("OSTM");
 
 		/// <summary>
 		/// Description: Finish date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Finish date")]
-		public DateTime? M3_FIDT => GetNullableDateTime("FIDT");
+		public DateTime? M3FIDT => GetNullableDateTime("FIDT");
 
 		/// <summary>
 		/// Description: Stop time operation
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Stop time operation")]
-		public int? M3_OFTM => GetNullableInt("OFTM");
+		public int? M3OFTM => GetNullableInt("OFTM");
 
 		/// <summary>
 		/// Description: Labor charge code
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Labor charge code")]
-		public string M3_LCDE => GetString("LCDE");
+		public string M3LCDE => GetString("LCDE");
 
 		/// <summary>
 		/// Description: Injury free
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Injury free")]
-		public int? M3_INFR => GetNullableInt("INFR");
+		public int? M3INFR => GetNullableInt("INFR");
 
 		/// <summary>
 		/// Description: Rejection reason
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rejection reason")]
-		public string M3_SCRE => GetString("SCRE");
+		public string M3SCRE => GetString("SCRE");
 
 		/// <summary>
 		/// Description: Used labor setup time
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used labor setup time")]
-		public int? M3_UMAS => GetNullableInt("UMAS");
+		public int? M3UMAS => GetNullableInt("UMAS");
 
 		/// <summary>
 		/// Description: Status
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Costing type
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing type")]
-		public string M3_PCTP => GetString("PCTP");
+		public string M3PCTP => GetString("PCTP");
 
 		/// <summary>
 		/// Description: Manual completion flag
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MOS095MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual completion flag")]
-		public int? M3_REND => GetNullableInt("REND");
+		public int? M3REND => GetNullableInt("REND");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_FACN => GetString("FACN");
+		public string M3FACN => GetString("FACN");
 
 		/// <summary>
 		/// Description: Division
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Object access group
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Object access group")]
-		public string M3_ACGR => GetString("ACGR");
+		public string M3ACGR => GetString("ACGR");
 
 		/// <summary>
 		/// Description: Our invoicing address
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Our invoicing address")]
-		public string M3_PYAD => GetString("PYAD");
+		public string M3PYAD => GetString("PYAD");
 
 		/// <summary>
 		/// Description: Customer number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Shift planning
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shift planning")]
-		public int? M3_SHPL => GetNullableInt("SHPL");
+		public int? M3SHPL => GetNullableInt("SHPL");
 
 		/// <summary>
 		/// Description: Global facility
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Global facility")]
-		public string M3_GFAC => GetString("GFAC");
+		public string M3GFAC => GetString("GFAC");
 
 		/// <summary>
 		/// Description: App active
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("App active")]
-		public int? M3_APSA => GetNullableInt("APSA");
+		public int? M3APSA => GetNullableInt("APSA");
 
 		/// <summary>
 		/// Description: Shift pattern adjustments
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shift pattern adjustments")]
-		public int? M3_CCMT => GetNullableInt("CCMT");
+		public int? M3CCMT => GetNullableInt("CCMT");
 
 		/// <summary>
 		/// Description: App timestamp
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("App timestamp")]
-		public DateTime? M3_TSDA => GetNullableDateTime("TSDA");
+		public DateTime? M3TSDA => GetNullableDateTime("TSDA");
 
 		/// <summary>
 		/// Description: App timestamp
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("App timestamp")]
-		public int? M3_TSTE => GetNullableInt("TSTE");
+		public int? M3TSTE => GetNullableInt("TSTE");
 
 		/// <summary>
 		/// Description: App in progress
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("App in progress")]
-		public int? M3_APSS => GetNullableInt("APSS");
+		public int? M3APSS => GetNullableInt("APSS");
 
 		/// <summary>
 		/// Description: Scheduling horizon
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Scheduling horizon")]
-		public int? M3_SCHH => GetNullableInt("SCHH");
+		public int? M3SCHH => GetNullableInt("SCHH");
 
 		/// <summary>
 		/// Description: Entry date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Company name
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company name")]
-		public string M3_CONM => GetString("CONM");
+		public string M3CONM => GetString("CONM");
 
 		/// <summary>
 		/// Description: Name
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Local currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Local currency")]
-		public string M3_LOCD => GetString("LOCD");
+		public string M3LOCD => GetString("LOCD");
 
 		/// <summary>
 		/// Description: Geographic cod X
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod X")]
-		public decimal? M3_GEOX => GetNullableDecimal("GEOX");
+		public decimal? M3GEOX => GetNullableDecimal("GEOX");
 
 		/// <summary>
 		/// Description: Geographic code Y
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic code Y")]
-		public decimal? M3_GEOY => GetNullableDecimal("GEOY");
+		public decimal? M3GEOY => GetNullableDecimal("GEOY");
 
 		/// <summary>
 		/// Description: Geographic cod  Z
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod  Z")]
-		public decimal? M3_GEOZ => GetNullableDecimal("GEOZ");
+		public decimal? M3GEOZ => GetNullableDecimal("GEOZ");
 
 		/// <summary>
 		/// Description: Version management
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Version management")]
-		public int? M3_VRNU => GetNullableInt("VRNU");
+		public int? M3VRNU => GetNullableInt("VRNU");
 
 		/// <summary>
 		/// Description: Process manufacturing
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS008MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Process manufacturing")]
-		public int? M3_PMFL => GetNullableInt("PMFL");
+		public int? M3PMFL => GetNullableInt("PMFL");
 	}
 }
 // EOF

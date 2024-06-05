@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS612MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,18 +38,18 @@ namespace M3H5Lib.Api
 		/// Description This transaction adds customer card
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_CCNR">Customer card number (Required)</param>
-		/// <param name="m3_BLD1">Blocking date</param>
-		/// <param name="m3_VTMM">Valid through month</param>
-		/// <param name="m3_VTYY">Valid through year</param>
-		/// <param name="m3_ORDT">Order date</param>
-		/// <param name="m3_BLCD">Blocking code</param>
-		/// <param name="m3_CTP1">Card type</param>
-		/// <param name="m3_MCRD">Main card</param>
-		/// <param name="m3_RCRD">Replacement card</param>
-		/// <param name="m3_CSND">Send to printing</param>
-		/// <param name="m3_REFE">Reference</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3CCNR">Customer card number (Required)</param>
+		/// <param name="m3BLD1">Blocking date</param>
+		/// <param name="m3VTMM">Valid through month</param>
+		/// <param name="m3VTYY">Valid through year</param>
+		/// <param name="m3ORDT">Order date</param>
+		/// <param name="m3BLCD">Blocking code</param>
+		/// <param name="m3CTP1">Card type</param>
+		/// <param name="m3MCRD">Main card</param>
+		/// <param name="m3RCRD">Replacement card</param>
+		/// <param name="m3CSND">Send to printing</param>
+		/// <param name="m3REFE">Reference</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -56,18 +58,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCustCard(
-			string m3_CUNO, 
-			decimal m3_CCNR, 
-			int? m3_BLD1 = null, 
-			int? m3_VTMM = null, 
-			int? m3_VTYY = null, 
-			DateTime? m3_ORDT = null, 
-			int? m3_BLCD = null, 
-			int? m3_CTP1 = null, 
-			string m3_MCRD = null, 
-			int? m3_RCRD = null, 
-			int? m3_CSND = null, 
-			string m3_REFE = null, 
+			string m3CUNO, 
+			decimal m3CCNR, 
+			int? m3BLD1 = null, 
+			int? m3VTMM = null, 
+			int? m3VTYY = null, 
+			DateTime? m3ORDT = null, 
+			int? m3BLCD = null, 
+			int? m3CTP1 = null, 
+			string m3MCRD = null, 
+			int? m3RCRD = null, 
+			int? m3CSND = null, 
+			string m3REFE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -82,35 +84,35 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("CCNR", m3_CCNR.ToString());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("CCNR", m3CCNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_BLD1.HasValue)
-				request.WithQueryParameter("BLD1", m3_BLD1.Value.ToString());
-			if (m3_VTMM.HasValue)
-				request.WithQueryParameter("VTMM", m3_VTMM.Value.ToString());
-			if (m3_VTYY.HasValue)
-				request.WithQueryParameter("VTYY", m3_VTYY.Value.ToString());
-			if (m3_ORDT.HasValue)
-				request.WithQueryParameter("ORDT", m3_ORDT.Value.ToM3String());
-			if (m3_BLCD.HasValue)
-				request.WithQueryParameter("BLCD", m3_BLCD.Value.ToString());
-			if (m3_CTP1.HasValue)
-				request.WithQueryParameter("CTP1", m3_CTP1.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MCRD))
-				request.WithQueryParameter("MCRD", m3_MCRD.Trim());
-			if (m3_RCRD.HasValue)
-				request.WithQueryParameter("RCRD", m3_RCRD.Value.ToString());
-			if (m3_CSND.HasValue)
-				request.WithQueryParameter("CSND", m3_CSND.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_REFE))
-				request.WithQueryParameter("REFE", m3_REFE.Trim());
+			if (m3BLD1.HasValue)
+				request.WithQueryParameter("BLD1", m3BLD1.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VTMM.HasValue)
+				request.WithQueryParameter("VTMM", m3VTMM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VTYY.HasValue)
+				request.WithQueryParameter("VTYY", m3VTYY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ORDT.HasValue)
+				request.WithQueryParameter("ORDT", m3ORDT.Value.ToM3String());
+			if (m3BLCD.HasValue)
+				request.WithQueryParameter("BLCD", m3BLCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CTP1.HasValue)
+				request.WithQueryParameter("CTP1", m3CTP1.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MCRD))
+				request.WithQueryParameter("MCRD", m3MCRD.Trim());
+			if (m3RCRD.HasValue)
+				request.WithQueryParameter("RCRD", m3RCRD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CSND.HasValue)
+				request.WithQueryParameter("CSND", m3CSND.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3REFE))
+				request.WithQueryParameter("REFE", m3REFE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -120,7 +122,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -131,8 +134,8 @@ namespace M3H5Lib.Api
 		/// Description This transaction deletes customer card
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_CCNR">Customer card number (Required)</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3CCNR">Customer card number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -141,8 +144,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelCustCard(
-			string m3_CUNO, 
-			decimal m3_CCNR, 
+			string m3CUNO, 
+			decimal m3CCNR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -157,13 +160,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("CCNR", m3_CCNR.ToString());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("CCNR", m3CCNR.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -173,7 +176,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -184,8 +188,8 @@ namespace M3H5Lib.Api
 		/// Description This transaction displays customer card
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_CCNR">Customer card number (Required)</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3CCNR">Customer card number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -194,8 +198,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCustCardResponse></returns>
 		/// <exception cref="M3Exception<GetCustCardResponse>"></exception>
 		public async Task<M3Response<GetCustCardResponse>> GetCustCard(
-			string m3_CUNO, 
-			decimal m3_CCNR, 
+			string m3CUNO, 
+			decimal m3CCNR, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -210,13 +214,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("CCNR", m3_CCNR.ToString());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("CCNR", m3CCNR.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetCustCardResponse>(
@@ -226,7 +230,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -237,11 +242,11 @@ namespace M3H5Lib.Api
 		/// Description This transaction lists customer card
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number</param>
-		/// <param name="m3_CCNR">Customer card number</param>
-		/// <param name="m3_CTP1">Card type</param>
-		/// <param name="m3_LMDT">Change date</param>
-		/// <param name="m3_REFE">Reference</param>
+		/// <param name="m3CUNO">Customer number</param>
+		/// <param name="m3CCNR">Customer card number</param>
+		/// <param name="m3CTP1">Card type</param>
+		/// <param name="m3LMDT">Change date</param>
+		/// <param name="m3REFE">Reference</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -250,11 +255,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCustCardResponse></returns>
 		/// <exception cref="M3Exception<LstCustCardResponse>"></exception>
 		public async Task<M3Response<LstCustCardResponse>> LstCustCard(
-			string m3_CUNO = null, 
-			decimal? m3_CCNR = null, 
-			int? m3_CTP1 = null, 
-			DateTime? m3_LMDT = null, 
-			string m3_REFE = null, 
+			string m3CUNO = null, 
+			decimal? m3CCNR = null, 
+			int? m3CTP1 = null, 
+			DateTime? m3LMDT = null, 
+			string m3REFE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -269,16 +274,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_CCNR.HasValue)
-				request.WithQueryParameter("CCNR", m3_CCNR.Value.ToString());
-			if (m3_CTP1.HasValue)
-				request.WithQueryParameter("CTP1", m3_CTP1.Value.ToString());
-			if (m3_LMDT.HasValue)
-				request.WithQueryParameter("LMDT", m3_LMDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_REFE))
-				request.WithQueryParameter("REFE", m3_REFE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3CCNR.HasValue)
+				request.WithQueryParameter("CCNR", m3CCNR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CTP1.HasValue)
+				request.WithQueryParameter("CTP1", m3CTP1.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3LMDT.HasValue)
+				request.WithQueryParameter("LMDT", m3LMDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3REFE))
+				request.WithQueryParameter("REFE", m3REFE.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCustCardResponse>(
@@ -288,7 +293,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -299,18 +305,18 @@ namespace M3H5Lib.Api
 		/// Description This transaction updates customer card
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number (Required)</param>
-		/// <param name="m3_CCNR">Customer card number (Required)</param>
-		/// <param name="m3_BLD1">Blocking date</param>
-		/// <param name="m3_VTMM">Valid through month</param>
-		/// <param name="m3_VTYY">Valid through year</param>
-		/// <param name="m3_ORDT">Order date</param>
-		/// <param name="m3_BLCD">Blocking code</param>
-		/// <param name="m3_CTP1">Card type</param>
-		/// <param name="m3_MCRD">Main card</param>
-		/// <param name="m3_RCRD">Replacement card</param>
-		/// <param name="m3_CSND">Send to printing</param>
-		/// <param name="m3_REFE">Reference</param>
+		/// <param name="m3CUNO">Customer number (Required)</param>
+		/// <param name="m3CCNR">Customer card number (Required)</param>
+		/// <param name="m3BLD1">Blocking date</param>
+		/// <param name="m3VTMM">Valid through month</param>
+		/// <param name="m3VTYY">Valid through year</param>
+		/// <param name="m3ORDT">Order date</param>
+		/// <param name="m3BLCD">Blocking code</param>
+		/// <param name="m3CTP1">Card type</param>
+		/// <param name="m3MCRD">Main card</param>
+		/// <param name="m3RCRD">Replacement card</param>
+		/// <param name="m3CSND">Send to printing</param>
+		/// <param name="m3REFE">Reference</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -319,18 +325,18 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdCustCard(
-			string m3_CUNO, 
-			decimal m3_CCNR, 
-			int? m3_BLD1 = null, 
-			int? m3_VTMM = null, 
-			int? m3_VTYY = null, 
-			DateTime? m3_ORDT = null, 
-			int? m3_BLCD = null, 
-			int? m3_CTP1 = null, 
-			string m3_MCRD = null, 
-			int? m3_RCRD = null, 
-			int? m3_CSND = null, 
-			string m3_REFE = null, 
+			string m3CUNO, 
+			decimal m3CCNR, 
+			int? m3BLD1 = null, 
+			int? m3VTMM = null, 
+			int? m3VTYY = null, 
+			DateTime? m3ORDT = null, 
+			int? m3BLCD = null, 
+			int? m3CTP1 = null, 
+			string m3MCRD = null, 
+			int? m3RCRD = null, 
+			int? m3CSND = null, 
+			string m3REFE = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -345,35 +351,35 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CUNO))
-				throw new ArgumentNullException("m3_CUNO");
+			if (string.IsNullOrWhiteSpace(m3CUNO))
+				throw new ArgumentNullException(nameof(m3CUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CUNO", m3_CUNO.Trim())
-				.WithQueryParameter("CCNR", m3_CCNR.ToString());
+				.WithQueryParameter("CUNO", m3CUNO.Trim())
+				.WithQueryParameter("CCNR", m3CCNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_BLD1.HasValue)
-				request.WithQueryParameter("BLD1", m3_BLD1.Value.ToString());
-			if (m3_VTMM.HasValue)
-				request.WithQueryParameter("VTMM", m3_VTMM.Value.ToString());
-			if (m3_VTYY.HasValue)
-				request.WithQueryParameter("VTYY", m3_VTYY.Value.ToString());
-			if (m3_ORDT.HasValue)
-				request.WithQueryParameter("ORDT", m3_ORDT.Value.ToM3String());
-			if (m3_BLCD.HasValue)
-				request.WithQueryParameter("BLCD", m3_BLCD.Value.ToString());
-			if (m3_CTP1.HasValue)
-				request.WithQueryParameter("CTP1", m3_CTP1.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MCRD))
-				request.WithQueryParameter("MCRD", m3_MCRD.Trim());
-			if (m3_RCRD.HasValue)
-				request.WithQueryParameter("RCRD", m3_RCRD.Value.ToString());
-			if (m3_CSND.HasValue)
-				request.WithQueryParameter("CSND", m3_CSND.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_REFE))
-				request.WithQueryParameter("REFE", m3_REFE.Trim());
+			if (m3BLD1.HasValue)
+				request.WithQueryParameter("BLD1", m3BLD1.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VTMM.HasValue)
+				request.WithQueryParameter("VTMM", m3VTMM.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VTYY.HasValue)
+				request.WithQueryParameter("VTYY", m3VTYY.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3ORDT.HasValue)
+				request.WithQueryParameter("ORDT", m3ORDT.Value.ToM3String());
+			if (m3BLCD.HasValue)
+				request.WithQueryParameter("BLCD", m3BLCD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CTP1.HasValue)
+				request.WithQueryParameter("CTP1", m3CTP1.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MCRD))
+				request.WithQueryParameter("MCRD", m3MCRD.Trim());
+			if (m3RCRD.HasValue)
+				request.WithQueryParameter("RCRD", m3RCRD.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CSND.HasValue)
+				request.WithQueryParameter("CSND", m3CSND.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3REFE))
+				request.WithQueryParameter("REFE", m3REFE.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -383,7 +389,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Calendar date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calendar date")]
-		public DateTime? M3_CADA => GetNullableDateTime("CADA");
+		public DateTime? M3CADA => GetNullableDateTime("CADA");
 
 		/// <summary>
 		/// Description: Capacity per unit and shift
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity per unit and shift")]
-		public decimal? M3_CPTY => GetNullableDecimal("CPTY");
+		public decimal? M3CPTY => GetNullableDecimal("CPTY");
 
 		/// <summary>
 		/// Description: Work hours from
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours from")]
-		public int? M3_STWT => GetNullableInt("STWT");
+		public int? M3STWT => GetNullableInt("STWT");
 
 		/// <summary>
 		/// Description: Work hours to
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours to")]
-		public int? M3_ENWT => GetNullableInt("ENWT");
+		public int? M3ENWT => GetNullableInt("ENWT");
 
 		/// <summary>
 		/// Description: Work hours from
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours from")]
-		public int? M3_STW2 => GetNullableInt("STW2");
+		public int? M3STW2 => GetNullableInt("STW2");
 
 		/// <summary>
 		/// Description: Work hours to
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours to")]
-		public int? M3_ENW2 => GetNullableInt("ENW2");
+		public int? M3ENW2 => GetNullableInt("ENW2");
 
 		/// <summary>
 		/// Description: Work hours from
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours from")]
-		public int? M3_STW3 => GetNullableInt("STW3");
+		public int? M3STW3 => GetNullableInt("STW3");
 
 		/// <summary>
 		/// Description: Work hours to
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours to")]
-		public int? M3_ENW3 => GetNullableInt("ENW3");
+		public int? M3ENW3 => GetNullableInt("ENW3");
 
 		/// <summary>
 		/// Description: Work hours from
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours from")]
-		public int? M3_STW4 => GetNullableInt("STW4");
+		public int? M3STW4 => GetNullableInt("STW4");
 
 		/// <summary>
 		/// Description: Work hours to
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours to")]
-		public int? M3_ENW4 => GetNullableInt("ENW4");
+		public int? M3ENW4 => GetNullableInt("ENW4");
 
 		/// <summary>
 		/// Description: Work hours from
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours from")]
-		public int? M3_STW5 => GetNullableInt("STW5");
+		public int? M3STW5 => GetNullableInt("STW5");
 
 		/// <summary>
 		/// Description: Work hours to
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CPS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours to")]
-		public int? M3_ENW5 => GetNullableInt("ENW5");
+		public int? M3ENW5 => GetNullableInt("ENW5");
 	}
 }
 // EOF

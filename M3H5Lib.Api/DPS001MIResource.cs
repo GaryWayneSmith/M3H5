@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.DPS001MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Transfer Planning Node Distribution relation data
 		/// Version Release: 12.6
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FPND">From Planning Node</param>
-		/// <param name="m3_TPND">To Planning Node</param>
-		/// <param name="m3_DDMT">Default distribution method</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FPND">From Planning Node</param>
+		/// <param name="m3TPND">To Planning Node</param>
+		/// <param name="m3DDMT">Default distribution method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstNodeRelationResponse></returns>
 		/// <exception cref="M3Exception<LstNodeRelationResponse>"></exception>
 		public async Task<M3Response<LstNodeRelationResponse>> LstNodeRelation(
-			int? m3_CONO = null, 
-			string m3_FPND = null, 
-			string m3_TPND = null, 
-			int? m3_DDMT = null, 
+			int? m3CONO = null, 
+			string m3FPND = null, 
+			string m3TPND = null, 
+			int? m3DDMT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,14 +68,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FPND))
-				request.WithQueryParameter("FPND", m3_FPND.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TPND))
-				request.WithQueryParameter("TPND", m3_TPND.Trim());
-			if (m3_DDMT.HasValue)
-				request.WithQueryParameter("DDMT", m3_DDMT.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FPND))
+				request.WithQueryParameter("FPND", m3FPND.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TPND))
+				request.WithQueryParameter("TPND", m3TPND.Trim());
+			if (m3DDMT.HasValue)
+				request.WithQueryParameter("DDMT", m3DDMT.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstNodeRelationResponse>(
@@ -83,7 +85,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -94,11 +97,11 @@ namespace M3H5Lib.Api
 		/// Description Transfer Distribution relation data from Movex BE
 		/// Version Release: 12.6
 		/// </summary>
-		/// <param name="m3_RLTY">Relation Type (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_FWLO">From Warehouse</param>
-		/// <param name="m3_TWLO">To Warehouse</param>
-		/// <param name="m3_WHGR">Warehouse group</param>
+		/// <param name="m3RLTY">Relation Type (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3FWLO">From Warehouse</param>
+		/// <param name="m3TWLO">To Warehouse</param>
+		/// <param name="m3WHGR">Warehouse group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -107,11 +110,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstRelationResponse></returns>
 		/// <exception cref="M3Exception<LstRelationResponse>"></exception>
 		public async Task<M3Response<LstRelationResponse>> LstRelation(
-			int m3_RLTY, 
-			int? m3_CONO = null, 
-			string m3_FWLO = null, 
-			string m3_TWLO = null, 
-			string m3_WHGR = null, 
+			int m3RLTY, 
+			int? m3CONO = null, 
+			string m3FWLO = null, 
+			string m3TWLO = null, 
+			string m3WHGR = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -129,17 +132,17 @@ namespace M3H5Lib.Api
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("RLTY", m3_RLTY.ToString());
+				.WithQueryParameter("RLTY", m3RLTY.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FWLO))
-				request.WithQueryParameter("FWLO", m3_FWLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TWLO))
-				request.WithQueryParameter("TWLO", m3_TWLO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHGR))
-				request.WithQueryParameter("WHGR", m3_WHGR.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FWLO))
+				request.WithQueryParameter("FWLO", m3FWLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TWLO))
+				request.WithQueryParameter("TWLO", m3TWLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHGR))
+				request.WithQueryParameter("WHGR", m3WHGR.Trim());
 
 			// Execute the request
 			var result = await Execute<LstRelationResponse>(
@@ -149,7 +152,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

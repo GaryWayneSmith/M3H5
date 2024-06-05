@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MNS035MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add entity map
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_ISEC">Infor standard entity code (Required)</param>
-		/// <param name="m3_PGNM">Program name</param>
-		/// <param name="m3_VFLD">Validate field name</param>
-		/// <param name="m3_VFVA">Validate field value</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3ISEC">Infor standard entity code (Required)</param>
+		/// <param name="m3PGNM">Program name</param>
+		/// <param name="m3VFLD">Validate field name</param>
+		/// <param name="m3VFVA">Validate field value</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddEntityMap(
-			string m3_FLDI, 
-			int m3_SQNR, 
-			string m3_ISEC, 
-			string m3_PGNM = null, 
-			string m3_VFLD = null, 
-			string m3_VFVA = null, 
+			string m3FLDI, 
+			int m3SQNR, 
+			string m3ISEC, 
+			string m3PGNM = null, 
+			string m3VFLD = null, 
+			string m3VFVA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,24 +72,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
-			if (string.IsNullOrWhiteSpace(m3_ISEC))
-				throw new ArgumentNullException("m3_ISEC");
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
+			if (string.IsNullOrWhiteSpace(m3ISEC))
+				throw new ArgumentNullException(nameof(m3ISEC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FLDI", m3_FLDI.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString())
-				.WithQueryParameter("ISEC", m3_ISEC.Trim());
+				.WithQueryParameter("FLDI", m3FLDI.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("ISEC", m3ISEC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PGNM))
-				request.WithQueryParameter("PGNM", m3_PGNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFLD))
-				request.WithQueryParameter("VFLD", m3_VFLD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFVA))
-				request.WithQueryParameter("VFVA", m3_VFVA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGNM))
+				request.WithQueryParameter("PGNM", m3PGNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFLD))
+				request.WithQueryParameter("VFLD", m3VFLD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFVA))
+				request.WithQueryParameter("VFVA", m3VFVA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -97,7 +99,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -108,12 +111,12 @@ namespace M3H5Lib.Api
 		/// Description Delete entity map
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_PGNM">Program name</param>
-		/// <param name="m3_VFLD">Validate field name</param>
-		/// <param name="m3_VFVA">Validate field value</param>
-		/// <param name="m3_ISEC">Infor standard entity code</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3PGNM">Program name</param>
+		/// <param name="m3VFLD">Validate field name</param>
+		/// <param name="m3VFVA">Validate field value</param>
+		/// <param name="m3ISEC">Infor standard entity code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -122,12 +125,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelEntityMap(
-			string m3_FLDI, 
-			int m3_SQNR, 
-			string m3_PGNM = null, 
-			string m3_VFLD = null, 
-			string m3_VFVA = null, 
-			string m3_ISEC = null, 
+			string m3FLDI, 
+			int m3SQNR, 
+			string m3PGNM = null, 
+			string m3VFLD = null, 
+			string m3VFVA = null, 
+			string m3ISEC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -142,23 +145,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FLDI", m3_FLDI.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("FLDI", m3FLDI.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PGNM))
-				request.WithQueryParameter("PGNM", m3_PGNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFLD))
-				request.WithQueryParameter("VFLD", m3_VFLD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFVA))
-				request.WithQueryParameter("VFVA", m3_VFVA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ISEC))
-				request.WithQueryParameter("ISEC", m3_ISEC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGNM))
+				request.WithQueryParameter("PGNM", m3PGNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFLD))
+				request.WithQueryParameter("VFLD", m3VFLD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFVA))
+				request.WithQueryParameter("VFVA", m3VFVA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ISEC))
+				request.WithQueryParameter("ISEC", m3ISEC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -168,7 +171,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -179,12 +183,12 @@ namespace M3H5Lib.Api
 		/// Description Get an entity map
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_PGNM">Program name</param>
-		/// <param name="m3_VFLD">Validate field name</param>
-		/// <param name="m3_VFVA">Validate field value</param>
-		/// <param name="m3_ISEC">Infor standard entity code</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3PGNM">Program name</param>
+		/// <param name="m3VFLD">Validate field name</param>
+		/// <param name="m3VFVA">Validate field value</param>
+		/// <param name="m3ISEC">Infor standard entity code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -193,12 +197,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetEntityMapResponse></returns>
 		/// <exception cref="M3Exception<GetEntityMapResponse>"></exception>
 		public async Task<M3Response<GetEntityMapResponse>> GetEntityMap(
-			string m3_FLDI, 
-			int m3_SQNR, 
-			string m3_PGNM = null, 
-			string m3_VFLD = null, 
-			string m3_VFVA = null, 
-			string m3_ISEC = null, 
+			string m3FLDI, 
+			int m3SQNR, 
+			string m3PGNM = null, 
+			string m3VFLD = null, 
+			string m3VFVA = null, 
+			string m3ISEC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -213,23 +217,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FLDI", m3_FLDI.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("FLDI", m3FLDI.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PGNM))
-				request.WithQueryParameter("PGNM", m3_PGNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFLD))
-				request.WithQueryParameter("VFLD", m3_VFLD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFVA))
-				request.WithQueryParameter("VFVA", m3_VFVA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ISEC))
-				request.WithQueryParameter("ISEC", m3_ISEC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGNM))
+				request.WithQueryParameter("PGNM", m3PGNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFLD))
+				request.WithQueryParameter("VFLD", m3VFLD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFVA))
+				request.WithQueryParameter("VFVA", m3VFVA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ISEC))
+				request.WithQueryParameter("ISEC", m3ISEC.Trim());
 
 			// Execute the request
 			var result = await Execute<GetEntityMapResponse>(
@@ -239,7 +243,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -250,7 +255,7 @@ namespace M3H5Lib.Api
 		/// Description List by entity
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_ISEC">Infor standard entity code</param>
+		/// <param name="m3ISEC">Infor standard entity code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -259,7 +264,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByEntityResponse></returns>
 		/// <exception cref="M3Exception<LstByEntityResponse>"></exception>
 		public async Task<M3Response<LstByEntityResponse>> LstByEntity(
-			string m3_ISEC = null, 
+			string m3ISEC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -274,8 +279,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ISEC))
-				request.WithQueryParameter("ISEC", m3_ISEC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ISEC))
+				request.WithQueryParameter("ISEC", m3ISEC.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByEntityResponse>(
@@ -285,7 +290,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -296,7 +302,7 @@ namespace M3H5Lib.Api
 		/// Description List by field
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -305,7 +311,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByFieldResponse></returns>
 		/// <exception cref="M3Exception<LstByFieldResponse>"></exception>
 		public async Task<M3Response<LstByFieldResponse>> LstByField(
-			string m3_FLDI = null, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -320,8 +326,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByFieldResponse>(
@@ -331,7 +337,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -342,12 +349,12 @@ namespace M3H5Lib.Api
 		/// Description Update existing Entity map
 		/// Version Release: 15.1
 		/// </summary>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_SQNR">Sequence number (Required)</param>
-		/// <param name="m3_PGNM">Program name</param>
-		/// <param name="m3_VFLD">Validate field name</param>
-		/// <param name="m3_VFVA">Validate field value</param>
-		/// <param name="m3_ISEC">Infor standard entity code</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3SQNR">Sequence number (Required)</param>
+		/// <param name="m3PGNM">Program name</param>
+		/// <param name="m3VFLD">Validate field name</param>
+		/// <param name="m3VFVA">Validate field value</param>
+		/// <param name="m3ISEC">Infor standard entity code</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -356,12 +363,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdEntityMap(
-			string m3_FLDI, 
-			int m3_SQNR, 
-			string m3_PGNM = null, 
-			string m3_VFLD = null, 
-			string m3_VFVA = null, 
-			string m3_ISEC = null, 
+			string m3FLDI, 
+			int m3SQNR, 
+			string m3PGNM = null, 
+			string m3VFLD = null, 
+			string m3VFVA = null, 
+			string m3ISEC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -376,23 +383,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FLDI", m3_FLDI.Trim())
-				.WithQueryParameter("SQNR", m3_SQNR.ToString());
+				.WithQueryParameter("FLDI", m3FLDI.Trim())
+				.WithQueryParameter("SQNR", m3SQNR.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PGNM))
-				request.WithQueryParameter("PGNM", m3_PGNM.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFLD))
-				request.WithQueryParameter("VFLD", m3_VFLD.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_VFVA))
-				request.WithQueryParameter("VFVA", m3_VFVA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ISEC))
-				request.WithQueryParameter("ISEC", m3_ISEC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PGNM))
+				request.WithQueryParameter("PGNM", m3PGNM.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFLD))
+				request.WithQueryParameter("VFLD", m3VFLD.Trim());
+			if (!string.IsNullOrWhiteSpace(m3VFVA))
+				request.WithQueryParameter("VFVA", m3VFVA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ISEC))
+				request.WithQueryParameter("ISEC", m3ISEC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -402,7 +409,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

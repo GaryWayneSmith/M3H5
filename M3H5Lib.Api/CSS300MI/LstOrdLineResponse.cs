@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order category")]
-		public string M3_ORCA => GetString("ORCA");
+		public string M3ORCA => GetString("ORCA");
 
 		/// <summary>
 		/// Description: Order number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Order line
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Line suffix
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Line suffix")]
-		public int? M3_RIDX => GetNullableInt("RIDX");
+		public int? M3RIDX => GetNullableInt("RIDX");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Item number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Supplier
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Requested delivery date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery date")]
-		public DateTime? M3_RLDT => GetNullableDateTime("RLDT");
+		public DateTime? M3RLDT => GetNullableDateTime("RLDT");
 
 		/// <summary>
 		/// Description: Requested delivery time
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Requested delivery time")]
-		public int? M3_RLHM => GetNullableInt("RLHM");
+		public int? M3RLHM => GetNullableInt("RLHM");
 
 		/// <summary>
 		/// Description: Product
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Sales model
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales model")]
-		public string M3_ASLM => GetString("ASLM");
+		public string M3ASLM => GetString("ASLM");
 
 		/// <summary>
 		/// Description: Manufacturer
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer")]
-		public string M3_PROD => GetString("PROD");
+		public string M3PROD => GetString("PROD");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Transaction quantity - basic U/M
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction quantity - basic U/M")]
-		public decimal? M3_TRQT => GetNullableDecimal("TRQT");
+		public decimal? M3TRQT => GetNullableDecimal("TRQT");
 
 		/// <summary>
 		/// Description: Allocated quantity - basic U/M
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocated quantity - basic U/M")]
-		public decimal? M3_ALQT => GetNullableDecimal("ALQT");
+		public decimal? M3ALQT => GetNullableDecimal("ALQT");
 
 		/// <summary>
 		/// Description: Remaining quantity - basic U/M
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Remaining quantity - basic U/M")]
-		public decimal? M3_RNQT => GetNullableDecimal("RNQT");
+		public decimal? M3RNQT => GetNullableDecimal("RNQT");
 
 		/// <summary>
 		/// Description: Picking list quantity - basic U/M
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picking list quantity - basic U/M")]
-		public decimal? M3_PLQT => GetNullableDecimal("PLQT");
+		public decimal? M3PLQT => GetNullableDecimal("PLQT");
 
 		/// <summary>
 		/// Description: Availability date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Availability date")]
-		public DateTime? M3_AVDT => GetNullableDateTime("AVDT");
+		public DateTime? M3AVDT => GetNullableDateTime("AVDT");
 
 		/// <summary>
 		/// Description: Available time
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Available time")]
-		public int? M3_AVTM => GetNullableInt("AVTM");
+		public int? M3AVTM => GetNullableInt("AVTM");
 
 		/// <summary>
 		/// Description: Number of hours from UTC
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of hours from UTC")]
-		public int? M3_TGMT => GetNullableInt("TGMT");
+		public int? M3TGMT => GetNullableInt("TGMT");
 
 		/// <summary>
 		/// Description: Time zone
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time zone")]
-		public string M3_TIZO => GetString("TIZO");
+		public string M3TIZO => GetString("TIZO");
 
 		/// <summary>
 		/// Description: Representative transaction
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Representative transaction")]
-		public int? M3_RPRT => GetNullableInt("RPRT");
+		public int? M3RPRT => GetNullableInt("RPRT");
 
 		/// <summary>
 		/// Description: Inventory planned
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory planned")]
-		public string M3_IPLA => GetString("IPLA");
+		public string M3IPLA => GetString("IPLA");
 
 		/// <summary>
 		/// Description: Description
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Revision date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision date")]
-		public DateTime? M3_REDD => GetNullableDateTime("REDD");
+		public DateTime? M3REDD => GetNullableDateTime("REDD");
 
 		/// <summary>
 		/// Description: Revision time
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Revision time")]
-		public int? M3_RVTM => GetNullableInt("RVTM");
+		public int? M3RVTM => GetNullableInt("RVTM");
 
 		/// <summary>
 		/// Description: Inventory segment
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CSS300MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory segment")]
-		public string M3_ISEG => GetString("ISEG");
+		public string M3ISEG => GetString("ISEG");
 	}
 }
 // EOF

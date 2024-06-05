@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS358MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,15 +38,15 @@ namespace M3H5Lib.Api
 		/// Description List by order date
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number</param>
-		/// <param name="m3_FRDT">From date</param>
-		/// <param name="m3_TODT">To date</param>
-		/// <param name="m3_FRGR">Item group</param>
-		/// <param name="m3_TOGR">Item group</param>
-		/// <param name="m3_FRCL">Product group</param>
-		/// <param name="m3_TOCL">Product group</param>
-		/// <param name="m3_FRGP">Procurement group</param>
-		/// <param name="m3_TOGP">Procurement group</param>
+		/// <param name="m3CUNO">Customer number</param>
+		/// <param name="m3FRDT">From date</param>
+		/// <param name="m3TODT">To date</param>
+		/// <param name="m3FRGR">Item group</param>
+		/// <param name="m3TOGR">Item group</param>
+		/// <param name="m3FRCL">Product group</param>
+		/// <param name="m3TOCL">Product group</param>
+		/// <param name="m3FRGP">Procurement group</param>
+		/// <param name="m3TOGP">Procurement group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -53,15 +55,15 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDelivLotsResponse></returns>
 		/// <exception cref="M3Exception<LstDelivLotsResponse>"></exception>
 		public async Task<M3Response<LstDelivLotsResponse>> LstDelivLots(
-			string m3_CUNO = null, 
-			DateTime? m3_FRDT = null, 
-			DateTime? m3_TODT = null, 
-			string m3_FRGR = null, 
-			string m3_TOGR = null, 
-			string m3_FRCL = null, 
-			string m3_TOCL = null, 
-			string m3_FRGP = null, 
-			string m3_TOGP = null, 
+			string m3CUNO = null, 
+			DateTime? m3FRDT = null, 
+			DateTime? m3TODT = null, 
+			string m3FRGR = null, 
+			string m3TOGR = null, 
+			string m3FRCL = null, 
+			string m3TOCL = null, 
+			string m3FRGP = null, 
+			string m3TOGP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -76,24 +78,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
-			if (m3_FRDT.HasValue)
-				request.WithQueryParameter("FRDT", m3_FRDT.Value.ToM3String());
-			if (m3_TODT.HasValue)
-				request.WithQueryParameter("TODT", m3_TODT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_FRGR))
-				request.WithQueryParameter("FRGR", m3_FRGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOGR))
-				request.WithQueryParameter("TOGR", m3_TOGR.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRCL))
-				request.WithQueryParameter("FRCL", m3_FRCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOCL))
-				request.WithQueryParameter("TOCL", m3_TOCL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRGP))
-				request.WithQueryParameter("FRGP", m3_FRGP.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOGP))
-				request.WithQueryParameter("TOGP", m3_TOGP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
+			if (m3FRDT.HasValue)
+				request.WithQueryParameter("FRDT", m3FRDT.Value.ToM3String());
+			if (m3TODT.HasValue)
+				request.WithQueryParameter("TODT", m3TODT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3FRGR))
+				request.WithQueryParameter("FRGR", m3FRGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOGR))
+				request.WithQueryParameter("TOGR", m3TOGR.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRCL))
+				request.WithQueryParameter("FRCL", m3FRCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOCL))
+				request.WithQueryParameter("TOCL", m3TOCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRGP))
+				request.WithQueryParameter("FRGP", m3FRGP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOGP))
+				request.WithQueryParameter("TOGP", m3TOGP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDelivLotsResponse>(
@@ -103,7 +105,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

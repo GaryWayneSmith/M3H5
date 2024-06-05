@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Truck license plate
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Truck license plate")]
-		public string M3_TRLP => GetString("TRLP");
+		public string M3TRLP => GetString("TRLP");
 
 		/// <summary>
 		/// Description: Truck license plate UF
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Truck license plate UF")]
-		public string M3_TRUF => GetString("TRUF");
+		public string M3TRUF => GetString("TRUF");
 
 		/// <summary>
 		/// Description: Truck ANTT code
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Truck ANTT code")]
-		public string M3_TRTT => GetString("TRTT");
+		public string M3TRTT => GetString("TRTT");
 
 		/// <summary>
 		/// Description: Trailer license plate
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trailer license plate")]
-		public string M3_TLLP => GetString("TLLP");
+		public string M3TLLP => GetString("TLLP");
 
 		/// <summary>
 		/// Description: Trailer license plate UF
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trailer license plate UF")]
-		public string M3_TLUF => GetString("TLUF");
+		public string M3TLUF => GetString("TLUF");
 
 		/// <summary>
 		/// Description: Trailer ANTT code
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trailer ANTT code")]
-		public string M3_TLTT => GetString("TLTT");
+		public string M3TLTT => GetString("TLTT");
 
 		/// <summary>
 		/// Description: Freight train id
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight train id")]
-		public string M3_CRID => GetString("CRID");
+		public string M3CRID => GetString("CRID");
 
 		/// <summary>
 		/// Description: Ferry id
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.XBR001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ferry id")]
-		public string M3_FRID => GetString("FRID");
+		public string M3FRID => GetString("FRID");
 	}
 }
 // EOF

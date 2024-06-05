@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS105MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Sales Desk - Add Pre-invoice Line
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_IPDT">Requested invoice date</param>
-		/// <param name="m3_IVAM">Invoice amount - foreign currency</param>
-		/// <param name="m3_TX30">Text 1</param>
-		/// <param name="m3_TX60">Text 2</param>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3IPDT">Requested invoice date</param>
+		/// <param name="m3IVAM">Invoice amount - foreign currency</param>
+		/// <param name="m3TX30">Text 1</param>
+		/// <param name="m3TX60">Text 2</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddPreInvoice(
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			string m3_ORNO = null, 
-			DateTime? m3_IPDT = null, 
-			decimal? m3_IVAM = null, 
-			string m3_TX30 = null, 
-			string m3_TX60 = null, 
-			int? m3_SEQN = null, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			string m3ORNO = null, 
+			DateTime? m3IPDT = null, 
+			decimal? m3IVAM = null, 
+			string m3TX30 = null, 
+			string m3TX60 = null, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,22 +76,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_IPDT.HasValue)
-				request.WithQueryParameter("IPDT", m3_IPDT.Value.ToM3String());
-			if (m3_IVAM.HasValue)
-				request.WithQueryParameter("IVAM", m3_IVAM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_TX30))
-				request.WithQueryParameter("TX30", m3_TX30.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX60))
-				request.WithQueryParameter("TX60", m3_TX60.Trim());
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3IPDT.HasValue)
+				request.WithQueryParameter("IPDT", m3IPDT.Value.ToM3String());
+			if (m3IVAM.HasValue)
+				request.WithQueryParameter("IVAM", m3IVAM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3TX30))
+				request.WithQueryParameter("TX30", m3TX30.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX60))
+				request.WithQueryParameter("TX60", m3TX60.Trim());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -99,7 +101,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -110,10 +113,10 @@ namespace M3H5Lib.Api
 		/// Description Sales Desk - Confirm Pre-invoice
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_ORNO">Customer order number</param>
-		/// <param name="m3_IPDT">Requested invoice date</param>
-		/// <param name="m3_SEQN">Sequence number</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3ORNO">Customer order number</param>
+		/// <param name="m3IPDT">Requested invoice date</param>
+		/// <param name="m3SEQN">Sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -122,10 +125,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<CnfPreInvoiceResponse></returns>
 		/// <exception cref="M3Exception<CnfPreInvoiceResponse>"></exception>
 		public async Task<M3Response<CnfPreInvoiceResponse>> CnfPreInvoice(
-			int? m3_CONO = null, 
-			string m3_ORNO = null, 
-			DateTime? m3_IPDT = null, 
-			int? m3_SEQN = null, 
+			int? m3CONO = null, 
+			string m3ORNO = null, 
+			DateTime? m3IPDT = null, 
+			int? m3SEQN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -140,14 +143,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ORNO))
-				request.WithQueryParameter("ORNO", m3_ORNO.Trim());
-			if (m3_IPDT.HasValue)
-				request.WithQueryParameter("IPDT", m3_IPDT.Value.ToM3String());
-			if (m3_SEQN.HasValue)
-				request.WithQueryParameter("SEQN", m3_SEQN.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ORNO))
+				request.WithQueryParameter("ORNO", m3ORNO.Trim());
+			if (m3IPDT.HasValue)
+				request.WithQueryParameter("IPDT", m3IPDT.Value.ToM3String());
+			if (m3SEQN.HasValue)
+				request.WithQueryParameter("SEQN", m3SEQN.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<CnfPreInvoiceResponse>(
@@ -157,7 +160,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -168,8 +172,8 @@ namespace M3H5Lib.Api
 		/// Description GetPreInvByEXIN
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_EXIN">Extended invoice number (Required)</param>
-		/// <param name="m3_YEA4">Year (Required)</param>
+		/// <param name="m3EXIN">Extended invoice number (Required)</param>
+		/// <param name="m3YEA4">Year (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -178,8 +182,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPreInvByEXINResponse></returns>
 		/// <exception cref="M3Exception<GetPreInvByEXINResponse>"></exception>
 		public async Task<M3Response<GetPreInvByEXINResponse>> GetPreInvByEXIN(
-			string m3_EXIN, 
-			int m3_YEA4, 
+			string m3EXIN, 
+			int m3YEA4, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -194,13 +198,13 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EXIN))
-				throw new ArgumentNullException("m3_EXIN");
+			if (string.IsNullOrWhiteSpace(m3EXIN))
+				throw new ArgumentNullException(nameof(m3EXIN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EXIN", m3_EXIN.Trim())
-				.WithQueryParameter("YEA4", m3_YEA4.ToString());
+				.WithQueryParameter("EXIN", m3EXIN.Trim())
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetPreInvByEXINResponse>(
@@ -210,7 +214,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -221,9 +226,9 @@ namespace M3H5Lib.Api
 		/// Description GetPreInvoice
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
-		/// <param name="m3_IPDT">Requested invoice date (Required)</param>
-		/// <param name="m3_SEQN">Sequence number (Required)</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
+		/// <param name="m3IPDT">Requested invoice date (Required)</param>
+		/// <param name="m3SEQN">Sequence number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -232,9 +237,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetPreInvoiceResponse></returns>
 		/// <exception cref="M3Exception<GetPreInvoiceResponse>"></exception>
 		public async Task<M3Response<GetPreInvoiceResponse>> GetPreInvoice(
-			string m3_ORNO, 
-			DateTime m3_IPDT, 
-			int m3_SEQN, 
+			string m3ORNO, 
+			DateTime m3IPDT, 
+			int m3SEQN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -249,14 +254,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim())
-				.WithQueryParameter("IPDT", m3_IPDT.ToM3String())
-				.WithQueryParameter("SEQN", m3_SEQN.ToString());
+				.WithQueryParameter("ORNO", m3ORNO.Trim())
+				.WithQueryParameter("IPDT", m3IPDT.ToM3String())
+				.WithQueryParameter("SEQN", m3SEQN.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetPreInvoiceResponse>(
@@ -266,7 +271,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -277,7 +283,7 @@ namespace M3H5Lib.Api
 		/// Description LstPreInvoice
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ORNO">Customer order number (Required)</param>
+		/// <param name="m3ORNO">Customer order number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -286,7 +292,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstPreInvoiceResponse></returns>
 		/// <exception cref="M3Exception<LstPreInvoiceResponse>"></exception>
 		public async Task<M3Response<LstPreInvoiceResponse>> LstPreInvoice(
-			string m3_ORNO, 
+			string m3ORNO, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -301,12 +307,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ORNO))
-				throw new ArgumentNullException("m3_ORNO");
+			if (string.IsNullOrWhiteSpace(m3ORNO))
+				throw new ArgumentNullException(nameof(m3ORNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ORNO", m3_ORNO.Trim());
+				.WithQueryParameter("ORNO", m3ORNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstPreInvoiceResponse>(
@@ -316,7 +322,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

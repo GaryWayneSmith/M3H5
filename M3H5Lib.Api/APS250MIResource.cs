@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,14 +37,14 @@ namespace M3H5Lib.Api
 		/// Description Add additional invoice information
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_YEA4">Year (Required)</param>
-		/// <param name="m3_JRNO">Journal number (Required)</param>
-		/// <param name="m3_JSNO">Journal sequence number (Required)</param>
-		/// <param name="m3_PEXN">AP information category (Required)</param>
-		/// <param name="m3_PEXI">AP additional information (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_PEXS">AP information sequence number</param>
+		/// <param name="m3YEA4">Year (Required)</param>
+		/// <param name="m3JRNO">Journal number (Required)</param>
+		/// <param name="m3JSNO">Journal sequence number (Required)</param>
+		/// <param name="m3PEXN">AP information category (Required)</param>
+		/// <param name="m3PEXI">AP additional information (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3PEXS">AP information sequence number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,14 +53,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddInvInfo(
-			int m3_YEA4, 
-			int m3_JRNO, 
-			int m3_JSNO, 
-			int m3_PEXN, 
-			string m3_PEXI, 
-			int? m3_CONO = null, 
-			string m3_DIVI = null, 
-			int? m3_PEXS = null, 
+			int m3YEA4, 
+			int m3JRNO, 
+			int m3JSNO, 
+			int m3PEXN, 
+			string m3PEXI, 
+			int? m3CONO = null, 
+			string m3DIVI = null, 
+			int? m3PEXS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -73,24 +75,24 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PEXI))
-				throw new ArgumentNullException("m3_PEXI");
+			if (string.IsNullOrWhiteSpace(m3PEXI))
+				throw new ArgumentNullException(nameof(m3PEXI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("YEA4", m3_YEA4.ToString())
-				.WithQueryParameter("JRNO", m3_JRNO.ToString())
-				.WithQueryParameter("JSNO", m3_JSNO.ToString())
-				.WithQueryParameter("PEXN", m3_PEXN.ToString())
-				.WithQueryParameter("PEXI", m3_PEXI.Trim());
+				.WithQueryParameter("YEA4", m3YEA4.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JRNO", m3JRNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("JSNO", m3JSNO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PEXN", m3PEXN.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PEXI", m3PEXI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (m3_PEXS.HasValue)
-				request.WithQueryParameter("PEXS", m3_PEXS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (m3PEXS.HasValue)
+				request.WithQueryParameter("PEXS", m3PEXS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -100,7 +102,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

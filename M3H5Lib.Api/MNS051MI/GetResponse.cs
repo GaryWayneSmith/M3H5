@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Status
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Program name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGM => GetString("PGM");
+		public string M3PGM => GetString("PGM");
 
 		/// <summary>
 		/// Description: Delay auto job
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delay auto job")]
-		public int? M3_DLY => GetNullableInt("DLY");
+		public int? M3DLY => GetNullableInt("DLY");
 
 		/// <summary>
 		/// Description: Table
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Company
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_DFCO => GetNullableInt("DFCO");
+		public int? M3DFCO => GetNullableInt("DFCO");
 
 		/// <summary>
 		/// Description: Division
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DFDI => GetString("DFDI");
+		public string M3DFDI => GetString("DFDI");
 
 		/// <summary>
 		/// Description: System language
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("System language")]
-		public string M3_LANC => GetString("LANC");
+		public string M3LANC => GetString("LANC");
 
 		/// <summary>
 		/// Description: User
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNS051MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 	}
 }
 // EOF

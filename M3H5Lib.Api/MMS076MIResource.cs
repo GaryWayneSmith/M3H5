@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,10 +37,10 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 11.2
 		/// </summary>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_STYN">Style number</param>
-		/// <param name="m3_SEA1">Not used</param>
-		/// <param name="m3_SEAX">Season</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3STYN">Style number</param>
+		/// <param name="m3SEA1">Not used</param>
+		/// <param name="m3SEAX">Season</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,10 +49,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			int? m3_CONO = null, 
-			string m3_STYN = null, 
-			string m3_SEA1 = null, 
-			string m3_SEAX = null, 
+			int? m3CONO = null, 
+			string m3STYN = null, 
+			string m3SEA1 = null, 
+			string m3SEAX = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -65,14 +67,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_STYN))
-				request.WithQueryParameter("STYN", m3_STYN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SEA1))
-				request.WithQueryParameter("SEA1", m3_SEA1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SEAX))
-				request.WithQueryParameter("SEAX", m3_SEAX.Trim());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3STYN))
+				request.WithQueryParameter("STYN", m3STYN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SEA1))
+				request.WithQueryParameter("SEA1", m3SEA1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SEAX))
+				request.WithQueryParameter("SEAX", m3SEAX.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -82,7 +84,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Costing model - sales price
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Costing model - sales price")]
-		public string M3_SCMO => GetString("SCMO");
+		public string M3SCMO => GetString("SCMO");
 
 		/// <summary>
 		/// Description: Element type - sales price costing
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element type - sales price costing")]
-		public int? M3_SCET => GetNullableInt("SCET");
+		public int? M3SCET => GetNullableInt("SCET");
 
 		/// <summary>
 		/// Description: Sequence number - costing element
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number - costing element")]
-		public int? M3_CDSE => GetNullableInt("CDSE");
+		public int? M3CDSE => GetNullableInt("CDSE");
 
 		/// <summary>
 		/// Description: Element - sales price costing
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Element - sales price costing")]
-		public string M3_SCEL => GetString("SCEL");
+		public string M3SCEL => GetString("SCEL");
 
 		/// <summary>
 		/// Description: Subtotal
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subtotal")]
-		public string M3_SCSU => GetString("SCSU");
+		public string M3SCSU => GetString("SCSU");
 
 		/// <summary>
 		/// Description: Text identity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.OIS022MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 	}
 }
 // EOF

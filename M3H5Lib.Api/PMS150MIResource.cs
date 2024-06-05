@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PMS150MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,14 +38,14 @@ namespace M3H5Lib.Api
 		/// Description Batch balancing
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_ARDN">Acquisition order number</param>
-		/// <param name="m3_PRNO">Product</param>
-		/// <param name="m3_STRT">Product structure type</param>
-		/// <param name="m3_ORQA">Ordered quantity - alternate U/M</param>
-		/// <param name="m3_MAUN">Manufacturing U/M</param>
-		/// <param name="m3_FIDT">Finish date</param>
-		/// <param name="m3_MFPC">Process</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3ARDN">Acquisition order number</param>
+		/// <param name="m3PRNO">Product</param>
+		/// <param name="m3STRT">Product structure type</param>
+		/// <param name="m3ORQA">Ordered quantity - alternate U/M</param>
+		/// <param name="m3MAUN">Manufacturing U/M</param>
+		/// <param name="m3FIDT">Finish date</param>
+		/// <param name="m3MFPC">Process</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -52,14 +54,14 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> BatchBalancing(
-			string m3_FACI = null, 
-			string m3_ARDN = null, 
-			string m3_PRNO = null, 
-			string m3_STRT = null, 
-			decimal? m3_ORQA = null, 
-			string m3_MAUN = null, 
-			DateTime? m3_FIDT = null, 
-			string m3_MFPC = null, 
+			string m3FACI = null, 
+			string m3ARDN = null, 
+			string m3PRNO = null, 
+			string m3STRT = null, 
+			decimal? m3ORQA = null, 
+			string m3MAUN = null, 
+			DateTime? m3FIDT = null, 
+			string m3MFPC = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -74,22 +76,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ARDN))
-				request.WithQueryParameter("ARDN", m3_ARDN.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_PRNO))
-				request.WithQueryParameter("PRNO", m3_PRNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_STRT))
-				request.WithQueryParameter("STRT", m3_STRT.Trim());
-			if (m3_ORQA.HasValue)
-				request.WithQueryParameter("ORQA", m3_ORQA.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_MAUN))
-				request.WithQueryParameter("MAUN", m3_MAUN.Trim());
-			if (m3_FIDT.HasValue)
-				request.WithQueryParameter("FIDT", m3_FIDT.Value.ToM3String());
-			if (!string.IsNullOrWhiteSpace(m3_MFPC))
-				request.WithQueryParameter("MFPC", m3_MFPC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARDN))
+				request.WithQueryParameter("ARDN", m3ARDN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNO))
+				request.WithQueryParameter("PRNO", m3PRNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3STRT))
+				request.WithQueryParameter("STRT", m3STRT.Trim());
+			if (m3ORQA.HasValue)
+				request.WithQueryParameter("ORQA", m3ORQA.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3MAUN))
+				request.WithQueryParameter("MAUN", m3MAUN.Trim());
+			if (m3FIDT.HasValue)
+				request.WithQueryParameter("FIDT", m3FIDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3MFPC))
+				request.WithQueryParameter("MFPC", m3MFPC.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -99,7 +101,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -110,7 +113,7 @@ namespace M3H5Lib.Api
 		/// Description GetProcessOrder
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DRDN">Demand order number</param>
+		/// <param name="m3DRDN">Demand order number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -119,7 +122,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetProcessOrderResponse></returns>
 		/// <exception cref="M3Exception<GetProcessOrderResponse>"></exception>
 		public async Task<M3Response<GetProcessOrderResponse>> GetProcessOrder(
-			string m3_DRDN = null, 
+			string m3DRDN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -134,8 +137,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DRDN))
-				request.WithQueryParameter("DRDN", m3_DRDN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DRDN))
+				request.WithQueryParameter("DRDN", m3DRDN.Trim());
 
 			// Execute the request
 			var result = await Execute<GetProcessOrderResponse>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,7 +160,7 @@ namespace M3H5Lib.Api
 		/// Description List batch balancing
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ARDN">Acquisition order number</param>
+		/// <param name="m3ARDN">Acquisition order number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -165,7 +169,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstBatchBalResponse></returns>
 		/// <exception cref="M3Exception<LstBatchBalResponse>"></exception>
 		public async Task<M3Response<LstBatchBalResponse>> LstBatchBal(
-			string m3_ARDN = null, 
+			string m3ARDN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -180,8 +184,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ARDN))
-				request.WithQueryParameter("ARDN", m3_ARDN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ARDN))
+				request.WithQueryParameter("ARDN", m3ARDN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstBatchBalResponse>(
@@ -191,7 +195,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -202,7 +207,7 @@ namespace M3H5Lib.Api
 		/// Description Undo batch balancing
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_DRDN">Demand order number</param>
+		/// <param name="m3DRDN">Demand order number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -211,7 +216,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UndoBatchBal(
-			string m3_DRDN = null, 
+			string m3DRDN = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,8 +231,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DRDN))
-				request.WithQueryParameter("DRDN", m3_DRDN.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DRDN))
+				request.WithQueryParameter("DRDN", m3DRDN.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -237,7 +242,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job number")]
-		public int? M3_JBNO => GetNullableInt("JBNO");
+		public int? M3JBNO => GetNullableInt("JBNO");
 
 		/// <summary>
 		/// Description: Job date
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job date")]
-		public DateTime? M3_JBDT => GetNullableDateTime("JBDT");
+		public DateTime? M3JBDT => GetNullableDateTime("JBDT");
 
 		/// <summary>
 		/// Description: Job time
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Job time")]
-		public int? M3_JBTM => GetNullableInt("JBTM");
+		public int? M3JBTM => GetNullableInt("JBTM");
 
 		/// <summary>
 		/// Description: Company
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public string M3_CINO => GetString("CINO");
+		public string M3CINO => GetString("CINO");
 
 		/// <summary>
 		/// Description: Invoice year
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice year")]
-		public int? M3_INYR => GetNullableInt("INYR");
+		public int? M3INYR => GetNullableInt("INYR");
 
 		/// <summary>
 		/// Description: Customer
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SEQN => GetNullableInt("SEQN");
+		public int? M3SEQN => GetNullableInt("SEQN");
 
 		/// <summary>
 		/// Description: Tax amount 1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 1")]
-		public decimal? M3_TXA1 => GetNullableDecimal("TXA1");
+		public decimal? M3TXA1 => GetNullableDecimal("TXA1");
 
 		/// <summary>
 		/// Description: Tax amt 1, loc curr (calculated)
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amt 1, loc curr (calculated)")]
-		public decimal? M3_CTX1 => GetNullableDecimal("CTX1");
+		public decimal? M3CTX1 => GetNullableDecimal("CTX1");
 
 		/// <summary>
 		/// Description: Tax rate 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 1")]
-		public decimal? M3_TXR1 => GetNullableDecimal("TXR1");
+		public decimal? M3TXR1 => GetNullableDecimal("TXR1");
 
 		/// <summary>
 		/// Description: Tax description 1
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 1")]
-		public string M3_TXD1 => GetString("TXD1");
+		public string M3TXD1 => GetString("TXD1");
 
 		/// <summary>
 		/// Description: Tax amount 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 2")]
-		public decimal? M3_TXA2 => GetNullableDecimal("TXA2");
+		public decimal? M3TXA2 => GetNullableDecimal("TXA2");
 
 		/// <summary>
 		/// Description: Tax amt 2, loc curr (calculated)
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amt 2, loc curr (calculated)")]
-		public decimal? M3_CTX2 => GetNullableDecimal("CTX2");
+		public decimal? M3CTX2 => GetNullableDecimal("CTX2");
 
 		/// <summary>
 		/// Description: Tax rate 2
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 2")]
-		public decimal? M3_TXR2 => GetNullableDecimal("TXR2");
+		public decimal? M3TXR2 => GetNullableDecimal("TXR2");
 
 		/// <summary>
 		/// Description: Tax description 2
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 2")]
-		public string M3_TXD2 => GetString("TXD2");
+		public string M3TXD2 => GetString("TXD2");
 
 		/// <summary>
 		/// Description: Tax code customer/address
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax code customer/address")]
-		public string M3_TAXC => GetString("TAXC");
+		public string M3TAXC => GetString("TAXC");
 
 		/// <summary>
 		/// Description: Tax amount 3
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 3")]
-		public decimal? M3_TXA3 => GetNullableDecimal("TXA3");
+		public decimal? M3TXA3 => GetNullableDecimal("TXA3");
 
 		/// <summary>
 		/// Description: Tax amt 3, loc curr (calculated)
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amt 3, loc curr (calculated)")]
-		public decimal? M3_CTX3 => GetNullableDecimal("CTX3");
+		public decimal? M3CTX3 => GetNullableDecimal("CTX3");
 
 		/// <summary>
 		/// Description: Tax rate 3
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 3")]
-		public decimal? M3_TXR3 => GetNullableDecimal("TXR3");
+		public decimal? M3TXR3 => GetNullableDecimal("TXR3");
 
 		/// <summary>
 		/// Description: Tax description 3
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 3")]
-		public string M3_TXD3 => GetString("TXD3");
+		public string M3TXD3 => GetString("TXD3");
 
 		/// <summary>
 		/// Description: Tax amount 4
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 4")]
-		public decimal? M3_TXA4 => GetNullableDecimal("TXA4");
+		public decimal? M3TXA4 => GetNullableDecimal("TXA4");
 
 		/// <summary>
 		/// Description: Tax amt 4, loc curr (calculated)
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amt 4, loc curr (calculated)")]
-		public decimal? M3_CTX4 => GetNullableDecimal("CTX4");
+		public decimal? M3CTX4 => GetNullableDecimal("CTX4");
 
 		/// <summary>
 		/// Description: Tax rate 4
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 4")]
-		public decimal? M3_TXR4 => GetNullableDecimal("TXR4");
+		public decimal? M3TXR4 => GetNullableDecimal("TXR4");
 
 		/// <summary>
 		/// Description: Tax description 4
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 4")]
-		public string M3_TXD4 => GetString("TXD4");
+		public string M3TXD4 => GetString("TXD4");
 
 		/// <summary>
 		/// Description: Tax amount 5
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amount 5")]
-		public decimal? M3_TXA5 => GetNullableDecimal("TXA5");
+		public decimal? M3TXA5 => GetNullableDecimal("TXA5");
 
 		/// <summary>
 		/// Description: Tax amt 5, loc curr (calculated)
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax amt 5, loc curr (calculated)")]
-		public decimal? M3_CTX5 => GetNullableDecimal("CTX5");
+		public decimal? M3CTX5 => GetNullableDecimal("CTX5");
 
 		/// <summary>
 		/// Description: Tax rate 5
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax rate 5")]
-		public decimal? M3_TXR5 => GetNullableDecimal("TXR5");
+		public decimal? M3TXR5 => GetNullableDecimal("TXR5");
 
 		/// <summary>
 		/// Description: Tax description 5
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.ARS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax description 5")]
-		public string M3_TXD5 => GetString("TXD5");
+		public string M3TXD5 => GetString("TXD5");
 	}
 }
 // EOF

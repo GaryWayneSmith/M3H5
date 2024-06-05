@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CBS001MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Copy
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_OBCA">Capability object category (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
-		/// <param name="m3_TBV1">Start value 1</param>
-		/// <param name="m3_TBV2">Start value 2</param>
-		/// <param name="m3_TBV3">Start value 3</param>
+		/// <param name="m3OBCA">Capability object category (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
+		/// <param name="m3TBV1">Start value 1</param>
+		/// <param name="m3TBV2">Start value 2</param>
+		/// <param name="m3TBV3">Start value 3</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Cpy(
-			int m3_OBCA, 
-			string m3_OBV1, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
-			string m3_TBV1 = null, 
-			string m3_TBV2 = null, 
-			string m3_TBV3 = null, 
+			int m3OBCA, 
+			string m3OBV1, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
+			string m3TBV1 = null, 
+			string m3TBV2 = null, 
+			string m3TBV3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,25 +74,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("OBCA", m3_OBCA.ToString())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim());
+				.WithQueryParameter("OBCA", m3OBCA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("OBV1", m3OBV1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TBV1))
-				request.WithQueryParameter("TBV1", m3_TBV1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TBV2))
-				request.WithQueryParameter("TBV2", m3_TBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TBV3))
-				request.WithQueryParameter("TBV3", m3_TBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TBV1))
+				request.WithQueryParameter("TBV1", m3TBV1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TBV2))
+				request.WithQueryParameter("TBV2", m3TBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TBV3))
+				request.WithQueryParameter("TBV3", m3TBV3.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -100,7 +102,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -111,10 +114,10 @@ namespace M3H5Lib.Api
 		/// Description Delete
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_OBCA">Capability object category (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
+		/// <param name="m3OBCA">Capability object category (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -123,10 +126,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Del(
-			int m3_OBCA, 
-			string m3_OBV1, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
+			int m3OBCA, 
+			string m3OBV1, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -141,19 +144,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("OBCA", m3_OBCA.ToString())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim());
+				.WithQueryParameter("OBCA", m3OBCA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("OBV1", m3OBV1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -163,7 +166,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -174,10 +178,10 @@ namespace M3H5Lib.Api
 		/// Description Get Capable object
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_OBCA">Capability object category (Required)</param>
-		/// <param name="m3_OBV1">Start value 1 (Required)</param>
-		/// <param name="m3_OBV2">Start value 2</param>
-		/// <param name="m3_OBV3">Start value 3</param>
+		/// <param name="m3OBCA">Capability object category (Required)</param>
+		/// <param name="m3OBV1">Start value 1 (Required)</param>
+		/// <param name="m3OBV2">Start value 2</param>
+		/// <param name="m3OBV3">Start value 3</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -186,10 +190,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			int m3_OBCA, 
-			string m3_OBV1, 
-			string m3_OBV2 = null, 
-			string m3_OBV3 = null, 
+			int m3OBCA, 
+			string m3OBV1, 
+			string m3OBV2 = null, 
+			string m3OBV3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -204,19 +208,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_OBV1))
-				throw new ArgumentNullException("m3_OBV1");
+			if (string.IsNullOrWhiteSpace(m3OBV1))
+				throw new ArgumentNullException(nameof(m3OBV1));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("OBCA", m3_OBCA.ToString())
-				.WithQueryParameter("OBV1", m3_OBV1.Trim());
+				.WithQueryParameter("OBCA", m3OBCA.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("OBV1", m3OBV1.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OBV2))
-				request.WithQueryParameter("OBV2", m3_OBV2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_OBV3))
-				request.WithQueryParameter("OBV3", m3_OBV3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV2))
+				request.WithQueryParameter("OBV2", m3OBV2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OBV3))
+				request.WithQueryParameter("OBV3", m3OBV3.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -226,7 +230,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -237,7 +242,7 @@ namespace M3H5Lib.Api
 		/// Description List Capable Object
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_OBCA">Capability object category</param>
+		/// <param name="m3OBCA">Capability object category</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -246,7 +251,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			int? m3_OBCA = null, 
+			int? m3OBCA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -261,8 +266,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_OBCA.HasValue)
-				request.WithQueryParameter("OBCA", m3_OBCA.Value.ToString());
+			if (m3OBCA.HasValue)
+				request.WithQueryParameter("OBCA", m3OBCA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -272,7 +277,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

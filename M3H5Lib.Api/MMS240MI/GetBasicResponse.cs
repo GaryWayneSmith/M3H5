@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset")]
-		public string M3_ASID => GetString("ASID");
+		public string M3ASID => GetString("ASID");
 
 		/// <summary>
 		/// Description: Subnumber
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber")]
-		public int? M3_SBNO => GetNullableInt("SBNO");
+		public int? M3SBNO => GetNullableInt("SBNO");
 
 		/// <summary>
 		/// Description: Buy-back date
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Buy-back date")]
-		public DateTime? M3_ABBD => GetNullableDateTime("ABBD");
+		public DateTime? M3ABBD => GetNullableDateTime("ABBD");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Warranty date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty date")]
-		public DateTime? M3_WADT => GetNullableDateTime("WADT");
+		public DateTime? M3WADT => GetNullableDateTime("WADT");
 
 		/// <summary>
 		/// Description: Warranty agreement
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty agreement")]
-		public string M3_WAGR => GetString("WAGR");
+		public string M3WAGR => GetString("WAGR");
 
 		/// <summary>
 		/// Description: Warranty limit 1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 1")]
-		public decimal? M3_WAL1 => GetNullableDecimal("WAL1");
+		public decimal? M3WAL1 => GetNullableDecimal("WAL1");
 
 		/// <summary>
 		/// Description: Warranty limit 2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 2")]
-		public decimal? M3_WAL2 => GetNullableDecimal("WAL2");
+		public decimal? M3WAL2 => GetNullableDecimal("WAL2");
 
 		/// <summary>
 		/// Description: Warranty limit 3
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 3")]
-		public decimal? M3_WAL3 => GetNullableDecimal("WAL3");
+		public decimal? M3WAL3 => GetNullableDecimal("WAL3");
 
 		/// <summary>
 		/// Description: Warranty limit 4
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 4")]
-		public decimal? M3_WAL4 => GetNullableDecimal("WAL4");
+		public decimal? M3WAL4 => GetNullableDecimal("WAL4");
 
 		/// <summary>
 		/// Description: Next shop action type
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next shop action type")]
-		public string M3_NESA => GetString("NESA");
+		public string M3NESA => GetString("NESA");
 
 		/// <summary>
 		/// Description: Next service
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next service")]
-		public string M3_NSUF => GetString("NSUF");
+		public string M3NSUF => GetString("NSUF");
 
 		/// <summary>
 		/// Description: Maintenance program
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maintenance program")]
-		public string M3_MPGM => GetString("MPGM");
+		public string M3MPGM => GetString("MPGM");
 
 		/// <summary>
 		/// Description: Planner - maintenance
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planner - maintenance")]
-		public string M3_MAPL => GetString("MAPL");
+		public string M3MAPL => GetString("MAPL");
 
 		/// <summary>
 		/// Description: Customer number
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer number")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Forecast logic
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast logic")]
-		public string M3_FCCM => GetString("FCCM");
+		public string M3FCCM => GetString("FCCM");
 
 		/// <summary>
 		/// Description: Purchase price
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price")]
-		public decimal? M3_PUPR => GetNullableDecimal("PUPR");
+		public decimal? M3PUPR => GetNullableDecimal("PUPR");
 
 		/// <summary>
 		/// Description: Currency
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Purchase price date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase price date")]
-		public DateTime? M3_PPDT => GetNullableDateTime("PPDT");
+		public DateTime? M3PPDT => GetNullableDateTime("PPDT");
 
 		/// <summary>
 		/// Description: Origin identity
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin identity")]
-		public long? M3_BIRT => GetNullableLong("BIRT");
+		public long? M3BIRT => GetNullableLong("BIRT");
 
 		/// <summary>
 		/// Description: Date introduced into Movex
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Date introduced into Movex")]
-		public DateTime? M3_BIRS => GetNullableDateTime("BIRS");
+		public DateTime? M3BIRS => GetNullableDateTime("BIRS");
 
 		/// <summary>
 		/// Description: Equipment description
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment description")]
-		public string M3_ALII => GetString("ALII");
+		public string M3ALII => GetString("ALII");
 
 		/// <summary>
 		/// Description: Period frame
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period frame")]
-		public int? M3_DPID => GetNullableInt("DPID");
+		public int? M3DPID => GetNullableInt("DPID");
 
 		/// <summary>
 		/// Description: Continuous net change
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Continuous net change")]
-		public int? M3_CONC => GetNullableInt("CONC");
+		public int? M3CONC => GetNullableInt("CONC");
 
 		/// <summary>
 		/// Description: Planning horizon
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning horizon")]
-		public int? M3_PLMZ => GetNullableInt("PLMZ");
+		public int? M3PLMZ => GetNullableInt("PLMZ");
 
 		/// <summary>
 		/// Description: Percentage of cost price
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Percentage of cost price")]
-		public int? M3_SHRE => GetNullableInt("SHRE");
+		public int? M3SHRE => GetNullableInt("SHRE");
 
 		/// <summary>
 		/// Description: Insurance number
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Insurance number")]
-		public string M3_INSN => GetString("INSN");
+		public string M3INSN => GetString("INSN");
 
 		/// <summary>
 		/// Description: Equipment number
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment number")]
-		public string M3_EQNO => GetString("EQNO");
+		public string M3EQNO => GetString("EQNO");
 
 		/// <summary>
 		/// Description: Field not used
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field not used")]
-		public int? M3_EQNL => GetNullableInt("EQNL");
+		public int? M3EQNL => GetNullableInt("EQNL");
 
 		/// <summary>
 		/// Description: Priority
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PRIP => GetString("PRIP");
+		public string M3PRIP => GetString("PRIP");
 
 		/// <summary>
 		/// Description: Process
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Process")]
-		public string M3_PRSS => GetString("PRSS");
+		public string M3PRSS => GetString("PRSS");
 
 		/// <summary>
 		/// Description: Subprocess
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subprocess")]
-		public string M3_SBPR => GetString("SBPR");
+		public string M3SBPR => GetString("SBPR");
 
 		/// <summary>
 		/// Description: Criticality class
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Criticality class")]
-		public int? M3_AESC => GetNullableInt("AESC");
+		public int? M3AESC => GetNullableInt("AESC");
 
 		/// <summary>
 		/// Description: Target effectivity
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Target effectivity")]
-		public decimal? M3_TEFF => GetNullableDecimal("TEFF");
+		public decimal? M3TEFF => GetNullableDecimal("TEFF");
 
 		/// <summary>
 		/// Description: Downtime cost
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Downtime cost")]
-		public decimal? M3_DWTC => GetNullableDecimal("DWTC");
+		public decimal? M3DWTC => GetNullableDecimal("DWTC");
 
 		/// <summary>
 		/// Description: Commission date
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Commission date")]
-		public DateTime? M3_CMDD => GetNullableDateTime("CMDD");
+		public DateTime? M3CMDD => GetNullableDateTime("CMDD");
 
 		/// <summary>
 		/// Description: Data identity
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Text identity
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Work center
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Year model
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year model")]
-		public string M3_MLYR => GetString("MLYR");
+		public string M3MLYR => GetString("MLYR");
 
 		/// <summary>
 		/// Description: Location description
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location description")]
-		public string M3_AREA => GetString("AREA");
+		public string M3AREA => GetString("AREA");
 
 		/// <summary>
 		/// Description: Location
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_LOCS => GetString("LOCS");
+		public string M3LOCS => GetString("LOCS");
 
 		/// <summary>
 		/// Description: Brand
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Brand")]
-		public string M3_BRAN => GetString("BRAN");
+		public string M3BRAN => GetString("BRAN");
 
 		/// <summary>
 		/// Description: Equipment type
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment type")]
-		public string M3_EQTP => GetString("EQTP");
+		public string M3EQTP => GetString("EQTP");
 
 		/// <summary>
 		/// Description: Equipment group
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment group")]
-		public string M3_EQGR => GetString("EQGR");
+		public string M3EQGR => GetString("EQGR");
 
 		/// <summary>
 		/// Description: Project number
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Equipment group category
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment group category")]
-		public string M3_EQGC => GetString("EQGC");
+		public string M3EQGC => GetString("EQGC");
 
 		/// <summary>
 		/// Description: Installation date
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Installation date")]
-		public DateTime? M3_INDA => GetNullableDateTime("INDA");
+		public DateTime? M3INDA => GetNullableDateTime("INDA");
 
 		/// <summary>
 		/// Description: Asset tag
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Asset tag")]
-		public string M3_RFIA => GetString("RFIA");
+		public string M3RFIA => GetString("RFIA");
 
 		/// <summary>
 		/// Description: Fleet number
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fleet number")]
-		public string M3_FLNO => GetString("FLNO");
+		public string M3FLNO => GetString("FLNO");
 
 		/// <summary>
 		/// Description: Search key equipment
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Search key equipment")]
-		public string M3_SKEY => GetString("SKEY");
+		public string M3SKEY => GetString("SKEY");
 
 		/// <summary>
 		/// Description: Supplier/manufacturer item number
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier/manufacturer item number")]
-		public string M3_MFIT => GetString("MFIT");
+		public string M3MFIT => GetString("MFIT");
 
 		/// <summary>
 		/// Description: Manufacturer serial number
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturer serial number")]
-		public string M3_MFSN => GetString("MFSN");
+		public string M3MFSN => GetString("MFSN");
 
 		/// <summary>
 		/// Description: Minimum accepted contributn margin ratio
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum accepted contributn margin ratio")]
-		public int? M3_LAMA => GetNullableInt("LAMA");
+		public int? M3LAMA => GetNullableInt("LAMA");
 
 		/// <summary>
 		/// Description: Sales model
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales model")]
-		public string M3_ASLM => GetString("ASLM");
+		public string M3ASLM => GetString("ASLM");
 
 		/// <summary>
 		/// Description: Price model
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price model")]
-		public string M3_APRM => GetString("APRM");
+		public string M3APRM => GetString("APRM");
 
 		/// <summary>
 		/// Description: Dealer model
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dealer model")]
-		public string M3_ADLM => GetString("ADLM");
+		public string M3ADLM => GetString("ADLM");
 
 		/// <summary>
 		/// Description: Compatibility code
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Compatibility code")]
-		public string M3_ACMC => GetString("ACMC");
+		public string M3ACMC => GetString("ACMC");
 
 		/// <summary>
 		/// Description: User-defined field 1 - item
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: Cost center
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost center")]
-		public string M3_COCE => GetString("COCE");
+		public string M3COCE => GetString("COCE");
 
 		/// <summary>
 		/// Description: Owner
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Owner")]
-		public string M3_CUOW => GetString("CUOW");
+		public string M3CUOW => GetString("CUOW");
 
 		/// <summary>
 		/// Description: Address number
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address number")]
-		public string M3_ADID => GetString("ADID");
+		public string M3ADID => GetString("ADID");
 
 		/// <summary>
 		/// Description: Invoice date
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice date")]
-		public DateTime? M3_IVDT => GetNullableDateTime("IVDT");
+		public DateTime? M3IVDT => GetNullableDateTime("IVDT");
 
 		/// <summary>
 		/// Description: Extended invoice number
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Extended invoice number")]
-		public string M3_EXIN => GetString("EXIN");
+		public string M3EXIN => GetString("EXIN");
 
 		/// <summary>
 		/// Description: Year
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEA4 => GetNullableInt("YEA4");
+		public int? M3YEA4 => GetNullableInt("YEA4");
 
 		/// <summary>
 		/// Description: Ownership type
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ownership type")]
-		public string M3_OWTP => GetString("OWTP");
+		public string M3OWTP => GetString("OWTP");
 
 		/// <summary>
 		/// Description: Ref field for date
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ref field for date")]
-		public DateTime? M3_RBDT => GetNullableDateTime("RBDT");
+		public DateTime? M3RBDT => GetNullableDateTime("RBDT");
 
 		/// <summary>
 		/// Description: Publish External
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Publish External")]
-		public int? M3_PUEX => GetNullableInt("PUEX");
+		public int? M3PUEX => GetNullableInt("PUEX");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Purchase order line number
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order line number")]
-		public int? M3_PNLI => GetNullableInt("PNLI");
+		public int? M3PNLI => GetNullableInt("PNLI");
 
 		/// <summary>
 		/// Description: Purchase order sub line number
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.MMS240MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order sub line number")]
-		public int? M3_PNLS => GetNullableInt("PNLS");
+		public int? M3PNLS => GetNullableInt("PNLS");
 	}
 }
 // EOF

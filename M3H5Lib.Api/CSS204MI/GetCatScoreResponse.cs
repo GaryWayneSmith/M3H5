@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Serial number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SERN => GetString("SERN");
+		public string M3SERN => GetString("SERN");
 
 		/// <summary>
 		/// Description: Creation date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Creation date")]
-		public DateTime? M3_CRDT => GetNullableDateTime("CRDT");
+		public DateTime? M3CRDT => GetNullableDateTime("CRDT");
 
 		/// <summary>
 		/// Description: Transaction type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction type")]
-		public string M3_RETY => GetString("RETY");
+		public string M3RETY => GetString("RETY");
 
 		/// <summary>
 		/// Description: Inventory dealer c
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory dealer c")]
-		public string M3_IDLR => GetString("IDLR");
+		public string M3IDLR => GetString("IDLR");
 
 		/// <summary>
 		/// Description: Sale type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sale type")]
-		public string M3_ALET => GetString("ALET");
+		public string M3ALET => GetString("ALET");
 
 		/// <summary>
 		/// Description: Owner class
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Owner class")]
-		public string M3_OWCL => GetString("OWCL");
+		public string M3OWCL => GetString("OWCL");
 
 		/// <summary>
 		/// Description: Delivery code
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery code")]
-		public string M3_DECD => GetString("DECD");
+		public string M3DECD => GetString("DECD");
 
 		/// <summary>
 		/// Description: Selling dealer c
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Selling dealer c")]
-		public string M3_SDLR => GetString("SDLR");
+		public string M3SDLR => GetString("SDLR");
 
 		/// <summary>
 		/// Description: Salesperson
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salesperson")]
-		public string M3_SMTX => GetString("SMTX");
+		public string M3SMTX => GetString("SMTX");
 
 		/// <summary>
 		/// Description: Customer
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Name
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUNM => GetString("CUNM");
+		public string M3CUNM => GetString("CUNM");
 
 		/// <summary>
 		/// Description: Address line 1
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 1")]
-		public string M3_ADR1 => GetString("ADR1");
+		public string M3ADR1 => GetString("ADR1");
 
 		/// <summary>
 		/// Description: Address line 2
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 2")]
-		public string M3_ADR2 => GetString("ADR2");
+		public string M3ADR2 => GetString("ADR2");
 
 		/// <summary>
 		/// Description: Address line 3
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address line 3")]
-		public string M3_ADR3 => GetString("ADR3");
+		public string M3ADR3 => GetString("ADR3");
 
 		/// <summary>
 		/// Description: Address
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Address")]
-		public string M3_CITY => GetString("CITY");
+		public string M3CITY => GetString("CITY");
 
 		/// <summary>
 		/// Description: State
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: Country
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Postal code
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Postal code")]
-		public string M3_PONO => GetString("PONO");
+		public string M3PONO => GetString("PONO");
 
 		/// <summary>
 		/// Description: Country name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country name")]
-		public string M3_CNTR => GetString("CNTR");
+		public string M3CNTR => GetString("CNTR");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Sale contact name
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sale contact name")]
-		public string M3_SACT => GetString("SACT");
+		public string M3SACT => GetString("SACT");
 
 		/// <summary>
 		/// Description: Serv contact name
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv contact name")]
-		public string M3_SECT => GetString("SECT");
+		public string M3SECT => GetString("SECT");
 
 		/// <summary>
 		/// Description: Sales date
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales date")]
-		public DateTime? M3_SEDT => GetNullableDateTime("SEDT");
+		public DateTime? M3SEDT => GetNullableDateTime("SEDT");
 
 		/// <summary>
 		/// Description: Rent lease mos
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rent lease mos")]
-		public int? M3_RTMS => GetNullableInt("RTMS");
+		public int? M3RTMS => GetNullableInt("RTMS");
 
 		/// <summary>
 		/// Description: Principle work
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Principle work")]
-		public string M3_PRWO => GetString("PRWO");
+		public string M3PRWO => GetString("PRWO");
 
 		/// <summary>
 		/// Description: Planned delivery date
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned delivery date")]
-		public DateTime? M3_DLDT => GetNullableDateTime("DLDT");
+		public DateTime? M3DLDT => GetNullableDateTime("DLDT");
 
 		/// <summary>
 		/// Description: Cat extra code
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cat extra code")]
-		public string M3_CATX => GetString("CATX");
+		public string M3CATX => GetString("CATX");
 
 		/// <summary>
 		/// Description: Rental income total
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rental income total")]
-		public decimal? M3_RTIN => GetNullableDecimal("RTIN");
+		public decimal? M3RTIN => GetNullableDecimal("RTIN");
 
 		/// <summary>
 		/// Description: Percent of rent applied
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Percent of rent applied")]
-		public int? M3_RTPC => GetNullableInt("RTPC");
+		public int? M3RTPC => GetNullableInt("RTPC");
 
 		/// <summary>
 		/// Description: Sales price
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Sicc code
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sicc code")]
-		public string M3_SICC => GetString("SICC");
+		public string M3SICC => GetString("SICC");
 
 		/// <summary>
 		/// Description: Transaction price
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transaction price")]
-		public decimal? M3_TRPI => GetNullableDecimal("TRPI");
+		public decimal? M3TRPI => GetNullableDecimal("TRPI");
 
 		/// <summary>
 		/// Description: Over allow amount
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Over allow amount")]
-		public decimal? M3_OVAM => GetNullableDecimal("OVAM");
+		public decimal? M3OVAM => GetNullableDecimal("OVAM");
 
 		/// <summary>
 		/// Description: Vin
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Vin")]
-		public string M3_VINT => GetString("VINT");
+		public string M3VINT => GetString("VINT");
 
 		/// <summary>
 		/// Description: Govt file no
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Govt file no")]
-		public string M3_GOVT => GetString("GOVT");
+		public string M3GOVT => GetString("GOVT");
 
 		/// <summary>
 		/// Description: Reinjes 7200 ser no
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reinjes 7200 ser no")]
-		public string M3_REJE => GetString("REJE");
+		public string M3REJE => GetString("REJE");
 
 		/// <summary>
 		/// Description: Trans gen chge
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trans gen chge")]
-		public string M3_TRNG => GetString("TRNG");
+		public string M3TRNG => GetString("TRNG");
 
 		/// <summary>
 		/// Description: Dist channel
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dist channel")]
-		public string M3_DISH => GetString("DISH");
+		public string M3DISH => GetString("DISH");
 
 		/// <summary>
 		/// Description: Sic code
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sic code")]
-		public string M3_FRI1 => GetString("FRI1");
+		public string M3FRI1 => GetString("FRI1");
 
 		/// <summary>
 		/// Description: Application code
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application code")]
-		public string M3_APCO => GetString("APCO");
+		public string M3APCO => GetString("APCO");
 
 		/// <summary>
 		/// Description: To dealer code
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To dealer code")]
-		public string M3_TDLR => GetString("TDLR");
+		public string M3TDLR => GetString("TDLR");
 
 		/// <summary>
 		/// Description: Transmitted dlr cd
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transmitted dlr cd")]
-		public string M3_TRMD => GetString("TRMD");
+		public string M3TRMD => GetString("TRMD");
 
 		/// <summary>
 		/// Description: Fuel code
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fuel code")]
-		public string M3_FUEL => GetString("FUEL");
+		public string M3FUEL => GetString("FUEL");
 
 		/// <summary>
 		/// Description: Sic code
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sic code")]
-		public string M3_CICC => GetString("CICC");
+		public string M3CICC => GetString("CICC");
 
 		/// <summary>
 		/// Description: Submit date
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Submit date")]
-		public DateTime? M3_SBDT => GetNullableDateTime("SBDT");
+		public DateTime? M3SBDT => GetNullableDateTime("SBDT");
 
 		/// <summary>
 		/// Description: Status
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Delivery number
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery number")]
-		public decimal? M3_DLIX => GetNullableDecimal("DLIX");
+		public decimal? M3DLIX => GetNullableDecimal("DLIX");
 
 		/// <summary>
 		/// Description: Order line
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order line")]
-		public int? M3_RIDL => GetNullableInt("RIDL");
+		public int? M3RIDL => GetNullableInt("RIDL");
 
 		/// <summary>
 		/// Description: Order number
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order number")]
-		public string M3_RIDN => GetString("RIDN");
+		public string M3RIDN => GetString("RIDN");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Text identity
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: From dealer
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From dealer")]
-		public string M3_FDLR => GetString("FDLR");
+		public string M3FDLR => GetString("FDLR");
 
 		/// <summary>
 		/// Description: Salt
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Salt")]
-		public string M3_SALZ => GetString("SALZ");
+		public string M3SALZ => GetString("SALZ");
 
 		/// <summary>
 		/// Description: Reference order category
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reference order category")]
-		public int? M3_RORC => GetNullableInt("RORC");
+		public int? M3RORC => GetNullableInt("RORC");
 
 		/// <summary>
 		/// Description: Hertz code
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hertz code")]
-		public string M3_HRTZ => GetString("HRTZ");
+		public string M3HRTZ => GetString("HRTZ");
 
 		/// <summary>
 		/// Description: User field 2
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User field 2")]
-		public string M3_FRI2 => GetString("FRI2");
+		public string M3FRI2 => GetString("FRI2");
 
 		/// <summary>
 		/// Description: Spar  focus code
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Spar  focus code")]
-		public string M3_SPFO => GetString("SPFO");
+		public string M3SPFO => GetString("SPFO");
 
 		/// <summary>
 		/// Description: Comitted Y/N
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Comitted Y/N")]
-		public string M3_COMI => GetString("COMI");
+		public string M3COMI => GetString("COMI");
 
 		/// <summary>
 		/// Description: Entry date
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: County ID
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.CSS204MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MWS072MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description GetSublotTrans
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_CRDT">Creation date (Required)</param>
-		/// <param name="m3_CRTE">Creation time (Required)</param>
-		/// <param name="m3_TMSX">Time suffix (Required)</param>
-		/// <param name="m3_BANO">Lot number (Required)</param>
-		/// <param name="m3_BANS">Sublot ID (Required)</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3CRDT">Creation date (Required)</param>
+		/// <param name="m3CRTE">Creation time (Required)</param>
+		/// <param name="m3TMSX">Time suffix (Required)</param>
+		/// <param name="m3BANO">Lot number (Required)</param>
+		/// <param name="m3BANS">Sublot ID (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetSublotTransResponse></returns>
 		/// <exception cref="M3Exception<GetSublotTransResponse>"></exception>
 		public async Task<M3Response<GetSublotTransResponse>> GetSublotTrans(
-			string m3_WHLO, 
-			string m3_ITNO, 
-			DateTime m3_CRDT, 
-			int m3_CRTE, 
-			int m3_TMSX, 
-			string m3_BANO, 
-			int m3_BANS, 
+			string m3WHLO, 
+			string m3ITNO, 
+			DateTime m3CRDT, 
+			int m3CRTE, 
+			int m3TMSX, 
+			string m3BANO, 
+			int m3BANS, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,22 +74,22 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_BANO))
-				throw new ArgumentNullException("m3_BANO");
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3BANO))
+				throw new ArgumentNullException(nameof(m3BANO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("CRDT", m3_CRDT.ToM3String())
-				.WithQueryParameter("CRTE", m3_CRTE.ToString())
-				.WithQueryParameter("TMSX", m3_TMSX.ToString())
-				.WithQueryParameter("BANO", m3_BANO.Trim())
-				.WithQueryParameter("BANS", m3_BANS.ToString());
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("CRDT", m3CRDT.ToM3String())
+				.WithQueryParameter("CRTE", m3CRTE.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("TMSX", m3TMSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("BANO", m3BANO.Trim())
+				.WithQueryParameter("BANS", m3BANS.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<GetSublotTransResponse>(
@@ -97,7 +99,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -108,13 +111,13 @@ namespace M3H5Lib.Api
 		/// Description LstSelectByItem
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_CRDT">Creation date (Required)</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_CRTE">Creation time</param>
-		/// <param name="m3_TMSX">Time suffix</param>
-		/// <param name="m3_BANS">Sublot ID</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3CRDT">Creation date (Required)</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3CRTE">Creation time</param>
+		/// <param name="m3TMSX">Time suffix</param>
+		/// <param name="m3BANS">Sublot ID</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -123,13 +126,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSelectByItemResponse></returns>
 		/// <exception cref="M3Exception<LstSelectByItemResponse>"></exception>
 		public async Task<M3Response<LstSelectByItemResponse>> LstSelectByItem(
-			string m3_WHLO, 
-			string m3_ITNO, 
-			DateTime m3_CRDT, 
-			string m3_BANO = null, 
-			int? m3_CRTE = null, 
-			int? m3_TMSX = null, 
-			int? m3_BANS = null, 
+			string m3WHLO, 
+			string m3ITNO, 
+			DateTime m3CRDT, 
+			string m3BANO = null, 
+			int? m3CRTE = null, 
+			int? m3TMSX = null, 
+			int? m3BANS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -144,26 +147,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("CRDT", m3_CRDT.ToM3String());
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("CRDT", m3CRDT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (m3_CRTE.HasValue)
-				request.WithQueryParameter("CRTE", m3_CRTE.Value.ToString());
-			if (m3_TMSX.HasValue)
-				request.WithQueryParameter("TMSX", m3_TMSX.Value.ToString());
-			if (m3_BANS.HasValue)
-				request.WithQueryParameter("BANS", m3_BANS.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (m3CRTE.HasValue)
+				request.WithQueryParameter("CRTE", m3CRTE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TMSX.HasValue)
+				request.WithQueryParameter("TMSX", m3TMSX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3BANS.HasValue)
+				request.WithQueryParameter("BANS", m3BANS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstSelectByItemResponse>(
@@ -173,7 +176,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -184,10 +188,10 @@ namespace M3H5Lib.Api
 		/// Description LstSublotTrans
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_BANO">Lot number</param>
-		/// <param name="m3_CAMU">Container</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3BANO">Lot number</param>
+		/// <param name="m3CAMU">Container</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -196,10 +200,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSublotTransResponse></returns>
 		/// <exception cref="M3Exception<LstSublotTransResponse>"></exception>
 		public async Task<M3Response<LstSublotTransResponse>> LstSublotTrans(
-			string m3_WHLO, 
-			string m3_ITNO = null, 
-			string m3_BANO = null, 
-			string m3_CAMU = null, 
+			string m3WHLO, 
+			string m3ITNO = null, 
+			string m3BANO = null, 
+			string m3CAMU = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -214,20 +218,20 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("WHLO", m3_WHLO.Trim());
+				.WithQueryParameter("WHLO", m3WHLO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BANO))
-				request.WithQueryParameter("BANO", m3_BANO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CAMU))
-				request.WithQueryParameter("CAMU", m3_CAMU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BANO))
+				request.WithQueryParameter("BANO", m3BANO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CAMU))
+				request.WithQueryParameter("CAMU", m3CAMU.Trim());
 
 			// Execute the request
 			var result = await Execute<LstSublotTransResponse>(
@@ -237,7 +241,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -248,11 +253,11 @@ namespace M3H5Lib.Api
 		/// Description LstTransByDate
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_WHLO">Warehouse (Required)</param>
-		/// <param name="m3_CRDT">Creation date (Required)</param>
-		/// <param name="m3_CRTE">Creation time</param>
-		/// <param name="m3_ITNO">Item number</param>
-		/// <param name="m3_TTYP">Stock transaction type</param>
+		/// <param name="m3WHLO">Warehouse (Required)</param>
+		/// <param name="m3CRDT">Creation date (Required)</param>
+		/// <param name="m3CRTE">Creation time</param>
+		/// <param name="m3ITNO">Item number</param>
+		/// <param name="m3TTYP">Stock transaction type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -261,11 +266,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTransByDateResponse></returns>
 		/// <exception cref="M3Exception<LstTransByDateResponse>"></exception>
 		public async Task<M3Response<LstTransByDateResponse>> LstTransByDate(
-			string m3_WHLO, 
-			DateTime m3_CRDT, 
-			int? m3_CRTE = null, 
-			string m3_ITNO = null, 
-			int? m3_TTYP = null, 
+			string m3WHLO, 
+			DateTime m3CRDT, 
+			int? m3CRTE = null, 
+			string m3ITNO = null, 
+			int? m3TTYP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -280,21 +285,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_WHLO))
-				throw new ArgumentNullException("m3_WHLO");
+			if (string.IsNullOrWhiteSpace(m3WHLO))
+				throw new ArgumentNullException(nameof(m3WHLO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("WHLO", m3_WHLO.Trim())
-				.WithQueryParameter("CRDT", m3_CRDT.ToM3String());
+				.WithQueryParameter("WHLO", m3WHLO.Trim())
+				.WithQueryParameter("CRDT", m3CRDT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CRTE.HasValue)
-				request.WithQueryParameter("CRTE", m3_CRTE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ITNO))
-				request.WithQueryParameter("ITNO", m3_ITNO.Trim());
-			if (m3_TTYP.HasValue)
-				request.WithQueryParameter("TTYP", m3_TTYP.Value.ToString());
+			if (m3CRTE.HasValue)
+				request.WithQueryParameter("CRTE", m3CRTE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ITNO))
+				request.WithQueryParameter("ITNO", m3ITNO.Trim());
+			if (m3TTYP.HasValue)
+				request.WithQueryParameter("TTYP", m3TTYP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstTransByDateResponse>(
@@ -304,7 +309,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -315,11 +321,11 @@ namespace M3H5Lib.Api
 		/// Description LstTransByRef
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_RIDN">Order number (Required)</param>
-		/// <param name="m3_RIDL">Order line (Required)</param>
-		/// <param name="m3_RIDX">Line suffix</param>
-		/// <param name="m3_RIDI">Delivery number</param>
-		/// <param name="m3_TTYP">Stock transaction type</param>
+		/// <param name="m3RIDN">Order number (Required)</param>
+		/// <param name="m3RIDL">Order line (Required)</param>
+		/// <param name="m3RIDX">Line suffix</param>
+		/// <param name="m3RIDI">Delivery number</param>
+		/// <param name="m3TTYP">Stock transaction type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -328,11 +334,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstTransByRefResponse></returns>
 		/// <exception cref="M3Exception<LstTransByRefResponse>"></exception>
 		public async Task<M3Response<LstTransByRefResponse>> LstTransByRef(
-			string m3_RIDN, 
-			int m3_RIDL, 
-			int? m3_RIDX = null, 
-			decimal? m3_RIDI = null, 
-			int? m3_TTYP = null, 
+			string m3RIDN, 
+			int m3RIDL, 
+			int? m3RIDX = null, 
+			decimal? m3RIDI = null, 
+			int? m3TTYP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -347,21 +353,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_RIDN))
-				throw new ArgumentNullException("m3_RIDN");
+			if (string.IsNullOrWhiteSpace(m3RIDN))
+				throw new ArgumentNullException(nameof(m3RIDN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("RIDN", m3_RIDN.Trim())
-				.WithQueryParameter("RIDL", m3_RIDL.ToString());
+				.WithQueryParameter("RIDN", m3RIDN.Trim())
+				.WithQueryParameter("RIDL", m3RIDL.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_RIDX.HasValue)
-				request.WithQueryParameter("RIDX", m3_RIDX.Value.ToString());
-			if (m3_RIDI.HasValue)
-				request.WithQueryParameter("RIDI", m3_RIDI.Value.ToString());
-			if (m3_TTYP.HasValue)
-				request.WithQueryParameter("TTYP", m3_TTYP.Value.ToString());
+			if (m3RIDX.HasValue)
+				request.WithQueryParameter("RIDX", m3RIDX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RIDI.HasValue)
+				request.WithQueryParameter("RIDI", m3RIDI.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TTYP.HasValue)
+				request.WithQueryParameter("TTYP", m3TTYP.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstTransByRefResponse>(
@@ -371,7 +377,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

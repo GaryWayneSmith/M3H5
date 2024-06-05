@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Year
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year")]
-		public int? M3_YEID => GetNullableInt("YEID");
+		public int? M3YEID => GetNullableInt("YEID");
 
 		/// <summary>
 		/// Description: Work schedule
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule")]
-		public int? M3_WOSC => GetNullableInt("WOSC");
+		public int? M3WOSC => GetNullableInt("WOSC");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Description
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Basic schedule
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic schedule")]
-		public int? M3_BASC => GetNullableInt("BASC");
+		public int? M3BASC => GetNullableInt("BASC");
 
 		/// <summary>
 		/// Description: Basic schedule number
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic schedule number")]
-		public decimal? M3_WOSB => GetNullableDecimal("WOSB");
+		public decimal? M3WOSB => GetNullableDecimal("WOSB");
 
 		/// <summary>
 		/// Description: Interval - number of days
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Interval - number of days")]
-		public int? M3_WPER => GetNullableInt("WPER");
+		public int? M3WPER => GetNullableInt("WPER");
 
 		/// <summary>
 		/// Description: Day number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Day number")]
-		public int? M3_DNBR => GetNullableInt("DNBR");
+		public int? M3DNBR => GetNullableInt("DNBR");
 
 		/// <summary>
 		/// Description: Work hour type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hour type")]
-		public string M3_PTTP => GetString("PTTP");
+		public string M3PTTP => GetString("PTTP");
 
 		/// <summary>
 		/// Description: Part-time percent
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Part-time percent")]
-		public int? M3_PTPR => GetNullableInt("PTPR");
+		public int? M3PTPR => GetNullableInt("PTPR");
 
 		/// <summary>
 		/// Description: Work hours per week
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work hours per week")]
-		public int? M3_WTWK => GetNullableInt("WTWK");
+		public int? M3WTWK => GetNullableInt("WTWK");
 
 		/// <summary>
 		/// Description: Capacity utilization rate
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity utilization rate")]
-		public int? M3_ACTL => GetNullableInt("ACTL");
+		public int? M3ACTL => GetNullableInt("ACTL");
 
 		/// <summary>
 		/// Description: Workday percentage
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Workday percentage")]
-		public int? M3_HDCO => GetNullableInt("HDCO");
+		public int? M3HDCO => GetNullableInt("HDCO");
 
 		/// <summary>
 		/// Description: Change date
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS200MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,10 +37,10 @@ namespace M3H5Lib.Api
 		/// Description Feature Distribution Option Check
 		/// Version Release: 14.1
 		/// </summary>
-		/// <param name="m3_CURV">Distribution template (Required)</param>
-		/// <param name="m3_FTID">Feature (Required)</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_WHLO">Warehouse</param>
+		/// <param name="m3CURV">Distribution template (Required)</param>
+		/// <param name="m3FTID">Feature (Required)</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3WHLO">Warehouse</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,10 +49,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> FeatDistOpChk(
-			string m3_CURV, 
-			string m3_FTID, 
-			string m3_FACI = null, 
-			string m3_WHLO = null, 
+			string m3CURV, 
+			string m3FTID, 
+			string m3FACI = null, 
+			string m3WHLO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -65,21 +67,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CURV))
-				throw new ArgumentNullException("m3_CURV");
-			if (string.IsNullOrWhiteSpace(m3_FTID))
-				throw new ArgumentNullException("m3_FTID");
+			if (string.IsNullOrWhiteSpace(m3CURV))
+				throw new ArgumentNullException(nameof(m3CURV));
+			if (string.IsNullOrWhiteSpace(m3FTID))
+				throw new ArgumentNullException(nameof(m3FTID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CURV", m3_CURV.Trim())
-				.WithQueryParameter("FTID", m3_FTID.Trim());
+				.WithQueryParameter("CURV", m3CURV.Trim())
+				.WithQueryParameter("FTID", m3FTID.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -89,7 +91,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -100,13 +103,13 @@ namespace M3H5Lib.Api
 		/// Description Feature Distribution Option Update
 		/// Version Release: 14.
 		/// </summary>
-		/// <param name="m3_CURV">Distribution template (Required)</param>
-		/// <param name="m3_FTID">Feature (Required)</param>
-		/// <param name="m3_OPTN">Option (Required)</param>
-		/// <param name="m3_FACI">Facility</param>
-		/// <param name="m3_WHLO">Warehouse</param>
-		/// <param name="m3_SHAR">Percentage</param>
-		/// <param name="m3_BQ10">Ref field for base quantity</param>
+		/// <param name="m3CURV">Distribution template (Required)</param>
+		/// <param name="m3FTID">Feature (Required)</param>
+		/// <param name="m3OPTN">Option (Required)</param>
+		/// <param name="m3FACI">Facility</param>
+		/// <param name="m3WHLO">Warehouse</param>
+		/// <param name="m3SHAR">Percentage</param>
+		/// <param name="m3BQ10">Ref field for base quantity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -115,13 +118,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> FeatDistOpUpd(
-			string m3_CURV, 
-			string m3_FTID, 
-			string m3_OPTN, 
-			string m3_FACI = null, 
-			string m3_WHLO = null, 
-			int? m3_SHAR = null, 
-			long? m3_BQ10 = null, 
+			string m3CURV, 
+			string m3FTID, 
+			string m3OPTN, 
+			string m3FACI = null, 
+			string m3WHLO = null, 
+			int? m3SHAR = null, 
+			long? m3BQ10 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -136,28 +139,28 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CURV))
-				throw new ArgumentNullException("m3_CURV");
-			if (string.IsNullOrWhiteSpace(m3_FTID))
-				throw new ArgumentNullException("m3_FTID");
-			if (string.IsNullOrWhiteSpace(m3_OPTN))
-				throw new ArgumentNullException("m3_OPTN");
+			if (string.IsNullOrWhiteSpace(m3CURV))
+				throw new ArgumentNullException(nameof(m3CURV));
+			if (string.IsNullOrWhiteSpace(m3FTID))
+				throw new ArgumentNullException(nameof(m3FTID));
+			if (string.IsNullOrWhiteSpace(m3OPTN))
+				throw new ArgumentNullException(nameof(m3OPTN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CURV", m3_CURV.Trim())
-				.WithQueryParameter("FTID", m3_FTID.Trim())
-				.WithQueryParameter("OPTN", m3_OPTN.Trim());
+				.WithQueryParameter("CURV", m3CURV.Trim())
+				.WithQueryParameter("FTID", m3FTID.Trim())
+				.WithQueryParameter("OPTN", m3OPTN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FACI))
-				request.WithQueryParameter("FACI", m3_FACI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_WHLO))
-				request.WithQueryParameter("WHLO", m3_WHLO.Trim());
-			if (m3_SHAR.HasValue)
-				request.WithQueryParameter("SHAR", m3_SHAR.Value.ToString());
-			if (m3_BQ10.HasValue)
-				request.WithQueryParameter("BQ10", m3_BQ10.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3FACI))
+				request.WithQueryParameter("FACI", m3FACI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3WHLO))
+				request.WithQueryParameter("WHLO", m3WHLO.Trim());
+			if (m3SHAR.HasValue)
+				request.WithQueryParameter("SHAR", m3SHAR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3BQ10.HasValue)
+				request.WithQueryParameter("BQ10", m3BQ10.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -167,7 +170,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

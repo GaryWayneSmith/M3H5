@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Claim number
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim number")]
-		public string M3_CLAN => GetString("CLAN");
+		public string M3CLAN => GetString("CLAN");
 
 		/// <summary>
 		/// Description: Supplier number
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier number")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Lowest claim status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lowest claim status")]
-		public string M3_CLAL => GetString("CLAL");
+		public string M3CLAL => GetString("CLAL");
 
 		/// <summary>
 		/// Description: Highest claim status
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Highest claim status")]
-		public string M3_CLAH => GetString("CLAH");
+		public string M3CLAH => GetString("CLAH");
 
 		/// <summary>
 		/// Description: Return to supplier order type
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return to supplier order type")]
-		public string M3_RTOT => GetString("RTOT");
+		public string M3RTOT => GetString("RTOT");
 
 		/// <summary>
 		/// Description: Return to supplier order category
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Return to supplier order category")]
-		public string M3_RTOC => GetString("RTOC");
+		public string M3RTOC => GetString("RTOC");
 
 		/// <summary>
 		/// Description: Claim officer
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim officer")]
-		public string M3_CLRE => GetString("CLRE");
+		public string M3CLRE => GetString("CLRE");
 
 		/// <summary>
 		/// Description: Claim reference
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim reference")]
-		public string M3_CLRF => GetString("CLRF");
+		public string M3CLRF => GetString("CLRF");
 
 		/// <summary>
 		/// Description: Purchase order number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Claim date
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPS390MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Claim date")]
-		public DateTime? M3_CLAD => GetNullableDateTime("CLAD");
+		public DateTime? M3CLAD => GetNullableDateTime("CLAD");
 	}
 }
 // EOF

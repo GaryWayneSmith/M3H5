@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.EUS001MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,12 +38,12 @@ namespace M3H5Lib.Api
 		/// Description Add
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TOOL">Toolnumber</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TOOT">Tooltype</param>
-		/// <param name="m3_PUPR">Purchaseprice</param>
-		/// <param name="m3_MPDT">Purchase date</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TOOL">Toolnumber</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TOOT">Tooltype</param>
+		/// <param name="m3PUPR">Purchaseprice</param>
+		/// <param name="m3MPDT">Purchase date</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,12 +52,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_DIVI = null, 
-			string m3_TOOL = null, 
-			string m3_TX40 = null, 
-			string m3_TOOT = null, 
-			decimal? m3_PUPR = null, 
-			DateTime? m3_MPDT = null, 
+			string m3DIVI = null, 
+			string m3TOOL = null, 
+			string m3TX40 = null, 
+			string m3TOOT = null, 
+			decimal? m3PUPR = null, 
+			DateTime? m3MPDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -70,18 +72,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOT))
-				request.WithQueryParameter("TOOT", m3_TOOT.Trim());
-			if (m3_PUPR.HasValue)
-				request.WithQueryParameter("PUPR", m3_PUPR.Value.ToString());
-			if (m3_MPDT.HasValue)
-				request.WithQueryParameter("MPDT", m3_MPDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOT))
+				request.WithQueryParameter("TOOT", m3TOOT.Trim());
+			if (m3PUPR.HasValue)
+				request.WithQueryParameter("PUPR", m3PUPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MPDT.HasValue)
+				request.WithQueryParameter("MPDT", m3MPDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -91,7 +93,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -102,12 +105,12 @@ namespace M3H5Lib.Api
 		/// Description Change
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TOOL">Toolnumber</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TOOT">Tooltype</param>
-		/// <param name="m3_PUPR">Purchaseprice</param>
-		/// <param name="m3_MPDT">Purchasedate</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TOOL">Toolnumber</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TOOT">Tooltype</param>
+		/// <param name="m3PUPR">Purchaseprice</param>
+		/// <param name="m3MPDT">Purchasedate</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -116,12 +119,12 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Chg(
-			string m3_DIVI = null, 
-			string m3_TOOL = null, 
-			string m3_TX40 = null, 
-			string m3_TOOT = null, 
-			decimal? m3_PUPR = null, 
-			DateTime? m3_MPDT = null, 
+			string m3DIVI = null, 
+			string m3TOOL = null, 
+			string m3TX40 = null, 
+			string m3TOOT = null, 
+			decimal? m3PUPR = null, 
+			DateTime? m3MPDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -136,18 +139,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOT))
-				request.WithQueryParameter("TOOT", m3_TOOT.Trim());
-			if (m3_PUPR.HasValue)
-				request.WithQueryParameter("PUPR", m3_PUPR.Value.ToString());
-			if (m3_MPDT.HasValue)
-				request.WithQueryParameter("MPDT", m3_MPDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOT))
+				request.WithQueryParameter("TOOT", m3TOOT.Trim());
+			if (m3PUPR.HasValue)
+				request.WithQueryParameter("PUPR", m3PUPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MPDT.HasValue)
+				request.WithQueryParameter("MPDT", m3MPDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -157,7 +160,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -168,10 +172,10 @@ namespace M3H5Lib.Api
 		/// Description Chg
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TOOL">Toolnumber</param>
-		/// <param name="m3_PUPR">Purchaseprice</param>
-		/// <param name="m3_MPDT">Purchasedate</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TOOL">Toolnumber</param>
+		/// <param name="m3PUPR">Purchaseprice</param>
+		/// <param name="m3MPDT">Purchasedate</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -180,10 +184,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgPurPrice(
-			string m3_DIVI = null, 
-			string m3_TOOL = null, 
-			decimal? m3_PUPR = null, 
-			DateTime? m3_MPDT = null, 
+			string m3DIVI = null, 
+			string m3TOOL = null, 
+			decimal? m3PUPR = null, 
+			DateTime? m3MPDT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -198,14 +202,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
-			if (m3_PUPR.HasValue)
-				request.WithQueryParameter("PUPR", m3_PUPR.Value.ToString());
-			if (m3_MPDT.HasValue)
-				request.WithQueryParameter("MPDT", m3_MPDT.Value.ToM3String());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
+			if (m3PUPR.HasValue)
+				request.WithQueryParameter("PUPR", m3PUPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MPDT.HasValue)
+				request.WithQueryParameter("MPDT", m3MPDT.Value.ToM3String());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -215,7 +219,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -226,10 +231,10 @@ namespace M3H5Lib.Api
 		/// Description Copy
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TOOL">Toolnumber</param>
-		/// <param name="m3_TDIV">Division</param>
-		/// <param name="m3_TTOO">Toolnumber</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TOOL">Toolnumber</param>
+		/// <param name="m3TDIV">Division</param>
+		/// <param name="m3TTOO">Toolnumber</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -238,10 +243,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Cpy(
-			string m3_DIVI = null, 
-			string m3_TOOL = null, 
-			string m3_TDIV = null, 
-			string m3_TTOO = null, 
+			string m3DIVI = null, 
+			string m3TOOL = null, 
+			string m3TDIV = null, 
+			string m3TTOO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -256,14 +261,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TDIV))
-				request.WithQueryParameter("TDIV", m3_TDIV.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TTOO))
-				request.WithQueryParameter("TTOO", m3_TTOO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TDIV))
+				request.WithQueryParameter("TDIV", m3TDIV.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TTOO))
+				request.WithQueryParameter("TTOO", m3TTOO.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -273,7 +278,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -284,8 +290,8 @@ namespace M3H5Lib.Api
 		/// Description Del
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TOOL">Toolnumber (Required)</param>
-		/// <param name="m3_DIVI">Division</param>
+		/// <param name="m3TOOL">Toolnumber (Required)</param>
+		/// <param name="m3DIVI">Division</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -294,8 +300,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Del(
-			string m3_TOOL, 
-			string m3_DIVI = null, 
+			string m3TOOL, 
+			string m3DIVI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -310,16 +316,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TOOL))
-				throw new ArgumentNullException("m3_TOOL");
+			if (string.IsNullOrWhiteSpace(m3TOOL))
+				throw new ArgumentNullException(nameof(m3TOOL));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TOOL", m3_TOOL.Trim());
+				.WithQueryParameter("TOOL", m3TOOL.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -329,7 +335,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -340,8 +347,8 @@ namespace M3H5Lib.Api
 		/// Description Retrieves basic data
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TOOL">Toolnumber</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TOOL">Toolnumber</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -350,8 +357,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_DIVI = null, 
-			string m3_TOOL = null, 
+			string m3DIVI = null, 
+			string m3TOOL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -366,10 +373,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -379,7 +386,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -390,7 +398,7 @@ namespace M3H5Lib.Api
 		/// Description Initiation transaction for retrieving a log file as a Blob.
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_TX60">Complete name of log file (Required)</param>
+		/// <param name="m3TX60">Complete name of log file (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -399,7 +407,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> GetLogFile(
-			string m3_TX60, 
+			string m3TX60, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -414,12 +422,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_TX60))
-				throw new ArgumentNullException("m3_TX60");
+			if (string.IsNullOrWhiteSpace(m3TX60))
+				throw new ArgumentNullException(nameof(m3TX60));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("TX60", m3_TX60.Trim());
+				.WithQueryParameter("TX60", m3TX60.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -429,7 +437,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -440,8 +449,8 @@ namespace M3H5Lib.Api
 		/// Description List
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_DIVI">Division</param>
-		/// <param name="m3_TOOL">Toolnumber</param>
+		/// <param name="m3DIVI">Division</param>
+		/// <param name="m3TOOL">Toolnumber</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -450,8 +459,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstByToolNoResponse></returns>
 		/// <exception cref="M3Exception<LstByToolNoResponse>"></exception>
 		public async Task<M3Response<LstByToolNoResponse>> LstByToolNo(
-			string m3_DIVI = null, 
-			string m3_TOOL = null, 
+			string m3DIVI = null, 
+			string m3TOOL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -466,10 +475,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_DIVI))
-				request.WithQueryParameter("DIVI", m3_DIVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOOL))
-				request.WithQueryParameter("TOOL", m3_TOOL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3DIVI))
+				request.WithQueryParameter("DIVI", m3DIVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOOL))
+				request.WithQueryParameter("TOOL", m3TOOL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstByToolNoResponse>(
@@ -479,7 +488,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

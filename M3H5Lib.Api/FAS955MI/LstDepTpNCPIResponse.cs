@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FAS955MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Depreciation type")]
-		public int? M3_DPTP => GetNullableInt("DPTP");
+		public int? M3DPTP => GetNullableInt("DPTP");
 
 		/// <summary>
 		/// Description: Update factor
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FAS955MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update factor")]
-		public int? M3_UPFC => GetNullableInt("UPFC");
+		public int? M3UPFC => GetNullableInt("UPFC");
 
 		/// <summary>
 		/// Description: Adjust cost
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FAS955MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Adjust cost")]
-		public int? M3_ADCS => GetNullableInt("ADCS");
+		public int? M3ADCS => GetNullableInt("ADCS");
 
 		/// <summary>
 		/// Description: Cost adjustment value type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FAS955MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost adjustment value type")]
-		public int? M3_CVTP => GetNullableInt("CVTP");
+		public int? M3CVTP => GetNullableInt("CVTP");
 
 		/// <summary>
 		/// Description: Previous years depreciation
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FAS955MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Previous years depreciation")]
-		public int? M3_PDVT => GetNullableInt("PDVT");
+		public int? M3PDVT => GetNullableInt("PDVT");
 
 		/// <summary>
 		/// Description: Year-to-date depciation value
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.FAS955MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Year-to-date depciation value")]
-		public int? M3_YVTP => GetNullableInt("YVTP");
+		public int? M3YVTP => GetNullableInt("YVTP");
 
 		/// <summary>
 		/// Description: Index table
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.FAS955MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index table")]
-		public string M3_IXTB => GetString("IXTB");
+		public string M3IXTB => GetString("IXTB");
 	}
 }
 // EOF

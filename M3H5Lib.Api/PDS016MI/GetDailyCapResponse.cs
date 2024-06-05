@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Workcenter
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Workcenter")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Entrydate
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entrydate")]
-		public DateTime? M3_DATE => GetNullableDateTime("DATE");
+		public DateTime? M3DATE => GetNullableDateTime("DATE");
 
 		/// <summary>
 		/// Description: Starttime
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Starttime")]
-		public int? M3_STIM => GetNullableInt("STIM");
+		public int? M3STIM => GetNullableInt("STIM");
 
 		/// <summary>
 		/// Description: Shift
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Shift")]
-		public string M3_SHFC => GetString("SHFC");
+		public string M3SHFC => GetString("SHFC");
 
 		/// <summary>
 		/// Description: Endtime
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Endtime")]
-		public int? M3_ETIM => GetNullableInt("ETIM");
+		public int? M3ETIM => GetNullableInt("ETIM");
 
 		/// <summary>
 		/// Description: Utilizationrate
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Utilizationrate")]
-		public int? M3_AVEF => GetNullableInt("AVEF");
+		public int? M3AVEF => GetNullableInt("AVEF");
 
 		/// <summary>
 		/// Description: Nominalnumberofhours
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Nominalnumberofhours")]
-		public int? M3_GHRS => GetNullableInt("GHRS");
+		public int? M3GHRS => GetNullableInt("GHRS");
 
 		/// <summary>
 		/// Description: Capacitytype
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacitytype")]
-		public string M3_PCAP => GetString("PCAP");
+		public string M3PCAP => GetString("PCAP");
 
 		/// <summary>
 		/// Description: Numberofmachines
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numberofmachines")]
-		public int? M3_WCNM => GetNullableInt("WCNM");
+		public int? M3WCNM => GetNullableInt("WCNM");
 
 		/// <summary>
 		/// Description: Capacity
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Capacity")]
-		public decimal? M3_CPTY => GetNullableDecimal("CPTY");
+		public decimal? M3CPTY => GetNullableDecimal("CPTY");
 
 		/// <summary>
 		/// Description: Alternatecapacity
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alternatecapacity")]
-		public decimal? M3_ACAP => GetNullableDecimal("ACAP");
+		public decimal? M3ACAP => GetNullableDecimal("ACAP");
 
 		/// <summary>
 		/// Description: AlternatecapacityU/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PDS016MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("AlternatecapacityU/M")]
-		public string M3_RCUN => GetString("RCUN");
+		public string M3RCUN => GetString("RCUN");
 	}
 }
 // EOF

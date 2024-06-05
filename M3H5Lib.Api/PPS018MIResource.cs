@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.PPS018MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,13 +38,13 @@ namespace M3H5Lib.Api
 		/// Description Add Supplier Capacity
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
-		/// <param name="m3_SCPG">SCP item group (Required)</param>
-		/// <param name="m3_FDAT">From date (Required)</param>
-		/// <param name="m3_TDAT">To date (Required)</param>
-		/// <param name="m3_AGLE">Aggregation level</param>
-		/// <param name="m3_SUCA">Delivery capacity</param>
-		/// <param name="m3_CACH">Consider capacity</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
+		/// <param name="m3SCPG">SCP item group (Required)</param>
+		/// <param name="m3FDAT">From date (Required)</param>
+		/// <param name="m3TDAT">To date (Required)</param>
+		/// <param name="m3AGLE">Aggregation level</param>
+		/// <param name="m3SUCA">Delivery capacity</param>
+		/// <param name="m3CACH">Consider capacity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -51,13 +53,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddSupplierCap(
-			string m3_SUNO, 
-			string m3_SCPG, 
-			DateTime m3_FDAT, 
-			DateTime m3_TDAT, 
-			int? m3_AGLE = null, 
-			decimal? m3_SUCA = null, 
-			int? m3_CACH = null, 
+			string m3SUNO, 
+			string m3SCPG, 
+			DateTime m3FDAT, 
+			DateTime m3TDAT, 
+			int? m3AGLE = null, 
+			decimal? m3SUCA = null, 
+			int? m3CACH = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -72,25 +74,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
-			if (string.IsNullOrWhiteSpace(m3_SCPG))
-				throw new ArgumentNullException("m3_SCPG");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
+			if (string.IsNullOrWhiteSpace(m3SCPG))
+				throw new ArgumentNullException(nameof(m3SCPG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("SCPG", m3_SCPG.Trim())
-				.WithQueryParameter("FDAT", m3_FDAT.ToM3String())
-				.WithQueryParameter("TDAT", m3_TDAT.ToM3String());
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("SCPG", m3SCPG.Trim())
+				.WithQueryParameter("FDAT", m3FDAT.ToM3String())
+				.WithQueryParameter("TDAT", m3TDAT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_AGLE.HasValue)
-				request.WithQueryParameter("AGLE", m3_AGLE.Value.ToString());
-			if (m3_SUCA.HasValue)
-				request.WithQueryParameter("SUCA", m3_SUCA.Value.ToString());
-			if (m3_CACH.HasValue)
-				request.WithQueryParameter("CACH", m3_CACH.Value.ToString());
+			if (m3AGLE.HasValue)
+				request.WithQueryParameter("AGLE", m3AGLE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SUCA.HasValue)
+				request.WithQueryParameter("SUCA", m3SUCA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CACH.HasValue)
+				request.WithQueryParameter("CACH", m3CACH.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -100,7 +102,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -111,9 +114,9 @@ namespace M3H5Lib.Api
 		/// Description Transfer Supplier Capacity
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier number (Required)</param>
-		/// <param name="m3_AGLE">Aggregation level</param>
-		/// <param name="m3_SCPG">SCP item group</param>
+		/// <param name="m3SUNO">Supplier number (Required)</param>
+		/// <param name="m3AGLE">Aggregation level</param>
+		/// <param name="m3SCPG">SCP item group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -122,9 +125,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SupplierCapResponse></returns>
 		/// <exception cref="M3Exception<SupplierCapResponse>"></exception>
 		public async Task<M3Response<SupplierCapResponse>> SupplierCap(
-			string m3_SUNO, 
-			int? m3_AGLE = null, 
-			string m3_SCPG = null, 
+			string m3SUNO, 
+			int? m3AGLE = null, 
+			string m3SCPG = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -139,18 +142,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim());
+				.WithQueryParameter("SUNO", m3SUNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_AGLE.HasValue)
-				request.WithQueryParameter("AGLE", m3_AGLE.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_SCPG))
-				request.WithQueryParameter("SCPG", m3_SCPG.Trim());
+			if (m3AGLE.HasValue)
+				request.WithQueryParameter("AGLE", m3AGLE.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3SCPG))
+				request.WithQueryParameter("SCPG", m3SCPG.Trim());
 
 			// Execute the request
 			var result = await Execute<SupplierCapResponse>(
@@ -160,7 +163,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -171,13 +175,13 @@ namespace M3H5Lib.Api
 		/// Description Updates Supplier Capacity
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_SUNO">Supplier (Required)</param>
-		/// <param name="m3_SCPG">SCP item group (Required)</param>
-		/// <param name="m3_FDAT">From date (Required)</param>
-		/// <param name="m3_AGLE">Aggregation level</param>
-		/// <param name="m3_TDAT">To date</param>
-		/// <param name="m3_SUCA">Delivery capacity</param>
-		/// <param name="m3_CACH">Consider capacity</param>
+		/// <param name="m3SUNO">Supplier (Required)</param>
+		/// <param name="m3SCPG">SCP item group (Required)</param>
+		/// <param name="m3FDAT">From date (Required)</param>
+		/// <param name="m3AGLE">Aggregation level</param>
+		/// <param name="m3TDAT">To date</param>
+		/// <param name="m3SUCA">Delivery capacity</param>
+		/// <param name="m3CACH">Consider capacity</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -186,13 +190,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdSupplierCap(
-			string m3_SUNO, 
-			string m3_SCPG, 
-			DateTime m3_FDAT, 
-			int? m3_AGLE = null, 
-			DateTime? m3_TDAT = null, 
-			decimal? m3_SUCA = null, 
-			int? m3_CACH = null, 
+			string m3SUNO, 
+			string m3SCPG, 
+			DateTime m3FDAT, 
+			int? m3AGLE = null, 
+			DateTime? m3TDAT = null, 
+			decimal? m3SUCA = null, 
+			int? m3CACH = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -207,26 +211,26 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_SUNO))
-				throw new ArgumentNullException("m3_SUNO");
-			if (string.IsNullOrWhiteSpace(m3_SCPG))
-				throw new ArgumentNullException("m3_SCPG");
+			if (string.IsNullOrWhiteSpace(m3SUNO))
+				throw new ArgumentNullException(nameof(m3SUNO));
+			if (string.IsNullOrWhiteSpace(m3SCPG))
+				throw new ArgumentNullException(nameof(m3SCPG));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("SUNO", m3_SUNO.Trim())
-				.WithQueryParameter("SCPG", m3_SCPG.Trim())
-				.WithQueryParameter("FDAT", m3_FDAT.ToM3String());
+				.WithQueryParameter("SUNO", m3SUNO.Trim())
+				.WithQueryParameter("SCPG", m3SCPG.Trim())
+				.WithQueryParameter("FDAT", m3FDAT.ToM3String());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_AGLE.HasValue)
-				request.WithQueryParameter("AGLE", m3_AGLE.Value.ToString());
-			if (m3_TDAT.HasValue)
-				request.WithQueryParameter("TDAT", m3_TDAT.Value.ToM3String());
-			if (m3_SUCA.HasValue)
-				request.WithQueryParameter("SUCA", m3_SUCA.Value.ToString());
-			if (m3_CACH.HasValue)
-				request.WithQueryParameter("CACH", m3_CACH.Value.ToString());
+			if (m3AGLE.HasValue)
+				request.WithQueryParameter("AGLE", m3AGLE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3TDAT.HasValue)
+				request.WithQueryParameter("TDAT", m3TDAT.Value.ToM3String());
+			if (m3SUCA.HasValue)
+				request.WithQueryParameter("SUCA", m3SUCA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CACH.HasValue)
+				request.WithQueryParameter("CACH", m3CACH.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -236,7 +240,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

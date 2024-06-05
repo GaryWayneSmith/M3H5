@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,13 +37,13 @@ namespace M3H5Lib.Api
 		/// Description Update of Node Coordinates
 		/// Version Release: 12.1
 		/// </summary>
-		/// <param name="m3_DIVI">Division (Required)</param>
-		/// <param name="m3_NDID">Node ID (Required)</param>
-		/// <param name="m3_GEOX">Geo Code X (Required)</param>
-		/// <param name="m3_GEOY">Geo Code Y (Required)</param>
-		/// <param name="m3_CONO">Company</param>
-		/// <param name="m3_VCOX">Virtual Code X</param>
-		/// <param name="m3_VCOY">Virtual Code Y</param>
+		/// <param name="m3DIVI">Division (Required)</param>
+		/// <param name="m3NDID">Node ID (Required)</param>
+		/// <param name="m3GEOX">Geo Code X (Required)</param>
+		/// <param name="m3GEOY">Geo Code Y (Required)</param>
+		/// <param name="m3CONO">Company</param>
+		/// <param name="m3VCOX">Virtual Code X</param>
+		/// <param name="m3VCOY">Virtual Code Y</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -50,13 +52,13 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> SndCoordinates(
-			string m3_DIVI, 
-			string m3_NDID, 
-			decimal m3_GEOX, 
-			decimal m3_GEOY, 
-			int? m3_CONO = null, 
-			decimal? m3_VCOX = null, 
-			decimal? m3_VCOY = null, 
+			string m3DIVI, 
+			string m3NDID, 
+			decimal m3GEOX, 
+			decimal m3GEOY, 
+			int? m3CONO = null, 
+			decimal? m3VCOX = null, 
+			decimal? m3VCOY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -71,25 +73,25 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_DIVI))
-				throw new ArgumentNullException("m3_DIVI");
-			if (string.IsNullOrWhiteSpace(m3_NDID))
-				throw new ArgumentNullException("m3_NDID");
+			if (string.IsNullOrWhiteSpace(m3DIVI))
+				throw new ArgumentNullException(nameof(m3DIVI));
+			if (string.IsNullOrWhiteSpace(m3NDID))
+				throw new ArgumentNullException(nameof(m3NDID));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("DIVI", m3_DIVI.Trim())
-				.WithQueryParameter("NDID", m3_NDID.Trim())
-				.WithQueryParameter("GEOX", m3_GEOX.ToString())
-				.WithQueryParameter("GEOY", m3_GEOY.ToString());
+				.WithQueryParameter("DIVI", m3DIVI.Trim())
+				.WithQueryParameter("NDID", m3NDID.Trim())
+				.WithQueryParameter("GEOX", m3GEOX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("GEOY", m3GEOY.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (m3_VCOX.HasValue)
-				request.WithQueryParameter("VCOX", m3_VCOX.Value.ToString());
-			if (m3_VCOY.HasValue)
-				request.WithQueryParameter("VCOY", m3_VCOY.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VCOX.HasValue)
+				request.WithQueryParameter("VCOX", m3VCOX.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3VCOY.HasValue)
+				request.WithQueryParameter("VCOY", m3VCOY.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -99,7 +101,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset")]
-		public string M3_ASID => GetString("ASID");
+		public string M3ASID => GetString("ASID");
 
 		/// <summary>
 		/// Description: Subnumber
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Subnumber")]
-		public int? M3_SBNO => GetNullableInt("SBNO");
+		public int? M3SBNO => GetNullableInt("SBNO");
 
 		/// <summary>
 		/// Description: Status - fixed asset
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status - fixed asset")]
-		public int? M3_FAST => GetNullableInt("FAST");
+		public int? M3FAST => GetNullableInt("FAST");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_FADS => GetString("FADS");
+		public string M3FADS => GetString("FADS");
 
 		/// <summary>
 		/// Description: Text line 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 1")]
-		public string M3_TXT1 => GetString("TXT1");
+		public string M3TXT1 => GetString("TXT1");
 
 		/// <summary>
 		/// Description: Text line 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text line 2")]
-		public string M3_TXT2 => GetString("TXT2");
+		public string M3TXT2 => GetString("TXT2");
 
 		/// <summary>
 		/// Description: Fixed asset type
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset type")]
-		public string M3_FATP => GetString("FATP");
+		public string M3FATP => GetString("FATP");
 
 		/// <summary>
 		/// Description: Fixed asset group
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fixed asset group")]
-		public string M3_ACAT => GetString("ACAT");
+		public string M3ACAT => GetString("ACAT");
 
 		/// <summary>
 		/// Description: Location type 1
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location type 1")]
-		public string M3_LOC1 => GetString("LOC1");
+		public string M3LOC1 => GetString("LOC1");
 
 		/// <summary>
 		/// Description: Location type 2
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location type 2")]
-		public string M3_LOC2 => GetString("LOC2");
+		public string M3LOC2 => GetString("LOC2");
 
 		/// <summary>
 		/// Description: Location type 3
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location type 3")]
-		public string M3_LOC3 => GetString("LOC3");
+		public string M3LOC3 => GetString("LOC3");
 
 		/// <summary>
 		/// Description: Serial number
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number")]
-		public string M3_SRNO => GetString("SRNO");
+		public string M3SRNO => GetString("SRNO");
 
 		/// <summary>
 		/// Description: GUI picture
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("GUI picture")]
-		public string M3_PINO => GetString("PINO");
+		public string M3PINO => GetString("PINO");
 
 		/// <summary>
 		/// Description: Warranty date
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty date")]
-		public DateTime? M3_WADT => GetNullableDateTime("WADT");
+		public DateTime? M3WADT => GetNullableDateTime("WADT");
 
 		/// <summary>
 		/// Description: Service agreement
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service agreement")]
-		public string M3_SECN => GetString("SECN");
+		public string M3SECN => GetString("SECN");
 
 		/// <summary>
 		/// Description: Service company
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service company")]
-		public string M3_SECS => GetString("SECS");
+		public string M3SECS => GetString("SECS");
 
 		/// <summary>
 		/// Description: Leasing agreement
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Leasing agreement")]
-		public string M3_LCNO => GetString("LCNO");
+		public string M3LCNO => GetString("LCNO");
 
 		/// <summary>
 		/// Description: Leasing company
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Leasing company")]
-		public string M3_LCCO => GetString("LCCO");
+		public string M3LCCO => GetString("LCCO");
 
 		/// <summary>
 		/// Description: Manufacturing date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manufacturing date")]
-		public DateTime? M3_MPER => GetNullableDateTime("MPER");
+		public DateTime? M3MPER => GetNullableDateTime("MPER");
 
 		/// <summary>
 		/// Description: Activation date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Activation date")]
-		public DateTime? M3_APER => GetNullableDateTime("APER");
+		public DateTime? M3APER => GetNullableDateTime("APER");
 
 		/// <summary>
 		/// Description: Building permit date
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Building permit date")]
-		public DateTime? M3_BPER => GetNullableDateTime("BPER");
+		public DateTime? M3BPER => GetNullableDateTime("BPER");
 
 		/// <summary>
 		/// Description: Payee
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payee")]
-		public string M3_SPYN => GetString("SPYN");
+		public string M3SPYN => GetString("SPYN");
 
 		/// <summary>
 		/// Description: Voucher number series
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number series")]
-		public string M3_VSER => GetString("VSER");
+		public string M3VSER => GetString("VSER");
 
 		/// <summary>
 		/// Description: Voucher number
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Voucher number")]
-		public int? M3_VONO => GetNullableInt("VONO");
+		public int? M3VONO => GetNullableInt("VONO");
 
 		/// <summary>
 		/// Description: Currency
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Acquisition date
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Acquisition date")]
-		public DateTime? M3_PPER => GetNullableDateTime("PPER");
+		public DateTime? M3PPER => GetNullableDateTime("PPER");
 
 		/// <summary>
 		/// Description: Cost of capital method
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost of capital method")]
-		public string M3_CCCO => GetString("CCCO");
+		public string M3CCCO => GetString("CCCO");
 
 		/// <summary>
 		/// Description: Accounting dimension 2
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 2")]
-		public string M3_AIT2 => GetString("AIT2");
+		public string M3AIT2 => GetString("AIT2");
 
 		/// <summary>
 		/// Description: Accounting dimension 3
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 3")]
-		public string M3_AIT3 => GetString("AIT3");
+		public string M3AIT3 => GetString("AIT3");
 
 		/// <summary>
 		/// Description: Accounting dimension 4
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 4")]
-		public string M3_AIT4 => GetString("AIT4");
+		public string M3AIT4 => GetString("AIT4");
 
 		/// <summary>
 		/// Description: Accounting dimension 5
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 5")]
-		public string M3_AIT5 => GetString("AIT5");
+		public string M3AIT5 => GetString("AIT5");
 
 		/// <summary>
 		/// Description: Accounting dimension 6
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 6")]
-		public string M3_AIT6 => GetString("AIT6");
+		public string M3AIT6 => GetString("AIT6");
 
 		/// <summary>
 		/// Description: Accounting dimension 7
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 7")]
-		public string M3_AIT7 => GetString("AIT7");
+		public string M3AIT7 => GetString("AIT7");
 
 		/// <summary>
 		/// Description: Planning area
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning area")]
-		public string M3_REAR => GetString("REAR");
+		public string M3REAR => GetString("REAR");
 
 		/// <summary>
 		/// Description: Last physical inventory date
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last physical inventory date")]
-		public DateTime? M3_PCDA => GetNullableDateTime("PCDA");
+		public DateTime? M3PCDA => GetNullableDateTime("PCDA");
 
 		/// <summary>
 		/// Description: Physical inventory number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory number")]
-		public long? M3_PHCN => GetNullableLong("PHCN");
+		public long? M3PHCN => GetNullableLong("PHCN");
 
 		/// <summary>
 		/// Description: Physical inventory run number
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory run number")]
-		public int? M3_PHSN => GetNullableInt("PHSN");
+		public int? M3PHSN => GetNullableInt("PHSN");
 
 		/// <summary>
 		/// Description: Physical inventory text
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory text")]
-		public string M3_PHCT => GetString("PHCT");
+		public string M3PHCT => GetString("PHCT");
 
 		/// <summary>
 		/// Description: Physical inventory code
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Physical inventory code")]
-		public int? M3_PHCD => GetNullableInt("PHCD");
+		public int? M3PHCD => GetNullableInt("PHCD");
 
 		/// <summary>
 		/// Description: Sales date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales date")]
-		public DateTime? M3_SPER => GetNullableDateTime("SPER");
+		public DateTime? M3SPER => GetNullableDateTime("SPER");
 
 		/// <summary>
 		/// Description: Payer
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Invoice number
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice number")]
-		public string M3_CINO => GetString("CINO");
+		public string M3CINO => GetString("CINO");
 
 		/// <summary>
 		/// Description: Currency
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_SCUC => GetString("SCUC");
+		public string M3SCUC => GetString("SCUC");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_SRAT => GetNullableDecimal("SRAT");
+		public decimal? M3SRAT => GetNullableDecimal("SRAT");
 
 		/// <summary>
 		/// Description: Individual item number
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item number")]
-		public string M3_INNO => GetString("INNO");
+		public string M3INNO => GetString("INNO");
 
 		/// <summary>
 		/// Description: User-defined field 1 - fixed asset
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - fixed asset")]
-		public string M3_FRF1 => GetString("FRF1");
+		public string M3FRF1 => GetString("FRF1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - fixed asset
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - fixed asset")]
-		public string M3_FRF2 => GetString("FRF2");
+		public string M3FRF2 => GetString("FRF2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - fixed asset
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - fixed asset")]
-		public string M3_FRF3 => GetString("FRF3");
+		public string M3FRF3 => GetString("FRF3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - fixed asset
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - fixed asset")]
-		public string M3_FRF4 => GetString("FRF4");
+		public string M3FRF4 => GetString("FRF4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - fixed asset
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - fixed asset")]
-		public string M3_FRF5 => GetString("FRF5");
+		public string M3FRF5 => GetString("FRF5");
 
 		/// <summary>
 		/// Description: Quantity  - fixed asset
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity  - fixed asset")]
-		public decimal? M3_FAQT => GetNullableDecimal("FAQT");
+		public decimal? M3FAQT => GetNullableDecimal("FAQT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Entry date
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry date")]
-		public DateTime? M3_RGDT => GetNullableDateTime("RGDT");
+		public DateTime? M3RGDT => GetNullableDateTime("RGDT");
 
 		/// <summary>
 		/// Description: Entry time
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Entry time")]
-		public int? M3_RGTM => GetNullableInt("RGTM");
+		public int? M3RGTM => GetNullableInt("RGTM");
 
 		/// <summary>
 		/// Description: Change date
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Change number
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change number")]
-		public int? M3_CHNO => GetNullableInt("CHNO");
+		public int? M3CHNO => GetNullableInt("CHNO");
 
 		/// <summary>
 		/// Description: Changed by
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Changed by")]
-		public string M3_CHID => GetString("CHID");
+		public string M3CHID => GetString("CHID");
 
 		/// <summary>
 		/// Description: Last revaluation date
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last revaluation date")]
-		public DateTime? M3_LRVD => GetNullableDateTime("LRVD");
+		public DateTime? M3LRVD => GetNullableDateTime("LRVD");
 
 		/// <summary>
 		/// Description: Origin identity
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Origin identity")]
-		public long? M3_BIRT => GetNullableLong("BIRT");
+		public long? M3BIRT => GetNullableLong("BIRT");
 
 		/// <summary>
 		/// Description: Receipt date
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Receipt date")]
-		public DateTime? M3_REDA => GetNullableDateTime("REDA");
+		public DateTime? M3REDA => GetNullableDateTime("REDA");
 
 		/// <summary>
 		/// Description: Item number
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Lot number
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Lot number")]
-		public string M3_BANO => GetString("BANO");
+		public string M3BANO => GetString("BANO");
 
 		/// <summary>
 		/// Description: Equipment group
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Equipment group")]
-		public string M3_EQGR => GetString("EQGR");
+		public string M3EQGR => GetString("EQGR");
 
 		/// <summary>
 		/// Description: Geographic cod X
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod X")]
-		public decimal? M3_GEOX => GetNullableDecimal("GEOX");
+		public decimal? M3GEOX => GetNullableDecimal("GEOX");
 
 		/// <summary>
 		/// Description: Geographic code Y
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic code Y")]
-		public decimal? M3_GEOY => GetNullableDecimal("GEOY");
+		public decimal? M3GEOY => GetNullableDecimal("GEOY");
 
 		/// <summary>
 		/// Description: Geographic cod  Z
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Geographic cod  Z")]
-		public decimal? M3_GEOZ => GetNullableDecimal("GEOZ");
+		public decimal? M3GEOZ => GetNullableDecimal("GEOZ");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: Fleet number
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Fleet number")]
-		public string M3_FLNO => GetString("FLNO");
+		public string M3FLNO => GetString("FLNO");
 
 		/// <summary>
 		/// Description: Tax asset group
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Tax asset group")]
-		public string M3_TAGP => GetString("TAGP");
+		public string M3TAGP => GetString("TAGP");
 
 		/// <summary>
 		/// Description: Like kind status
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Like kind status")]
-		public int? M3_LKST => GetNullableInt("LKST");
+		public int? M3LKST => GetNullableInt("LKST");
 
 		/// <summary>
 		/// Description: Like kind equipment
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Like kind equipment")]
-		public long? M3_LKEQ => GetNullableLong("LKEQ");
+		public long? M3LKEQ => GetNullableLong("LKEQ");
 
 		/// <summary>
 		/// Description: Responsible
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.FAS001MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 	}
 }
 // EOF

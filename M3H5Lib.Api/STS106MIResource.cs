@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Extensions;
 using M3H5Lib.Models;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -35,17 +37,17 @@ namespace M3H5Lib.Api
 		/// Description AddCalcRPO
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Order line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
-		/// <param name="m3_NOPR">Number of periods (Required)</param>
-		/// <param name="m3_INTT">Interest type (Required)</param>
-		/// <param name="m3_REPE">Residual percent (Required)</param>
-		/// <param name="m3_INPE">Interest rate</param>
-		/// <param name="m3_RESV">Residual value</param>
-		/// <param name="m3_SAPR">Sales price</param>
-		/// <param name="m3_RECH">Rental charges</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Order line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
+		/// <param name="m3NOPR">Number of periods (Required)</param>
+		/// <param name="m3INTT">Interest type (Required)</param>
+		/// <param name="m3REPE">Residual percent (Required)</param>
+		/// <param name="m3INPE">Interest rate</param>
+		/// <param name="m3RESV">Residual value</param>
+		/// <param name="m3SAPR">Sales price</param>
+		/// <param name="m3RECH">Rental charges</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -54,17 +56,17 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCalcRPO(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
-			int m3_NOPR, 
-			string m3_INTT, 
-			int m3_REPE, 
-			decimal? m3_INPE = null, 
-			decimal? m3_RESV = null, 
-			decimal? m3_SAPR = null, 
-			decimal? m3_RECH = null, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
+			int m3NOPR, 
+			string m3INTT, 
+			int m3REPE, 
+			decimal? m3INPE = null, 
+			decimal? m3RESV = null, 
+			decimal? m3SAPR = null, 
+			decimal? m3RECH = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -79,30 +81,30 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
-			if (string.IsNullOrWhiteSpace(m3_INTT))
-				throw new ArgumentNullException("m3_INTT");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
+			if (string.IsNullOrWhiteSpace(m3INTT))
+				throw new ArgumentNullException(nameof(m3INTT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString())
-				.WithQueryParameter("NOPR", m3_NOPR.ToString())
-				.WithQueryParameter("INTT", m3_INTT.Trim())
-				.WithQueryParameter("REPE", m3_REPE.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("NOPR", m3NOPR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("INTT", m3INTT.Trim())
+				.WithQueryParameter("REPE", m3REPE.ToString(CultureInfo.CurrentCulture));
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_INPE.HasValue)
-				request.WithQueryParameter("INPE", m3_INPE.Value.ToString());
-			if (m3_RESV.HasValue)
-				request.WithQueryParameter("RESV", m3_RESV.Value.ToString());
-			if (m3_SAPR.HasValue)
-				request.WithQueryParameter("SAPR", m3_SAPR.Value.ToString());
-			if (m3_RECH.HasValue)
-				request.WithQueryParameter("RECH", m3_RECH.Value.ToString());
+			if (m3INPE.HasValue)
+				request.WithQueryParameter("INPE", m3INPE.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RESV.HasValue)
+				request.WithQueryParameter("RESV", m3RESV.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3SAPR.HasValue)
+				request.WithQueryParameter("SAPR", m3SAPR.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3RECH.HasValue)
+				request.WithQueryParameter("RECH", m3RECH.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -112,7 +114,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -123,10 +126,10 @@ namespace M3H5Lib.Api
 		/// Description DelRPO
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_AGNB">Agreement number (Required)</param>
-		/// <param name="m3_VERS">Version (Required)</param>
-		/// <param name="m3_PONR">Order line number (Required)</param>
-		/// <param name="m3_POSX">Line suffix (Required)</param>
+		/// <param name="m3AGNB">Agreement number (Required)</param>
+		/// <param name="m3VERS">Version (Required)</param>
+		/// <param name="m3PONR">Order line number (Required)</param>
+		/// <param name="m3POSX">Line suffix (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -135,10 +138,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelRPO(
-			string m3_AGNB, 
-			int m3_VERS, 
-			int m3_PONR, 
-			int m3_POSX, 
+			string m3AGNB, 
+			int m3VERS, 
+			int m3PONR, 
+			int m3POSX, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -153,15 +156,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_AGNB))
-				throw new ArgumentNullException("m3_AGNB");
+			if (string.IsNullOrWhiteSpace(m3AGNB))
+				throw new ArgumentNullException(nameof(m3AGNB));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("AGNB", m3_AGNB.Trim())
-				.WithQueryParameter("VERS", m3_VERS.ToString())
-				.WithQueryParameter("PONR", m3_PONR.ToString())
-				.WithQueryParameter("POSX", m3_POSX.ToString());
+				.WithQueryParameter("AGNB", m3AGNB.Trim())
+				.WithQueryParameter("VERS", m3VERS.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("PONR", m3PONR.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("POSX", m3POSX.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -171,7 +174,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

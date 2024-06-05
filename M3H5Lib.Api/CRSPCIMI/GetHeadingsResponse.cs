@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_HE01 => GetString("HE01");
+		public string M3HE01 => GetString("HE01");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_HE02 => GetString("HE02");
+		public string M3HE02 => GetString("HE02");
 
 		/// <summary>
 		/// Description: Description
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_HE03 => GetString("HE03");
+		public string M3HE03 => GetString("HE03");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_HE04 => GetString("HE04");
+		public string M3HE04 => GetString("HE04");
 
 		/// <summary>
 		/// Description: Text
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE05 => GetString("HE05");
+		public string M3HE05 => GetString("HE05");
 
 		/// <summary>
 		/// Description: Text
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE06 => GetString("HE06");
+		public string M3HE06 => GetString("HE06");
 
 		/// <summary>
 		/// Description: Text
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE07 => GetString("HE07");
+		public string M3HE07 => GetString("HE07");
 
 		/// <summary>
 		/// Description: Text
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE08 => GetString("HE08");
+		public string M3HE08 => GetString("HE08");
 
 		/// <summary>
 		/// Description: Text
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE09 => GetString("HE09");
+		public string M3HE09 => GetString("HE09");
 
 		/// <summary>
 		/// Description: Description
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_HE10 => GetString("HE10");
+		public string M3HE10 => GetString("HE10");
 
 		/// <summary>
 		/// Description: Description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_MS01 => GetString("MS01");
+		public string M3MS01 => GetString("MS01");
 
 		/// <summary>
 		/// Description: Description
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_MS02 => GetString("MS02");
+		public string M3MS02 => GetString("MS02");
 
 		/// <summary>
 		/// Description: Description
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_MS03 => GetString("MS03");
+		public string M3MS03 => GetString("MS03");
 
 		/// <summary>
 		/// Description: Text
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE11 => GetString("HE11");
+		public string M3HE11 => GetString("HE11");
 
 		/// <summary>
 		/// Description: Text
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE12 => GetString("HE12");
+		public string M3HE12 => GetString("HE12");
 
 		/// <summary>
 		/// Description: Text
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE13 => GetString("HE13");
+		public string M3HE13 => GetString("HE13");
 
 		/// <summary>
 		/// Description: Text
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_HE14 => GetString("HE14");
+		public string M3HE14 => GetString("HE14");
 
 		/// <summary>
 		/// Description: Name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_HE15 => GetString("HE15");
+		public string M3HE15 => GetString("HE15");
 
 		/// <summary>
 		/// Description: Name
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_HE16 => GetString("HE16");
+		public string M3HE16 => GetString("HE16");
 
 		/// <summary>
 		/// Description: Name
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_HE17 => GetString("HE17");
+		public string M3HE17 => GetString("HE17");
 
 		/// <summary>
 		/// Description: Name
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_HE18 => GetString("HE18");
+		public string M3HE18 => GetString("HE18");
 
 		/// <summary>
 		/// Description: Name
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_HE19 => GetString("HE19");
+		public string M3HE19 => GetString("HE19");
 
 		/// <summary>
 		/// Description: Name
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_HE20 => GetString("HE20");
+		public string M3HE20 => GetString("HE20");
 
 		/// <summary>
 		/// Description: Text
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_MS04 => GetString("MS04");
+		public string M3MS04 => GetString("MS04");
 
 		/// <summary>
 		/// Description: Name
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITN1 => GetString("ITN1");
+		public string M3ITN1 => GetString("ITN1");
 
 		/// <summary>
 		/// Description: Name
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITD1 => GetString("ITD1");
+		public string M3ITD1 => GetString("ITD1");
 
 		/// <summary>
 		/// Description: Name
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_FUD1 => GetString("FUD1");
+		public string M3FUD1 => GetString("FUD1");
 
 		/// <summary>
 		/// Description: Name
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_CUC1 => GetString("CUC1");
+		public string M3CUC1 => GetString("CUC1");
 
 		/// <summary>
 		/// Description: Name
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_PRD1 => GetString("PRD1");
+		public string M3PRD1 => GetString("PRD1");
 
 		/// <summary>
 		/// Description: Name
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_SAP1 => GetString("SAP1");
+		public string M3SAP1 => GetString("SAP1");
 
 		/// <summary>
 		/// Description: Name
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_LOS1 => GetString("LOS1");
+		public string M3LOS1 => GetString("LOS1");
 
 		/// <summary>
 		/// Description: Name
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ANU1 => GetString("ANU1");
+		public string M3ANU1 => GetString("ANU1");
 
 		/// <summary>
 		/// Description: Name
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ANU2 => GetString("ANU2");
+		public string M3ANU2 => GetString("ANU2");
 
 		/// <summary>
 		/// Description: Name
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TGN1 => GetString("TGN1");
+		public string M3TGN1 => GetString("TGN1");
 
 		/// <summary>
 		/// Description: Name
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_NRM1 => GetString("NRM1");
+		public string M3NRM1 => GetString("NRM1");
 
 		/// <summary>
 		/// Description: Name
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_DCC1 => GetString("DCC1");
+		public string M3DCC1 => GetString("DCC1");
 
 		/// <summary>
 		/// Description: Name
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_UCO1 => GetString("UCO1");
+		public string M3UCO1 => GetString("UCO1");
 
 		/// <summary>
 		/// Description: Product Group
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product Group")]
-		public string M3_MS05 => GetString("MS05");
+		public string M3MS05 => GetString("MS05");
 
 		/// <summary>
 		/// Description: Model
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Model")]
-		public string M3_MS06 => GetString("MS06");
+		public string M3MS06 => GetString("MS06");
 
 		/// <summary>
 		/// Description: Item
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item")]
-		public string M3_MS07 => GetString("MS07");
+		public string M3MS07 => GetString("MS07");
 
 		/// <summary>
 		/// Description: Configure
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configure")]
-		public string M3_MS08 => GetString("MS08");
+		public string M3MS08 => GetString("MS08");
 
 		/// <summary>
 		/// Description: Select product group
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Select product group")]
-		public string M3_MS09 => GetString("MS09");
+		public string M3MS09 => GetString("MS09");
 
 		/// <summary>
 		/// Description: Select model
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Select model")]
-		public string M3_MS10 => GetString("MS10");
+		public string M3MS10 => GetString("MS10");
 
 		/// <summary>
 		/// Description: Select item
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Select item")]
-		public string M3_MS11 => GetString("MS11");
+		public string M3MS11 => GetString("MS11");
 
 		/// <summary>
 		/// Description: Back
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CRSPCIMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Back")]
-		public string M3_MS12 => GetString("MS12");
+		public string M3MS12 => GetString("MS12");
 	}
 }
 // EOF

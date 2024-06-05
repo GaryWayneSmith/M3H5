@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Budget number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget number")]
-		public int? M3_BUNO => GetNullableInt("BUNO");
+		public int? M3BUNO => GetNullableInt("BUNO");
 
 		/// <summary>
 		/// Description: Budget version
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget version")]
-		public string M3_BVER => GetString("BVER");
+		public string M3BVER => GetString("BVER");
 
 		/// <summary>
 		/// Description: Accounting dimension 1
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 1")]
-		public string M3_AIT1 => GetString("AIT1");
+		public string M3AIT1 => GetString("AIT1");
 
 		/// <summary>
 		/// Description: Accounting dimension 2
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 2")]
-		public string M3_AIT2 => GetString("AIT2");
+		public string M3AIT2 => GetString("AIT2");
 
 		/// <summary>
 		/// Description: Accounting dimension 3
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 3")]
-		public string M3_AIT3 => GetString("AIT3");
+		public string M3AIT3 => GetString("AIT3");
 
 		/// <summary>
 		/// Description: Accounting dimension 4
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 4")]
-		public string M3_AIT4 => GetString("AIT4");
+		public string M3AIT4 => GetString("AIT4");
 
 		/// <summary>
 		/// Description: Accounting dimension 5
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 5")]
-		public string M3_AIT5 => GetString("AIT5");
+		public string M3AIT5 => GetString("AIT5");
 
 		/// <summary>
 		/// Description: Accounting dimension 6
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 6")]
-		public string M3_AIT6 => GetString("AIT6");
+		public string M3AIT6 => GetString("AIT6");
 
 		/// <summary>
 		/// Description: Accounting dimension 7
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Accounting dimension 7")]
-		public string M3_AIT7 => GetString("AIT7");
+		public string M3AIT7 => GetString("AIT7");
 
 		/// <summary>
 		/// Description: Currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency")]
-		public string M3_CUCD => GetString("CUCD");
+		public string M3CUCD => GetString("CUCD");
 
 		/// <summary>
 		/// Description: Curve
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Curve")]
-		public int? M3_AMTN => GetNullableInt("AMTN");
+		public int? M3AMTN => GetNullableInt("AMTN");
 
 		/// <summary>
 		/// Description: Period
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period")]
-		public int? M3_PERI => GetNullableInt("PERI");
+		public int? M3PERI => GetNullableInt("PERI");
 
 		/// <summary>
 		/// Description: Name
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Foreign currency amount - budget
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Foreign currency amount - budget")]
-		public decimal? M3_BCUA => GetNullableDecimal("BCUA");
+		public decimal? M3BCUA => GetNullableDecimal("BCUA");
 
 		/// <summary>
 		/// Description: Budget quantity
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Budget quantity")]
-		public decimal? M3_BUDQ => GetNullableDecimal("BUDQ");
+		public decimal? M3BUDQ => GetNullableDecimal("BUDQ");
 
 		/// <summary>
 		/// Description: From date
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.BUS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 	}
 }
 // EOF

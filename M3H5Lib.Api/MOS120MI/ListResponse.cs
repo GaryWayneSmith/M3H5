@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_ORTY => GetString("ORTY");
+		public string M3ORTY => GetString("ORTY");
 
 		/// <summary>
 		/// Description: Work order category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work order category")]
-		public string M3_MOTC => GetString("MOTC");
+		public string M3MOTC => GetString("MOTC");
 
 		/// <summary>
 		/// Description: Update material plan
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Update material plan")]
-		public int? M3_UPMP => GetNullableInt("UPMP");
+		public int? M3UPMP => GetNullableInt("UPMP");
 
 		/// <summary>
 		/// Description: Description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Text identity
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: POS to M3 Requisition +
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("POS to M3 Requisition +")]
-		public string M3_TRT1 => GetString("TRT1");
+		public string M3TRT1 => GetString("TRT1");
 
 		/// <summary>
 		/// Description: POS to M3 Requisition -
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("POS to M3 Requisition -")]
-		public string M3_TRT2 => GetString("TRT2");
+		public string M3TRT2 => GetString("TRT2");
 
 		/// <summary>
 		/// Description: Supply model
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supply model")]
-		public string M3_SPLM => GetString("SPLM");
+		public string M3SPLM => GetString("SPLM");
 
 		/// <summary>
 		/// Description: Dispatch policy
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MOS120MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dispatch policy")]
-		public string M3_DPOL => GetString("DPOL");
+		public string M3DPOL => GetString("DPOL");
 	}
 }
 // EOF

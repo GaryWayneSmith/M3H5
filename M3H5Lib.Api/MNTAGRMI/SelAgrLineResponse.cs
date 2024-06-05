@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement number")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Service price method
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price method")]
-		public int? M3_SRVP => GetNullableInt("SRVP");
+		public int? M3SRVP => GetNullableInt("SRVP");
 
 		/// <summary>
 		/// Description: Product number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product number")]
-		public string M3_PRNO => GetString("PRNO");
+		public string M3PRNO => GetString("PRNO");
 
 		/// <summary>
 		/// Description: Product structure type
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Product structure type")]
-		public string M3_STRT => GetString("STRT");
+		public string M3STRT => GetString("STRT");
 
 		/// <summary>
 		/// Description: Service
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service")]
-		public string M3_SUFI => GetString("SUFI");
+		public string M3SUFI => GetString("SUFI");
 
 		/// <summary>
 		/// Description: Start date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: Price in material currency
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in material currency")]
-		public decimal? M3_APM1 => GetNullableDecimal("APM1");
+		public decimal? M3APM1 => GetNullableDecimal("APM1");
 
 		/// <summary>
 		/// Description: Price in material currency
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in material currency")]
-		public decimal? M3_APM2 => GetNullableDecimal("APM2");
+		public decimal? M3APM2 => GetNullableDecimal("APM2");
 
 		/// <summary>
 		/// Description: Price in agreement currency
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in agreement currency")]
-		public decimal? M3_APA1 => GetNullableDecimal("APA1");
+		public decimal? M3APA1 => GetNullableDecimal("APA1");
 
 		/// <summary>
 		/// Description: Price in agreement currency
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price in agreement currency")]
-		public decimal? M3_APA2 => GetNullableDecimal("APA2");
+		public decimal? M3APA2 => GetNullableDecimal("APA2");
 
 		/// <summary>
 		/// Description: Warranty limit 1
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 1")]
-		public decimal? M3_WAL1 => GetNullableDecimal("WAL1");
+		public decimal? M3WAL1 => GetNullableDecimal("WAL1");
 
 		/// <summary>
 		/// Description: Warranty limit 2
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 2")]
-		public decimal? M3_WAL2 => GetNullableDecimal("WAL2");
+		public decimal? M3WAL2 => GetNullableDecimal("WAL2");
 
 		/// <summary>
 		/// Description: Warranty limit 3
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 3")]
-		public decimal? M3_WAL3 => GetNullableDecimal("WAL3");
+		public decimal? M3WAL3 => GetNullableDecimal("WAL3");
 
 		/// <summary>
 		/// Description: Warranty limit 4
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warranty limit 4")]
-		public decimal? M3_WAL4 => GetNullableDecimal("WAL4");
+		public decimal? M3WAL4 => GetNullableDecimal("WAL4");
 
 		/// <summary>
 		/// Description: Meter 1
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 1")]
-		public string M3_MES1 => GetString("MES1");
+		public string M3MES1 => GetString("MES1");
 
 		/// <summary>
 		/// Description: Meter 2
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 2")]
-		public string M3_MES2 => GetString("MES2");
+		public string M3MES2 => GetString("MES2");
 
 		/// <summary>
 		/// Description: Meter 3
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 3")]
-		public string M3_MES3 => GetString("MES3");
+		public string M3MES3 => GetString("MES3");
 
 		/// <summary>
 		/// Description: Meter 4
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter 4")]
-		public string M3_MES4 => GetString("MES4");
+		public string M3MES4 => GetString("MES4");
 
 		/// <summary>
 		/// Description: User-defined field 1 - item
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 1 - item")]
-		public string M3_CFI1 => GetString("CFI1");
+		public string M3CFI1 => GetString("CFI1");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: User-defined field 3 - item
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 3 - item")]
-		public string M3_CFI3 => GetString("CFI3");
+		public string M3CFI3 => GetString("CFI3");
 
 		/// <summary>
 		/// Description: User-defined field 4 - item
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 4 - item")]
-		public string M3_CFI4 => GetString("CFI4");
+		public string M3CFI4 => GetString("CFI4");
 
 		/// <summary>
 		/// Description: User-defined field 5 - item
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 5 - item")]
-		public string M3_CFI5 => GetString("CFI5");
+		public string M3CFI5 => GetString("CFI5");
 
 		/// <summary>
 		/// Description: Service BoM only
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service BoM only")]
-		public int? M3_AISS => GetNullableInt("AISS");
+		public int? M3AISS => GetNullableInt("AISS");
 
 		/// <summary>
 		/// Description: Customer-owned rotables only
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer-owned rotables only")]
-		public int? M3_ACOR => GetNullableInt("ACOR");
+		public int? M3ACOR => GetNullableInt("ACOR");
 
 		/// <summary>
 		/// Description: Customer-owned expendables only
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.MNTAGRMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer-owned expendables only")]
-		public int? M3_ACOE => GetNullableInt("ACOE");
+		public int? M3ACOE => GetNullableInt("ACOE");
 	}
 }
 // EOF

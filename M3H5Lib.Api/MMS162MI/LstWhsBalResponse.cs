@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Style number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style number")]
-		public string M3_STYN => GetString("STYN");
+		public string M3STYN => GetString("STYN");
 
 		/// <summary>
 		/// Description: X-feature
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("X-feature")]
-		public string M3_FTIX => GetString("FTIX");
+		public string M3FTIX => GetString("FTIX");
 
 		/// <summary>
 		/// Description: Option for feature X
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option for feature X")]
-		public string M3_OPTX => GetString("OPTX");
+		public string M3OPTX => GetString("OPTX");
 
 		/// <summary>
 		/// Description: Y-feature
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Y-feature")]
-		public string M3_FTIY => GetString("FTIY");
+		public string M3FTIY => GetString("FTIY");
 
 		/// <summary>
 		/// Description: Option for feature Y
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option for feature Y")]
-		public string M3_OPTY => GetString("OPTY");
+		public string M3OPTY => GetString("OPTY");
 
 		/// <summary>
 		/// Description: Z-feature
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Z-feature")]
-		public string M3_FTIZ => GetString("FTIZ");
+		public string M3FTIZ => GetString("FTIZ");
 
 		/// <summary>
 		/// Description: Option for feauture Z
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option for feauture Z")]
-		public string M3_OPTZ => GetString("OPTZ");
+		public string M3OPTZ => GetString("OPTZ");
 
 		/// <summary>
 		/// Description: Item number
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Warehouse description
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse description")]
-		public string M3_WHNM => GetString("WHNM");
+		public string M3WHNM => GetString("WHNM");
 
 		/// <summary>
 		/// Description: On-hand balance approved
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("On-hand balance approved")]
-		public decimal? M3_STQT => GetNullableDecimal("STQT");
+		public decimal? M3STQT => GetNullableDecimal("STQT");
 
 		/// <summary>
 		/// Description: Allocatable on-hand balance
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Allocatable on-hand balance")]
-		public decimal? M3_AVAL => GetNullableDecimal("AVAL");
+		public decimal? M3AVAL => GetNullableDecimal("AVAL");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Reserved quantity
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Reserved quantity")]
-		public decimal? M3_REQT => GetNullableDecimal("REQT");
+		public decimal? M3REQT => GetNullableDecimal("REQT");
 
 		/// <summary>
 		/// Description: Configuration code
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Configuration code")]
-		public int? M3_CHCD => GetNullableInt("CHCD");
+		public int? M3CHCD => GetNullableInt("CHCD");
 
 		/// <summary>
 		/// Description: Name
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_ITDS => GetString("ITDS");
+		public string M3ITDS => GetString("ITDS");
 
 		/// <summary>
 		/// Description: Style name
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.MMS162MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Style name")]
-		public string M3_NAME => GetString("NAME");
+		public string M3NAME => GetString("NAME");
 	}
 }
 // EOF

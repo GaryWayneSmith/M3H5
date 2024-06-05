@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement")]
-		public string M3_AAGN => GetString("AAGN");
+		public string M3AAGN => GetString("AAGN");
 
 		/// <summary>
 		/// Description: Agreement type
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement type")]
-		public string M3_AAGT => GetString("AAGT");
+		public string M3AAGT => GetString("AAGT");
 
 		/// <summary>
 		/// Description: Customer
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Customer")]
-		public string M3_CUNO => GetString("CUNO");
+		public string M3CUNO => GetString("CUNO");
 
 		/// <summary>
 		/// Description: Facility
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Payer
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer")]
-		public string M3_PYNO => GetString("PYNO");
+		public string M3PYNO => GetString("PYNO");
 
 		/// <summary>
 		/// Description: Status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Text
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Start date
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start date")]
-		public DateTime? M3_STDT => GetNullableDateTime("STDT");
+		public DateTime? M3STDT => GetNullableDateTime("STDT");
 
 		/// <summary>
 		/// Description: To date
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TODT => GetNullableDateTime("TODT");
+		public DateTime? M3TODT => GetNullableDateTime("TODT");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Responsible
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Responsible")]
-		public string M3_RESP => GetString("RESP");
+		public string M3RESP => GetString("RESP");
 
 		/// <summary>
 		/// Description: Material currency
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material currency")]
-		public string M3_AMCU => GetString("AMCU");
+		public string M3AMCU => GetString("AMCU");
 
 		/// <summary>
 		/// Description: Critical material
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Critical material")]
-		public int? M3_CRTM => GetNullableInt("CRTM");
+		public int? M3CRTM => GetNullableInt("CRTM");
 
 		/// <summary>
 		/// Description: Agreement currency
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement currency")]
-		public string M3_AACU => GetString("AACU");
+		public string M3AACU => GetString("AACU");
 
 		/// <summary>
 		/// Description: Exchange rate type
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate type")]
-		public int? M3_CRTA => GetNullableInt("CRTA");
+		public int? M3CRTA => GetNullableInt("CRTA");
 
 		/// <summary>
 		/// Description: Serial number administration
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number administration")]
-		public int? M3_ACSE => GetNullableInt("ACSE");
+		public int? M3ACSE => GetNullableInt("ACSE");
 
 		/// <summary>
 		/// Description: Maximum repair cost
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Maximum repair cost")]
-		public int? M3_AMRE => GetNullableInt("AMRE");
+		public int? M3AMRE => GetNullableInt("AMRE");
 
 		/// <summary>
 		/// Description: Modification
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Modification")]
-		public int? M3_AMOD => GetNullableInt("AMOD");
+		public int? M3AMOD => GetNullableInt("AMOD");
 
 		/// <summary>
 		/// Description: Removal/installation update invoice spec
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Removal/installation update invoice spec")]
-		public int? M3_RIUS => GetNullableInt("RIUS");
+		public int? M3RIUS => GetNullableInt("RIUS");
 
 		/// <summary>
 		/// Description: Invoice specification layout
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice specification layout")]
-		public int? M3_AISP => GetNullableInt("AISP");
+		public int? M3AISP => GetNullableInt("AISP");
 
 		/// <summary>
 		/// Description: Serial number return code
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serial number return code")]
-		public int? M3_SNRC => GetNullableInt("SNRC");
+		public int? M3SNRC => GetNullableInt("SNRC");
 
 		/// <summary>
 		/// Description: Order type
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type")]
-		public string M3_AOTY => GetString("AOTY");
+		public string M3AOTY => GetString("AOTY");
 
 		/// <summary>
 		/// Description: Periodic invoice order type
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Periodic invoice order type")]
-		public string M3_PIOT => GetString("PIOT");
+		public string M3PIOT => GetString("PIOT");
 
 		/// <summary>
 		/// Description: Invoicing method
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoicing method")]
-		public string M3_INVM => GetString("INVM");
+		public string M3INVM => GetString("INVM");
 
 		/// <summary>
 		/// Description: Material price method
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material price method")]
-		public int? M3_APBA => GetNullableInt("APBA");
+		public int? M3APBA => GetNullableInt("APBA");
 
 		/// <summary>
 		/// Description: Price origin sequence
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price origin sequence")]
-		public string M3_PRMS => GetString("PRMS");
+		public string M3PRMS => GetString("PRMS");
 
 		/// <summary>
 		/// Description: Material handling charge method
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material handling charge method")]
-		public int? M3_AHCM => GetNullableInt("AHCM");
+		public int? M3AHCM => GetNullableInt("AHCM");
 
 		/// <summary>
 		/// Description: Price list 1
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 1")]
-		public string M3_PRR1 => GetString("PRR1");
+		public string M3PRR1 => GetString("PRR1");
 
 		/// <summary>
 		/// Description: Price list 2
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 2")]
-		public string M3_PRR2 => GetString("PRR2");
+		public string M3PRR2 => GetString("PRR2");
 
 		/// <summary>
 		/// Description: Price list 3
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 3")]
-		public string M3_PRR3 => GetString("PRR3");
+		public string M3PRR3 => GetString("PRR3");
 
 		/// <summary>
 		/// Description: Price list 4
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 4")]
-		public string M3_PRR4 => GetString("PRR4");
+		public string M3PRR4 => GetString("PRR4");
 
 		/// <summary>
 		/// Description: Price list 5
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price list 5")]
-		public string M3_PRR5 => GetString("PRR5");
+		public string M3PRR5 => GetString("PRR5");
 
 		/// <summary>
 		/// Description: Service price list
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service price list")]
-		public string M3_SPRL => GetString("SPRL");
+		public string M3SPRL => GetString("SPRL");
 
 		/// <summary>
 		/// Description: Language
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: User-defined field 2 - item
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-defined field 2 - item")]
-		public decimal? M3_CFI2 => GetNullableDecimal("CFI2");
+		public decimal? M3CFI2 => GetNullableDecimal("CFI2");
 
 		/// <summary>
 		/// Description: Summary invoice
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Summary invoice")]
-		public int? M3_AICD => GetNullableInt("AICD");
+		public int? M3AICD => GetNullableInt("AICD");
 
 		/// <summary>
 		/// Description: Project number
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project number")]
-		public string M3_PROJ => GetString("PROJ");
+		public string M3PROJ => GetString("PROJ");
 
 		/// <summary>
 		/// Description: Project element
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Project element")]
-		public string M3_ELNO => GetString("ELNO");
+		public string M3ELNO => GetString("ELNO");
 
 		/// <summary>
 		/// Description: Agreement cancellation - days notice
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Agreement cancellation - days notice")]
-		public int? M3_ACDY => GetNullableInt("ACDY");
+		public int? M3ACDY => GetNullableInt("ACDY");
 
 		/// <summary>
 		/// Description: External reference
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External reference")]
-		public string M3_AREF => GetString("AREF");
+		public string M3AREF => GetString("AREF");
 
 		/// <summary>
 		/// Description: Our reference
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Our reference")]
-		public string M3_OREF => GetString("OREF");
+		public string M3OREF => GetString("OREF");
 
 		/// <summary>
 		/// Description: Your reference 1
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Your reference 1")]
-		public string M3_YREF => GetString("YREF");
+		public string M3YREF => GetString("YREF");
 
 		/// <summary>
 		/// Description: Curve
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Curve")]
-		public int? M3_AMTN => GetNullableInt("AMTN");
+		public int? M3AMTN => GetNullableInt("AMTN");
 
 		/// <summary>
 		/// Description: Number of periods
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of periods")]
-		public int? M3_NPAM => GetNullableInt("NPAM");
+		public int? M3NPAM => GetNullableInt("NPAM");
 
 		/// <summary>
 		/// Description: Period accounting
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Period accounting")]
-		public string M3_PERA => GetString("PERA");
+		public string M3PERA => GetString("PERA");
 
 		/// <summary>
 		/// Description: Rounding-off category
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rounding-off category")]
-		public int? M3_ROPP => GetNullableInt("ROPP");
+		public int? M3ROPP => GetNullableInt("ROPP");
 
 		/// <summary>
 		/// Description: Check scope of agreement - object
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check scope of agreement - object")]
-		public int? M3_ACT9 => GetNullableInt("ACT9");
+		public int? M3ACT9 => GetNullableInt("ACT9");
 
 		/// <summary>
 		/// Description: Check scope of agreement - model indiv
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check scope of agreement - model indiv")]
-		public int? M3_ACRG => GetNullableInt("ACRG");
+		public int? M3ACRG => GetNullableInt("ACRG");
 
 		/// <summary>
 		/// Description: Delivery method
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery method")]
-		public string M3_MODL => GetString("MODL");
+		public string M3MODL => GetString("MODL");
 
 		/// <summary>
 		/// Description: Delivery terms
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery terms")]
-		public string M3_TEDL => GetString("TEDL");
+		public string M3TEDL => GetString("TEDL");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Packaging terms
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Packaging terms")]
-		public string M3_TEPA => GetString("TEPA");
+		public string M3TEPA => GetString("TEPA");
 
 		/// <summary>
 		/// Description: Freight terms
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.COS410MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Freight terms")]
-		public string M3_TEAF => GetString("TEAF");
+		public string M3TEAF => GetString("TEAF");
 	}
 }
 // EOF

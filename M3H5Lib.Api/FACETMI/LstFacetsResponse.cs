@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FACETMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facet name")]
-		public string M3_TX30 => GetString("TX30");
+		public string M3TX30 => GetString("TX30");
 
 		/// <summary>
 		/// Description: Language constant
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FACETMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language constant")]
-		public string M3_AL07 => GetString("AL07");
+		public string M3AL07 => GetString("AL07");
 
 		/// <summary>
 		/// Description: Field name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FACETMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field name")]
-		public string M3_FLNA => GetString("FLNA");
+		public string M3FLNA => GetString("FLNA");
 
 		/// <summary>
 		/// Description: Facet value
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FACETMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facet value")]
-		public string M3_TX60 => GetString("TX60");
+		public string M3TX60 => GetString("TX60");
 
 		/// <summary>
 		/// Description: Facet count
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FACETMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facet count")]
-		public decimal? M3_FFN1 => GetNullableDecimal("FFN1");
+		public decimal? M3FFN1 => GetNullableDecimal("FFN1");
 	}
 }
 // EOF

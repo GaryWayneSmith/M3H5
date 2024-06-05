@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order type")]
-		public string M3_SOTP => GetString("SOTP");
+		public string M3SOTP => GetString("SOTP");
 
 		/// <summary>
 		/// Description: Service order type category
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order type category")]
-		public string M3_SOTK => GetString("SOTK");
+		public string M3SOTK => GetString("SOTK");
 
 		/// <summary>
 		/// Description: Next manuall function
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Next manuall function")]
-		public int? M3_NEXT => GetNullableInt("NEXT");
+		public int? M3NEXT => GetNullableInt("NEXT");
 
 		/// <summary>
 		/// Description: Order type description
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Order type description")]
-		public string M3_OTDE => GetString("OTDE");
+		public string M3OTDE => GetString("OTDE");
 
 		/// <summary>
 		/// Description: Change date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 
 		/// <summary>
 		/// Description: Internal payer 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal payer 1")]
-		public string M3_SO62 => GetString("SO62");
+		public string M3SO62 => GetString("SO62");
 
 		/// <summary>
 		/// Description: Internal payer 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal payer 2")]
-		public string M3_SO63 => GetString("SO63");
+		public string M3SO63 => GetString("SO63");
 
 		/// <summary>
 		/// Description: Internal payer 3
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal payer 3")]
-		public string M3_SO64 => GetString("SO64");
+		public string M3SO64 => GetString("SO64");
 
 		/// <summary>
 		/// Description: Internal payer 4
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Internal payer 4")]
-		public string M3_SO65 => GetString("SO65");
+		public string M3SO65 => GetString("SO65");
 
 		/// <summary>
 		/// Description: Assignment type
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment type")]
-		public string M3_ASST => GetString("ASST");
+		public string M3ASST => GetString("ASST");
 
 		/// <summary>
 		/// Description: Additional status
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional status")]
-		public string M3_ESTI => GetString("ESTI");
+		public string M3ESTI => GetString("ESTI");
 
 		/// <summary>
 		/// Description: Response time
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Response time")]
-		public int? M3_SO61 => GetNullableInt("SO61");
+		public int? M3SO61 => GetNullableInt("SO61");
 
 		/// <summary>
 		/// Description: Work schedule
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule")]
-		public int? M3_SO80 => GetNullableInt("SO80");
+		public int? M3SO80 => GetNullableInt("SO80");
 
 		/// <summary>
 		/// Description: Default work time
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default work time")]
-		public int? M3_SO79 => GetNullableInt("SO79");
+		public int? M3SO79 => GetNullableInt("SO79");
 
 		/// <summary>
 		/// Description: Summary invoice code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Summary invoice code")]
-		public int? M3_SO37 => GetNullableInt("SO37");
+		public int? M3SO37 => GetNullableInt("SO37");
 
 		/// <summary>
 		/// Description: All assignment together code
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("All assignment together code")]
-		public int? M3_SO40 => GetNullableInt("SO40");
+		public int? M3SO40 => GetNullableInt("SO40");
 
 		/// <summary>
 		/// Description: Several line types permitted
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Several line types permitted")]
-		public int? M3_SO09 => GetNullableInt("SO09");
+		public int? M3SO09 => GetNullableInt("SO09");
 
 		/// <summary>
 		/// Description: Several warehouses permitted
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Several warehouses permitted")]
-		public int? M3_SO10 => GetNullableInt("SO10");
+		public int? M3SO10 => GetNullableInt("SO10");
 
 		/// <summary>
 		/// Description: Check sequence - item ID
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Check sequence - item ID")]
-		public string M3_SO19 => GetString("SO19");
+		public string M3SO19 => GetString("SO19");
 
 		/// <summary>
 		/// Description: Manual due date
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Manual due date")]
-		public int? M3_SO23 => GetNullableInt("SO23");
+		public int? M3SO23 => GetNullableInt("SO23");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_SO43 => GetString("SO43");
+		public string M3SO43 => GetString("SO43");
 
 		/// <summary>
 		/// Description: Cost price rule
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost price rule")]
-		public int? M3_SO14 => GetNullableInt("SO14");
+		public int? M3SO14 => GetNullableInt("SO14");
 
 		/// <summary>
 		/// Description: Sales price rule
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price rule")]
-		public int? M3_SO12 => GetNullableInt("SO12");
+		public int? M3SO12 => GetNullableInt("SO12");
 
 		/// <summary>
 		/// Description: Discount maintenance
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount maintenance")]
-		public int? M3_SO13 => GetNullableInt("SO13");
+		public int? M3SO13 => GetNullableInt("SO13");
 
 		/// <summary>
 		/// Description: Quantity sign
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Quantity sign")]
-		public int? M3_SO11 => GetNullableInt("SO11");
+		public int? M3SO11 => GetNullableInt("SO11");
 
 		/// <summary>
 		/// Description: Payer control
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payer control")]
-		public string M3_SO60 => GetString("SO60");
+		public string M3SO60 => GetString("SO60");
 
 		/// <summary>
 		/// Description: Parameters from service manager
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Parameters from service manager")]
-		public int? M3_SO66 => GetNullableInt("SO66");
+		public int? M3SO66 => GetNullableInt("SO66");
 
 		/// <summary>
 		/// Description: Total price allowed
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total price allowed")]
-		public int? M3_TPAL => GetNullableInt("TPAL");
+		public int? M3TPAL => GetNullableInt("TPAL");
 
 		/// <summary>
 		/// Description: Total price distribution method
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total price distribution method")]
-		public int? M3_TPMT => GetNullableInt("TPMT");
+		public int? M3TPMT => GetNullableInt("TPMT");
 
 		/// <summary>
 		/// Description: Price print out code
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price print out code")]
-		public int? M3_PPCD => GetNullableInt("PPCD");
+		public int? M3PPCD => GetNullableInt("PPCD");
 
 		/// <summary>
 		/// Description: Slack time service order
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Slack time service order")]
-		public int? M3_SO67 => GetNullableInt("SO67");
+		public int? M3SO67 => GetNullableInt("SO67");
 
 		/// <summary>
 		/// Description: Planned preparation time
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned preparation time")]
-		public int? M3_SO68 => GetNullableInt("SO68");
+		public int? M3SO68 => GetNullableInt("SO68");
 
 		/// <summary>
 		/// Description: Planned completion time
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned completion time")]
-		public int? M3_SO69 => GetNullableInt("SO69");
+		public int? M3SO69 => GetNullableInt("SO69");
 
 		/// <summary>
 		/// Description: Planned travel time
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planned travel time")]
-		public int? M3_SO70 => GetNullableInt("SO70");
+		public int? M3SO70 => GetNullableInt("SO70");
 
 		/// <summary>
 		/// Description: Travel type
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Travel type")]
-		public string M3_SO71 => GetString("SO71");
+		public string M3SO71 => GetString("SO71");
 
 		/// <summary>
 		/// Description: Default line type
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default line type")]
-		public string M3_SO47 => GetString("SO47");
+		public string M3SO47 => GetString("SO47");
 
 		/// <summary>
 		/// Description: Transportation of individual item
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transportation of individual item")]
-		public int? M3_TRIN => GetNullableInt("TRIN");
+		public int? M3TRIN => GetNullableInt("TRIN");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_SO58 => GetString("SO58");
+		public string M3SO58 => GetString("SO58");
 
 		/// <summary>
 		/// Description: Location
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_SO59 => GetString("SO59");
+		public string M3SO59 => GetString("SO59");
 
 		/// <summary>
 		/// Description: Downtime
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Downtime")]
-		public int? M3_DOWT => GetNullableInt("DOWT");
+		public int? M3DOWT => GetNullableInt("DOWT");
 
 		/// <summary>
 		/// Description: Credit check
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Credit check")]
-		public int? M3_SO02 => GetNullableInt("SO02");
+		public int? M3SO02 => GetNullableInt("SO02");
 
 		/// <summary>
 		/// Description: Inventory accounting code
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.SOS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Inventory accounting code")]
-		public int? M3_SO18 => GetNullableInt("SO18");
+		public int? M3SO18 => GetNullableInt("SO18");
 	}
 }
 // EOF

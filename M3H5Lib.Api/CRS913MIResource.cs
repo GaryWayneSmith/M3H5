@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS913MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add a classification per season
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNA">Classification per season (Required)</param>
-		/// <param name="m3_TX40">Description (Required)</param>
-		/// <param name="m3_TX15">Name (Required)</param>
+		/// <param name="m3PRNA">Classification per season (Required)</param>
+		/// <param name="m3TX40">Description (Required)</param>
+		/// <param name="m3TX15">Name (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddClassif(
-			string m3_PRNA, 
-			string m3_TX40, 
-			string m3_TX15, 
+			string m3PRNA, 
+			string m3TX40, 
+			string m3TX15, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,18 +66,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRNA))
-				throw new ArgumentNullException("m3_PRNA");
-			if (string.IsNullOrWhiteSpace(m3_TX40))
-				throw new ArgumentNullException("m3_TX40");
-			if (string.IsNullOrWhiteSpace(m3_TX15))
-				throw new ArgumentNullException("m3_TX15");
+			if (string.IsNullOrWhiteSpace(m3PRNA))
+				throw new ArgumentNullException(nameof(m3PRNA));
+			if (string.IsNullOrWhiteSpace(m3TX40))
+				throw new ArgumentNullException(nameof(m3TX40));
+			if (string.IsNullOrWhiteSpace(m3TX15))
+				throw new ArgumentNullException(nameof(m3TX15));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRNA", m3_PRNA.Trim())
-				.WithQueryParameter("TX40", m3_TX40.Trim())
-				.WithQueryParameter("TX15", m3_TX15.Trim());
+				.WithQueryParameter("PRNA", m3PRNA.Trim())
+				.WithQueryParameter("TX40", m3TX40.Trim())
+				.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -85,7 +87,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -96,7 +99,7 @@ namespace M3H5Lib.Api
 		/// Description Delete a classification per season
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNA">Classification per season (Required)</param>
+		/// <param name="m3PRNA">Classification per season (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -105,7 +108,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltClassif(
-			string m3_PRNA, 
+			string m3PRNA, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -120,12 +123,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRNA))
-				throw new ArgumentNullException("m3_PRNA");
+			if (string.IsNullOrWhiteSpace(m3PRNA))
+				throw new ArgumentNullException(nameof(m3PRNA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRNA", m3_PRNA.Trim());
+				.WithQueryParameter("PRNA", m3PRNA.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -135,7 +138,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -146,7 +150,7 @@ namespace M3H5Lib.Api
 		/// Description Get data for a classification per season
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNA">Classification per season</param>
+		/// <param name="m3PRNA">Classification per season</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -155,7 +159,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetClassifResponse></returns>
 		/// <exception cref="M3Exception<GetClassifResponse>"></exception>
 		public async Task<M3Response<GetClassifResponse>> GetClassif(
-			string m3_PRNA = null, 
+			string m3PRNA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -170,8 +174,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNA))
-				request.WithQueryParameter("PRNA", m3_PRNA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNA))
+				request.WithQueryParameter("PRNA", m3PRNA.Trim());
 
 			// Execute the request
 			var result = await Execute<GetClassifResponse>(
@@ -181,7 +185,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -192,7 +197,7 @@ namespace M3H5Lib.Api
 		/// Description List data for classification per season
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNA">Classification per season</param>
+		/// <param name="m3PRNA">Classification per season</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -201,7 +206,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstClassifResponse></returns>
 		/// <exception cref="M3Exception<LstClassifResponse>"></exception>
 		public async Task<M3Response<LstClassifResponse>> LstClassif(
-			string m3_PRNA = null, 
+			string m3PRNA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -216,8 +221,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_PRNA))
-				request.WithQueryParameter("PRNA", m3_PRNA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3PRNA))
+				request.WithQueryParameter("PRNA", m3PRNA.Trim());
 
 			// Execute the request
 			var result = await Execute<LstClassifResponse>(
@@ -227,7 +232,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -238,9 +244,9 @@ namespace M3H5Lib.Api
 		/// Description Update data for a classification per season
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_PRNA">Classification per season (Required)</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_TX15">Name</param>
+		/// <param name="m3PRNA">Classification per season (Required)</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3TX15">Name</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -249,9 +255,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdClassif(
-			string m3_PRNA, 
-			string m3_TX40 = null, 
-			string m3_TX15 = null, 
+			string m3PRNA, 
+			string m3TX40 = null, 
+			string m3TX15 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -266,18 +272,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_PRNA))
-				throw new ArgumentNullException("m3_PRNA");
+			if (string.IsNullOrWhiteSpace(m3PRNA))
+				throw new ArgumentNullException(nameof(m3PRNA));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("PRNA", m3_PRNA.Trim());
+				.WithQueryParameter("PRNA", m3PRNA.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -287,7 +293,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

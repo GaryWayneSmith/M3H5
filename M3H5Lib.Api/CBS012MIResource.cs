@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CBS012MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,10 +38,10 @@ namespace M3H5Lib.Api
 		/// Description Add record
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_ROLE">Role/organizational position (Required)</param>
-		/// <param name="m3_CATY">Capability type (Required)</param>
-		/// <param name="m3_CABI">Capability (Required)</param>
-		/// <param name="m3_STAT">Status (Required)</param>
+		/// <param name="m3ROLE">Role/organizational position (Required)</param>
+		/// <param name="m3CATY">Capability type (Required)</param>
+		/// <param name="m3CABI">Capability (Required)</param>
+		/// <param name="m3STAT">Status (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -48,10 +50,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_ROLE, 
-			string m3_CATY, 
-			string m3_CABI, 
-			string m3_STAT, 
+			string m3ROLE, 
+			string m3CATY, 
+			string m3CABI, 
+			string m3STAT, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -66,21 +68,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ROLE))
-				throw new ArgumentNullException("m3_ROLE");
-			if (string.IsNullOrWhiteSpace(m3_CATY))
-				throw new ArgumentNullException("m3_CATY");
-			if (string.IsNullOrWhiteSpace(m3_CABI))
-				throw new ArgumentNullException("m3_CABI");
-			if (string.IsNullOrWhiteSpace(m3_STAT))
-				throw new ArgumentNullException("m3_STAT");
+			if (string.IsNullOrWhiteSpace(m3ROLE))
+				throw new ArgumentNullException(nameof(m3ROLE));
+			if (string.IsNullOrWhiteSpace(m3CATY))
+				throw new ArgumentNullException(nameof(m3CATY));
+			if (string.IsNullOrWhiteSpace(m3CABI))
+				throw new ArgumentNullException(nameof(m3CABI));
+			if (string.IsNullOrWhiteSpace(m3STAT))
+				throw new ArgumentNullException(nameof(m3STAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ROLE", m3_ROLE.Trim())
-				.WithQueryParameter("CATY", m3_CATY.Trim())
-				.WithQueryParameter("CABI", m3_CABI.Trim())
-				.WithQueryParameter("STAT", m3_STAT.Trim());
+				.WithQueryParameter("ROLE", m3ROLE.Trim())
+				.WithQueryParameter("CATY", m3CATY.Trim())
+				.WithQueryParameter("CABI", m3CABI.Trim())
+				.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -90,7 +92,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -101,9 +104,9 @@ namespace M3H5Lib.Api
 		/// Description Delete record
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_ROLE">Role/organizational position (Required)</param>
-		/// <param name="m3_CATY">Capability type (Required)</param>
-		/// <param name="m3_CABI">Capability (Required)</param>
+		/// <param name="m3ROLE">Role/organizational position (Required)</param>
+		/// <param name="m3CATY">Capability type (Required)</param>
+		/// <param name="m3CABI">Capability (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -112,9 +115,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Dlt(
-			string m3_ROLE, 
-			string m3_CATY, 
-			string m3_CABI, 
+			string m3ROLE, 
+			string m3CATY, 
+			string m3CABI, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -129,18 +132,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ROLE))
-				throw new ArgumentNullException("m3_ROLE");
-			if (string.IsNullOrWhiteSpace(m3_CATY))
-				throw new ArgumentNullException("m3_CATY");
-			if (string.IsNullOrWhiteSpace(m3_CABI))
-				throw new ArgumentNullException("m3_CABI");
+			if (string.IsNullOrWhiteSpace(m3ROLE))
+				throw new ArgumentNullException(nameof(m3ROLE));
+			if (string.IsNullOrWhiteSpace(m3CATY))
+				throw new ArgumentNullException(nameof(m3CATY));
+			if (string.IsNullOrWhiteSpace(m3CABI))
+				throw new ArgumentNullException(nameof(m3CABI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ROLE", m3_ROLE.Trim())
-				.WithQueryParameter("CATY", m3_CATY.Trim())
-				.WithQueryParameter("CABI", m3_CABI.Trim());
+				.WithQueryParameter("ROLE", m3ROLE.Trim())
+				.WithQueryParameter("CATY", m3CATY.Trim())
+				.WithQueryParameter("CABI", m3CABI.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -150,7 +153,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -161,9 +165,9 @@ namespace M3H5Lib.Api
 		/// Description Get record
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_ROLE">Role/organizational position (Required)</param>
-		/// <param name="m3_CATY">Capability type (Required)</param>
-		/// <param name="m3_CABI">Capability (Required)</param>
+		/// <param name="m3ROLE">Role/organizational position (Required)</param>
+		/// <param name="m3CATY">Capability type (Required)</param>
+		/// <param name="m3CABI">Capability (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -172,9 +176,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_ROLE, 
-			string m3_CATY, 
-			string m3_CABI, 
+			string m3ROLE, 
+			string m3CATY, 
+			string m3CABI, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -189,18 +193,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ROLE))
-				throw new ArgumentNullException("m3_ROLE");
-			if (string.IsNullOrWhiteSpace(m3_CATY))
-				throw new ArgumentNullException("m3_CATY");
-			if (string.IsNullOrWhiteSpace(m3_CABI))
-				throw new ArgumentNullException("m3_CABI");
+			if (string.IsNullOrWhiteSpace(m3ROLE))
+				throw new ArgumentNullException(nameof(m3ROLE));
+			if (string.IsNullOrWhiteSpace(m3CATY))
+				throw new ArgumentNullException(nameof(m3CATY));
+			if (string.IsNullOrWhiteSpace(m3CABI))
+				throw new ArgumentNullException(nameof(m3CABI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ROLE", m3_ROLE.Trim())
-				.WithQueryParameter("CATY", m3_CATY.Trim())
-				.WithQueryParameter("CABI", m3_CABI.Trim());
+				.WithQueryParameter("ROLE", m3ROLE.Trim())
+				.WithQueryParameter("CATY", m3CATY.Trim())
+				.WithQueryParameter("CABI", m3CABI.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -210,7 +214,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -221,9 +226,9 @@ namespace M3H5Lib.Api
 		/// Description List records
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_ROLE">Role/organizational position (Required)</param>
-		/// <param name="m3_CATY">Capability type (Required)</param>
-		/// <param name="m3_CABI">Capability (Required)</param>
+		/// <param name="m3ROLE">Role/organizational position (Required)</param>
+		/// <param name="m3CATY">Capability type (Required)</param>
+		/// <param name="m3CABI">Capability (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -232,9 +237,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstResponse></returns>
 		/// <exception cref="M3Exception<LstResponse>"></exception>
 		public async Task<M3Response<LstResponse>> Lst(
-			string m3_ROLE, 
-			string m3_CATY, 
-			string m3_CABI, 
+			string m3ROLE, 
+			string m3CATY, 
+			string m3CABI, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -249,18 +254,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ROLE))
-				throw new ArgumentNullException("m3_ROLE");
-			if (string.IsNullOrWhiteSpace(m3_CATY))
-				throw new ArgumentNullException("m3_CATY");
-			if (string.IsNullOrWhiteSpace(m3_CABI))
-				throw new ArgumentNullException("m3_CABI");
+			if (string.IsNullOrWhiteSpace(m3ROLE))
+				throw new ArgumentNullException(nameof(m3ROLE));
+			if (string.IsNullOrWhiteSpace(m3CATY))
+				throw new ArgumentNullException(nameof(m3CATY));
+			if (string.IsNullOrWhiteSpace(m3CABI))
+				throw new ArgumentNullException(nameof(m3CABI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ROLE", m3_ROLE.Trim())
-				.WithQueryParameter("CATY", m3_CATY.Trim())
-				.WithQueryParameter("CABI", m3_CABI.Trim());
+				.WithQueryParameter("ROLE", m3ROLE.Trim())
+				.WithQueryParameter("CATY", m3CATY.Trim())
+				.WithQueryParameter("CABI", m3CABI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstResponse>(
@@ -270,7 +275,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -281,10 +287,10 @@ namespace M3H5Lib.Api
 		/// Description Update record
 		/// Version Release: 15
 		/// </summary>
-		/// <param name="m3_ROLE">Role/organizational position (Required)</param>
-		/// <param name="m3_CATY">Capability type (Required)</param>
-		/// <param name="m3_CABI">Capability (Required)</param>
-		/// <param name="m3_STAT">Status (Required)</param>
+		/// <param name="m3ROLE">Role/organizational position (Required)</param>
+		/// <param name="m3CATY">Capability type (Required)</param>
+		/// <param name="m3CABI">Capability (Required)</param>
+		/// <param name="m3STAT">Status (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -293,10 +299,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Upd(
-			string m3_ROLE, 
-			string m3_CATY, 
-			string m3_CABI, 
-			string m3_STAT, 
+			string m3ROLE, 
+			string m3CATY, 
+			string m3CABI, 
+			string m3STAT, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -311,21 +317,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ROLE))
-				throw new ArgumentNullException("m3_ROLE");
-			if (string.IsNullOrWhiteSpace(m3_CATY))
-				throw new ArgumentNullException("m3_CATY");
-			if (string.IsNullOrWhiteSpace(m3_CABI))
-				throw new ArgumentNullException("m3_CABI");
-			if (string.IsNullOrWhiteSpace(m3_STAT))
-				throw new ArgumentNullException("m3_STAT");
+			if (string.IsNullOrWhiteSpace(m3ROLE))
+				throw new ArgumentNullException(nameof(m3ROLE));
+			if (string.IsNullOrWhiteSpace(m3CATY))
+				throw new ArgumentNullException(nameof(m3CATY));
+			if (string.IsNullOrWhiteSpace(m3CABI))
+				throw new ArgumentNullException(nameof(m3CABI));
+			if (string.IsNullOrWhiteSpace(m3STAT))
+				throw new ArgumentNullException(nameof(m3STAT));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ROLE", m3_ROLE.Trim())
-				.WithQueryParameter("CATY", m3_CATY.Trim())
-				.WithQueryParameter("CABI", m3_CABI.Trim())
-				.WithQueryParameter("STAT", m3_STAT.Trim());
+				.WithQueryParameter("ROLE", m3ROLE.Trim())
+				.WithQueryParameter("CATY", m3CATY.Trim())
+				.WithQueryParameter("CABI", m3CABI.Trim())
+				.WithQueryParameter("STAT", m3STAT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -335,7 +341,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

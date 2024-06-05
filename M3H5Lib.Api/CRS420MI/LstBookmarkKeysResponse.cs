@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mail")]
-		public decimal? M3_MLID => GetNullableDecimal("MLID");
+		public decimal? M3MLID => GetNullableDecimal("MLID");
 
 		/// <summary>
 		/// Description: Data identity
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Data identity reference
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity reference")]
-		public int? M3_DTRF => GetNullableInt("DTRF");
+		public int? M3DTRF => GetNullableInt("DTRF");
 
 		/// <summary>
 		/// Description: Data identity subnumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity subnumber")]
-		public int? M3_DTIS => GetNullableInt("DTIS");
+		public int? M3DTIS => GetNullableInt("DTIS");
 
 		/// <summary>
 		/// Description: Table
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Keystring
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Keystring")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 	}
 }
 // EOF

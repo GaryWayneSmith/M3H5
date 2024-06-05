@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.STS040MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add Cost and Revenue Allocation rules
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OFAC">Owning facility (Required)</param>
-		/// <param name="m3_UFAC">Using facility (Required)</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_RSHA">Revenue share</param>
-		/// <param name="m3_CSHA">Cost share</param>
+		/// <param name="m3OFAC">Owning facility (Required)</param>
+		/// <param name="m3UFAC">Using facility (Required)</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3RSHA">Revenue share</param>
+		/// <param name="m3CSHA">Cost share</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddAllocRules(
-			string m3_OFAC, 
-			string m3_UFAC, 
-			string m3_ITCL = null, 
-			int? m3_RSHA = null, 
-			int? m3_CSHA = null, 
+			string m3OFAC, 
+			string m3UFAC, 
+			string m3ITCL = null, 
+			int? m3RSHA = null, 
+			int? m3CSHA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,23 +70,23 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_OFAC))
-				throw new ArgumentNullException("m3_OFAC");
-			if (string.IsNullOrWhiteSpace(m3_UFAC))
-				throw new ArgumentNullException("m3_UFAC");
+			if (string.IsNullOrWhiteSpace(m3OFAC))
+				throw new ArgumentNullException(nameof(m3OFAC));
+			if (string.IsNullOrWhiteSpace(m3UFAC))
+				throw new ArgumentNullException(nameof(m3UFAC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("OFAC", m3_OFAC.Trim())
-				.WithQueryParameter("UFAC", m3_UFAC.Trim());
+				.WithQueryParameter("OFAC", m3OFAC.Trim())
+				.WithQueryParameter("UFAC", m3UFAC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (m3_RSHA.HasValue)
-				request.WithQueryParameter("RSHA", m3_RSHA.Value.ToString());
-			if (m3_CSHA.HasValue)
-				request.WithQueryParameter("CSHA", m3_CSHA.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (m3RSHA.HasValue)
+				request.WithQueryParameter("RSHA", m3RSHA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CSHA.HasValue)
+				request.WithQueryParameter("CSHA", m3CSHA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -94,7 +96,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -105,9 +108,9 @@ namespace M3H5Lib.Api
 		/// Description Delete Cost and Revenue Allocation Rules
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OFAC">Owning facility</param>
-		/// <param name="m3_UFAC">Using facility</param>
-		/// <param name="m3_ITCL">Product group</param>
+		/// <param name="m3OFAC">Owning facility</param>
+		/// <param name="m3UFAC">Using facility</param>
+		/// <param name="m3ITCL">Product group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -116,9 +119,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelAllocRules(
-			string m3_OFAC = null, 
-			string m3_UFAC = null, 
-			string m3_ITCL = null, 
+			string m3OFAC = null, 
+			string m3UFAC = null, 
+			string m3ITCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -133,12 +136,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OFAC))
-				request.WithQueryParameter("OFAC", m3_OFAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UFAC))
-				request.WithQueryParameter("UFAC", m3_UFAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OFAC))
+				request.WithQueryParameter("OFAC", m3OFAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UFAC))
+				request.WithQueryParameter("UFAC", m3UFAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -148,7 +151,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -159,9 +163,9 @@ namespace M3H5Lib.Api
 		/// Description Get Cost and Revenue Rules
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_OFAC">Owning facility (Required)</param>
-		/// <param name="m3_UFAC">Using facility</param>
-		/// <param name="m3_ITCL">Product group</param>
+		/// <param name="m3OFAC">Owning facility (Required)</param>
+		/// <param name="m3UFAC">Using facility</param>
+		/// <param name="m3ITCL">Product group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -170,9 +174,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetAllocRulesResponse></returns>
 		/// <exception cref="M3Exception<GetAllocRulesResponse>"></exception>
 		public async Task<M3Response<GetAllocRulesResponse>> GetAllocRules(
-			string m3_OFAC, 
-			string m3_UFAC = null, 
-			string m3_ITCL = null, 
+			string m3OFAC, 
+			string m3UFAC = null, 
+			string m3ITCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -187,18 +191,18 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_OFAC))
-				throw new ArgumentNullException("m3_OFAC");
+			if (string.IsNullOrWhiteSpace(m3OFAC))
+				throw new ArgumentNullException(nameof(m3OFAC));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("OFAC", m3_OFAC.Trim());
+				.WithQueryParameter("OFAC", m3OFAC.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_UFAC))
-				request.WithQueryParameter("UFAC", m3_UFAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UFAC))
+				request.WithQueryParameter("UFAC", m3UFAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
 
 			// Execute the request
 			var result = await Execute<GetAllocRulesResponse>(
@@ -208,7 +212,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -219,9 +224,9 @@ namespace M3H5Lib.Api
 		/// Description List Cost and Revenue rules
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OFAC">Owning facility</param>
-		/// <param name="m3_UFAC">Using facility</param>
-		/// <param name="m3_ITCL">Product group</param>
+		/// <param name="m3OFAC">Owning facility</param>
+		/// <param name="m3UFAC">Using facility</param>
+		/// <param name="m3ITCL">Product group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -230,9 +235,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAllocRulesResponse></returns>
 		/// <exception cref="M3Exception<LstAllocRulesResponse>"></exception>
 		public async Task<M3Response<LstAllocRulesResponse>> LstAllocRules(
-			string m3_OFAC = null, 
-			string m3_UFAC = null, 
-			string m3_ITCL = null, 
+			string m3OFAC = null, 
+			string m3UFAC = null, 
+			string m3ITCL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -247,12 +252,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OFAC))
-				request.WithQueryParameter("OFAC", m3_OFAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UFAC))
-				request.WithQueryParameter("UFAC", m3_UFAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OFAC))
+				request.WithQueryParameter("OFAC", m3OFAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UFAC))
+				request.WithQueryParameter("UFAC", m3UFAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAllocRulesResponse>(
@@ -262,7 +267,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -273,11 +279,11 @@ namespace M3H5Lib.Api
 		/// Description Update Cost and Revenue Allocation Rules
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OFAC">Owning facility</param>
-		/// <param name="m3_UFAC">Using facility</param>
-		/// <param name="m3_ITCL">Product group</param>
-		/// <param name="m3_RSHA">Revenue share</param>
-		/// <param name="m3_CSHA">Cost share</param>
+		/// <param name="m3OFAC">Owning facility</param>
+		/// <param name="m3UFAC">Using facility</param>
+		/// <param name="m3ITCL">Product group</param>
+		/// <param name="m3RSHA">Revenue share</param>
+		/// <param name="m3CSHA">Cost share</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -286,11 +292,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdAllocRules(
-			string m3_OFAC = null, 
-			string m3_UFAC = null, 
-			string m3_ITCL = null, 
-			int? m3_RSHA = null, 
-			int? m3_CSHA = null, 
+			string m3OFAC = null, 
+			string m3UFAC = null, 
+			string m3ITCL = null, 
+			int? m3RSHA = null, 
+			int? m3CSHA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -305,16 +311,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OFAC))
-				request.WithQueryParameter("OFAC", m3_OFAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_UFAC))
-				request.WithQueryParameter("UFAC", m3_UFAC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ITCL))
-				request.WithQueryParameter("ITCL", m3_ITCL.Trim());
-			if (m3_RSHA.HasValue)
-				request.WithQueryParameter("RSHA", m3_RSHA.Value.ToString());
-			if (m3_CSHA.HasValue)
-				request.WithQueryParameter("CSHA", m3_CSHA.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3OFAC))
+				request.WithQueryParameter("OFAC", m3OFAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3UFAC))
+				request.WithQueryParameter("UFAC", m3UFAC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ITCL))
+				request.WithQueryParameter("ITCL", m3ITCL.Trim());
+			if (m3RSHA.HasValue)
+				request.WithQueryParameter("RSHA", m3RSHA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3CSHA.HasValue)
+				request.WithQueryParameter("CSHA", m3CSHA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -324,7 +330,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

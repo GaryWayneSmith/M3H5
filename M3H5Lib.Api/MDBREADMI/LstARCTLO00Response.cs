@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Arch run number")]
-		public decimal? M3_ARCN => GetNullableDecimal("ARCN");
+		public decimal? M3ARCN => GetNullableDecimal("ARCN");
 
 		/// <summary>
 		/// Description: File
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Master table
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Master table")]
-		public int? M3_ARMA => GetNullableInt("ARMA");
+		public int? M3ARMA => GetNullableInt("ARMA");
 
 		/// <summary>
 		/// Description: Rec start prod
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rec start prod")]
-		public decimal? M3_AROR => GetNullableDecimal("AROR");
+		public decimal? M3AROR => GetNullableDecimal("AROR");
 
 		/// <summary>
 		/// Description: Rec end prod
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rec end prod")]
-		public decimal? M3_ARRE => GetNullableDecimal("ARRE");
+		public decimal? M3ARRE => GetNullableDecimal("ARRE");
 
 		/// <summary>
 		/// Description: Arch library
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Arch library")]
-		public string M3_ARLI => GetString("ARLI");
+		public string M3ARLI => GetString("ARLI");
 
 		/// <summary>
 		/// Description: Rec end arch
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rec end arch")]
-		public decimal? M3_ARRL => GetNullableDecimal("ARRL");
+		public decimal? M3ARRL => GetNullableDecimal("ARRL");
 
 		/// <summary>
 		/// Description: Rec start arch
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rec start arch")]
-		public decimal? M3_AROL => GetNullableDecimal("AROL");
+		public decimal? M3AROL => GetNullableDecimal("AROL");
 
 		/// <summary>
 		/// Description: Archive records
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Archive records")]
-		public decimal? M3_ARTR => GetNullableDecimal("ARTR");
+		public decimal? M3ARTR => GetNullableDecimal("ARTR");
 
 		/// <summary>
 		/// Description: Change date
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.MDBREADMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Change date")]
-		public DateTime? M3_LMDT => GetNullableDateTime("LMDT");
+		public DateTime? M3LMDT => GetNullableDateTime("LMDT");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hierarchylevel1")]
-		public int? M3_DHI1 => GetNullableInt("DHI1");
+		public int? M3DHI1 => GetNullableInt("DHI1");
 
 		/// <summary>
 		/// Description: Hierarchylevel2
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hierarchylevel2")]
-		public int? M3_DHI2 => GetNullableInt("DHI2");
+		public int? M3DHI2 => GetNullableInt("DHI2");
 
 		/// <summary>
 		/// Description: Hierarchylevel3
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hierarchylevel3")]
-		public int? M3_DHI3 => GetNullableInt("DHI3");
+		public int? M3DHI3 => GetNullableInt("DHI3");
 
 		/// <summary>
 		/// Description: Hierarchylevel4
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hierarchylevel4")]
-		public int? M3_DHI4 => GetNullableInt("DHI4");
+		public int? M3DHI4 => GetNullableInt("DHI4");
 
 		/// <summary>
 		/// Description: Hierarchylevel5
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hierarchylevel5")]
-		public int? M3_DHI5 => GetNullableInt("DHI5");
+		public int? M3DHI5 => GetNullableInt("DHI5");
 
 		/// <summary>
 		/// Description: Numberofpositions
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numberofpositions")]
-		public int? M3_DHI6 => GetNullableInt("DHI6");
+		public int? M3DHI6 => GetNullableInt("DHI6");
 
 		/// <summary>
 		/// Description: Useofsearchgroup
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Useofsearchgroup")]
-		public int? M3_DHI7 => GetNullableInt("DHI7");
+		public int? M3DHI7 => GetNullableInt("DHI7");
 
 		/// <summary>
 		/// Description: Defaulttext
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.MMS021MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Defaulttext")]
-		public int? M3_DHI8 => GetNullableInt("DHI8");
+		public int? M3DHI8 => GetNullableInt("DHI8");
 	}
 }
 // EOF

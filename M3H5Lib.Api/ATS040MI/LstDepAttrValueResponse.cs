@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute model")]
-		public string M3_ATMO => GetString("ATMO");
+		public string M3ATMO => GetString("ATMO");
 
 		/// <summary>
 		/// Description: Priority
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Priority")]
-		public string M3_PREX => GetString("PREX");
+		public string M3PREX => GetString("PREX");
 
 		/// <summary>
 		/// Description: Start value 1
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 1")]
-		public string M3_OBV1 => GetString("OBV1");
+		public string M3OBV1 => GetString("OBV1");
 
 		/// <summary>
 		/// Description: Start value 2
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 2")]
-		public string M3_OBV2 => GetString("OBV2");
+		public string M3OBV2 => GetString("OBV2");
 
 		/// <summary>
 		/// Description: Start value 3
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start value 3")]
-		public string M3_OBV3 => GetString("OBV3");
+		public string M3OBV3 => GetString("OBV3");
 
 		/// <summary>
 		/// Description: Validate Attribute 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute 1")]
-		public string M3_VAT1 => GetString("VAT1");
+		public string M3VAT1 => GetString("VAT1");
 
 		/// <summary>
 		/// Description: Validate Attribute 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute 2")]
-		public string M3_VAT2 => GetString("VAT2");
+		public string M3VAT2 => GetString("VAT2");
 
 		/// <summary>
 		/// Description: Validate Attribute 3
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute 3")]
-		public string M3_VAT3 => GetString("VAT3");
+		public string M3VAT3 => GetString("VAT3");
 
 		/// <summary>
 		/// Description: Validate Attribute 4
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute 4")]
-		public string M3_VAT4 => GetString("VAT4");
+		public string M3VAT4 => GetString("VAT4");
 
 		/// <summary>
 		/// Description: Result Attribute
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result Attribute")]
-		public string M3_RAT1 => GetString("RAT1");
+		public string M3RAT1 => GetString("RAT1");
 
 		/// <summary>
 		/// Description: Mandatory attribute
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mandatory attribute")]
-		public int? M3_MANA => GetNullableInt("MANA");
+		public int? M3MANA => GetNullableInt("MANA");
 
 		/// <summary>
 		/// Description: Validate Attribute  value 1
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute  value 1")]
-		public string M3_VAV1 => GetString("VAV1");
+		public string M3VAV1 => GetString("VAV1");
 
 		/// <summary>
 		/// Description: Validate Attribute  value 2
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute  value 2")]
-		public string M3_VAV2 => GetString("VAV2");
+		public string M3VAV2 => GetString("VAV2");
 
 		/// <summary>
 		/// Description: Validate Attribute  value 3
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute  value 3")]
-		public string M3_VAV3 => GetString("VAV3");
+		public string M3VAV3 => GetString("VAV3");
 
 		/// <summary>
 		/// Description: Validate Attribute  value 4
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Validate Attribute  value 4")]
-		public string M3_VAV4 => GetString("VAV4");
+		public string M3VAV4 => GetString("VAV4");
 
 		/// <summary>
 		/// Description: Result attribute value fr
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result attribute value fr")]
-		public string M3_RAVF => GetString("RAVF");
+		public string M3RAVF => GetString("RAVF");
 
 		/// <summary>
 		/// Description: Result attribute value to
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Result attribute value to")]
-		public string M3_RAVT => GetString("RAVT");
+		public string M3RAVT => GetString("RAVT");
 
 		/// <summary>
 		/// Description: Field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ1 => GetString("OBJ1");
+		public string M3OBJ1 => GetString("OBJ1");
 
 		/// <summary>
 		/// Description: Field
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ2 => GetString("OBJ2");
+		public string M3OBJ2 => GetString("OBJ2");
 
 		/// <summary>
 		/// Description: Field
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OBJ3 => GetString("OBJ3");
+		public string M3OBJ3 => GetString("OBJ3");
 
 		/// <summary>
 		/// Description: Default value
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.ATS040MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Default value")]
-		public int? M3_DEFV => GetNullableInt("DEFV");
+		public int? M3DEFV => GetNullableInt("DEFV");
 	}
 }
 // EOF

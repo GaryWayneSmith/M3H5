@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Custom field")]
-		public string M3_CFMF => GetString("CFMF");
+		public string M3CFMF => GetString("CFMF");
 
 		/// <summary>
 		/// Description: Description
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Heading - custom field
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Heading - custom field")]
-		public string M3_CFML => GetString("CFML");
+		public string M3CFML => GetString("CFML");
 
 		/// <summary>
 		/// Description: Field type
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field type")]
-		public string M3_FLDM => GetString("FLDM");
+		public string M3FLDM => GetString("FLDM");
 
 		/// <summary>
 		/// Description: Field length
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field length")]
-		public int? M3_FLDB => GetNullableInt("FLDB");
+		public int? M3FLDB => GetNullableInt("FLDB");
 
 		/// <summary>
 		/// Description: Number of decimal places
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of decimal places")]
-		public int? M3_DCCD => GetNullableInt("DCCD");
+		public int? M3DCCD => GetNullableInt("DCCD");
 
 		/// <summary>
 		/// Description: Meter
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Meter")]
-		public string M3_MES0 => GetString("MES0");
+		public string M3MES0 => GetString("MES0");
 
 		/// <summary>
 		/// Description: Field category
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS470MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field category")]
-		public int? M3_FLCT => GetNullableInt("FLCT");
+		public int? M3FLCT => GetNullableInt("FLCT");
 	}
 }
 // EOF

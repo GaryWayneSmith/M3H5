@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.ARS251MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("GL information number")]
-		public int? M3_SEXN => GetNullableInt("SEXN");
+		public int? M3SEXN => GetNullableInt("SEXN");
 
 		/// <summary>
 		/// Description: GL additional information
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.ARS251MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("GL additional information")]
-		public string M3_SEXI => GetString("SEXI");
+		public string M3SEXI => GetString("SEXI");
 
 		/// <summary>
 		/// Description: GL information sequence number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.ARS251MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("GL information sequence number")]
-		public int? M3_SEXS => GetNullableInt("SEXS");
+		public int? M3SEXS => GetNullableInt("SEXS");
 	}
 }
 // EOF

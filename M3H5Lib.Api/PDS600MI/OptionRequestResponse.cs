@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Feature type")]
-		public string M3_FTTP => GetString("FTTP");
+		public string M3FTTP => GetString("FTTP");
 
 		/// <summary>
 		/// Description: Alph. Option (Item no. for FTTP = 2)
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Alph. Option (Item no. for FTTP = 2)")]
-		public string M3_OPTN => GetString("OPTN");
+		public string M3OPTN => GetString("OPTN");
 
 		/// <summary>
 		/// Description: Operation des. (Item des. for FTTP = 2)
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation des. (Item des. for FTTP = 2)")]
-		public string M3_OPDS => GetString("OPDS");
+		public string M3OPDS => GetString("OPDS");
 
 		/// <summary>
 		/// Description: (Feature type 3) From value, 6 Decimals
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("(Feature type 3) From value, 6 Decimals")]
-		public string M3_NUVF => GetString("NUVF");
+		public string M3NUVF => GetString("NUVF");
 
 		/// <summary>
 		/// Description: (Feature type 3) To value, 6 Decimals
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("(Feature type 3) To value, 6 Decimals")]
-		public string M3_NUVT => GetString("NUVT");
+		public string M3NUVT => GetString("NUVT");
 
 		/// <summary>
 		/// Description: Unit of measurement (Feature type 3 & 4)
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Unit of measurement (Feature type 3 & 4)")]
-		public string M3_UNIT => GetString("UNIT");
+		public string M3UNIT => GetString("UNIT");
 
 		/// <summary>
 		/// Description: Numeric range multiple
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric range multiple")]
-		public int? M3_NRMU => GetNullableInt("NRMU");
+		public int? M3NRMU => GetNullableInt("NRMU");
 
 		/// <summary>
 		/// Description: RGB-code red
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("RGB-code red")]
-		public int? M3_RGBR => GetNullableInt("RGBR");
+		public int? M3RGBR => GetNullableInt("RGBR");
 
 		/// <summary>
 		/// Description: RGB-code blue
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("RGB-code blue")]
-		public int? M3_RGBG => GetNullableInt("RGBG");
+		public int? M3RGBG => GetNullableInt("RGBG");
 
 		/// <summary>
 		/// Description: RGB-code blue
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("RGB-code blue")]
-		public int? M3_RGBB => GetNullableInt("RGBB");
+		public int? M3RGBB => GetNullableInt("RGBB");
 
 		/// <summary>
 		/// Description: Material category
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Material category")]
-		public string M3_MTCT => GetString("MTCT");
+		public string M3MTCT => GetString("MTCT");
 
 		/// <summary>
 		/// Description: Picture Id
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Picture Id")]
-		public string M3_PINO => GetString("PINO");
+		public string M3PINO => GetString("PINO");
 
 		/// <summary>
 		/// Description: Numeric range multiple
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PDS600MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Numeric range multiple")]
-		public string M3_NRM1 => GetString("NRM1");
+		public string M3NRM1 => GetString("NRM1");
 	}
 }
 // EOF

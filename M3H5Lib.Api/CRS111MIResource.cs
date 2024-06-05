@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CRS111MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,9 +38,9 @@ namespace M3H5Lib.Api
 		/// Description Add e-mail address
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_EMTP">E-mail type (Required)</param>
-		/// <param name="m3_EMKY">E-mail key value (Required)</param>
-		/// <param name="m3_EMAL">Electronic mail address</param>
+		/// <param name="m3EMTP">E-mail type (Required)</param>
+		/// <param name="m3EMKY">E-mail key value (Required)</param>
+		/// <param name="m3EMAL">Electronic mail address</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -47,9 +49,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Add(
-			string m3_EMTP, 
-			string m3_EMKY, 
-			string m3_EMAL = null, 
+			string m3EMTP, 
+			string m3EMKY, 
+			string m3EMAL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -64,19 +66,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EMTP))
-				throw new ArgumentNullException("m3_EMTP");
-			if (string.IsNullOrWhiteSpace(m3_EMKY))
-				throw new ArgumentNullException("m3_EMKY");
+			if (string.IsNullOrWhiteSpace(m3EMTP))
+				throw new ArgumentNullException(nameof(m3EMTP));
+			if (string.IsNullOrWhiteSpace(m3EMKY))
+				throw new ArgumentNullException(nameof(m3EMKY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EMTP", m3_EMTP.Trim())
-				.WithQueryParameter("EMKY", m3_EMKY.Trim());
+				.WithQueryParameter("EMTP", m3EMTP.Trim())
+				.WithQueryParameter("EMKY", m3EMKY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EMAL))
-				request.WithQueryParameter("EMAL", m3_EMAL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EMAL))
+				request.WithQueryParameter("EMAL", m3EMAL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -86,7 +88,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -97,9 +100,9 @@ namespace M3H5Lib.Api
 		/// Description Change e-mail address
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_EMTP">E-mail type (Required)</param>
-		/// <param name="m3_EMKY">E-mail key value (Required)</param>
-		/// <param name="m3_EMAL">Change Electronic mail address</param>
+		/// <param name="m3EMTP">E-mail type (Required)</param>
+		/// <param name="m3EMKY">E-mail key value (Required)</param>
+		/// <param name="m3EMAL">Change Electronic mail address</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -108,9 +111,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Change(
-			string m3_EMTP, 
-			string m3_EMKY, 
-			string m3_EMAL = null, 
+			string m3EMTP, 
+			string m3EMKY, 
+			string m3EMAL = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -125,19 +128,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EMTP))
-				throw new ArgumentNullException("m3_EMTP");
-			if (string.IsNullOrWhiteSpace(m3_EMKY))
-				throw new ArgumentNullException("m3_EMKY");
+			if (string.IsNullOrWhiteSpace(m3EMTP))
+				throw new ArgumentNullException(nameof(m3EMTP));
+			if (string.IsNullOrWhiteSpace(m3EMKY))
+				throw new ArgumentNullException(nameof(m3EMKY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EMTP", m3_EMTP.Trim())
-				.WithQueryParameter("EMKY", m3_EMKY.Trim());
+				.WithQueryParameter("EMTP", m3EMTP.Trim())
+				.WithQueryParameter("EMKY", m3EMKY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EMAL))
-				request.WithQueryParameter("EMAL", m3_EMAL.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EMAL))
+				request.WithQueryParameter("EMAL", m3EMAL.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -147,7 +150,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -158,8 +162,8 @@ namespace M3H5Lib.Api
 		/// Description Delete a specific address
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_EMTP">E-mail type (Required)</param>
-		/// <param name="m3_EMKY">E-mail key value (Required)</param>
+		/// <param name="m3EMTP">E-mail type (Required)</param>
+		/// <param name="m3EMKY">E-mail key value (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -168,8 +172,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> Delete(
-			string m3_EMTP, 
-			string m3_EMKY, 
+			string m3EMTP, 
+			string m3EMKY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -184,15 +188,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EMTP))
-				throw new ArgumentNullException("m3_EMTP");
-			if (string.IsNullOrWhiteSpace(m3_EMKY))
-				throw new ArgumentNullException("m3_EMKY");
+			if (string.IsNullOrWhiteSpace(m3EMTP))
+				throw new ArgumentNullException(nameof(m3EMTP));
+			if (string.IsNullOrWhiteSpace(m3EMKY))
+				throw new ArgumentNullException(nameof(m3EMKY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EMTP", m3_EMTP.Trim())
-				.WithQueryParameter("EMKY", m3_EMKY.Trim());
+				.WithQueryParameter("EMTP", m3EMTP.Trim())
+				.WithQueryParameter("EMKY", m3EMKY.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -202,7 +206,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -213,8 +218,8 @@ namespace M3H5Lib.Api
 		/// Description Get specific address
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_EMTP">E-mail type (Required)</param>
-		/// <param name="m3_EMKY">E-mail key value (Required)</param>
+		/// <param name="m3EMTP">E-mail type (Required)</param>
+		/// <param name="m3EMKY">E-mail key value (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -223,8 +228,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetResponse></returns>
 		/// <exception cref="M3Exception<GetResponse>"></exception>
 		public async Task<M3Response<GetResponse>> Get(
-			string m3_EMTP, 
-			string m3_EMKY, 
+			string m3EMTP, 
+			string m3EMKY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -239,15 +244,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EMTP))
-				throw new ArgumentNullException("m3_EMTP");
-			if (string.IsNullOrWhiteSpace(m3_EMKY))
-				throw new ArgumentNullException("m3_EMKY");
+			if (string.IsNullOrWhiteSpace(m3EMTP))
+				throw new ArgumentNullException(nameof(m3EMTP));
+			if (string.IsNullOrWhiteSpace(m3EMKY))
+				throw new ArgumentNullException(nameof(m3EMKY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EMTP", m3_EMTP.Trim())
-				.WithQueryParameter("EMKY", m3_EMKY.Trim());
+				.WithQueryParameter("EMTP", m3EMTP.Trim())
+				.WithQueryParameter("EMKY", m3EMKY.Trim());
 
 			// Execute the request
 			var result = await Execute<GetResponse>(
@@ -257,7 +262,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -268,8 +274,8 @@ namespace M3H5Lib.Api
 		/// Description List available adresses
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_EMTP">E-mail type (Required)</param>
-		/// <param name="m3_EMKY">E-mail key value</param>
+		/// <param name="m3EMTP">E-mail type (Required)</param>
+		/// <param name="m3EMKY">E-mail key value</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -278,8 +284,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<ListResponse></returns>
 		/// <exception cref="M3Exception<ListResponse>"></exception>
 		public async Task<M3Response<ListResponse>> List(
-			string m3_EMTP, 
-			string m3_EMKY = null, 
+			string m3EMTP, 
+			string m3EMKY = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -294,16 +300,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EMTP))
-				throw new ArgumentNullException("m3_EMTP");
+			if (string.IsNullOrWhiteSpace(m3EMTP))
+				throw new ArgumentNullException(nameof(m3EMTP));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EMTP", m3_EMTP.Trim());
+				.WithQueryParameter("EMTP", m3EMTP.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EMKY))
-				request.WithQueryParameter("EMKY", m3_EMKY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EMKY))
+				request.WithQueryParameter("EMKY", m3EMKY.Trim());
 
 			// Execute the request
 			var result = await Execute<ListResponse>(
@@ -313,7 +319,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -324,7 +331,7 @@ namespace M3H5Lib.Api
 		/// Description List customers
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CUNO">Customer number</param>
+		/// <param name="m3CUNO">Customer number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -333,7 +340,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCustomersResponse></returns>
 		/// <exception cref="M3Exception<LstCustomersResponse>"></exception>
 		public async Task<M3Response<LstCustomersResponse>> LstCustomers(
-			string m3_CUNO = null, 
+			string m3CUNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -348,8 +355,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUNO))
-				request.WithQueryParameter("CUNO", m3_CUNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUNO))
+				request.WithQueryParameter("CUNO", m3CUNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCustomersResponse>(
@@ -359,7 +366,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -370,7 +378,7 @@ namespace M3H5Lib.Api
 		/// Description List Employees
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_EMNO">Employee number</param>
+		/// <param name="m3EMNO">Employee number</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -379,7 +387,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstEmployeesResponse></returns>
 		/// <exception cref="M3Exception<LstEmployeesResponse>"></exception>
 		public async Task<M3Response<LstEmployeesResponse>> LstEmployees(
-			string m3_EMNO = null, 
+			string m3EMNO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -394,8 +402,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_EMNO))
-				request.WithQueryParameter("EMNO", m3_EMNO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3EMNO))
+				request.WithQueryParameter("EMNO", m3EMNO.Trim());
 
 			// Execute the request
 			var result = await Execute<LstEmployeesResponse>(
@@ -405,7 +413,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -416,10 +425,10 @@ namespace M3H5Lib.Api
 		/// Description List suppliers
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company number</param>
-		/// <param name="m3_FRSU">From Supplier</param>
-		/// <param name="m3_TOSU">To Supplier</param>
-		/// <param name="m3_LMTS">Last import´s timestamp</param>
+		/// <param name="m3CONO">Company number</param>
+		/// <param name="m3FRSU">From Supplier</param>
+		/// <param name="m3TOSU">To Supplier</param>
+		/// <param name="m3LMTS">Last import´s timestamp</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -428,10 +437,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstSuppliersResponse></returns>
 		/// <exception cref="M3Exception<LstSuppliersResponse>"></exception>
 		public async Task<M3Response<LstSuppliersResponse>> LstSuppliers(
-			int? m3_CONO = null, 
-			string m3_FRSU = null, 
-			string m3_TOSU = null, 
-			decimal? m3_LMTS = null, 
+			int? m3CONO = null, 
+			string m3FRSU = null, 
+			string m3TOSU = null, 
+			decimal? m3LMTS = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -446,14 +455,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_CONO.HasValue)
-				request.WithQueryParameter("CONO", m3_CONO.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_FRSU))
-				request.WithQueryParameter("FRSU", m3_FRSU.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TOSU))
-				request.WithQueryParameter("TOSU", m3_TOSU.Trim());
-			if (m3_LMTS.HasValue)
-				request.WithQueryParameter("LMTS", m3_LMTS.Value.ToString());
+			if (m3CONO.HasValue)
+				request.WithQueryParameter("CONO", m3CONO.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3FRSU))
+				request.WithQueryParameter("FRSU", m3FRSU.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TOSU))
+				request.WithQueryParameter("TOSU", m3TOSU.Trim());
+			if (m3LMTS.HasValue)
+				request.WithQueryParameter("LMTS", m3LMTS.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstSuppliersResponse>(
@@ -463,7 +472,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -474,10 +484,10 @@ namespace M3H5Lib.Api
 		/// Description List selected users
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_FDIV">From Division</param>
-		/// <param name="m3_TDIV">To Division</param>
-		/// <param name="m3_FRES">From User</param>
-		/// <param name="m3_TRES">To User</param>
+		/// <param name="m3FDIV">From Division</param>
+		/// <param name="m3TDIV">To Division</param>
+		/// <param name="m3FRES">From User</param>
+		/// <param name="m3TRES">To User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -486,10 +496,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<SelUsersResponse></returns>
 		/// <exception cref="M3Exception<SelUsersResponse>"></exception>
 		public async Task<M3Response<SelUsersResponse>> SelUsers(
-			string m3_FDIV = null, 
-			string m3_TDIV = null, 
-			string m3_FRES = null, 
-			string m3_TRES = null, 
+			string m3FDIV = null, 
+			string m3TDIV = null, 
+			string m3FRES = null, 
+			string m3TRES = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -504,14 +514,14 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FDIV))
-				request.WithQueryParameter("FDIV", m3_FDIV.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TDIV))
-				request.WithQueryParameter("TDIV", m3_TDIV.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FRES))
-				request.WithQueryParameter("FRES", m3_FRES.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRES))
-				request.WithQueryParameter("TRES", m3_TRES.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FDIV))
+				request.WithQueryParameter("FDIV", m3FDIV.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TDIV))
+				request.WithQueryParameter("TDIV", m3TDIV.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FRES))
+				request.WithQueryParameter("FRES", m3FRES.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRES))
+				request.WithQueryParameter("TRES", m3TRES.Trim());
 
 			// Execute the request
 			var result = await Execute<SelUsersResponse>(
@@ -521,7 +531,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -532,8 +543,8 @@ namespace M3H5Lib.Api
 		/// Description TestMail
 		/// Version Release: 5e90
 		/// </summary>
-		/// <param name="m3_EMTP">E-mail type (Required)</param>
-		/// <param name="m3_EMKY">E-mail key value (Required)</param>
+		/// <param name="m3EMTP">E-mail type (Required)</param>
+		/// <param name="m3EMKY">E-mail key value (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -542,8 +553,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> TestMail(
-			string m3_EMTP, 
-			string m3_EMKY, 
+			string m3EMTP, 
+			string m3EMKY, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -558,15 +569,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_EMTP))
-				throw new ArgumentNullException("m3_EMTP");
-			if (string.IsNullOrWhiteSpace(m3_EMKY))
-				throw new ArgumentNullException("m3_EMKY");
+			if (string.IsNullOrWhiteSpace(m3EMTP))
+				throw new ArgumentNullException(nameof(m3EMTP));
+			if (string.IsNullOrWhiteSpace(m3EMKY))
+				throw new ArgumentNullException(nameof(m3EMKY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("EMTP", m3_EMTP.Trim())
-				.WithQueryParameter("EMKY", m3_EMKY.Trim());
+				.WithQueryParameter("EMTP", m3EMTP.Trim())
+				.WithQueryParameter("EMKY", m3EMKY.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -576,7 +587,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

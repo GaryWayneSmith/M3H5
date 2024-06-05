@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Division
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Division")]
-		public string M3_DIVI => GetString("DIVI");
+		public string M3DIVI => GetString("DIVI");
 
 		/// <summary>
 		/// Description: Employee number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee number")]
-		public string M3_EMNO => GetString("EMNO");
+		public string M3EMNO => GetString("EMNO");
 
 		/// <summary>
 		/// Description: Name
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_EMNM => GetString("EMNM");
+		public string M3EMNM => GetString("EMNM");
 
 		/// <summary>
 		/// Description: User
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User")]
-		public string M3_USID => GetString("USID");
+		public string M3USID => GetString("USID");
 
 		/// <summary>
 		/// Description: Active employee
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Active employee")]
-		public int? M3_ACEM => GetNullableInt("ACEM");
+		public int? M3ACEM => GetNullableInt("ACEM");
 
 		/// <summary>
 		/// Description: Facility
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Work center
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work center")]
-		public string M3_PLGR => GetString("PLGR");
+		public string M3PLGR => GetString("PLGR");
 
 		/// <summary>
 		/// Description: Department
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Department")]
-		public string M3_DEPT => GetString("DEPT");
+		public string M3DEPT => GetString("DEPT");
 
 		/// <summary>
 		/// Description: Planning area
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Planning area")]
-		public string M3_REAR => GetString("REAR");
+		public string M3REAR => GetString("REAR");
 
 		/// <summary>
 		/// Description: Work schedule
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule")]
-		public int? M3_WOSC => GetNullableInt("WOSC");
+		public int? M3WOSC => GetNullableInt("WOSC");
 
 		/// <summary>
 		/// Description: Work schedule from date
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Work schedule from date")]
-		public DateTime? M3_WODT => GetNullableDateTime("WODT");
+		public DateTime? M3WODT => GetNullableDateTime("WODT");
 
 		/// <summary>
 		/// Description: Start week - schedule
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Start week - schedule")]
-		public int? M3_SWSC => GetNullableInt("SWSC");
+		public int? M3SWSC => GetNullableInt("SWSC");
 
 		/// <summary>
 		/// Description: Card number
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Card number")]
-		public long? M3_CANO => GetNullableLong("CANO");
+		public long? M3CANO => GetNullableLong("CANO");
 
 		/// <summary>
 		/// Description: PIN code
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("PIN code")]
-		public string M3_PNCO => GetString("PNCO");
+		public string M3PNCO => GetString("PNCO");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Telephone number 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephone number 1")]
-		public string M3_IPHN => GetString("IPHN");
+		public string M3IPHN => GetString("IPHN");
 
 		/// <summary>
 		/// Description: Celluar telephone number
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Celluar telephone number")]
-		public string M3_CAPH => GetString("CAPH");
+		public string M3CAPH => GetString("CAPH");
 
 		/// <summary>
 		/// Description: Used in Time & Attendance
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used in Time & Attendance")]
-		public int? M3_MXTM => GetNullableInt("MXTM");
+		public int? M3MXTM => GetNullableInt("MXTM");
 
 		/// <summary>
 		/// Description: Used in Service and Rental
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used in Service and Rental")]
-		public int? M3_MXSO => GetNullableInt("MXSO");
+		public int? M3MXSO => GetNullableInt("MXSO");
 
 		/// <summary>
 		/// Description: Used in Time accounting
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used in Time accounting")]
-		public int? M3_MXTA => GetNullableInt("MXTA");
+		public int? M3MXTA => GetNullableInt("MXTA");
 
 		/// <summary>
 		/// Description: Used in Manufactoring Orde Processing
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Used in Manufactoring Orde Processing")]
-		public int? M3_MXPM => GetNullableInt("MXPM");
+		public int? M3MXPM => GetNullableInt("MXPM");
 
 		/// <summary>
 		/// Description: Ued in Maintenance
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ued in Maintenance")]
-		public int? M3_MXMO => GetNullableInt("MXMO");
+		public int? M3MXMO => GetNullableInt("MXMO");
 
 		/// <summary>
 		/// Description: Employee group
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee group")]
-		public string M3_TMGR => GetString("TMGR");
+		public string M3TMGR => GetString("TMGR");
 
 		/// <summary>
 		/// Description: Operation include Time and Attendance
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Operation include Time and Attendance")]
-		public int? M3_SUSD => GetNullableInt("SUSD");
+		public int? M3SUSD => GetNullableInt("SUSD");
 
 		/// <summary>
 		/// Description: Calculation method - overtime
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation method - overtime")]
-		public int? M3_OTCD => GetNullableInt("OTCD");
+		public int? M3OTCD => GetNullableInt("OTCD");
 
 		/// <summary>
 		/// Description: Minimum overtime per day
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Minimum overtime per day")]
-		public int? M3_MNOT => GetNullableInt("MNOT");
+		public int? M3MNOT => GetNullableInt("MNOT");
 
 		/// <summary>
 		/// Description: Calculation method - flextime
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculation method - flextime")]
-		public int? M3_FLAW => GetNullableInt("FLAW");
+		public int? M3FLAW => GetNullableInt("FLAW");
 
 		/// <summary>
 		/// Description: Time type for flextime
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type for flextime")]
-		public string M3_FLTP => GetString("FLTP");
+		public string M3FLTP => GetString("FLTP");
 
 		/// <summary>
 		/// Description: Time type
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type")]
-		public string M3_TTPE => GetString("TTPE");
+		public string M3TTPE => GetString("TTPE");
 
 		/// <summary>
 		/// Description: Time type actual attendance
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type actual attendance")]
-		public string M3_TMRP => GetString("TMRP");
+		public string M3TMRP => GetString("TMRP");
 
 		/// <summary>
 		/// Description: Time type missing time
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type missing time")]
-		public string M3_RMTP => GetString("RMTP");
+		public string M3RMTP => GetString("RMTP");
 
 		/// <summary>
 		/// Description: Variable workday
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Variable workday")]
-		public int? M3_FXWD => GetNullableInt("FXWD");
+		public int? M3FXWD => GetNullableInt("FXWD");
 
 		/// <summary>
 		/// Description: Time limit variable workday
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time limit variable workday")]
-		public int? M3_TVWD => GetNullableInt("TVWD");
+		public int? M3TVWD => GetNullableInt("TVWD");
 
 		/// <summary>
 		/// Description: Automatic generation time type
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Automatic generation time type")]
-		public string M3_AUTT => GetString("AUTT");
+		public string M3AUTT => GetString("AUTT");
 
 		/// <summary>
 		/// Description: Number of minutes
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of minutes")]
-		public int? M3_TMEM => GetNullableInt("TMEM");
+		public int? M3TMEM => GetNullableInt("TMEM");
 
 		/// <summary>
 		/// Description: Time type run time
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type run time")]
-		public string M3_TPOT => GetString("TPOT");
+		public string M3TPOT => GetString("TPOT");
 
 		/// <summary>
 		/// Description: Time type setup time
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Time type setup time")]
-		public string M3_TPST => GetString("TPST");
+		public string M3TPST => GetString("TPST");
 
 		/// <summary>
 		/// Description: Piece rate paid
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Piece rate paid")]
-		public int? M3_PWPY => GetNullableInt("PWPY");
+		public int? M3PWPY => GetNullableInt("PWPY");
 
 		/// <summary>
 		/// Description: Cost center
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost center")]
-		public string M3_TMCC => GetString("TMCC");
+		public string M3TMCC => GetString("TMCC");
 
 		/// <summary>
 		/// Description: Calculated to date
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Calculated to date")]
-		public DateTime? M3_CTOD => GetNullableDateTime("CTOD");
+		public DateTime? M3CTOD => GetNullableDateTime("CTOD");
 
 		/// <summary>
 		/// Description: Latest transfer to date to history/pay
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Latest transfer to date to history/pay")]
-		public DateTime? M3_TTPD => GetNullableDateTime("TTPD");
+		public DateTime? M3TTPD => GetNullableDateTime("TTPD");
 
 		/// <summary>
 		/// Description: Employee identity
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee identity")]
-		public string M3_EMID => GetString("EMID");
+		public string M3EMID => GetString("EMID");
 
 		/// <summary>
 		/// Description: Name
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: Employee group - Time Accounting
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employee group - Time Accounting")]
-		public string M3_PCAT => GetString("PCAT");
+		public string M3PCAT => GetString("PCAT");
 
 		/// <summary>
 		/// Description: Approval ID
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Approval ID")]
-		public string M3_APID => GetString("APID");
+		public string M3APID => GetString("APID");
 
 		/// <summary>
 		/// Description: Display total
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Display total")]
-		public int? M3_DSSU => GetNullableInt("DSSU");
+		public int? M3DSSU => GetNullableInt("DSSU");
 
 		/// <summary>
 		/// Description: View display
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View display")]
-		public int? M3_DSWD => GetNullableInt("DSWD");
+		public int? M3DSWD => GetNullableInt("DSWD");
 
 		/// <summary>
 		/// Description: View entry
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("View entry")]
-		public int? M3_DSWE => GetNullableInt("DSWE");
+		public int? M3DSWE => GetNullableInt("DSWE");
 
 		/// <summary>
 		/// Description: Cost center
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Cost center")]
-		public string M3_TACC => GetString("TACC");
+		public string M3TACC => GetString("TACC");
 
 		/// <summary>
 		/// Description: User defined field 1
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 1")]
-		public string M3_FRT1 => GetString("FRT1");
+		public string M3FRT1 => GetString("FRT1");
 
 		/// <summary>
 		/// Description: User defined field 2
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 2")]
-		public string M3_FRT2 => GetString("FRT2");
+		public string M3FRT2 => GetString("FRT2");
 
 		/// <summary>
 		/// Description: User defined field 3
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 3")]
-		public string M3_FRT3 => GetString("FRT3");
+		public string M3FRT3 => GetString("FRT3");
 
 		/// <summary>
 		/// Description: User defined field 4
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 4")]
-		public string M3_FRT4 => GetString("FRT4");
+		public string M3FRT4 => GetString("FRT4");
 
 		/// <summary>
 		/// Description: User defined field 5
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined field 5")]
-		public string M3_FRT5 => GetString("FRT5");
+		public string M3FRT5 => GetString("FRT5");
 
 		/// <summary>
 		/// Description: User defined accounting control object
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User defined accounting control object")]
-		public string M3_ACRF => GetString("ACRF");
+		public string M3ACRF => GetString("ACRF");
 
 		/// <summary>
 		/// Description: Short name
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Short name")]
-		public string M3_TNL2 => GetString("TNL2");
+		public string M3TNL2 => GetString("TNL2");
 
 		/// <summary>
 		/// Description: Technician
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Technician")]
-		public string M3_TECH => GetString("TECH");
+		public string M3TECH => GetString("TECH");
 
 		/// <summary>
 		/// Description: Warehouse
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Location
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Location")]
-		public string M3_WHSL => GetString("WHSL");
+		public string M3WHSL => GetString("WHSL");
 
 		/// <summary>
 		/// Description: Service manager
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service manager")]
-		public string M3_SRES => GetString("SRES");
+		public string M3SRES => GetString("SRES");
 
 		/// <summary>
 		/// Description: Hourly price
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly price")]
-		public decimal? M3_SPHO => GetNullableDecimal("SPHO");
+		public decimal? M3SPHO => GetNullableDecimal("SPHO");
 
 		/// <summary>
 		/// Description: Currency - sales price
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency - sales price")]
-		public string M3_CUCS => GetString("CUCS");
+		public string M3CUCS => GetString("CUCS");
 
 		/// <summary>
 		/// Description: Hourly cost
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Hourly cost")]
-		public decimal? M3_CPHO => GetNullableDecimal("CPHO");
+		public decimal? M3CPHO => GetNullableDecimal("CPHO");
 
 		/// <summary>
 		/// Description: Application message recipient
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Application message recipient")]
-		public int? M3_RECM => GetNullableInt("RECM");
+		public int? M3RECM => GetNullableInt("RECM");
 
 		/// <summary>
 		/// Description: Employment date
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Employment date")]
-		public DateTime? M3_EBDT => GetNullableDateTime("EBDT");
+		public DateTime? M3EBDT => GetNullableDateTime("EBDT");
 
 		/// <summary>
 		/// Description: Termination date
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.CRS530MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Termination date")]
-		public DateTime? M3_EEDT => GetNullableDateTime("EEDT");
+		public DateTime? M3EEDT => GetNullableDateTime("EEDT");
 	}
 }
 // EOF

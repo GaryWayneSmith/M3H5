@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MNS036MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,26 +38,26 @@ namespace M3H5Lib.Api
 		/// Description Transaction adds a Drillback mapping
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_IDVI">Infor Drillback View ID (Required)</param>
-		/// <param name="m3_USID">User</param>
-		/// <param name="m3_BPG1">Browse program</param>
-		/// <param name="m3_SPIC">Opening panel</param>
-		/// <param name="m3_RELO">Option</param>
-		/// <param name="m3_MASH">Mashup</param>
-		/// <param name="m3_MAON">Application</param>
-		/// <param name="m3_MDEV">Default values</param>
-		/// <param name="m3_BPG2">Browse program</param>
-		/// <param name="m3_SPI3">Opening panel</param>
-		/// <param name="m3_REL2">Option</param>
-		/// <param name="m3_MAS2">Mashup</param>
-		/// <param name="m3_MAO2">Application</param>
-		/// <param name="m3_MDE2">Default values</param>
-		/// <param name="m3_BPG3">Browse program</param>
-		/// <param name="m3_SPI4">Opening panel</param>
-		/// <param name="m3_REL3">Option</param>
-		/// <param name="m3_MAS3">Mashup</param>
-		/// <param name="m3_MAO3">Application</param>
-		/// <param name="m3_MDE3">Default values</param>
+		/// <param name="m3IDVI">Infor Drillback View ID (Required)</param>
+		/// <param name="m3USID">User</param>
+		/// <param name="m3BPG1">Browse program</param>
+		/// <param name="m3SPIC">Opening panel</param>
+		/// <param name="m3RELO">Option</param>
+		/// <param name="m3MASH">Mashup</param>
+		/// <param name="m3MAON">Application</param>
+		/// <param name="m3MDEV">Default values</param>
+		/// <param name="m3BPG2">Browse program</param>
+		/// <param name="m3SPI3">Opening panel</param>
+		/// <param name="m3REL2">Option</param>
+		/// <param name="m3MAS2">Mashup</param>
+		/// <param name="m3MAO2">Application</param>
+		/// <param name="m3MDE2">Default values</param>
+		/// <param name="m3BPG3">Browse program</param>
+		/// <param name="m3SPI4">Opening panel</param>
+		/// <param name="m3REL3">Option</param>
+		/// <param name="m3MAS3">Mashup</param>
+		/// <param name="m3MAO3">Application</param>
+		/// <param name="m3MDE3">Default values</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -64,26 +66,26 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddDrillbackMap(
-			string m3_IDVI, 
-			string m3_USID = null, 
-			string m3_BPG1 = null, 
-			string m3_SPIC = null, 
-			string m3_RELO = null, 
-			string m3_MASH = null, 
-			string m3_MAON = null, 
-			string m3_MDEV = null, 
-			string m3_BPG2 = null, 
-			string m3_SPI3 = null, 
-			string m3_REL2 = null, 
-			string m3_MAS2 = null, 
-			string m3_MAO2 = null, 
-			string m3_MDE2 = null, 
-			string m3_BPG3 = null, 
-			string m3_SPI4 = null, 
-			string m3_REL3 = null, 
-			string m3_MAS3 = null, 
-			string m3_MAO3 = null, 
-			string m3_MDE3 = null, 
+			string m3IDVI, 
+			string m3USID = null, 
+			string m3BPG1 = null, 
+			string m3SPIC = null, 
+			string m3RELO = null, 
+			string m3MASH = null, 
+			string m3MAON = null, 
+			string m3MDEV = null, 
+			string m3BPG2 = null, 
+			string m3SPI3 = null, 
+			string m3REL2 = null, 
+			string m3MAS2 = null, 
+			string m3MAO2 = null, 
+			string m3MDE2 = null, 
+			string m3BPG3 = null, 
+			string m3SPI4 = null, 
+			string m3REL3 = null, 
+			string m3MAS3 = null, 
+			string m3MAO3 = null, 
+			string m3MDE3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -98,52 +100,52 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_IDVI))
-				throw new ArgumentNullException("m3_IDVI");
+			if (string.IsNullOrWhiteSpace(m3IDVI))
+				throw new ArgumentNullException(nameof(m3IDVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("IDVI", m3_IDVI.Trim());
+				.WithQueryParameter("IDVI", m3IDVI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BPG1))
-				request.WithQueryParameter("BPG1", m3_BPG1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPIC))
-				request.WithQueryParameter("SPIC", m3_SPIC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RELO))
-				request.WithQueryParameter("RELO", m3_RELO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MASH))
-				request.WithQueryParameter("MASH", m3_MASH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAON))
-				request.WithQueryParameter("MAON", m3_MAON.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MDEV))
-				request.WithQueryParameter("MDEV", m3_MDEV.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BPG2))
-				request.WithQueryParameter("BPG2", m3_BPG2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPI3))
-				request.WithQueryParameter("SPI3", m3_SPI3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REL2))
-				request.WithQueryParameter("REL2", m3_REL2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAS2))
-				request.WithQueryParameter("MAS2", m3_MAS2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAO2))
-				request.WithQueryParameter("MAO2", m3_MAO2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MDE2))
-				request.WithQueryParameter("MDE2", m3_MDE2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BPG3))
-				request.WithQueryParameter("BPG3", m3_BPG3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPI4))
-				request.WithQueryParameter("SPI4", m3_SPI4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REL3))
-				request.WithQueryParameter("REL3", m3_REL3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAS3))
-				request.WithQueryParameter("MAS3", m3_MAS3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAO3))
-				request.WithQueryParameter("MAO3", m3_MAO3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MDE3))
-				request.WithQueryParameter("MDE3", m3_MDE3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BPG1))
+				request.WithQueryParameter("BPG1", m3BPG1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPIC))
+				request.WithQueryParameter("SPIC", m3SPIC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RELO))
+				request.WithQueryParameter("RELO", m3RELO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MASH))
+				request.WithQueryParameter("MASH", m3MASH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAON))
+				request.WithQueryParameter("MAON", m3MAON.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MDEV))
+				request.WithQueryParameter("MDEV", m3MDEV.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BPG2))
+				request.WithQueryParameter("BPG2", m3BPG2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPI3))
+				request.WithQueryParameter("SPI3", m3SPI3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REL2))
+				request.WithQueryParameter("REL2", m3REL2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAS2))
+				request.WithQueryParameter("MAS2", m3MAS2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAO2))
+				request.WithQueryParameter("MAO2", m3MAO2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MDE2))
+				request.WithQueryParameter("MDE2", m3MDE2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BPG3))
+				request.WithQueryParameter("BPG3", m3BPG3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPI4))
+				request.WithQueryParameter("SPI4", m3SPI4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REL3))
+				request.WithQueryParameter("REL3", m3REL3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAS3))
+				request.WithQueryParameter("MAS3", m3MAS3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAO3))
+				request.WithQueryParameter("MAO3", m3MAO3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MDE3))
+				request.WithQueryParameter("MDE3", m3MDE3.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -153,7 +155,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -164,26 +167,26 @@ namespace M3H5Lib.Api
 		/// Description Transaction changes a Drillback mapping
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_IDVI">Infor Drillback View ID (Required)</param>
-		/// <param name="m3_USID">User</param>
-		/// <param name="m3_BPG1">Browse program</param>
-		/// <param name="m3_SPIC">Opening panel</param>
-		/// <param name="m3_RELO">Option</param>
-		/// <param name="m3_MASH">Mashup</param>
-		/// <param name="m3_MAON">Application</param>
-		/// <param name="m3_MDEV">Default values</param>
-		/// <param name="m3_BPG2">Browse program</param>
-		/// <param name="m3_SPI3">Opening panel</param>
-		/// <param name="m3_REL2">Option</param>
-		/// <param name="m3_MAS2">Mashup</param>
-		/// <param name="m3_MAO2">Application</param>
-		/// <param name="m3_MDE2">Default values</param>
-		/// <param name="m3_BPG3">Browse program</param>
-		/// <param name="m3_SPI4">Opening panel</param>
-		/// <param name="m3_REL3">Option</param>
-		/// <param name="m3_MAS3">Mashup</param>
-		/// <param name="m3_MAO3">Application</param>
-		/// <param name="m3_MDE3">Default values</param>
+		/// <param name="m3IDVI">Infor Drillback View ID (Required)</param>
+		/// <param name="m3USID">User</param>
+		/// <param name="m3BPG1">Browse program</param>
+		/// <param name="m3SPIC">Opening panel</param>
+		/// <param name="m3RELO">Option</param>
+		/// <param name="m3MASH">Mashup</param>
+		/// <param name="m3MAON">Application</param>
+		/// <param name="m3MDEV">Default values</param>
+		/// <param name="m3BPG2">Browse program</param>
+		/// <param name="m3SPI3">Opening panel</param>
+		/// <param name="m3REL2">Option</param>
+		/// <param name="m3MAS2">Mashup</param>
+		/// <param name="m3MAO2">Application</param>
+		/// <param name="m3MDE2">Default values</param>
+		/// <param name="m3BPG3">Browse program</param>
+		/// <param name="m3SPI4">Opening panel</param>
+		/// <param name="m3REL3">Option</param>
+		/// <param name="m3MAS3">Mashup</param>
+		/// <param name="m3MAO3">Application</param>
+		/// <param name="m3MDE3">Default values</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -192,26 +195,26 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> ChgDrillbackMap(
-			string m3_IDVI, 
-			string m3_USID = null, 
-			string m3_BPG1 = null, 
-			string m3_SPIC = null, 
-			string m3_RELO = null, 
-			string m3_MASH = null, 
-			string m3_MAON = null, 
-			string m3_MDEV = null, 
-			string m3_BPG2 = null, 
-			string m3_SPI3 = null, 
-			string m3_REL2 = null, 
-			string m3_MAS2 = null, 
-			string m3_MAO2 = null, 
-			string m3_MDE2 = null, 
-			string m3_BPG3 = null, 
-			string m3_SPI4 = null, 
-			string m3_REL3 = null, 
-			string m3_MAS3 = null, 
-			string m3_MAO3 = null, 
-			string m3_MDE3 = null, 
+			string m3IDVI, 
+			string m3USID = null, 
+			string m3BPG1 = null, 
+			string m3SPIC = null, 
+			string m3RELO = null, 
+			string m3MASH = null, 
+			string m3MAON = null, 
+			string m3MDEV = null, 
+			string m3BPG2 = null, 
+			string m3SPI3 = null, 
+			string m3REL2 = null, 
+			string m3MAS2 = null, 
+			string m3MAO2 = null, 
+			string m3MDE2 = null, 
+			string m3BPG3 = null, 
+			string m3SPI4 = null, 
+			string m3REL3 = null, 
+			string m3MAS3 = null, 
+			string m3MAO3 = null, 
+			string m3MDE3 = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -226,52 +229,52 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_IDVI))
-				throw new ArgumentNullException("m3_IDVI");
+			if (string.IsNullOrWhiteSpace(m3IDVI))
+				throw new ArgumentNullException(nameof(m3IDVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("IDVI", m3_IDVI.Trim());
+				.WithQueryParameter("IDVI", m3IDVI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BPG1))
-				request.WithQueryParameter("BPG1", m3_BPG1.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPIC))
-				request.WithQueryParameter("SPIC", m3_SPIC.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_RELO))
-				request.WithQueryParameter("RELO", m3_RELO.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MASH))
-				request.WithQueryParameter("MASH", m3_MASH.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAON))
-				request.WithQueryParameter("MAON", m3_MAON.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MDEV))
-				request.WithQueryParameter("MDEV", m3_MDEV.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BPG2))
-				request.WithQueryParameter("BPG2", m3_BPG2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPI3))
-				request.WithQueryParameter("SPI3", m3_SPI3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REL2))
-				request.WithQueryParameter("REL2", m3_REL2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAS2))
-				request.WithQueryParameter("MAS2", m3_MAS2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAO2))
-				request.WithQueryParameter("MAO2", m3_MAO2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MDE2))
-				request.WithQueryParameter("MDE2", m3_MDE2.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_BPG3))
-				request.WithQueryParameter("BPG3", m3_BPG3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_SPI4))
-				request.WithQueryParameter("SPI4", m3_SPI4.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_REL3))
-				request.WithQueryParameter("REL3", m3_REL3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAS3))
-				request.WithQueryParameter("MAS3", m3_MAS3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MAO3))
-				request.WithQueryParameter("MAO3", m3_MAO3.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MDE3))
-				request.WithQueryParameter("MDE3", m3_MDE3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BPG1))
+				request.WithQueryParameter("BPG1", m3BPG1.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPIC))
+				request.WithQueryParameter("SPIC", m3SPIC.Trim());
+			if (!string.IsNullOrWhiteSpace(m3RELO))
+				request.WithQueryParameter("RELO", m3RELO.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MASH))
+				request.WithQueryParameter("MASH", m3MASH.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAON))
+				request.WithQueryParameter("MAON", m3MAON.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MDEV))
+				request.WithQueryParameter("MDEV", m3MDEV.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BPG2))
+				request.WithQueryParameter("BPG2", m3BPG2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPI3))
+				request.WithQueryParameter("SPI3", m3SPI3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REL2))
+				request.WithQueryParameter("REL2", m3REL2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAS2))
+				request.WithQueryParameter("MAS2", m3MAS2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAO2))
+				request.WithQueryParameter("MAO2", m3MAO2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MDE2))
+				request.WithQueryParameter("MDE2", m3MDE2.Trim());
+			if (!string.IsNullOrWhiteSpace(m3BPG3))
+				request.WithQueryParameter("BPG3", m3BPG3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3SPI4))
+				request.WithQueryParameter("SPI4", m3SPI4.Trim());
+			if (!string.IsNullOrWhiteSpace(m3REL3))
+				request.WithQueryParameter("REL3", m3REL3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAS3))
+				request.WithQueryParameter("MAS3", m3MAS3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MAO3))
+				request.WithQueryParameter("MAO3", m3MAO3.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MDE3))
+				request.WithQueryParameter("MDE3", m3MDE3.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -281,7 +284,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -292,8 +296,8 @@ namespace M3H5Lib.Api
 		/// Description Transaction deletes an existing Drillback mapping
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_IDVI">Infor Drillback View ID (Required)</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3IDVI">Infor Drillback View ID (Required)</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -302,8 +306,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DelDrillbackMap(
-			string m3_IDVI, 
-			string m3_USID = null, 
+			string m3IDVI, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -318,16 +322,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_IDVI))
-				throw new ArgumentNullException("m3_IDVI");
+			if (string.IsNullOrWhiteSpace(m3IDVI))
+				throw new ArgumentNullException(nameof(m3IDVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("IDVI", m3_IDVI.Trim());
+				.WithQueryParameter("IDVI", m3IDVI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -337,7 +341,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -348,8 +353,8 @@ namespace M3H5Lib.Api
 		/// Description Tranaction will get infor for a Drillback mapping
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_IDVI">Infor Drillback View ID (Required)</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3IDVI">Infor Drillback View ID (Required)</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -358,8 +363,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDrillbackMapResponse></returns>
 		/// <exception cref="M3Exception<GetDrillbackMapResponse>"></exception>
 		public async Task<M3Response<GetDrillbackMapResponse>> GetDrillbackMap(
-			string m3_IDVI, 
-			string m3_USID = null, 
+			string m3IDVI, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -374,16 +379,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_IDVI))
-				throw new ArgumentNullException("m3_IDVI");
+			if (string.IsNullOrWhiteSpace(m3IDVI))
+				throw new ArgumentNullException(nameof(m3IDVI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("IDVI", m3_IDVI.Trim());
+				.WithQueryParameter("IDVI", m3IDVI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<GetDrillbackMapResponse>(
@@ -393,7 +398,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -404,8 +410,8 @@ namespace M3H5Lib.Api
 		/// Description Tranaction lists infor for entity map
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_IDVI">Infor Drillback View ID</param>
-		/// <param name="m3_USID">User</param>
+		/// <param name="m3IDVI">Infor Drillback View ID</param>
+		/// <param name="m3USID">User</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -414,8 +420,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDrillbackMapResponse></returns>
 		/// <exception cref="M3Exception<LstDrillbackMapResponse>"></exception>
 		public async Task<M3Response<LstDrillbackMapResponse>> LstDrillbackMap(
-			string m3_IDVI = null, 
-			string m3_USID = null, 
+			string m3IDVI = null, 
+			string m3USID = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -430,10 +436,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_IDVI))
-				request.WithQueryParameter("IDVI", m3_IDVI.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_USID))
-				request.WithQueryParameter("USID", m3_USID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3IDVI))
+				request.WithQueryParameter("IDVI", m3IDVI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3USID))
+				request.WithQueryParameter("USID", m3USID.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDrillbackMapResponse>(
@@ -443,7 +449,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

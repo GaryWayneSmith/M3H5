@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Facility
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facility")]
-		public string M3_FACI => GetString("FACI");
+		public string M3FACI => GetString("FACI");
 
 		/// <summary>
 		/// Description: Attribute number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute number")]
-		public decimal? M3_ATNR => GetNullableDecimal("ATNR");
+		public decimal? M3ATNR => GetNullableDecimal("ATNR");
 
 		/// <summary>
 		/// Description: Attribute identity
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute identity")]
-		public string M3_ATID => GetString("ATID");
+		public string M3ATID => GetString("ATID");
 
 		/// <summary>
 		/// Description: Attribute category
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute category")]
-		public string M3_ATVC => GetString("ATVC");
+		public string M3ATVC => GetString("ATVC");
 
 		/// <summary>
 		/// Description: Attribute group
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute group")]
-		public string M3_ATGR => GetString("ATGR");
+		public string M3ATGR => GetString("ATGR");
 
 		/// <summary>
 		/// Description: Attribute value
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PMS170MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Attribute value")]
-		public string M3_ATVA => GetString("ATVA");
+		public string M3ATVA => GetString("ATVA");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Promotion")]
-		public string M3_PIDE => GetString("PIDE");
+		public string M3PIDE => GetString("PIDE");
 
 		/// <summary>
 		/// Description: Item number
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Limit value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Limit value")]
-		public decimal? M3_LIMT => GetNullableDecimal("LIMT");
+		public decimal? M3LIMT => GetNullableDecimal("LIMT");
 
 		/// <summary>
 		/// Description: Sales price
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPR => GetNullableDecimal("SAPR");
+		public decimal? M3SAPR => GetNullableDecimal("SAPR");
 
 		/// <summary>
 		/// Description: Discount percentage
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount percentage")]
-		public int? M3_DISP => GetNullableInt("DISP");
+		public int? M3DISP => GetNullableInt("DISP");
 
 		/// <summary>
 		/// Description: Discount amount
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Discount amount")]
-		public decimal? M3_DIAM => GetNullableDecimal("DIAM");
+		public decimal? M3DIAM => GetNullableDecimal("DIAM");
 
 		/// <summary>
 		/// Description: Payment terms
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Payment terms")]
-		public string M3_TEPY => GetString("TEPY");
+		public string M3TEPY => GetString("TEPY");
 
 		/// <summary>
 		/// Description: Item number
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNR => GetString("ITNR");
+		public string M3ITNR => GetString("ITNR");
 
 		/// <summary>
 		/// Description: Ordered quantity - basic U/M
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Ordered quantity - basic U/M")]
-		public decimal? M3_ORQT => GetNullableDecimal("ORQT");
+		public decimal? M3ORQT => GetNullableDecimal("ORQT");
 
 		/// <summary>
 		/// Description: Sales price
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sales price")]
-		public decimal? M3_SAPX => GetNullableDecimal("SAPX");
+		public decimal? M3SAPX => GetNullableDecimal("SAPX");
 
 		/// <summary>
 		/// Description: SPA claim
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.OIS847MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SPA claim")]
-		public decimal? M3_SCLA => GetNullableDecimal("SCLA");
+		public decimal? M3SCLA => GetNullableDecimal("SCLA");
 	}
 }
 // EOF

@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From Currency")]
-		public string M3_FCUR => GetString("FCUR");
+		public string M3FCUR => GetString("FCUR");
 
 		/// <summary>
 		/// Description: To Currency (Local currency of division)
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To Currency (Local currency of division)")]
-		public string M3_TCUR => GetString("TCUR");
+		public string M3TCUR => GetString("TCUR");
 
 		/// <summary>
 		/// Description: Exchange rate
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Exchange rate")]
-		public decimal? M3_ARAT => GetNullableDecimal("ARAT");
+		public decimal? M3ARAT => GetNullableDecimal("ARAT");
 
 		/// <summary>
 		/// Description: Rate factor
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rate factor")]
-		public int? M3_RAFA => GetNullableInt("RAFA");
+		public int? M3RAFA => GetNullableInt("RAFA");
 
 		/// <summary>
 		/// Description: Currency conversion method
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS055MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Currency conversion method")]
-		public int? M3_DMCU => GetNullableInt("DMCU");
+		public int? M3DMCU => GetNullableInt("DMCU");
 	}
 }
 // EOF

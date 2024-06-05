@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV01 => GetString("FV01");
+		public string M3FV01 => GetString("FV01");
 
 		/// <summary>
 		/// Description: Field value
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV02 => GetString("FV02");
+		public string M3FV02 => GetString("FV02");
 
 		/// <summary>
 		/// Description: Field value
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV03 => GetString("FV03");
+		public string M3FV03 => GetString("FV03");
 
 		/// <summary>
 		/// Description: Field value
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV04 => GetString("FV04");
+		public string M3FV04 => GetString("FV04");
 
 		/// <summary>
 		/// Description: Field value
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV05 => GetString("FV05");
+		public string M3FV05 => GetString("FV05");
 
 		/// <summary>
 		/// Description: Field value
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV06 => GetString("FV06");
+		public string M3FV06 => GetString("FV06");
 
 		/// <summary>
 		/// Description: Field value
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV07 => GetString("FV07");
+		public string M3FV07 => GetString("FV07");
 
 		/// <summary>
 		/// Description: Field value
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV08 => GetString("FV08");
+		public string M3FV08 => GetString("FV08");
 
 		/// <summary>
 		/// Description: Field value
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV09 => GetString("FV09");
+		public string M3FV09 => GetString("FV09");
 
 		/// <summary>
 		/// Description: Field value
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV10 => GetString("FV10");
+		public string M3FV10 => GetString("FV10");
 
 		/// <summary>
 		/// Description: Field value
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV11 => GetString("FV11");
+		public string M3FV11 => GetString("FV11");
 
 		/// <summary>
 		/// Description: Field value
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV12 => GetString("FV12");
+		public string M3FV12 => GetString("FV12");
 
 		/// <summary>
 		/// Description: Field value
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV13 => GetString("FV13");
+		public string M3FV13 => GetString("FV13");
 
 		/// <summary>
 		/// Description: Field value
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV14 => GetString("FV14");
+		public string M3FV14 => GetString("FV14");
 
 		/// <summary>
 		/// Description: Field value
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS990MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field value")]
-		public string M3_FV15 => GetString("FV15");
+		public string M3FV15 => GetString("FV15");
 	}
 }
 // EOF

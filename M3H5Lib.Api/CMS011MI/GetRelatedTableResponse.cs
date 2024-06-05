@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Information browser category")]
-		public string M3_IBCA => GetString("IBCA");
+		public string M3IBCA => GetString("IBCA");
 
 		/// <summary>
 		/// Description: File
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("File")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Field prefix
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field prefix")]
-		public string M3_FIPX => GetString("FIPX");
+		public string M3FIPX => GetString("FIPX");
 
 		/// <summary>
 		/// Description: Status
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Field
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB01 => GetString("OB01");
+		public string M3OB01 => GetString("OB01");
 
 		/// <summary>
 		/// Description: Field
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB02 => GetString("OB02");
+		public string M3OB02 => GetString("OB02");
 
 		/// <summary>
 		/// Description: Field
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB03 => GetString("OB03");
+		public string M3OB03 => GetString("OB03");
 
 		/// <summary>
 		/// Description: Field
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB04 => GetString("OB04");
+		public string M3OB04 => GetString("OB04");
 
 		/// <summary>
 		/// Description: Field
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB05 => GetString("OB05");
+		public string M3OB05 => GetString("OB05");
 
 		/// <summary>
 		/// Description: Field
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB06 => GetString("OB06");
+		public string M3OB06 => GetString("OB06");
 
 		/// <summary>
 		/// Description: Field
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB07 => GetString("OB07");
+		public string M3OB07 => GetString("OB07");
 
 		/// <summary>
 		/// Description: Field
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB08 => GetString("OB08");
+		public string M3OB08 => GetString("OB08");
 
 		/// <summary>
 		/// Description: Field
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB09 => GetString("OB09");
+		public string M3OB09 => GetString("OB09");
 
 		/// <summary>
 		/// Description: Field
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB10 => GetString("OB10");
+		public string M3OB10 => GetString("OB10");
 
 		/// <summary>
 		/// Description: Field
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB11 => GetString("OB11");
+		public string M3OB11 => GetString("OB11");
 
 		/// <summary>
 		/// Description: Field
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB12 => GetString("OB12");
+		public string M3OB12 => GetString("OB12");
 
 		/// <summary>
 		/// Description: Field
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB13 => GetString("OB13");
+		public string M3OB13 => GetString("OB13");
 
 		/// <summary>
 		/// Description: Field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB14 => GetString("OB14");
+		public string M3OB14 => GetString("OB14");
 
 		/// <summary>
 		/// Description: Field
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB15 => GetString("OB15");
+		public string M3OB15 => GetString("OB15");
 
 		/// <summary>
 		/// Description: Field
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_OB16 => GetString("OB16");
+		public string M3OB16 => GetString("OB16");
 
 		/// <summary>
 		/// Description: Key field
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY1 => GetString("KEY1");
+		public string M3KEY1 => GetString("KEY1");
 
 		/// <summary>
 		/// Description: Key field
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY2 => GetString("KEY2");
+		public string M3KEY2 => GetString("KEY2");
 
 		/// <summary>
 		/// Description: Key field
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY3 => GetString("KEY3");
+		public string M3KEY3 => GetString("KEY3");
 
 		/// <summary>
 		/// Description: Key field
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY4 => GetString("KEY4");
+		public string M3KEY4 => GetString("KEY4");
 
 		/// <summary>
 		/// Description: Key field
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY5 => GetString("KEY5");
+		public string M3KEY5 => GetString("KEY5");
 
 		/// <summary>
 		/// Description: Key field
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY6 => GetString("KEY6");
+		public string M3KEY6 => GetString("KEY6");
 
 		/// <summary>
 		/// Description: Key field
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY7 => GetString("KEY7");
+		public string M3KEY7 => GetString("KEY7");
 
 		/// <summary>
 		/// Description: Key field
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY8 => GetString("KEY8");
+		public string M3KEY8 => GetString("KEY8");
 
 		/// <summary>
 		/// Description: Key field
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KEY9 => GetString("KEY9");
+		public string M3KEY9 => GetString("KEY9");
 
 		/// <summary>
 		/// Description: Key field
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KE10 => GetString("KE10");
+		public string M3KE10 => GetString("KE10");
 
 		/// <summary>
 		/// Description: Key field
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KE11 => GetString("KE11");
+		public string M3KE11 => GetString("KE11");
 
 		/// <summary>
 		/// Description: Key field
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KE12 => GetString("KE12");
+		public string M3KE12 => GetString("KE12");
 
 		/// <summary>
 		/// Description: Key field
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KE13 => GetString("KE13");
+		public string M3KE13 => GetString("KE13");
 
 		/// <summary>
 		/// Description: Key field
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KE14 => GetString("KE14");
+		public string M3KE14 => GetString("KE14");
 
 		/// <summary>
 		/// Description: Key field
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KE15 => GetString("KE15");
+		public string M3KE15 => GetString("KE15");
 
 		/// <summary>
 		/// Description: Key field
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Key field")]
-		public string M3_KE16 => GetString("KE16");
+		public string M3KE16 => GetString("KE16");
 
 		/// <summary>
 		/// Description: Value field
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL1 => GetString("VAL1");
+		public string M3VAL1 => GetString("VAL1");
 
 		/// <summary>
 		/// Description: Value field
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL2 => GetString("VAL2");
+		public string M3VAL2 => GetString("VAL2");
 
 		/// <summary>
 		/// Description: Value field
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL3 => GetString("VAL3");
+		public string M3VAL3 => GetString("VAL3");
 
 		/// <summary>
 		/// Description: Value field
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL4 => GetString("VAL4");
+		public string M3VAL4 => GetString("VAL4");
 
 		/// <summary>
 		/// Description: Value field
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL5 => GetString("VAL5");
+		public string M3VAL5 => GetString("VAL5");
 
 		/// <summary>
 		/// Description: Value field
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL6 => GetString("VAL6");
+		public string M3VAL6 => GetString("VAL6");
 
 		/// <summary>
 		/// Description: Value field
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL7 => GetString("VAL7");
+		public string M3VAL7 => GetString("VAL7");
 
 		/// <summary>
 		/// Description: Value field
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL8 => GetString("VAL8");
+		public string M3VAL8 => GetString("VAL8");
 
 		/// <summary>
 		/// Description: Value field
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VAL9 => GetString("VAL9");
+		public string M3VAL9 => GetString("VAL9");
 
 		/// <summary>
 		/// Description: Value field
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VA10 => GetString("VA10");
+		public string M3VA10 => GetString("VA10");
 
 		/// <summary>
 		/// Description: Value field
@@ -540,7 +540,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VA11 => GetString("VA11");
+		public string M3VA11 => GetString("VA11");
 
 		/// <summary>
 		/// Description: Value field
@@ -551,7 +551,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VA12 => GetString("VA12");
+		public string M3VA12 => GetString("VA12");
 
 		/// <summary>
 		/// Description: Value field
@@ -562,7 +562,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VA13 => GetString("VA13");
+		public string M3VA13 => GetString("VA13");
 
 		/// <summary>
 		/// Description: Value field
@@ -573,7 +573,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VA14 => GetString("VA14");
+		public string M3VA14 => GetString("VA14");
 
 		/// <summary>
 		/// Description: Value field
@@ -584,7 +584,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VA15 => GetString("VA15");
+		public string M3VA15 => GetString("VA15");
 
 		/// <summary>
 		/// Description: Value field
@@ -595,7 +595,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Value field")]
-		public string M3_VA16 => GetString("VA16");
+		public string M3VA16 => GetString("VA16");
 
 		/// <summary>
 		/// Description: Read option
@@ -606,7 +606,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO01 => GetNullableInt("RO01");
+		public int? M3RO01 => GetNullableInt("RO01");
 
 		/// <summary>
 		/// Description: Read option
@@ -617,7 +617,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO02 => GetNullableInt("RO02");
+		public int? M3RO02 => GetNullableInt("RO02");
 
 		/// <summary>
 		/// Description: Read option
@@ -628,7 +628,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO03 => GetNullableInt("RO03");
+		public int? M3RO03 => GetNullableInt("RO03");
 
 		/// <summary>
 		/// Description: Read option
@@ -639,7 +639,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO04 => GetNullableInt("RO04");
+		public int? M3RO04 => GetNullableInt("RO04");
 
 		/// <summary>
 		/// Description: Read option
@@ -650,7 +650,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO05 => GetNullableInt("RO05");
+		public int? M3RO05 => GetNullableInt("RO05");
 
 		/// <summary>
 		/// Description: Read option
@@ -661,7 +661,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO06 => GetNullableInt("RO06");
+		public int? M3RO06 => GetNullableInt("RO06");
 
 		/// <summary>
 		/// Description: Read option
@@ -672,7 +672,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO07 => GetNullableInt("RO07");
+		public int? M3RO07 => GetNullableInt("RO07");
 
 		/// <summary>
 		/// Description: Read option
@@ -683,7 +683,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO08 => GetNullableInt("RO08");
+		public int? M3RO08 => GetNullableInt("RO08");
 
 		/// <summary>
 		/// Description: Read option
@@ -694,7 +694,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO09 => GetNullableInt("RO09");
+		public int? M3RO09 => GetNullableInt("RO09");
 
 		/// <summary>
 		/// Description: Read option
@@ -705,7 +705,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO10 => GetNullableInt("RO10");
+		public int? M3RO10 => GetNullableInt("RO10");
 
 		/// <summary>
 		/// Description: Read option
@@ -716,7 +716,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO11 => GetNullableInt("RO11");
+		public int? M3RO11 => GetNullableInt("RO11");
 
 		/// <summary>
 		/// Description: Read option
@@ -727,7 +727,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO12 => GetNullableInt("RO12");
+		public int? M3RO12 => GetNullableInt("RO12");
 
 		/// <summary>
 		/// Description: Read option
@@ -738,7 +738,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO13 => GetNullableInt("RO13");
+		public int? M3RO13 => GetNullableInt("RO13");
 
 		/// <summary>
 		/// Description: Read option
@@ -749,7 +749,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO14 => GetNullableInt("RO14");
+		public int? M3RO14 => GetNullableInt("RO14");
 
 		/// <summary>
 		/// Description: Read option
@@ -760,7 +760,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO15 => GetNullableInt("RO15");
+		public int? M3RO15 => GetNullableInt("RO15");
 
 		/// <summary>
 		/// Description: Read option
@@ -771,7 +771,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Read option")]
-		public int? M3_RO16 => GetNullableInt("RO16");
+		public int? M3RO16 => GetNullableInt("RO16");
 
 		/// <summary>
 		/// Description: Text identity
@@ -782,7 +782,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Index in search
@@ -793,7 +793,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Index in search")]
-		public string M3_IXSE => GetString("IXSE");
+		public string M3IXSE => GetString("IXSE");
 
 		/// <summary>
 		/// Description: Number of keys
@@ -804,7 +804,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of keys")]
-		public int? M3_NOKY => GetNullableInt("NOKY");
+		public int? M3NOKY => GetNullableInt("NOKY");
 
 		/// <summary>
 		/// Description: Sequence number
@@ -815,7 +815,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sequence number")]
-		public int? M3_SNNO => GetNullableInt("SNNO");
+		public int? M3SNNO => GetNullableInt("SNNO");
 
 		/// <summary>
 		/// Description: Sorting option
@@ -826,7 +826,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting option")]
-		public string M3_SOPT => GetString("SOPT");
+		public string M3SOPT => GetString("SOPT");
 
 		/// <summary>
 		/// Description: Connection type
@@ -837,7 +837,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Connection type")]
-		public int? M3_CETP => GetNullableInt("CETP");
+		public int? M3CETP => GetNullableInt("CETP");
 
 		/// <summary>
 		/// Description: Description
@@ -848,7 +848,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Description")]
-		public string M3_TX40 => GetString("TX40");
+		public string M3TX40 => GetString("TX40");
 
 		/// <summary>
 		/// Description: Name
@@ -859,7 +859,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_TX15 => GetString("TX15");
+		public string M3TX15 => GetString("TX15");
 
 		/// <summary>
 		/// Description: XML section
@@ -870,7 +870,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("XML section")]
-		public int? M3_RPBK => GetNullableInt("RPBK");
+		public int? M3RPBK => GetNullableInt("RPBK");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -881,7 +881,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR01 => GetNullableInt("TR01");
+		public int? M3TR01 => GetNullableInt("TR01");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -892,7 +892,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR02 => GetNullableInt("TR02");
+		public int? M3TR02 => GetNullableInt("TR02");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -903,7 +903,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR03 => GetNullableInt("TR03");
+		public int? M3TR03 => GetNullableInt("TR03");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -914,7 +914,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR04 => GetNullableInt("TR04");
+		public int? M3TR04 => GetNullableInt("TR04");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -925,7 +925,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR05 => GetNullableInt("TR05");
+		public int? M3TR05 => GetNullableInt("TR05");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -936,7 +936,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR06 => GetNullableInt("TR06");
+		public int? M3TR06 => GetNullableInt("TR06");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -947,7 +947,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR07 => GetNullableInt("TR07");
+		public int? M3TR07 => GetNullableInt("TR07");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -958,7 +958,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR08 => GetNullableInt("TR08");
+		public int? M3TR08 => GetNullableInt("TR08");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -969,7 +969,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR09 => GetNullableInt("TR09");
+		public int? M3TR09 => GetNullableInt("TR09");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -980,7 +980,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR10 => GetNullableInt("TR10");
+		public int? M3TR10 => GetNullableInt("TR10");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -991,7 +991,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR11 => GetNullableInt("TR11");
+		public int? M3TR11 => GetNullableInt("TR11");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -1002,7 +1002,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR12 => GetNullableInt("TR12");
+		public int? M3TR12 => GetNullableInt("TR12");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -1013,7 +1013,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR13 => GetNullableInt("TR13");
+		public int? M3TR13 => GetNullableInt("TR13");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -1024,7 +1024,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR14 => GetNullableInt("TR14");
+		public int? M3TR14 => GetNullableInt("TR14");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -1035,7 +1035,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR15 => GetNullableInt("TR15");
+		public int? M3TR15 => GetNullableInt("TR15");
 
 		/// <summary>
 		/// Description: Trim zeros
@@ -1046,7 +1046,7 @@ namespace M3H5Lib.Api.CMS011MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Trim zeros")]
-		public int? M3_TR16 => GetNullableInt("TR16");
+		public int? M3TR16 => GetNullableInt("TR16");
 	}
 }
 // EOF

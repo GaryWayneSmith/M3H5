@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Service order job number")]
-		public int? M3_JOBN => GetNullableInt("JOBN");
+		public int? M3JOBN => GetNullableInt("JOBN");
 
 		/// <summary>
 		/// Description: Assignment suffix
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Assignment suffix")]
-		public int? M3_JBSX => GetNullableInt("JBSX");
+		public int? M3JBSX => GetNullableInt("JBSX");
 
 		/// <summary>
 		/// Description: Total price
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Total price")]
-		public decimal? M3_TOPR => GetNullableDecimal("TOPR");
+		public decimal? M3TOPR => GetNullableDecimal("TOPR");
 
 		/// <summary>
 		/// Description: Price labor done
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price labor done")]
-		public decimal? M3_TOPL => GetNullableDecimal("TOPL");
+		public decimal? M3TOPL => GetNullableDecimal("TOPL");
 
 		/// <summary>
 		/// Description: Price for all parts
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Price for all parts")]
-		public decimal? M3_TOPP => GetNullableDecimal("TOPP");
+		public decimal? M3TOPP => GetNullableDecimal("TOPP");
 
 		/// <summary>
 		/// Description: Serv expense cat 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 1")]
-		public int? M3_SCO1 => GetNullableInt("SCO1");
+		public int? M3SCO1 => GetNullableInt("SCO1");
 
 		/// <summary>
 		/// Description: Serv expense cat 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 2")]
-		public int? M3_SCO2 => GetNullableInt("SCO2");
+		public int? M3SCO2 => GetNullableInt("SCO2");
 
 		/// <summary>
 		/// Description: Serv expense cat 3
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 3")]
-		public int? M3_SCO3 => GetNullableInt("SCO3");
+		public int? M3SCO3 => GetNullableInt("SCO3");
 
 		/// <summary>
 		/// Description: Serv expense cat 4
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 4")]
-		public int? M3_SCO4 => GetNullableInt("SCO4");
+		public int? M3SCO4 => GetNullableInt("SCO4");
 
 		/// <summary>
 		/// Description: Serv expense cat 5
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 5")]
-		public int? M3_SCO5 => GetNullableInt("SCO5");
+		public int? M3SCO5 => GetNullableInt("SCO5");
 
 		/// <summary>
 		/// Description: Serv expense cat 6
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 6")]
-		public int? M3_SCO6 => GetNullableInt("SCO6");
+		public int? M3SCO6 => GetNullableInt("SCO6");
 
 		/// <summary>
 		/// Description: Serv expense cat 7
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 7")]
-		public int? M3_SCO7 => GetNullableInt("SCO7");
+		public int? M3SCO7 => GetNullableInt("SCO7");
 
 		/// <summary>
 		/// Description: Serv expense cat 8
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Serv expense cat 8")]
-		public int? M3_SCO8 => GetNullableInt("SCO8");
+		public int? M3SCO8 => GetNullableInt("SCO8");
 
 		/// <summary>
 		/// Description: Text identity
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Pre-text
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Pre-text")]
-		public decimal? M3_PRTX => GetNullableDecimal("PRTX");
+		public decimal? M3PRTX => GetNullableDecimal("PRTX");
 
 		/// <summary>
 		/// Description: Post-text
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Post-text")]
-		public decimal? M3_POTX => GetNullableDecimal("POTX");
+		public decimal? M3POTX => GetNullableDecimal("POTX");
 
 		/// <summary>
 		/// Description: Received date
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received date")]
-		public DateTime? M3_RDTE => GetNullableDateTime("RDTE");
+		public DateTime? M3RDTE => GetNullableDateTime("RDTE");
 
 		/// <summary>
 		/// Description: Received time
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Received time")]
-		public int? M3_RTIM => GetNullableInt("RTIM");
+		public int? M3RTIM => GetNullableInt("RTIM");
 
 		/// <summary>
 		/// Description: Additional equipment
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Additional equipment")]
-		public string M3_ADEQ => GetString("ADEQ");
+		public string M3ADEQ => GetString("ADEQ");
 
 		/// <summary>
 		/// Description: Individual item condition
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.SOS500MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Individual item condition")]
-		public string M3_CNDI => GetString("CNDI");
+		public string M3CNDI => GetString("CNDI");
 	}
 }
 // EOF

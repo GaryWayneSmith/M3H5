@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.TXS040MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Get VAT Registration number information
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_CONO">Company (Required)</param>
-		/// <param name="m3_CVOP">Customer/supplier code (Required)</param>
-		/// <param name="m3_CSCD">Country (Required)</param>
-		/// <param name="m3_VRNO">VAT registration number (Required)</param>
-		/// <param name="m3_CUSP">Customer/supplier</param>
+		/// <param name="m3CONO">Company (Required)</param>
+		/// <param name="m3CVOP">Customer/supplier code (Required)</param>
+		/// <param name="m3CSCD">Country (Required)</param>
+		/// <param name="m3VRNO">VAT registration number (Required)</param>
+		/// <param name="m3CUSP">Customer/supplier</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetVATRegNoInfoResponse></returns>
 		/// <exception cref="M3Exception<GetVATRegNoInfoResponse>"></exception>
 		public async Task<M3Response<GetVATRegNoInfoResponse>> GetVATRegNoInfo(
-			int m3_CONO, 
-			int m3_CVOP, 
-			string m3_CSCD, 
-			string m3_VRNO, 
-			string m3_CUSP = null, 
+			int m3CONO, 
+			int m3CVOP, 
+			string m3CSCD, 
+			string m3VRNO, 
+			string m3CUSP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,21 +70,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_CSCD))
-				throw new ArgumentNullException("m3_CSCD");
-			if (string.IsNullOrWhiteSpace(m3_VRNO))
-				throw new ArgumentNullException("m3_VRNO");
+			if (string.IsNullOrWhiteSpace(m3CSCD))
+				throw new ArgumentNullException(nameof(m3CSCD));
+			if (string.IsNullOrWhiteSpace(m3VRNO))
+				throw new ArgumentNullException(nameof(m3VRNO));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("CONO", m3_CONO.ToString())
-				.WithQueryParameter("CVOP", m3_CVOP.ToString())
-				.WithQueryParameter("CSCD", m3_CSCD.Trim())
-				.WithQueryParameter("VRNO", m3_VRNO.Trim());
+				.WithQueryParameter("CONO", m3CONO.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CVOP", m3CVOP.ToString(CultureInfo.CurrentCulture))
+				.WithQueryParameter("CSCD", m3CSCD.Trim())
+				.WithQueryParameter("VRNO", m3VRNO.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUSP))
-				request.WithQueryParameter("CUSP", m3_CUSP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUSP))
+				request.WithQueryParameter("CUSP", m3CUSP.Trim());
 
 			// Execute the request
 			var result = await Execute<GetVATRegNoInfoResponse>(
@@ -92,7 +94,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

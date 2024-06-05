@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.ATS061MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,11 +38,11 @@ namespace M3H5Lib.Api
 		/// Description Add a default information group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_ORTY">Order type</param>
-		/// <param name="m3_TRPT">Trading partner</param>
-		/// <param name="m3_IFGR">Information group</param>
-		/// <param name="m3_INOI">Include order initiated</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3ORTY">Order type</param>
+		/// <param name="m3TRPT">Trading partner</param>
+		/// <param name="m3IFGR">Information group</param>
+		/// <param name="m3INOI">Include order initiated</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -49,11 +51,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddDefInfGrp(
-			string m3_ORCA = null, 
-			string m3_ORTY = null, 
-			string m3_TRPT = null, 
-			string m3_IFGR = null, 
-			int? m3_INOI = null, 
+			string m3ORCA = null, 
+			string m3ORTY = null, 
+			string m3TRPT = null, 
+			string m3IFGR = null, 
+			int? m3INOI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -68,16 +70,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTY))
-				request.WithQueryParameter("ORTY", m3_ORTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRPT))
-				request.WithQueryParameter("TRPT", m3_TRPT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_IFGR))
-				request.WithQueryParameter("IFGR", m3_IFGR.Trim());
-			if (m3_INOI.HasValue)
-				request.WithQueryParameter("INOI", m3_INOI.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTY))
+				request.WithQueryParameter("ORTY", m3ORTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRPT))
+				request.WithQueryParameter("TRPT", m3TRPT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3IFGR))
+				request.WithQueryParameter("IFGR", m3IFGR.Trim());
+			if (m3INOI.HasValue)
+				request.WithQueryParameter("INOI", m3INOI.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -87,7 +89,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -98,9 +101,9 @@ namespace M3H5Lib.Api
 		/// Description Delete a default information group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_ORTY">Order type</param>
-		/// <param name="m3_TRPT">Trading partner</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3ORTY">Order type</param>
+		/// <param name="m3TRPT">Trading partner</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -109,9 +112,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltDefInfGrp(
-			string m3_ORCA = null, 
-			string m3_ORTY = null, 
-			string m3_TRPT = null, 
+			string m3ORCA = null, 
+			string m3ORTY = null, 
+			string m3TRPT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -126,12 +129,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTY))
-				request.WithQueryParameter("ORTY", m3_ORTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRPT))
-				request.WithQueryParameter("TRPT", m3_TRPT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTY))
+				request.WithQueryParameter("ORTY", m3ORTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRPT))
+				request.WithQueryParameter("TRPT", m3TRPT.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -141,7 +144,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -152,9 +156,9 @@ namespace M3H5Lib.Api
 		/// Description Get data for a default information group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_ORTY">Order type</param>
-		/// <param name="m3_TRPT">Trading partner</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3ORTY">Order type</param>
+		/// <param name="m3TRPT">Trading partner</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -163,9 +167,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetDefInfGrpResponse></returns>
 		/// <exception cref="M3Exception<GetDefInfGrpResponse>"></exception>
 		public async Task<M3Response<GetDefInfGrpResponse>> GetDefInfGrp(
-			string m3_ORCA = null, 
-			string m3_ORTY = null, 
-			string m3_TRPT = null, 
+			string m3ORCA = null, 
+			string m3ORTY = null, 
+			string m3TRPT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -180,12 +184,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTY))
-				request.WithQueryParameter("ORTY", m3_ORTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRPT))
-				request.WithQueryParameter("TRPT", m3_TRPT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTY))
+				request.WithQueryParameter("ORTY", m3ORTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRPT))
+				request.WithQueryParameter("TRPT", m3TRPT.Trim());
 
 			// Execute the request
 			var result = await Execute<GetDefInfGrpResponse>(
@@ -195,7 +199,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -206,9 +211,9 @@ namespace M3H5Lib.Api
 		/// Description List data for a default information group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_ORTY">Order type</param>
-		/// <param name="m3_TRPT">Trading partner</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3ORTY">Order type</param>
+		/// <param name="m3TRPT">Trading partner</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -217,9 +222,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstDefInfGrpResponse></returns>
 		/// <exception cref="M3Exception<LstDefInfGrpResponse>"></exception>
 		public async Task<M3Response<LstDefInfGrpResponse>> LstDefInfGrp(
-			string m3_ORCA = null, 
-			string m3_ORTY = null, 
-			string m3_TRPT = null, 
+			string m3ORCA = null, 
+			string m3ORTY = null, 
+			string m3TRPT = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -234,12 +239,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTY))
-				request.WithQueryParameter("ORTY", m3_ORTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRPT))
-				request.WithQueryParameter("TRPT", m3_TRPT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTY))
+				request.WithQueryParameter("ORTY", m3ORTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRPT))
+				request.WithQueryParameter("TRPT", m3TRPT.Trim());
 
 			// Execute the request
 			var result = await Execute<LstDefInfGrpResponse>(
@@ -249,7 +254,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -260,11 +266,11 @@ namespace M3H5Lib.Api
 		/// Description Update data for a default inforation group
 		/// Version Release: 14.x
 		/// </summary>
-		/// <param name="m3_ORCA">Order category</param>
-		/// <param name="m3_ORTY">Order type</param>
-		/// <param name="m3_TRPT">Trading partner</param>
-		/// <param name="m3_IFGR">Information group</param>
-		/// <param name="m3_INOI">Include order initiated</param>
+		/// <param name="m3ORCA">Order category</param>
+		/// <param name="m3ORTY">Order type</param>
+		/// <param name="m3TRPT">Trading partner</param>
+		/// <param name="m3IFGR">Information group</param>
+		/// <param name="m3INOI">Include order initiated</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -273,11 +279,11 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdDefInfGrp(
-			string m3_ORCA = null, 
-			string m3_ORTY = null, 
-			string m3_TRPT = null, 
-			string m3_IFGR = null, 
-			int? m3_INOI = null, 
+			string m3ORCA = null, 
+			string m3ORTY = null, 
+			string m3TRPT = null, 
+			string m3IFGR = null, 
+			int? m3INOI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -292,16 +298,16 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORCA))
-				request.WithQueryParameter("ORCA", m3_ORCA.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTY))
-				request.WithQueryParameter("ORTY", m3_ORTY.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TRPT))
-				request.WithQueryParameter("TRPT", m3_TRPT.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_IFGR))
-				request.WithQueryParameter("IFGR", m3_IFGR.Trim());
-			if (m3_INOI.HasValue)
-				request.WithQueryParameter("INOI", m3_INOI.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3ORCA))
+				request.WithQueryParameter("ORCA", m3ORCA.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTY))
+				request.WithQueryParameter("ORTY", m3ORTY.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TRPT))
+				request.WithQueryParameter("TRPT", m3TRPT.Trim());
+			if (!string.IsNullOrWhiteSpace(m3IFGR))
+				request.WithQueryParameter("IFGR", m3IFGR.Trim());
+			if (m3INOI.HasValue)
+				request.WithQueryParameter("INOI", m3INOI.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -311,7 +317,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

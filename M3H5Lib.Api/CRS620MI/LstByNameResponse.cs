@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Company")]
-		public int? M3_CONO => GetNullableInt("CONO");
+		public int? M3CONO => GetNullableInt("CONO");
 
 		/// <summary>
 		/// Description: Suppliernumber
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliernumber")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Suppliertype
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliertype")]
-		public int? M3_SUTY => GetNullableInt("SUTY");
+		public int? M3SUTY => GetNullableInt("SUTY");
 
 		/// <summary>
 		/// Description: Suppliername
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliername")]
-		public string M3_SUNM => GetString("SUNM");
+		public string M3SUNM => GetString("SUNM");
 
 		/// <summary>
 		/// Description: Searchkey
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Searchkey")]
-		public string M3_ALSU => GetString("ALSU");
+		public string M3ALSU => GetString("ALSU");
 
 		/// <summary>
 		/// Description: Status
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Status")]
-		public string M3_STAT => GetString("STAT");
+		public string M3STAT => GetString("STAT");
 
 		/// <summary>
 		/// Description: Organizationnumber1
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organizationnumber1")]
-		public string M3_CORG => GetString("CORG");
+		public string M3CORG => GetString("CORG");
 
 		/// <summary>
 		/// Description: Organizationnumber2
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Organizationnumber2")]
-		public string M3_COR2 => GetString("COR2");
+		public string M3COR2 => GetString("COR2");
 
 		/// <summary>
 		/// Description: Language
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Language")]
-		public string M3_LNCD => GetString("LNCD");
+		public string M3LNCD => GetString("LNCD");
 
 		/// <summary>
 		/// Description: Telephonenumber1
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephonenumber1")]
-		public string M3_PHNO => GetString("PHNO");
+		public string M3PHNO => GetString("PHNO");
 
 		/// <summary>
 		/// Description: Telephonenumber2
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telephonenumber2")]
-		public string M3_PHN2 => GetString("PHN2");
+		public string M3PHN2 => GetString("PHN2");
 
 		/// <summary>
 		/// Description: Telexnumber
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Telexnumber")]
-		public string M3_TLNO => GetString("TLNO");
+		public string M3TLNO => GetString("TLNO");
 
 		/// <summary>
 		/// Description: Facsimiletransmissionnumber
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Facsimiletransmissionnumber")]
-		public string M3_TFNO => GetString("TFNO");
+		public string M3TFNO => GetString("TFNO");
 
 		/// <summary>
 		/// Description: Country
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Country")]
-		public string M3_CSCD => GetString("CSCD");
+		public string M3CSCD => GetString("CSCD");
 
 		/// <summary>
 		/// Description: Dateformat
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dateformat")]
-		public string M3_DTFM => GetString("DTFM");
+		public string M3DTFM => GetString("DTFM");
 
 		/// <summary>
 		/// Description: Dateediting
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Dateediting")]
-		public string M3_EDIT => GetString("EDIT");
+		public string M3EDIT => GetString("EDIT");
 
 		/// <summary>
 		/// Description: VATregistrationnumber
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("VATregistrationnumber")]
-		public string M3_VRNO => GetString("VRNO");
+		public string M3VRNO => GetString("VRNO");
 
 		/// <summary>
 		/// Description: Suppliernumberwithingroup
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliernumberwithingroup")]
-		public string M3_SUCO => GetString("SUCO");
+		public string M3SUCO => GetString("SUCO");
 
 		/// <summary>
 		/// Description: Supplieralternativeidentity
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplieralternativeidentity")]
-		public string M3_SUAL => GetString("SUAL");
+		public string M3SUAL => GetString("SUAL");
 
 		/// <summary>
 		/// Description: Suppliercomutercommunicationaddress
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Suppliercomutercommunicationaddress")]
-		public string M3_SUCM => GetString("SUCM");
+		public string M3SUCM => GetString("SUCM");
 
 		/// <summary>
 		/// Description: Mediaprofile
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mediaprofile")]
-		public string M3_MEPF => GetString("MEPF");
+		public string M3MEPF => GetString("MEPF");
 
 		/// <summary>
 		/// Description: Transmissionleadtime-supplier
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transmissionleadtime-supplier")]
-		public int? M3_PODA => GetNullableInt("PODA");
+		public int? M3PODA => GetNullableInt("PODA");
 
 		/// <summary>
 		/// Description: User-definedfield1-item
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield1-item")]
-		public string M3_SFI1 => GetString("SFI1");
+		public string M3SFI1 => GetString("SFI1");
 
 		/// <summary>
 		/// Description: User-definedfield2-item
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield2-item")]
-		public int? M3_SFI2 => GetNullableInt("SFI2");
+		public int? M3SFI2 => GetNullableInt("SFI2");
 
 		/// <summary>
 		/// Description: User-definedfield3-item
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield3-item")]
-		public string M3_SFI3 => GetString("SFI3");
+		public string M3SFI3 => GetString("SFI3");
 
 		/// <summary>
 		/// Description: User-definedfield4-item
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield4-item")]
-		public string M3_SFI4 => GetString("SFI4");
+		public string M3SFI4 => GetString("SFI4");
 
 		/// <summary>
 		/// Description: User-definedfield5-item
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("User-definedfield5-item")]
-		public string M3_SFI5 => GetString("SFI5");
+		public string M3SFI5 => GetString("SFI5");
 
 		/// <summary>
 		/// Description: HarbourorAirport
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("HarbourorAirport")]
-		public string M3_HAFE => GetString("HAFE");
+		public string M3HAFE => GetString("HAFE");
 
 		/// <summary>
 		/// Description: Textidentity
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Textidentity")]
-		public int? M3_TXID => GetNullableInt("TXID");
+		public int? M3TXID => GetNullableInt("TXID");
 
 		/// <summary>
 		/// Description: Area/State
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Area/State")]
-		public string M3_ECAR => GetString("ECAR");
+		public string M3ECAR => GetString("ECAR");
 
 		/// <summary>
 		/// Description: SCACCode
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("SCACCode")]
-		public string M3_FWSC => GetString("FWSC");
+		public string M3FWSC => GetString("FWSC");
 
 		/// <summary>
 		/// Description: Rail station
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Rail station")]
-		public string M3_RASN => GetString("RASN");
+		public string M3RASN => GetString("RASN");
 
 		/// <summary>
 		/// Description: Text identity
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.CRS620MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXI2 => GetNullableDecimal("TXI2");
+		public decimal? M3TXI2 => GetNullableDecimal("TXI2");
 	}
 }
 // EOF

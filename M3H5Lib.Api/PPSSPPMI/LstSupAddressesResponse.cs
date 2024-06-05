@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Purchase order number")]
-		public string M3_PUNO => GetString("PUNO");
+		public string M3PUNO => GetString("PUNO");
 
 		/// <summary>
 		/// Description: Supplier address key 2
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier address key 2")]
-		public string M3_SAK2 => GetString("SAK2");
+		public string M3SAK2 => GetString("SAK2");
 
 		/// <summary>
 		/// Description: Supplier address key 3
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier address key 3")]
-		public string M3_SAK3 => GetString("SAK3");
+		public string M3SAK3 => GetString("SAK3");
 
 		/// <summary>
 		/// Description: Supplier
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier")]
-		public string M3_SUNO => GetString("SUNO");
+		public string M3SUNO => GetString("SUNO");
 
 		/// <summary>
 		/// Description: Supplier name
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier name")]
-		public string M3_SNAM => GetString("SNAM");
+		public string M3SNAM => GetString("SNAM");
 
 		/// <summary>
 		/// Description: Supplier address line 1
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier address line 1")]
-		public string M3_SAD1 => GetString("SAD1");
+		public string M3SAD1 => GetString("SAD1");
 
 		/// <summary>
 		/// Description: Supplier address line 2
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier address line 2")]
-		public string M3_SAD2 => GetString("SAD2");
+		public string M3SAD2 => GetString("SAD2");
 
 		/// <summary>
 		/// Description: Supplier address line 3
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier address line 3")]
-		public string M3_SAD3 => GetString("SAD3");
+		public string M3SAD3 => GetString("SAD3");
 
 		/// <summary>
 		/// Description: Supplier address line 4
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier address line 4")]
-		public string M3_SAD4 => GetString("SAD4");
+		public string M3SAD4 => GetString("SAD4");
 
 		/// <summary>
 		/// Description: Supplier City
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier City")]
-		public string M3_STOW => GetString("STOW");
+		public string M3STOW => GetString("STOW");
 
 		/// <summary>
 		/// Description: Supplier State
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier State")]
-		public string M3_SECA => GetString("SECA");
+		public string M3SECA => GetString("SECA");
 
 		/// <summary>
 		/// Description: Supplier Postal code
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier Postal code")]
-		public string M3_SPON => GetString("SPON");
+		public string M3SPON => GetString("SPON");
 
 		/// <summary>
 		/// Description: Supplier Country
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Supplier Country")]
-		public string M3_SCSC => GetString("SCSC");
+		public string M3SCSC => GetString("SCSC");
 
 		/// <summary>
 		/// Description: Via Goods Receiver address key 2
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver address key 2")]
-		public string M3_VAK2 => GetString("VAK2");
+		public string M3VAK2 => GetString("VAK2");
 
 		/// <summary>
 		/// Description: Via Goods Receiver address key 3
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver address key 3")]
-		public string M3_VAK3 => GetString("VAK3");
+		public string M3VAK3 => GetString("VAK3");
 
 		/// <summary>
 		/// Description: Via Goods Receiver Name
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver Name")]
-		public string M3_VNAM => GetString("VNAM");
+		public string M3VNAM => GetString("VNAM");
 
 		/// <summary>
 		/// Description: Via Goods Receiver Address line 1
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver Address line 1")]
-		public string M3_VAD1 => GetString("VAD1");
+		public string M3VAD1 => GetString("VAD1");
 
 		/// <summary>
 		/// Description: Via Goods Receiver Address line 2
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver Address line 2")]
-		public string M3_VAD2 => GetString("VAD2");
+		public string M3VAD2 => GetString("VAD2");
 
 		/// <summary>
 		/// Description: Via Goods Receiver Address line 3
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver Address line 3")]
-		public string M3_VAD3 => GetString("VAD3");
+		public string M3VAD3 => GetString("VAD3");
 
 		/// <summary>
 		/// Description: Via Goods Receiver Address line 4
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver Address line 4")]
-		public string M3_VAD4 => GetString("VAD4");
+		public string M3VAD4 => GetString("VAD4");
 
 		/// <summary>
 		/// Description: Via Goods Receiver City
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver City")]
-		public string M3_VTOW => GetString("VTOW");
+		public string M3VTOW => GetString("VTOW");
 
 		/// <summary>
 		/// Description: Via Goods Receiver State
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver State")]
-		public string M3_VECA => GetString("VECA");
+		public string M3VECA => GetString("VECA");
 
 		/// <summary>
 		/// Description: Via Goods Receiver Postal code
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver Postal code")]
-		public string M3_VPON => GetString("VPON");
+		public string M3VPON => GetString("VPON");
 
 		/// <summary>
 		/// Description: Via Goods Receiver Country
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Via Goods Receiver Country")]
-		public string M3_VCSC => GetString("VCSC");
+		public string M3VCSC => GetString("VCSC");
 
 		/// <summary>
 		/// Description: Invoce Receiver name
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoce Receiver name")]
-		public string M3_INAM => GetString("INAM");
+		public string M3INAM => GetString("INAM");
 
 		/// <summary>
 		/// Description: Invoice Receiver Address line 1
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver Address line 1")]
-		public string M3_IAD1 => GetString("IAD1");
+		public string M3IAD1 => GetString("IAD1");
 
 		/// <summary>
 		/// Description: Invoice Receiver Address line 2
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver Address line 2")]
-		public string M3_IAD2 => GetString("IAD2");
+		public string M3IAD2 => GetString("IAD2");
 
 		/// <summary>
 		/// Description: Invoice Receiver Address line 3
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver Address line 3")]
-		public string M3_IAD3 => GetString("IAD3");
+		public string M3IAD3 => GetString("IAD3");
 
 		/// <summary>
 		/// Description: Invoice Receiver Address line 4
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver Address line 4")]
-		public string M3_IAD4 => GetString("IAD4");
+		public string M3IAD4 => GetString("IAD4");
 
 		/// <summary>
 		/// Description: Invoice Receiver City
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver City")]
-		public string M3_ITOW => GetString("ITOW");
+		public string M3ITOW => GetString("ITOW");
 
 		/// <summary>
 		/// Description: Invoice Receiver State
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver State")]
-		public string M3_IECA => GetString("IECA");
+		public string M3IECA => GetString("IECA");
 
 		/// <summary>
 		/// Description: Invoice Receiver Postal code
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver Postal code")]
-		public string M3_IPON => GetString("IPON");
+		public string M3IPON => GetString("IPON");
 
 		/// <summary>
 		/// Description: Invoice Receiver Country
@@ -386,7 +386,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Invoice Receiver Country")]
-		public string M3_ICSC => GetString("ICSC");
+		public string M3ICSC => GetString("ICSC");
 
 		/// <summary>
 		/// Description: Delivery Address key 2
@@ -397,7 +397,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address key 2")]
-		public string M3_DAK2 => GetString("DAK2");
+		public string M3DAK2 => GetString("DAK2");
 
 		/// <summary>
 		/// Description: Delivery Address key 3
@@ -408,7 +408,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address key 3")]
-		public string M3_DAK3 => GetString("DAK3");
+		public string M3DAK3 => GetString("DAK3");
 
 		/// <summary>
 		/// Description: Delivery Receiver name
@@ -419,7 +419,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Receiver name")]
-		public string M3_DNAM => GetString("DNAM");
+		public string M3DNAM => GetString("DNAM");
 
 		/// <summary>
 		/// Description: Delivery Address line 1
@@ -430,7 +430,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address line 1")]
-		public string M3_DAD1 => GetString("DAD1");
+		public string M3DAD1 => GetString("DAD1");
 
 		/// <summary>
 		/// Description: Delivery Address line 2
@@ -441,7 +441,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address line 2")]
-		public string M3_DAD2 => GetString("DAD2");
+		public string M3DAD2 => GetString("DAD2");
 
 		/// <summary>
 		/// Description: Delivery Address line 3
@@ -452,7 +452,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address line 3")]
-		public string M3_DAD3 => GetString("DAD3");
+		public string M3DAD3 => GetString("DAD3");
 
 		/// <summary>
 		/// Description: Delivery Address line 4
@@ -463,7 +463,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address line 4")]
-		public string M3_DAD4 => GetString("DAD4");
+		public string M3DAD4 => GetString("DAD4");
 
 		/// <summary>
 		/// Description: Delivery Address City
@@ -474,7 +474,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address City")]
-		public string M3_DTOW => GetString("DTOW");
+		public string M3DTOW => GetString("DTOW");
 
 		/// <summary>
 		/// Description: Delivery Address State
@@ -485,7 +485,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address State")]
-		public string M3_DECA => GetString("DECA");
+		public string M3DECA => GetString("DECA");
 
 		/// <summary>
 		/// Description: Delivery Address Postal code
@@ -496,7 +496,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address Postal code")]
-		public string M3_DPON => GetString("DPON");
+		public string M3DPON => GetString("DPON");
 
 		/// <summary>
 		/// Description: Delivery Address Country
@@ -507,7 +507,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Delivery Address Country")]
-		public string M3_DCSC => GetString("DCSC");
+		public string M3DCSC => GetString("DCSC");
 
 		/// <summary>
 		/// Description: Timestamp
@@ -518,7 +518,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Timestamp")]
-		public decimal? M3_LMTS => GetNullableDecimal("LMTS");
+		public decimal? M3LMTS => GetNullableDecimal("LMTS");
 
 		/// <summary>
 		/// Description: County ID
@@ -529,7 +529,7 @@ namespace M3H5Lib.Api.PPSSPPMI
 		/// </summary>
 		[JsonIgnore]
 		[Description("County ID")]
-		public string M3_FRCO => GetString("FRCO");
+		public string M3FRCO => GetString("FRCO");
 	}
 }
 // EOF

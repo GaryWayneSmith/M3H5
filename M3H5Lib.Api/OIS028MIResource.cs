@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.OIS028MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description Add connection
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OTYG">Order type group</param>
-		/// <param name="m3_ORTP">Customer order type</param>
+		/// <param name="m3OTYG">Order type group</param>
+		/// <param name="m3ORTP">Customer order type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddConnection(
-			string m3_OTYG = null, 
-			string m3_ORTP = null, 
+			string m3OTYG = null, 
+			string m3ORTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,10 +64,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OTYG))
-				request.WithQueryParameter("OTYG", m3_OTYG.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYG))
+				request.WithQueryParameter("OTYG", m3OTYG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -75,7 +77,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -86,8 +89,8 @@ namespace M3H5Lib.Api
 		/// Description Copy connection
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OTYG">Order type group</param>
-		/// <param name="m3_NOTG">New Order type group</param>
+		/// <param name="m3OTYG">Order type group</param>
+		/// <param name="m3NOTG">New Order type group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -96,8 +99,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> CopyConnection(
-			string m3_OTYG = null, 
-			string m3_NOTG = null, 
+			string m3OTYG = null, 
+			string m3NOTG = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -112,10 +115,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OTYG))
-				request.WithQueryParameter("OTYG", m3_OTYG.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_NOTG))
-				request.WithQueryParameter("NOTG", m3_NOTG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYG))
+				request.WithQueryParameter("OTYG", m3OTYG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3NOTG))
+				request.WithQueryParameter("NOTG", m3NOTG.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -125,7 +128,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -136,8 +140,8 @@ namespace M3H5Lib.Api
 		/// Description Delete connection
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OTYG">Order type group</param>
-		/// <param name="m3_ORTP">Customer order type</param>
+		/// <param name="m3OTYG">Order type group</param>
+		/// <param name="m3ORTP">Customer order type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -146,8 +150,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DeleteConnect(
-			string m3_OTYG = null, 
-			string m3_ORTP = null, 
+			string m3OTYG = null, 
+			string m3ORTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -162,10 +166,10 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OTYG))
-				request.WithQueryParameter("OTYG", m3_OTYG.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYG))
+				request.WithQueryParameter("OTYG", m3OTYG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -175,7 +179,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -186,7 +191,7 @@ namespace M3H5Lib.Api
 		/// Description List Order type connection
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_ORTP">Customer order type</param>
+		/// <param name="m3ORTP">Customer order type</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -195,7 +200,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOTConnectionResponse></returns>
 		/// <exception cref="M3Exception<LstOTConnectionResponse>"></exception>
 		public async Task<M3Response<LstOTConnectionResponse>> LstOTConnection(
-			string m3_ORTP = null, 
+			string m3ORTP = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -210,8 +215,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_ORTP))
-				request.WithQueryParameter("ORTP", m3_ORTP.Trim());
+			if (!string.IsNullOrWhiteSpace(m3ORTP))
+				request.WithQueryParameter("ORTP", m3ORTP.Trim());
 
 			// Execute the request
 			var result = await Execute<LstOTConnectionResponse>(
@@ -221,7 +226,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -232,7 +238,7 @@ namespace M3H5Lib.Api
 		/// Description List Order type group
 		/// Version Release: 
 		/// </summary>
-		/// <param name="m3_OTYG">Order type group</param>
+		/// <param name="m3OTYG">Order type group</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -241,7 +247,7 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstOTGroupResponse></returns>
 		/// <exception cref="M3Exception<LstOTGroupResponse>"></exception>
 		public async Task<M3Response<LstOTGroupResponse>> LstOTGroup(
-			string m3_OTYG = null, 
+			string m3OTYG = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -256,8 +262,8 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_OTYG))
-				request.WithQueryParameter("OTYG", m3_OTYG.Trim());
+			if (!string.IsNullOrWhiteSpace(m3OTYG))
+				request.WithQueryParameter("OTYG", m3OTYG.Trim());
 
 			// Execute the request
 			var result = await Execute<LstOTGroupResponse>(
@@ -267,7 +273,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

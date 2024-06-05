@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.MOS256MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,8 +38,8 @@ namespace M3H5Lib.Api
 		/// Description GetNextHigher
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_ITNO">Item number (Required)</param>
-		/// <param name="m3_SER2">Serial number (Required)</param>
+		/// <param name="m3ITNO">Item number (Required)</param>
+		/// <param name="m3SER2">Serial number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -46,8 +48,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetNextHigherResponse></returns>
 		/// <exception cref="M3Exception<GetNextHigherResponse>"></exception>
 		public async Task<M3Response<GetNextHigherResponse>> GetNextHigher(
-			string m3_ITNO, 
-			string m3_SER2, 
+			string m3ITNO, 
+			string m3SER2, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -62,15 +64,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_ITNO))
-				throw new ArgumentNullException("m3_ITNO");
-			if (string.IsNullOrWhiteSpace(m3_SER2))
-				throw new ArgumentNullException("m3_SER2");
+			if (string.IsNullOrWhiteSpace(m3ITNO))
+				throw new ArgumentNullException(nameof(m3ITNO));
+			if (string.IsNullOrWhiteSpace(m3SER2))
+				throw new ArgumentNullException(nameof(m3SER2));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("ITNO", m3_ITNO.Trim())
-				.WithQueryParameter("SER2", m3_SER2.Trim());
+				.WithQueryParameter("ITNO", m3ITNO.Trim())
+				.WithQueryParameter("SER2", m3SER2.Trim());
 
 			// Execute the request
 			var result = await Execute<GetNextHigherResponse>(
@@ -80,7 +82,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -91,10 +94,10 @@ namespace M3H5Lib.Api
 		/// Description List As Build Structure
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MTRL">Component identity (Required)</param>
-		/// <param name="m3_SERN">Serial number (Required)</param>
-		/// <param name="m3_EXPA">Expand structure Y/N</param>
-		/// <param name="m3_MEVA">Display Meter Values Y/N</param>
+		/// <param name="m3MTRL">Component identity (Required)</param>
+		/// <param name="m3SERN">Serial number (Required)</param>
+		/// <param name="m3EXPA">Expand structure Y/N</param>
+		/// <param name="m3MEVA">Display Meter Values Y/N</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -103,10 +106,10 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAsBuildResponse></returns>
 		/// <exception cref="M3Exception<LstAsBuildResponse>"></exception>
 		public async Task<M3Response<LstAsBuildResponse>> LstAsBuild(
-			string m3_MTRL, 
-			string m3_SERN, 
-			int? m3_EXPA = null, 
-			int? m3_MEVA = null, 
+			string m3MTRL, 
+			string m3SERN, 
+			int? m3EXPA = null, 
+			int? m3MEVA = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -121,21 +124,21 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MTRL))
-				throw new ArgumentNullException("m3_MTRL");
-			if (string.IsNullOrWhiteSpace(m3_SERN))
-				throw new ArgumentNullException("m3_SERN");
+			if (string.IsNullOrWhiteSpace(m3MTRL))
+				throw new ArgumentNullException(nameof(m3MTRL));
+			if (string.IsNullOrWhiteSpace(m3SERN))
+				throw new ArgumentNullException(nameof(m3SERN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MTRL", m3_MTRL.Trim())
-				.WithQueryParameter("SERN", m3_SERN.Trim());
+				.WithQueryParameter("MTRL", m3MTRL.Trim())
+				.WithQueryParameter("SERN", m3SERN.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (m3_EXPA.HasValue)
-				request.WithQueryParameter("EXPA", m3_EXPA.Value.ToString());
-			if (m3_MEVA.HasValue)
-				request.WithQueryParameter("MEVA", m3_MEVA.Value.ToString());
+			if (m3EXPA.HasValue)
+				request.WithQueryParameter("EXPA", m3EXPA.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3MEVA.HasValue)
+				request.WithQueryParameter("MEVA", m3MEVA.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<LstAsBuildResponse>(
@@ -145,7 +148,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -156,8 +160,8 @@ namespace M3H5Lib.Api
 		/// Description List As Build StructureAllLevels
 		/// Version Release: 13.1
 		/// </summary>
-		/// <param name="m3_MTRL">Component identity (Required)</param>
-		/// <param name="m3_SERN">Serial number (Required)</param>
+		/// <param name="m3MTRL">Component identity (Required)</param>
+		/// <param name="m3SERN">Serial number (Required)</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -166,8 +170,8 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstAsBuildLevelResponse></returns>
 		/// <exception cref="M3Exception<LstAsBuildLevelResponse>"></exception>
 		public async Task<M3Response<LstAsBuildLevelResponse>> LstAsBuildLevel(
-			string m3_MTRL, 
-			string m3_SERN, 
+			string m3MTRL, 
+			string m3SERN, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -182,15 +186,15 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_MTRL))
-				throw new ArgumentNullException("m3_MTRL");
-			if (string.IsNullOrWhiteSpace(m3_SERN))
-				throw new ArgumentNullException("m3_SERN");
+			if (string.IsNullOrWhiteSpace(m3MTRL))
+				throw new ArgumentNullException(nameof(m3MTRL));
+			if (string.IsNullOrWhiteSpace(m3SERN))
+				throw new ArgumentNullException(nameof(m3SERN));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("MTRL", m3_MTRL.Trim())
-				.WithQueryParameter("SERN", m3_SERN.Trim());
+				.WithQueryParameter("MTRL", m3MTRL.Trim())
+				.WithQueryParameter("SERN", m3SERN.Trim());
 
 			// Execute the request
 			var result = await Execute<LstAsBuildLevelResponse>(
@@ -200,7 +204,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

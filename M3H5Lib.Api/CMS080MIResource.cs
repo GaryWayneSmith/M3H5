@@ -1,6 +1,7 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 20240309-1226
+/// This class is auto-generated.  If you need to make changes it's
+/// advised to create a new method in a separate partial class.
+/// Updated: 20240605-0352
 /// **********************************************************************
 using M3H5Lib.Api.CMS080MI;
 using M3H5Lib.Extensions;
@@ -12,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace M3H5Lib.Api
 {
@@ -36,23 +38,23 @@ namespace M3H5Lib.Api
 		/// Description Add Customer extension metadata
 		/// Version Release: 5ea1
 		/// </summary>
-		/// <param name="m3_FILE">File (Required)</param>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_CTGY">Category (Required)</param>
-		/// <param name="m3_CUER">Customer extension reference</param>
-		/// <param name="m3_TX05">Name</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_MSID">Message ID</param>
-		/// <param name="m3_FLTE">Field type</param>
-		/// <param name="m3_FLDB">Field length</param>
-		/// <param name="m3_FLDP">Number of decimal places</param>
-		/// <param name="m3_FLUC">Uppercase</param>
-		/// <param name="m3_FLLL">Field - lower limit</param>
-		/// <param name="m3_FLUL">Field - upper limit</param>
-		/// <param name="m3_FLLM">Field - limit multiple</param>
-		/// <param name="m3_ECDE">Edit code</param>
-		/// <param name="m3_NBMO">Check digit method</param>
+		/// <param name="m3FILE">File (Required)</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3CTGY">Category (Required)</param>
+		/// <param name="m3CUER">Customer extension reference</param>
+		/// <param name="m3TX05">Name</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3MSID">Message ID</param>
+		/// <param name="m3FLTE">Field type</param>
+		/// <param name="m3FLDB">Field length</param>
+		/// <param name="m3FLDP">Number of decimal places</param>
+		/// <param name="m3FLUC">Uppercase</param>
+		/// <param name="m3FLLL">Field - lower limit</param>
+		/// <param name="m3FLUL">Field - upper limit</param>
+		/// <param name="m3FLLM">Field - limit multiple</param>
+		/// <param name="m3ECDE">Edit code</param>
+		/// <param name="m3NBMO">Check digit method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -61,23 +63,23 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> AddCustExtMetad(
-			string m3_FILE, 
-			string m3_FLDI, 
-			string m3_CTGY, 
-			string m3_CUER = null, 
-			string m3_TX05 = null, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
-			string m3_MSID = null, 
-			string m3_FLTE = null, 
-			int? m3_FLDB = null, 
-			int? m3_FLDP = null, 
-			int? m3_FLUC = null, 
-			decimal? m3_FLLL = null, 
-			decimal? m3_FLUL = null, 
-			decimal? m3_FLLM = null, 
-			string m3_ECDE = null, 
-			int? m3_NBMO = null, 
+			string m3FILE, 
+			string m3FLDI, 
+			string m3CTGY, 
+			string m3CUER = null, 
+			string m3TX05 = null, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
+			string m3MSID = null, 
+			string m3FLTE = null, 
+			int? m3FLDB = null, 
+			int? m3FLDP = null, 
+			int? m3FLUC = null, 
+			decimal? m3FLLL = null, 
+			decimal? m3FLUL = null, 
+			decimal? m3FLLM = null, 
+			string m3ECDE = null, 
+			int? m3NBMO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -92,48 +94,48 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
-			if (string.IsNullOrWhiteSpace(m3_CTGY))
-				throw new ArgumentNullException("m3_CTGY");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
+			if (string.IsNullOrWhiteSpace(m3CTGY))
+				throw new ArgumentNullException(nameof(m3CTGY));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim())
-				.WithQueryParameter("FLDI", m3_FLDI.Trim())
-				.WithQueryParameter("CTGY", m3_CTGY.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim())
+				.WithQueryParameter("FLDI", m3FLDI.Trim())
+				.WithQueryParameter("CTGY", m3CTGY.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUER))
-				request.WithQueryParameter("CUER", m3_CUER.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX05))
-				request.WithQueryParameter("TX05", m3_TX05.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MSID))
-				request.WithQueryParameter("MSID", m3_MSID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLTE))
-				request.WithQueryParameter("FLTE", m3_FLTE.Trim());
-			if (m3_FLDB.HasValue)
-				request.WithQueryParameter("FLDB", m3_FLDB.Value.ToString());
-			if (m3_FLDP.HasValue)
-				request.WithQueryParameter("FLDP", m3_FLDP.Value.ToString());
-			if (m3_FLUC.HasValue)
-				request.WithQueryParameter("FLUC", m3_FLUC.Value.ToString());
-			if (m3_FLLL.HasValue)
-				request.WithQueryParameter("FLLL", m3_FLLL.Value.ToString());
-			if (m3_FLUL.HasValue)
-				request.WithQueryParameter("FLUL", m3_FLUL.Value.ToString());
-			if (m3_FLLM.HasValue)
-				request.WithQueryParameter("FLLM", m3_FLLM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ECDE))
-				request.WithQueryParameter("ECDE", m3_ECDE.Trim());
-			if (m3_NBMO.HasValue)
-				request.WithQueryParameter("NBMO", m3_NBMO.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CUER))
+				request.WithQueryParameter("CUER", m3CUER.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX05))
+				request.WithQueryParameter("TX05", m3TX05.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSID))
+				request.WithQueryParameter("MSID", m3MSID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLTE))
+				request.WithQueryParameter("FLTE", m3FLTE.Trim());
+			if (m3FLDB.HasValue)
+				request.WithQueryParameter("FLDB", m3FLDB.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLDP.HasValue)
+				request.WithQueryParameter("FLDP", m3FLDP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLUC.HasValue)
+				request.WithQueryParameter("FLUC", m3FLUC.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLLL.HasValue)
+				request.WithQueryParameter("FLLL", m3FLLL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLUL.HasValue)
+				request.WithQueryParameter("FLUL", m3FLUL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLLM.HasValue)
+				request.WithQueryParameter("FLLM", m3FLLM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ECDE))
+				request.WithQueryParameter("ECDE", m3ECDE.Trim());
+			if (m3NBMO.HasValue)
+				request.WithQueryParameter("NBMO", m3NBMO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -143,7 +145,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -154,9 +157,9 @@ namespace M3H5Lib.Api
 		/// Description Delete customer extension metadata
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FILE">File (Required)</param>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_CUER">Customer extension reference</param>
+		/// <param name="m3FILE">File (Required)</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3CUER">Customer extension reference</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -165,9 +168,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> DltCustExtMetad(
-			string m3_FILE, 
-			string m3_FLDI, 
-			string m3_CUER = null, 
+			string m3FILE, 
+			string m3FLDI, 
+			string m3CUER = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -182,19 +185,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim())
-				.WithQueryParameter("FLDI", m3_FLDI.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim())
+				.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUER))
-				request.WithQueryParameter("CUER", m3_CUER.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUER))
+				request.WithQueryParameter("CUER", m3CUER.Trim());
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -204,7 +207,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -215,9 +219,9 @@ namespace M3H5Lib.Api
 		/// Description Get customer extension metadata
 		/// Version Release: 5ea2
 		/// </summary>
-		/// <param name="m3_FILE">File (Required)</param>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_CUER">Customer extension reference</param>
+		/// <param name="m3FILE">File (Required)</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3CUER">Customer extension reference</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -226,9 +230,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<GetCustExtMetadResponse></returns>
 		/// <exception cref="M3Exception<GetCustExtMetadResponse>"></exception>
 		public async Task<M3Response<GetCustExtMetadResponse>> GetCustExtMetad(
-			string m3_FILE, 
-			string m3_FLDI, 
-			string m3_CUER = null, 
+			string m3FILE, 
+			string m3FLDI, 
+			string m3CUER = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -243,19 +247,19 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim())
-				.WithQueryParameter("FLDI", m3_FLDI.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim())
+				.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUER))
-				request.WithQueryParameter("CUER", m3_CUER.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUER))
+				request.WithQueryParameter("CUER", m3CUER.Trim());
 
 			// Execute the request
 			var result = await Execute<GetCustExtMetadResponse>(
@@ -265,7 +269,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -276,9 +281,9 @@ namespace M3H5Lib.Api
 		/// Description List customer extension metadata
 		/// Version Release: 5ea2
 		/// </summary>
-		/// <param name="m3_FILE">File</param>
-		/// <param name="m3_CUER">Customer extension reference</param>
-		/// <param name="m3_FLDI">Field</param>
+		/// <param name="m3FILE">File</param>
+		/// <param name="m3CUER">Customer extension reference</param>
+		/// <param name="m3FLDI">Field</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -287,9 +292,9 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<LstCustExtMetadResponse></returns>
 		/// <exception cref="M3Exception<LstCustExtMetadResponse>"></exception>
 		public async Task<M3Response<LstCustExtMetadResponse>> LstCustExtMetad(
-			string m3_FILE = null, 
-			string m3_CUER = null, 
-			string m3_FLDI = null, 
+			string m3FILE = null, 
+			string m3CUER = null, 
+			string m3FLDI = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -304,12 +309,12 @@ namespace M3H5Lib.Api
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_FILE))
-				request.WithQueryParameter("FILE", m3_FILE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CUER))
-				request.WithQueryParameter("CUER", m3_CUER.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLDI))
-				request.WithQueryParameter("FLDI", m3_FLDI.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FILE))
+				request.WithQueryParameter("FILE", m3FILE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CUER))
+				request.WithQueryParameter("CUER", m3CUER.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLDI))
+				request.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Execute the request
 			var result = await Execute<LstCustExtMetadResponse>(
@@ -319,7 +324,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;
@@ -330,23 +336,23 @@ namespace M3H5Lib.Api
 		/// Description Update customer extension metadata
 		/// Version Release: 5ea0
 		/// </summary>
-		/// <param name="m3_FILE">File (Required)</param>
-		/// <param name="m3_FLDI">Field (Required)</param>
-		/// <param name="m3_CUER">Customer extension reference</param>
-		/// <param name="m3_TX05">Name</param>
-		/// <param name="m3_TX15">Name</param>
-		/// <param name="m3_TX40">Description</param>
-		/// <param name="m3_MSID">Message ID</param>
-		/// <param name="m3_FLTE">Field type</param>
-		/// <param name="m3_CTGY">Category</param>
-		/// <param name="m3_FLDB">Field length</param>
-		/// <param name="m3_FLDP">Number of decimal places</param>
-		/// <param name="m3_FLUC">Uppercase</param>
-		/// <param name="m3_FLLL">Field - lower limit</param>
-		/// <param name="m3_FLUL">Field - upper limit</param>
-		/// <param name="m3_FLLM">Field - limit multiple</param>
-		/// <param name="m3_ECDE">Edit code</param>
-		/// <param name="m3_NBMO">Check digit method</param>
+		/// <param name="m3FILE">File (Required)</param>
+		/// <param name="m3FLDI">Field (Required)</param>
+		/// <param name="m3CUER">Customer extension reference</param>
+		/// <param name="m3TX05">Name</param>
+		/// <param name="m3TX15">Name</param>
+		/// <param name="m3TX40">Description</param>
+		/// <param name="m3MSID">Message ID</param>
+		/// <param name="m3FLTE">Field type</param>
+		/// <param name="m3CTGY">Category</param>
+		/// <param name="m3FLDB">Field length</param>
+		/// <param name="m3FLDP">Number of decimal places</param>
+		/// <param name="m3FLUC">Uppercase</param>
+		/// <param name="m3FLLL">Field - lower limit</param>
+		/// <param name="m3FLUL">Field - upper limit</param>
+		/// <param name="m3FLLM">Field - limit multiple</param>
+		/// <param name="m3ECDE">Edit code</param>
+		/// <param name="m3NBMO">Check digit method</param>
 		/// <param name="maxRecords">Maximum number of records to return</param>
 		/// <param name="includeMetadata">Include Metadata records in response (default false)</param>
 		/// <param name="trimResults">Trim result data (default true)</param>
@@ -355,23 +361,23 @@ namespace M3H5Lib.Api
 		/// <returns>M3Response<M3Record></returns>
 		/// <exception cref="M3Exception<M3Record>"></exception>
 		public async Task<M3Response<M3Record>> UpdCustExtMetad(
-			string m3_FILE, 
-			string m3_FLDI, 
-			string m3_CUER = null, 
-			string m3_TX05 = null, 
-			string m3_TX15 = null, 
-			string m3_TX40 = null, 
-			string m3_MSID = null, 
-			string m3_FLTE = null, 
-			string m3_CTGY = null, 
-			int? m3_FLDB = null, 
-			int? m3_FLDP = null, 
-			int? m3_FLUC = null, 
-			decimal? m3_FLLL = null, 
-			decimal? m3_FLUL = null, 
-			decimal? m3_FLLM = null, 
-			string m3_ECDE = null, 
-			int? m3_NBMO = null, 
+			string m3FILE, 
+			string m3FLDI, 
+			string m3CUER = null, 
+			string m3TX05 = null, 
+			string m3TX15 = null, 
+			string m3TX40 = null, 
+			string m3MSID = null, 
+			string m3FLTE = null, 
+			string m3CTGY = null, 
+			int? m3FLDB = null, 
+			int? m3FLDP = null, 
+			int? m3FLUC = null, 
+			decimal? m3FLLL = null, 
+			decimal? m3FLUL = null, 
+			decimal? m3FLLM = null, 
+			string m3ECDE = null, 
+			int? m3NBMO = null, 
 			int? maxRecords = null, 
 			bool? includeMetadata = null, 
 			bool? trimResults = null, 
@@ -386,47 +392,47 @@ namespace M3H5Lib.Api
 			};
 
 			// Validate mandatory parameters
-			if (string.IsNullOrWhiteSpace(m3_FILE))
-				throw new ArgumentNullException("m3_FILE");
-			if (string.IsNullOrWhiteSpace(m3_FLDI))
-				throw new ArgumentNullException("m3_FLDI");
+			if (string.IsNullOrWhiteSpace(m3FILE))
+				throw new ArgumentNullException(nameof(m3FILE));
+			if (string.IsNullOrWhiteSpace(m3FLDI))
+				throw new ArgumentNullException(nameof(m3FLDI));
 
 			// Set mandatory parameters
 			request
-				.WithQueryParameter("FILE", m3_FILE.Trim())
-				.WithQueryParameter("FLDI", m3_FLDI.Trim());
+				.WithQueryParameter("FILE", m3FILE.Trim())
+				.WithQueryParameter("FLDI", m3FLDI.Trim());
 
 			// Set optional parameters, checking for null/blank data for each element
-			if (!string.IsNullOrWhiteSpace(m3_CUER))
-				request.WithQueryParameter("CUER", m3_CUER.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX05))
-				request.WithQueryParameter("TX05", m3_TX05.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX15))
-				request.WithQueryParameter("TX15", m3_TX15.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_TX40))
-				request.WithQueryParameter("TX40", m3_TX40.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_MSID))
-				request.WithQueryParameter("MSID", m3_MSID.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_FLTE))
-				request.WithQueryParameter("FLTE", m3_FLTE.Trim());
-			if (!string.IsNullOrWhiteSpace(m3_CTGY))
-				request.WithQueryParameter("CTGY", m3_CTGY.Trim());
-			if (m3_FLDB.HasValue)
-				request.WithQueryParameter("FLDB", m3_FLDB.Value.ToString());
-			if (m3_FLDP.HasValue)
-				request.WithQueryParameter("FLDP", m3_FLDP.Value.ToString());
-			if (m3_FLUC.HasValue)
-				request.WithQueryParameter("FLUC", m3_FLUC.Value.ToString());
-			if (m3_FLLL.HasValue)
-				request.WithQueryParameter("FLLL", m3_FLLL.Value.ToString());
-			if (m3_FLUL.HasValue)
-				request.WithQueryParameter("FLUL", m3_FLUL.Value.ToString());
-			if (m3_FLLM.HasValue)
-				request.WithQueryParameter("FLLM", m3_FLLM.Value.ToString());
-			if (!string.IsNullOrWhiteSpace(m3_ECDE))
-				request.WithQueryParameter("ECDE", m3_ECDE.Trim());
-			if (m3_NBMO.HasValue)
-				request.WithQueryParameter("NBMO", m3_NBMO.Value.ToString());
+			if (!string.IsNullOrWhiteSpace(m3CUER))
+				request.WithQueryParameter("CUER", m3CUER.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX05))
+				request.WithQueryParameter("TX05", m3TX05.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX15))
+				request.WithQueryParameter("TX15", m3TX15.Trim());
+			if (!string.IsNullOrWhiteSpace(m3TX40))
+				request.WithQueryParameter("TX40", m3TX40.Trim());
+			if (!string.IsNullOrWhiteSpace(m3MSID))
+				request.WithQueryParameter("MSID", m3MSID.Trim());
+			if (!string.IsNullOrWhiteSpace(m3FLTE))
+				request.WithQueryParameter("FLTE", m3FLTE.Trim());
+			if (!string.IsNullOrWhiteSpace(m3CTGY))
+				request.WithQueryParameter("CTGY", m3CTGY.Trim());
+			if (m3FLDB.HasValue)
+				request.WithQueryParameter("FLDB", m3FLDB.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLDP.HasValue)
+				request.WithQueryParameter("FLDP", m3FLDP.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLUC.HasValue)
+				request.WithQueryParameter("FLUC", m3FLUC.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLLL.HasValue)
+				request.WithQueryParameter("FLLL", m3FLLL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLUL.HasValue)
+				request.WithQueryParameter("FLUL", m3FLUL.Value.ToString(CultureInfo.CurrentCulture));
+			if (m3FLLM.HasValue)
+				request.WithQueryParameter("FLLM", m3FLLM.Value.ToString(CultureInfo.CurrentCulture));
+			if (!string.IsNullOrWhiteSpace(m3ECDE))
+				request.WithQueryParameter("ECDE", m3ECDE.Trim());
+			if (m3NBMO.HasValue)
+				request.WithQueryParameter("NBMO", m3NBMO.Value.ToString(CultureInfo.CurrentCulture));
 
 			// Execute the request
 			var result = await Execute<M3Record>(
@@ -436,7 +442,8 @@ namespace M3H5Lib.Api
 				trimResults: trimResults,
 				outputColumns: outputColumns,
 				throwExceptionWithoutSuccess: throwExceptionWithoutSuccess,
-				cancellationToken: cancellationToken);
+				cancellationToken: cancellationToken)
+				.ConfigureAwait(false);
 
 			// Return the response object in it's entirety
 			return result;

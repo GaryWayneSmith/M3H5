@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Mail")]
-		public decimal? M3_MLID => GetNullableDecimal("MLID");
+		public decimal? M3MLID => GetNullableDecimal("MLID");
 
 		/// <summary>
 		/// Description: Data identity
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity")]
-		public decimal? M3_DTID => GetNullableDecimal("DTID");
+		public decimal? M3DTID => GetNullableDecimal("DTID");
 
 		/// <summary>
 		/// Description: Data identity reference
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity reference")]
-		public int? M3_DTRF => GetNullableInt("DTRF");
+		public int? M3DTRF => GetNullableInt("DTRF");
 
 		/// <summary>
 		/// Description: Data identity subnumber
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Data identity subnumber")]
-		public int? M3_DTIS => GetNullableInt("DTIS");
+		public int? M3DTIS => GetNullableInt("DTIS");
 
 		/// <summary>
 		/// Description: Table
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Table")]
-		public string M3_FILE => GetString("FILE");
+		public string M3FILE => GetString("FILE");
 
 		/// <summary>
 		/// Description: Keystring
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Keystring")]
-		public string M3_KSTR => GetString("KSTR");
+		public string M3KSTR => GetString("KSTR");
 
 		/// <summary>
 		/// Description: Program name
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Program name")]
-		public string M3_PGNM => GetString("PGNM");
+		public string M3PGNM => GetString("PGNM");
 
 		/// <summary>
 		/// Description: Panel check ID
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Panel check ID")]
-		public string M3_PICC => GetString("PICC");
+		public string M3PICC => GetString("PICC");
 
 		/// <summary>
 		/// Description: Sorting order
@@ -122,7 +122,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Sorting order")]
-		public int? M3_QTTP => GetNullableInt("QTTP");
+		public int? M3QTTP => GetNullableInt("QTTP");
 
 		/// <summary>
 		/// Description: Option
@@ -133,7 +133,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Option")]
-		public string M3_OPT2 => GetString("OPT2");
+		public string M3OPT2 => GetString("OPT2");
 
 		/// <summary>
 		/// Description: Field
@@ -144,7 +144,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL01 => GetString("FL01");
+		public string M3FL01 => GetString("FL01");
 
 		/// <summary>
 		/// Description: Field
@@ -155,7 +155,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL02 => GetString("FL02");
+		public string M3FL02 => GetString("FL02");
 
 		/// <summary>
 		/// Description: Field
@@ -166,7 +166,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL03 => GetString("FL03");
+		public string M3FL03 => GetString("FL03");
 
 		/// <summary>
 		/// Description: Field
@@ -177,7 +177,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL04 => GetString("FL04");
+		public string M3FL04 => GetString("FL04");
 
 		/// <summary>
 		/// Description: Field
@@ -188,7 +188,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL05 => GetString("FL05");
+		public string M3FL05 => GetString("FL05");
 
 		/// <summary>
 		/// Description: Field
@@ -199,7 +199,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL06 => GetString("FL06");
+		public string M3FL06 => GetString("FL06");
 
 		/// <summary>
 		/// Description: Field
@@ -210,7 +210,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL07 => GetString("FL07");
+		public string M3FL07 => GetString("FL07");
 
 		/// <summary>
 		/// Description: Field
@@ -221,7 +221,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL08 => GetString("FL08");
+		public string M3FL08 => GetString("FL08");
 
 		/// <summary>
 		/// Description: Field
@@ -232,7 +232,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL09 => GetString("FL09");
+		public string M3FL09 => GetString("FL09");
 
 		/// <summary>
 		/// Description: Field
@@ -243,7 +243,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Field")]
-		public string M3_FL10 => GetString("FL10");
+		public string M3FL10 => GetString("FL10");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -254,7 +254,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT01 => GetString("DT01");
+		public string M3DT01 => GetString("DT01");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -265,7 +265,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT02 => GetString("DT02");
+		public string M3DT02 => GetString("DT02");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -276,7 +276,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT03 => GetString("DT03");
+		public string M3DT03 => GetString("DT03");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -287,7 +287,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT04 => GetString("DT04");
+		public string M3DT04 => GetString("DT04");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -298,7 +298,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT05 => GetString("DT05");
+		public string M3DT05 => GetString("DT05");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -309,7 +309,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT06 => GetString("DT06");
+		public string M3DT06 => GetString("DT06");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -320,7 +320,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT07 => GetString("DT07");
+		public string M3DT07 => GetString("DT07");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -331,7 +331,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT08 => GetString("DT08");
+		public string M3DT08 => GetString("DT08");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -342,7 +342,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT09 => GetString("DT09");
+		public string M3DT09 => GetString("DT09");
 
 		/// <summary>
 		/// Description: Transfer data area
@@ -353,7 +353,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Transfer data area")]
-		public string M3_DT10 => GetString("DT10");
+		public string M3DT10 => GetString("DT10");
 
 		/// <summary>
 		/// Description: Overriding function
@@ -364,7 +364,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Overriding function")]
-		public string M3_OFNC => GetString("OFNC");
+		public string M3OFNC => GetString("OFNC");
 
 		/// <summary>
 		/// Description: Bookmark focus field
@@ -375,7 +375,7 @@ namespace M3H5Lib.Api.CRS420MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Bookmark focus field")]
-		public string M3_BFFL => GetString("BFFL");
+		public string M3BFFL => GetString("BFFL");
 	}
 }
 // EOF

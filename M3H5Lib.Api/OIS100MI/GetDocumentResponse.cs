@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("External or internal document")]
-		public string M3_DOTP => GetString("DOTP");
+		public string M3DOTP => GetString("DOTP");
 
 		/// <summary>
 		/// Description: Number of copies
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Number of copies")]
-		public int? M3_NOEX => GetNullableInt("NOEX");
+		public int? M3NOEX => GetNullableInt("NOEX");
 
 		/// <summary>
 		/// Description: Print document
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Print document")]
-		public int? M3_DOCD => GetNullableInt("DOCD");
+		public int? M3DOCD => GetNullableInt("DOCD");
 
 		/// <summary>
 		/// Description: Last printout date
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Last printout date")]
-		public DateTime? M3_DODT => GetNullableDateTime("DODT");
+		public DateTime? M3DODT => GetNullableDateTime("DODT");
 
 		/// <summary>
 		/// Description: Text identity
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Text identity")]
-		public decimal? M3_TXID => GetNullableDecimal("TXID");
+		public decimal? M3TXID => GetNullableDecimal("TXID");
 
 		/// <summary>
 		/// Description: Name
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.OIS100MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Name")]
-		public string M3_DODE => GetString("DODE");
+		public string M3DODE => GetString("DODE");
 	}
 }
 // EOF

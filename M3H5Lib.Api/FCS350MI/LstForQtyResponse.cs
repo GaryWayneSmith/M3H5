@@ -1,6 +1,6 @@
 /// **********************************************************************
-/// Created by: Gary Smith
-/// Updated: 3/9/2024 12:26:01 AM
+/// This class is auto-generated.
+/// Updated: 6/5/2024 3:52:20 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3
@@ -11,7 +11,7 @@
 /// conversions that were missed, please correct and notify for mainline
 /// inclusion.
 ///
-/// All fields are prefixed with M3_ as C# doesn not handle numeric leading
+/// All fields are prefixed with M3 as C# doesn't not handle numeric leading
 /// digits and some return values fall into this category.  So it was decided
 /// that we standardize on a leading prefix
 
@@ -34,7 +34,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse")]
-		public string M3_WHLO => GetString("WHLO");
+		public string M3WHLO => GetString("WHLO");
 
 		/// <summary>
 		/// Description: Warehouse group
@@ -45,7 +45,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Warehouse group")]
-		public string M3_WHGR => GetString("WHGR");
+		public string M3WHGR => GetString("WHGR");
 
 		/// <summary>
 		/// Description: Item number
@@ -56,7 +56,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Item number")]
-		public string M3_ITNO => GetString("ITNO");
+		public string M3ITNO => GetString("ITNO");
 
 		/// <summary>
 		/// Description: Master demand schedule version
@@ -67,7 +67,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Master demand schedule version")]
-		public string M3_MDVR => GetString("MDVR");
+		public string M3MDVR => GetString("MDVR");
 
 		/// <summary>
 		/// Description: From date
@@ -78,7 +78,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("From date")]
-		public DateTime? M3_FDAT => GetNullableDateTime("FDAT");
+		public DateTime? M3FDAT => GetNullableDateTime("FDAT");
 
 		/// <summary>
 		/// Description: To date
@@ -89,7 +89,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("To date")]
-		public DateTime? M3_TDAT => GetNullableDateTime("TDAT");
+		public DateTime? M3TDAT => GetNullableDateTime("TDAT");
 
 		/// <summary>
 		/// Description: Forecast quantity
@@ -100,7 +100,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Forecast quantity")]
-		public decimal? M3_FOQT => GetNullableDecimal("FOQT");
+		public decimal? M3FOQT => GetNullableDecimal("FOQT");
 
 		/// <summary>
 		/// Description: Basic unit of measure
@@ -111,7 +111,7 @@ namespace M3H5Lib.Api.FCS350MI
 		/// </summary>
 		[JsonIgnore]
 		[Description("Basic unit of measure")]
-		public string M3_UNMS => GetString("UNMS");
+		public string M3UNMS => GetString("UNMS");
 	}
 }
 // EOF
