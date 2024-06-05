@@ -8,6 +8,7 @@ If you have additional applications that need created, clone the repository, mak
 
 
 ### Example config values.
+```
 {
 	"m3config": {
 		"BasePath": "/m3api-rest/execute",
@@ -20,7 +21,7 @@ If you have additional applications that need created, clone the repository, mak
 		"RequestTimeoutMs": 100000
 	}
 }
-
+```
 
 ### Example ErpConfig.cs
 ```

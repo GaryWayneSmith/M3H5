@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{373E17F0-B384-431A-BD36-D3A8398486A0}"
 	ProjectSection(SolutionItems) = preProject
 		appconfig.json = appconfig.json
+		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject

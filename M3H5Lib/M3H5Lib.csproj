@@ -3,6 +3,22 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<LangVersion>7.3</LangVersion>
+
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>M3 Client</Title>
+		<Authors>Gary Wayne Smith</Authors>
+		<RepositoryUrl>https://github.com/GaryWayneSmith/M3H5</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<AnalysisLevel>latest-all</AnalysisLevel>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+
+		<PackageTags>Lawson;M3;Infor;Movex</PackageTags>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<Version>$(AssemblyVersion)</Version>
+		<FileVersion>$(Version)</FileVersion>
+		
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="ExtensibleHttp" Version="1.1.3" />
