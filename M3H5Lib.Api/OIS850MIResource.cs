@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.OIS850MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "OIS850MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -68,9 +68,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/Alloc",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/Alloc",
 			};
 
 			// Validate mandatory parameters
@@ -135,9 +135,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/Close",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/Close",
 			};
 
 			// Validate mandatory parameters
@@ -202,9 +202,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DeAlloc",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DeAlloc",
 			};
 
 			// Validate mandatory parameters
@@ -273,9 +273,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/Gen",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/Gen",
 			};
 
 			// Validate mandatory parameters
@@ -342,9 +342,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstCOLines",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstCOLines",
 			};
 
 			// Validate mandatory parameters
@@ -411,9 +411,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstInitialOrder",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstInitialOrder",
 			};
 
 			// Validate mandatory parameters
@@ -476,9 +476,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/Rel",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/Rel",
 			};
 
 			// Validate mandatory parameters
@@ -543,9 +543,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/Rmv",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/Rmv",
 			};
 
 			// Validate mandatory parameters
@@ -622,9 +622,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/Upd",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/Upd",
 			};
 
 			// Validate mandatory parameters

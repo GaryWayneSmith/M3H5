@@ -6,13 +6,15 @@ namespace M3H5Lib.Models
 	{
 		public string StatusCode { get; internal set; }
 		public string ReasonPhrase { get; internal set; }
-		public string RequestUri { get; internal set; }
+#pragma warning disable CA1056 // URI-like properties should not be strings
+        public string RequestUri { get; internal set; }
+#pragma warning restore CA1056 // URI-like properties should not be strings
 
-		/// <summary>
-		/// Return string
-		/// </summary>
-		/// <returns></returns>
-		public override string ToString()
+        /// <summary>
+        /// Return string
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
 		{
 			return $"StatusCode:{StatusCode},ReasonPhrase:{ReasonPhrase},RequestUri:{RequestUri}";
 		}

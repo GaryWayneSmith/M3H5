@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.MMS022MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "MMS022MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -62,9 +62,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddItmSearchGrp",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddItmSearchGrp",
 			};
 
 			// Validate mandatory parameters
@@ -123,9 +123,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DelItmSearchGrp",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DelItmSearchGrp",
 			};
 
 			// Validate mandatory parameters
@@ -177,9 +177,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetItmSearchGrp",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetItmSearchGrp",
 			};
 
 			// Validate mandatory parameters
@@ -227,9 +227,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetSearchGrpSet",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetSearchGrpSet",
 			};
 
 			// Execute the request
@@ -272,9 +272,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstItmSearchGrp",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstItmSearchGrp",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -327,9 +327,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdItmSearchGrp",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdItmSearchGrp",
 			};
 
 			// Validate mandatory parameters

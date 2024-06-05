@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.QUS160MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "QUS160MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -68,9 +68,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddTargetMargin",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddTargetMargin",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -139,9 +139,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/ChgTargetMargin",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/ChgTargetMargin",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -204,9 +204,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DltTargetMargin",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DltTargetMargin",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -263,9 +263,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetTargetMargin",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetTargetMargin",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -322,9 +322,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstTargetMargin",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstTargetMargin",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element

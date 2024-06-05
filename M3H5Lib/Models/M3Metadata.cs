@@ -9,13 +9,17 @@ namespace M3H5Lib.Models
 	{
 		[JsonProperty("Field")]
 		[JsonConverter(typeof(SingleOrArrayConverter<M3FieldProperty>))]
-		public List<M3FieldProperty> FieldProperties { get; set; } = new List<M3FieldProperty>();
+#pragma warning disable CA1002 // Do not expose generic lists
+#pragma warning disable CA2227 // Collection properties should be read only
+        public List<M3FieldProperty> FieldProperties { get; set; } = new List<M3FieldProperty>();
+#pragma warning restore CA2227 // Collection properties should be read only
+#pragma warning restore CA1002 // Do not expose generic lists
 
-		/// <summary>
-		/// Return string
-		/// </summary>
-		/// <returns></returns>
-		public override string ToString()
+        /// <summary>
+        /// Return string
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
 		{
 			return $"FieldProperties:[{string.Join(";", FieldProperties.Select(fv => fv.ToString()))}]";
 		}

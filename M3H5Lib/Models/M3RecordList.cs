@@ -20,24 +20,24 @@ namespace M3H5Lib.Models
 		/// <summary>
 		/// Returns true if objects are equal
 		/// </summary>
-		/// <param name="input">Object to be compared</param>
+		/// <param name="obj">Object to be compared</param>
 		/// <returns>Boolean</returns>
-		public override bool Equals(object input)
+		public override bool Equals(object obj)
 		{
-			return Equals(input as T);
+			return Equals(obj as T);
 		}
 
 		/// <summary>
 		/// Returns true if M3RecordList instances are equal
 		/// </summary>
-		/// <param name="input">Instance of M3RecordList to be compared</param>
+		/// <param name="other">Instance of M3RecordList to be compared</param>
 		/// <returns>Boolean</returns>
-		public bool Equals(T input)
+		public bool Equals(T other)
 		{
-			if (input == null)
+			if (other == null)
 				return false;
 
-			return base.Equals(input);
+			return base.Equals(other);
 		}
 
 		/// <summary>

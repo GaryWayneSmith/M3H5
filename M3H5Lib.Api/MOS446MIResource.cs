@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.MOS446MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "MOS446MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -58,9 +58,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetDefaultSite",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetDefaultSite",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -111,9 +111,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetPosition",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetPosition",
 			};
 
 			// Validate mandatory parameters
@@ -177,9 +177,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstAllPlannedWo",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstAllPlannedWo",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -236,9 +236,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstComplaint",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstComplaint",
 			};
 
 			// Validate mandatory parameters
@@ -302,9 +302,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstDocuments",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstDocuments",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -361,9 +361,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstEquipmentHis",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstEquipmentHis",
 			};
 
 			// Validate mandatory parameters
@@ -431,9 +431,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstErrorCode2",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstErrorCode2",
 			};
 
 			// Validate mandatory parameters
@@ -504,9 +504,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstFailureCode",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstFailureCode",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -563,9 +563,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstInspections",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstInspections",
 			};
 
 			// Validate mandatory parameters
@@ -625,9 +625,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstInstHistory",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstInstHistory",
 			};
 
 			// Validate mandatory parameters
@@ -685,9 +685,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstItemBalance",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstItemBalance",
 			};
 
 			// Validate mandatory parameters
@@ -746,9 +746,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstMeterValue",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstMeterValue",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -809,9 +809,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstPermitLines",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstPermitLines",
 			};
 
 			// Validate mandatory parameters
@@ -880,9 +880,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstPermits",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstPermits",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -943,9 +943,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstPlannedWo",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstPlannedWo",
 			};
 
 			// Validate mandatory parameters
@@ -1007,9 +1007,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstService",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstService",
 			};
 
 			// Validate mandatory parameters
@@ -1068,9 +1068,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstSiteComp",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstSiteComp",
 			};
 
 			// Validate mandatory parameters
@@ -1135,9 +1135,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstSpareParts",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstSpareParts",
 			};
 
 			// Validate mandatory parameters
@@ -1200,9 +1200,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstWo",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstWo",
 			};
 
 			// Validate mandatory parameters

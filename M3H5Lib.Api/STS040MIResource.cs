@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.STS040MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "STS040MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -64,9 +64,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddAllocRules",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddAllocRules",
 			};
 
 			// Validate mandatory parameters
@@ -130,9 +130,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DelAllocRules",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DelAllocRules",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -185,9 +185,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetAllocRules",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetAllocRules",
 			};
 
 			// Validate mandatory parameters
@@ -246,9 +246,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstAllocRules",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstAllocRules",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -305,9 +305,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdAllocRules",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdAllocRules",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element

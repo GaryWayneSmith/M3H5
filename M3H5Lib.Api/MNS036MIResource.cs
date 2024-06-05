@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.MNS036MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "MNS036MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -94,9 +94,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddDrillbackMap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddDrillbackMap",
 			};
 
 			// Validate mandatory parameters
@@ -223,9 +223,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/ChgDrillbackMap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/ChgDrillbackMap",
 			};
 
 			// Validate mandatory parameters
@@ -316,9 +316,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DelDrillbackMap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DelDrillbackMap",
 			};
 
 			// Validate mandatory parameters
@@ -373,9 +373,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetDrillbackMap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetDrillbackMap",
 			};
 
 			// Validate mandatory parameters
@@ -430,9 +430,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstDrillbackMap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstDrillbackMap",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element

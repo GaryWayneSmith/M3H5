@@ -11,6 +11,9 @@ namespace M3H5Lib.Models
 
 		public M3QueryParameters(IDictionary<string, string> source)
 		{
+			if (source == null) 
+				throw new ArgumentNullException(nameof(source));
+
 			foreach (KeyValuePair<string, string> kvp in source)
 			{
 				Add(kvp.Key, kvp.Value);
@@ -19,7 +22,10 @@ namespace M3H5Lib.Models
 
 		public M3QueryParameters(IDictionary<string, IEnumerable<string>> source)
 		{
-			foreach (KeyValuePair<string, IEnumerable<string>> kvp in source)
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            foreach (KeyValuePair<string, IEnumerable<string>> kvp in source)
 			{
 				Add(kvp.Key, string.Join(",", kvp.Value));
 			}

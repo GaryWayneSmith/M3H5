@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.Serialization;
 
 namespace M3H5Lib.Models
@@ -10,18 +11,22 @@ namespace M3H5Lib.Models
 		//{"@code":"XAU0008","@field":"CONO","@type":"ServerReturnedNOK","Message":"Not authorized for company 0   
 		//{"@code":"XIM0002","@type":"ServerReturnedNOK","Message":"Customer number is invalid   
 
+
+		const string SERVERTURNEDNOK = "SERVERRETURNEDNOK";
 		public bool Success
 		{
 			get
 			{
-				if (!string.IsNullOrWhiteSpace(Code)
+#pragma warning disable CA1862 // Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
+                if (!string.IsNullOrWhiteSpace(Code)
 				   || !string.IsNullOrWhiteSpace(ReturnCode)
-					   && ReturnCode.ToUpper().Contains("ServerReturnedNOK")
+					   && ReturnCode.ToUpper(CultureInfo.CurrentCulture).Contains(SERVERTURNEDNOK)
 				   || !string.IsNullOrWhiteSpace(Message))
 				{
 					return false;
 				}
-				return true;
+#pragma warning restore CA1862 // Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
+                return true;
 			}
 		}
 		public M3QueryParameters QueryParameters { get; internal set; } = new M3QueryParameters();
@@ -49,11 +54,9 @@ namespace M3H5Lib.Models
 
 		#endregion
 
-		[JsonProperty("Message")]
 		[DataMember(Name = "Message", EmitDefaultValue = false)]
 		public string Message { get; set; }
 
-		[JsonProperty("Metadata")]
 		[DataMember(Name = "Metadata", EmitDefaultValue = false)]
 		public M3Metadata Metadata { get; set; } = new M3Metadata();
 

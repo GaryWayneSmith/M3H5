@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.MMS021MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "MMS021MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -66,9 +66,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddItmHierarchy",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddItmHierarchy",
 			};
 
 			// Validate mandatory parameters
@@ -131,9 +131,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DelItmHierarchy",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DelItmHierarchy",
 			};
 
 			// Validate mandatory parameters
@@ -181,9 +181,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetHierarchySet",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetHierarchySet",
 			};
 
 			// Execute the request
@@ -226,9 +226,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetItmHierarchy",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetItmHierarchy",
 			};
 
 			// Validate mandatory parameters
@@ -280,9 +280,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstItmHierarchy",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstItmHierarchy",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -339,9 +339,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdItmHierarchy",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdItmHierarchy",
 			};
 
 			// Validate mandatory parameters

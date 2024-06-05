@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.OPS270MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "OPS270MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -56,9 +56,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddRoundNumber",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddRoundNumber",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -209,9 +209,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddSlsTicketLin",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddSlsTicketLin",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -406,9 +406,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddSlsTicketPay",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddSlsTicketPay",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -515,9 +515,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/BchPrcRound",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/BchPrcRound",
 			};
 
 			// Validate mandatory parameters
@@ -586,9 +586,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DelRoundNumber",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DelRoundNumber",
 			};
 
 			// Validate mandatory parameters
@@ -641,9 +641,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetRoundNumber",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetRoundNumber",
 			};
 
 			// Validate mandatory parameters
@@ -800,9 +800,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/SndSlsTicketLin",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/SndSlsTicketLin",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -997,9 +997,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/SndSlsTicketPay",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/SndSlsTicketPay",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element

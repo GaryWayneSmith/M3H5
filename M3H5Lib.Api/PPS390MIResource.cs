@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.PPS390MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "PPS390MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -100,9 +100,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddClaimHead",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddClaimHead",
 			};
 
 			// Validate mandatory parameters
@@ -256,9 +256,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddClaimLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddClaimLine",
 			};
 
 			// Validate mandatory parameters
@@ -364,9 +364,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/ChgClaimHead",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/ChgClaimHead",
 			};
 
 			// Execute the request
@@ -405,9 +405,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/ChgClaimLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/ChgClaimLine",
 			};
 
 			// Execute the request
@@ -448,9 +448,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/CreateRO",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/CreateRO",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -497,9 +497,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DltClaimLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DltClaimLine",
 			};
 
 			// Validate mandatory parameters
@@ -549,9 +549,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetClaimHead",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetClaimHead",
 			};
 
 			// Validate mandatory parameters
@@ -602,9 +602,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetClaimLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetClaimLine",
 			};
 
 			// Validate mandatory parameters
@@ -658,9 +658,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstClaimByPuno",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstClaimByPuno",
 			};
 
 			// Validate mandatory parameters
@@ -719,9 +719,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstClaimBySuno",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstClaimBySuno",
 			};
 
 			// Validate mandatory parameters
@@ -782,9 +782,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstClaimHead",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstClaimHead",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -835,9 +835,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstClaimLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstClaimLine",
 			};
 
 			// Validate mandatory parameters
@@ -932,9 +932,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdClaimHead",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdClaimHead",
 			};
 
 			// Validate mandatory parameters
@@ -1099,9 +1099,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdClaimLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdClaimLine",
 			};
 
 			// Validate mandatory parameters

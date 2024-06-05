@@ -7,7 +7,6 @@ namespace M3H5Lib.Models
 		[JsonProperty("Name")]
 		public string Key { get; set; }
 
-		[JsonProperty("Value")]
 		public string Value { get; set; }
 
 		/// <summary>

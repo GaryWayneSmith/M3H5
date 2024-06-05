@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.CMS011MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "CMS011MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -166,9 +166,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddFields",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddFields",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -503,9 +503,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddRelatedTable",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddRelatedTable",
 			};
 
 			// Validate mandatory parameters
@@ -745,9 +745,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DelRelatedTable",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DelRelatedTable",
 			};
 
 			// Validate mandatory parameters
@@ -812,9 +812,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetRelatedTable",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetRelatedTable",
 			};
 
 			// Validate mandatory parameters
@@ -879,9 +879,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstRelatedTable",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstRelatedTable",
 			};
 
 			// Validate mandatory parameters
@@ -1116,9 +1116,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdRelatedTable",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdRelatedTable",
 			};
 
 			// Validate mandatory parameters

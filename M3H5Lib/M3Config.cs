@@ -27,7 +27,8 @@ namespace M3H5Lib
 
 			baseUrl = ssl ? $"https{baseUrl}" : $"http{baseUrl}";
 
-			await Task.CompletedTask;
+			await Task.CompletedTask
+				.ConfigureAwait(false);
 
 			return new M3Config()
 			{

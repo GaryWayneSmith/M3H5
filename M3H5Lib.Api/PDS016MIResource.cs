@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.PDS016MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "PDS016MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -70,9 +70,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/AddDailyCap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/AddDailyCap",
 			};
 
 			// Validate mandatory parameters
@@ -143,9 +143,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/DelDailyCap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/DelDailyCap",
 			};
 
 			// Validate mandatory parameters
@@ -205,9 +205,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetDailyCap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetDailyCap",
 			};
 
 			// Validate mandatory parameters
@@ -267,9 +267,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstDailyCap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstDailyCap",
 			};
 
 			// Validate mandatory parameters
@@ -339,9 +339,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/SelWCCap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/SelWCCap",
 			};
 
 			// Validate mandatory parameters
@@ -418,9 +418,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdDailyCap",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdDailyCap",
 			};
 
 			// Validate mandatory parameters

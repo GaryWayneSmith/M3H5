@@ -1,6 +1,6 @@
 /// **********************************************************************
 /// This class is auto-generated.
-/// Updated: 6/5/2024 3:52:20 PM
+/// Updated: 6/5/2024 7:41:31 PM
 /// **********************************************************************
 ///
 /// All property types here are derived from existing A, N, or D from M3

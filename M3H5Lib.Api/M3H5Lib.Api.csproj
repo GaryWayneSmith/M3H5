@@ -5,13 +5,14 @@
 		<LangVersion>7.3</LangVersion>
 
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Title>M3 Client</Title>
+		<Title>M3 Api Client</Title>
 		<Authors>Gary Wayne Smith</Authors>
 		<RepositoryUrl>https://github.com/GaryWayneSmith/M3H5</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<AnalysisLevel>latest-all</AnalysisLevel>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 
+		<Description>Resources for accessing specific M3 Api endpoints using the base library</Description>
 		<PackageTags>Lawson;M3;Infor;Movex</PackageTags>
 		<AssemblyVersion>1.0.2</AssemblyVersion>
 		<Version>$(AssemblyVersion)</Version>

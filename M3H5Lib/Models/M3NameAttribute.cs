@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace M3H5Lib
 {
 	[AttributeUsage(AttributeTargets.Property)]
-	public class M3Name : Attribute
+	public sealed class M3NameAttribute : Attribute
 	{
 		public string Name { get; private set; } = string.Empty;
 
-		public M3Name(string name)
+		public M3NameAttribute(string name)
 		{
 			Name = name;
 		}

@@ -4,12 +4,14 @@ using System.Runtime.Serialization;
 
 namespace M3H5Lib
 {
-	public class M3Exception<T> : Exception where T : M3BaseRecord
-	{
-		public readonly M3Response<T> M3Response;
+#pragma warning disable CA1032 // Implement standard exception constructors
+    public class M3Exception<T> : Exception where T : M3BaseRecord
+#pragma warning restore CA1032 // Implement standard exception constructors
+    {
+		public M3Response<T> M3Response { get; private set; }
 
 		public M3Exception(M3Response<T> m3Response)
-			: base(m3Response.Message)
+			: base(m3Response?.Message)
 		{
 			M3Response = m3Response;
 		}
@@ -21,7 +23,7 @@ namespace M3H5Lib
 		}
 
 		public M3Exception(M3Response<T> m3Response, Exception innerException)
-			: base(m3Response.Message, innerException)
+			: base(m3Response?.Message, innerException)
 		{
 			M3Response = m3Response;
 		}

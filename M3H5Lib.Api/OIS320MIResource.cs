@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.OIS320MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "OIS320MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -114,9 +114,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetPriceLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetPriceLine",
 			};
 
 			// Validate mandatory parameters
@@ -228,9 +228,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstDiscModels",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstDiscModels",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -279,9 +279,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstDiscNumbers",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstDiscNumbers",
 			};
 
 			// Validate mandatory parameters
@@ -342,9 +342,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstListPrices",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstListPrices",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -397,9 +397,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstNewPrices",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstNewPrices",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -452,9 +452,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstPricelists",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstPricelists",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -523,9 +523,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstPrices",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstPrices",
 			};
 
 			// Validate mandatory parameters
@@ -601,9 +601,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstScaleLines",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstScaleLines",
 			};
 
 			// Validate mandatory parameters

@@ -1,7 +1,7 @@
 /// **********************************************************************
 /// This class is auto-generated.  If you need to make changes it's
 /// advised to create a new method in a separate partial class.
-/// Updated: 20240605-0352
+/// Updated: 20240605-0741
 /// **********************************************************************
 using M3H5Lib.Api.XBR001MI;
 using M3H5Lib.Extensions;
@@ -30,7 +30,7 @@ namespace M3H5Lib.Api
 			: base(apiClient)
 		{
 			ProgramName = "XBR001MI";
-			payloadFactory = new PayloadFactory();
+			PayloadFactory = new PayloadFactory();
 		}
 
 		/// <summary>
@@ -60,9 +60,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetCFOP",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetCFOP",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -117,9 +117,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetCOAddress",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetCOAddress",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -172,9 +172,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetCountry",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetCountry",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -227,9 +227,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetCustAddress",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetCustAddress",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -296,9 +296,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetCustInvLine",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetCustInvLine",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -367,9 +367,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetCustInvoice",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetCustInvoice",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -426,9 +426,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetCustomer",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetCustomer",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -479,9 +479,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetDivision",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetDivision",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -532,9 +532,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetFedUnit",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetFedUnit",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -587,9 +587,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetItem",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetItem",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -644,9 +644,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetItemFed",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetItemFed",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -705,9 +705,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetSupAddress",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetSupAddress",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -762,9 +762,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/GetTranspInfo",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/GetTranspInfo",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -823,9 +823,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstCustInvLines",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstCustInvLines",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -888,9 +888,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstSplitInvoice",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstSplitInvoice",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -947,9 +947,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/LstSupAddress",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/LstSupAddress",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -1010,9 +1010,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdCancelReq",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdCancelReq",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -1077,9 +1077,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdInvalidReq",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdInvalidReq",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
@@ -1144,9 +1144,9 @@ namespace M3H5Lib.Api
 			CancellationToken cancellationToken = default)
 		{
 			await new ContextRemover();
-			M3Request request = new M3Request(M3Config)
+			M3Request request = new M3Request(Config)
 			{
-				EndpointUri = $"{M3Config.BasePath}/{ProgramName}/UpdIssueReturn",
+				EndpointUri = $"{Config.BasePath}/{ProgramName}/UpdIssueReturn",
 			};
 
 			// Set optional parameters, checking for null/blank data for each element
