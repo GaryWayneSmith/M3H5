@@ -13,9 +13,11 @@ If you have additional applications that need created, clone the repository, mak
 	"m3config": {
 		"BasePath": "/m3api-rest/execute",
 		"Company": 1,
-		"Authorization": "Basic BASE64ENCODED(USER:PASSWORD)",
 		"Debug": false,
-		"BaseUri": "https://HOSTNAME:PORT/",
+		"Host": "example.net",
+		"Port": "443",
+		"Username": "username",
+		"Password": "password",
 		"UserAgent": "M3H5Lib",
 		"ApiFormat": "Json",
 		"RequestTimeoutMs": 100000
@@ -49,6 +51,7 @@ public class ErpConfig
 		return config;
 	}
 }
+
 ```
 
 ### Example resource call
