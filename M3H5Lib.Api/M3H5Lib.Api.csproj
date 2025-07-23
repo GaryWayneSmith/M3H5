@@ -14,7 +14,7 @@
 
 		<Description>Resources for accessing specific M3 Api endpoints using the base library</Description>
 		<PackageTags>Lawson;M3;Infor;Movex</PackageTags>
-		<AssemblyVersion>1.0.3</AssemblyVersion>
+		<AssemblyVersion>1.0.4</AssemblyVersion>
 		<Version>$(AssemblyVersion)</Version>
 		<FileVersion>$(Version)</FileVersion>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
